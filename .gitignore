@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/AtlantSovt/AtlantSovt/bin/Debug/AtlantSovt.vshost.exe.manifest
+AtlantSovt/AtlantSovt.v12.suo
+AtlantSovt/AtlantSovt/bin/Debug/AtlantSovt.exe
+AtlantSovt/AtlantSovt/bin/Debug/AtlantSovt.pdb
+AtlantSovt/AtlantSovt/obj/Debug/AtlantSovt.csproj.FileListAbsolute.txt
