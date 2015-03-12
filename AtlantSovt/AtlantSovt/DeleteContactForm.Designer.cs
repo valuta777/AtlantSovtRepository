@@ -78,6 +78,9 @@
             this.Controls.Add(this.DeleteClientContactButton);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.ClientUpdateSelectDeleteContactComboBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DeleteContactForm";
             this.Text = "DeleteContactForm";
             this.ResumeLayout(false);

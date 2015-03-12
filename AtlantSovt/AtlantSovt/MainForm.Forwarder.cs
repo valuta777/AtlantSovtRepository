@@ -13,6 +13,13 @@ namespace AtlantSovt
 {
     partial class MainForm
     {
+        bool forwarderWorkDocumentFlag;
+        bool forwarderTaxPayerStatusFlag;
+
+        Forwarder forwarder, deleteForwarder;
+        WorkDocument forwarderWorkDocument;
+        TaxPayerStatu forwarderTaxPayerStatus;
+
         void ShowForwarder()
         {
             using (var db = new AtlantSovtContext())
@@ -50,7 +57,6 @@ namespace AtlantSovt
             {
                 try
                 {
-
                     var ClikedId = Convert.ToInt32(forwarderDataGridView.CurrentRow.Cells[0].Value);
                     var query =
                     from con in db.ForwarderContacts
@@ -135,7 +141,7 @@ namespace AtlantSovt
                 string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
                 string comboBoxSelectedId = selectedStatus[1];
                 long id = Convert.ToInt64(comboBoxSelectedId);
-                workDocument = db.WorkDocuments.Find(id);
+                forwarderWorkDocument = db.WorkDocuments.Find(id);
             }
         }
 
@@ -161,7 +167,7 @@ namespace AtlantSovt
                 string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
                 string comboBoxSelectedId = selectedStatus[1];
                 long id = Convert.ToInt64(comboBoxSelectedId);
-                taxPayerStatus = db.TaxPayerStatus.Find(id);
+                forwarderTaxPayerStatus = db.TaxPayerStatus.Find(id);
             }
         }
 
@@ -169,17 +175,17 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                if (nameForwarderTextBox.Text != "" && directorForwarderTextBox.Text != "" && physicalAddressForwarderTextBox.Text != "" && geographyAddressForwarderTextBox.Text != "" && workDocumentFlag && taxPayerStatusFlag)
+                if (nameForwarderTextBox.Text != "" && directorForwarderTextBox.Text != "" && physicalAddressForwarderTextBox.Text != "" && geographyAddressForwarderTextBox.Text != "" && forwarderWorkDocumentFlag && forwarderTaxPayerStatusFlag)
                 {
                     var new_Name = nameForwarderTextBox.Text;
                     var new_Director = directorForwarderTextBox.Text;
                     var new_PhysicalAddress = physicalAddressForwarderTextBox.Text;
                     var new_GeographyAddress = geographyAddressForwarderTextBox.Text;
-                    var new_WorkDocumentId = workDocument.Id;
-                    var new_TaxPayerStatusId = taxPayerStatus.Id;
+                    var new_WorkDocumentId = forwarderWorkDocument.Id;
+                    var new_TaxPayerStatusId = forwarderTaxPayerStatus.Id;
                     var new_Comment = commentForwarderTextBox.Text;
 
-                    var New_Forwarder = new Forwarder
+                    Forwarder New_Forwarder = new Forwarder
                     {
                         Name = new_Name,
                         Director = new_Director,
@@ -187,7 +193,7 @@ namespace AtlantSovt
                         GeographyAddress = new_GeographyAddress,
                         WorkDocumentId = new_WorkDocumentId,
                         TaxPayerStatusId = new_TaxPayerStatusId,
-                        Comment = new_Comment,
+                        Comment = new_Comment                        
                     };
                     try
                     {
@@ -198,7 +204,7 @@ namespace AtlantSovt
                         if (addForwarderBankDetailsForm != null)
                         {
                             addForwarderBankDetailsForm.AddForwarderBankDetail(New_Forwarder.Id);
-                            addClientBankDetailsForm = null;
+                            addForwarderBankDetailsForm = null;
                         }
                         if (addContactForwarderForm != null)
                         {
@@ -206,9 +212,9 @@ namespace AtlantSovt
                             addContactForwarderForm = null;
                         }
                     }
-                    catch (Exception ec)
+                    catch (Exception fe)
                     {
-                        MessageBox.Show(ec.Message);
+                        MessageBox.Show(fe.Message);
                     }
 
                 }
@@ -217,8 +223,6 @@ namespace AtlantSovt
                     MessageBox.Show("Обов'язкові поля не заповнені");
                 }
             }
-
-        }
-
+        }        
     }
 }

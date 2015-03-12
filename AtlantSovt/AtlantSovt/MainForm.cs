@@ -168,14 +168,14 @@ namespace AtlantSovt
         
         private void workDocumentClientAddComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            workDocumentFlag = true;
+            clientWorkDocumentFlag = true;
             SplitLoadWorkDocumentClientAddInfo();
             
         }
         
         private void TaxPayerStatusClientAddComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            taxPayerStatusFlag = true;
+            clientTaxPayerStatusFlag = true;
             SplitLoadTaxPayerStatusClientAddInfo();
         }
 
@@ -501,7 +501,7 @@ namespace AtlantSovt
 
         private void workDocumentForwarderComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            workDocumentFlag = true;
+            forwarderWorkDocumentFlag = true;
             SplitLoadWorkDocumentForwarderAddInfo();
         }
 
@@ -514,7 +514,7 @@ namespace AtlantSovt
 
         private void taxPayerStatusForwarderComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            taxPayerStatusFlag = true;
+            forwarderTaxPayerStatusFlag = true;
             SplitLoadTaxPayerStatusForwarderAddInfo();
         }
 

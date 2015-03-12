@@ -240,6 +240,9 @@
             this.Controls.Add(this.accountNumberUpdateClientBankDetailsTextBox);
             this.Controls.Add(this.MFOUpdateClientBankDetailsTextBox);
             this.Controls.Add(this.bankNameUpdateClientBankDetailsTextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "UpdateClientBankDetailsForm";
             this.Text = "Зміна банківських реквізитів";
             this.ResumeLayout(false);

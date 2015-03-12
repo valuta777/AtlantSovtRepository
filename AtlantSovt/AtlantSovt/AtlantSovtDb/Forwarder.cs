@@ -36,11 +36,11 @@ namespace AtlantSovt.AtlantSovtDb
 
         public string Comment { get; set; }
 
-        public virtual ForwarderBankDetail ForwarderBankDetail { get; set; }
-
         public virtual TaxPayerStatu TaxPayerStatu { get; set; }
 
         public virtual WorkDocument WorkDocument { get; set; }
+
+        public virtual ForwarderBankDetail ForwarderBankDetail { get; set; }
 
         public virtual ICollection<ForwarderContact> ForwarderContacts { get; set; }
 
