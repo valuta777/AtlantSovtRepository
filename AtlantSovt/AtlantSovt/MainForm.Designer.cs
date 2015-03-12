@@ -1,0 +1,2045 @@
+﻿namespace AtlantSovt
+{
+    partial class MainForm
+    {
+        /// <summary>
+        /// Требуется переменная конструктора.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Освободить все используемые ресурсы.
+        /// </summary>
+        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Код, автоматически созданный конструктором форм Windows
+
+        /// <summary>
+        /// Обязательный метод для поддержки конструктора - не изменяйте
+        /// содержимое данного метода при помощи редактора кода.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showClientsStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.addClientsStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateClientsStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteClientsStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.trasporterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showTransporterStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.addTransporterStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateTransporterStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteTransporterStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.forwarderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showForwarderStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.addForwarderStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateForwarderStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteForwarderStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataControl = new System.Windows.Forms.TabControl();
+            this.helloPage = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.showClientPage = new System.Windows.Forms.TabPage();
+            this.label29 = new System.Windows.Forms.Label();
+            this.clientBankDetailsDataGridView = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.clientCommentRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.clientContactsDataGridView = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.clientDataGridView = new System.Windows.Forms.DataGridView();
+            this.addClientPage = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.faxClientCheckBox = new System.Windows.Forms.CheckBox();
+            this.originalClientCheckBox = new System.Windows.Forms.CheckBox();
+            this.faxLabel = new System.Windows.Forms.Label();
+            this.originalLabel = new System.Windows.Forms.Label();
+            this.addClientButton = new System.Windows.Forms.Button();
+            this.taxPayerStatusClientLabel = new System.Windows.Forms.Label();
+            this.workDocumentClientLabel = new System.Windows.Forms.Label();
+            this.addBankDetailsClientButton = new System.Windows.Forms.Button();
+            this.addContactClientButton = new System.Windows.Forms.Button();
+            this.taxPayerStatusClientComboBox = new System.Windows.Forms.ComboBox();
+            this.workDocumentClientComboBox = new System.Windows.Forms.ComboBox();
+            this.commentClientTextBox = new System.Windows.Forms.TextBox();
+            this.physicalAddressClientTextBox = new System.Windows.Forms.TextBox();
+            this.geographyAddressClientTextBox = new System.Windows.Forms.TextBox();
+            this.directorClientTextBox = new System.Windows.Forms.TextBox();
+            this.nameClientTextBox = new System.Windows.Forms.TextBox();
+            this.commentClientLabel = new System.Windows.Forms.Label();
+            this.geographyAddressClientLabel = new System.Windows.Forms.Label();
+            this.physicalAddressClientLabel = new System.Windows.Forms.Label();
+            this.directorClientLabel = new System.Windows.Forms.Label();
+            this.nameClientLabel = new System.Windows.Forms.Label();
+            this.addTaxPayerStatusClientButton = new System.Windows.Forms.Button();
+            this.addWorkDocumentClientButton = new System.Windows.Forms.Button();
+            this.updateClientPage = new System.Windows.Forms.TabPage();
+            this.clientUpdateContactDeleteButton = new System.Windows.Forms.Button();
+            this.clientUpdateBankDetailsDeleteButton = new System.Windows.Forms.Button();
+            this.clientUpdateBankDetailsUpdateButton = new System.Windows.Forms.Button();
+            this.UpdateClientUpdateContactButton = new System.Windows.Forms.Button();
+            this.contractNumberClientUpdateTextBox = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.selectClientUpdateComboBox = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.faxClientUpdateCheckBox = new System.Windows.Forms.CheckBox();
+            this.originalClientUpdateCheckBox = new System.Windows.Forms.CheckBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.updateClientButton = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.clientUpdateAddClientBankDetailsButton = new System.Windows.Forms.Button();
+            this.ClientUpdateAddContactButton = new System.Windows.Forms.Button();
+            this.taxPayerStatusClientUpdateComboBox = new System.Windows.Forms.ComboBox();
+            this.workDocumentClientUpdateComboBox = new System.Windows.Forms.ComboBox();
+            this.commentClientUpdateTextBox = new System.Windows.Forms.TextBox();
+            this.physicalAddressClientUpdateTextBox = new System.Windows.Forms.TextBox();
+            this.geographyAddressClientUpdateTextBox = new System.Windows.Forms.TextBox();
+            this.directorClientUpdateTextBox = new System.Windows.Forms.TextBox();
+            this.nameClientUpdateTextBox = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.deleteClientPage = new System.Windows.Forms.TabPage();
+            this.deleteClientButton = new System.Windows.Forms.Button();
+            this.label30 = new System.Windows.Forms.Label();
+            this.deleteClientComboBox = new System.Windows.Forms.ComboBox();
+            this.showForwarderPage = new System.Windows.Forms.TabPage();
+            this.label31 = new System.Windows.Forms.Label();
+            this.forwarderBankDetailsDataGridView = new System.Windows.Forms.DataGridView();
+            this.label32 = new System.Windows.Forms.Label();
+            this.forwarderCommentRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.forwarderContactsDataGridView = new System.Windows.Forms.DataGridView();
+            this.label34 = new System.Windows.Forms.Label();
+            this.forwarderDataGridView = new System.Windows.Forms.DataGridView();
+            this.addForwarderPage = new System.Windows.Forms.TabPage();
+            this.workDocumentForwarderComboBox = new System.Windows.Forms.ComboBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.addForwarderButton = new System.Windows.Forms.Button();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.addBankDetailsForwarderButton = new System.Windows.Forms.Button();
+            this.addContactForwarderButton = new System.Windows.Forms.Button();
+            this.taxPayerStatusForwarderComboBox = new System.Windows.Forms.ComboBox();
+            this.commentForwarderTextBox = new System.Windows.Forms.TextBox();
+            this.physicalAddressForwarderTextBox = new System.Windows.Forms.TextBox();
+            this.geographyAddressForwarderTextBox = new System.Windows.Forms.TextBox();
+            this.directorForwarderTextBox = new System.Windows.Forms.TextBox();
+            this.nameForwarderTextBox = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.addTaxPayerStatusForwarderButton = new System.Windows.Forms.Button();
+            this.addWorkDocumentForwarderButton = new System.Windows.Forms.Button();
+            this.updateForwarderPage = new System.Windows.Forms.TabPage();
+            this.deleteForwarderPage = new System.Windows.Forms.TabPage();
+            this.menuStrip.SuspendLayout();
+            this.dataControl.SuspendLayout();
+            this.helloPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.showClientPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBankDetailsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientContactsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientDataGridView)).BeginInit();
+            this.addClientPage.SuspendLayout();
+            this.updateClientPage.SuspendLayout();
+            this.deleteClientPage.SuspendLayout();
+            this.showForwarderPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.forwarderBankDetailsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.forwarderContactsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.forwarderDataGridView)).BeginInit();
+            this.addForwarderPage.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuStrip
+            // 
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clientToolStripMenuItem,
+            this.trasporterToolStripMenuItem,
+            this.forwarderToolStripMenuItem});
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(784, 24);
+            this.menuStrip.TabIndex = 1;
+            this.menuStrip.Text = "menuStrip";
+            // 
+            // clientToolStripMenuItem
+            // 
+            this.clientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showClientsStrip,
+            this.addClientsStrip,
+            this.updateClientsStrip,
+            this.deleteClientsStrip});
+            this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.clientToolStripMenuItem.Text = "Клієнт";
+            // 
+            // showClientsStrip
+            // 
+            this.showClientsStrip.Name = "showClientsStrip";
+            this.showClientsStrip.Size = new System.Drawing.Size(145, 22);
+            this.showClientsStrip.Text = "Переглянути";
+            this.showClientsStrip.Click += new System.EventHandler(this.showClientsStrip_Click);
+            // 
+            // addClientsStrip
+            // 
+            this.addClientsStrip.Name = "addClientsStrip";
+            this.addClientsStrip.Size = new System.Drawing.Size(145, 22);
+            this.addClientsStrip.Text = "Додати";
+            this.addClientsStrip.Click += new System.EventHandler(this.addClientsStrip_Click);
+            // 
+            // updateClientsStrip
+            // 
+            this.updateClientsStrip.Name = "updateClientsStrip";
+            this.updateClientsStrip.Size = new System.Drawing.Size(145, 22);
+            this.updateClientsStrip.Text = "Змінити";
+            this.updateClientsStrip.Click += new System.EventHandler(this.updateClientsStrip_Click);
+            // 
+            // deleteClientsStrip
+            // 
+            this.deleteClientsStrip.Name = "deleteClientsStrip";
+            this.deleteClientsStrip.Size = new System.Drawing.Size(145, 22);
+            this.deleteClientsStrip.Text = "Видалити";
+            this.deleteClientsStrip.Click += new System.EventHandler(this.deleteClientsStrip_Click);
+            // 
+            // trasporterToolStripMenuItem
+            // 
+            this.trasporterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showTransporterStrip,
+            this.addTransporterStrip,
+            this.updateTransporterStrip,
+            this.deleteTransporterStrip});
+            this.trasporterToolStripMenuItem.Name = "trasporterToolStripMenuItem";
+            this.trasporterToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.trasporterToolStripMenuItem.Text = "Перевізник";
+            // 
+            // showTransporterStrip
+            // 
+            this.showTransporterStrip.Name = "showTransporterStrip";
+            this.showTransporterStrip.Size = new System.Drawing.Size(145, 22);
+            this.showTransporterStrip.Text = "Переглянути";
+            // 
+            // addTransporterStrip
+            // 
+            this.addTransporterStrip.Name = "addTransporterStrip";
+            this.addTransporterStrip.Size = new System.Drawing.Size(145, 22);
+            this.addTransporterStrip.Text = "Додати";
+            // 
+            // updateTransporterStrip
+            // 
+            this.updateTransporterStrip.Name = "updateTransporterStrip";
+            this.updateTransporterStrip.Size = new System.Drawing.Size(145, 22);
+            this.updateTransporterStrip.Text = "Змінити";
+            // 
+            // deleteTransporterStrip
+            // 
+            this.deleteTransporterStrip.Name = "deleteTransporterStrip";
+            this.deleteTransporterStrip.Size = new System.Drawing.Size(145, 22);
+            this.deleteTransporterStrip.Text = "Видалити";
+            // 
+            // forwarderToolStripMenuItem
+            // 
+            this.forwarderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showForwarderStrip,
+            this.addForwarderStrip,
+            this.updateForwarderStrip,
+            this.deleteForwarderStrip});
+            this.forwarderToolStripMenuItem.Name = "forwarderToolStripMenuItem";
+            this.forwarderToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.forwarderToolStripMenuItem.Text = "Експедитор";
+            // 
+            // showForwarderStrip
+            // 
+            this.showForwarderStrip.Name = "showForwarderStrip";
+            this.showForwarderStrip.Size = new System.Drawing.Size(145, 22);
+            this.showForwarderStrip.Text = "Переглянути";
+            this.showForwarderStrip.Click += new System.EventHandler(this.showForwarderStrip_Click);
+            // 
+            // addForwarderStrip
+            // 
+            this.addForwarderStrip.Name = "addForwarderStrip";
+            this.addForwarderStrip.Size = new System.Drawing.Size(145, 22);
+            this.addForwarderStrip.Text = "Додати";
+            this.addForwarderStrip.Click += new System.EventHandler(this.addForwarderStrip_Click);
+            // 
+            // updateForwarderStrip
+            // 
+            this.updateForwarderStrip.Name = "updateForwarderStrip";
+            this.updateForwarderStrip.Size = new System.Drawing.Size(145, 22);
+            this.updateForwarderStrip.Text = "Змінити";
+            this.updateForwarderStrip.Click += new System.EventHandler(this.updateForwarderStrip_Click);
+            // 
+            // deleteForwarderStrip
+            // 
+            this.deleteForwarderStrip.Name = "deleteForwarderStrip";
+            this.deleteForwarderStrip.Size = new System.Drawing.Size(145, 22);
+            this.deleteForwarderStrip.Text = "Видалити";
+            this.deleteForwarderStrip.Click += new System.EventHandler(this.deleteForwarderStrip_Click);
+            // 
+            // dataControl
+            // 
+            this.dataControl.Controls.Add(this.helloPage);
+            this.dataControl.Controls.Add(this.showClientPage);
+            this.dataControl.Controls.Add(this.addClientPage);
+            this.dataControl.Controls.Add(this.updateClientPage);
+            this.dataControl.Controls.Add(this.deleteClientPage);
+            this.dataControl.Controls.Add(this.showForwarderPage);
+            this.dataControl.Controls.Add(this.addForwarderPage);
+            this.dataControl.Controls.Add(this.updateForwarderPage);
+            this.dataControl.Controls.Add(this.deleteForwarderPage);
+            this.dataControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataControl.ItemSize = new System.Drawing.Size(1, 0);
+            this.dataControl.Location = new System.Drawing.Point(0, 24);
+            this.dataControl.Name = "dataControl";
+            this.dataControl.SelectedIndex = 0;
+            this.dataControl.Size = new System.Drawing.Size(784, 537);
+            this.dataControl.TabIndex = 2;
+            this.dataControl.TabStop = false;
+            // 
+            // helloPage
+            // 
+            this.helloPage.BackColor = System.Drawing.Color.White;
+            this.helloPage.Controls.Add(this.pictureBox1);
+            this.helloPage.Location = new System.Drawing.Point(4, 22);
+            this.helloPage.Name = "helloPage";
+            this.helloPage.Size = new System.Drawing.Size(776, 511);
+            this.helloPage.TabIndex = 4;
+            this.helloPage.Text = "Hello";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::AtlantSovt.Properties.Resources.demologo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(776, 511);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // showClientPage
+            // 
+            this.showClientPage.Controls.Add(this.label29);
+            this.showClientPage.Controls.Add(this.clientBankDetailsDataGridView);
+            this.showClientPage.Controls.Add(this.label10);
+            this.showClientPage.Controls.Add(this.clientCommentRichTextBox);
+            this.showClientPage.Controls.Add(this.label2);
+            this.showClientPage.Controls.Add(this.clientContactsDataGridView);
+            this.showClientPage.Controls.Add(this.label1);
+            this.showClientPage.Controls.Add(this.clientDataGridView);
+            this.showClientPage.Location = new System.Drawing.Point(4, 22);
+            this.showClientPage.Name = "showClientPage";
+            this.showClientPage.Padding = new System.Windows.Forms.Padding(3);
+            this.showClientPage.Size = new System.Drawing.Size(776, 511);
+            this.showClientPage.TabIndex = 0;
+            this.showClientPage.Text = "showClientPage";
+            this.showClientPage.UseVisualStyleBackColor = true;
+            // 
+            // label29
+            // 
+            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label29.Location = new System.Drawing.Point(2, 216);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(164, 21);
+            this.label29.TabIndex = 8;
+            this.label29.Text = "Банківські реквізити";
+            // 
+            // clientBankDetailsDataGridView
+            // 
+            this.clientBankDetailsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientBankDetailsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.clientBankDetailsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.clientBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clientBankDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clientBankDetailsDataGridView.Location = new System.Drawing.Point(0, 239);
+            this.clientBankDetailsDataGridView.Name = "clientBankDetailsDataGridView";
+            this.clientBankDetailsDataGridView.Size = new System.Drawing.Size(776, 56);
+            this.clientBankDetailsDataGridView.TabIndex = 7;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(6, 420);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(81, 21);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Примітка";
+            // 
+            // clientCommentRichTextBox
+            // 
+            this.clientCommentRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientCommentRichTextBox.Location = new System.Drawing.Point(0, 444);
+            this.clientCommentRichTextBox.Name = "clientCommentRichTextBox";
+            this.clientCommentRichTextBox.ReadOnly = true;
+            this.clientCommentRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.clientCommentRichTextBox.Size = new System.Drawing.Size(776, 67);
+            this.clientCommentRichTextBox.TabIndex = 5;
+            this.clientCommentRichTextBox.Text = "";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(5, 296);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 21);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Контакти";
+            // 
+            // clientContactsDataGridView
+            // 
+            this.clientContactsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientContactsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.clientContactsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.clientContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clientContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clientContactsDataGridView.Location = new System.Drawing.Point(0, 318);
+            this.clientContactsDataGridView.Name = "clientContactsDataGridView";
+            this.clientContactsDataGridView.Size = new System.Drawing.Size(776, 95);
+            this.clientContactsDataGridView.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(4, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Клієнти";
+            // 
+            // clientDataGridView
+            // 
+            this.clientDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.clientDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.clientDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clientDataGridView.Location = new System.Drawing.Point(0, 27);
+            this.clientDataGridView.Name = "clientDataGridView";
+            this.clientDataGridView.Size = new System.Drawing.Size(776, 190);
+            this.clientDataGridView.TabIndex = 0;
+            this.clientDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.clientDataGridView_CellMouseClick);
+            // 
+            // addClientPage
+            // 
+            this.addClientPage.Controls.Add(this.label9);
+            this.addClientPage.Controls.Add(this.label8);
+            this.addClientPage.Controls.Add(this.label7);
+            this.addClientPage.Controls.Add(this.label6);
+            this.addClientPage.Controls.Add(this.label5);
+            this.addClientPage.Controls.Add(this.label4);
+            this.addClientPage.Controls.Add(this.label3);
+            this.addClientPage.Controls.Add(this.faxClientCheckBox);
+            this.addClientPage.Controls.Add(this.originalClientCheckBox);
+            this.addClientPage.Controls.Add(this.faxLabel);
+            this.addClientPage.Controls.Add(this.originalLabel);
+            this.addClientPage.Controls.Add(this.addClientButton);
+            this.addClientPage.Controls.Add(this.taxPayerStatusClientLabel);
+            this.addClientPage.Controls.Add(this.workDocumentClientLabel);
+            this.addClientPage.Controls.Add(this.addBankDetailsClientButton);
+            this.addClientPage.Controls.Add(this.addContactClientButton);
+            this.addClientPage.Controls.Add(this.taxPayerStatusClientComboBox);
+            this.addClientPage.Controls.Add(this.workDocumentClientComboBox);
+            this.addClientPage.Controls.Add(this.commentClientTextBox);
+            this.addClientPage.Controls.Add(this.physicalAddressClientTextBox);
+            this.addClientPage.Controls.Add(this.geographyAddressClientTextBox);
+            this.addClientPage.Controls.Add(this.directorClientTextBox);
+            this.addClientPage.Controls.Add(this.nameClientTextBox);
+            this.addClientPage.Controls.Add(this.commentClientLabel);
+            this.addClientPage.Controls.Add(this.geographyAddressClientLabel);
+            this.addClientPage.Controls.Add(this.physicalAddressClientLabel);
+            this.addClientPage.Controls.Add(this.directorClientLabel);
+            this.addClientPage.Controls.Add(this.nameClientLabel);
+            this.addClientPage.Controls.Add(this.addTaxPayerStatusClientButton);
+            this.addClientPage.Controls.Add(this.addWorkDocumentClientButton);
+            this.addClientPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addClientPage.Location = new System.Drawing.Point(4, 22);
+            this.addClientPage.Name = "addClientPage";
+            this.addClientPage.Padding = new System.Windows.Forms.Padding(3);
+            this.addClientPage.Size = new System.Drawing.Size(776, 511);
+            this.addClientPage.TabIndex = 1;
+            this.addClientPage.Text = "addClientPage";
+            this.addClientPage.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label9.Location = new System.Drawing.Point(10, 485);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(117, 13);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "* - обов\'язкове поле";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label8.Location = new System.Drawing.Point(684, 65);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(17, 21);
+            this.label8.TabIndex = 30;
+            this.label8.Text = "*";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label7.Location = new System.Drawing.Point(713, 4);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(17, 21);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "*";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label6.Location = new System.Drawing.Point(369, 65);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(17, 21);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "*";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label5.Location = new System.Drawing.Point(149, 65);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(17, 21);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label4.Location = new System.Drawing.Point(383, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(17, 21);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label3.Location = new System.Drawing.Point(59, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(17, 21);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "*";
+            // 
+            // faxClientCheckBox
+            // 
+            this.faxClientCheckBox.Location = new System.Drawing.Point(201, 124);
+            this.faxClientCheckBox.Name = "faxClientCheckBox";
+            this.faxClientCheckBox.Size = new System.Drawing.Size(42, 18);
+            this.faxClientCheckBox.TabIndex = 24;
+            this.faxClientCheckBox.UseVisualStyleBackColor = true;
+            this.faxClientCheckBox.CheckStateChanged += new System.EventHandler(this.faxCheckBox_CheckStateChanged);
+            // 
+            // originalClientCheckBox
+            // 
+            this.originalClientCheckBox.Location = new System.Drawing.Point(92, 124);
+            this.originalClientCheckBox.Name = "originalClientCheckBox";
+            this.originalClientCheckBox.Size = new System.Drawing.Size(14, 18);
+            this.originalClientCheckBox.TabIndex = 23;
+            this.originalClientCheckBox.UseVisualStyleBackColor = true;
+            this.originalClientCheckBox.CheckedChanged += new System.EventHandler(this.originalCheckBox_CheckedChanged);
+            // 
+            // faxLabel
+            // 
+            this.faxLabel.AutoSize = true;
+            this.faxLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.faxLabel.Location = new System.Drawing.Point(149, 121);
+            this.faxLabel.Name = "faxLabel";
+            this.faxLabel.Size = new System.Drawing.Size(46, 21);
+            this.faxLabel.TabIndex = 22;
+            this.faxLabel.Text = "Факс";
+            // 
+            // originalLabel
+            // 
+            this.originalLabel.AutoSize = true;
+            this.originalLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.originalLabel.Location = new System.Drawing.Point(8, 121);
+            this.originalLabel.Name = "originalLabel";
+            this.originalLabel.Size = new System.Drawing.Size(78, 21);
+            this.originalLabel.TabIndex = 21;
+            this.originalLabel.Text = "Оригінал";
+            // 
+            // addClientButton
+            // 
+            this.addClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.addClientButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addClientButton.Location = new System.Drawing.Point(466, 388);
+            this.addClientButton.Name = "addClientButton";
+            this.addClientButton.Size = new System.Drawing.Size(302, 70);
+            this.addClientButton.TabIndex = 20;
+            this.addClientButton.Text = "Додати клієнта";
+            this.addClientButton.UseVisualStyleBackColor = true;
+            this.addClientButton.Click += new System.EventHandler(this.addClientButton_Click);
+            // 
+            // taxPayerStatusClientLabel
+            // 
+            this.taxPayerStatusClientLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.taxPayerStatusClientLabel.AutoSize = true;
+            this.taxPayerStatusClientLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taxPayerStatusClientLabel.Location = new System.Drawing.Point(494, 65);
+            this.taxPayerStatusClientLabel.Name = "taxPayerStatusClientLabel";
+            this.taxPayerStatusClientLabel.Size = new System.Drawing.Size(193, 21);
+            this.taxPayerStatusClientLabel.TabIndex = 17;
+            this.taxPayerStatusClientLabel.Text = "Статус платника податку";
+            // 
+            // workDocumentClientLabel
+            // 
+            this.workDocumentClientLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.workDocumentClientLabel.AutoSize = true;
+            this.workDocumentClientLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.workDocumentClientLabel.Location = new System.Drawing.Point(496, 4);
+            this.workDocumentClientLabel.Name = "workDocumentClientLabel";
+            this.workDocumentClientLabel.Size = new System.Drawing.Size(223, 21);
+            this.workDocumentClientLabel.TabIndex = 16;
+            this.workDocumentClientLabel.Text = "На підставі якого документу";
+            // 
+            // addBankDetailsClientButton
+            // 
+            this.addBankDetailsClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.addBankDetailsClientButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addBankDetailsClientButton.Location = new System.Drawing.Point(253, 388);
+            this.addBankDetailsClientButton.Name = "addBankDetailsClientButton";
+            this.addBankDetailsClientButton.Size = new System.Drawing.Size(207, 70);
+            this.addBankDetailsClientButton.TabIndex = 15;
+            this.addBankDetailsClientButton.Text = "Додати банківські дані";
+            this.addBankDetailsClientButton.UseVisualStyleBackColor = true;
+            this.addBankDetailsClientButton.Click += new System.EventHandler(this.addBankDetailsClientButton_Click);
+            // 
+            // addContactClientButton
+            // 
+            this.addContactClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.addContactClientButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addContactClientButton.Location = new System.Drawing.Point(8, 388);
+            this.addContactClientButton.Name = "addContactClientButton";
+            this.addContactClientButton.Size = new System.Drawing.Size(237, 70);
+            this.addContactClientButton.TabIndex = 14;
+            this.addContactClientButton.Text = "Додати контакт";
+            this.addContactClientButton.UseVisualStyleBackColor = true;
+            this.addContactClientButton.Click += new System.EventHandler(this.addContactClientButton_Click);
+            // 
+            // taxPayerStatusClientComboBox
+            // 
+            this.taxPayerStatusClientComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.taxPayerStatusClientComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.taxPayerStatusClientComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.taxPayerStatusClientComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taxPayerStatusClientComboBox.FormattingEnabled = true;
+            this.taxPayerStatusClientComboBox.Location = new System.Drawing.Point(495, 89);
+            this.taxPayerStatusClientComboBox.Name = "taxPayerStatusClientComboBox";
+            this.taxPayerStatusClientComboBox.Size = new System.Drawing.Size(235, 29);
+            this.taxPayerStatusClientComboBox.TabIndex = 13;
+            this.taxPayerStatusClientComboBox.SelectedIndexChanged += new System.EventHandler(this.TaxPayerStatusClientAddComboBox_SelectedIndexChanged);
+            this.taxPayerStatusClientComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.taxPayerStatusClientComboBox_MouseClick);
+            // 
+            // workDocumentClientComboBox
+            // 
+            this.workDocumentClientComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.workDocumentClientComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.workDocumentClientComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.workDocumentClientComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.workDocumentClientComboBox.Location = new System.Drawing.Point(495, 27);
+            this.workDocumentClientComboBox.Name = "workDocumentClientComboBox";
+            this.workDocumentClientComboBox.Size = new System.Drawing.Size(235, 29);
+            this.workDocumentClientComboBox.TabIndex = 12;
+            this.workDocumentClientComboBox.SelectedIndexChanged += new System.EventHandler(this.workDocumentClientAddComboBox_SelectedIndexChanged);
+            this.workDocumentClientComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.workDocumentClientComboBox_MouseClick);
+            // 
+            // commentClientTextBox
+            // 
+            this.commentClientTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.commentClientTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentClientTextBox.Location = new System.Drawing.Point(8, 186);
+            this.commentClientTextBox.Multiline = true;
+            this.commentClientTextBox.Name = "commentClientTextBox";
+            this.commentClientTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.commentClientTextBox.Size = new System.Drawing.Size(756, 189);
+            this.commentClientTextBox.TabIndex = 11;
+            // 
+            // physicalAddressClientTextBox
+            // 
+            this.physicalAddressClientTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.physicalAddressClientTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.physicalAddressClientTextBox.Location = new System.Drawing.Point(253, 89);
+            this.physicalAddressClientTextBox.Name = "physicalAddressClientTextBox";
+            this.physicalAddressClientTextBox.Size = new System.Drawing.Size(235, 29);
+            this.physicalAddressClientTextBox.TabIndex = 10;
+            // 
+            // geographyAddressClientTextBox
+            // 
+            this.geographyAddressClientTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.geographyAddressClientTextBox.Location = new System.Drawing.Point(8, 89);
+            this.geographyAddressClientTextBox.Name = "geographyAddressClientTextBox";
+            this.geographyAddressClientTextBox.Size = new System.Drawing.Size(235, 29);
+            this.geographyAddressClientTextBox.TabIndex = 9;
+            // 
+            // directorClientTextBox
+            // 
+            this.directorClientTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.directorClientTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directorClientTextBox.Location = new System.Drawing.Point(252, 27);
+            this.directorClientTextBox.Name = "directorClientTextBox";
+            this.directorClientTextBox.Size = new System.Drawing.Size(235, 29);
+            this.directorClientTextBox.TabIndex = 8;
+            // 
+            // nameClientTextBox
+            // 
+            this.nameClientTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameClientTextBox.Location = new System.Drawing.Point(8, 28);
+            this.nameClientTextBox.Name = "nameClientTextBox";
+            this.nameClientTextBox.Size = new System.Drawing.Size(235, 29);
+            this.nameClientTextBox.TabIndex = 7;
+            // 
+            // commentClientLabel
+            // 
+            this.commentClientLabel.AutoSize = true;
+            this.commentClientLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentClientLabel.Location = new System.Drawing.Point(10, 162);
+            this.commentClientLabel.Name = "commentClientLabel";
+            this.commentClientLabel.Size = new System.Drawing.Size(81, 21);
+            this.commentClientLabel.TabIndex = 5;
+            this.commentClientLabel.Text = "Примітка";
+            // 
+            // geographyAddressClientLabel
+            // 
+            this.geographyAddressClientLabel.AutoSize = true;
+            this.geographyAddressClientLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.geographyAddressClientLabel.Location = new System.Drawing.Point(10, 65);
+            this.geographyAddressClientLabel.Name = "geographyAddressClientLabel";
+            this.geographyAddressClientLabel.Size = new System.Drawing.Size(135, 21);
+            this.geographyAddressClientLabel.TabIndex = 4;
+            this.geographyAddressClientLabel.Text = "Поштова адреса";
+            // 
+            // physicalAddressClientLabel
+            // 
+            this.physicalAddressClientLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.physicalAddressClientLabel.AutoSize = true;
+            this.physicalAddressClientLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.physicalAddressClientLabel.Location = new System.Drawing.Point(249, 65);
+            this.physicalAddressClientLabel.Name = "physicalAddressClientLabel";
+            this.physicalAddressClientLabel.Size = new System.Drawing.Size(125, 21);
+            this.physicalAddressClientLabel.TabIndex = 3;
+            this.physicalAddressClientLabel.Text = "Фізична адреса";
+            // 
+            // directorClientLabel
+            // 
+            this.directorClientLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.directorClientLabel.AutoSize = true;
+            this.directorClientLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directorClientLabel.Location = new System.Drawing.Point(249, 4);
+            this.directorClientLabel.Name = "directorClientLabel";
+            this.directorClientLabel.Size = new System.Drawing.Size(137, 21);
+            this.directorClientLabel.TabIndex = 2;
+            this.directorClientLabel.Text = "П.І.Б. Директора";
+            // 
+            // nameClientLabel
+            // 
+            this.nameClientLabel.AutoSize = true;
+            this.nameClientLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameClientLabel.Location = new System.Drawing.Point(10, 4);
+            this.nameClientLabel.Name = "nameClientLabel";
+            this.nameClientLabel.Size = new System.Drawing.Size(54, 21);
+            this.nameClientLabel.TabIndex = 1;
+            this.nameClientLabel.Text = "Назва";
+            // 
+            // addTaxPayerStatusClientButton
+            // 
+            this.addTaxPayerStatusClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addTaxPayerStatusClientButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.addTaxPayerStatusClientButton.Location = new System.Drawing.Point(738, 89);
+            this.addTaxPayerStatusClientButton.Name = "addTaxPayerStatusClientButton";
+            this.addTaxPayerStatusClientButton.Size = new System.Drawing.Size(30, 30);
+            this.addTaxPayerStatusClientButton.TabIndex = 19;
+            this.addTaxPayerStatusClientButton.UseVisualStyleBackColor = true;
+            this.addTaxPayerStatusClientButton.Click += new System.EventHandler(this.addTaxPayerStatusClientButton_Click);
+            // 
+            // addWorkDocumentClientButton
+            // 
+            this.addWorkDocumentClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addWorkDocumentClientButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.addWorkDocumentClientButton.Location = new System.Drawing.Point(736, 27);
+            this.addWorkDocumentClientButton.Name = "addWorkDocumentClientButton";
+            this.addWorkDocumentClientButton.Size = new System.Drawing.Size(30, 30);
+            this.addWorkDocumentClientButton.TabIndex = 18;
+            this.addWorkDocumentClientButton.UseVisualStyleBackColor = true;
+            this.addWorkDocumentClientButton.Click += new System.EventHandler(this.addWorkDocumentClientButton_Click);
+            // 
+            // updateClientPage
+            // 
+            this.updateClientPage.Controls.Add(this.clientUpdateContactDeleteButton);
+            this.updateClientPage.Controls.Add(this.clientUpdateBankDetailsDeleteButton);
+            this.updateClientPage.Controls.Add(this.clientUpdateBankDetailsUpdateButton);
+            this.updateClientPage.Controls.Add(this.UpdateClientUpdateContactButton);
+            this.updateClientPage.Controls.Add(this.contractNumberClientUpdateTextBox);
+            this.updateClientPage.Controls.Add(this.label28);
+            this.updateClientPage.Controls.Add(this.label27);
+            this.updateClientPage.Controls.Add(this.selectClientUpdateComboBox);
+            this.updateClientPage.Controls.Add(this.label11);
+            this.updateClientPage.Controls.Add(this.label12);
+            this.updateClientPage.Controls.Add(this.label13);
+            this.updateClientPage.Controls.Add(this.label14);
+            this.updateClientPage.Controls.Add(this.label15);
+            this.updateClientPage.Controls.Add(this.label16);
+            this.updateClientPage.Controls.Add(this.label17);
+            this.updateClientPage.Controls.Add(this.faxClientUpdateCheckBox);
+            this.updateClientPage.Controls.Add(this.originalClientUpdateCheckBox);
+            this.updateClientPage.Controls.Add(this.label18);
+            this.updateClientPage.Controls.Add(this.label19);
+            this.updateClientPage.Controls.Add(this.updateClientButton);
+            this.updateClientPage.Controls.Add(this.label20);
+            this.updateClientPage.Controls.Add(this.label21);
+            this.updateClientPage.Controls.Add(this.clientUpdateAddClientBankDetailsButton);
+            this.updateClientPage.Controls.Add(this.ClientUpdateAddContactButton);
+            this.updateClientPage.Controls.Add(this.taxPayerStatusClientUpdateComboBox);
+            this.updateClientPage.Controls.Add(this.workDocumentClientUpdateComboBox);
+            this.updateClientPage.Controls.Add(this.commentClientUpdateTextBox);
+            this.updateClientPage.Controls.Add(this.physicalAddressClientUpdateTextBox);
+            this.updateClientPage.Controls.Add(this.geographyAddressClientUpdateTextBox);
+            this.updateClientPage.Controls.Add(this.directorClientUpdateTextBox);
+            this.updateClientPage.Controls.Add(this.nameClientUpdateTextBox);
+            this.updateClientPage.Controls.Add(this.label22);
+            this.updateClientPage.Controls.Add(this.label23);
+            this.updateClientPage.Controls.Add(this.label24);
+            this.updateClientPage.Controls.Add(this.label25);
+            this.updateClientPage.Controls.Add(this.label26);
+            this.updateClientPage.Controls.Add(this.button4);
+            this.updateClientPage.Controls.Add(this.button5);
+            this.updateClientPage.Location = new System.Drawing.Point(4, 22);
+            this.updateClientPage.Name = "updateClientPage";
+            this.updateClientPage.Size = new System.Drawing.Size(776, 511);
+            this.updateClientPage.TabIndex = 2;
+            this.updateClientPage.Text = "updateClientPage";
+            this.updateClientPage.UseVisualStyleBackColor = true;
+            // 
+            // clientUpdateContactDeleteButton
+            // 
+            this.clientUpdateContactDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.clientUpdateContactDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientUpdateContactDeleteButton.Location = new System.Drawing.Point(7, 457);
+            this.clientUpdateContactDeleteButton.Name = "clientUpdateContactDeleteButton";
+            this.clientUpdateContactDeleteButton.Size = new System.Drawing.Size(238, 30);
+            this.clientUpdateContactDeleteButton.TabIndex = 69;
+            this.clientUpdateContactDeleteButton.Text = "Видалити контакт";
+            this.clientUpdateContactDeleteButton.UseVisualStyleBackColor = true;
+            this.clientUpdateContactDeleteButton.Click += new System.EventHandler(this.clientUpdateContactDeleteButton_Click);
+            // 
+            // clientUpdateBankDetailsDeleteButton
+            // 
+            this.clientUpdateBankDetailsDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.clientUpdateBankDetailsDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientUpdateBankDetailsDeleteButton.Location = new System.Drawing.Point(252, 458);
+            this.clientUpdateBankDetailsDeleteButton.Name = "clientUpdateBankDetailsDeleteButton";
+            this.clientUpdateBankDetailsDeleteButton.Size = new System.Drawing.Size(207, 30);
+            this.clientUpdateBankDetailsDeleteButton.TabIndex = 68;
+            this.clientUpdateBankDetailsDeleteButton.Text = "Видалити банківські данні";
+            this.clientUpdateBankDetailsDeleteButton.UseVisualStyleBackColor = true;
+            this.clientUpdateBankDetailsDeleteButton.Click += new System.EventHandler(this.clientUpdateBankDetaitsDeleteButton_Click);
+            // 
+            // clientUpdateBankDetailsUpdateButton
+            // 
+            this.clientUpdateBankDetailsUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.clientUpdateBankDetailsUpdateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientUpdateBankDetailsUpdateButton.Location = new System.Drawing.Point(253, 422);
+            this.clientUpdateBankDetailsUpdateButton.Name = "clientUpdateBankDetailsUpdateButton";
+            this.clientUpdateBankDetailsUpdateButton.Size = new System.Drawing.Size(207, 30);
+            this.clientUpdateBankDetailsUpdateButton.TabIndex = 67;
+            this.clientUpdateBankDetailsUpdateButton.Text = "Змінити банківські данні";
+            this.clientUpdateBankDetailsUpdateButton.UseVisualStyleBackColor = true;
+            this.clientUpdateBankDetailsUpdateButton.Click += new System.EventHandler(this.clientUpdateBankDetailsUpdateButton_Click);
+            // 
+            // UpdateClientUpdateContactButton
+            // 
+            this.UpdateClientUpdateContactButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.UpdateClientUpdateContactButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.UpdateClientUpdateContactButton.Location = new System.Drawing.Point(8, 422);
+            this.UpdateClientUpdateContactButton.Name = "UpdateClientUpdateContactButton";
+            this.UpdateClientUpdateContactButton.Size = new System.Drawing.Size(237, 30);
+            this.UpdateClientUpdateContactButton.TabIndex = 66;
+            this.UpdateClientUpdateContactButton.Text = "Змінити контакт";
+            this.UpdateClientUpdateContactButton.UseVisualStyleBackColor = true;
+            this.UpdateClientUpdateContactButton.Click += new System.EventHandler(this.updateClientContactButton_Click);
+            // 
+            // contractNumberClientUpdateTextBox
+            // 
+            this.contractNumberClientUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.contractNumberClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contractNumberClientUpdateTextBox.Location = new System.Drawing.Point(495, 26);
+            this.contractNumberClientUpdateTextBox.Name = "contractNumberClientUpdateTextBox";
+            this.contractNumberClientUpdateTextBox.Size = new System.Drawing.Size(235, 29);
+            this.contractNumberClientUpdateTextBox.TabIndex = 65;
+            this.contractNumberClientUpdateTextBox.TextChanged += new System.EventHandler(this.contractNumberClientUpdateTextBox_TextChanged);
+            // 
+            // label28
+            // 
+            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label28.Location = new System.Drawing.Point(496, 3);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(108, 21);
+            this.label28.TabIndex = 64;
+            this.label28.Text = "№ Договору";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label27.Location = new System.Drawing.Point(10, 3);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(134, 21);
+            this.label27.TabIndex = 63;
+            this.label27.Text = "Виберіть клієнта";
+            // 
+            // selectClientUpdateComboBox
+            // 
+            this.selectClientUpdateComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.selectClientUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.selectClientUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.selectClientUpdateComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selectClientUpdateComboBox.Location = new System.Drawing.Point(8, 27);
+            this.selectClientUpdateComboBox.Name = "selectClientUpdateComboBox";
+            this.selectClientUpdateComboBox.Size = new System.Drawing.Size(480, 29);
+            this.selectClientUpdateComboBox.Sorted = true;
+            this.selectClientUpdateComboBox.TabIndex = 62;
+            this.selectClientUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.selectClientUpdateComboBox_SelectedIndexChanged);
+            this.selectClientUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.selectClientUpdateComboBox_MouseClick);
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label11.Location = new System.Drawing.Point(10, 490);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(117, 13);
+            this.label11.TabIndex = 61;
+            this.label11.Text = "* - обов\'язкове поле";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label12.Location = new System.Drawing.Point(684, 115);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(17, 21);
+            this.label12.TabIndex = 60;
+            this.label12.Text = "*";
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label13.Location = new System.Drawing.Point(713, 54);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(17, 21);
+            this.label13.TabIndex = 59;
+            this.label13.Text = "*";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label14.Location = new System.Drawing.Point(369, 115);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(17, 21);
+            this.label14.TabIndex = 58;
+            this.label14.Text = "*";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label15.Location = new System.Drawing.Point(149, 115);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(17, 21);
+            this.label15.TabIndex = 57;
+            this.label15.Text = "*";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label16.Location = new System.Drawing.Point(383, 53);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(17, 21);
+            this.label16.TabIndex = 56;
+            this.label16.Text = "*";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label17.Location = new System.Drawing.Point(59, 53);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(17, 21);
+            this.label17.TabIndex = 55;
+            this.label17.Text = "*";
+            // 
+            // faxClientUpdateCheckBox
+            // 
+            this.faxClientUpdateCheckBox.Location = new System.Drawing.Point(201, 174);
+            this.faxClientUpdateCheckBox.Name = "faxClientUpdateCheckBox";
+            this.faxClientUpdateCheckBox.Size = new System.Drawing.Size(42, 18);
+            this.faxClientUpdateCheckBox.TabIndex = 54;
+            this.faxClientUpdateCheckBox.UseVisualStyleBackColor = true;
+            this.faxClientUpdateCheckBox.CheckedChanged += new System.EventHandler(this.faxClientUpdateCheckBox_CheckedChanged);
+            // 
+            // originalClientUpdateCheckBox
+            // 
+            this.originalClientUpdateCheckBox.Location = new System.Drawing.Point(92, 174);
+            this.originalClientUpdateCheckBox.Name = "originalClientUpdateCheckBox";
+            this.originalClientUpdateCheckBox.Size = new System.Drawing.Size(14, 18);
+            this.originalClientUpdateCheckBox.TabIndex = 53;
+            this.originalClientUpdateCheckBox.UseVisualStyleBackColor = true;
+            this.originalClientUpdateCheckBox.CheckedChanged += new System.EventHandler(this.originalClientUpdateCheckBox_CheckedChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.Location = new System.Drawing.Point(149, 171);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(46, 21);
+            this.label18.TabIndex = 52;
+            this.label18.Text = "Факс";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Location = new System.Drawing.Point(8, 171);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(78, 21);
+            this.label19.TabIndex = 51;
+            this.label19.Text = "Оригінал";
+            // 
+            // updateClientButton
+            // 
+            this.updateClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.updateClientButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.updateClientButton.Location = new System.Drawing.Point(466, 386);
+            this.updateClientButton.Name = "updateClientButton";
+            this.updateClientButton.Size = new System.Drawing.Size(302, 70);
+            this.updateClientButton.TabIndex = 50;
+            this.updateClientButton.Text = "Змінити";
+            this.updateClientButton.UseVisualStyleBackColor = true;
+            this.updateClientButton.Click += new System.EventHandler(this.updateClientButton_Click);
+            // 
+            // label20
+            // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.Location = new System.Drawing.Point(494, 115);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(193, 21);
+            this.label20.TabIndex = 47;
+            this.label20.Text = "Статус платника податку";
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.Location = new System.Drawing.Point(496, 54);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(223, 21);
+            this.label21.TabIndex = 46;
+            this.label21.Text = "На підставі якого документу";
+            // 
+            // clientUpdateAddClientBankDetailsButton
+            // 
+            this.clientUpdateAddClientBankDetailsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.clientUpdateAddClientBankDetailsButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientUpdateAddClientBankDetailsButton.Location = new System.Drawing.Point(253, 386);
+            this.clientUpdateAddClientBankDetailsButton.Name = "clientUpdateAddClientBankDetailsButton";
+            this.clientUpdateAddClientBankDetailsButton.Size = new System.Drawing.Size(207, 30);
+            this.clientUpdateAddClientBankDetailsButton.TabIndex = 45;
+            this.clientUpdateAddClientBankDetailsButton.Text = "Додати банківські данні";
+            this.clientUpdateAddClientBankDetailsButton.UseVisualStyleBackColor = true;
+            this.clientUpdateAddClientBankDetailsButton.Click += new System.EventHandler(this.clientUpdateAddClientBankDetailsButton_Click);
+            // 
+            // ClientUpdateAddContactButton
+            // 
+            this.ClientUpdateAddContactButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ClientUpdateAddContactButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ClientUpdateAddContactButton.Location = new System.Drawing.Point(8, 386);
+            this.ClientUpdateAddContactButton.Name = "ClientUpdateAddContactButton";
+            this.ClientUpdateAddContactButton.Size = new System.Drawing.Size(237, 30);
+            this.ClientUpdateAddContactButton.TabIndex = 44;
+            this.ClientUpdateAddContactButton.Text = "Додати контакт";
+            this.ClientUpdateAddContactButton.UseVisualStyleBackColor = true;
+            this.ClientUpdateAddContactButton.Click += new System.EventHandler(this.clientUpdateAddContactButton_Click);
+            // 
+            // taxPayerStatusClientUpdateComboBox
+            // 
+            this.taxPayerStatusClientUpdateComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.taxPayerStatusClientUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.taxPayerStatusClientUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.taxPayerStatusClientUpdateComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taxPayerStatusClientUpdateComboBox.FormattingEnabled = true;
+            this.taxPayerStatusClientUpdateComboBox.Location = new System.Drawing.Point(495, 139);
+            this.taxPayerStatusClientUpdateComboBox.Name = "taxPayerStatusClientUpdateComboBox";
+            this.taxPayerStatusClientUpdateComboBox.Size = new System.Drawing.Size(235, 29);
+            this.taxPayerStatusClientUpdateComboBox.TabIndex = 43;
+            this.taxPayerStatusClientUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.taxPayerStatusClientUpdateComboBox_SelectedIndexChanged);
+            this.taxPayerStatusClientUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.taxPayerStatusClientUpdateComboBox_MouseClick);
+            // 
+            // workDocumentClientUpdateComboBox
+            // 
+            this.workDocumentClientUpdateComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.workDocumentClientUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.workDocumentClientUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.workDocumentClientUpdateComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.workDocumentClientUpdateComboBox.Location = new System.Drawing.Point(495, 77);
+            this.workDocumentClientUpdateComboBox.Name = "workDocumentClientUpdateComboBox";
+            this.workDocumentClientUpdateComboBox.Size = new System.Drawing.Size(235, 29);
+            this.workDocumentClientUpdateComboBox.TabIndex = 42;
+            this.workDocumentClientUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.workDocumentClientUpdateComboBox_SelectedIndexChanged);
+            this.workDocumentClientUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.workDocumentClientUpdateComboBox_MouseClick);
+            // 
+            // commentClientUpdateTextBox
+            // 
+            this.commentClientUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.commentClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentClientUpdateTextBox.Location = new System.Drawing.Point(8, 221);
+            this.commentClientUpdateTextBox.Multiline = true;
+            this.commentClientUpdateTextBox.Name = "commentClientUpdateTextBox";
+            this.commentClientUpdateTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.commentClientUpdateTextBox.Size = new System.Drawing.Size(756, 159);
+            this.commentClientUpdateTextBox.TabIndex = 41;
+            this.commentClientUpdateTextBox.TextChanged += new System.EventHandler(this.commentClientUpdateTextBox_TextChanged);
+            // 
+            // physicalAddressClientUpdateTextBox
+            // 
+            this.physicalAddressClientUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.physicalAddressClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.physicalAddressClientUpdateTextBox.Location = new System.Drawing.Point(253, 139);
+            this.physicalAddressClientUpdateTextBox.Name = "physicalAddressClientUpdateTextBox";
+            this.physicalAddressClientUpdateTextBox.Size = new System.Drawing.Size(235, 29);
+            this.physicalAddressClientUpdateTextBox.TabIndex = 40;
+            this.physicalAddressClientUpdateTextBox.TextChanged += new System.EventHandler(this.physicalAddressClientUpdateTextBox_TextChanged);
+            // 
+            // geographyAddressClientUpdateTextBox
+            // 
+            this.geographyAddressClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.geographyAddressClientUpdateTextBox.Location = new System.Drawing.Point(8, 139);
+            this.geographyAddressClientUpdateTextBox.Name = "geographyAddressClientUpdateTextBox";
+            this.geographyAddressClientUpdateTextBox.Size = new System.Drawing.Size(235, 29);
+            this.geographyAddressClientUpdateTextBox.TabIndex = 39;
+            this.geographyAddressClientUpdateTextBox.TextChanged += new System.EventHandler(this.geographyAddressClientUpdateTextBox_TextChanged);
+            // 
+            // directorClientUpdateTextBox
+            // 
+            this.directorClientUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.directorClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directorClientUpdateTextBox.Location = new System.Drawing.Point(252, 77);
+            this.directorClientUpdateTextBox.Name = "directorClientUpdateTextBox";
+            this.directorClientUpdateTextBox.Size = new System.Drawing.Size(235, 29);
+            this.directorClientUpdateTextBox.TabIndex = 38;
+            this.directorClientUpdateTextBox.TextChanged += new System.EventHandler(this.directorClientUpdateTextBox_TextChanged);
+            // 
+            // nameClientUpdateTextBox
+            // 
+            this.nameClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameClientUpdateTextBox.Location = new System.Drawing.Point(8, 78);
+            this.nameClientUpdateTextBox.Name = "nameClientUpdateTextBox";
+            this.nameClientUpdateTextBox.Size = new System.Drawing.Size(235, 29);
+            this.nameClientUpdateTextBox.TabIndex = 37;
+            this.nameClientUpdateTextBox.TextChanged += new System.EventHandler(this.nameClientUpdateTextBox_TextChanged);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.Location = new System.Drawing.Point(8, 197);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(81, 21);
+            this.label22.TabIndex = 36;
+            this.label22.Text = "Примітка";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label23.Location = new System.Drawing.Point(10, 115);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(135, 21);
+            this.label23.TabIndex = 35;
+            this.label23.Text = "Поштова адреса";
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label24.Location = new System.Drawing.Point(249, 115);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(125, 21);
+            this.label24.TabIndex = 34;
+            this.label24.Text = "Фізична адреса";
+            // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label25.Location = new System.Drawing.Point(249, 54);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(137, 21);
+            this.label25.TabIndex = 33;
+            this.label25.Text = "П.І.Б. Директора";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label26.Location = new System.Drawing.Point(10, 54);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(54, 21);
+            this.label26.TabIndex = 32;
+            this.label26.Text = "Назва";
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Image = global::AtlantSovt.Properties.Resources.add;
+            this.button4.Location = new System.Drawing.Point(738, 139);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(30, 30);
+            this.button4.TabIndex = 49;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.Image = global::AtlantSovt.Properties.Resources.add;
+            this.button5.Location = new System.Drawing.Point(736, 77);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(30, 30);
+            this.button5.TabIndex = 48;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // deleteClientPage
+            // 
+            this.deleteClientPage.Controls.Add(this.deleteClientButton);
+            this.deleteClientPage.Controls.Add(this.label30);
+            this.deleteClientPage.Controls.Add(this.deleteClientComboBox);
+            this.deleteClientPage.Location = new System.Drawing.Point(4, 22);
+            this.deleteClientPage.Name = "deleteClientPage";
+            this.deleteClientPage.Size = new System.Drawing.Size(776, 511);
+            this.deleteClientPage.TabIndex = 3;
+            this.deleteClientPage.Text = "deleteClientPage";
+            this.deleteClientPage.UseVisualStyleBackColor = true;
+            // 
+            // deleteClientButton
+            // 
+            this.deleteClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteClientButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteClientButton.Location = new System.Drawing.Point(466, 433);
+            this.deleteClientButton.Name = "deleteClientButton";
+            this.deleteClientButton.Size = new System.Drawing.Size(302, 70);
+            this.deleteClientButton.TabIndex = 66;
+            this.deleteClientButton.Text = "Видалити";
+            this.deleteClientButton.UseVisualStyleBackColor = true;
+            this.deleteClientButton.Click += new System.EventHandler(this.deleteClientButton_Click);
+            // 
+            // label30
+            // 
+            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label30.Location = new System.Drawing.Point(5, 7);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(134, 21);
+            this.label30.TabIndex = 65;
+            this.label30.Text = "Виберіть клієнта";
+            // 
+            // deleteClientComboBox
+            // 
+            this.deleteClientComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteClientComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.deleteClientComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.deleteClientComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteClientComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.deleteClientComboBox.Location = new System.Drawing.Point(3, 31);
+            this.deleteClientComboBox.Name = "deleteClientComboBox";
+            this.deleteClientComboBox.Size = new System.Drawing.Size(770, 29);
+            this.deleteClientComboBox.Sorted = true;
+            this.deleteClientComboBox.TabIndex = 64;
+            this.deleteClientComboBox.SelectedIndexChanged += new System.EventHandler(this.deleteClientComboBox_SelectedIndexChanged);
+            this.deleteClientComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.deleteClientComboBox_MouseClick);
+            // 
+            // showForwarderPage
+            // 
+            this.showForwarderPage.Controls.Add(this.label31);
+            this.showForwarderPage.Controls.Add(this.forwarderBankDetailsDataGridView);
+            this.showForwarderPage.Controls.Add(this.label32);
+            this.showForwarderPage.Controls.Add(this.forwarderCommentRichTextBox);
+            this.showForwarderPage.Controls.Add(this.label33);
+            this.showForwarderPage.Controls.Add(this.forwarderContactsDataGridView);
+            this.showForwarderPage.Controls.Add(this.label34);
+            this.showForwarderPage.Controls.Add(this.forwarderDataGridView);
+            this.showForwarderPage.Location = new System.Drawing.Point(4, 22);
+            this.showForwarderPage.Name = "showForwarderPage";
+            this.showForwarderPage.Size = new System.Drawing.Size(776, 511);
+            this.showForwarderPage.TabIndex = 5;
+            this.showForwarderPage.Text = "showForwarderPage";
+            this.showForwarderPage.UseVisualStyleBackColor = true;
+            // 
+            // label31
+            // 
+            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label31.Location = new System.Drawing.Point(2, 216);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(164, 21);
+            this.label31.TabIndex = 16;
+            this.label31.Text = "Банківські реквізити";
+            // 
+            // forwarderBankDetailsDataGridView
+            // 
+            this.forwarderBankDetailsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderBankDetailsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.forwarderBankDetailsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.forwarderBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.forwarderBankDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.forwarderBankDetailsDataGridView.Location = new System.Drawing.Point(0, 239);
+            this.forwarderBankDetailsDataGridView.Name = "forwarderBankDetailsDataGridView";
+            this.forwarderBankDetailsDataGridView.Size = new System.Drawing.Size(776, 56);
+            this.forwarderBankDetailsDataGridView.TabIndex = 15;
+            // 
+            // label32
+            // 
+            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label32.Location = new System.Drawing.Point(5, 420);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(81, 21);
+            this.label32.TabIndex = 14;
+            this.label32.Text = "Примітка";
+            // 
+            // forwarderCommentRichTextBox
+            // 
+            this.forwarderCommentRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderCommentRichTextBox.Location = new System.Drawing.Point(0, 444);
+            this.forwarderCommentRichTextBox.Name = "forwarderCommentRichTextBox";
+            this.forwarderCommentRichTextBox.ReadOnly = true;
+            this.forwarderCommentRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.forwarderCommentRichTextBox.Size = new System.Drawing.Size(776, 67);
+            this.forwarderCommentRichTextBox.TabIndex = 13;
+            this.forwarderCommentRichTextBox.Text = "";
+            // 
+            // label33
+            // 
+            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label33.Location = new System.Drawing.Point(5, 296);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(79, 21);
+            this.label33.TabIndex = 12;
+            this.label33.Text = "Контакти";
+            // 
+            // forwarderContactsDataGridView
+            // 
+            this.forwarderContactsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderContactsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.forwarderContactsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.forwarderContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.forwarderContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.forwarderContactsDataGridView.Location = new System.Drawing.Point(0, 318);
+            this.forwarderContactsDataGridView.Name = "forwarderContactsDataGridView";
+            this.forwarderContactsDataGridView.Size = new System.Drawing.Size(776, 95);
+            this.forwarderContactsDataGridView.TabIndex = 11;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label34.Location = new System.Drawing.Point(4, 5);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(108, 21);
+            this.label34.TabIndex = 10;
+            this.label34.Text = "Експедитори";
+            // 
+            // forwarderDataGridView
+            // 
+            this.forwarderDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.forwarderDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.forwarderDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.forwarderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.forwarderDataGridView.Location = new System.Drawing.Point(0, 27);
+            this.forwarderDataGridView.Name = "forwarderDataGridView";
+            this.forwarderDataGridView.Size = new System.Drawing.Size(776, 190);
+            this.forwarderDataGridView.TabIndex = 9;
+            this.forwarderDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.forwarderDataGridView_CellMouseClick);
+            // 
+            // addForwarderPage
+            // 
+            this.addForwarderPage.Controls.Add(this.workDocumentForwarderComboBox);
+            this.addForwarderPage.Controls.Add(this.label35);
+            this.addForwarderPage.Controls.Add(this.label36);
+            this.addForwarderPage.Controls.Add(this.label37);
+            this.addForwarderPage.Controls.Add(this.label38);
+            this.addForwarderPage.Controls.Add(this.label39);
+            this.addForwarderPage.Controls.Add(this.label40);
+            this.addForwarderPage.Controls.Add(this.label41);
+            this.addForwarderPage.Controls.Add(this.addForwarderButton);
+            this.addForwarderPage.Controls.Add(this.label44);
+            this.addForwarderPage.Controls.Add(this.label45);
+            this.addForwarderPage.Controls.Add(this.addBankDetailsForwarderButton);
+            this.addForwarderPage.Controls.Add(this.addContactForwarderButton);
+            this.addForwarderPage.Controls.Add(this.taxPayerStatusForwarderComboBox);
+            this.addForwarderPage.Controls.Add(this.commentForwarderTextBox);
+            this.addForwarderPage.Controls.Add(this.physicalAddressForwarderTextBox);
+            this.addForwarderPage.Controls.Add(this.geographyAddressForwarderTextBox);
+            this.addForwarderPage.Controls.Add(this.directorForwarderTextBox);
+            this.addForwarderPage.Controls.Add(this.nameForwarderTextBox);
+            this.addForwarderPage.Controls.Add(this.label46);
+            this.addForwarderPage.Controls.Add(this.label47);
+            this.addForwarderPage.Controls.Add(this.label48);
+            this.addForwarderPage.Controls.Add(this.label49);
+            this.addForwarderPage.Controls.Add(this.label50);
+            this.addForwarderPage.Controls.Add(this.addTaxPayerStatusForwarderButton);
+            this.addForwarderPage.Controls.Add(this.addWorkDocumentForwarderButton);
+            this.addForwarderPage.Location = new System.Drawing.Point(4, 22);
+            this.addForwarderPage.Name = "addForwarderPage";
+            this.addForwarderPage.Size = new System.Drawing.Size(776, 511);
+            this.addForwarderPage.TabIndex = 6;
+            this.addForwarderPage.Text = "addForwarderPage";
+            this.addForwarderPage.UseVisualStyleBackColor = true;
+            // 
+            // workDocumentForwarderComboBox
+            // 
+            this.workDocumentForwarderComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.workDocumentForwarderComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.workDocumentForwarderComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.workDocumentForwarderComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.workDocumentForwarderComboBox.Location = new System.Drawing.Point(495, 32);
+            this.workDocumentForwarderComboBox.Name = "workDocumentForwarderComboBox";
+            this.workDocumentForwarderComboBox.Size = new System.Drawing.Size(235, 29);
+            this.workDocumentForwarderComboBox.TabIndex = 61;
+            this.workDocumentForwarderComboBox.SelectedIndexChanged += new System.EventHandler(this.workDocumentForwarderComboBox_SelectedIndexChanged);
+            this.workDocumentForwarderComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.workDocumentForwarderComboBox_MouseClick);
+            // 
+            // label35
+            // 
+            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.Transparent;
+            this.label35.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label35.Location = new System.Drawing.Point(10, 490);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(117, 13);
+            this.label35.TabIndex = 60;
+            this.label35.Text = "* - обов\'язкове поле";
+            // 
+            // label36
+            // 
+            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label36.Location = new System.Drawing.Point(684, 70);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(17, 21);
+            this.label36.TabIndex = 59;
+            this.label36.Text = "*";
+            // 
+            // label37
+            // 
+            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.Transparent;
+            this.label37.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label37.Location = new System.Drawing.Point(713, 9);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(17, 21);
+            this.label37.TabIndex = 58;
+            this.label37.Text = "*";
+            // 
+            // label38
+            // 
+            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label38.Location = new System.Drawing.Point(369, 70);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(17, 21);
+            this.label38.TabIndex = 57;
+            this.label38.Text = "*";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label39.Location = new System.Drawing.Point(149, 70);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(17, 21);
+            this.label39.TabIndex = 56;
+            this.label39.Text = "*";
+            // 
+            // label40
+            // 
+            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label40.Location = new System.Drawing.Point(383, 8);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(17, 21);
+            this.label40.TabIndex = 55;
+            this.label40.Text = "*";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.Transparent;
+            this.label41.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label41.Location = new System.Drawing.Point(59, 8);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(17, 21);
+            this.label41.TabIndex = 54;
+            this.label41.Text = "*";
+            // 
+            // addForwarderButton
+            // 
+            this.addForwarderButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.addForwarderButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addForwarderButton.Location = new System.Drawing.Point(466, 393);
+            this.addForwarderButton.Name = "addForwarderButton";
+            this.addForwarderButton.Size = new System.Drawing.Size(302, 70);
+            this.addForwarderButton.TabIndex = 49;
+            this.addForwarderButton.Text = "Додати експедитора";
+            this.addForwarderButton.UseVisualStyleBackColor = true;
+            this.addForwarderButton.Click += new System.EventHandler(this.addForwarderButton_Click);
+            // 
+            // label44
+            // 
+            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label44.Location = new System.Drawing.Point(494, 70);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(193, 21);
+            this.label44.TabIndex = 46;
+            this.label44.Text = "Статус платника податку";
+            // 
+            // label45
+            // 
+            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label45.Location = new System.Drawing.Point(496, 9);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(223, 21);
+            this.label45.TabIndex = 45;
+            this.label45.Text = "На підставі якого документу";
+            // 
+            // addBankDetailsForwarderButton
+            // 
+            this.addBankDetailsForwarderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.addBankDetailsForwarderButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addBankDetailsForwarderButton.Location = new System.Drawing.Point(253, 393);
+            this.addBankDetailsForwarderButton.Name = "addBankDetailsForwarderButton";
+            this.addBankDetailsForwarderButton.Size = new System.Drawing.Size(207, 70);
+            this.addBankDetailsForwarderButton.TabIndex = 44;
+            this.addBankDetailsForwarderButton.Text = "Додати банківські дані";
+            this.addBankDetailsForwarderButton.UseVisualStyleBackColor = true;
+            this.addBankDetailsForwarderButton.Click += new System.EventHandler(this.addBankDetailsForwarderButton_Click);
+            // 
+            // addContactForwarderButton
+            // 
+            this.addContactForwarderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.addContactForwarderButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addContactForwarderButton.Location = new System.Drawing.Point(8, 393);
+            this.addContactForwarderButton.Name = "addContactForwarderButton";
+            this.addContactForwarderButton.Size = new System.Drawing.Size(237, 70);
+            this.addContactForwarderButton.TabIndex = 43;
+            this.addContactForwarderButton.Text = "Додати контакт";
+            this.addContactForwarderButton.UseVisualStyleBackColor = true;
+            this.addContactForwarderButton.Click += new System.EventHandler(this.addContactForwarderButton_Click);
+            // 
+            // taxPayerStatusForwarderComboBox
+            // 
+            this.taxPayerStatusForwarderComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.taxPayerStatusForwarderComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.taxPayerStatusForwarderComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.taxPayerStatusForwarderComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taxPayerStatusForwarderComboBox.FormattingEnabled = true;
+            this.taxPayerStatusForwarderComboBox.Location = new System.Drawing.Point(495, 94);
+            this.taxPayerStatusForwarderComboBox.Name = "taxPayerStatusForwarderComboBox";
+            this.taxPayerStatusForwarderComboBox.Size = new System.Drawing.Size(235, 29);
+            this.taxPayerStatusForwarderComboBox.TabIndex = 42;
+            this.taxPayerStatusForwarderComboBox.SelectedIndexChanged += new System.EventHandler(this.taxPayerStatusForwarderComboBox_SelectedIndexChanged);
+            this.taxPayerStatusForwarderComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.taxPayerStatusForwarderComboBox_MouseClick);
+            // 
+            // commentForwarderTextBox
+            // 
+            this.commentForwarderTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.commentForwarderTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentForwarderTextBox.Location = new System.Drawing.Point(8, 191);
+            this.commentForwarderTextBox.Multiline = true;
+            this.commentForwarderTextBox.Name = "commentForwarderTextBox";
+            this.commentForwarderTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.commentForwarderTextBox.Size = new System.Drawing.Size(756, 189);
+            this.commentForwarderTextBox.TabIndex = 41;
+            // 
+            // physicalAddressForwarderTextBox
+            // 
+            this.physicalAddressForwarderTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.physicalAddressForwarderTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.physicalAddressForwarderTextBox.Location = new System.Drawing.Point(253, 94);
+            this.physicalAddressForwarderTextBox.Name = "physicalAddressForwarderTextBox";
+            this.physicalAddressForwarderTextBox.Size = new System.Drawing.Size(235, 29);
+            this.physicalAddressForwarderTextBox.TabIndex = 40;
+            // 
+            // geographyAddressForwarderTextBox
+            // 
+            this.geographyAddressForwarderTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.geographyAddressForwarderTextBox.Location = new System.Drawing.Point(8, 94);
+            this.geographyAddressForwarderTextBox.Name = "geographyAddressForwarderTextBox";
+            this.geographyAddressForwarderTextBox.Size = new System.Drawing.Size(235, 29);
+            this.geographyAddressForwarderTextBox.TabIndex = 39;
+            // 
+            // directorForwarderTextBox
+            // 
+            this.directorForwarderTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.directorForwarderTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directorForwarderTextBox.Location = new System.Drawing.Point(252, 32);
+            this.directorForwarderTextBox.Name = "directorForwarderTextBox";
+            this.directorForwarderTextBox.Size = new System.Drawing.Size(235, 29);
+            this.directorForwarderTextBox.TabIndex = 38;
+            // 
+            // nameForwarderTextBox
+            // 
+            this.nameForwarderTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameForwarderTextBox.Location = new System.Drawing.Point(8, 33);
+            this.nameForwarderTextBox.Name = "nameForwarderTextBox";
+            this.nameForwarderTextBox.Size = new System.Drawing.Size(235, 29);
+            this.nameForwarderTextBox.TabIndex = 37;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label46.Location = new System.Drawing.Point(10, 167);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(81, 21);
+            this.label46.TabIndex = 36;
+            this.label46.Text = "Примітка";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label47.Location = new System.Drawing.Point(10, 70);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(135, 21);
+            this.label47.TabIndex = 35;
+            this.label47.Text = "Поштова адреса";
+            // 
+            // label48
+            // 
+            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label48.Location = new System.Drawing.Point(249, 70);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(125, 21);
+            this.label48.TabIndex = 34;
+            this.label48.Text = "Фізична адреса";
+            // 
+            // label49
+            // 
+            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label49.Location = new System.Drawing.Point(249, 9);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(137, 21);
+            this.label49.TabIndex = 33;
+            this.label49.Text = "П.І.Б. Директора";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label50.Location = new System.Drawing.Point(10, 9);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(54, 21);
+            this.label50.TabIndex = 32;
+            this.label50.Text = "Назва";
+            // 
+            // addTaxPayerStatusForwarderButton
+            // 
+            this.addTaxPayerStatusForwarderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addTaxPayerStatusForwarderButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.addTaxPayerStatusForwarderButton.Location = new System.Drawing.Point(738, 94);
+            this.addTaxPayerStatusForwarderButton.Name = "addTaxPayerStatusForwarderButton";
+            this.addTaxPayerStatusForwarderButton.Size = new System.Drawing.Size(30, 30);
+            this.addTaxPayerStatusForwarderButton.TabIndex = 48;
+            this.addTaxPayerStatusForwarderButton.UseVisualStyleBackColor = true;
+            this.addTaxPayerStatusForwarderButton.Click += new System.EventHandler(this.addTaxPayerStatusForwarderButton_Click);
+            // 
+            // addWorkDocumentForwarderButton
+            // 
+            this.addWorkDocumentForwarderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addWorkDocumentForwarderButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.addWorkDocumentForwarderButton.Location = new System.Drawing.Point(736, 32);
+            this.addWorkDocumentForwarderButton.Name = "addWorkDocumentForwarderButton";
+            this.addWorkDocumentForwarderButton.Size = new System.Drawing.Size(30, 30);
+            this.addWorkDocumentForwarderButton.TabIndex = 47;
+            this.addWorkDocumentForwarderButton.UseVisualStyleBackColor = true;
+            this.addWorkDocumentForwarderButton.Click += new System.EventHandler(this.addWorkDocumentForwarderButton_Click);
+            // 
+            // updateForwarderPage
+            // 
+            this.updateForwarderPage.Location = new System.Drawing.Point(4, 22);
+            this.updateForwarderPage.Name = "updateForwarderPage";
+            this.updateForwarderPage.Size = new System.Drawing.Size(776, 511);
+            this.updateForwarderPage.TabIndex = 7;
+            this.updateForwarderPage.Text = "updateForwarderPage";
+            this.updateForwarderPage.UseVisualStyleBackColor = true;
+            // 
+            // deleteForwarderPage
+            // 
+            this.deleteForwarderPage.Location = new System.Drawing.Point(4, 22);
+            this.deleteForwarderPage.Name = "deleteForwarderPage";
+            this.deleteForwarderPage.Size = new System.Drawing.Size(776, 511);
+            this.deleteForwarderPage.TabIndex = 8;
+            this.deleteForwarderPage.Text = "deleteForwarderPage";
+            this.deleteForwarderPage.UseVisualStyleBackColor = true;
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.dataControl);
+            this.Controls.Add(this.menuStrip);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip;
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "AtlantSovt";
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
+            this.dataControl.ResumeLayout(false);
+            this.helloPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.showClientPage.ResumeLayout(false);
+            this.showClientPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBankDetailsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientContactsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientDataGridView)).EndInit();
+            this.addClientPage.ResumeLayout(false);
+            this.addClientPage.PerformLayout();
+            this.updateClientPage.ResumeLayout(false);
+            this.updateClientPage.PerformLayout();
+            this.deleteClientPage.ResumeLayout(false);
+            this.deleteClientPage.PerformLayout();
+            this.showForwarderPage.ResumeLayout(false);
+            this.showForwarderPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.forwarderBankDetailsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.forwarderContactsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.forwarderDataGridView)).EndInit();
+            this.addForwarderPage.ResumeLayout(false);
+            this.addForwarderPage.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip;
+        private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addClientsStrip;
+        private System.Windows.Forms.ToolStripMenuItem trasporterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addTransporterStrip;
+        private System.Windows.Forms.ToolStripMenuItem forwarderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showForwarderStrip;
+        private System.Windows.Forms.ToolStripMenuItem updateClientsStrip;
+        private System.Windows.Forms.ToolStripMenuItem deleteClientsStrip;
+        private System.Windows.Forms.ToolStripMenuItem showClientsStrip;
+        private System.Windows.Forms.ToolStripMenuItem showTransporterStrip;
+        private System.Windows.Forms.ToolStripMenuItem updateTransporterStrip;
+        private System.Windows.Forms.ToolStripMenuItem deleteTransporterStrip;
+        private System.Windows.Forms.ToolStripMenuItem addForwarderStrip;
+        private System.Windows.Forms.ToolStripMenuItem updateForwarderStrip;
+        private System.Windows.Forms.ToolStripMenuItem deleteForwarderStrip;
+        private System.Windows.Forms.TabControl dataControl;
+        private System.Windows.Forms.TabPage showClientPage;
+        private System.Windows.Forms.TabPage addClientPage;
+        private System.Windows.Forms.TabPage updateClientPage;
+        private System.Windows.Forms.TabPage deleteClientPage;
+        private System.Windows.Forms.TabPage helloPage;
+        private System.Windows.Forms.Label commentClientLabel;
+        private System.Windows.Forms.Label geographyAddressClientLabel;
+        private System.Windows.Forms.Label physicalAddressClientLabel;
+        private System.Windows.Forms.Label nameClientLabel;
+        private System.Windows.Forms.TextBox nameClientTextBox;
+        private System.Windows.Forms.Label taxPayerStatusClientLabel;
+        private System.Windows.Forms.Label workDocumentClientLabel;
+        private System.Windows.Forms.Button addBankDetailsClientButton;
+        private System.Windows.Forms.Button addContactClientButton;
+        private System.Windows.Forms.ComboBox taxPayerStatusClientComboBox;
+        private System.Windows.Forms.ComboBox workDocumentClientComboBox;
+        private System.Windows.Forms.TextBox commentClientTextBox;
+        private System.Windows.Forms.TextBox physicalAddressClientTextBox;
+        private System.Windows.Forms.TextBox geographyAddressClientTextBox;
+        private System.Windows.Forms.TextBox directorClientTextBox;
+        private System.Windows.Forms.Label directorClientLabel;
+        private System.Windows.Forms.Button addClientButton;
+        private System.Windows.Forms.Button addTaxPayerStatusClientButton;
+        private System.Windows.Forms.Button addWorkDocumentClientButton;
+        private System.Windows.Forms.Label faxLabel;
+        private System.Windows.Forms.Label originalLabel;
+        private System.Windows.Forms.CheckBox faxClientCheckBox;
+        private System.Windows.Forms.CheckBox originalClientCheckBox;
+        private System.Windows.Forms.DataGridView clientDataGridView;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView clientContactsDataGridView;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.RichTextBox clientCommentRichTextBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.CheckBox faxClientUpdateCheckBox;
+        private System.Windows.Forms.CheckBox originalClientUpdateCheckBox;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button updateClientButton;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button clientUpdateAddClientBankDetailsButton;
+        private System.Windows.Forms.ComboBox taxPayerStatusClientUpdateComboBox;
+        private System.Windows.Forms.ComboBox workDocumentClientUpdateComboBox;
+        private System.Windows.Forms.TextBox commentClientUpdateTextBox;
+        private System.Windows.Forms.TextBox physicalAddressClientUpdateTextBox;
+        private System.Windows.Forms.TextBox geographyAddressClientUpdateTextBox;
+        private System.Windows.Forms.TextBox directorClientUpdateTextBox;
+        private System.Windows.Forms.TextBox nameClientUpdateTextBox;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox selectClientUpdateComboBox;
+        private System.Windows.Forms.Button ClientUpdateAddContactButton;
+        private System.Windows.Forms.TextBox contractNumberClientUpdateTextBox;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.DataGridView clientBankDetailsDataGridView;
+        private System.Windows.Forms.Button clientUpdateBankDetailsUpdateButton;
+        private System.Windows.Forms.Button UpdateClientUpdateContactButton;
+        private System.Windows.Forms.Button deleteClientButton;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.ComboBox deleteClientComboBox;
+        private System.Windows.Forms.TabPage showForwarderPage;
+        private System.Windows.Forms.TabPage addForwarderPage;
+        private System.Windows.Forms.TabPage updateForwarderPage;
+        private System.Windows.Forms.TabPage deleteForwarderPage;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.DataGridView forwarderBankDetailsDataGridView;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.RichTextBox forwarderCommentRichTextBox;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.DataGridView forwarderContactsDataGridView;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.DataGridView forwarderDataGridView;
+        private System.Windows.Forms.ComboBox workDocumentForwarderComboBox;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Button addForwarderButton;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Button addBankDetailsForwarderButton;
+        private System.Windows.Forms.Button addContactForwarderButton;
+        private System.Windows.Forms.ComboBox taxPayerStatusForwarderComboBox;
+        private System.Windows.Forms.TextBox commentForwarderTextBox;
+        private System.Windows.Forms.TextBox physicalAddressForwarderTextBox;
+        private System.Windows.Forms.TextBox geographyAddressForwarderTextBox;
+        private System.Windows.Forms.TextBox directorForwarderTextBox;
+        private System.Windows.Forms.TextBox nameForwarderTextBox;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Button addTaxPayerStatusForwarderButton;
+        private System.Windows.Forms.Button addWorkDocumentForwarderButton;
+        private System.Windows.Forms.Button clientUpdateContactDeleteButton;
+        private System.Windows.Forms.Button clientUpdateBankDetailsDeleteButton;
+
+    }
+}
