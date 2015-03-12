@@ -17,6 +17,7 @@ namespace AtlantSovt
     {
         public MainForm()
         {
+            //залупа коня бодулая
             InitializeComponent();
         }
 
