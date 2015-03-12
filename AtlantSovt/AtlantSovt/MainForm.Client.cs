@@ -13,29 +13,28 @@ namespace AtlantSovt
     {
 
         long id;
-        bool workDocumentFlag;
-        bool taxPayerStatusFlag;
+        bool clientWorkDocumentFlag;
+        bool clientTaxPayerStatusFlag;
         bool utb1, utb2, utb3, utb4, utb5, utb6, ucb1, ucb2, uc1, uc2;
 
         Client client, deleteClient;
-        WorkDocument workDocument;
-        TaxPayerStatu taxPayerStatus;
+        WorkDocument clientWorkDocument;
+        TaxPayerStatu clientTaxPayerStatus;
 
         // add
         void AddClient()
         {
             using (var db = new AtlantSovtContext())
             {
-                if (nameClientTextBox.Text != "" && directorClientTextBox.Text != "" && physicalAddressClientTextBox.Text != "" && geographyAddressClientTextBox.Text != "" && workDocumentFlag && taxPayerStatusFlag)
+                if (nameClientTextBox.Text != "" && directorClientTextBox.Text != "" && physicalAddressClientTextBox.Text != "" && geographyAddressClientTextBox.Text != "" && clientWorkDocumentFlag && clientTaxPayerStatusFlag)
                 {
                     var new_Name = nameClientTextBox.Text;
                     var new_Director = directorClientTextBox.Text;
                     var new_PhysicalAddress = physicalAddressClientTextBox.Text;
                     var new_GeografphyAddress = geographyAddressClientTextBox.Text;
-                    var new_WorkDocumentId = workDocument.Id;
-                    var new_TaxPayerStatusId = taxPayerStatus.Id;
-                    var new_ContractType = originalClientCheckBox.Checked;
-                  //  var new_ContractNumber = geographyAddressClientTextBox.Text;
+                    var new_WorkDocumentId = clientWorkDocument.Id;
+                    var new_TaxPayerStatusId = clientTaxPayerStatus.Id;
+                    var new_ContractType = originalClientCheckBox.Checked;                  
                     var new_Comment = commentClientTextBox.Text;
 
                     var New_Client = new Client
@@ -46,8 +45,7 @@ namespace AtlantSovt
                         GeografphyAddress = new_GeografphyAddress,
                         WorkDocumentId = new_WorkDocumentId,
                         TaxPayerStatusId = new_TaxPayerStatusId,
-                        ContractType = new_ContractType,
-                    //  ContractNumber = new_ContractNumber,
+                        ContractType = new_ContractType,                    
                         Comment = new_Comment,
                     };
                     try
@@ -219,7 +217,7 @@ namespace AtlantSovt
                 string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
                 string comboBoxSelectedId = selectedStatus[1];
                 long id = Convert.ToInt64(comboBoxSelectedId);
-                taxPayerStatus = db.TaxPayerStatus.Find(id);
+                clientTaxPayerStatus = db.TaxPayerStatus.Find(id);
             }
         }
         
@@ -231,7 +229,7 @@ namespace AtlantSovt
                 string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
                 string comboBoxSelectedId = selectedStatus[1];
                 long id = Convert.ToInt64(comboBoxSelectedId);
-                workDocument = db.WorkDocuments.Find(id);
+                clientWorkDocument = db.WorkDocuments.Find(id);
             }
         }
         
@@ -324,7 +322,7 @@ namespace AtlantSovt
                 string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
                 string comboBoxSelectedId = selectedStatus[1];
                 long id = Convert.ToInt64(comboBoxSelectedId);
-                workDocument = db.WorkDocuments.Find(id);
+                clientWorkDocument = db.WorkDocuments.Find(id);
             }
         }
 
@@ -336,7 +334,7 @@ namespace AtlantSovt
                 string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
                 string comboBoxSelectedId = selectedStatus[1];
                 long id = Convert.ToInt64(comboBoxSelectedId);
-                taxPayerStatus = db.TaxPayerStatus.Find(id);
+                clientTaxPayerStatus = db.TaxPayerStatus.Find(id);
             }
         }
 
@@ -373,11 +371,11 @@ namespace AtlantSovt
                     }
                     if (ucb1)
                     {
-                        client.WorkDocumentId = workDocument.Id;
+                        client.WorkDocumentId = clientWorkDocument.Id;
                     }
                     if (ucb2)
                     {
-                        client.TaxPayerStatusId = taxPayerStatus.Id;
+                        client.TaxPayerStatusId = clientTaxPayerStatus.Id;
                     }
                     if (uc1)
                     {

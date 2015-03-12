@@ -41,7 +41,8 @@ namespace AtlantSovt.AtlantSovtDb
         {
             modelBuilder.Entity<Client>()
                 .HasOptional(e => e.ClientBankDetail)
-                .WithRequired(e => e.Client);
+                .WithRequired(e => e.Client)
+                .WillCascadeOnDelete();
 
             modelBuilder.Entity<Client>()
                 .HasMany(e => e.ClientContacts)
@@ -54,9 +55,9 @@ namespace AtlantSovt.AtlantSovtDb
                 .HasForeignKey(e => e.FineForDelaysId);
 
             modelBuilder.Entity<Forwarder>()
-                .HasMany(e => e.ForwarderContacts)
+                .HasOptional(e => e.ForwarderBankDetail)
                 .WithRequired(e => e.Forwarder)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete();
 
             modelBuilder.Entity<Forwarder>()
                 .HasMany(e => e.Orders)
@@ -67,10 +68,6 @@ namespace AtlantSovt.AtlantSovtDb
                 .HasMany(e => e.Orders1)
                 .WithOptional(e => e.Forwarder1)
                 .HasForeignKey(e => e.Forwarder2Id);
-
-            modelBuilder.Entity<ForwarderBankDetail>()
-                .HasOptional(e => e.Forwarder)
-                .WithRequired(e => e.ForwarderBankDetail);
 
             modelBuilder.Entity<Order>()
                 .Property(e => e.Freight)

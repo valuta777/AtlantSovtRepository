@@ -8,6 +8,7 @@ namespace AtlantSovt.AtlantSovtDb
 
     public partial class TransporterBankDetail
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
 
         [StringLength(50)]
