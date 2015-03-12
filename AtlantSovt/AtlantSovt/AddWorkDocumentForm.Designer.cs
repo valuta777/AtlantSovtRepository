@@ -58,6 +58,9 @@
             this.ClientSize = new System.Drawing.Size(384, 111);
             this.Controls.Add(this.addWorkDocumentButton);
             this.Controls.Add(this.addWorkDocumentTextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddWorkDocumentForm";
             this.Text = "Додавання документу";
             this.ResumeLayout(false);

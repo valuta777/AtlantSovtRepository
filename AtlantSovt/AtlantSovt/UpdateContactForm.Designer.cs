@@ -84,7 +84,7 @@
             // contactPersonUpdateClientContactTextBox
             // 
             this.contactPersonUpdateClientContactTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.contactPersonUpdateClientContactTextBox.Location = new System.Drawing.Point(12, 97);
+            this.contactPersonUpdateClientContactTextBox.Location = new System.Drawing.Point(11, 97);
             this.contactPersonUpdateClientContactTextBox.Name = "contactPersonUpdateClientContactTextBox";
             this.contactPersonUpdateClientContactTextBox.Size = new System.Drawing.Size(313, 29);
             this.contactPersonUpdateClientContactTextBox.TabIndex = 8;
@@ -136,7 +136,7 @@
             this.clientUpdateContactSelectComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.clientUpdateContactSelectComboBox.Location = new System.Drawing.Point(11, 41);
             this.clientUpdateContactSelectComboBox.Name = "clientUpdateContactSelectComboBox";
-            this.clientUpdateContactSelectComboBox.Size = new System.Drawing.Size(308, 29);
+            this.clientUpdateContactSelectComboBox.Size = new System.Drawing.Size(313, 29);
             this.clientUpdateContactSelectComboBox.TabIndex = 43;
             this.clientUpdateContactSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.clientUpdateContactSelectComboBox_SelectedIndexChanged);
             this.clientUpdateContactSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.clientUpdateContactSelectComboBox_MouseClick);
@@ -167,6 +167,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nameClientLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "UpdateContactForm";
             this.Text = "Зміна контакту";
             this.ResumeLayout(false);
