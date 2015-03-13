@@ -212,7 +212,7 @@ namespace AtlantSovt
         }
         #endregion
 
-                //Update
+                //Update 
                 #region Update
 
         private void selectClientUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -288,6 +288,18 @@ namespace AtlantSovt
             SplitLoadTaxPayerStatusClientUpdateInfo();
         }
 
+        private void clientUpdateWorkDocumentAddButton_Click(object sender, EventArgs e)
+        {
+            AddWorkDocumentForm addWorkDocument = new AddWorkDocumentForm();
+            addWorkDocument.Show();
+        }
+
+        private void clientUpdateTaxPayerStatusAddButton_Click(object sender, EventArgs e)
+        {
+            AddTaxPayerStatusForm addTaxPayerStatus = new AddTaxPayerStatusForm();
+            addTaxPayerStatus.Show();
+        }
+
         private void nameClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             utb1 = true;
@@ -323,6 +335,9 @@ namespace AtlantSovt
             UpdateClient();
         }
 
+        //Contact
+        #region Contact
+        //Add
         private void clientUpdateAddContactButton_Click(object sender, EventArgs e)
         {
             using (var db = new AtlantSovtContext())
@@ -339,7 +354,8 @@ namespace AtlantSovt
                 }
             }
         }
-
+        
+        //Update
         private void updateClientContactButton_Click(object sender, EventArgs e)
         {
             using (var db = new AtlantSovtContext())
@@ -363,24 +379,36 @@ namespace AtlantSovt
                 }
             }
         }
-
-        private void deleteClientButton_Click(object sender, EventArgs e)
+        
+        //Delete
+        private void clientUpdateContactDeleteButton_Click(object sender, EventArgs e)
         {
-            DeleteClient();
+            using (var db = new AtlantSovtContext())
+            {
+                if (client != null)
+                {
+                    if (db.Clients.Find(client.Id).ClientContacts.Count != 0)
+                    {
+                        deleteContactForm = new DeleteContactForm();
+                        deleteContactForm.Show();
+                        DeleteContact();
+                    }
+                    else
+                    {
+                        MessageBox.Show("В клієнта немає контактів");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Оберіть спочатку клієнта");
+                }
+            }
         }
+        #endregion
 
-        private void deleteClientComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SplitDeleteClient();
-        }
-
-        private void deleteClientComboBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            deleteClientComboBox.Items.Clear();
-            LoadClientDeleteInfoComboBox();
-            deleteClientComboBox.DroppedDown = true;
-        }
-
+        //Bank Details
+        #region Bank Details
+        //Add
         private void clientUpdateAddClientBankDetailsButton_Click(object sender, EventArgs e)
         {
             using (var db = new AtlantSovtContext())
@@ -405,35 +433,7 @@ namespace AtlantSovt
             }
         }
 
-
-
-        //нове!!!!
-        //видалення контакта
-        private void clientUpdateContactDeleteButton_Click(object sender, EventArgs e)
-        {
-            using (var db = new AtlantSovtContext())
-            {
-                if (client != null)
-                {
-                    if (db.Clients.Find(client.Id).ClientContacts.Count != 0)
-                    {
-                        deleteContactForm = new DeleteContactForm();
-                        deleteContactForm.Show();
-                        DeleteContact();
-                    }
-                    else
-                    {
-                        MessageBox.Show("В клієнта немає контактів");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Оберіть спочатку клієнта");
-                }
-            }
-        }
-        //змінити банківські данних
-        //добавиви комене
+        //Update
         private void clientUpdateBankDetailsUpdateButton_Click(object sender, EventArgs e)
         {
             using (var db = new AtlantSovtContext())
@@ -458,7 +458,7 @@ namespace AtlantSovt
             }
         }
 
-        //видалення банківських данних
+        //Delete
         private void clientUpdateBankDetaitsDeleteButton_Click(object sender, EventArgs e)
         {
             using (var db = new AtlantSovtContext())
@@ -492,7 +492,31 @@ namespace AtlantSovt
                 }
             }
         }
-    #endregion         
+        #endregion 
+
+        #endregion
+
+                //Delete
+                #region Delete
+        private void deleteClientButton_Click(object sender, EventArgs e)
+        {
+            DeleteClient();
+        }
+
+        private void deleteClientComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitDeleteClient();
+        }
+
+        private void deleteClientComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            deleteClientComboBox.Items.Clear();
+            LoadClientDeleteInfoComboBox();
+            deleteClientComboBox.DroppedDown = true;
+        }
+
+           
+        #endregion        
 
         #endregion
 
@@ -515,7 +539,7 @@ namespace AtlantSovt
 
         private void workDocumentForwarderComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            forwarderWorkDocumentFlag = true;
+            forwarderWorkDocumentAdded = true;
             SplitLoadWorkDocumentForwarderAddInfo();
         }
 
@@ -528,7 +552,7 @@ namespace AtlantSovt
 
         private void taxPayerStatusForwarderComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            forwarderTaxPayerStatusFlag = true;
+            forwarderTaxPayerStatusAdded = true;
             SplitLoadTaxPayerStatusForwarderAddInfo();
         }
 
@@ -572,9 +596,93 @@ namespace AtlantSovt
 
                 //Update
                 #region Update
-                
+        private void selectForwarderUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClearAllBoxesForwarderUpdate();
+            LoadWorkDocumentForwarderUpdateInfoComboBox();
+            LoadTaxPayerStatusForwarderUpdateInfoComboBox();
+            SplitUpdateForwarder();
+        }
+
+        private void selectForwarderUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            selectForwarderUpdateComboBox.Items.Clear();
+            LoadSelectForwarderUpdateInfoComboBox();
+            selectForwarderUpdateComboBox.DroppedDown = true;
+        }
+
+        private void workDocumentForwarderUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            workDocumentForwarderUpdateComboBox.Items.Clear();
+            LoadWorkDocumentForwarderUpdateInfoComboBox();
+            workDocumentForwarderUpdateComboBox.DroppedDown = true;
+        }
+
+        private void taxPayerStatusForwarderUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            taxPayerStatusForwarderUpdateComboBox.Items.Clear();
+            LoadTaxPayerStatusForwarderUpdateInfoComboBox();
+            taxPayerStatusForwarderUpdateComboBox.DroppedDown = true;
+        }
+        
+        private void workDocumentForwarderUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            forwarderWorkDocumentChanged = true;
+            SplitLoadWorkDocumentForwarderUpdateInfo();
+
+        }
+
+        private void taxPayerStatusForwarderUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            forwarderTaxPayerStatusChanged = true;
+            SplitLoadTaxPayerStatusForwarderUpdateInfo();
+        }
+      
+        private void forwarderUpdateWorkDocumentAddButton_Click(object sender, EventArgs e)
+        {
+            AddWorkDocumentForm addWorkDocument = new AddWorkDocumentForm();
+            addWorkDocument.Show();
+        }
+
+        private void forwarderUpdateTaxPayerStatusAddButton_Click(object sender, EventArgs e)
+        {
+            AddTaxPayerStatusForm addTaxPayerStatus = new AddTaxPayerStatusForm();
+            addTaxPayerStatus.Show();
+        }
+
+        private void nameForwarderUpdateTextBox_TextChanged(object sender, EventArgs e)
+        {
+            forwarderNameChanged = true;
+        }
+
+        private void directorForwarderUpdateTextBox_TextChanged(object sender, EventArgs e)
+        {
+            forwarderDirectorChanged = true;
+        }
+
+        private void physicalAddressForwarderUpdateTextBox_TextChanged(object sender, EventArgs e)
+        {
+            forwarderPhysicalAddressChanged = true;
+        }
+
+        private void geographyAddressForwarderUpdateTextBox_TextChanged(object sender, EventArgs e)
+        {
+            forwarderGeographyAddressChanged = true;
+        }
+
+        private void commentForwarderUpdateTextBox_TextChanged(object sender, EventArgs e)
+        {
+            forwarderCommentChanged = true;
+        }
+
+        private void updateForwarderButton_Click(object sender, EventArgs e)
+        {
+            UpdateForwarder();
+        }
 
                 #endregion
+
+
         #endregion
     }
 }

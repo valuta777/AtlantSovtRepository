@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,13 +14,16 @@ namespace AtlantSovt
 {
     partial class MainForm
     {
-        bool forwarderWorkDocumentFlag;
-        bool forwarderTaxPayerStatusFlag;
+        bool forwarderWorkDocumentAdded;
+        bool forwarderTaxPayerStatusAdded;
+        bool forwarderNameChanged, forwarderDirectorChanged, forwarderPhysicalAddressChanged, forwarderGeographyAddressChanged, forwarderCommentChanged, forwarderWorkDocumentChanged, forwarderTaxPayerStatusChanged;
+
 
         Forwarder forwarder, deleteForwarder;
         WorkDocument forwarderWorkDocument;
         TaxPayerStatu forwarderTaxPayerStatus;
 
+        //show
         void ShowForwarder()
         {
             using (var db = new AtlantSovtContext())
@@ -119,6 +123,8 @@ namespace AtlantSovt
             forwarderBankDetailsDataGridView.Visible = true;
         }
 
+
+        //add
         void LoadWorkDocumentForwarderAddInfoComboBox()
         {
             using (var db = new AtlantSovtContext())
@@ -175,7 +181,7 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                if (nameForwarderTextBox.Text != "" && directorForwarderTextBox.Text != "" && physicalAddressForwarderTextBox.Text != "" && geographyAddressForwarderTextBox.Text != "" && forwarderWorkDocumentFlag && forwarderTaxPayerStatusFlag)
+                if (nameForwarderTextBox.Text != "" && directorForwarderTextBox.Text != "" && physicalAddressForwarderTextBox.Text != "" && geographyAddressForwarderTextBox.Text != "" && forwarderWorkDocumentAdded && forwarderTaxPayerStatusAdded)
                 {
                     var new_Name = nameForwarderTextBox.Text;
                     var new_Director = directorForwarderTextBox.Text;
@@ -223,6 +229,156 @@ namespace AtlantSovt
                     MessageBox.Show("Обов'язкові поля не заповнені");
                 }
             }
-        }        
+        }
+
+        //Update
+
+        void ClearAllBoxesForwarderUpdate()
+        {
+            workDocumentForwarderUpdateComboBox.Items.Clear();
+            taxPayerStatusForwarderUpdateComboBox.Items.Clear();
+            nameForwarderUpdateTextBox.Clear();
+            directorForwarderUpdateTextBox.Clear();           
+            physicalAddressForwarderUpdateTextBox.Clear();
+            geographyAddressForwarderUpdateTextBox.Clear();
+            commentForwarderUpdateTextBox.Clear();
+        }
+
+        void SplitUpdateForwarder()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = selectForwarderUpdateComboBox.SelectedItem.ToString();
+                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedNameAndDirector[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                forwarder = db.Forwarders.Find(id);
+                if (forwarder != null)
+                {
+                    nameForwarderUpdateTextBox.Text = forwarder.Name.ToString();
+                    directorForwarderUpdateTextBox.Text = forwarder.Director.ToString();
+                    physicalAddressForwarderUpdateTextBox.Text = forwarder.PhysicalAddress.ToString();
+                    geographyAddressForwarderUpdateTextBox.Text = forwarder.GeographyAddress.ToString();
+                    commentForwarderUpdateTextBox.Text = forwarder.Comment.ToString();
+                    workDocumentForwarderUpdateComboBox.SelectedIndex = Convert.ToInt32(forwarder.WorkDocumentId - 1);
+                    taxPayerStatusForwarderUpdateComboBox.SelectedIndex = Convert.ToInt32(forwarder.TaxPayerStatusId - 1);                    
+                }
+                forwarderNameChanged = forwarderDirectorChanged = forwarderPhysicalAddressChanged = forwarderGeographyAddressChanged = forwarderCommentChanged = forwarderWorkDocumentChanged = forwarderTaxPayerStatusChanged = false;
+            }
+        }
+
+        void LoadSelectForwarderUpdateInfoComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from f in db.Forwarders
+                            orderby f.Id
+                            select f;
+                foreach (var item in query)
+                {
+                    selectForwarderUpdateComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                }
+            }
+        }
+
+        void LoadWorkDocumentForwarderUpdateInfoComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from w in db.WorkDocuments
+                            orderby w.Id
+                            select w;
+                foreach (var item in query)
+                {
+                    workDocumentForwarderUpdateComboBox.Items.Add(item.Status + " [" + item.Id + "]");
+                }
+            }
+        }
+
+        void LoadTaxPayerStatusForwarderUpdateInfoComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from t in db.TaxPayerStatus
+                            orderby t.Id
+                            select t;
+                foreach (var item in query)
+                {
+                    taxPayerStatusForwarderUpdateComboBox.Items.Add(item.Status + " [" + item.Id + "]");
+                }
+            }
+        }
+
+        void SplitLoadWorkDocumentForwarderUpdateInfo()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = workDocumentForwarderUpdateComboBox.SelectedItem.ToString();
+                string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedStatus[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                forwarderWorkDocument = db.WorkDocuments.Find(id);
+            }
+        }
+
+        void SplitLoadTaxPayerStatusForwarderUpdateInfo()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = taxPayerStatusForwarderUpdateComboBox.SelectedItem.ToString();
+                string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedStatus[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                forwarderTaxPayerStatus = db.TaxPayerStatus.Find(id);
+            }
+        }
+
+        void UpdateForwarder()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                //якщо хоча б один з флагів = true
+                if (forwarderNameChanged || forwarderDirectorChanged || forwarderPhysicalAddressChanged || forwarderGeographyAddressChanged || forwarderCommentChanged || forwarderWorkDocumentChanged || forwarderTaxPayerStatusChanged )
+                {
+                    if (forwarderNameChanged)
+                    {
+                        forwarder.Name = nameForwarderUpdateTextBox.Text;
+                    }
+                    if (forwarderDirectorChanged)
+                    {
+                        forwarder.Director = directorForwarderUpdateTextBox.Text;
+                    }
+                    if (forwarderPhysicalAddressChanged)
+                    {
+                        forwarder.PhysicalAddress = physicalAddressForwarderUpdateTextBox.Text;
+                    }
+                    if (forwarderGeographyAddressChanged)
+                    {
+                        forwarder.GeographyAddress = geographyAddressForwarderUpdateTextBox.Text;
+                    }                   
+                    if (forwarderCommentChanged)
+                    {
+                        forwarder.Comment = commentForwarderUpdateTextBox.Text;
+                    }
+                    if (forwarderWorkDocumentChanged)
+                    {
+                        forwarder.WorkDocumentId = forwarderWorkDocument.Id;
+                    }
+                    if (forwarderTaxPayerStatusChanged)
+                    {
+                        forwarder.TaxPayerStatusId = forwarderTaxPayerStatus.Id;
+                    }
+
+                    db.Entry(forwarder).State = EntityState.Modified;
+                    db.SaveChanges();
+                    MessageBox.Show("Успішно змінено");
+                }
+                else
+                {
+                    MessageBox.Show("Змін не знайдено");
+                }
+            }
+        }
+
     }
 }

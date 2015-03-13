@@ -124,8 +124,8 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.clientUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
+            this.clientUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
             this.deleteClientPage = new System.Windows.Forms.TabPage();
             this.deleteClientButton = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
@@ -197,8 +197,8 @@
             this.label63 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
-            this.addTaxPayerStatusForwarderUpdateButton = new System.Windows.Forms.Button();
-            this.addWorkDocumentForwarderUpdateButton = new System.Windows.Forms.Button();
+            this.forwarderUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
+            this.forwarderUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
             this.deleteForwarderPage = new System.Windows.Forms.TabPage();
             this.menuStrip.SuspendLayout();
             this.dataControl.SuspendLayout();
@@ -920,8 +920,8 @@
             this.updateClientPage.Controls.Add(this.label24);
             this.updateClientPage.Controls.Add(this.label25);
             this.updateClientPage.Controls.Add(this.label26);
-            this.updateClientPage.Controls.Add(this.button4);
-            this.updateClientPage.Controls.Add(this.button5);
+            this.updateClientPage.Controls.Add(this.clientUpdateTaxPayerStatusAddButton);
+            this.updateClientPage.Controls.Add(this.clientUpdateWorkDocumentAddButton);
             this.updateClientPage.Location = new System.Drawing.Point(4, 22);
             this.updateClientPage.Name = "updateClientPage";
             this.updateClientPage.Size = new System.Drawing.Size(776, 511);
@@ -1346,25 +1346,27 @@
             this.label26.TabIndex = 32;
             this.label26.Text = "Назва";
             // 
-            // button4
+            // clientUpdateTaxPayerStatusAddButton
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Image = global::AtlantSovt.Properties.Resources.add;
-            this.button4.Location = new System.Drawing.Point(738, 139);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(30, 30);
-            this.button4.TabIndex = 49;
-            this.button4.UseVisualStyleBackColor = true;
+            this.clientUpdateTaxPayerStatusAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientUpdateTaxPayerStatusAddButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.clientUpdateTaxPayerStatusAddButton.Location = new System.Drawing.Point(738, 139);
+            this.clientUpdateTaxPayerStatusAddButton.Name = "clientUpdateTaxPayerStatusAddButton";
+            this.clientUpdateTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
+            this.clientUpdateTaxPayerStatusAddButton.TabIndex = 49;
+            this.clientUpdateTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
+            this.clientUpdateTaxPayerStatusAddButton.Click += new System.EventHandler(this.clientUpdateTaxPayerStatusAddButton_Click);
             // 
-            // button5
+            // clientUpdateWorkDocumentAddButton
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Image = global::AtlantSovt.Properties.Resources.add;
-            this.button5.Location = new System.Drawing.Point(736, 77);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(30, 30);
-            this.button5.TabIndex = 48;
-            this.button5.UseVisualStyleBackColor = true;
+            this.clientUpdateWorkDocumentAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientUpdateWorkDocumentAddButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.clientUpdateWorkDocumentAddButton.Location = new System.Drawing.Point(736, 77);
+            this.clientUpdateWorkDocumentAddButton.Name = "clientUpdateWorkDocumentAddButton";
+            this.clientUpdateWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
+            this.clientUpdateWorkDocumentAddButton.TabIndex = 48;
+            this.clientUpdateWorkDocumentAddButton.UseVisualStyleBackColor = true;
+            this.clientUpdateWorkDocumentAddButton.Click += new System.EventHandler(this.clientUpdateWorkDocumentAddButton_Click);
             // 
             // deleteClientPage
             // 
@@ -1903,8 +1905,8 @@
             this.updateForwarderPage.Controls.Add(this.label63);
             this.updateForwarderPage.Controls.Add(this.label64);
             this.updateForwarderPage.Controls.Add(this.label65);
-            this.updateForwarderPage.Controls.Add(this.addTaxPayerStatusForwarderUpdateButton);
-            this.updateForwarderPage.Controls.Add(this.addWorkDocumentForwarderUpdateButton);
+            this.updateForwarderPage.Controls.Add(this.forwarderUpdateTaxPayerStatusAddButton);
+            this.updateForwarderPage.Controls.Add(this.forwarderUpdateWorkDocumentAddButton);
             this.updateForwarderPage.Location = new System.Drawing.Point(4, 22);
             this.updateForwarderPage.Name = "updateForwarderPage";
             this.updateForwarderPage.Size = new System.Drawing.Size(776, 511);
@@ -1929,7 +1931,7 @@
             this.forwarderUpdateBankDetailsDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.forwarderUpdateBankDetailsDeleteButton.Location = new System.Drawing.Point(251, 459);
             this.forwarderUpdateBankDetailsDeleteButton.Name = "forwarderUpdateBankDetailsDeleteButton";
-            this.forwarderUpdateBankDetailsDeleteButton.Size = new System.Drawing.Size(208, 30);
+            this.forwarderUpdateBankDetailsDeleteButton.Size = new System.Drawing.Size(207, 30);
             this.forwarderUpdateBankDetailsDeleteButton.TabIndex = 102;
             this.forwarderUpdateBankDetailsDeleteButton.Text = "Видалити банківські данні";
             this.forwarderUpdateBankDetailsDeleteButton.UseVisualStyleBackColor = true;
@@ -1980,6 +1982,7 @@
             this.forwarderUpdateButton.TabIndex = 98;
             this.forwarderUpdateButton.Text = "Змінити";
             this.forwarderUpdateButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateButton.Click += new System.EventHandler(this.updateForwarderButton_Click);
             // 
             // forwarderUpdateBankDetailsAddButton
             // 
@@ -2025,6 +2028,8 @@
             this.selectForwarderUpdateComboBox.Size = new System.Drawing.Size(722, 29);
             this.selectForwarderUpdateComboBox.Sorted = true;
             this.selectForwarderUpdateComboBox.TabIndex = 92;
+            this.selectForwarderUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.selectForwarderUpdateComboBox_SelectedIndexChanged);
+            this.selectForwarderUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.selectForwarderUpdateComboBox_MouseClick);
             // 
             // label51
             // 
@@ -2137,6 +2142,8 @@
             this.taxPayerStatusForwarderUpdateComboBox.Name = "taxPayerStatusForwarderUpdateComboBox";
             this.taxPayerStatusForwarderUpdateComboBox.Size = new System.Drawing.Size(235, 29);
             this.taxPayerStatusForwarderUpdateComboBox.TabIndex = 77;
+            this.taxPayerStatusForwarderUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.taxPayerStatusForwarderUpdateComboBox_SelectedIndexChanged);
+            this.taxPayerStatusForwarderUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.taxPayerStatusForwarderUpdateComboBox_MouseClick);
             // 
             // workDocumentForwarderUpdateComboBox
             // 
@@ -2148,6 +2155,8 @@
             this.workDocumentForwarderUpdateComboBox.Name = "workDocumentForwarderUpdateComboBox";
             this.workDocumentForwarderUpdateComboBox.Size = new System.Drawing.Size(235, 29);
             this.workDocumentForwarderUpdateComboBox.TabIndex = 76;
+            this.workDocumentForwarderUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.workDocumentForwarderUpdateComboBox_SelectedIndexChanged);
+            this.workDocumentForwarderUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.workDocumentForwarderUpdateComboBox_MouseClick);
             // 
             // commentForwarderUpdateTextBox
             // 
@@ -2161,6 +2170,7 @@
             this.commentForwarderUpdateTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.commentForwarderUpdateTextBox.Size = new System.Drawing.Size(758, 185);
             this.commentForwarderUpdateTextBox.TabIndex = 75;
+            this.commentForwarderUpdateTextBox.TextChanged += new System.EventHandler(this.commentForwarderUpdateTextBox_TextChanged);
             // 
             // physicalAddressForwarderUpdateTextBox
             // 
@@ -2171,6 +2181,7 @@
             this.physicalAddressForwarderUpdateTextBox.Name = "physicalAddressForwarderUpdateTextBox";
             this.physicalAddressForwarderUpdateTextBox.Size = new System.Drawing.Size(235, 29);
             this.physicalAddressForwarderUpdateTextBox.TabIndex = 74;
+            this.physicalAddressForwarderUpdateTextBox.TextChanged += new System.EventHandler(this.physicalAddressForwarderUpdateTextBox_TextChanged);
             // 
             // geographyAddressForwarderUpdateTextBox
             // 
@@ -2179,6 +2190,7 @@
             this.geographyAddressForwarderUpdateTextBox.Name = "geographyAddressForwarderUpdateTextBox";
             this.geographyAddressForwarderUpdateTextBox.Size = new System.Drawing.Size(235, 29);
             this.geographyAddressForwarderUpdateTextBox.TabIndex = 73;
+            this.geographyAddressForwarderUpdateTextBox.TextChanged += new System.EventHandler(this.geographyAddressForwarderUpdateTextBox_TextChanged);
             // 
             // directorForwarderUpdateTextBox
             // 
@@ -2189,6 +2201,7 @@
             this.directorForwarderUpdateTextBox.Name = "directorForwarderUpdateTextBox";
             this.directorForwarderUpdateTextBox.Size = new System.Drawing.Size(235, 29);
             this.directorForwarderUpdateTextBox.TabIndex = 72;
+            this.directorForwarderUpdateTextBox.TextChanged += new System.EventHandler(this.directorForwarderUpdateTextBox_TextChanged);
             // 
             // nameForwarderUpdateTextBox
             // 
@@ -2197,6 +2210,7 @@
             this.nameForwarderUpdateTextBox.Name = "nameForwarderUpdateTextBox";
             this.nameForwarderUpdateTextBox.Size = new System.Drawing.Size(235, 29);
             this.nameForwarderUpdateTextBox.TabIndex = 71;
+            this.nameForwarderUpdateTextBox.TextChanged += new System.EventHandler(this.nameForwarderUpdateTextBox_TextChanged);
             // 
             // label61
             // 
@@ -2252,25 +2266,27 @@
             this.label65.TabIndex = 66;
             this.label65.Text = "Назва";
             // 
-            // addTaxPayerStatusForwarderUpdateButton
+            // forwarderUpdateTaxPayerStatusAddButton
             // 
-            this.addTaxPayerStatusForwarderUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addTaxPayerStatusForwarderUpdateButton.Image = global::AtlantSovt.Properties.Resources.add;
-            this.addTaxPayerStatusForwarderUpdateButton.Location = new System.Drawing.Point(738, 139);
-            this.addTaxPayerStatusForwarderUpdateButton.Name = "addTaxPayerStatusForwarderUpdateButton";
-            this.addTaxPayerStatusForwarderUpdateButton.Size = new System.Drawing.Size(30, 30);
-            this.addTaxPayerStatusForwarderUpdateButton.TabIndex = 81;
-            this.addTaxPayerStatusForwarderUpdateButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateTaxPayerStatusAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderUpdateTaxPayerStatusAddButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.forwarderUpdateTaxPayerStatusAddButton.Location = new System.Drawing.Point(738, 139);
+            this.forwarderUpdateTaxPayerStatusAddButton.Name = "forwarderUpdateTaxPayerStatusAddButton";
+            this.forwarderUpdateTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
+            this.forwarderUpdateTaxPayerStatusAddButton.TabIndex = 81;
+            this.forwarderUpdateTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateTaxPayerStatusAddButton.Click += new System.EventHandler(this.forwarderUpdateTaxPayerStatusAddButton_Click);
             // 
-            // addWorkDocumentForwarderUpdateButton
+            // forwarderUpdateWorkDocumentAddButton
             // 
-            this.addWorkDocumentForwarderUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addWorkDocumentForwarderUpdateButton.Image = global::AtlantSovt.Properties.Resources.add;
-            this.addWorkDocumentForwarderUpdateButton.Location = new System.Drawing.Point(736, 77);
-            this.addWorkDocumentForwarderUpdateButton.Name = "addWorkDocumentForwarderUpdateButton";
-            this.addWorkDocumentForwarderUpdateButton.Size = new System.Drawing.Size(30, 30);
-            this.addWorkDocumentForwarderUpdateButton.TabIndex = 80;
-            this.addWorkDocumentForwarderUpdateButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateWorkDocumentAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderUpdateWorkDocumentAddButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.forwarderUpdateWorkDocumentAddButton.Location = new System.Drawing.Point(736, 77);
+            this.forwarderUpdateWorkDocumentAddButton.Name = "forwarderUpdateWorkDocumentAddButton";
+            this.forwarderUpdateWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
+            this.forwarderUpdateWorkDocumentAddButton.TabIndex = 80;
+            this.forwarderUpdateWorkDocumentAddButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateWorkDocumentAddButton.Click += new System.EventHandler(this.forwarderUpdateWorkDocumentAddButton_Click);
             // 
             // deleteForwarderPage
             // 
@@ -2419,8 +2435,8 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button clientUpdateTaxPayerStatusAddButton;
+        private System.Windows.Forms.Button clientUpdateWorkDocumentAddButton;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.ComboBox selectClientUpdateComboBox;
 
@@ -2508,8 +2524,8 @@
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Button addTaxPayerStatusForwarderUpdateButton;
-        private System.Windows.Forms.Button addWorkDocumentForwarderUpdateButton;
+        private System.Windows.Forms.Button forwarderUpdateTaxPayerStatusAddButton;
+        private System.Windows.Forms.Button forwarderUpdateWorkDocumentAddButton;
 
         private System.Windows.Forms.Button forwarderUpdateBankDetailsAddButton;
         private System.Windows.Forms.Button forwarderUpdateBankDetailsUpdateButton;
