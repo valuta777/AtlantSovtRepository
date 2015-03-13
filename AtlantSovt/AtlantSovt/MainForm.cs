@@ -16,8 +16,7 @@ namespace AtlantSovt
     public partial class MainForm : Form
     {
         public MainForm()
-        {
-            
+        {            
             InitializeComponent();
         }
 
@@ -29,6 +28,8 @@ namespace AtlantSovt
         UpdateClientBankDetailsForm updateClientBankDetailsForm;
         DeleteContactForm deleteContactForm;
 
+        //Load / Animaton / Test connection
+        #region Load
         void Connecting()
         {
             Thread animationThread = new Thread(new ThreadStart(PlayAnimation));
@@ -56,59 +57,65 @@ namespace AtlantSovt
         {
             Connecting();
         }
+        #endregion
 
         //MenuStrips
+        #region MenuStrips
+                private void showClientsStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 1;
+                    ShowClient();
+                    clientContactsDataGridView.Visible = false;
+                    clientBankDetailsDataGridView.Visible = false;
+                    clientCommentRichTextBox.Text = "";
+                }
 
-        private void showClientsStrip_Click(object sender, EventArgs e)
-        {
-            dataControl.SelectedIndex = 1;
-            ShowClient();
-            clientContactsDataGridView.Visible = false;
-            clientBankDetailsDataGridView.Visible = false;
-            clientCommentRichTextBox.Text = "";
-        }
+                private void addClientsStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 2;
+                }
 
-        private void addClientsStrip_Click(object sender, EventArgs e)
-        {
-            dataControl.SelectedIndex = 2;
-        }
+                private void updateClientsStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 3;
+                }
 
-        private void updateClientsStrip_Click(object sender, EventArgs e)
-        {
-            dataControl.SelectedIndex = 3;
-        }
+                private void deleteClientsStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 4;
+                }
 
-        private void deleteClientsStrip_Click(object sender, EventArgs e)
-        {
-            dataControl.SelectedIndex = 4;
-        }
+                private void showForwarderStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 5;
+                    ShowForwarder();
+                    forwarderContactsDataGridView.Visible = false;
+                    forwarderBankDetailsDataGridView.Visible = false;
+                    forwarderCommentRichTextBox.Text = "";
+                }
 
-        private void showForwarderStrip_Click(object sender, EventArgs e)
-        {
-            dataControl.SelectedIndex = 5;
-            ShowForwarder();
-            forwarderContactsDataGridView.Visible = false;
-            forwarderBankDetailsDataGridView.Visible = false;
-            forwarderCommentRichTextBox.Text = "";
-        }
+                private void addForwarderStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 6;
+                }
 
-        private void addForwarderStrip_Click(object sender, EventArgs e)
-        {
-            dataControl.SelectedIndex = 6;
-        }
+                private void updateForwarderStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 7;
+                }
 
-        private void updateForwarderStrip_Click(object sender, EventArgs e)
-        {
-            dataControl.SelectedIndex = 7;
-        }
+                private void deleteForwarderStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 8;
+                }
+                #endregion
 
-        private void deleteForwarderStrip_Click(object sender, EventArgs e)
-        {
-            dataControl.SelectedIndex = 8;
-        }
+        //Client
+        #region Client
 
-        // Client
-        //Add
+                //Add
+                #region Add
+
         private void addWorkDocumentClientButton_Click(object sender, EventArgs e)
         {
             AddWorkDocumentForm addWorkDocument = new AddWorkDocumentForm();
@@ -203,8 +210,10 @@ namespace AtlantSovt
                 originalClientCheckBox.CheckState = CheckState.Checked;
             }
         }
+        #endregion
 
-        //Update
+                //Update
+                #region Update
 
         private void selectClientUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -483,11 +492,15 @@ namespace AtlantSovt
                 }
             }
         }
+    #endregion         
+
+        #endregion
 
         //Forwarder
+        #region Forwarder   
+                //Add
+                #region Add
 
-        //Add
-                    
         private void forwarderDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowForwarderInfo();
@@ -555,6 +568,13 @@ namespace AtlantSovt
             geographyAddressForwarderTextBox.Text = "";
             commentForwarderTextBox.Text = "";
         }
+        #endregion
 
+                //Update
+                #region Update
+                
+
+                #endregion
+        #endregion
     }
 }
