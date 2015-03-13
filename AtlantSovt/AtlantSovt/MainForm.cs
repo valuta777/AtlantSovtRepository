@@ -255,8 +255,8 @@ namespace AtlantSovt
             if (originalClientUpdateCheckBox.Checked)
             {
                 faxClientUpdateCheckBox.CheckState = CheckState.Unchecked;
-                uc1 = true;
-                uc2 = false;
+                clientOriginalChanged = true;
+                clientFaxChanged = false;
             }
             else
             {
@@ -270,8 +270,8 @@ namespace AtlantSovt
             if (faxClientUpdateCheckBox.Checked)
             {
                 originalClientUpdateCheckBox.CheckState = CheckState.Unchecked;
-                uc1 = false;
-                uc2 = true;
+                clientOriginalChanged = false;
+                clientFaxChanged = true;
             }
             else
             {
@@ -282,14 +282,14 @@ namespace AtlantSovt
 
         private void workDocumentClientUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ucb1 = true;
+            clientWorkDocumentChanged = true;
             SplitLoadWorkDocumentClientUpdateInfo();
            
         }
 
         private void taxPayerStatusClientUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ucb2 = true;
+            clientTaxPayerStatusChanged = true;
             SplitLoadTaxPayerStatusClientUpdateInfo();
         }
 
@@ -307,32 +307,32 @@ namespace AtlantSovt
 
         private void nameClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            utb1 = true;
+            clientNameChanged = true;
         }
 
         private void directorClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            utb2 = true;
+            clientDirectorChanged = true;
         }
 
         private void contractNumberClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            utb3 = true;
+            clientContractNumberChanged = true;
         }
 
         private void physicalAddressClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            utb4 = true;
+            clientPhysicalAddressChanged = true;
         }
 
         private void geographyAddressClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            utb5 = true;
+            clientGeographyAddressChanged = true;
         }
 
         private void commentClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            utb6 = true;
+            clientCommentChanged = true;
         }
 
         private void updateClientButton_Click(object sender, EventArgs e)
