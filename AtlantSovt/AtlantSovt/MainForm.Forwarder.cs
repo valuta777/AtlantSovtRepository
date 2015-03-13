@@ -207,15 +207,15 @@ namespace AtlantSovt
                         db.SaveChanges();
                         MessageBox.Show("Експедитор успішно доданий");
 
-                        if (addForwarderBankDetailsForm != null)
+                        if (addForwarderBankDetailsAddForm != null)
                         {
-                            addForwarderBankDetailsForm.AddForwarderBankDetail(New_Forwarder.Id);
-                            addForwarderBankDetailsForm = null;
+                            addForwarderBankDetailsAddForm.AddForwarderBankDetail(New_Forwarder.Id);
+                            addForwarderBankDetailsAddForm = null;
                         }
-                        if (addContactForwarderForm != null)
+                        if (addForwarderContactAddForm != null)
                         {
-                            addContactForwarderForm.AddForwarderContact(New_Forwarder.Id);
-                            addContactForwarderForm = null;
+                            addForwarderContactAddForm.AddForwarderContact(New_Forwarder.Id);
+                            addForwarderContactAddForm = null;
                         }
                     }
                     catch (Exception fe)
@@ -377,6 +377,35 @@ namespace AtlantSovt
                 {
                     MessageBox.Show("Змін не знайдено");
                 }
+            }
+        }
+        //Forwarder Contact
+
+        //Add
+        void AddNewForwarderContact()
+        {
+            if (forwarder != null)
+            {
+                updateForwarderContactAddForm.AddForwarderContact2(forwarder.Id);
+                updateForwarderContactAddForm = null;
+            }
+        }
+
+        //Update
+        void UpdateForwarderContact()
+        {
+            if (forwarder != null)
+            {
+                updateForwarderContactUpdateForm.UpdateForwarderContact(forwarder);
+            }
+        }
+
+        //Delete
+        void DeleteForwarderContact()
+        {
+            if (forwarder != null)
+            {
+                deleteForwarderContactDeleteForm.DeleteForwarderContact(forwarder);
             }
         }
 

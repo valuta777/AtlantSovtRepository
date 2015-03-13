@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace AtlantSovt
 {
-    public partial class DeleteContactForm : Form
+    public partial class ClientContactDeleteForm : Form
     {
         Client client;
         ClientContact contact;
-        public DeleteContactForm()
+        public ClientContactDeleteForm()
         {
             InitializeComponent();
         }

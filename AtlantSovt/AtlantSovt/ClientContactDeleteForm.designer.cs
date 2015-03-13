@@ -1,6 +1,6 @@
 ﻿namespace AtlantSovt
 {
-    partial class DeleteContactForm
+    partial class ClientContactDeleteForm
     {
         /// <summary>
         /// Required designer variable.

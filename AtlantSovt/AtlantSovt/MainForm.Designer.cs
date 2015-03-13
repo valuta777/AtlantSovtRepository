@@ -1159,7 +1159,7 @@
             this.updateClientButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.updateClientButton.Location = new System.Drawing.Point(465, 387);
             this.updateClientButton.Name = "updateClientButton";
-            this.updateClientButton.Size = new System.Drawing.Size(302, 70);
+            this.updateClientButton.Size = new System.Drawing.Size(302, 101);
             this.updateClientButton.TabIndex = 50;
             this.updateClientButton.Text = "Змінити";
             this.updateClientButton.UseVisualStyleBackColor = true;
@@ -1924,6 +1924,7 @@
             this.forwarderUpdateContactDeleteButton.TabIndex = 103;
             this.forwarderUpdateContactDeleteButton.Text = "Видалити контакт";
             this.forwarderUpdateContactDeleteButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateContactDeleteButton.Click += new System.EventHandler(this.forwarderUpdateContactDeleteButton_Click);
             // 
             // forwarderUpdateBankDetailsDeleteButton
             // 
@@ -1935,6 +1936,7 @@
             this.forwarderUpdateBankDetailsDeleteButton.TabIndex = 102;
             this.forwarderUpdateBankDetailsDeleteButton.Text = "Видалити банківські данні";
             this.forwarderUpdateBankDetailsDeleteButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateBankDetailsDeleteButton.Click += new System.EventHandler(this.forwarderUpdateBankDetaitsDeleteButton_Click);
             // 
             // forwarderUpdateBankDetailsUpdateButton
             // 
@@ -1946,6 +1948,7 @@
             this.forwarderUpdateBankDetailsUpdateButton.TabIndex = 101;
             this.forwarderUpdateBankDetailsUpdateButton.Text = "Змінити банківські данні";
             this.forwarderUpdateBankDetailsUpdateButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateBankDetailsUpdateButton.Click += new System.EventHandler(this.forwarderUpdateBankDetailsUpdateButton_Click);
             // 
             // forwarderUpdateContactUpdateButton
             // 
@@ -1957,6 +1960,7 @@
             this.forwarderUpdateContactUpdateButton.TabIndex = 100;
             this.forwarderUpdateContactUpdateButton.Text = "Змінити контакт";
             this.forwarderUpdateContactUpdateButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateContactUpdateButton.Click += new System.EventHandler(this.forwarderUpdateContactUpdateButton_Click);
             // 
             // label66
             // 
@@ -1994,6 +1998,7 @@
             this.forwarderUpdateBankDetailsAddButton.TabIndex = 97;
             this.forwarderUpdateBankDetailsAddButton.Text = "Додати банківські данні";
             this.forwarderUpdateBankDetailsAddButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateBankDetailsAddButton.Click += new System.EventHandler(this.forwarderUpdateClientBankDetailsAddButton_Click);
             // 
             // forwarderUpdateContactAddButton
             // 
@@ -2005,6 +2010,7 @@
             this.forwarderUpdateContactAddButton.TabIndex = 96;
             this.forwarderUpdateContactAddButton.Text = "Додати контакт";
             this.forwarderUpdateContactAddButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateContactAddButton.Click += new System.EventHandler(this.forwarderUpdateContactAddButton_Click);
             // 
             // label43
             // 

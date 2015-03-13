@@ -21,7 +21,8 @@ namespace AtlantSovt
         WorkDocument clientWorkDocument;
         TaxPayerStatu clientTaxPayerStatus;
 
-        // add
+        //Add
+        #region Add
         void AddClient()
         {
             using (var db = new AtlantSovtContext())
@@ -54,15 +55,15 @@ namespace AtlantSovt
                         db.SaveChanges();
                         MessageBox.Show("Клієнт успішно доданий");
 
-                        if (addClientBankDetailsForm != null)
+                        if (addClientBankDetailsAddForm != null)
                         {
-                            addClientBankDetailsForm.AddClientBankDetail(New_Client.Id);
-                            addClientBankDetailsForm = null;
+                            addClientBankDetailsAddForm.AddClientBankDetail(New_Client.Id);
+                            addClientBankDetailsAddForm = null;
                         }
-                        if (addContactForm != null)
+                        if (addClientContactAddForm != null)
                         {
-                            addContactForm.AddClientContact(New_Client.Id);
-                            addContactForm = null;
+                            addClientContactAddForm.AddClientContact(New_Client.Id);
+                            addClientContactAddForm = null;
                         }
                     }
                     catch (Exception ec)
@@ -232,9 +233,10 @@ namespace AtlantSovt
                 clientWorkDocument = db.WorkDocuments.Find(id);
             }
         }
-        
-        //update
+        #endregion
 
+        //Update
+        #region Update
         void ClearAllBoxesClientUpdate()
         {
             workDocumentClientUpdateComboBox.Items.Clear();
@@ -397,14 +399,15 @@ namespace AtlantSovt
             }
         }
 
-        // ClientContact
+        // Contact
+        #region Contact
 
         void AddNewContact()
         {
             if (client != null)
             {
-                ClientUpdateAddContactForm.AddClientContact2(client.Id);
-                ClientUpdateAddContactForm = null;
+                updateClientContactAddForm.AddClientContact2(client.Id);
+                updateClientContactAddForm = null;
             }
         }
         
@@ -412,7 +415,7 @@ namespace AtlantSovt
         {
             if (client != null) 
             {
-                UpdateClientUpdateContactForm.UpdateContact(client);
+                updateClientContactUpdateForm.UpdateContact(client);
             }           
         }
 
@@ -420,11 +423,16 @@ namespace AtlantSovt
         {
             if (client != null)
             {
-                deleteContactForm.DeleteContact(client);
+                deleteClientContactDeleteForm.DeleteContact(client);
             }
         }
 
-        //delete
+        #endregion
+
+        #endregion
+
+        //Delete
+        #region Delete
 
         void DeleteClient()
         {
@@ -476,5 +484,8 @@ namespace AtlantSovt
                 deleteClient = db.Clients.Find(id);
             }
         }
+
+
+        #endregion
     }
 }

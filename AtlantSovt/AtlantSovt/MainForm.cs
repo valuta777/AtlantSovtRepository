@@ -19,14 +19,25 @@ namespace AtlantSovt
         {            
             InitializeComponent();
         }
+//Client Forms
 
-        AddContactClientForm addContactForm, ClientUpdateAddContactForm;
-        AddContactForwarderForm addContactForwarderForm;
-        AddClientBankDetails addClientBankDetailsForm, updateClientAddBankDetailsForm;
-        AddForwarderBankDetails addForwarderBankDetailsForm;
-        UpdateContactForm UpdateClientUpdateContactForm;
-        UpdateClientBankDetailsForm updateClientBankDetailsForm;
-        DeleteContactForm deleteContactForm;
+            //Contact
+        ClientContactAddForm addClientContactAddForm, updateClientContactAddForm;
+        ClientContactUpdateForm updateClientContactUpdateForm;
+        ClientContactDeleteForm deleteClientContactDeleteForm;
+            //Bank Details
+        ClientBankDetailsAddForm addClientBankDetailsAddForm, updateClientBankDetailsAddForm;
+        ClientBankDetailsUpdateForm updateClientBankDetailsUpdateForm;
+        
+//Forwarder Forms
+
+            //Contact
+        ForwarderContactAddForm addForwarderContactAddForm, updateForwarderContactAddForm;
+        ForwarderContactUpdateForm updateForwarderContactUpdateForm;
+        ForwarderContactDeleteForm deleteForwarderContactDeleteForm;       
+            //Bank Details
+        ForwarderBankDetailsAddForm addForwarderBankDetailsAddForm, updateForwarderBankDetailsAddForm;
+        ForwarderBankDetailsUpdateForm updateForwarderBankDetailsUpdateForm;
 
         //Load / Animaton / Test connection
         #region Load
@@ -60,15 +71,7 @@ namespace AtlantSovt
         #endregion
 
         //MenuStrips
-        #region MenuStrips
-                private void showClientsStrip_Click(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 1;
-                    ShowClient();
-                    clientContactsDataGridView.Visible = false;
-                    clientBankDetailsDataGridView.Visible = false;
-                    clientCommentRichTextBox.Text = "";
-                }
+        #region MenuStrips               
 
                 private void addClientsStrip_Click(object sender, EventArgs e)
                 {
@@ -83,16 +86,7 @@ namespace AtlantSovt
                 private void deleteClientsStrip_Click(object sender, EventArgs e)
                 {
                     dataControl.SelectedIndex = 4;
-                }
-
-                private void showForwarderStrip_Click(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 5;
-                    ShowForwarder();
-                    forwarderContactsDataGridView.Visible = false;
-                    forwarderBankDetailsDataGridView.Visible = false;
-                    forwarderCommentRichTextBox.Text = "";
-                }
+                }               
 
                 private void addForwarderStrip_Click(object sender, EventArgs e)
                 {
@@ -112,6 +106,17 @@ namespace AtlantSovt
 
         //Client
         #region Client
+                //Show
+                #region Show
+                private void showClientsStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 1;
+                    ShowClient();
+                    clientContactsDataGridView.Visible = false;
+                    clientBankDetailsDataGridView.Visible = false;
+                    clientCommentRichTextBox.Text = "";
+                }
+                #endregion
 
                 //Add
                 #region Add
@@ -130,14 +135,14 @@ namespace AtlantSovt
         
         private void addContactClientButton_Click(object sender, EventArgs e)
         {
-            addContactForm = new AddContactClientForm();
-            addContactForm.Show();
+            addClientContactAddForm = new ClientContactAddForm();
+            addClientContactAddForm.Show();
         }
         
         private void addBankDetailsClientButton_Click(object sender, EventArgs e)
         {
-            addClientBankDetailsForm = new AddClientBankDetails();
-            addClientBankDetailsForm.Show();
+            addClientBankDetailsAddForm = new ClientBankDetailsAddForm();
+            addClientBankDetailsAddForm.Show();
         }
         
         private void addClientButton_Click(object sender, EventArgs e)
@@ -335,8 +340,8 @@ namespace AtlantSovt
             UpdateClient();
         }
 
-        //Contact
-        #region Contact
+                //Contact
+                #region Contact
         //Add
         private void clientUpdateAddContactButton_Click(object sender, EventArgs e)
         {
@@ -344,8 +349,8 @@ namespace AtlantSovt
             {
                 if (client != null)
                 {
-                    ClientUpdateAddContactForm = new AddContactClientForm();
-                    ClientUpdateAddContactForm.Show();
+                    updateClientContactAddForm = new ClientContactAddForm();
+                    updateClientContactAddForm.Show();
                     AddNewContact();
                 }
                 else
@@ -364,8 +369,8 @@ namespace AtlantSovt
                 {
                     if (db.Clients.Find(client.Id).ClientContacts.Count != 0)
                     {
-                        UpdateClientUpdateContactForm = new UpdateContactForm();
-                        UpdateClientUpdateContactForm.Show();
+                        updateClientContactUpdateForm = new ClientContactUpdateForm();
+                        updateClientContactUpdateForm.Show();
                         UpdateContact();
                     }
                     else
@@ -389,8 +394,8 @@ namespace AtlantSovt
                 {
                     if (db.Clients.Find(client.Id).ClientContacts.Count != 0)
                     {
-                        deleteContactForm = new DeleteContactForm();
-                        deleteContactForm.Show();
+                        deleteClientContactDeleteForm = new ClientContactDeleteForm();
+                        deleteClientContactDeleteForm.Show();
                         DeleteContact();
                     }
                     else
@@ -406,8 +411,8 @@ namespace AtlantSovt
         }
         #endregion
 
-        //Bank Details
-        #region Bank Details
+                //Bank Details
+                #region Bank Details
         //Add
         private void clientUpdateAddClientBankDetailsButton_Click(object sender, EventArgs e)
         {
@@ -417,9 +422,9 @@ namespace AtlantSovt
                 {
                     if (db.Clients.Find(client.Id).ClientBankDetail == null)
                     {
-                        updateClientAddBankDetailsForm = new AddClientBankDetails();
-                        updateClientAddBankDetailsForm.Show();
-                        updateClientAddBankDetailsForm.AddClientBankDetail2(client.Id);
+                        updateClientBankDetailsAddForm = new ClientBankDetailsAddForm();
+                        updateClientBankDetailsAddForm.Show();
+                        updateClientBankDetailsAddForm.AddClientBankDetail2(client.Id);
                     }
                     else
                     {
@@ -442,9 +447,9 @@ namespace AtlantSovt
                 {
                     if (db.Clients.Find(client.Id).ClientBankDetail != null)
                     {
-                        updateClientBankDetailsForm = new UpdateClientBankDetailsForm();
-                        updateClientBankDetailsForm.Show();
-                        updateClientBankDetailsForm.UpdateBankDetails(db.Clients.Find(client.Id).ClientBankDetail);
+                        updateClientBankDetailsUpdateForm = new ClientBankDetailsUpdateForm();
+                        updateClientBankDetailsUpdateForm.Show();
+                        updateClientBankDetailsUpdateForm.UpdateBankDetails(db.Clients.Find(client.Id).ClientBankDetail);
                     }
                     else
                     {
@@ -467,7 +472,7 @@ namespace AtlantSovt
                 {
                     if (db.Clients.Find(client.Id).ClientBankDetail != null)
                     {
-                        if (MessageBox.Show("Видалити банківські данні клієнту" + client.Name + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (MessageBox.Show("Видалити банківські данні клієнту " + client.Name + " ?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             try
                             {
@@ -483,7 +488,7 @@ namespace AtlantSovt
                     }
                     else
                     {
-                        MessageBox.Show("В клієнта ще немає банківських данни");
+                        MessageBox.Show("В клієнта ще немає банківських данних");
                     }
                 }
                 else
@@ -494,7 +499,7 @@ namespace AtlantSovt
         }
         #endregion 
 
-        #endregion
+                #endregion
 
                 //Delete
                 #region Delete
@@ -521,7 +526,20 @@ namespace AtlantSovt
         #endregion
 
         //Forwarder
-        #region Forwarder   
+        #region Forwarder
+
+                //Show
+                #region Show
+        private void showForwarderStrip_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 5;
+            ShowForwarder();
+            forwarderContactsDataGridView.Visible = false;
+            forwarderBankDetailsDataGridView.Visible = false;
+            forwarderCommentRichTextBox.Text = "";
+        }
+        #endregion
+
                 //Add
                 #region Add
 
@@ -570,14 +588,14 @@ namespace AtlantSovt
 
         private void addContactForwarderButton_Click(object sender, EventArgs e)
         {
-            addContactForwarderForm = new AddContactForwarderForm();
-            addContactForwarderForm.Show();
+            addForwarderContactAddForm = new ForwarderContactAddForm();
+            addForwarderContactAddForm.Show();
         }
 
         private void addBankDetailsForwarderButton_Click(object sender, EventArgs e)
         {
-            addForwarderBankDetailsForm = new AddForwarderBankDetails();
-            addForwarderBankDetailsForm.Show();
+            addForwarderBankDetailsAddForm = new ForwarderBankDetailsAddForm();
+            addForwarderBankDetailsAddForm.Show();
         }
 
         private void addForwarderButton_Click(object sender, EventArgs e)
@@ -679,6 +697,165 @@ namespace AtlantSovt
         {
             UpdateForwarder();
         }
+        //Contact
+        #region Contact
+
+        //Add
+        private void forwarderUpdateContactAddButton_Click(object sender, EventArgs e)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (forwarder != null)
+                {
+                    updateForwarderContactAddForm = new ForwarderContactAddForm();
+                    updateForwarderContactAddForm.Show();
+                    AddNewForwarderContact();
+                }
+                else
+                {
+                    MessageBox.Show("Оберіть спочатку експедитора");
+                }
+            }
+        }
+
+        //Update
+        private void forwarderUpdateContactUpdateButton_Click(object sender, EventArgs e)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (forwarder != null)
+                {
+                    if (db.Forwarders.Find(forwarder.Id).ForwarderContacts.Count != 0)
+                    {
+                        updateForwarderContactUpdateForm = new ForwarderContactUpdateForm();
+                        updateForwarderContactUpdateForm.Show();
+                        UpdateForwarderContact();
+                    }
+                    else
+                    {
+                        MessageBox.Show("В експедитора немає контактів");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Оберіть спочатку експедитора");
+                }
+            }
+        }
+
+        //Delete
+        private void forwarderUpdateContactDeleteButton_Click(object sender, EventArgs e)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (forwarder != null)
+                {
+                    if (db.Forwarders.Find(forwarder.Id).ForwarderContacts.Count != 0)
+                    {
+                        deleteForwarderContactDeleteForm = new ForwarderContactDeleteForm();
+                        deleteForwarderContactDeleteForm.Show();
+                        DeleteForwarderContact();
+                    }
+                    else
+                    {
+                        MessageBox.Show("В експедитора немає контактів");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Оберіть спочатку експедитора");
+                }
+            }
+        }
+        #endregion
+
+        //Bank Details
+        #region Bank Details
+        //Add
+        private void forwarderUpdateClientBankDetailsAddButton_Click(object sender, EventArgs e)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (forwarder != null)
+                {
+                    if (db.Forwarders.Find(forwarder.Id).ForwarderBankDetail == null)
+                    {
+                        updateForwarderBankDetailsAddForm = new ForwarderBankDetailsAddForm();
+                        updateForwarderBankDetailsAddForm.Show();
+                        updateForwarderBankDetailsAddForm.AddForwarderBankDetail2(forwarder.Id);
+                    }
+                    else
+                    {
+                        MessageBox.Show("В експедитора вже є банківські данні");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Оберіть спочатку експедитора");
+                }
+            }
+        }
+
+        //Update
+        private void forwarderUpdateBankDetailsUpdateButton_Click(object sender, EventArgs e)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (forwarder != null)
+                {
+                    if (db.Forwarders.Find(forwarder.Id).ForwarderBankDetail != null)
+                    {
+                        updateForwarderBankDetailsUpdateForm = new ForwarderBankDetailsUpdateForm();
+                        updateForwarderBankDetailsUpdateForm.Show();
+                        updateForwarderBankDetailsUpdateForm.UpdateForwarderBankDetails(db.Forwarders.Find(forwarder.Id).ForwarderBankDetail);
+                    }
+                    else
+                    {
+                        MessageBox.Show("В експедитора ще немає банківських данних");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Оберіть спочатку експедитора");
+                }
+            }
+        }
+
+        //Delete
+        private void forwarderUpdateBankDetaitsDeleteButton_Click(object sender, EventArgs e)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (forwarder != null)
+                {
+                    if (db.Forwarders.Find(forwarder.Id).ForwarderBankDetail != null)
+                    {
+                        if (MessageBox.Show("Видалити банківські данні експедитору " + forwarder.Name + " ?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            try
+                            {
+                                db.ForwarderBankDetails.Remove(db.Forwarders.Find(forwarder.Id).ForwarderBankDetail);
+                                db.SaveChanges();
+                                MessageBox.Show("Банківські данні успішно видалено");
+                            }
+                            catch (Exception ee)
+                            {
+                                MessageBox.Show("Помилка!" + Environment.NewLine + ee);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("В експедитора ще немає банківських данних");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Оберіть спочатку експедитора");
+                }
+            }
+        }
+        #endregion 
 
                 #endregion
 
