@@ -61,6 +61,7 @@
             // DeleteClientContactButton
             // 
             this.DeleteClientContactButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DeleteClientContactButton.Enabled = false;
             this.DeleteClientContactButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DeleteClientContactButton.Location = new System.Drawing.Point(161, 100);
             this.DeleteClientContactButton.Name = "DeleteClientContactButton";
@@ -70,7 +71,7 @@
             this.DeleteClientContactButton.UseVisualStyleBackColor = true;
             this.DeleteClientContactButton.Click += new System.EventHandler(this.DeleteClientContactButton_Click);
             // 
-            // DeleteContactForm
+            // ClientContactDeleteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -81,8 +82,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "DeleteContactForm";
-            this.Text = "DeleteContactForm";
+            this.Name = "ClientContactDeleteForm";
+            this.Text = "Видалення контакту";
             this.ResumeLayout(false);
             this.PerformLayout();
 

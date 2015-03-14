@@ -19,7 +19,7 @@ namespace AtlantSovt
         {            
             InitializeComponent();
         }
-//Client Forms
+            //Client Forms
 
             //Contact
         ClientContactAddForm addClientContactAddForm, updateClientContactAddForm;
@@ -29,7 +29,7 @@ namespace AtlantSovt
         ClientBankDetailsAddForm addClientBankDetailsAddForm, updateClientBankDetailsAddForm;
         ClientBankDetailsUpdateForm updateClientBankDetailsUpdateForm;
         
-//Forwarder Forms
+            //Forwarder Forms
 
             //Contact
         ForwarderContactAddForm addForwarderContactAddForm, updateForwarderContactAddForm;
@@ -108,14 +108,14 @@ namespace AtlantSovt
         #region Client
                 //Show
                 #region Show
-                private void showClientsStrip_Click(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 1;
-                    ShowClient();
-                    clientContactsDataGridView.Visible = false;
-                    clientBankDetailsDataGridView.Visible = false;
-                    clientCommentRichTextBox.Text = "";
-                }
+        private void showClientsStrip_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 1;
+            ShowClient();
+            clientContactsDataGridView.Visible = false;
+            clientBankDetailsDataGridView.Visible = false;
+            clientCommentRichTextBox.Text = "";
+        }
                 #endregion
 
                 //Add
@@ -240,6 +240,7 @@ namespace AtlantSovt
             workDocumentClientUpdateComboBox.Items.Clear();
             LoadWorkDocumentClientUpdateInfoComboBox();
             workDocumentClientUpdateComboBox.DroppedDown = true;
+
         }
 
         private void taxPayerStatusClientUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -247,6 +248,7 @@ namespace AtlantSovt
             taxPayerStatusClientUpdateComboBox.Items.Clear();
             LoadTaxPayerStatusClientUpdateInfoComboBox();
             taxPayerStatusClientUpdateComboBox.DroppedDown = true;
+
         }
 
         private void originalClientUpdateCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -505,6 +507,9 @@ namespace AtlantSovt
                 #region Delete
         private void deleteClientButton_Click(object sender, EventArgs e)
         {
+            deleteClientComboBox.Text = "";
+            deleteClientComboBox.Items.Clear();
+            deleteClientButton.Enabled = false;
             DeleteClient();
         }
 
@@ -518,6 +523,15 @@ namespace AtlantSovt
             deleteClientComboBox.Items.Clear();
             LoadClientDeleteInfoComboBox();
             deleteClientComboBox.DroppedDown = true;
+            if (deleteClientComboBox.Items.Count == 0)
+            {
+                deleteClientButton.Enabled = false;
+            }
+            else
+            {
+                deleteClientButton.Enabled = true;
+
+            }
         }
 
            
@@ -859,6 +873,40 @@ namespace AtlantSovt
 
                 #endregion
 
+
+                //Delete
+                #region Delete
+
+        private void forwarderDeleteButton_Click(object sender, EventArgs e)
+        {
+            DeleteForwarder();
+            forwarderDeleteComboBox.Text = "";
+            forwarderDeleteComboBox.Items.Clear();
+            forwarderDeleteButton.Enabled = false;
+
+        }
+
+        private void forwarderDeleteComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitDeleteForwarder();
+        }
+
+        private void forwarderDeleteComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            forwarderDeleteComboBox.Items.Clear();
+            LoadForwarderDeleteInfoComboBox();
+            forwarderDeleteComboBox.DroppedDown = true;
+            if(forwarderDeleteComboBox.Items.Count == 0)
+            {
+                forwarderDeleteButton.Enabled = false;
+            }
+            else
+            {
+                forwarderDeleteButton.Enabled = true;
+
+            }
+        }
+                #endregion
 
         #endregion
     }

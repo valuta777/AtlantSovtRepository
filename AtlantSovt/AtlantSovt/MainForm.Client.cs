@@ -446,7 +446,7 @@ namespace AtlantSovt
                             db.Clients.Attach(deleteClient);
                             db.Clients.Remove(deleteClient);
                             db.SaveChanges();
-                            MessageBox.Show("Клієнта успішно видалено");
+                            MessageBox.Show("Клієнт успішно видалений");
                             deleteClientComboBox.Items.Remove(deleteClientComboBox.SelectedItem);
                         }
                         catch(Exception e)
@@ -483,7 +483,6 @@ namespace AtlantSovt
                 deleteClient = db.Clients.Find(id);
             }
         }
-
 
         #endregion
     }

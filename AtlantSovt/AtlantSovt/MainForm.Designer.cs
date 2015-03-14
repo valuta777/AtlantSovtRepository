@@ -200,6 +200,9 @@
             this.forwarderUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
             this.forwarderUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
             this.deleteForwarderPage = new System.Windows.Forms.TabPage();
+            this.forwarderDeleteButton = new System.Windows.Forms.Button();
+            this.label42 = new System.Windows.Forms.Label();
+            this.forwarderDeleteComboBox = new System.Windows.Forms.ComboBox();
             this.menuStrip.SuspendLayout();
             this.dataControl.SuspendLayout();
             this.helloPage.SuspendLayout();
@@ -217,6 +220,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.forwarderDataGridView)).BeginInit();
             this.addForwarderPage.SuspendLayout();
             this.updateForwarderPage.SuspendLayout();
+            this.deleteForwarderPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -482,7 +486,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(4, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 21);
+            this.label1.Size = new System.Drawing.Size(68, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "Клієнти";
             // 
@@ -1384,6 +1388,7 @@
             // 
             this.deleteClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteClientButton.Enabled = false;
             this.deleteClientButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.deleteClientButton.Location = new System.Drawing.Point(466, 433);
             this.deleteClientButton.Name = "deleteClientButton";
@@ -2296,12 +2301,57 @@
             // 
             // deleteForwarderPage
             // 
+            this.deleteForwarderPage.Controls.Add(this.forwarderDeleteButton);
+            this.deleteForwarderPage.Controls.Add(this.label42);
+            this.deleteForwarderPage.Controls.Add(this.forwarderDeleteComboBox);
             this.deleteForwarderPage.Location = new System.Drawing.Point(4, 22);
             this.deleteForwarderPage.Name = "deleteForwarderPage";
             this.deleteForwarderPage.Size = new System.Drawing.Size(776, 511);
             this.deleteForwarderPage.TabIndex = 8;
             this.deleteForwarderPage.Text = "deleteForwarderPage";
             this.deleteForwarderPage.UseVisualStyleBackColor = true;
+            // 
+            // forwarderDeleteButton
+            // 
+            this.forwarderDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderDeleteButton.Enabled = false;
+            this.forwarderDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderDeleteButton.Location = new System.Drawing.Point(466, 433);
+            this.forwarderDeleteButton.Name = "forwarderDeleteButton";
+            this.forwarderDeleteButton.Size = new System.Drawing.Size(302, 70);
+            this.forwarderDeleteButton.TabIndex = 69;
+            this.forwarderDeleteButton.Text = "Видалити";
+            this.forwarderDeleteButton.UseVisualStyleBackColor = true;
+            this.forwarderDeleteButton.Click += new System.EventHandler(this.forwarderDeleteButton_Click);
+            // 
+            // label42
+            // 
+            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label42.Location = new System.Drawing.Point(5, 7);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(134, 21);
+            this.label42.TabIndex = 68;
+            this.label42.Text = "Виберіть клієнта";
+            // 
+            // forwarderDeleteComboBox
+            // 
+            this.forwarderDeleteComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderDeleteComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.forwarderDeleteComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.forwarderDeleteComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderDeleteComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.forwarderDeleteComboBox.Location = new System.Drawing.Point(3, 31);
+            this.forwarderDeleteComboBox.Name = "forwarderDeleteComboBox";
+            this.forwarderDeleteComboBox.Size = new System.Drawing.Size(770, 29);
+            this.forwarderDeleteComboBox.Sorted = true;
+            this.forwarderDeleteComboBox.TabIndex = 67;
+            this.forwarderDeleteComboBox.SelectedIndexChanged += new System.EventHandler(this.forwarderDeleteComboBox_SelectedIndexChanged);
+            this.forwarderDeleteComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.forwarderDeleteComboBox_MouseClick);
             // 
             // MainForm
             // 
@@ -2342,6 +2392,8 @@
             this.addForwarderPage.PerformLayout();
             this.updateForwarderPage.ResumeLayout(false);
             this.updateForwarderPage.PerformLayout();
+            this.deleteForwarderPage.ResumeLayout(false);
+            this.deleteForwarderPage.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2542,6 +2594,9 @@
         private System.Windows.Forms.Button forwarderUpdateContactDeleteButton;
 
         private System.Windows.Forms.Button forwarderUpdateButton;
+        private System.Windows.Forms.Button forwarderDeleteButton;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.ComboBox forwarderDeleteComboBox;
     }
 }
 

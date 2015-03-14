@@ -409,5 +409,59 @@ namespace AtlantSovt
             }
         }
 
+
+
+        //Delete
+        void DeleteForwarder()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (deleteForwarder != null)
+                {
+                    if (MessageBox.Show("Видалити експедитора " + deleteForwarder.Name + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            db.Forwarders.Attach(deleteForwarder);
+                            db.Forwarders.Remove(deleteForwarder);
+                            db.SaveChanges();
+                            MessageBox.Show("Експедитор успішно видалений");
+                            forwarderDeleteComboBox.Items.Remove(forwarderDeleteComboBox.SelectedItem);
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show("Помилка!" + Environment.NewLine + e);
+                        }
+                    }
+                }
+            }
+        }
+
+        void LoadForwarderDeleteInfoComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from c in db.Forwarders
+                            orderby c.Id
+                            select c;
+                foreach (var item in query)
+                {
+                    forwarderDeleteComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                }
+            }
+        }
+
+        void SplitDeleteForwarder()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = forwarderDeleteComboBox.SelectedItem.ToString();
+                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedNameAndDirector[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                deleteForwarder = db.Forwarders.Find(id);
+            }
+        }
+
     }
 }

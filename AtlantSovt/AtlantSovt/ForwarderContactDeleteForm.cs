@@ -25,6 +25,7 @@ namespace AtlantSovt
         {
             forwarder = update_forwarder;
         }
+
         private void LoadContactDeleteForwarderContactComboBoxInfo()
         {
             using (var db = new AtlantSovtContext())
@@ -42,6 +43,7 @@ namespace AtlantSovt
 
             }
         }
+
         private void SplitDeleteForwarderContact()
         {
             using (var db = new AtlantSovtContext())
@@ -54,6 +56,7 @@ namespace AtlantSovt
                 contact = db.ForwarderContacts.Find(id);
             }
         }
+
         private void DeleteForwarderContact()
         {
             using (var db = new AtlantSovtContext())
@@ -76,18 +79,33 @@ namespace AtlantSovt
                 }
             }
         }
+
         private void ForwarderUpdateSelectDeleteContactComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             forwarderUpdateSelectDeleteContactComboBox.Items.Clear();
             LoadContactDeleteForwarderContactComboBoxInfo();
             forwarderUpdateSelectDeleteContactComboBox.DroppedDown = true;
+            if (forwarderUpdateSelectDeleteContactComboBox.Items.Count == 0)
+            {
+                forwarderUpdateContactDeleteButton.Enabled = false;
+            }
+            else
+            {
+                forwarderUpdateContactDeleteButton.Enabled = true;
+
+            }
         }
+
         private void ForwarderUpdateSelectDeleteContactComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitDeleteForwarderContact();
         }
+
         private void DeleteForwarderContactButton_Click(object sender, EventArgs e)
         {
+            forwarderUpdateSelectDeleteContactComboBox.Text = "";
+            forwarderUpdateSelectDeleteContactComboBox.Items.Clear();
+            forwarderUpdateContactDeleteButton.Enabled = false;
             DeleteForwarderContact();
         }
     }

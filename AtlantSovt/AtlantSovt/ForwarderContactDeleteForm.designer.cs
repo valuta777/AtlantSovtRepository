@@ -51,7 +51,7 @@
             this.forwarderUpdateSelectDeleteContactComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.forwarderUpdateSelectDeleteContactComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.forwarderUpdateSelectDeleteContactComboBox.Location = new System.Drawing.Point(10, 33);
-            this.forwarderUpdateSelectDeleteContactComboBox.Name = "ClientUpdateSelectDeleteContactComboBox";
+            this.forwarderUpdateSelectDeleteContactComboBox.Name = "forwarderUpdateSelectDeleteContactComboBox";
             this.forwarderUpdateSelectDeleteContactComboBox.Size = new System.Drawing.Size(562, 29);
             this.forwarderUpdateSelectDeleteContactComboBox.Sorted = true;
             this.forwarderUpdateSelectDeleteContactComboBox.TabIndex = 64;
@@ -61,9 +61,10 @@
             // forwarderUpdateContactDeleteButton
             // 
             this.forwarderUpdateContactDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.forwarderUpdateContactDeleteButton.Enabled = false;
             this.forwarderUpdateContactDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.forwarderUpdateContactDeleteButton.Location = new System.Drawing.Point(161, 100);
-            this.forwarderUpdateContactDeleteButton.Name = "DeleteClientContactButton";
+            this.forwarderUpdateContactDeleteButton.Name = "forwarderUpdateContactDeleteButton";
             this.forwarderUpdateContactDeleteButton.Size = new System.Drawing.Size(237, 30);
             this.forwarderUpdateContactDeleteButton.TabIndex = 66;
             this.forwarderUpdateContactDeleteButton.Text = "Видалити контакт";
@@ -82,7 +83,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ForwarderContactDeleteForm";
-            this.Text = "Видалення контакта";
+            this.Text = "Видалення контакту";
             this.ResumeLayout(false);
             this.PerformLayout();
 
