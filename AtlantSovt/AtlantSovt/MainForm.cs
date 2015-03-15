@@ -102,6 +102,26 @@ namespace AtlantSovt
                 {
                     dataControl.SelectedIndex = 8;
                 }
+
+                private void showTransporterStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 9;
+                }
+
+                private void addTransporterStrip_Click(object sender, EventArgs e)
+                {
+                     dataControl.SelectedIndex = 10;
+                }
+
+                private void updateTransporterStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 11;
+                }
+
+                private void deleteTransporterStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 12;
+                }
                 #endregion
 
         //Client
@@ -907,7 +927,26 @@ namespace AtlantSovt
             }
         }
                 #endregion
+        #endregion
+
+        //Transporter
+        #region Transporter
+
+            #region Show
+            #endregion
+
+            #region Add
+            #endregion
+
+
+            #region Update
+            #endregion
+
+            #region Delete
+            #endregion
 
         #endregion
+
+
     }
 }
