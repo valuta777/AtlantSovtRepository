@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace AtlantSovt
 {
-    public partial class UpdateClientBankDetailsForm : Form
+    public partial class ClientBankDetailsUpdateForm : Form
     {   
         ClientBankDetail bankDetails;
         bool bankNameChanged, MFOChanged, accountNumberChanged, EDRPOUChanged, IPNChanged, certificateNumberChanged, SWIFTChanged, IBANChanged;
 
-        public UpdateClientBankDetailsForm()
+        public ClientBankDetailsUpdateForm()
         {
             InitializeComponent();            
         }

@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AtlantSovt
 {
-    public partial class AddForwarderBankDetails : Form
+    public partial class ForwarderBankDetailsAddForm : Form
     {
         string new_BankName;
         string new_MFO;
@@ -24,7 +24,7 @@ namespace AtlantSovt
         string new_IBAN;
         long ID;
 
-        public AddForwarderBankDetails()
+        public ForwarderBankDetailsAddForm()
         {
             InitializeComponent();
             ID = 0;

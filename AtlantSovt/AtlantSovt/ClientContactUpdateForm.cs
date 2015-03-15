@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace AtlantSovt
 {
-    public partial class UpdateContactForm : Form
+    public partial class ClientContactUpdateForm : Form
     {
         Client client;
         ClientContact contact;
         bool contactPersonChanged, telephoneNumberChanged, faxNumberChanged, emailChanged;
 
-        public UpdateContactForm()
+        public ClientContactUpdateForm()
         {
             InitializeComponent();
         }

@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,7 +11,7 @@ using System.Windows.Forms;
 
 namespace AtlantSovt
 {
-    public partial class AddContactClientForm : Form
+    public partial class ForwarderContactAddForm : Form
     {
         string new_ContactPerson;
         string new_TelephoneNumber;
@@ -20,19 +19,19 @@ namespace AtlantSovt
         string new_Email;
         long Id;
 
-        public AddContactClientForm()
+        public ForwarderContactAddForm()
         {
             InitializeComponent();
             long Id = 0;
         }
 
-        internal void AddClientContact(long id)
+        internal void AddForwarderContact(long id)
         {
             using (var db = new AtlantSovtContext())
             {
-                var New_ClientContact = new ClientContact
+                var New_ForwarderContact = new ForwarderContact
                 {
-                    ClientId = id,
+                    ForwarderId = id,
                     ContactPerson = new_ContactPerson,
                     TelephoneNumber = new_TelephoneNumber,
                     FaxNumber = new_FaxNumber,
@@ -40,9 +39,9 @@ namespace AtlantSovt
                 };
                 try
                 {
-                    db.ClientContacts.Add(New_ClientContact);
+                    db.ForwarderContacts.Add(New_ForwarderContact);
                     db.SaveChanges();
-                    MessageBox.Show("Контакт успішно доданий клієнту " + New_ClientContact.ClientId);
+                    MessageBox.Show("Контакт успішно доданий експедитору " + New_ForwarderContact.ForwarderId);
                 }
                 catch (Exception ec)
                 {
@@ -52,23 +51,24 @@ namespace AtlantSovt
             }
         }
 
-        private void addContactClientButton_Click(object sender, EventArgs e)
+        private void addContactForwarderButton_Click(object sender, EventArgs e)
         {
 
-            new_ContactPerson = contactPersonClientContactTextBox.Text;
-            new_TelephoneNumber = telephoneNumberClientContactTextBox.Text;
-            new_FaxNumber = faxNumberClientContactTextBox.Text;
-            new_Email = emailClientContactTextBox.Text;
+            new_ContactPerson = contactPersonForwarderContactTextBox.Text;
+            new_TelephoneNumber = telephoneNumberForwarderContactTextBox.Text;
+            new_FaxNumber = faxNumberForwarderContactTextBox.Text;
+            new_Email = emailForwarderContactTextBox.Text;
             
             this.Hide();
             if (Id != 0)
             {
-                AddClientContact(Id);
+                AddForwarderContact(Id);
             }
         }
-       internal void AddClientContact2(long id) 
+       internal void AddForwarderContact2(long id) 
         {
             Id = id;
         }
     }
 }
+

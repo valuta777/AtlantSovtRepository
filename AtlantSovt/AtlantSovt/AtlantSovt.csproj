@@ -53,23 +53,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddClientBankDetails.cs">
+    <Compile Include="ClientBankDetailsAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddClientBankDetails.Designer.cs">
-      <DependentUpon>AddClientBankDetails.cs</DependentUpon>
+    <Compile Include="ClientBankDetailsAddForm.Designer.cs">
+      <DependentUpon>ClientBankDetailsAddForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddContactForwarderForm.cs">
+    <Compile Include="ForwarderBankDetailsUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddContactForwarderForm.Designer.cs">
-      <DependentUpon>AddContactForwarderForm.cs</DependentUpon>
+    <Compile Include="ForwarderBankDetailsUpdateForm.designer.cs">
+      <DependentUpon>ForwarderBankDetailsUpdateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddForwarderBankDetails.cs">
+    <Compile Include="ForwarderContactDeleteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddForwarderBankDetails.Designer.cs">
-      <DependentUpon>AddForwarderBankDetails.cs</DependentUpon>
+    <Compile Include="ForwarderContactDeleteForm.designer.cs">
+      <DependentUpon>ForwarderContactDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForwarderContactAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForwarderContactAddForm.Designer.cs">
+      <DependentUpon>ForwarderContactAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForwarderBankDetailsAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForwarderBankDetailsAddForm.Designer.cs">
+      <DependentUpon>ForwarderBankDetailsAddForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AtlantSovtDb\AtlantSovtContext.cs" />
     <Compile Include="AtlantSovtDb\Cargo.cs" />
@@ -96,32 +108,38 @@
     <Compile Include="AtlantSovtDb\UnCustomsAddress.cs" />
     <Compile Include="AtlantSovtDb\UploadAddress.cs" />
     <Compile Include="AtlantSovtDb\WorkDocument.cs" />
-    <Compile Include="DeleteContactForm.cs">
+    <Compile Include="ClientContactDeleteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteContactForm.designer.cs">
-      <DependentUpon>DeleteContactForm.cs</DependentUpon>
+    <Compile Include="ClientContactDeleteForm.designer.cs">
+      <DependentUpon>ClientContactDeleteForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.Forwarder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateClientBankDetailsForm.cs">
+    <Compile Include="ClientBankDetailsUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateClientBankDetailsForm.designer.cs">
-      <DependentUpon>UpdateClientBankDetailsForm.cs</DependentUpon>
+    <Compile Include="ClientBankDetailsUpdateForm.designer.cs">
+      <DependentUpon>ClientBankDetailsUpdateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateContactForm.cs">
+    <Compile Include="ForwarderContactUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateContactForm.Designer.cs">
-      <DependentUpon>UpdateContactForm.cs</DependentUpon>
+    <Compile Include="ForwarderContactUpdateForm.Designer.cs">
+      <DependentUpon>ForwarderContactUpdateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddContactClientForm.cs">
+    <Compile Include="ClientContactUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddContactClientForm.Designer.cs">
-      <DependentUpon>AddContactClientForm.cs</DependentUpon>
+    <Compile Include="ClientContactUpdateForm.Designer.cs">
+      <DependentUpon>ClientContactUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientContactAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientContactAddForm.Designer.cs">
+      <DependentUpon>ClientContactAddForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AddTaxPayerStatusForm.cs">
       <SubType>Form</SubType>
@@ -152,17 +170,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddClientBankDetails.resx">
-      <DependentUpon>AddClientBankDetails.cs</DependentUpon>
+    <EmbeddedResource Include="ClientBankDetailsAddForm.resx">
+      <DependentUpon>ClientBankDetailsAddForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddContactClientForm.resx">
-      <DependentUpon>AddContactClientForm.cs</DependentUpon>
+    <EmbeddedResource Include="ForwarderBankDetailsUpdateForm.resx">
+      <DependentUpon>ForwarderBankDetailsUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddContactForwarderForm.resx">
-      <DependentUpon>AddContactForwarderForm.cs</DependentUpon>
+    <EmbeddedResource Include="ClientContactAddForm.resx">
+      <DependentUpon>ClientContactAddForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddForwarderBankDetails.resx">
-      <DependentUpon>AddForwarderBankDetails.cs</DependentUpon>
+    <EmbeddedResource Include="ForwarderContactDeleteForm.resx">
+      <DependentUpon>ForwarderContactDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForwarderContactAddForm.resx">
+      <DependentUpon>ForwarderContactAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForwarderBankDetailsAddForm.resx">
+      <DependentUpon>ForwarderBankDetailsAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddTaxPayerStatusForm.resx">
       <DependentUpon>AddTaxPayerStatusForm.cs</DependentUpon>
@@ -173,8 +197,8 @@
     <EmbeddedResource Include="ConnectionForm.resx">
       <DependentUpon>ConnectionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteContactForm.resx">
-      <DependentUpon>DeleteContactForm.cs</DependentUpon>
+    <EmbeddedResource Include="ClientContactDeleteForm.resx">
+      <DependentUpon>ClientContactDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -189,11 +213,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UpdateClientBankDetailsForm.resx">
-      <DependentUpon>UpdateClientBankDetailsForm.cs</DependentUpon>
+    <EmbeddedResource Include="ClientBankDetailsUpdateForm.resx">
+      <DependentUpon>ClientBankDetailsUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateContactForm.resx">
-      <DependentUpon>UpdateContactForm.cs</DependentUpon>
+    <EmbeddedResource Include="ForwarderContactUpdateForm.resx">
+      <DependentUpon>ForwarderContactUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientContactUpdateForm.resx">
+      <DependentUpon>ClientContactUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
