@@ -203,6 +203,10 @@
             this.forwarderDeleteButton = new System.Windows.Forms.Button();
             this.label42 = new System.Windows.Forms.Label();
             this.forwarderDeleteComboBox = new System.Windows.Forms.ComboBox();
+            this.showTransporterPage = new System.Windows.Forms.TabPage();
+            this.addTransporterPage = new System.Windows.Forms.TabPage();
+            this.updateTransporterPage = new System.Windows.Forms.TabPage();
+            this.deleteTransporterPage = new System.Windows.Forms.TabPage();
             this.menuStrip.SuspendLayout();
             this.dataControl.SuspendLayout();
             this.helloPage.SuspendLayout();
@@ -288,26 +292,30 @@
             // showTransporterStrip
             // 
             this.showTransporterStrip.Name = "showTransporterStrip";
-            this.showTransporterStrip.Size = new System.Drawing.Size(145, 22);
+            this.showTransporterStrip.Size = new System.Drawing.Size(152, 22);
             this.showTransporterStrip.Text = "Переглянути";
+            this.showTransporterStrip.Click += new System.EventHandler(this.showTransporterStrip_Click);
             // 
             // addTransporterStrip
             // 
             this.addTransporterStrip.Name = "addTransporterStrip";
-            this.addTransporterStrip.Size = new System.Drawing.Size(145, 22);
+            this.addTransporterStrip.Size = new System.Drawing.Size(152, 22);
             this.addTransporterStrip.Text = "Додати";
+            this.addTransporterStrip.Click += new System.EventHandler(this.addTransporterStrip_Click);
             // 
             // updateTransporterStrip
             // 
             this.updateTransporterStrip.Name = "updateTransporterStrip";
-            this.updateTransporterStrip.Size = new System.Drawing.Size(145, 22);
+            this.updateTransporterStrip.Size = new System.Drawing.Size(152, 22);
             this.updateTransporterStrip.Text = "Змінити";
+            this.updateTransporterStrip.Click += new System.EventHandler(this.updateTransporterStrip_Click);
             // 
             // deleteTransporterStrip
             // 
             this.deleteTransporterStrip.Name = "deleteTransporterStrip";
-            this.deleteTransporterStrip.Size = new System.Drawing.Size(145, 22);
+            this.deleteTransporterStrip.Size = new System.Drawing.Size(152, 22);
             this.deleteTransporterStrip.Text = "Видалити";
+            this.deleteTransporterStrip.Click += new System.EventHandler(this.deleteTransporterStrip_Click);
             // 
             // forwarderToolStripMenuItem
             // 
@@ -359,6 +367,10 @@
             this.dataControl.Controls.Add(this.addForwarderPage);
             this.dataControl.Controls.Add(this.updateForwarderPage);
             this.dataControl.Controls.Add(this.deleteForwarderPage);
+            this.dataControl.Controls.Add(this.showTransporterPage);
+            this.dataControl.Controls.Add(this.addTransporterPage);
+            this.dataControl.Controls.Add(this.updateTransporterPage);
+            this.dataControl.Controls.Add(this.deleteTransporterPage);
             this.dataControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataControl.ItemSize = new System.Drawing.Size(1, 0);
             this.dataControl.Location = new System.Drawing.Point(0, 24);
@@ -2333,9 +2345,9 @@
             this.label42.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label42.Location = new System.Drawing.Point(5, 7);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(134, 21);
+            this.label42.Size = new System.Drawing.Size(178, 21);
             this.label42.TabIndex = 68;
-            this.label42.Text = "Виберіть клієнта";
+            this.label42.Text = "Виберіть експедитора";
             // 
             // forwarderDeleteComboBox
             // 
@@ -2352,6 +2364,42 @@
             this.forwarderDeleteComboBox.TabIndex = 67;
             this.forwarderDeleteComboBox.SelectedIndexChanged += new System.EventHandler(this.forwarderDeleteComboBox_SelectedIndexChanged);
             this.forwarderDeleteComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.forwarderDeleteComboBox_MouseClick);
+            // 
+            // showTransporterPage
+            // 
+            this.showTransporterPage.Location = new System.Drawing.Point(4, 22);
+            this.showTransporterPage.Name = "showTransporterPage";
+            this.showTransporterPage.Size = new System.Drawing.Size(776, 511);
+            this.showTransporterPage.TabIndex = 9;
+            this.showTransporterPage.Text = "showTransporterPage";
+            this.showTransporterPage.UseVisualStyleBackColor = true;
+            // 
+            // addTransporterPage
+            // 
+            this.addTransporterPage.Location = new System.Drawing.Point(4, 22);
+            this.addTransporterPage.Name = "addTransporterPage";
+            this.addTransporterPage.Size = new System.Drawing.Size(776, 511);
+            this.addTransporterPage.TabIndex = 10;
+            this.addTransporterPage.Text = "addTransporterPage";
+            this.addTransporterPage.UseVisualStyleBackColor = true;
+            // 
+            // updateTransporterPage
+            // 
+            this.updateTransporterPage.Location = new System.Drawing.Point(4, 22);
+            this.updateTransporterPage.Name = "updateTransporterPage";
+            this.updateTransporterPage.Size = new System.Drawing.Size(776, 511);
+            this.updateTransporterPage.TabIndex = 11;
+            this.updateTransporterPage.Text = "updateTransporterPage";
+            this.updateTransporterPage.UseVisualStyleBackColor = true;
+            // 
+            // deleteTransporterPage
+            // 
+            this.deleteTransporterPage.Location = new System.Drawing.Point(4, 22);
+            this.deleteTransporterPage.Name = "deleteTransporterPage";
+            this.deleteTransporterPage.Size = new System.Drawing.Size(776, 511);
+            this.deleteTransporterPage.TabIndex = 12;
+            this.deleteTransporterPage.Text = "deleteTransporterPage";
+            this.deleteTransporterPage.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -2597,6 +2645,10 @@
         private System.Windows.Forms.Button forwarderDeleteButton;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.ComboBox forwarderDeleteComboBox;
+        private System.Windows.Forms.TabPage showTransporterPage;
+        private System.Windows.Forms.TabPage addTransporterPage;
+        private System.Windows.Forms.TabPage updateTransporterPage;
+        private System.Windows.Forms.TabPage deleteTransporterPage;
     }
 }
 
