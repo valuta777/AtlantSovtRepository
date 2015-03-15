@@ -15,13 +15,13 @@ namespace AtlantSovt
         long id;
         bool clientWorkDocumentFlag;
         bool clientTaxPayerStatusFlag;
-        bool utb1, utb2, utb3, utb4, utb5, utb6, ucb1, ucb2, uc1, uc2;
-
+        bool clientNameChanged, clientDirectorChanged, clientContractNumberChanged, clientPhysicalAddressChanged, clientGeographyAddressChanged,clientCommentChanged, clientWorkDocumentChanged, clientTaxPayerStatusChanged, clientOriginalChanged, clientFaxChanged;
         Client client, deleteClient;
         WorkDocument clientWorkDocument;
         TaxPayerStatu clientTaxPayerStatus;
 
-        // add
+        //Add
+        #region Add
         void AddClient()
         {
             using (var db = new AtlantSovtContext())
@@ -54,15 +54,15 @@ namespace AtlantSovt
                         db.SaveChanges();
                         MessageBox.Show("Клієнт успішно доданий");
 
-                        if (addClientBankDetailsForm != null)
+                        if (addClientBankDetailsAddForm != null)
                         {
-                            addClientBankDetailsForm.AddClientBankDetail(New_Client.Id);
-                            addClientBankDetailsForm = null;
+                            addClientBankDetailsAddForm.AddClientBankDetail(New_Client.Id);
+                            addClientBankDetailsAddForm = null;
                         }
-                        if (addContactForm != null)
+                        if (addClientContactAddForm != null)
                         {
-                            addContactForm.AddClientContact(New_Client.Id);
-                            addContactForm = null;
+                            addClientContactAddForm.AddClientContact(New_Client.Id);
+                            addClientContactAddForm = null;
                         }
                     }
                     catch (Exception ec)
@@ -232,9 +232,10 @@ namespace AtlantSovt
                 clientWorkDocument = db.WorkDocuments.Find(id);
             }
         }
-        
-        //update
+        #endregion
 
+        //Update
+        #region Update
         void ClearAllBoxesClientUpdate()
         {
             workDocumentClientUpdateComboBox.Items.Clear();
@@ -268,7 +269,7 @@ namespace AtlantSovt
                     originalClientUpdateCheckBox.Checked = client.ContractType.Value;
                     faxClientUpdateCheckBox.Checked = !client.ContractType.Value;
                 }
-                utb1 =  utb2 = utb3 = utb4 =  utb5 =  utb6 = ucb1 =  ucb2 =  uc1 =  uc2 = false;
+                clientNameChanged =  clientDirectorChanged = clientContractNumberChanged = clientPhysicalAddressChanged =  clientGeographyAddressChanged =  clientCommentChanged = clientWorkDocumentChanged =  clientTaxPayerStatusChanged =  clientOriginalChanged =  clientFaxChanged = false;
             }
         }
 
@@ -343,41 +344,41 @@ namespace AtlantSovt
             using (var db = new AtlantSovtContext())
             {
                 //якщо хоча б один з флагів = true
-                if (utb1 || utb2 || utb3 || utb4 || utb5 || utb6 || ucb1 || ucb2 || ucb1 || ucb2 || uc1 || uc2)
+                if (clientNameChanged || clientDirectorChanged || clientContractNumberChanged || clientPhysicalAddressChanged || clientGeographyAddressChanged || clientCommentChanged || clientWorkDocumentChanged || clientTaxPayerStatusChanged || clientWorkDocumentChanged || clientTaxPayerStatusChanged || clientOriginalChanged || clientFaxChanged)
                 {
-                    if (utb1)
+                    if (clientNameChanged)
                     {
                         client.Name = nameClientUpdateTextBox.Text;
                     }
-                    if (utb2)
+                    if (clientDirectorChanged)
                     {
                         client.Director = directorClientUpdateTextBox.Text;
                     }
-                    if (utb3)
+                    if (clientContractNumberChanged)
                     {
                         client.ContractNumber = contractNumberClientUpdateTextBox.Text;
                     }
-                    if (utb4)
+                    if (clientPhysicalAddressChanged)
                     {
                         client.PhysicalAddress = physicalAddressClientUpdateTextBox.Text;
                     }
-                    if (utb5)
+                    if (clientGeographyAddressChanged)
                     {
                         client.GeografphyAddress = geographyAddressClientUpdateTextBox.Text;
                     }
-                    if (utb6)
+                    if (clientCommentChanged)
                     {
                         client.Comment = commentClientUpdateTextBox.Text;
                     }
-                    if (ucb1)
+                    if (clientWorkDocumentChanged)
                     {
                         client.WorkDocumentId = clientWorkDocument.Id;
                     }
-                    if (ucb2)
+                    if (clientTaxPayerStatusChanged)
                     {
                         client.TaxPayerStatusId = clientTaxPayerStatus.Id;
                     }
-                    if (uc1)
+                    if (clientOriginalChanged)
                     {
                         client.ContractType = true;
                     }
@@ -397,14 +398,15 @@ namespace AtlantSovt
             }
         }
 
-        // ClientContact
+        // Contact
+        #region Contact
 
         void AddNewContact()
         {
             if (client != null)
             {
-                ClientUpdateAddContactForm.AddClientContact2(client.Id);
-                ClientUpdateAddContactForm = null;
+                updateClientContactAddForm.AddClientContact2(client.Id);
+                updateClientContactAddForm = null;
             }
         }
         
@@ -412,7 +414,7 @@ namespace AtlantSovt
         {
             if (client != null) 
             {
-                UpdateClientUpdateContactForm.UpdateContact(client);
+                updateClientContactUpdateForm.UpdateContact(client);
             }           
         }
 
@@ -420,11 +422,16 @@ namespace AtlantSovt
         {
             if (client != null)
             {
-                deleteContactForm.DeleteContact(client);
+                deleteClientContactDeleteForm.DeleteContact(client);
             }
         }
 
-        //delete
+        #endregion
+
+        #endregion
+
+        //Delete
+        #region Delete
 
         void DeleteClient()
         {
@@ -439,7 +446,7 @@ namespace AtlantSovt
                             db.Clients.Attach(deleteClient);
                             db.Clients.Remove(deleteClient);
                             db.SaveChanges();
-                            MessageBox.Show("Клієнта успішно видалено");
+                            MessageBox.Show("Клієнт успішно видалений");
                             deleteClientComboBox.Items.Remove(deleteClientComboBox.SelectedItem);
                         }
                         catch(Exception e)
@@ -476,5 +483,7 @@ namespace AtlantSovt
                 deleteClient = db.Clients.Find(id);
             }
         }
+
+        #endregion
     }
 }

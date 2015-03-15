@@ -1,6 +1,6 @@
 ﻿namespace AtlantSovt
 {
-    partial class UpdateContactForm
+    partial class ClientContactUpdateForm
     {
         /// <summary>
         /// Required designer variable.

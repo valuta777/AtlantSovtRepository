@@ -1,6 +1,6 @@
 ﻿namespace AtlantSovt
 {
-    partial class AddContactForwarderForm
+    partial class ForwarderContactAddForm
     {
         /// <summary>
         /// Required designer variable.

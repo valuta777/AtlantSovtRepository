@@ -1,6 +1,6 @@
 ﻿namespace AtlantSovt
 {
-    partial class AddClientBankDetails
+    partial class ForwarderBankDetailsAddForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.clientBankNameTextBox = new System.Windows.Forms.TextBox();
-            this.clientMFOTextBox = new System.Windows.Forms.TextBox();
-            this.clientAccountNumberTextBox = new System.Windows.Forms.TextBox();
-            this.clientEDRPOUTextBox = new System.Windows.Forms.TextBox();
-            this.clientIPNTextBox = new System.Windows.Forms.TextBox();
-            this.clientCertificateNumberTextBox = new System.Windows.Forms.TextBox();
-            this.clientSWIFTTextBox = new System.Windows.Forms.TextBox();
-            this.clientIBANTextBox = new System.Windows.Forms.TextBox();
+            this.forwarderBankNameTextBox = new System.Windows.Forms.TextBox();
+            this.forwarderMFOTextBox = new System.Windows.Forms.TextBox();
+            this.forwarderAccountNumberTextBox = new System.Windows.Forms.TextBox();
+            this.forwarderEDRPOUTextBox = new System.Windows.Forms.TextBox();
+            this.forwarderIPNTextBox = new System.Windows.Forms.TextBox();
+            this.forwarderCertificateNumberTextBox = new System.Windows.Forms.TextBox();
+            this.forwarderSWIFTTextBox = new System.Windows.Forms.TextBox();
+            this.forwarderIBANTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,77 +47,77 @@
             this.addClientBankDetailsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // clientBankNameTextBox
+            // forwarderBankNameTextBox
             // 
-            this.clientBankNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.forwarderBankNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientBankNameTextBox.Location = new System.Drawing.Point(12, 33);
-            this.clientBankNameTextBox.Name = "clientBankNameTextBox";
-            this.clientBankNameTextBox.Size = new System.Drawing.Size(536, 20);
-            this.clientBankNameTextBox.TabIndex = 0;
+            this.forwarderBankNameTextBox.Location = new System.Drawing.Point(12, 33);
+            this.forwarderBankNameTextBox.Name = "forwarderBankNameTextBox";
+            this.forwarderBankNameTextBox.Size = new System.Drawing.Size(536, 20);
+            this.forwarderBankNameTextBox.TabIndex = 0;
             // 
-            // clientMFOTextBox
+            // forwarderMFOTextBox
             // 
-            this.clientMFOTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.forwarderMFOTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientMFOTextBox.Location = new System.Drawing.Point(12, 80);
-            this.clientMFOTextBox.Name = "clientMFOTextBox";
-            this.clientMFOTextBox.Size = new System.Drawing.Size(536, 20);
-            this.clientMFOTextBox.TabIndex = 1;
+            this.forwarderMFOTextBox.Location = new System.Drawing.Point(12, 80);
+            this.forwarderMFOTextBox.Name = "forwarderMFOTextBox";
+            this.forwarderMFOTextBox.Size = new System.Drawing.Size(536, 20);
+            this.forwarderMFOTextBox.TabIndex = 1;
             // 
-            // clientAccountNumberTextBox
+            // forwarderAccountNumberTextBox
             // 
-            this.clientAccountNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.forwarderAccountNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientAccountNumberTextBox.Location = new System.Drawing.Point(12, 127);
-            this.clientAccountNumberTextBox.Name = "clientAccountNumberTextBox";
-            this.clientAccountNumberTextBox.Size = new System.Drawing.Size(536, 20);
-            this.clientAccountNumberTextBox.TabIndex = 2;
+            this.forwarderAccountNumberTextBox.Location = new System.Drawing.Point(12, 127);
+            this.forwarderAccountNumberTextBox.Name = "forwarderAccountNumberTextBox";
+            this.forwarderAccountNumberTextBox.Size = new System.Drawing.Size(536, 20);
+            this.forwarderAccountNumberTextBox.TabIndex = 2;
             // 
-            // clientEDRPOUTextBox
+            // forwarderEDRPOUTextBox
             // 
-            this.clientEDRPOUTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.forwarderEDRPOUTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientEDRPOUTextBox.Location = new System.Drawing.Point(12, 174);
-            this.clientEDRPOUTextBox.Name = "clientEDRPOUTextBox";
-            this.clientEDRPOUTextBox.Size = new System.Drawing.Size(536, 20);
-            this.clientEDRPOUTextBox.TabIndex = 3;
+            this.forwarderEDRPOUTextBox.Location = new System.Drawing.Point(12, 174);
+            this.forwarderEDRPOUTextBox.Name = "forwarderEDRPOUTextBox";
+            this.forwarderEDRPOUTextBox.Size = new System.Drawing.Size(536, 20);
+            this.forwarderEDRPOUTextBox.TabIndex = 3;
             // 
-            // clientIPNTextBox
+            // forwarderIPNTextBox
             // 
-            this.clientIPNTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.forwarderIPNTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientIPNTextBox.Location = new System.Drawing.Point(12, 221);
-            this.clientIPNTextBox.Name = "clientIPNTextBox";
-            this.clientIPNTextBox.Size = new System.Drawing.Size(536, 20);
-            this.clientIPNTextBox.TabIndex = 4;
+            this.forwarderIPNTextBox.Location = new System.Drawing.Point(12, 221);
+            this.forwarderIPNTextBox.Name = "forwarderIPNTextBox";
+            this.forwarderIPNTextBox.Size = new System.Drawing.Size(536, 20);
+            this.forwarderIPNTextBox.TabIndex = 4;
             // 
-            // clientCertificateNumberTextBox
+            // forwarderCertificateNumberTextBox
             // 
-            this.clientCertificateNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.forwarderCertificateNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientCertificateNumberTextBox.Location = new System.Drawing.Point(12, 268);
-            this.clientCertificateNumberTextBox.Name = "clientCertificateNumberTextBox";
-            this.clientCertificateNumberTextBox.Size = new System.Drawing.Size(536, 20);
-            this.clientCertificateNumberTextBox.TabIndex = 5;
+            this.forwarderCertificateNumberTextBox.Location = new System.Drawing.Point(12, 268);
+            this.forwarderCertificateNumberTextBox.Name = "forwarderCertificateNumberTextBox";
+            this.forwarderCertificateNumberTextBox.Size = new System.Drawing.Size(536, 20);
+            this.forwarderCertificateNumberTextBox.TabIndex = 5;
             // 
-            // clientSWIFTTextBox
+            // forwarderSWIFTTextBox
             // 
-            this.clientSWIFTTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.forwarderSWIFTTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientSWIFTTextBox.Location = new System.Drawing.Point(12, 315);
-            this.clientSWIFTTextBox.Name = "clientSWIFTTextBox";
-            this.clientSWIFTTextBox.Size = new System.Drawing.Size(536, 20);
-            this.clientSWIFTTextBox.TabIndex = 6;
+            this.forwarderSWIFTTextBox.Location = new System.Drawing.Point(12, 315);
+            this.forwarderSWIFTTextBox.Name = "forwarderSWIFTTextBox";
+            this.forwarderSWIFTTextBox.Size = new System.Drawing.Size(536, 20);
+            this.forwarderSWIFTTextBox.TabIndex = 6;
             // 
-            // clientIBANTextBox
+            // forwarderIBANTextBox
             // 
-            this.clientIBANTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.forwarderIBANTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientIBANTextBox.Location = new System.Drawing.Point(12, 362);
-            this.clientIBANTextBox.Name = "clientIBANTextBox";
-            this.clientIBANTextBox.Size = new System.Drawing.Size(536, 20);
-            this.clientIBANTextBox.TabIndex = 7;
+            this.forwarderIBANTextBox.Location = new System.Drawing.Point(12, 362);
+            this.forwarderIBANTextBox.Name = "forwarderIBANTextBox";
+            this.forwarderIBANTextBox.Size = new System.Drawing.Size(536, 20);
+            this.forwarderIBANTextBox.TabIndex = 7;
             // 
             // label3
             // 
@@ -208,9 +208,9 @@
             this.addClientBankDetailsButton.TabIndex = 16;
             this.addClientBankDetailsButton.Text = "Додати";
             this.addClientBankDetailsButton.UseVisualStyleBackColor = true;
-            this.addClientBankDetailsButton.Click += new System.EventHandler(this.addClientBankDetailsButton_Click);
+            this.addClientBankDetailsButton.Click += new System.EventHandler(this.addForwarderBankDetailsButton_Click);
             // 
-            // AddClientBankDetails
+            // AddForwarderBankDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -224,18 +224,18 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.clientIBANTextBox);
-            this.Controls.Add(this.clientSWIFTTextBox);
-            this.Controls.Add(this.clientCertificateNumberTextBox);
-            this.Controls.Add(this.clientIPNTextBox);
-            this.Controls.Add(this.clientEDRPOUTextBox);
-            this.Controls.Add(this.clientAccountNumberTextBox);
-            this.Controls.Add(this.clientMFOTextBox);
-            this.Controls.Add(this.clientBankNameTextBox);
+            this.Controls.Add(this.forwarderIBANTextBox);
+            this.Controls.Add(this.forwarderSWIFTTextBox);
+            this.Controls.Add(this.forwarderCertificateNumberTextBox);
+            this.Controls.Add(this.forwarderIPNTextBox);
+            this.Controls.Add(this.forwarderEDRPOUTextBox);
+            this.Controls.Add(this.forwarderAccountNumberTextBox);
+            this.Controls.Add(this.forwarderMFOTextBox);
+            this.Controls.Add(this.forwarderBankNameTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "AddClientBankDetails";
+            this.Name = "AddForwarderBankDetails";
             this.Text = "Додавання банківських реквізитів";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -244,14 +244,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox clientBankNameTextBox;
-        private System.Windows.Forms.TextBox clientMFOTextBox;
-        private System.Windows.Forms.TextBox clientAccountNumberTextBox;
-        private System.Windows.Forms.TextBox clientEDRPOUTextBox;
-        private System.Windows.Forms.TextBox clientIPNTextBox;
-        private System.Windows.Forms.TextBox clientCertificateNumberTextBox;
-        private System.Windows.Forms.TextBox clientSWIFTTextBox;
-        private System.Windows.Forms.TextBox clientIBANTextBox;
+        private System.Windows.Forms.TextBox forwarderBankNameTextBox;
+        private System.Windows.Forms.TextBox forwarderMFOTextBox;
+        private System.Windows.Forms.TextBox forwarderAccountNumberTextBox;
+        private System.Windows.Forms.TextBox forwarderEDRPOUTextBox;
+        private System.Windows.Forms.TextBox forwarderIPNTextBox;
+        private System.Windows.Forms.TextBox forwarderCertificateNumberTextBox;
+        private System.Windows.Forms.TextBox forwarderSWIFTTextBox;
+        private System.Windows.Forms.TextBox forwarderIBANTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

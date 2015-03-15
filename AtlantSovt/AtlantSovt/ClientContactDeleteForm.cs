@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace AtlantSovt
 {
-    public partial class DeleteContactForm : Form
+    public partial class ClientContactDeleteForm : Form
     {
         Client client;
         ClientContact contact;
-        public DeleteContactForm()
+        public ClientContactDeleteForm()
         {
             InitializeComponent();
         }
@@ -25,6 +25,7 @@ namespace AtlantSovt
         {
             client = update_client;
         }
+
         private void LoadContactDeleteContactComboBoxInfo()
         {
             using (var db = new AtlantSovtContext())
@@ -42,6 +43,7 @@ namespace AtlantSovt
 
             }
         }
+
         private void SplitDeleteClientContact()
         {
             using (var db = new AtlantSovtContext())
@@ -54,6 +56,7 @@ namespace AtlantSovt
                 contact = db.ClientContacts.Find(id);
             }
         }
+
         private void DeleteClientContact()
         {
             using (var db = new AtlantSovtContext())
@@ -76,18 +79,33 @@ namespace AtlantSovt
                 }
             }
         }
+
         private void ClientUpdateSelectDeleteContactComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             ClientUpdateSelectDeleteContactComboBox.Items.Clear();
             LoadContactDeleteContactComboBoxInfo();
             ClientUpdateSelectDeleteContactComboBox.DroppedDown = true;
+            if (ClientUpdateSelectDeleteContactComboBox.Items.Count == 0)
+            {
+                DeleteClientContactButton.Enabled = false;
+            }
+            else
+            {
+                DeleteClientContactButton.Enabled = true;
+
+            }
         }
+
         private void ClientUpdateSelectDeleteContactComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitDeleteClientContact();
         }
+
         private void DeleteClientContactButton_Click(object sender, EventArgs e)
         {
+            ClientUpdateSelectDeleteContactComboBox.Text = "";
+            ClientUpdateSelectDeleteContactComboBox.Items.Clear();
+            DeleteClientContactButton.Enabled = false;
             DeleteClientContact();
         }
     }

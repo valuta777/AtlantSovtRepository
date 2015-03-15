@@ -91,7 +91,7 @@
             this.clientUpdateContactDeleteButton = new System.Windows.Forms.Button();
             this.clientUpdateBankDetailsDeleteButton = new System.Windows.Forms.Button();
             this.clientUpdateBankDetailsUpdateButton = new System.Windows.Forms.Button();
-            this.UpdateClientUpdateContactButton = new System.Windows.Forms.Button();
+            this.clientUpdateContactUpdateButton = new System.Windows.Forms.Button();
             this.contractNumberClientUpdateTextBox = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -110,8 +110,8 @@
             this.updateClientButton = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.clientUpdateAddClientBankDetailsButton = new System.Windows.Forms.Button();
-            this.ClientUpdateAddContactButton = new System.Windows.Forms.Button();
+            this.clientUpdateAddBankDetailsButton = new System.Windows.Forms.Button();
+            this.clientUpdateAddContactButton = new System.Windows.Forms.Button();
             this.taxPayerStatusClientUpdateComboBox = new System.Windows.Forms.ComboBox();
             this.workDocumentClientUpdateComboBox = new System.Windows.Forms.ComboBox();
             this.commentClientUpdateTextBox = new System.Windows.Forms.TextBox();
@@ -124,8 +124,8 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.clientUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
+            this.clientUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
             this.deleteClientPage = new System.Windows.Forms.TabPage();
             this.deleteClientButton = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
@@ -167,7 +167,42 @@
             this.addTaxPayerStatusForwarderButton = new System.Windows.Forms.Button();
             this.addWorkDocumentForwarderButton = new System.Windows.Forms.Button();
             this.updateForwarderPage = new System.Windows.Forms.TabPage();
+            this.forwarderUpdateContactDeleteButton = new System.Windows.Forms.Button();
+            this.forwarderUpdateBankDetailsDeleteButton = new System.Windows.Forms.Button();
+            this.forwarderUpdateBankDetailsUpdateButton = new System.Windows.Forms.Button();
+            this.forwarderUpdateContactUpdateButton = new System.Windows.Forms.Button();
+            this.label66 = new System.Windows.Forms.Label();
+            this.forwarderUpdateButton = new System.Windows.Forms.Button();
+            this.forwarderUpdateBankDetailsAddButton = new System.Windows.Forms.Button();
+            this.forwarderUpdateContactAddButton = new System.Windows.Forms.Button();
+            this.label43 = new System.Windows.Forms.Label();
+            this.selectForwarderUpdateComboBox = new System.Windows.Forms.ComboBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.taxPayerStatusForwarderUpdateComboBox = new System.Windows.Forms.ComboBox();
+            this.workDocumentForwarderUpdateComboBox = new System.Windows.Forms.ComboBox();
+            this.commentForwarderUpdateTextBox = new System.Windows.Forms.TextBox();
+            this.physicalAddressForwarderUpdateTextBox = new System.Windows.Forms.TextBox();
+            this.geographyAddressForwarderUpdateTextBox = new System.Windows.Forms.TextBox();
+            this.directorForwarderUpdateTextBox = new System.Windows.Forms.TextBox();
+            this.nameForwarderUpdateTextBox = new System.Windows.Forms.TextBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.forwarderUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
+            this.forwarderUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
             this.deleteForwarderPage = new System.Windows.Forms.TabPage();
+            this.forwarderDeleteButton = new System.Windows.Forms.Button();
+            this.label42 = new System.Windows.Forms.Label();
+            this.forwarderDeleteComboBox = new System.Windows.Forms.ComboBox();
             this.menuStrip.SuspendLayout();
             this.dataControl.SuspendLayout();
             this.helloPage.SuspendLayout();
@@ -184,6 +219,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.forwarderContactsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.forwarderDataGridView)).BeginInit();
             this.addForwarderPage.SuspendLayout();
+            this.updateForwarderPage.SuspendLayout();
+            this.deleteForwarderPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -854,7 +891,7 @@
             this.updateClientPage.Controls.Add(this.clientUpdateContactDeleteButton);
             this.updateClientPage.Controls.Add(this.clientUpdateBankDetailsDeleteButton);
             this.updateClientPage.Controls.Add(this.clientUpdateBankDetailsUpdateButton);
-            this.updateClientPage.Controls.Add(this.UpdateClientUpdateContactButton);
+            this.updateClientPage.Controls.Add(this.clientUpdateContactUpdateButton);
             this.updateClientPage.Controls.Add(this.contractNumberClientUpdateTextBox);
             this.updateClientPage.Controls.Add(this.label28);
             this.updateClientPage.Controls.Add(this.label27);
@@ -873,8 +910,8 @@
             this.updateClientPage.Controls.Add(this.updateClientButton);
             this.updateClientPage.Controls.Add(this.label20);
             this.updateClientPage.Controls.Add(this.label21);
-            this.updateClientPage.Controls.Add(this.clientUpdateAddClientBankDetailsButton);
-            this.updateClientPage.Controls.Add(this.ClientUpdateAddContactButton);
+            this.updateClientPage.Controls.Add(this.clientUpdateAddBankDetailsButton);
+            this.updateClientPage.Controls.Add(this.clientUpdateAddContactButton);
             this.updateClientPage.Controls.Add(this.taxPayerStatusClientUpdateComboBox);
             this.updateClientPage.Controls.Add(this.workDocumentClientUpdateComboBox);
             this.updateClientPage.Controls.Add(this.commentClientUpdateTextBox);
@@ -887,8 +924,8 @@
             this.updateClientPage.Controls.Add(this.label24);
             this.updateClientPage.Controls.Add(this.label25);
             this.updateClientPage.Controls.Add(this.label26);
-            this.updateClientPage.Controls.Add(this.button4);
-            this.updateClientPage.Controls.Add(this.button5);
+            this.updateClientPage.Controls.Add(this.clientUpdateTaxPayerStatusAddButton);
+            this.updateClientPage.Controls.Add(this.clientUpdateWorkDocumentAddButton);
             this.updateClientPage.Location = new System.Drawing.Point(4, 22);
             this.updateClientPage.Name = "updateClientPage";
             this.updateClientPage.Size = new System.Drawing.Size(776, 511);
@@ -900,7 +937,7 @@
             // 
             this.clientUpdateContactDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.clientUpdateContactDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientUpdateContactDeleteButton.Location = new System.Drawing.Point(7, 457);
+            this.clientUpdateContactDeleteButton.Location = new System.Drawing.Point(6, 458);
             this.clientUpdateContactDeleteButton.Name = "clientUpdateContactDeleteButton";
             this.clientUpdateContactDeleteButton.Size = new System.Drawing.Size(238, 30);
             this.clientUpdateContactDeleteButton.TabIndex = 69;
@@ -912,7 +949,7 @@
             // 
             this.clientUpdateBankDetailsDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.clientUpdateBankDetailsDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientUpdateBankDetailsDeleteButton.Location = new System.Drawing.Point(252, 458);
+            this.clientUpdateBankDetailsDeleteButton.Location = new System.Drawing.Point(251, 459);
             this.clientUpdateBankDetailsDeleteButton.Name = "clientUpdateBankDetailsDeleteButton";
             this.clientUpdateBankDetailsDeleteButton.Size = new System.Drawing.Size(207, 30);
             this.clientUpdateBankDetailsDeleteButton.TabIndex = 68;
@@ -924,7 +961,7 @@
             // 
             this.clientUpdateBankDetailsUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.clientUpdateBankDetailsUpdateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientUpdateBankDetailsUpdateButton.Location = new System.Drawing.Point(253, 422);
+            this.clientUpdateBankDetailsUpdateButton.Location = new System.Drawing.Point(252, 423);
             this.clientUpdateBankDetailsUpdateButton.Name = "clientUpdateBankDetailsUpdateButton";
             this.clientUpdateBankDetailsUpdateButton.Size = new System.Drawing.Size(207, 30);
             this.clientUpdateBankDetailsUpdateButton.TabIndex = 67;
@@ -932,17 +969,17 @@
             this.clientUpdateBankDetailsUpdateButton.UseVisualStyleBackColor = true;
             this.clientUpdateBankDetailsUpdateButton.Click += new System.EventHandler(this.clientUpdateBankDetailsUpdateButton_Click);
             // 
-            // UpdateClientUpdateContactButton
+            // clientUpdateContactUpdateButton
             // 
-            this.UpdateClientUpdateContactButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.UpdateClientUpdateContactButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UpdateClientUpdateContactButton.Location = new System.Drawing.Point(8, 422);
-            this.UpdateClientUpdateContactButton.Name = "UpdateClientUpdateContactButton";
-            this.UpdateClientUpdateContactButton.Size = new System.Drawing.Size(237, 30);
-            this.UpdateClientUpdateContactButton.TabIndex = 66;
-            this.UpdateClientUpdateContactButton.Text = "Змінити контакт";
-            this.UpdateClientUpdateContactButton.UseVisualStyleBackColor = true;
-            this.UpdateClientUpdateContactButton.Click += new System.EventHandler(this.updateClientContactButton_Click);
+            this.clientUpdateContactUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.clientUpdateContactUpdateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientUpdateContactUpdateButton.Location = new System.Drawing.Point(7, 423);
+            this.clientUpdateContactUpdateButton.Name = "clientUpdateContactUpdateButton";
+            this.clientUpdateContactUpdateButton.Size = new System.Drawing.Size(237, 30);
+            this.clientUpdateContactUpdateButton.TabIndex = 66;
+            this.clientUpdateContactUpdateButton.Text = "Змінити контакт";
+            this.clientUpdateContactUpdateButton.UseVisualStyleBackColor = true;
+            this.clientUpdateContactUpdateButton.Click += new System.EventHandler(this.updateClientContactButton_Click);
             // 
             // contractNumberClientUpdateTextBox
             // 
@@ -997,7 +1034,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label11.Location = new System.Drawing.Point(10, 490);
+            this.label11.Location = new System.Drawing.Point(9, 491);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(117, 13);
             this.label11.TabIndex = 61;
@@ -1124,9 +1161,9 @@
             this.updateClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.updateClientButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.updateClientButton.Location = new System.Drawing.Point(466, 386);
+            this.updateClientButton.Location = new System.Drawing.Point(465, 387);
             this.updateClientButton.Name = "updateClientButton";
-            this.updateClientButton.Size = new System.Drawing.Size(302, 70);
+            this.updateClientButton.Size = new System.Drawing.Size(302, 101);
             this.updateClientButton.TabIndex = 50;
             this.updateClientButton.Text = "Змінити";
             this.updateClientButton.UseVisualStyleBackColor = true;
@@ -1154,29 +1191,29 @@
             this.label21.TabIndex = 46;
             this.label21.Text = "На підставі якого документу";
             // 
-            // clientUpdateAddClientBankDetailsButton
+            // clientUpdateAddBankDetailsButton
             // 
-            this.clientUpdateAddClientBankDetailsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.clientUpdateAddClientBankDetailsButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientUpdateAddClientBankDetailsButton.Location = new System.Drawing.Point(253, 386);
-            this.clientUpdateAddClientBankDetailsButton.Name = "clientUpdateAddClientBankDetailsButton";
-            this.clientUpdateAddClientBankDetailsButton.Size = new System.Drawing.Size(207, 30);
-            this.clientUpdateAddClientBankDetailsButton.TabIndex = 45;
-            this.clientUpdateAddClientBankDetailsButton.Text = "Додати банківські данні";
-            this.clientUpdateAddClientBankDetailsButton.UseVisualStyleBackColor = true;
-            this.clientUpdateAddClientBankDetailsButton.Click += new System.EventHandler(this.clientUpdateAddClientBankDetailsButton_Click);
+            this.clientUpdateAddBankDetailsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.clientUpdateAddBankDetailsButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientUpdateAddBankDetailsButton.Location = new System.Drawing.Point(252, 387);
+            this.clientUpdateAddBankDetailsButton.Name = "clientUpdateAddBankDetailsButton";
+            this.clientUpdateAddBankDetailsButton.Size = new System.Drawing.Size(207, 30);
+            this.clientUpdateAddBankDetailsButton.TabIndex = 45;
+            this.clientUpdateAddBankDetailsButton.Text = "Додати банківські данні";
+            this.clientUpdateAddBankDetailsButton.UseVisualStyleBackColor = true;
+            this.clientUpdateAddBankDetailsButton.Click += new System.EventHandler(this.clientUpdateAddClientBankDetailsButton_Click);
             // 
-            // ClientUpdateAddContactButton
+            // clientUpdateAddContactButton
             // 
-            this.ClientUpdateAddContactButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ClientUpdateAddContactButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ClientUpdateAddContactButton.Location = new System.Drawing.Point(8, 386);
-            this.ClientUpdateAddContactButton.Name = "ClientUpdateAddContactButton";
-            this.ClientUpdateAddContactButton.Size = new System.Drawing.Size(237, 30);
-            this.ClientUpdateAddContactButton.TabIndex = 44;
-            this.ClientUpdateAddContactButton.Text = "Додати контакт";
-            this.ClientUpdateAddContactButton.UseVisualStyleBackColor = true;
-            this.ClientUpdateAddContactButton.Click += new System.EventHandler(this.clientUpdateAddContactButton_Click);
+            this.clientUpdateAddContactButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.clientUpdateAddContactButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientUpdateAddContactButton.Location = new System.Drawing.Point(7, 387);
+            this.clientUpdateAddContactButton.Name = "clientUpdateAddContactButton";
+            this.clientUpdateAddContactButton.Size = new System.Drawing.Size(237, 30);
+            this.clientUpdateAddContactButton.TabIndex = 44;
+            this.clientUpdateAddContactButton.Text = "Додати контакт";
+            this.clientUpdateAddContactButton.UseVisualStyleBackColor = true;
+            this.clientUpdateAddContactButton.Click += new System.EventHandler(this.clientUpdateAddContactButton_Click);
             // 
             // taxPayerStatusClientUpdateComboBox
             // 
@@ -1313,25 +1350,27 @@
             this.label26.TabIndex = 32;
             this.label26.Text = "Назва";
             // 
-            // button4
+            // clientUpdateTaxPayerStatusAddButton
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Image = global::AtlantSovt.Properties.Resources.add;
-            this.button4.Location = new System.Drawing.Point(738, 139);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(30, 30);
-            this.button4.TabIndex = 49;
-            this.button4.UseVisualStyleBackColor = true;
+            this.clientUpdateTaxPayerStatusAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientUpdateTaxPayerStatusAddButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.clientUpdateTaxPayerStatusAddButton.Location = new System.Drawing.Point(738, 139);
+            this.clientUpdateTaxPayerStatusAddButton.Name = "clientUpdateTaxPayerStatusAddButton";
+            this.clientUpdateTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
+            this.clientUpdateTaxPayerStatusAddButton.TabIndex = 49;
+            this.clientUpdateTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
+            this.clientUpdateTaxPayerStatusAddButton.Click += new System.EventHandler(this.clientUpdateTaxPayerStatusAddButton_Click);
             // 
-            // button5
+            // clientUpdateWorkDocumentAddButton
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Image = global::AtlantSovt.Properties.Resources.add;
-            this.button5.Location = new System.Drawing.Point(736, 77);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(30, 30);
-            this.button5.TabIndex = 48;
-            this.button5.UseVisualStyleBackColor = true;
+            this.clientUpdateWorkDocumentAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientUpdateWorkDocumentAddButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.clientUpdateWorkDocumentAddButton.Location = new System.Drawing.Point(736, 77);
+            this.clientUpdateWorkDocumentAddButton.Name = "clientUpdateWorkDocumentAddButton";
+            this.clientUpdateWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
+            this.clientUpdateWorkDocumentAddButton.TabIndex = 48;
+            this.clientUpdateWorkDocumentAddButton.UseVisualStyleBackColor = true;
+            this.clientUpdateWorkDocumentAddButton.Click += new System.EventHandler(this.clientUpdateWorkDocumentAddButton_Click);
             // 
             // deleteClientPage
             // 
@@ -1349,6 +1388,7 @@
             // 
             this.deleteClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteClientButton.Enabled = false;
             this.deleteClientButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.deleteClientButton.Location = new System.Drawing.Point(466, 433);
             this.deleteClientButton.Name = "deleteClientButton";
@@ -1840,6 +1880,38 @@
             // 
             // updateForwarderPage
             // 
+            this.updateForwarderPage.Controls.Add(this.forwarderUpdateContactDeleteButton);
+            this.updateForwarderPage.Controls.Add(this.forwarderUpdateBankDetailsDeleteButton);
+            this.updateForwarderPage.Controls.Add(this.forwarderUpdateBankDetailsUpdateButton);
+            this.updateForwarderPage.Controls.Add(this.forwarderUpdateContactUpdateButton);
+            this.updateForwarderPage.Controls.Add(this.label66);
+            this.updateForwarderPage.Controls.Add(this.forwarderUpdateButton);
+            this.updateForwarderPage.Controls.Add(this.forwarderUpdateBankDetailsAddButton);
+            this.updateForwarderPage.Controls.Add(this.forwarderUpdateContactAddButton);
+            this.updateForwarderPage.Controls.Add(this.label43);
+            this.updateForwarderPage.Controls.Add(this.selectForwarderUpdateComboBox);
+            this.updateForwarderPage.Controls.Add(this.label51);
+            this.updateForwarderPage.Controls.Add(this.label52);
+            this.updateForwarderPage.Controls.Add(this.label53);
+            this.updateForwarderPage.Controls.Add(this.label54);
+            this.updateForwarderPage.Controls.Add(this.label55);
+            this.updateForwarderPage.Controls.Add(this.label56);
+            this.updateForwarderPage.Controls.Add(this.label59);
+            this.updateForwarderPage.Controls.Add(this.label60);
+            this.updateForwarderPage.Controls.Add(this.taxPayerStatusForwarderUpdateComboBox);
+            this.updateForwarderPage.Controls.Add(this.workDocumentForwarderUpdateComboBox);
+            this.updateForwarderPage.Controls.Add(this.commentForwarderUpdateTextBox);
+            this.updateForwarderPage.Controls.Add(this.physicalAddressForwarderUpdateTextBox);
+            this.updateForwarderPage.Controls.Add(this.geographyAddressForwarderUpdateTextBox);
+            this.updateForwarderPage.Controls.Add(this.directorForwarderUpdateTextBox);
+            this.updateForwarderPage.Controls.Add(this.nameForwarderUpdateTextBox);
+            this.updateForwarderPage.Controls.Add(this.label61);
+            this.updateForwarderPage.Controls.Add(this.label62);
+            this.updateForwarderPage.Controls.Add(this.label63);
+            this.updateForwarderPage.Controls.Add(this.label64);
+            this.updateForwarderPage.Controls.Add(this.label65);
+            this.updateForwarderPage.Controls.Add(this.forwarderUpdateTaxPayerStatusAddButton);
+            this.updateForwarderPage.Controls.Add(this.forwarderUpdateWorkDocumentAddButton);
             this.updateForwarderPage.Location = new System.Drawing.Point(4, 22);
             this.updateForwarderPage.Name = "updateForwarderPage";
             this.updateForwarderPage.Size = new System.Drawing.Size(776, 511);
@@ -1847,14 +1919,439 @@
             this.updateForwarderPage.Text = "updateForwarderPage";
             this.updateForwarderPage.UseVisualStyleBackColor = true;
             // 
+            // forwarderUpdateContactDeleteButton
+            // 
+            this.forwarderUpdateContactDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.forwarderUpdateContactDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderUpdateContactDeleteButton.Location = new System.Drawing.Point(6, 458);
+            this.forwarderUpdateContactDeleteButton.Name = "forwarderUpdateContactDeleteButton";
+            this.forwarderUpdateContactDeleteButton.Size = new System.Drawing.Size(238, 30);
+            this.forwarderUpdateContactDeleteButton.TabIndex = 103;
+            this.forwarderUpdateContactDeleteButton.Text = "Видалити контакт";
+            this.forwarderUpdateContactDeleteButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateContactDeleteButton.Click += new System.EventHandler(this.forwarderUpdateContactDeleteButton_Click);
+            // 
+            // forwarderUpdateBankDetailsDeleteButton
+            // 
+            this.forwarderUpdateBankDetailsDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.forwarderUpdateBankDetailsDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderUpdateBankDetailsDeleteButton.Location = new System.Drawing.Point(251, 459);
+            this.forwarderUpdateBankDetailsDeleteButton.Name = "forwarderUpdateBankDetailsDeleteButton";
+            this.forwarderUpdateBankDetailsDeleteButton.Size = new System.Drawing.Size(207, 30);
+            this.forwarderUpdateBankDetailsDeleteButton.TabIndex = 102;
+            this.forwarderUpdateBankDetailsDeleteButton.Text = "Видалити банківські данні";
+            this.forwarderUpdateBankDetailsDeleteButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateBankDetailsDeleteButton.Click += new System.EventHandler(this.forwarderUpdateBankDetaitsDeleteButton_Click);
+            // 
+            // forwarderUpdateBankDetailsUpdateButton
+            // 
+            this.forwarderUpdateBankDetailsUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.forwarderUpdateBankDetailsUpdateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderUpdateBankDetailsUpdateButton.Location = new System.Drawing.Point(252, 423);
+            this.forwarderUpdateBankDetailsUpdateButton.Name = "forwarderUpdateBankDetailsUpdateButton";
+            this.forwarderUpdateBankDetailsUpdateButton.Size = new System.Drawing.Size(207, 30);
+            this.forwarderUpdateBankDetailsUpdateButton.TabIndex = 101;
+            this.forwarderUpdateBankDetailsUpdateButton.Text = "Змінити банківські данні";
+            this.forwarderUpdateBankDetailsUpdateButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateBankDetailsUpdateButton.Click += new System.EventHandler(this.forwarderUpdateBankDetailsUpdateButton_Click);
+            // 
+            // forwarderUpdateContactUpdateButton
+            // 
+            this.forwarderUpdateContactUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.forwarderUpdateContactUpdateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderUpdateContactUpdateButton.Location = new System.Drawing.Point(7, 423);
+            this.forwarderUpdateContactUpdateButton.Name = "forwarderUpdateContactUpdateButton";
+            this.forwarderUpdateContactUpdateButton.Size = new System.Drawing.Size(237, 30);
+            this.forwarderUpdateContactUpdateButton.TabIndex = 100;
+            this.forwarderUpdateContactUpdateButton.Text = "Змінити контакт";
+            this.forwarderUpdateContactUpdateButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateContactUpdateButton.Click += new System.EventHandler(this.forwarderUpdateContactUpdateButton_Click);
+            // 
+            // label66
+            // 
+            this.label66.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label66.AutoSize = true;
+            this.label66.BackColor = System.Drawing.Color.Transparent;
+            this.label66.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label66.Location = new System.Drawing.Point(9, 491);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(117, 13);
+            this.label66.TabIndex = 99;
+            this.label66.Text = "* - обов\'язкове поле";
+            // 
+            // forwarderUpdateButton
+            // 
+            this.forwarderUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderUpdateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderUpdateButton.Location = new System.Drawing.Point(465, 387);
+            this.forwarderUpdateButton.Name = "forwarderUpdateButton";
+            this.forwarderUpdateButton.Size = new System.Drawing.Size(302, 101);
+            this.forwarderUpdateButton.TabIndex = 98;
+            this.forwarderUpdateButton.Text = "Змінити";
+            this.forwarderUpdateButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateButton.Click += new System.EventHandler(this.updateForwarderButton_Click);
+            // 
+            // forwarderUpdateBankDetailsAddButton
+            // 
+            this.forwarderUpdateBankDetailsAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.forwarderUpdateBankDetailsAddButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderUpdateBankDetailsAddButton.Location = new System.Drawing.Point(252, 387);
+            this.forwarderUpdateBankDetailsAddButton.Name = "forwarderUpdateBankDetailsAddButton";
+            this.forwarderUpdateBankDetailsAddButton.Size = new System.Drawing.Size(207, 30);
+            this.forwarderUpdateBankDetailsAddButton.TabIndex = 97;
+            this.forwarderUpdateBankDetailsAddButton.Text = "Додати банківські данні";
+            this.forwarderUpdateBankDetailsAddButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateBankDetailsAddButton.Click += new System.EventHandler(this.forwarderUpdateClientBankDetailsAddButton_Click);
+            // 
+            // forwarderUpdateContactAddButton
+            // 
+            this.forwarderUpdateContactAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.forwarderUpdateContactAddButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderUpdateContactAddButton.Location = new System.Drawing.Point(7, 387);
+            this.forwarderUpdateContactAddButton.Name = "forwarderUpdateContactAddButton";
+            this.forwarderUpdateContactAddButton.Size = new System.Drawing.Size(237, 30);
+            this.forwarderUpdateContactAddButton.TabIndex = 96;
+            this.forwarderUpdateContactAddButton.Text = "Додати контакт";
+            this.forwarderUpdateContactAddButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateContactAddButton.Click += new System.EventHandler(this.forwarderUpdateContactAddButton_Click);
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label43.Location = new System.Drawing.Point(10, 3);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(178, 21);
+            this.label43.TabIndex = 93;
+            this.label43.Text = "Виберіть експедитора";
+            // 
+            // selectForwarderUpdateComboBox
+            // 
+            this.selectForwarderUpdateComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.selectForwarderUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.selectForwarderUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.selectForwarderUpdateComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selectForwarderUpdateComboBox.Location = new System.Drawing.Point(8, 27);
+            this.selectForwarderUpdateComboBox.Name = "selectForwarderUpdateComboBox";
+            this.selectForwarderUpdateComboBox.Size = new System.Drawing.Size(722, 29);
+            this.selectForwarderUpdateComboBox.Sorted = true;
+            this.selectForwarderUpdateComboBox.TabIndex = 92;
+            this.selectForwarderUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.selectForwarderUpdateComboBox_SelectedIndexChanged);
+            this.selectForwarderUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.selectForwarderUpdateComboBox_MouseClick);
+            // 
+            // label51
+            // 
+            this.label51.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label51.AutoSize = true;
+            this.label51.BackColor = System.Drawing.Color.Transparent;
+            this.label51.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label51.Location = new System.Drawing.Point(684, 115);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(17, 21);
+            this.label51.TabIndex = 91;
+            this.label51.Text = "*";
+            // 
+            // label52
+            // 
+            this.label52.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label52.AutoSize = true;
+            this.label52.BackColor = System.Drawing.Color.Transparent;
+            this.label52.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label52.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label52.Location = new System.Drawing.Point(713, 54);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(17, 21);
+            this.label52.TabIndex = 90;
+            this.label52.Text = "*";
+            // 
+            // label53
+            // 
+            this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label53.AutoSize = true;
+            this.label53.BackColor = System.Drawing.Color.Transparent;
+            this.label53.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label53.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label53.Location = new System.Drawing.Point(369, 115);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(17, 21);
+            this.label53.TabIndex = 89;
+            this.label53.Text = "*";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.BackColor = System.Drawing.Color.Transparent;
+            this.label54.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label54.Location = new System.Drawing.Point(149, 115);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(17, 21);
+            this.label54.TabIndex = 88;
+            this.label54.Text = "*";
+            // 
+            // label55
+            // 
+            this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label55.AutoSize = true;
+            this.label55.BackColor = System.Drawing.Color.Transparent;
+            this.label55.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label55.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label55.Location = new System.Drawing.Point(383, 53);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(17, 21);
+            this.label55.TabIndex = 87;
+            this.label55.Text = "*";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.BackColor = System.Drawing.Color.Transparent;
+            this.label56.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label56.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label56.Location = new System.Drawing.Point(59, 53);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(17, 21);
+            this.label56.TabIndex = 86;
+            this.label56.Text = "*";
+            // 
+            // label59
+            // 
+            this.label59.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label59.Location = new System.Drawing.Point(494, 115);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(193, 21);
+            this.label59.TabIndex = 79;
+            this.label59.Text = "Статус платника податку";
+            // 
+            // label60
+            // 
+            this.label60.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label60.Location = new System.Drawing.Point(496, 54);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(223, 21);
+            this.label60.TabIndex = 78;
+            this.label60.Text = "На підставі якого документу";
+            // 
+            // taxPayerStatusForwarderUpdateComboBox
+            // 
+            this.taxPayerStatusForwarderUpdateComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.taxPayerStatusForwarderUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.taxPayerStatusForwarderUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.taxPayerStatusForwarderUpdateComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taxPayerStatusForwarderUpdateComboBox.FormattingEnabled = true;
+            this.taxPayerStatusForwarderUpdateComboBox.Location = new System.Drawing.Point(495, 139);
+            this.taxPayerStatusForwarderUpdateComboBox.Name = "taxPayerStatusForwarderUpdateComboBox";
+            this.taxPayerStatusForwarderUpdateComboBox.Size = new System.Drawing.Size(235, 29);
+            this.taxPayerStatusForwarderUpdateComboBox.TabIndex = 77;
+            this.taxPayerStatusForwarderUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.taxPayerStatusForwarderUpdateComboBox_SelectedIndexChanged);
+            this.taxPayerStatusForwarderUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.taxPayerStatusForwarderUpdateComboBox_MouseClick);
+            // 
+            // workDocumentForwarderUpdateComboBox
+            // 
+            this.workDocumentForwarderUpdateComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.workDocumentForwarderUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.workDocumentForwarderUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.workDocumentForwarderUpdateComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.workDocumentForwarderUpdateComboBox.Location = new System.Drawing.Point(495, 77);
+            this.workDocumentForwarderUpdateComboBox.Name = "workDocumentForwarderUpdateComboBox";
+            this.workDocumentForwarderUpdateComboBox.Size = new System.Drawing.Size(235, 29);
+            this.workDocumentForwarderUpdateComboBox.TabIndex = 76;
+            this.workDocumentForwarderUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.workDocumentForwarderUpdateComboBox_SelectedIndexChanged);
+            this.workDocumentForwarderUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.workDocumentForwarderUpdateComboBox_MouseClick);
+            // 
+            // commentForwarderUpdateTextBox
+            // 
+            this.commentForwarderUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.commentForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentForwarderUpdateTextBox.Location = new System.Drawing.Point(8, 195);
+            this.commentForwarderUpdateTextBox.Multiline = true;
+            this.commentForwarderUpdateTextBox.Name = "commentForwarderUpdateTextBox";
+            this.commentForwarderUpdateTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.commentForwarderUpdateTextBox.Size = new System.Drawing.Size(758, 185);
+            this.commentForwarderUpdateTextBox.TabIndex = 75;
+            this.commentForwarderUpdateTextBox.TextChanged += new System.EventHandler(this.commentForwarderUpdateTextBox_TextChanged);
+            // 
+            // physicalAddressForwarderUpdateTextBox
+            // 
+            this.physicalAddressForwarderUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.physicalAddressForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.physicalAddressForwarderUpdateTextBox.Location = new System.Drawing.Point(253, 139);
+            this.physicalAddressForwarderUpdateTextBox.Name = "physicalAddressForwarderUpdateTextBox";
+            this.physicalAddressForwarderUpdateTextBox.Size = new System.Drawing.Size(235, 29);
+            this.physicalAddressForwarderUpdateTextBox.TabIndex = 74;
+            this.physicalAddressForwarderUpdateTextBox.TextChanged += new System.EventHandler(this.physicalAddressForwarderUpdateTextBox_TextChanged);
+            // 
+            // geographyAddressForwarderUpdateTextBox
+            // 
+            this.geographyAddressForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.geographyAddressForwarderUpdateTextBox.Location = new System.Drawing.Point(8, 139);
+            this.geographyAddressForwarderUpdateTextBox.Name = "geographyAddressForwarderUpdateTextBox";
+            this.geographyAddressForwarderUpdateTextBox.Size = new System.Drawing.Size(235, 29);
+            this.geographyAddressForwarderUpdateTextBox.TabIndex = 73;
+            this.geographyAddressForwarderUpdateTextBox.TextChanged += new System.EventHandler(this.geographyAddressForwarderUpdateTextBox_TextChanged);
+            // 
+            // directorForwarderUpdateTextBox
+            // 
+            this.directorForwarderUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.directorForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directorForwarderUpdateTextBox.Location = new System.Drawing.Point(252, 77);
+            this.directorForwarderUpdateTextBox.Name = "directorForwarderUpdateTextBox";
+            this.directorForwarderUpdateTextBox.Size = new System.Drawing.Size(235, 29);
+            this.directorForwarderUpdateTextBox.TabIndex = 72;
+            this.directorForwarderUpdateTextBox.TextChanged += new System.EventHandler(this.directorForwarderUpdateTextBox_TextChanged);
+            // 
+            // nameForwarderUpdateTextBox
+            // 
+            this.nameForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameForwarderUpdateTextBox.Location = new System.Drawing.Point(8, 78);
+            this.nameForwarderUpdateTextBox.Name = "nameForwarderUpdateTextBox";
+            this.nameForwarderUpdateTextBox.Size = new System.Drawing.Size(235, 29);
+            this.nameForwarderUpdateTextBox.TabIndex = 71;
+            this.nameForwarderUpdateTextBox.TextChanged += new System.EventHandler(this.nameForwarderUpdateTextBox_TextChanged);
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label61.Location = new System.Drawing.Point(10, 171);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(81, 21);
+            this.label61.TabIndex = 70;
+            this.label61.Text = "Примітка";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label62.Location = new System.Drawing.Point(10, 115);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(135, 21);
+            this.label62.TabIndex = 69;
+            this.label62.Text = "Поштова адреса";
+            // 
+            // label63
+            // 
+            this.label63.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label63.Location = new System.Drawing.Point(249, 115);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(125, 21);
+            this.label63.TabIndex = 68;
+            this.label63.Text = "Фізична адреса";
+            // 
+            // label64
+            // 
+            this.label64.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label64.Location = new System.Drawing.Point(249, 54);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(137, 21);
+            this.label64.TabIndex = 67;
+            this.label64.Text = "П.І.Б. Директора";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label65.Location = new System.Drawing.Point(10, 54);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(54, 21);
+            this.label65.TabIndex = 66;
+            this.label65.Text = "Назва";
+            // 
+            // forwarderUpdateTaxPayerStatusAddButton
+            // 
+            this.forwarderUpdateTaxPayerStatusAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderUpdateTaxPayerStatusAddButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.forwarderUpdateTaxPayerStatusAddButton.Location = new System.Drawing.Point(738, 139);
+            this.forwarderUpdateTaxPayerStatusAddButton.Name = "forwarderUpdateTaxPayerStatusAddButton";
+            this.forwarderUpdateTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
+            this.forwarderUpdateTaxPayerStatusAddButton.TabIndex = 81;
+            this.forwarderUpdateTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateTaxPayerStatusAddButton.Click += new System.EventHandler(this.forwarderUpdateTaxPayerStatusAddButton_Click);
+            // 
+            // forwarderUpdateWorkDocumentAddButton
+            // 
+            this.forwarderUpdateWorkDocumentAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderUpdateWorkDocumentAddButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.forwarderUpdateWorkDocumentAddButton.Location = new System.Drawing.Point(736, 77);
+            this.forwarderUpdateWorkDocumentAddButton.Name = "forwarderUpdateWorkDocumentAddButton";
+            this.forwarderUpdateWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
+            this.forwarderUpdateWorkDocumentAddButton.TabIndex = 80;
+            this.forwarderUpdateWorkDocumentAddButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateWorkDocumentAddButton.Click += new System.EventHandler(this.forwarderUpdateWorkDocumentAddButton_Click);
+            // 
             // deleteForwarderPage
             // 
+            this.deleteForwarderPage.Controls.Add(this.forwarderDeleteButton);
+            this.deleteForwarderPage.Controls.Add(this.label42);
+            this.deleteForwarderPage.Controls.Add(this.forwarderDeleteComboBox);
             this.deleteForwarderPage.Location = new System.Drawing.Point(4, 22);
             this.deleteForwarderPage.Name = "deleteForwarderPage";
             this.deleteForwarderPage.Size = new System.Drawing.Size(776, 511);
             this.deleteForwarderPage.TabIndex = 8;
             this.deleteForwarderPage.Text = "deleteForwarderPage";
             this.deleteForwarderPage.UseVisualStyleBackColor = true;
+            // 
+            // forwarderDeleteButton
+            // 
+            this.forwarderDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderDeleteButton.Enabled = false;
+            this.forwarderDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderDeleteButton.Location = new System.Drawing.Point(466, 433);
+            this.forwarderDeleteButton.Name = "forwarderDeleteButton";
+            this.forwarderDeleteButton.Size = new System.Drawing.Size(302, 70);
+            this.forwarderDeleteButton.TabIndex = 69;
+            this.forwarderDeleteButton.Text = "Видалити";
+            this.forwarderDeleteButton.UseVisualStyleBackColor = true;
+            this.forwarderDeleteButton.Click += new System.EventHandler(this.forwarderDeleteButton_Click);
+            // 
+            // label42
+            // 
+            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label42.Location = new System.Drawing.Point(5, 7);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(134, 21);
+            this.label42.TabIndex = 68;
+            this.label42.Text = "Виберіть клієнта";
+            // 
+            // forwarderDeleteComboBox
+            // 
+            this.forwarderDeleteComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderDeleteComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.forwarderDeleteComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.forwarderDeleteComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderDeleteComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.forwarderDeleteComboBox.Location = new System.Drawing.Point(3, 31);
+            this.forwarderDeleteComboBox.Name = "forwarderDeleteComboBox";
+            this.forwarderDeleteComboBox.Size = new System.Drawing.Size(770, 29);
+            this.forwarderDeleteComboBox.Sorted = true;
+            this.forwarderDeleteComboBox.TabIndex = 67;
+            this.forwarderDeleteComboBox.SelectedIndexChanged += new System.EventHandler(this.forwarderDeleteComboBox_SelectedIndexChanged);
+            this.forwarderDeleteComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.forwarderDeleteComboBox_MouseClick);
             // 
             // MainForm
             // 
@@ -1893,6 +2390,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.forwarderDataGridView)).EndInit();
             this.addForwarderPage.ResumeLayout(false);
             this.addForwarderPage.PerformLayout();
+            this.updateForwarderPage.ResumeLayout(false);
+            this.updateForwarderPage.PerformLayout();
+            this.deleteForwarderPage.ResumeLayout(false);
+            this.deleteForwarderPage.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1917,11 +2418,17 @@
         private System.Windows.Forms.ToolStripMenuItem updateForwarderStrip;
         private System.Windows.Forms.ToolStripMenuItem deleteForwarderStrip;
         private System.Windows.Forms.TabControl dataControl;
+
+        private System.Windows.Forms.TabPage showForwarderPage;
+        private System.Windows.Forms.TabPage addForwarderPage;
+        private System.Windows.Forms.TabPage updateForwarderPage;
+        private System.Windows.Forms.TabPage deleteForwarderPage;
         private System.Windows.Forms.TabPage showClientPage;
         private System.Windows.Forms.TabPage addClientPage;
         private System.Windows.Forms.TabPage updateClientPage;
         private System.Windows.Forms.TabPage deleteClientPage;
         private System.Windows.Forms.TabPage helloPage;
+
         private System.Windows.Forms.Label commentClientLabel;
         private System.Windows.Forms.Label geographyAddressClientLabel;
         private System.Windows.Forms.Label physicalAddressClientLabel;
@@ -1973,7 +2480,7 @@
         private System.Windows.Forms.Button updateClientButton;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button clientUpdateAddClientBankDetailsButton;
+
         private System.Windows.Forms.ComboBox taxPayerStatusClientUpdateComboBox;
         private System.Windows.Forms.ComboBox workDocumentClientUpdateComboBox;
         private System.Windows.Forms.TextBox commentClientUpdateTextBox;
@@ -1986,24 +2493,33 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button clientUpdateTaxPayerStatusAddButton;
+        private System.Windows.Forms.Button clientUpdateWorkDocumentAddButton;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.ComboBox selectClientUpdateComboBox;
-        private System.Windows.Forms.Button ClientUpdateAddContactButton;
+
         private System.Windows.Forms.TextBox contractNumberClientUpdateTextBox;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.DataGridView clientBankDetailsDataGridView;
+
+        private System.Windows.Forms.Button clientUpdateAddBankDetailsButton;
+        private System.Windows.Forms.Button clientUpdateAddContactButton;
+
         private System.Windows.Forms.Button clientUpdateBankDetailsUpdateButton;
-        private System.Windows.Forms.Button UpdateClientUpdateContactButton;
+        private System.Windows.Forms.Button clientUpdateContactUpdateButton;
+
+        private System.Windows.Forms.Button clientUpdateContactDeleteButton;
+        private System.Windows.Forms.Button clientUpdateBankDetailsDeleteButton;
+
+
         private System.Windows.Forms.Button deleteClientButton;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.ComboBox deleteClientComboBox;
-        private System.Windows.Forms.TabPage showForwarderPage;
-        private System.Windows.Forms.TabPage addForwarderPage;
-        private System.Windows.Forms.TabPage updateForwarderPage;
-        private System.Windows.Forms.TabPage deleteForwarderPage;
+
+
+
+
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.DataGridView forwarderBankDetailsDataGridView;
         private System.Windows.Forms.Label label32;
@@ -2020,6 +2536,7 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
+
         private System.Windows.Forms.Button addForwarderButton;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
@@ -2038,8 +2555,48 @@
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Button addTaxPayerStatusForwarderButton;
         private System.Windows.Forms.Button addWorkDocumentForwarderButton;
-        private System.Windows.Forms.Button clientUpdateContactDeleteButton;
-        private System.Windows.Forms.Button clientUpdateBankDetailsDeleteButton;
+        
+        //Forwarder Update
+        private System.Windows.Forms.Label label66; 
+        private System.Windows.Forms.Label label43;        
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label60;
 
+        private System.Windows.Forms.ComboBox selectForwarderUpdateComboBox;
+        private System.Windows.Forms.ComboBox taxPayerStatusForwarderUpdateComboBox;
+        private System.Windows.Forms.ComboBox workDocumentForwarderUpdateComboBox;
+        private System.Windows.Forms.TextBox commentForwarderUpdateTextBox;
+        private System.Windows.Forms.TextBox physicalAddressForwarderUpdateTextBox;
+        private System.Windows.Forms.TextBox geographyAddressForwarderUpdateTextBox;
+        private System.Windows.Forms.TextBox directorForwarderUpdateTextBox;
+        private System.Windows.Forms.TextBox nameForwarderUpdateTextBox;
+
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Button forwarderUpdateTaxPayerStatusAddButton;
+        private System.Windows.Forms.Button forwarderUpdateWorkDocumentAddButton;
+
+        private System.Windows.Forms.Button forwarderUpdateBankDetailsAddButton;
+        private System.Windows.Forms.Button forwarderUpdateBankDetailsUpdateButton;
+        private System.Windows.Forms.Button forwarderUpdateBankDetailsDeleteButton;
+
+        private System.Windows.Forms.Button forwarderUpdateContactAddButton;
+        private System.Windows.Forms.Button forwarderUpdateContactUpdateButton;
+        private System.Windows.Forms.Button forwarderUpdateContactDeleteButton;
+
+        private System.Windows.Forms.Button forwarderUpdateButton;
+        private System.Windows.Forms.Button forwarderDeleteButton;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.ComboBox forwarderDeleteComboBox;
     }
 }
+
