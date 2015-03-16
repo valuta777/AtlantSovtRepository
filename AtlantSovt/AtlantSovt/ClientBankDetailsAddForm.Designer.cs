@@ -199,11 +199,11 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "IBAN";
             // 
-            // addClientBankDetailsButton
+            // transporterFilterAddButton
             // 
             this.addClientBankDetailsButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addClientBankDetailsButton.Location = new System.Drawing.Point(12, 398);
-            this.addClientBankDetailsButton.Name = "addClientBankDetailsButton";
+            this.addClientBankDetailsButton.Name = "transporterFilterAddButton";
             this.addClientBankDetailsButton.Size = new System.Drawing.Size(536, 48);
             this.addClientBankDetailsButton.TabIndex = 16;
             this.addClientBankDetailsButton.Text = "Додати";

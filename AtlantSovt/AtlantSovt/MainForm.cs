@@ -71,7 +71,7 @@ namespace AtlantSovt
         #endregion
 
         //MenuStrips
-        #region MenuStrips               
+        #region MenuStrips
 
                 private void addClientsStrip_Click(object sender, EventArgs e)
                 {
@@ -927,8 +927,8 @@ namespace AtlantSovt
             }
         }
                 #endregion
-        #endregion
 
+        #endregion
         //Transporter
         #region Transporter
 
@@ -936,8 +936,22 @@ namespace AtlantSovt
             #endregion
 
             #region Add
-            #endregion
+        private void button6_Click(object sender, EventArgs e)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                TransporterCoutryAndVehicleSelectForm t1 = new TransporterCoutryAndVehicleSelectForm();
+                t1.Show();
+                t1.CoutriesAndVehiclesSelect(db.Transporters.FirstOrDefault());
+            }
+        }
 
+
+
+
+
+
+            #endregion
 
             #region Update
             #endregion
