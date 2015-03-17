@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace AtlantSovt
 {
-    public partial class TransporterCoutryAndVehicleSelectForm : Form
+    public partial class TransporterCountryAndVehicleSelectForm : Form
     {
         Transporter transporter;
-        public TransporterCoutryAndVehicleSelectForm()
+        public TransporterCountryAndVehicleSelectForm()
         {
             InitializeComponent();
             LoadCoutriesToChechedBoxList();
@@ -52,6 +52,8 @@ namespace AtlantSovt
         internal void CoutriesAndVehiclesSelect(Transporter add_transporter) 
         {
             transporter = add_transporter;
+            SaveCountries();
+            SaveVehicles();
         }
 
         private void SaveCountries()
@@ -83,6 +85,7 @@ namespace AtlantSovt
                 }
             }
         }
+
         private void SaveVehicles()
         {
             if (transporterFilterSelectVehicleCheckedListBox.CheckedItems.Count != 0 && transporter != null)
@@ -111,16 +114,10 @@ namespace AtlantSovt
                 }
             }
         }
+
         private void transporterFilterSelectButton_Click(object sender, EventArgs e)
-        {
-            SaveCountries();
-            SaveVehicles();
+        {   
+            this.Hide();
         }
-
-        private void transporterFilterSelectCountryCheckedListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

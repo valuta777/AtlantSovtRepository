@@ -1,6 +1,6 @@
 ﻿namespace AtlantSovt
 {
-    partial class ClientBankDetailsAddForm
+    partial class TransporterBankDetailsAddForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.clientBankNameTextBox = new System.Windows.Forms.TextBox();
-            this.clientMFOTextBox = new System.Windows.Forms.TextBox();
-            this.clientAccountNumberTextBox = new System.Windows.Forms.TextBox();
-            this.clientEDRPOUTextBox = new System.Windows.Forms.TextBox();
-            this.clientIPNTextBox = new System.Windows.Forms.TextBox();
-            this.clientCertificateNumberTextBox = new System.Windows.Forms.TextBox();
-            this.clientSWIFTTextBox = new System.Windows.Forms.TextBox();
-            this.clientIBANTextBox = new System.Windows.Forms.TextBox();
+            this.transporterBankNameTextBox = new System.Windows.Forms.TextBox();
+            this.transporterMFOTextBox = new System.Windows.Forms.TextBox();
+            this.transporterAccountNumberTextBox = new System.Windows.Forms.TextBox();
+            this.transporterEDRPOUTextBox = new System.Windows.Forms.TextBox();
+            this.transporterIPNTextBox = new System.Windows.Forms.TextBox();
+            this.transporterCertificateNumberTextBox = new System.Windows.Forms.TextBox();
+            this.transporterSWIFTTextBox = new System.Windows.Forms.TextBox();
+            this.transporterIBANTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,80 +44,80 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.addClientBankDetailsButton = new System.Windows.Forms.Button();
+            this.addTransporterBankDetailsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // transporterBankNameTextBox
             // 
-            this.clientBankNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.transporterBankNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientBankNameTextBox.Location = new System.Drawing.Point(12, 33);
-            this.clientBankNameTextBox.Name = "transporterBankNameTextBox";
-            this.clientBankNameTextBox.Size = new System.Drawing.Size(536, 20);
-            this.clientBankNameTextBox.TabIndex = 0;
+            this.transporterBankNameTextBox.Location = new System.Drawing.Point(12, 33);
+            this.transporterBankNameTextBox.Name = "transporterBankNameTextBox";
+            this.transporterBankNameTextBox.Size = new System.Drawing.Size(536, 20);
+            this.transporterBankNameTextBox.TabIndex = 0;
             // 
             // transporterMFOTextBox
             // 
-            this.clientMFOTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.transporterMFOTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientMFOTextBox.Location = new System.Drawing.Point(12, 80);
-            this.clientMFOTextBox.Name = "transporterMFOTextBox";
-            this.clientMFOTextBox.Size = new System.Drawing.Size(536, 20);
-            this.clientMFOTextBox.TabIndex = 1;
+            this.transporterMFOTextBox.Location = new System.Drawing.Point(12, 80);
+            this.transporterMFOTextBox.Name = "transporterMFOTextBox";
+            this.transporterMFOTextBox.Size = new System.Drawing.Size(536, 20);
+            this.transporterMFOTextBox.TabIndex = 1;
             // 
             // transporterAccountNumberTextBox
             // 
-            this.clientAccountNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.transporterAccountNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientAccountNumberTextBox.Location = new System.Drawing.Point(12, 127);
-            this.clientAccountNumberTextBox.Name = "transporterAccountNumberTextBox";
-            this.clientAccountNumberTextBox.Size = new System.Drawing.Size(536, 20);
-            this.clientAccountNumberTextBox.TabIndex = 2;
+            this.transporterAccountNumberTextBox.Location = new System.Drawing.Point(12, 127);
+            this.transporterAccountNumberTextBox.Name = "transporterAccountNumberTextBox";
+            this.transporterAccountNumberTextBox.Size = new System.Drawing.Size(536, 20);
+            this.transporterAccountNumberTextBox.TabIndex = 2;
             // 
             // transporterEDRPOUTextBox
             // 
-            this.clientEDRPOUTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.transporterEDRPOUTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientEDRPOUTextBox.Location = new System.Drawing.Point(12, 174);
-            this.clientEDRPOUTextBox.Name = "transporterEDRPOUTextBox";
-            this.clientEDRPOUTextBox.Size = new System.Drawing.Size(536, 20);
-            this.clientEDRPOUTextBox.TabIndex = 3;
+            this.transporterEDRPOUTextBox.Location = new System.Drawing.Point(12, 174);
+            this.transporterEDRPOUTextBox.Name = "transporterEDRPOUTextBox";
+            this.transporterEDRPOUTextBox.Size = new System.Drawing.Size(536, 20);
+            this.transporterEDRPOUTextBox.TabIndex = 3;
             // 
             // transporterIPNTextBox
             // 
-            this.clientIPNTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.transporterIPNTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientIPNTextBox.Location = new System.Drawing.Point(12, 221);
-            this.clientIPNTextBox.Name = "transporterIPNTextBox";
-            this.clientIPNTextBox.Size = new System.Drawing.Size(536, 20);
-            this.clientIPNTextBox.TabIndex = 4;
+            this.transporterIPNTextBox.Location = new System.Drawing.Point(12, 221);
+            this.transporterIPNTextBox.Name = "transporterIPNTextBox";
+            this.transporterIPNTextBox.Size = new System.Drawing.Size(536, 20);
+            this.transporterIPNTextBox.TabIndex = 4;
             // 
             // transporterCertificateNumberTextBox
             // 
-            this.clientCertificateNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.transporterCertificateNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientCertificateNumberTextBox.Location = new System.Drawing.Point(12, 268);
-            this.clientCertificateNumberTextBox.Name = "transporterCertificateNumberTextBox";
-            this.clientCertificateNumberTextBox.Size = new System.Drawing.Size(536, 20);
-            this.clientCertificateNumberTextBox.TabIndex = 5;
+            this.transporterCertificateNumberTextBox.Location = new System.Drawing.Point(12, 268);
+            this.transporterCertificateNumberTextBox.Name = "transporterCertificateNumberTextBox";
+            this.transporterCertificateNumberTextBox.Size = new System.Drawing.Size(536, 20);
+            this.transporterCertificateNumberTextBox.TabIndex = 5;
             // 
             // transporterSWIFTTextBox
             // 
-            this.clientSWIFTTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.transporterSWIFTTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientSWIFTTextBox.Location = new System.Drawing.Point(12, 315);
-            this.clientSWIFTTextBox.Name = "transporterSWIFTTextBox";
-            this.clientSWIFTTextBox.Size = new System.Drawing.Size(536, 20);
-            this.clientSWIFTTextBox.TabIndex = 6;
+            this.transporterSWIFTTextBox.Location = new System.Drawing.Point(12, 315);
+            this.transporterSWIFTTextBox.Name = "transporterSWIFTTextBox";
+            this.transporterSWIFTTextBox.Size = new System.Drawing.Size(536, 20);
+            this.transporterSWIFTTextBox.TabIndex = 6;
             // 
             // transporterIBANTextBox
             // 
-            this.clientIBANTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.transporterIBANTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientIBANTextBox.Location = new System.Drawing.Point(12, 362);
-            this.clientIBANTextBox.Name = "transporterIBANTextBox";
-            this.clientIBANTextBox.Size = new System.Drawing.Size(536, 20);
-            this.clientIBANTextBox.TabIndex = 7;
+            this.transporterIBANTextBox.Location = new System.Drawing.Point(12, 362);
+            this.transporterIBANTextBox.Name = "transporterIBANTextBox";
+            this.transporterIBANTextBox.Size = new System.Drawing.Size(536, 20);
+            this.transporterIBANTextBox.TabIndex = 7;
             // 
             // label3
             // 
@@ -201,21 +201,21 @@
             // 
             // transporterFilterAddButton
             // 
-            this.addClientBankDetailsButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addClientBankDetailsButton.Location = new System.Drawing.Point(12, 398);
-            this.addClientBankDetailsButton.Name = "transporterFilterAddButton";
-            this.addClientBankDetailsButton.Size = new System.Drawing.Size(536, 48);
-            this.addClientBankDetailsButton.TabIndex = 16;
-            this.addClientBankDetailsButton.Text = "Додати";
-            this.addClientBankDetailsButton.UseVisualStyleBackColor = true;
-            this.addClientBankDetailsButton.Click += new System.EventHandler(this.addClientBankDetailsButton_Click);
+            this.addTransporterBankDetailsButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addTransporterBankDetailsButton.Location = new System.Drawing.Point(12, 398);
+            this.addTransporterBankDetailsButton.Name = "transporterFilterAddButton";
+            this.addTransporterBankDetailsButton.Size = new System.Drawing.Size(536, 48);
+            this.addTransporterBankDetailsButton.TabIndex = 16;
+            this.addTransporterBankDetailsButton.Text = "Додати";
+            this.addTransporterBankDetailsButton.UseVisualStyleBackColor = true;
+            this.addTransporterBankDetailsButton.Click += new System.EventHandler(this.addTransporterBankDetailsButton_Click);
             // 
             // AddClientBankDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 458);
-            this.Controls.Add(this.addClientBankDetailsButton);
+            this.Controls.Add(this.addTransporterBankDetailsButton);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -224,14 +224,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.clientIBANTextBox);
-            this.Controls.Add(this.clientSWIFTTextBox);
-            this.Controls.Add(this.clientCertificateNumberTextBox);
-            this.Controls.Add(this.clientIPNTextBox);
-            this.Controls.Add(this.clientEDRPOUTextBox);
-            this.Controls.Add(this.clientAccountNumberTextBox);
-            this.Controls.Add(this.clientMFOTextBox);
-            this.Controls.Add(this.clientBankNameTextBox);
+            this.Controls.Add(this.transporterIBANTextBox);
+            this.Controls.Add(this.transporterSWIFTTextBox);
+            this.Controls.Add(this.transporterCertificateNumberTextBox);
+            this.Controls.Add(this.transporterIPNTextBox);
+            this.Controls.Add(this.transporterEDRPOUTextBox);
+            this.Controls.Add(this.transporterAccountNumberTextBox);
+            this.Controls.Add(this.transporterMFOTextBox);
+            this.Controls.Add(this.transporterBankNameTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -244,14 +244,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox clientBankNameTextBox;
-        private System.Windows.Forms.TextBox clientMFOTextBox;
-        private System.Windows.Forms.TextBox clientAccountNumberTextBox;
-        private System.Windows.Forms.TextBox clientEDRPOUTextBox;
-        private System.Windows.Forms.TextBox clientIPNTextBox;
-        private System.Windows.Forms.TextBox clientCertificateNumberTextBox;
-        private System.Windows.Forms.TextBox clientSWIFTTextBox;
-        private System.Windows.Forms.TextBox clientIBANTextBox;
+        
+
+        private System.Windows.Forms.TextBox transporterBankNameTextBox;
+        private System.Windows.Forms.TextBox transporterMFOTextBox;
+        private System.Windows.Forms.TextBox transporterAccountNumberTextBox;
+        private System.Windows.Forms.TextBox transporterEDRPOUTextBox;
+        private System.Windows.Forms.TextBox transporterIPNTextBox;
+        private System.Windows.Forms.TextBox transporterCertificateNumberTextBox;
+        private System.Windows.Forms.TextBox transporterSWIFTTextBox;
+        private System.Windows.Forms.TextBox transporterIBANTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -260,6 +262,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button addClientBankDetailsButton;
+        private System.Windows.Forms.Button addTransporterBankDetailsButton;
     }
 }

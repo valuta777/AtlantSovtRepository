@@ -1,6 +1,6 @@
 ﻿namespace AtlantSovt
 {
-    partial class TransporterCoutryAndVehicleSelectForm
+    partial class TransporterCountryAndVehicleSelectForm
     {
         /// <summary>
         /// Required designer variable.
@@ -44,8 +44,7 @@
             this.transporterFilterSelectCountryCheckedListBox.Name = "transporterFilterSelectCountryCheckedListBox";
             this.transporterFilterSelectCountryCheckedListBox.Size = new System.Drawing.Size(634, 109);
             this.transporterFilterSelectCountryCheckedListBox.TabIndex = 103;
-            this.transporterFilterSelectCountryCheckedListBox.SelectedIndexChanged += new System.EventHandler(this.transporterFilterSelectCountryCheckedListBox_SelectedIndexChanged);
-            // 
+             // 
             // transporterFilterSelectVehicleCheckedListBox
             // 
             this.transporterFilterSelectVehicleCheckedListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
