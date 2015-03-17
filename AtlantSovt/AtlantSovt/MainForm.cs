@@ -38,6 +38,19 @@ namespace AtlantSovt
             //Bank Details
         ForwarderBankDetailsAddForm addForwarderBankDetailsAddForm, updateForwarderBankDetailsAddForm;
         ForwarderBankDetailsUpdateForm updateForwarderBankDetailsUpdateForm;
+        
+            //Transporter Forms
+
+            //Countries and Vehicles
+        TransporterCountryAndVehicleSelectForm transporterCountryAndVehicleSelectForm;
+            //Contact
+        TransporterContactAddForm addTransporterContactAddForm, updateTransporterContactAddForm;
+        //ForwarderContactUpdateForm updateForwarderContactUpdateForm;
+        //ForwarderContactDeleteForm deleteForwarderContactDeleteForm;
+            //Bank Details
+        TransporterBankDetailsAddForm addTransporterBankDetailsAddForm, updateTransporterBankDetailsAddForm;
+        //ForwarderBankDetailsUpdateForm updateForwarderBankDetailsUpdateForm;
+
 
         //Load / Animaton / Test connection
         #region Load
@@ -71,7 +84,7 @@ namespace AtlantSovt
         #endregion
 
         //MenuStrips
-        #region MenuStrips               
+        #region MenuStrips
 
                 private void addClientsStrip_Click(object sender, EventArgs e)
                 {
@@ -102,6 +115,26 @@ namespace AtlantSovt
                 {
                     dataControl.SelectedIndex = 8;
                 }
+
+                private void showTransporterStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 9;
+                }
+
+                private void addTransporterStrip_Click(object sender, EventArgs e)
+                {
+                     dataControl.SelectedIndex = 10;
+                }
+
+                private void updateTransporterStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 11;
+                }
+
+                private void deleteTransporterStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 12;
+                }
                 #endregion
 
         //Client
@@ -115,6 +148,10 @@ namespace AtlantSovt
             clientContactsDataGridView.Visible = false;
             clientBankDetailsDataGridView.Visible = false;
             clientCommentRichTextBox.Text = "";
+        }
+        private void clientDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ShowClientInfo();
         }
                 #endregion
 
@@ -160,10 +197,7 @@ namespace AtlantSovt
             
         }
         
-        private void clientDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            ShowClientInfo();
-        }
+
         
         private void workDocumentClientComboBox_MouseClick(object sender, MouseEventArgs e)
         {
@@ -552,16 +586,14 @@ namespace AtlantSovt
             forwarderBankDetailsDataGridView.Visible = false;
             forwarderCommentRichTextBox.Text = "";
         }
-        #endregion
-
-                //Add
-                #region Add
-
         private void forwarderDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowForwarderInfo();
         }
+        #endregion
 
+                //Add
+                #region Add
         private void workDocumentForwarderComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             workDocumentForwarderComboBox.Items.Clear();
@@ -909,5 +941,126 @@ namespace AtlantSovt
                 #endregion
 
         #endregion
+
+        //Transporter
+        #region Transporter
+
+            //Show
+            #region Show
+            #endregion
+
+            //Add
+            #region Add
+
+        private void transporterAddWorkDocumentAddButton_Click(object sender, EventArgs e)
+        {
+            AddWorkDocumentForm addWorkDocument = new AddWorkDocumentForm();
+            addWorkDocument.Show();
+        }
+
+        private void transporterAddTaxPayerStatusAddButton_Click(object sender, EventArgs e)
+        {
+            AddTaxPayerStatusForm addTaxPayerStatus = new AddTaxPayerStatusForm();
+            addTaxPayerStatus.Show();
+        }
+
+        private void transporterAddContactAddButton_Click(object sender, EventArgs e)
+        {
+            addTransporterContactAddForm = new TransporterContactAddForm();
+            addTransporterContactAddForm.Show();
+        }
+
+        private void transporterAddBankDetailsAddButton_Click(object sender, EventArgs e)
+        {
+            addTransporterBankDetailsAddForm = new TransporterBankDetailsAddForm();
+            addTransporterBankDetailsAddForm.Show();
+        }
+
+        private void transporterAddCountryAndVehicleSelectButton_Click(object sender, EventArgs e)
+        {
+            transporterCountryAndVehicleSelectForm = new TransporterCountryAndVehicleSelectForm();
+            transporterCountryAndVehicleSelectForm.Show();
+        }
+        private void workDocumentTransporterAddComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            workDocumentTransporterAddComboBox.Items.Clear();
+            LoadWorkDocumentTransporterAddInfoComboBox();
+            workDocumentTransporterAddComboBox.DroppedDown = true;
+        }
+
+        private void taxPayerStatusTransporterAddComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            taxPayerStatusTransporterAddComboBox.Items.Clear();
+            LoadTaxPayerStatusTransporterAddInfoComboBox();
+            taxPayerStatusTransporterAddComboBox.DroppedDown = true;
+        }
+
+        private void workDocumentTransporterAddComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            transporterAddWorkDocumentFlag = true;
+            SplitLoadWorkDocumentTransporterAddInfo();
+
+        }
+
+        private void taxPayerStatusTransporterAddComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            transporterAddTaxPayerStatusFlag = true;
+            SplitLoadTaxPayerStatusTransporterAddInfo();
+        }
+
+        private void originalTransporterAddCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (originalTransporterAddCheckBox.Checked)
+            {
+                faxTransporterAddCheckBox.CheckState = CheckState.Unchecked;
+            }
+            else
+            {
+                faxTransporterAddCheckBox.CheckState = CheckState.Checked;
+            }
+        }
+
+        private void faxTransporterAddCheckBox_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (faxTransporterAddCheckBox.Checked)
+            {
+                originalTransporterAddCheckBox.CheckState = CheckState.Unchecked;
+            }
+            else
+            {
+                originalTransporterAddCheckBox.CheckState = CheckState.Checked;
+            }
+        }
+
+        private void transporterAddButton_Click(object sender, EventArgs e)
+        {
+            AddTransporter();
+            nameTransporterAddTextBox.Text = "";
+            shortNameTransporterAddTextBox.Text = "";
+            directorTransporterAddTextBox.Text = "";
+            physicalAddressTransporterAddTextBox.Text = "";
+            geographyAddressTransporterAddTextBox.Text = "";
+            workDocumentTransporterAddComboBox.Text = "";
+            taxPayerStatusTransporterAddComboBox.Text = "";
+            originalTransporterAddCheckBox.Checked = true;
+
+            commentTransporterAddTextBox.Text = "";
+            filtersTransporterAddCheckedListBox.ClearSelected();
+            foreach (int i in filtersTransporterAddCheckedListBox.CheckedIndices)
+            {
+                filtersTransporterAddCheckedListBox.SetItemCheckState(i, CheckState.Unchecked);
+            }
+        }
+        #endregion
+
+            #region Update
+            #endregion
+
+            #region Delete
+            #endregion
+
+        #endregion
+
+
     }
 }
