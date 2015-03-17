@@ -981,6 +981,7 @@ namespace AtlantSovt
             transporterCountryAndVehicleSelectForm = new TransporterCountryAndVehicleSelectForm();
             transporterCountryAndVehicleSelectForm.Show();
         }
+
         private void workDocumentTransporterAddComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             workDocumentTransporterAddComboBox.Items.Clear();

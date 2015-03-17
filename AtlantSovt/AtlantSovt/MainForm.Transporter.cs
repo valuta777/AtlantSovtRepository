@@ -73,8 +73,9 @@ namespace AtlantSovt
 
                         New_Filters.Id = New_Transporter.Id;
                         db.Filters.Add(New_Filters);
+                        db.SaveChanges();
 
-                        if (addClientBankDetailsAddForm != null)
+                        if (addTransporterBankDetailsAddForm != null)
                         {
                             addTransporterBankDetailsAddForm.AddTransporterBankDetail(New_Transporter.Id);
                             addTransporterBankDetailsAddForm = null;
