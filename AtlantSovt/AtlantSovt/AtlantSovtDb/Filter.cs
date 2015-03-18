@@ -8,6 +8,7 @@ namespace AtlantSovt.AtlantSovtDb
 
     public partial class Filter
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
 
         public bool? IfForwarder { get; set; }

@@ -38,7 +38,10 @@ namespace AtlantSovt
             //Bank Details
         ForwarderBankDetailsAddForm addForwarderBankDetailsAddForm, updateForwarderBankDetailsAddForm;
         ForwarderBankDetailsUpdateForm updateForwarderBankDetailsUpdateForm;
-        
+
+            //Transporter Forms
+        TransporterShowAdditionalDetailsForm transporterShowAdditionalDetailsForm;
+        TransporterShowFiltrationForm transporterShowFiltrationForm;
             //Transporter Forms
 
             //Countries and Vehicles
@@ -84,7 +87,7 @@ namespace AtlantSovt
         #endregion
 
         //MenuStrips
-        #region MenuStrips
+        #region MenuStrips               
 
                 private void addClientsStrip_Click(object sender, EventArgs e)
                 {
@@ -116,11 +119,6 @@ namespace AtlantSovt
                     dataControl.SelectedIndex = 8;
                 }
 
-                private void showTransporterStrip_Click(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 9;
-                }
-
                 private void addTransporterStrip_Click(object sender, EventArgs e)
                 {
                      dataControl.SelectedIndex = 10;
@@ -149,6 +147,7 @@ namespace AtlantSovt
             clientBankDetailsDataGridView.Visible = false;
             clientCommentRichTextBox.Text = "";
         }
+
         private void clientDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowClientInfo();
@@ -196,8 +195,6 @@ namespace AtlantSovt
             commentClientTextBox.Text = "";
             
         }
-        
-
         
         private void workDocumentClientComboBox_MouseClick(object sender, MouseEventArgs e)
         {
@@ -947,6 +944,49 @@ namespace AtlantSovt
 
             //Show
             #region Show
+
+            private void showTransporterStrip_Click(object sender, EventArgs e)
+            {
+                dataControl.SelectedIndex = 9;
+                ShowTransporter();
+                transporterShowContactsDataGridView.Visible = false;
+                transporterShowBankDetailsDataGridView.Visible = false;
+                transporterShowCountryDataGridView.Visible = false;
+                transporterShowCountryDataGridView.Visible = false;
+                transporterShowCommentRichTextBox.Text = "";
+            }
+
+            private void transporterShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+            {
+                ShowTransporterInfo();
+            }
+
+            private void transporterShowAdditionalDetailsButton_Click(object sender, EventArgs e)
+            {
+                transporterShowAdditionalDetailsForm = new TransporterShowAdditionalDetailsForm();
+                if (TransporterClikedId != 0)
+                {
+                    transporterShowAdditionalDetailsForm.ShowTransporterAdditionalDetails(TransporterClikedId);
+                    transporterShowAdditionalDetailsForm.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Ви не вибрали перевізника!");
+                    transporterShowAdditionalDetailsForm.Hide();
+                }
+            }
+
+            private void transporterShowFilterSelectButton_Click(object sender, EventArgs e)
+            {
+                transporterShowFiltrationForm = new TransporterShowFiltrationForm(this);
+
+                transporterShowFiltrationForm.LoadCoutriesToTransporterShowChechedBoxList();
+
+                transporterShowFiltrationForm.LoadVehicleToTransporterShowChechedBoxList();
+
+                transporterShowFiltrationForm.Show();
+            }
             #endregion
 
             //Add
@@ -1052,7 +1092,7 @@ namespace AtlantSovt
                 filtersTransporterAddCheckedListBox.SetItemCheckState(i, CheckState.Unchecked);
             }
         }
-        #endregion
+            #endregion
 
             #region Update
             #endregion

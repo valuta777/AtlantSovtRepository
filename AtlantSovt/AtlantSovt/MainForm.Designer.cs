@@ -204,6 +204,18 @@
             this.label42 = new System.Windows.Forms.Label();
             this.forwarderDeleteComboBox = new System.Windows.Forms.ComboBox();
             this.showTransporterPage = new System.Windows.Forms.TabPage();
+            this.transporterShowAdditionalDetailsButton = new System.Windows.Forms.Button();
+            this.transporterShowCountryDataGridView = new System.Windows.Forms.DataGridView();
+            this.label69 = new System.Windows.Forms.Label();
+            this.transporterShowFilterSelectButton = new System.Windows.Forms.Button();
+            this.label57 = new System.Windows.Forms.Label();
+            this.transporterShowBankDetailsDataGridView = new System.Windows.Forms.DataGridView();
+            this.label58 = new System.Windows.Forms.Label();
+            this.transporterShowCommentRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.label67 = new System.Windows.Forms.Label();
+            this.transporterShowContactsDataGridView = new System.Windows.Forms.DataGridView();
+            this.label68 = new System.Windows.Forms.Label();
+            this.transporterShowDataGridView = new System.Windows.Forms.DataGridView();
             this.addTransporterPage = new System.Windows.Forms.TabPage();
             this.filtersTransporterAddCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.faxTransporterAddCheckBox = new System.Windows.Forms.CheckBox();
@@ -261,6 +273,11 @@
             this.updateForwarderPage.SuspendLayout();
             this.deleteForwarderPage.SuspendLayout();
             this.addTransporterPage.SuspendLayout();
+            this.showTransporterPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowCountryDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowBankDetailsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowContactsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -2403,12 +2420,172 @@
             // 
             // showTransporterPage
             // 
+            this.showTransporterPage.Controls.Add(this.transporterShowAdditionalDetailsButton);
+            this.showTransporterPage.Controls.Add(this.transporterShowCountryDataGridView);
+            this.showTransporterPage.Controls.Add(this.label69);
+            this.showTransporterPage.Controls.Add(this.transporterShowFilterSelectButton);
+            this.showTransporterPage.Controls.Add(this.label57);
+            this.showTransporterPage.Controls.Add(this.transporterShowBankDetailsDataGridView);
+            this.showTransporterPage.Controls.Add(this.label58);
+            this.showTransporterPage.Controls.Add(this.transporterShowCommentRichTextBox);
+            this.showTransporterPage.Controls.Add(this.label67);
+            this.showTransporterPage.Controls.Add(this.transporterShowContactsDataGridView);
+            this.showTransporterPage.Controls.Add(this.label68);
+            this.showTransporterPage.Controls.Add(this.transporterShowDataGridView);
             this.showTransporterPage.Location = new System.Drawing.Point(4, 22);
             this.showTransporterPage.Name = "showTransporterPage";
             this.showTransporterPage.Size = new System.Drawing.Size(776, 511);
             this.showTransporterPage.TabIndex = 9;
             this.showTransporterPage.Text = "showTransporterPage";
             this.showTransporterPage.UseVisualStyleBackColor = true;
+            // 
+            // transporterShowAdditionalDetailsButton
+            // 
+            this.transporterShowAdditionalDetailsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowAdditionalDetailsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterShowAdditionalDetailsButton.Location = new System.Drawing.Point(197, 455);
+            this.transporterShowAdditionalDetailsButton.Name = "transporterShowAdditionalDetailsButton";
+            this.transporterShowAdditionalDetailsButton.Size = new System.Drawing.Size(285, 50);
+            this.transporterShowAdditionalDetailsButton.TabIndex = 38;
+            this.transporterShowAdditionalDetailsButton.Text = "Додаткові параметри";
+            this.transporterShowAdditionalDetailsButton.UseVisualStyleBackColor = true;
+            this.transporterShowAdditionalDetailsButton.Click += new System.EventHandler(this.transporterShowAdditionalDetailsButton_Click);
+            // 
+            // transporterShowCountryDataGridView
+            // 
+            this.transporterShowCountryDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowCountryDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.transporterShowCountryDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.transporterShowCountryDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.transporterShowCountryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.transporterShowCountryDataGridView.Location = new System.Drawing.Point(586, 24);
+            this.transporterShowCountryDataGridView.Name = "transporterShowCountryDataGridView";
+            this.transporterShowCountryDataGridView.Size = new System.Drawing.Size(190, 160);
+            this.transporterShowCountryDataGridView.TabIndex = 37;
+            // 
+            // label69
+            // 
+            this.label69.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label69.Location = new System.Drawing.Point(585, 2);
+            this.label69.Name = "label69";
+            this.label69.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label69.Size = new System.Drawing.Size(61, 21);
+            this.label69.TabIndex = 36;
+            this.label69.Text = "Країни";
+            // 
+            // transporterShowFilterSelectButton
+            // 
+            this.transporterShowFilterSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowFilterSelectButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterShowFilterSelectButton.Location = new System.Drawing.Point(488, 455);
+            this.transporterShowFilterSelectButton.Name = "transporterShowFilterSelectButton";
+            this.transporterShowFilterSelectButton.Size = new System.Drawing.Size(285, 50);
+            this.transporterShowFilterSelectButton.TabIndex = 33;
+            this.transporterShowFilterSelectButton.Text = "Фільтрація";
+            this.transporterShowFilterSelectButton.UseVisualStyleBackColor = true;
+            this.transporterShowFilterSelectButton.Click += new System.EventHandler(this.transporterShowFilterSelectButton_Click);
+            // 
+            // label57
+            // 
+            this.label57.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label57.Location = new System.Drawing.Point(2, 186);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(164, 21);
+            this.label57.TabIndex = 24;
+            this.label57.Text = "Банківські реквізити";
+            // 
+            // transporterShowBankDetailsDataGridView
+            // 
+            this.transporterShowBankDetailsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowBankDetailsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.transporterShowBankDetailsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.transporterShowBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.transporterShowBankDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.transporterShowBankDetailsDataGridView.Location = new System.Drawing.Point(0, 210);
+            this.transporterShowBankDetailsDataGridView.Name = "transporterShowBankDetailsDataGridView";
+            this.transporterShowBankDetailsDataGridView.Size = new System.Drawing.Size(780, 55);
+            this.transporterShowBankDetailsDataGridView.TabIndex = 23;
+            // 
+            // label58
+            // 
+            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label58.Location = new System.Drawing.Point(5, 373);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(81, 21);
+            this.label58.TabIndex = 22;
+            this.label58.Text = "Примітка";
+            // 
+            // transporterShowCommentRichTextBox
+            // 
+            this.transporterShowCommentRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowCommentRichTextBox.Location = new System.Drawing.Point(0, 395);
+            this.transporterShowCommentRichTextBox.Name = "transporterShowCommentRichTextBox";
+            this.transporterShowCommentRichTextBox.ReadOnly = true;
+            this.transporterShowCommentRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.transporterShowCommentRichTextBox.Size = new System.Drawing.Size(776, 54);
+            this.transporterShowCommentRichTextBox.TabIndex = 21;
+            this.transporterShowCommentRichTextBox.Text = "";
+            // 
+            // label67
+            // 
+            this.label67.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label67.Location = new System.Drawing.Point(2, 267);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(79, 21);
+            this.label67.TabIndex = 20;
+            this.label67.Text = "Контакти";
+            // 
+            // transporterShowContactsDataGridView
+            // 
+            this.transporterShowContactsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowContactsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.transporterShowContactsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.transporterShowContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.transporterShowContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.transporterShowContactsDataGridView.Location = new System.Drawing.Point(0, 289);
+            this.transporterShowContactsDataGridView.Name = "transporterShowContactsDataGridView";
+            this.transporterShowContactsDataGridView.Size = new System.Drawing.Size(776, 81);
+            this.transporterShowContactsDataGridView.TabIndex = 19;
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label68.Location = new System.Drawing.Point(4, 2);
+            this.label68.Name = "label68";
+            this.label68.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label68.Size = new System.Drawing.Size(107, 21);
+            this.label68.TabIndex = 18;
+            this.label68.Text = "Перевізники";
+            // 
+            // transporterShowDataGridView
+            // 
+            this.transporterShowDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.transporterShowDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.transporterShowDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.transporterShowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.transporterShowDataGridView.Location = new System.Drawing.Point(0, 24);
+            this.transporterShowDataGridView.Name = "transporterShowDataGridView";
+            this.transporterShowDataGridView.Size = new System.Drawing.Size(579, 160);
+            this.transporterShowDataGridView.TabIndex = 17;
+            this.transporterShowDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.transporterShowDataGridView_CellMouseClick);
             // 
             // addTransporterPage
             // 
@@ -2916,6 +3093,12 @@
             this.deleteForwarderPage.PerformLayout();
             this.addTransporterPage.ResumeLayout(false);
             this.addTransporterPage.PerformLayout();
+            this.showTransporterPage.ResumeLayout(false);
+            this.showTransporterPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowCountryDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowBankDetailsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowContactsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3119,7 +3302,6 @@
         private System.Windows.Forms.Button forwarderDeleteButton;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.ComboBox forwarderDeleteComboBox;
-        private System.Windows.Forms.TabPage showTransporterPage;
         private System.Windows.Forms.TabPage addTransporterPage;
         private System.Windows.Forms.TabPage updateTransporterPage;
         private System.Windows.Forms.TabPage deleteTransporterPage;
@@ -3167,6 +3349,19 @@
         private System.Windows.Forms.Label label80;
         private System.Windows.Forms.Label label81;
         private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.TabPage showTransporterPage;
+        private System.Windows.Forms.DataGridView transporterShowCountryDataGridView;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Button transporterShowFilterSelectButton;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.DataGridView transporterShowBankDetailsDataGridView;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.RichTextBox transporterShowCommentRichTextBox;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.DataGridView transporterShowContactsDataGridView;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.DataGridView transporterShowDataGridView;
+        private System.Windows.Forms.Button transporterShowAdditionalDetailsButton;
     }
 }
 
