@@ -40,10 +40,10 @@ namespace AtlantSovt
         ForwarderBankDetailsUpdateForm updateForwarderBankDetailsUpdateForm;
 
             //Transporter Forms
+
+            //Show 
         TransporterShowAdditionalDetailsForm transporterShowAdditionalDetailsForm;
         TransporterShowFiltrationForm transporterShowFiltrationForm;
-            //Transporter Forms
-
             //Countries and Vehicles
         TransporterCountryAndVehicleSelectForm transporterCountryAndVehicleSelectForm;
             //Contact
@@ -1093,6 +1093,7 @@ namespace AtlantSovt
             }
         }
             #endregion
+
 
             #region Update
             #endregion
