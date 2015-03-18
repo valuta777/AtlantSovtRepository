@@ -6,17 +6,17 @@ namespace AtlantSovt.AtlantSovtDb
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("TransporterCountry")]
-    public partial class TransporterCountry
+    [Table("TransporterVehicle")]
+    public partial class TransporterVehicle
     {
         public long Id { get; set; }
 
-        public long? TransporterId { get; set; }
+        public long TransporterId { get; set; }
 
-        public long? CountryId { get; set; }
-
-        public virtual Country Country { get; set; }
+        public long TransportVehicleId { get; set; }
 
         public virtual Transporter Transporter { get; set; }
+
+        public virtual Vehicle Vehicle { get; set; }
     }
 }

@@ -46,7 +46,6 @@
             this.deleteForwarderStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.dataControl = new System.Windows.Forms.TabControl();
             this.helloPage = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.showClientPage = new System.Windows.Forms.TabPage();
             this.label29 = new System.Windows.Forms.Label();
             this.clientBankDetailsDataGridView = new System.Windows.Forms.DataGridView();
@@ -85,8 +84,6 @@
             this.physicalAddressClientLabel = new System.Windows.Forms.Label();
             this.directorClientLabel = new System.Windows.Forms.Label();
             this.nameClientLabel = new System.Windows.Forms.Label();
-            this.addTaxPayerStatusClientButton = new System.Windows.Forms.Button();
-            this.addWorkDocumentClientButton = new System.Windows.Forms.Button();
             this.updateClientPage = new System.Windows.Forms.TabPage();
             this.clientUpdateContactDeleteButton = new System.Windows.Forms.Button();
             this.clientUpdateBankDetailsDeleteButton = new System.Windows.Forms.Button();
@@ -124,8 +121,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.clientUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
-            this.clientUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
             this.deleteClientPage = new System.Windows.Forms.TabPage();
             this.deleteClientButton = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
@@ -164,8 +159,6 @@
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
-            this.addTaxPayerStatusForwarderButton = new System.Windows.Forms.Button();
-            this.addWorkDocumentForwarderButton = new System.Windows.Forms.Button();
             this.updateForwarderPage = new System.Windows.Forms.TabPage();
             this.forwarderUpdateContactDeleteButton = new System.Windows.Forms.Button();
             this.forwarderUpdateBankDetailsDeleteButton = new System.Windows.Forms.Button();
@@ -197,20 +190,38 @@
             this.label63 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
-            this.forwarderUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
-            this.forwarderUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
             this.deleteForwarderPage = new System.Windows.Forms.TabPage();
             this.forwarderDeleteButton = new System.Windows.Forms.Button();
             this.label42 = new System.Windows.Forms.Label();
             this.forwarderDeleteComboBox = new System.Windows.Forms.ComboBox();
             this.showTransporterPage = new System.Windows.Forms.TabPage();
+            this.transporterShowAdditionalDetailsButton = new System.Windows.Forms.Button();
+            this.transporterShowCountryDataGridView = new System.Windows.Forms.DataGridView();
+            this.label69 = new System.Windows.Forms.Label();
+            this.transporterShowFilterSelectButton = new System.Windows.Forms.Button();
+            this.label57 = new System.Windows.Forms.Label();
+            this.transporterShowBankDetailsDataGridView = new System.Windows.Forms.DataGridView();
+            this.label58 = new System.Windows.Forms.Label();
+            this.transporterShowCommentRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.label67 = new System.Windows.Forms.Label();
+            this.transporterShowContactsDataGridView = new System.Windows.Forms.DataGridView();
+            this.label68 = new System.Windows.Forms.Label();
+            this.transporterShowDataGridView = new System.Windows.Forms.DataGridView();
             this.addTransporterPage = new System.Windows.Forms.TabPage();
             this.updateTransporterPage = new System.Windows.Forms.TabPage();
             this.deleteTransporterPage = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.addTaxPayerStatusClientButton = new System.Windows.Forms.Button();
+            this.addWorkDocumentClientButton = new System.Windows.Forms.Button();
+            this.clientUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
+            this.clientUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
+            this.addTaxPayerStatusForwarderButton = new System.Windows.Forms.Button();
+            this.addWorkDocumentForwarderButton = new System.Windows.Forms.Button();
+            this.forwarderUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
+            this.forwarderUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.dataControl.SuspendLayout();
             this.helloPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.showClientPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBankDetailsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientContactsDataGridView)).BeginInit();
@@ -225,6 +236,12 @@
             this.addForwarderPage.SuspendLayout();
             this.updateForwarderPage.SuspendLayout();
             this.deleteForwarderPage.SuspendLayout();
+            this.showTransporterPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowCountryDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowBankDetailsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowContactsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -292,30 +309,29 @@
             // showTransporterStrip
             // 
             this.showTransporterStrip.Name = "showTransporterStrip";
-            this.showTransporterStrip.Size = new System.Drawing.Size(152, 22);
+            this.showTransporterStrip.Size = new System.Drawing.Size(145, 22);
             this.showTransporterStrip.Text = "Переглянути";
             this.showTransporterStrip.Click += new System.EventHandler(this.showTransporterStrip_Click);
             // 
             // addTransporterStrip
             // 
             this.addTransporterStrip.Name = "addTransporterStrip";
-            this.addTransporterStrip.Size = new System.Drawing.Size(152, 22);
+            this.addTransporterStrip.Size = new System.Drawing.Size(145, 22);
             this.addTransporterStrip.Text = "Додати";
             this.addTransporterStrip.Click += new System.EventHandler(this.addTransporterStrip_Click);
             // 
             // updateTransporterStrip
             // 
             this.updateTransporterStrip.Name = "updateTransporterStrip";
-            this.updateTransporterStrip.Size = new System.Drawing.Size(152, 22);
+            this.updateTransporterStrip.Size = new System.Drawing.Size(145, 22);
             this.updateTransporterStrip.Text = "Змінити";
             this.updateTransporterStrip.Click += new System.EventHandler(this.updateTransporterStrip_Click);
             // 
             // deleteTransporterStrip
             // 
             this.deleteTransporterStrip.Name = "deleteTransporterStrip";
-            this.deleteTransporterStrip.Size = new System.Drawing.Size(152, 22);
+            this.deleteTransporterStrip.Size = new System.Drawing.Size(145, 22);
             this.deleteTransporterStrip.Text = "Видалити";
-            this.deleteTransporterStrip.Click += new System.EventHandler(this.deleteTransporterStrip_Click);
             // 
             // forwarderToolStripMenuItem
             // 
@@ -389,17 +405,6 @@
             this.helloPage.Size = new System.Drawing.Size(776, 511);
             this.helloPage.TabIndex = 4;
             this.helloPage.Text = "Hello";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::AtlantSovt.Properties.Resources.demologo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 511);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // showClientPage
             // 
@@ -876,28 +881,6 @@
             this.nameClientLabel.TabIndex = 1;
             this.nameClientLabel.Text = "Назва";
             // 
-            // addTaxPayerStatusClientButton
-            // 
-            this.addTaxPayerStatusClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addTaxPayerStatusClientButton.Image = global::AtlantSovt.Properties.Resources.add;
-            this.addTaxPayerStatusClientButton.Location = new System.Drawing.Point(738, 89);
-            this.addTaxPayerStatusClientButton.Name = "addTaxPayerStatusClientButton";
-            this.addTaxPayerStatusClientButton.Size = new System.Drawing.Size(30, 30);
-            this.addTaxPayerStatusClientButton.TabIndex = 19;
-            this.addTaxPayerStatusClientButton.UseVisualStyleBackColor = true;
-            this.addTaxPayerStatusClientButton.Click += new System.EventHandler(this.addTaxPayerStatusClientButton_Click);
-            // 
-            // addWorkDocumentClientButton
-            // 
-            this.addWorkDocumentClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addWorkDocumentClientButton.Image = global::AtlantSovt.Properties.Resources.add;
-            this.addWorkDocumentClientButton.Location = new System.Drawing.Point(736, 27);
-            this.addWorkDocumentClientButton.Name = "addWorkDocumentClientButton";
-            this.addWorkDocumentClientButton.Size = new System.Drawing.Size(30, 30);
-            this.addWorkDocumentClientButton.TabIndex = 18;
-            this.addWorkDocumentClientButton.UseVisualStyleBackColor = true;
-            this.addWorkDocumentClientButton.Click += new System.EventHandler(this.addWorkDocumentClientButton_Click);
-            // 
             // updateClientPage
             // 
             this.updateClientPage.Controls.Add(this.clientUpdateContactDeleteButton);
@@ -1361,28 +1344,6 @@
             this.label26.Size = new System.Drawing.Size(54, 21);
             this.label26.TabIndex = 32;
             this.label26.Text = "Назва";
-            // 
-            // clientUpdateTaxPayerStatusAddButton
-            // 
-            this.clientUpdateTaxPayerStatusAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientUpdateTaxPayerStatusAddButton.Image = global::AtlantSovt.Properties.Resources.add;
-            this.clientUpdateTaxPayerStatusAddButton.Location = new System.Drawing.Point(738, 139);
-            this.clientUpdateTaxPayerStatusAddButton.Name = "clientUpdateTaxPayerStatusAddButton";
-            this.clientUpdateTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
-            this.clientUpdateTaxPayerStatusAddButton.TabIndex = 49;
-            this.clientUpdateTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
-            this.clientUpdateTaxPayerStatusAddButton.Click += new System.EventHandler(this.clientUpdateTaxPayerStatusAddButton_Click);
-            // 
-            // clientUpdateWorkDocumentAddButton
-            // 
-            this.clientUpdateWorkDocumentAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientUpdateWorkDocumentAddButton.Image = global::AtlantSovt.Properties.Resources.add;
-            this.clientUpdateWorkDocumentAddButton.Location = new System.Drawing.Point(736, 77);
-            this.clientUpdateWorkDocumentAddButton.Name = "clientUpdateWorkDocumentAddButton";
-            this.clientUpdateWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
-            this.clientUpdateWorkDocumentAddButton.TabIndex = 48;
-            this.clientUpdateWorkDocumentAddButton.UseVisualStyleBackColor = true;
-            this.clientUpdateWorkDocumentAddButton.Click += new System.EventHandler(this.clientUpdateWorkDocumentAddButton_Click);
             // 
             // deleteClientPage
             // 
@@ -1868,28 +1829,6 @@
             this.label50.TabIndex = 32;
             this.label50.Text = "Назва";
             // 
-            // addTaxPayerStatusForwarderButton
-            // 
-            this.addTaxPayerStatusForwarderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addTaxPayerStatusForwarderButton.Image = global::AtlantSovt.Properties.Resources.add;
-            this.addTaxPayerStatusForwarderButton.Location = new System.Drawing.Point(738, 94);
-            this.addTaxPayerStatusForwarderButton.Name = "addTaxPayerStatusForwarderButton";
-            this.addTaxPayerStatusForwarderButton.Size = new System.Drawing.Size(30, 30);
-            this.addTaxPayerStatusForwarderButton.TabIndex = 48;
-            this.addTaxPayerStatusForwarderButton.UseVisualStyleBackColor = true;
-            this.addTaxPayerStatusForwarderButton.Click += new System.EventHandler(this.addTaxPayerStatusForwarderButton_Click);
-            // 
-            // addWorkDocumentForwarderButton
-            // 
-            this.addWorkDocumentForwarderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addWorkDocumentForwarderButton.Image = global::AtlantSovt.Properties.Resources.add;
-            this.addWorkDocumentForwarderButton.Location = new System.Drawing.Point(736, 32);
-            this.addWorkDocumentForwarderButton.Name = "addWorkDocumentForwarderButton";
-            this.addWorkDocumentForwarderButton.Size = new System.Drawing.Size(30, 30);
-            this.addWorkDocumentForwarderButton.TabIndex = 47;
-            this.addWorkDocumentForwarderButton.UseVisualStyleBackColor = true;
-            this.addWorkDocumentForwarderButton.Click += new System.EventHandler(this.addWorkDocumentForwarderButton_Click);
-            // 
             // updateForwarderPage
             // 
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateContactDeleteButton);
@@ -2289,28 +2228,6 @@
             this.label65.TabIndex = 66;
             this.label65.Text = "Назва";
             // 
-            // forwarderUpdateTaxPayerStatusAddButton
-            // 
-            this.forwarderUpdateTaxPayerStatusAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.forwarderUpdateTaxPayerStatusAddButton.Image = global::AtlantSovt.Properties.Resources.add;
-            this.forwarderUpdateTaxPayerStatusAddButton.Location = new System.Drawing.Point(738, 139);
-            this.forwarderUpdateTaxPayerStatusAddButton.Name = "forwarderUpdateTaxPayerStatusAddButton";
-            this.forwarderUpdateTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
-            this.forwarderUpdateTaxPayerStatusAddButton.TabIndex = 81;
-            this.forwarderUpdateTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
-            this.forwarderUpdateTaxPayerStatusAddButton.Click += new System.EventHandler(this.forwarderUpdateTaxPayerStatusAddButton_Click);
-            // 
-            // forwarderUpdateWorkDocumentAddButton
-            // 
-            this.forwarderUpdateWorkDocumentAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.forwarderUpdateWorkDocumentAddButton.Image = global::AtlantSovt.Properties.Resources.add;
-            this.forwarderUpdateWorkDocumentAddButton.Location = new System.Drawing.Point(736, 77);
-            this.forwarderUpdateWorkDocumentAddButton.Name = "forwarderUpdateWorkDocumentAddButton";
-            this.forwarderUpdateWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
-            this.forwarderUpdateWorkDocumentAddButton.TabIndex = 80;
-            this.forwarderUpdateWorkDocumentAddButton.UseVisualStyleBackColor = true;
-            this.forwarderUpdateWorkDocumentAddButton.Click += new System.EventHandler(this.forwarderUpdateWorkDocumentAddButton_Click);
-            // 
             // deleteForwarderPage
             // 
             this.deleteForwarderPage.Controls.Add(this.forwarderDeleteButton);
@@ -2367,12 +2284,172 @@
             // 
             // showTransporterPage
             // 
+            this.showTransporterPage.Controls.Add(this.transporterShowAdditionalDetailsButton);
+            this.showTransporterPage.Controls.Add(this.transporterShowCountryDataGridView);
+            this.showTransporterPage.Controls.Add(this.label69);
+            this.showTransporterPage.Controls.Add(this.transporterShowFilterSelectButton);
+            this.showTransporterPage.Controls.Add(this.label57);
+            this.showTransporterPage.Controls.Add(this.transporterShowBankDetailsDataGridView);
+            this.showTransporterPage.Controls.Add(this.label58);
+            this.showTransporterPage.Controls.Add(this.transporterShowCommentRichTextBox);
+            this.showTransporterPage.Controls.Add(this.label67);
+            this.showTransporterPage.Controls.Add(this.transporterShowContactsDataGridView);
+            this.showTransporterPage.Controls.Add(this.label68);
+            this.showTransporterPage.Controls.Add(this.transporterShowDataGridView);
             this.showTransporterPage.Location = new System.Drawing.Point(4, 22);
             this.showTransporterPage.Name = "showTransporterPage";
             this.showTransporterPage.Size = new System.Drawing.Size(776, 511);
             this.showTransporterPage.TabIndex = 9;
             this.showTransporterPage.Text = "showTransporterPage";
             this.showTransporterPage.UseVisualStyleBackColor = true;
+            // 
+            // transporterShowAdditionalDetailsButton
+            // 
+            this.transporterShowAdditionalDetailsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowAdditionalDetailsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterShowAdditionalDetailsButton.Location = new System.Drawing.Point(197, 455);
+            this.transporterShowAdditionalDetailsButton.Name = "transporterShowAdditionalDetailsButton";
+            this.transporterShowAdditionalDetailsButton.Size = new System.Drawing.Size(285, 50);
+            this.transporterShowAdditionalDetailsButton.TabIndex = 38;
+            this.transporterShowAdditionalDetailsButton.Text = "Додаткові параметри";
+            this.transporterShowAdditionalDetailsButton.UseVisualStyleBackColor = true;
+            this.transporterShowAdditionalDetailsButton.Click += new System.EventHandler(this.transporterShowAdditionalDetailsButton_Click);
+            // 
+            // transporterShowCountryDataGridView
+            // 
+            this.transporterShowCountryDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowCountryDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.transporterShowCountryDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.transporterShowCountryDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.transporterShowCountryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.transporterShowCountryDataGridView.Location = new System.Drawing.Point(586, 24);
+            this.transporterShowCountryDataGridView.Name = "transporterShowCountryDataGridView";
+            this.transporterShowCountryDataGridView.Size = new System.Drawing.Size(190, 160);
+            this.transporterShowCountryDataGridView.TabIndex = 37;
+            // 
+            // label69
+            // 
+            this.label69.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label69.Location = new System.Drawing.Point(585, 2);
+            this.label69.Name = "label69";
+            this.label69.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label69.Size = new System.Drawing.Size(61, 21);
+            this.label69.TabIndex = 36;
+            this.label69.Text = "Країни";
+            // 
+            // transporterShowFilterSelectButton
+            // 
+            this.transporterShowFilterSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowFilterSelectButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterShowFilterSelectButton.Location = new System.Drawing.Point(488, 455);
+            this.transporterShowFilterSelectButton.Name = "transporterShowFilterSelectButton";
+            this.transporterShowFilterSelectButton.Size = new System.Drawing.Size(285, 50);
+            this.transporterShowFilterSelectButton.TabIndex = 33;
+            this.transporterShowFilterSelectButton.Text = "Фільтрація";
+            this.transporterShowFilterSelectButton.UseVisualStyleBackColor = true;
+            this.transporterShowFilterSelectButton.Click += new System.EventHandler(this.transporterShowFilterSelectButton_Click);
+            // 
+            // label57
+            // 
+            this.label57.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label57.Location = new System.Drawing.Point(2, 186);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(164, 21);
+            this.label57.TabIndex = 24;
+            this.label57.Text = "Банківські реквізити";
+            // 
+            // transporterShowBankDetailsDataGridView
+            // 
+            this.transporterShowBankDetailsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowBankDetailsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.transporterShowBankDetailsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.transporterShowBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.transporterShowBankDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.transporterShowBankDetailsDataGridView.Location = new System.Drawing.Point(0, 210);
+            this.transporterShowBankDetailsDataGridView.Name = "transporterShowBankDetailsDataGridView";
+            this.transporterShowBankDetailsDataGridView.Size = new System.Drawing.Size(780, 55);
+            this.transporterShowBankDetailsDataGridView.TabIndex = 23;
+            // 
+            // label58
+            // 
+            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label58.Location = new System.Drawing.Point(5, 373);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(81, 21);
+            this.label58.TabIndex = 22;
+            this.label58.Text = "Примітка";
+            // 
+            // transporterShowCommentRichTextBox
+            // 
+            this.transporterShowCommentRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowCommentRichTextBox.Location = new System.Drawing.Point(-5, 395);
+            this.transporterShowCommentRichTextBox.Name = "transporterShowCommentRichTextBox";
+            this.transporterShowCommentRichTextBox.ReadOnly = true;
+            this.transporterShowCommentRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.transporterShowCommentRichTextBox.Size = new System.Drawing.Size(785, 54);
+            this.transporterShowCommentRichTextBox.TabIndex = 21;
+            this.transporterShowCommentRichTextBox.Text = "";
+            // 
+            // label67
+            // 
+            this.label67.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label67.Location = new System.Drawing.Point(2, 267);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(79, 21);
+            this.label67.TabIndex = 20;
+            this.label67.Text = "Контакти";
+            // 
+            // transporterShowContactsDataGridView
+            // 
+            this.transporterShowContactsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowContactsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.transporterShowContactsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.transporterShowContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.transporterShowContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.transporterShowContactsDataGridView.Location = new System.Drawing.Point(0, 289);
+            this.transporterShowContactsDataGridView.Name = "transporterShowContactsDataGridView";
+            this.transporterShowContactsDataGridView.Size = new System.Drawing.Size(776, 81);
+            this.transporterShowContactsDataGridView.TabIndex = 19;
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label68.Location = new System.Drawing.Point(4, 2);
+            this.label68.Name = "label68";
+            this.label68.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label68.Size = new System.Drawing.Size(107, 21);
+            this.label68.TabIndex = 18;
+            this.label68.Text = "Перевізники";
+            // 
+            // transporterShowDataGridView
+            // 
+            this.transporterShowDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.transporterShowDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.transporterShowDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.transporterShowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.transporterShowDataGridView.Location = new System.Drawing.Point(0, 24);
+            this.transporterShowDataGridView.Name = "transporterShowDataGridView";
+            this.transporterShowDataGridView.Size = new System.Drawing.Size(579, 160);
+            this.transporterShowDataGridView.TabIndex = 17;
+            this.transporterShowDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.transporterShowDataGridView_CellMouseClick);
             // 
             // addTransporterPage
             // 
@@ -2401,6 +2478,105 @@
             this.deleteTransporterPage.Text = "deleteTransporterPage";
             this.deleteTransporterPage.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::AtlantSovt.Properties.Resources.demologo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(776, 511);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // addTaxPayerStatusClientButton
+            // 
+            this.addTaxPayerStatusClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addTaxPayerStatusClientButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.addTaxPayerStatusClientButton.Location = new System.Drawing.Point(738, 89);
+            this.addTaxPayerStatusClientButton.Name = "addTaxPayerStatusClientButton";
+            this.addTaxPayerStatusClientButton.Size = new System.Drawing.Size(30, 30);
+            this.addTaxPayerStatusClientButton.TabIndex = 19;
+            this.addTaxPayerStatusClientButton.UseVisualStyleBackColor = true;
+            this.addTaxPayerStatusClientButton.Click += new System.EventHandler(this.addTaxPayerStatusClientButton_Click);
+            // 
+            // addWorkDocumentClientButton
+            // 
+            this.addWorkDocumentClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addWorkDocumentClientButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.addWorkDocumentClientButton.Location = new System.Drawing.Point(736, 27);
+            this.addWorkDocumentClientButton.Name = "addWorkDocumentClientButton";
+            this.addWorkDocumentClientButton.Size = new System.Drawing.Size(30, 30);
+            this.addWorkDocumentClientButton.TabIndex = 18;
+            this.addWorkDocumentClientButton.UseVisualStyleBackColor = true;
+            this.addWorkDocumentClientButton.Click += new System.EventHandler(this.addWorkDocumentClientButton_Click);
+            // 
+            // clientUpdateTaxPayerStatusAddButton
+            // 
+            this.clientUpdateTaxPayerStatusAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientUpdateTaxPayerStatusAddButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.clientUpdateTaxPayerStatusAddButton.Location = new System.Drawing.Point(738, 139);
+            this.clientUpdateTaxPayerStatusAddButton.Name = "clientUpdateTaxPayerStatusAddButton";
+            this.clientUpdateTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
+            this.clientUpdateTaxPayerStatusAddButton.TabIndex = 49;
+            this.clientUpdateTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
+            this.clientUpdateTaxPayerStatusAddButton.Click += new System.EventHandler(this.clientUpdateTaxPayerStatusAddButton_Click);
+            // 
+            // clientUpdateWorkDocumentAddButton
+            // 
+            this.clientUpdateWorkDocumentAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientUpdateWorkDocumentAddButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.clientUpdateWorkDocumentAddButton.Location = new System.Drawing.Point(736, 77);
+            this.clientUpdateWorkDocumentAddButton.Name = "clientUpdateWorkDocumentAddButton";
+            this.clientUpdateWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
+            this.clientUpdateWorkDocumentAddButton.TabIndex = 48;
+            this.clientUpdateWorkDocumentAddButton.UseVisualStyleBackColor = true;
+            this.clientUpdateWorkDocumentAddButton.Click += new System.EventHandler(this.clientUpdateWorkDocumentAddButton_Click);
+            // 
+            // addTaxPayerStatusForwarderButton
+            // 
+            this.addTaxPayerStatusForwarderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addTaxPayerStatusForwarderButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.addTaxPayerStatusForwarderButton.Location = new System.Drawing.Point(738, 94);
+            this.addTaxPayerStatusForwarderButton.Name = "addTaxPayerStatusForwarderButton";
+            this.addTaxPayerStatusForwarderButton.Size = new System.Drawing.Size(30, 30);
+            this.addTaxPayerStatusForwarderButton.TabIndex = 48;
+            this.addTaxPayerStatusForwarderButton.UseVisualStyleBackColor = true;
+            this.addTaxPayerStatusForwarderButton.Click += new System.EventHandler(this.addTaxPayerStatusForwarderButton_Click);
+            // 
+            // addWorkDocumentForwarderButton
+            // 
+            this.addWorkDocumentForwarderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addWorkDocumentForwarderButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.addWorkDocumentForwarderButton.Location = new System.Drawing.Point(736, 32);
+            this.addWorkDocumentForwarderButton.Name = "addWorkDocumentForwarderButton";
+            this.addWorkDocumentForwarderButton.Size = new System.Drawing.Size(30, 30);
+            this.addWorkDocumentForwarderButton.TabIndex = 47;
+            this.addWorkDocumentForwarderButton.UseVisualStyleBackColor = true;
+            this.addWorkDocumentForwarderButton.Click += new System.EventHandler(this.addWorkDocumentForwarderButton_Click);
+            // 
+            // forwarderUpdateTaxPayerStatusAddButton
+            // 
+            this.forwarderUpdateTaxPayerStatusAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderUpdateTaxPayerStatusAddButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.forwarderUpdateTaxPayerStatusAddButton.Location = new System.Drawing.Point(738, 139);
+            this.forwarderUpdateTaxPayerStatusAddButton.Name = "forwarderUpdateTaxPayerStatusAddButton";
+            this.forwarderUpdateTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
+            this.forwarderUpdateTaxPayerStatusAddButton.TabIndex = 81;
+            this.forwarderUpdateTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateTaxPayerStatusAddButton.Click += new System.EventHandler(this.forwarderUpdateTaxPayerStatusAddButton_Click);
+            // 
+            // forwarderUpdateWorkDocumentAddButton
+            // 
+            this.forwarderUpdateWorkDocumentAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderUpdateWorkDocumentAddButton.Image = global::AtlantSovt.Properties.Resources.add;
+            this.forwarderUpdateWorkDocumentAddButton.Location = new System.Drawing.Point(736, 77);
+            this.forwarderUpdateWorkDocumentAddButton.Name = "forwarderUpdateWorkDocumentAddButton";
+            this.forwarderUpdateWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
+            this.forwarderUpdateWorkDocumentAddButton.TabIndex = 80;
+            this.forwarderUpdateWorkDocumentAddButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateWorkDocumentAddButton.Click += new System.EventHandler(this.forwarderUpdateWorkDocumentAddButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2419,7 +2595,6 @@
             this.menuStrip.PerformLayout();
             this.dataControl.ResumeLayout(false);
             this.helloPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.showClientPage.ResumeLayout(false);
             this.showClientPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBankDetailsDataGridView)).EndInit();
@@ -2442,6 +2617,13 @@
             this.updateForwarderPage.PerformLayout();
             this.deleteForwarderPage.ResumeLayout(false);
             this.deleteForwarderPage.PerformLayout();
+            this.showTransporterPage.ResumeLayout(false);
+            this.showTransporterPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowCountryDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowBankDetailsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowContactsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2645,10 +2827,22 @@
         private System.Windows.Forms.Button forwarderDeleteButton;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.ComboBox forwarderDeleteComboBox;
-        private System.Windows.Forms.TabPage showTransporterPage;
         private System.Windows.Forms.TabPage addTransporterPage;
         private System.Windows.Forms.TabPage updateTransporterPage;
         private System.Windows.Forms.TabPage deleteTransporterPage;
+        private System.Windows.Forms.TabPage showTransporterPage;
+        private System.Windows.Forms.DataGridView transporterShowCountryDataGridView;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Button transporterShowFilterSelectButton;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.DataGridView transporterShowBankDetailsDataGridView;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.RichTextBox transporterShowCommentRichTextBox;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.DataGridView transporterShowContactsDataGridView;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.DataGridView transporterShowDataGridView;
+        private System.Windows.Forms.Button transporterShowAdditionalDetailsButton;
     }
 }
 

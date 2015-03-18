@@ -13,9 +13,9 @@ namespace AtlantSovt.AtlantSovtDb
         {
             CustomsAddresses = new HashSet<CustomsAddress>();
             DownloadAddresses = new HashSet<DownloadAddress>();
-            TransporterCountries = new HashSet<TransporterCountry>();
             UnCustomsAddresses = new HashSet<UnCustomsAddress>();
             UploadAddresses = new HashSet<UploadAddress>();
+            Transporters = new HashSet<Transporter>();
         }
 
         public long Id { get; set; }
@@ -27,10 +27,10 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual ICollection<DownloadAddress> DownloadAddresses { get; set; }
 
-        public virtual ICollection<TransporterCountry> TransporterCountries { get; set; }
-
         public virtual ICollection<UnCustomsAddress> UnCustomsAddresses { get; set; }
 
         public virtual ICollection<UploadAddress> UploadAddresses { get; set; }
+
+        public virtual ICollection<Transporter> Transporters { get; set; }
     }
 }
