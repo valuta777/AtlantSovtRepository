@@ -15,7 +15,11 @@ namespace AtlantSovt
     {
 
         int TransporterClikedId = 0;
+        WorkDocument transporterWorkDocument;
+        TaxPayerStatu transporterTaxPayerStatus;
+        bool transporterAddWorkDocumentFlag, transporterAddTaxPayerStatusFlag;
 
+        //Show
         #region Show
         void ShowTransporter()
         {
@@ -297,28 +301,6 @@ namespace AtlantSovt
         }
 
         #endregion
-
-
-
-    }
-}
-using AtlantSovt.AtlantSovtDb;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace AtlantSovt
-{
-    partial class MainForm
-    {        
-        WorkDocument transporterWorkDocument;
-        TaxPayerStatu transporterTaxPayerStatus;
-        bool transporterAddWorkDocumentFlag, transporterAddTaxPayerStatusFlag;
-
 
         //Add
         #region Add
