@@ -45,6 +45,18 @@ namespace AtlantSovt
                     transporterShowAdditionalDetailsGridView.Columns[4].HeaderText = "AD";
                     transporterShowAdditionalDetailsGridView.Columns[5].HeaderText = "Чи є експедитором?";
 
+
+                    var query1 =
+                    from v in db.TransporterVehicles
+                    where v.TransporterId == ClikedId
+                    select new
+                    {
+                        Type = v.Vehicle.Type,
+
+                    };
+                    transporterShowVehicleAdditionalDetailsGridView.DataSource = query1.ToList();
+                    transporterShowVehicleAdditionalDetailsGridView.Columns[0].HeaderText = "Тип транспорту";
+
                 }
                 catch (Exception ex)
                 {

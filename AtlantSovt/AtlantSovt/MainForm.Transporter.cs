@@ -106,9 +106,9 @@ namespace AtlantSovt
                     transporterShowBankDetailsDataGridView.Columns[6].HeaderText = "SWIFT";
                     transporterShowBankDetailsDataGridView.Columns[7].HeaderText = "IBAN";
 
-                    var query3 =
+                   var query3 =
                    from tc in db.TransporterCountries
-                   where tc.Id == TransporterClikedId
+                   where tc.TransporterId == TransporterClikedId
                    select new
                    {
                        country = tc.Country.Name
@@ -134,52 +134,171 @@ namespace AtlantSovt
 
         public void ShowTransporterFilter()
         {
-           
+            List<long> countriesIDs = new List<long>();
+            List<long> vehiclesIDs = new List<long>();
 
-        //    if(transporterShowFiltrationForm != null)
-        //    {
-                List<long> countriesIDs = new List<long> { 1, 2, 3 };
+            countriesIDs = transporterShowFiltrationForm.GetCountries();
+            vehiclesIDs = transporterShowFiltrationForm.GetVehicle();
 
-                using (var db = new AtlantSovtContext())
+            if (transporterShowFiltrationForm != null)
+            {
+               
+                if (countriesIDs.Count != 0 && vehiclesIDs.Count == 0)
                 {
-                    var getTransporters =
-                    from t in db.Transporters
-                    where
-                    (
-                        from c in t.TransporterCountries
-                        where countriesIDs.Contains(c.Country.Id)
-                        select c
-                    ).Count() == countriesIDs.Count
-                    select
-                new
+                    using (var db = new AtlantSovtContext())
+                    {
+                        var getTransporters =
+                        from t in db.Transporters
+                        where
+                        (
+                            from c in t.TransporterCountries
+                            where countriesIDs.Contains(c.Country.Id)
+                            select c
+                        ).Count() == countriesIDs.Count
+                        select
+                    new
+                    {
+                        Id = t.Id,
+                        FullName = t.FullName,
+                        ShortName = t.ShortName,
+                        Director = t.Director,
+                        PhysicalAddress = t.PhysicalAddress,
+                        GeographyAddress = t.GeographyAddress,
+                        TaxPayerStatusId = t.TaxPayerStatu.Status,
+                        WorkDocumentId = t.WorkDocument.Status,
+                        Date = t.ContractEndDay
+                    };
+
+                        transporterShowDataGridView.DataSource = getTransporters.ToList();
+                        transporterShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
+                        transporterShowDataGridView.Columns[1].HeaderText = "Повна Назва";
+                        transporterShowDataGridView.Columns[2].HeaderText = "Скорочена Назва";
+                        transporterShowDataGridView.Columns[3].HeaderText = "П.І.Б. Директора";
+                        transporterShowDataGridView.Columns[4].HeaderText = "Фізична адреса";
+                        transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
+                        transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
+                        transporterShowDataGridView.Columns[7].HeaderText = "На основі";
+                        transporterShowDataGridView.Columns[8].HeaderText = "Дата завершення договору";
+
+                    } transporterShowDataGridView.Update();
+
+                }
+
+            }
+
+            if (transporterShowFiltrationForm != null)
+            {
+
+                if (countriesIDs.Count == 0 && vehiclesIDs.Count != 0)
                 {
-                    Id = t.Id,
-                    FullName = t.FullName,
-                    ShortName = t.ShortName,
-                    Director = t.Director,
-                    PhysicalAddress = t.PhysicalAddress,
-                    GeographyAddress = t.GeographyAddress,
-                    TaxPayerStatusId = t.TaxPayerStatu.Status,
-                    WorkDocumentId = t.WorkDocument.Status,
-                    Date = t.ContractEndDay
-                };
 
-                    transporterShowDataGridView.DataSource = getTransporters.ToList();
-                    transporterShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    transporterShowDataGridView.Columns[1].HeaderText = "Повна Назва";
-                    transporterShowDataGridView.Columns[2].HeaderText = "Скорочена Назва";
-                    transporterShowDataGridView.Columns[3].HeaderText = "П.І.Б. Директора";
-                    transporterShowDataGridView.Columns[4].HeaderText = "Фізична адреса";
-                    transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
-                    transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
-                    transporterShowDataGridView.Columns[7].HeaderText = "На основі";
-                    transporterShowDataGridView.Columns[8].HeaderText = "Дата завершення договору";
+                    using (var db = new AtlantSovtContext())
+                    {
+                        var getTransporters =
+                        from t in db.Transporters
+                        where
+                        (
+                            from v in t.TransporterVehicles
+                            where vehiclesIDs.Contains(v.Vehicle.Id)
+                            select v
+                        ).Count() == vehiclesIDs.Count
+                        select
+                    new
+                    {
+                        Id = t.Id,
+                        FullName = t.FullName,
+                        ShortName = t.ShortName,
+                        Director = t.Director,
+                        PhysicalAddress = t.PhysicalAddress,
+                        GeographyAddress = t.GeographyAddress,
+                        TaxPayerStatusId = t.TaxPayerStatu.Status,
+                        WorkDocumentId = t.WorkDocument.Status,
+                        Date = t.ContractEndDay
+                    };
 
-                } transporterShowDataGridView.Update();
-         //   }
+                        transporterShowDataGridView.DataSource = getTransporters.ToList();
+                        transporterShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
+                        transporterShowDataGridView.Columns[1].HeaderText = "Повна Назва";
+                        transporterShowDataGridView.Columns[2].HeaderText = "Скорочена Назва";
+                        transporterShowDataGridView.Columns[3].HeaderText = "П.І.Б. Директора";
+                        transporterShowDataGridView.Columns[4].HeaderText = "Фізична адреса";
+                        transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
+                        transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
+                        transporterShowDataGridView.Columns[7].HeaderText = "На основі";
+                        transporterShowDataGridView.Columns[8].HeaderText = "Дата завершення договору";
+
+                    } transporterShowDataGridView.Update();
+                }
+            }
+
+
+            if (transporterShowFiltrationForm != null)
+            {
+
+                if (countriesIDs.Count != 0 && vehiclesIDs.Count != 0)
+                {
+
+                    using (var db = new AtlantSovtContext())
+                    {
+                        var getTransporters =
+                        from t in db.Transporters
+                        where
+                        (
+                            from v in t.TransporterVehicles
+                            where vehiclesIDs.Contains(v.Vehicle.Id)
+                            select v
+                        ).Count() == vehiclesIDs.Count
+                         &&
+                        (
+                            from c in t.TransporterCountries
+                            where countriesIDs.Contains(c.Country.Id)
+                            select c
+                        ).Count() == countriesIDs.Count
+                        select
+                    new
+                    {
+                        Id = t.Id,
+                        FullName = t.FullName,
+                        ShortName = t.ShortName,
+                        Director = t.Director,
+                        PhysicalAddress = t.PhysicalAddress,
+                        GeographyAddress = t.GeographyAddress,
+                        TaxPayerStatusId = t.TaxPayerStatu.Status,
+                        WorkDocumentId = t.WorkDocument.Status,
+                        Date = t.ContractEndDay
+                    };
+
+                        transporterShowDataGridView.DataSource = getTransporters.ToList();
+                        transporterShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
+                        transporterShowDataGridView.Columns[1].HeaderText = "Повна Назва";
+                        transporterShowDataGridView.Columns[2].HeaderText = "Скорочена Назва";
+                        transporterShowDataGridView.Columns[3].HeaderText = "П.І.Б. Директора";
+                        transporterShowDataGridView.Columns[4].HeaderText = "Фізична адреса";
+                        transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
+                        transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
+                        transporterShowDataGridView.Columns[7].HeaderText = "На основі";
+                        transporterShowDataGridView.Columns[8].HeaderText = "Дата завершення договору";
+
+                    } transporterShowDataGridView.Update();
+                }
+            }
+
+            if (transporterShowFiltrationForm != null)
+            {
+
+                if (countriesIDs.Count == 0 && vehiclesIDs.Count == 0)
+                {
+                    ShowTransporter();
+                }
+            }
+
+            countriesIDs.Clear();
+            vehiclesIDs.Clear();
         }
 
         #endregion
+
+
 
     }
 }
