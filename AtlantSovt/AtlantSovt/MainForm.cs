@@ -936,7 +936,8 @@ namespace AtlantSovt
             private void showTransporterStrip_Click(object sender, EventArgs e)
             {
                 dataControl.SelectedIndex = 9;
-                ShowTransporter();
+                //ShowTransporter();
+                ShowTransporterFilter();
                 transporterShowContactsDataGridView.Visible = false;
                 transporterShowBankDetailsDataGridView.Visible = false;
                 transporterShowCountryDataGridView.Visible = false;

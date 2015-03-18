@@ -32,6 +32,7 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<Transporter> Transporters { get; set; }
         public virtual DbSet<TransporterBankDetail> TransporterBankDetails { get; set; }
         public virtual DbSet<TransporterContact> TransporterContacts { get; set; }
+        public virtual DbSet<TransporterCountry> TransporterCountries { get; set; }
         public virtual DbSet<TransporterVehicle> TransporterVehicles { get; set; }
         public virtual DbSet<UnCustomsAddress> UnCustomsAddresses { get; set; }
         public virtual DbSet<UploadAddress> UploadAddresses { get; set; }
@@ -49,11 +50,6 @@ namespace AtlantSovt.AtlantSovtDb
                 .HasMany(e => e.ClientContacts)
                 .WithOptional(e => e.Client)
                 .WillCascadeOnDelete();
-
-            modelBuilder.Entity<Country>()
-                .HasMany(e => e.Transporters)
-                .WithMany(e => e.Countries)
-                .Map(m => m.ToTable("TransporterCountry").MapLeftKey("CountryId").MapRightKey("TransporterId"));
 
             modelBuilder.Entity<FineForDelay>()
                 .HasMany(e => e.Orders)

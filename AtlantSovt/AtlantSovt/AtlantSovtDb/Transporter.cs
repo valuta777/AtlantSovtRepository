@@ -13,8 +13,8 @@ namespace AtlantSovt.AtlantSovtDb
         {
             Orders = new HashSet<Order>();
             TransporterContacts = new HashSet<TransporterContact>();
+            TransporterCountries = new HashSet<TransporterCountry>();
             TransporterVehicles = new HashSet<TransporterVehicle>();
-            Countries = new HashSet<Country>();
         }
 
         public long Id { get; set; }
@@ -62,8 +62,8 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual ICollection<TransporterContact> TransporterContacts { get; set; }
 
-        public virtual ICollection<TransporterVehicle> TransporterVehicles { get; set; }
+        public virtual ICollection<TransporterCountry> TransporterCountries { get; set; }
 
-        public virtual ICollection<Country> Countries { get; set; }
+        public virtual ICollection<TransporterVehicle> TransporterVehicles { get; set; }
     }
 }

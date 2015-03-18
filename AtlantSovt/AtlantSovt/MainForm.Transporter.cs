@@ -108,10 +108,10 @@ namespace AtlantSovt
 
                     var query3 =
                    from tc in db.TransporterCountries
-                   where tc.TransporterId == TransporterClikedId
+                   where tc.Id == TransporterClikedId
                    select new
                    {
-                        country = tc.Country.Name
+                       country = tc.Country.Name
                    };
 
                     transporterShowCountryDataGridView.DataSource = query3.ToList();
@@ -132,35 +132,39 @@ namespace AtlantSovt
             transporterShowCountryDataGridView.Visible = true;
         }
 
-        void ShowTransporterFilter()
+        public void ShowTransporterFilter()
         {
+           
 
-            if(transporterShowFiltrationForm != null)
-            {
+        //    if(transporterShowFiltrationForm != null)
+        //    {
+                List<long> countriesIDs = new List<long> { 1, 2, 3 };
+
                 using (var db = new AtlantSovtContext())
                 {
-                    var getTransporters = 
-                        from t in db.Transporters
-                        select t;
-
-                    var query =
+                    var getTransporters =
                     from t in db.Transporters
-                    where t.Countries.Where(c => c.Id == transporterShowFiltrationForm.GetCountries().ToList())
+                    where
+                    (
+                        from c in t.TransporterCountries
+                        where countriesIDs.Contains(c.Country.Id)
+                        select c
+                    ).Count() == countriesIDs.Count
                     select
-                    new
-                    {
-                        Id = t.Id,
-                        FullName = t.FullName,
-                        ShortName = t.ShortName,
-                        Director = t.Director,
-                        PhysicalAddress = t.PhysicalAddress,
-                        GeographyAddress = t.GeographyAddress,
-                        TaxPayerStatusId = t.TaxPayerStatu.Status,
-                        WorkDocumentId = t.WorkDocument.Status,
-                        Date = t.ContractEndDay
-                    };
+                new
+                {
+                    Id = t.Id,
+                    FullName = t.FullName,
+                    ShortName = t.ShortName,
+                    Director = t.Director,
+                    PhysicalAddress = t.PhysicalAddress,
+                    GeographyAddress = t.GeographyAddress,
+                    TaxPayerStatusId = t.TaxPayerStatu.Status,
+                    WorkDocumentId = t.WorkDocument.Status,
+                    Date = t.ContractEndDay
+                };
 
-                    transporterShowDataGridView.DataSource = query.ToList();
+                    transporterShowDataGridView.DataSource = getTransporters.ToList();
                     transporterShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
                     transporterShowDataGridView.Columns[1].HeaderText = "Повна Назва";
                     transporterShowDataGridView.Columns[2].HeaderText = "Скорочена Назва";
@@ -172,7 +176,7 @@ namespace AtlantSovt
                     transporterShowDataGridView.Columns[8].HeaderText = "Дата завершення договору";
 
                 } transporterShowDataGridView.Update();
-            }
+         //   }
         }
 
         #endregion

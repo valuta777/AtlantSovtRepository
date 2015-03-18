@@ -74,6 +74,7 @@
     <Compile Include="AtlantSovtDb\Transporter.cs" />
     <Compile Include="AtlantSovtDb\TransporterBankDetail.cs" />
     <Compile Include="AtlantSovtDb\TransporterContact.cs" />
+    <Compile Include="AtlantSovtDb\TransporterCountry.cs" />
     <Compile Include="AtlantSovtDb\TransporterVehicle.cs" />
     <Compile Include="AtlantSovtDb\UnCustomsAddress.cs" />
     <Compile Include="AtlantSovtDb\UploadAddress.cs" />
@@ -269,6 +270,7 @@
   <ItemGroup>
     <None Include="Resources\demologo.gif" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
