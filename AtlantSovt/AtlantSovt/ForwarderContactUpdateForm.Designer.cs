@@ -41,12 +41,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // nameTransporterLabel
+            // nameForwarderLabel
             // 
             this.nameForwarderLabel.AutoSize = true;
             this.nameForwarderLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameForwarderLabel.Location = new System.Drawing.Point(12, 73);
-            this.nameForwarderLabel.Name = "nameTransporterLabel";
+            this.nameForwarderLabel.Name = "nameForwarderLabel";
             this.nameForwarderLabel.Size = new System.Drawing.Size(135, 21);
             this.nameForwarderLabel.TabIndex = 2;
             this.nameForwarderLabel.Text = "Контактна особа";
@@ -81,61 +81,61 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Email";
             // 
-            // contactPersonUpdateTransporterContactTextBox
+            // contactPersonUpdateForwarderContactTextBox
             // 
             this.contactPersonUpdateForwarderContactTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.contactPersonUpdateForwarderContactTextBox.Location = new System.Drawing.Point(11, 97);
-            this.contactPersonUpdateForwarderContactTextBox.Name = "contactPersonUpdateTransporterContactTextBox";
+            this.contactPersonUpdateForwarderContactTextBox.Name = "contactPersonUpdateForwarderContactTextBox";
             this.contactPersonUpdateForwarderContactTextBox.Size = new System.Drawing.Size(313, 29);
             this.contactPersonUpdateForwarderContactTextBox.TabIndex = 8;
             this.contactPersonUpdateForwarderContactTextBox.TextChanged += new System.EventHandler(this.contactPersonUpdateClientContactTextBox_TextChanged);
             // 
-            // telephoneNumberUpdateTransporterContactTextBox
+            // telephoneNumberUpdateForwarderContactTextBox
             // 
             this.telephoneNumberUpdateForwarderContactTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.telephoneNumberUpdateForwarderContactTextBox.Location = new System.Drawing.Point(11, 153);
-            this.telephoneNumberUpdateForwarderContactTextBox.Name = "telephoneNumberUpdateTransporterContactTextBox";
+            this.telephoneNumberUpdateForwarderContactTextBox.Name = "telephoneNumberUpdateForwarderContactTextBox";
             this.telephoneNumberUpdateForwarderContactTextBox.Size = new System.Drawing.Size(313, 29);
             this.telephoneNumberUpdateForwarderContactTextBox.TabIndex = 9;
             this.telephoneNumberUpdateForwarderContactTextBox.TextChanged += new System.EventHandler(this.telephoneNumberUpdateClientContactTextBox_TextChanged);
             // 
-            // faxNumberUpdateTransporterContactTextBox
+            // faxNumberUpdateForwarderContactTextBox
             // 
             this.faxNumberUpdateForwarderContactTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.faxNumberUpdateForwarderContactTextBox.Location = new System.Drawing.Point(11, 209);
-            this.faxNumberUpdateForwarderContactTextBox.Name = "faxNumberUpdateTransporterContactTextBox";
+            this.faxNumberUpdateForwarderContactTextBox.Name = "faxNumberUpdateForwarderContactTextBox";
             this.faxNumberUpdateForwarderContactTextBox.Size = new System.Drawing.Size(313, 29);
             this.faxNumberUpdateForwarderContactTextBox.TabIndex = 10;
             this.faxNumberUpdateForwarderContactTextBox.TextChanged += new System.EventHandler(this.faxNumberUpdateClientContactTextBox_TextChanged);
             // 
-            // emailUpdateTransporterContactTextBox
+            // emailUpdateForwarderContactTextBox
             // 
             this.emailUpdateForwarderContactTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.emailUpdateForwarderContactTextBox.Location = new System.Drawing.Point(11, 265);
-            this.emailUpdateForwarderContactTextBox.Name = "emailUpdateTransporterContactTextBox";
+            this.emailUpdateForwarderContactTextBox.Name = "emailUpdateForwarderContactTextBox";
             this.emailUpdateForwarderContactTextBox.Size = new System.Drawing.Size(313, 29);
             this.emailUpdateForwarderContactTextBox.TabIndex = 11;
             this.emailUpdateForwarderContactTextBox.TextChanged += new System.EventHandler(this.emailUpdateClientContactTextBox_TextChanged);
             // 
-            // updateTransporterContactButton
+            // updateForwarderContactButton
             // 
             this.updateForwarderContactButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.updateForwarderContactButton.Location = new System.Drawing.Point(11, 301);
-            this.updateForwarderContactButton.Name = "updateTransporterContactButton";
+            this.updateForwarderContactButton.Name = "updateForwarderContactButton";
             this.updateForwarderContactButton.Size = new System.Drawing.Size(313, 48);
             this.updateForwarderContactButton.TabIndex = 12;
             this.updateForwarderContactButton.Text = "Змінити контакт";
             this.updateForwarderContactButton.UseVisualStyleBackColor = true;
             this.updateForwarderContactButton.Click += new System.EventHandler(this.updateContactButton_Click);
             // 
-            // transporterUpdateContactSelectComboBox
+            // forwarderUpdateContactSelectComboBox
             // 
             this.forwarderUpdateContactSelectComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.forwarderUpdateContactSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.forwarderUpdateContactSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.forwarderUpdateContactSelectComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.forwarderUpdateContactSelectComboBox.Location = new System.Drawing.Point(11, 41);
-            this.forwarderUpdateContactSelectComboBox.Name = "transporterUpdateContactSelectComboBox";
+            this.forwarderUpdateContactSelectComboBox.Name = "forwarderUpdateContactSelectComboBox";
             this.forwarderUpdateContactSelectComboBox.Size = new System.Drawing.Size(313, 29);
             this.forwarderUpdateContactSelectComboBox.TabIndex = 43;
             this.forwarderUpdateContactSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.clientUpdateContactSelectComboBox_SelectedIndexChanged);

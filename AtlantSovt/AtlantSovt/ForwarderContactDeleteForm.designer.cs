@@ -43,7 +43,7 @@
             this.label27.TabIndex = 65;
             this.label27.Text = "Виберіть контакт";
             // 
-            // transporterUpdateSelectDeleteContactComboBox
+            // forwarderUpdateSelectDeleteContactComboBox
             // 
             this.forwarderUpdateSelectDeleteContactComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -51,20 +51,20 @@
             this.forwarderUpdateSelectDeleteContactComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.forwarderUpdateSelectDeleteContactComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.forwarderUpdateSelectDeleteContactComboBox.Location = new System.Drawing.Point(10, 33);
-            this.forwarderUpdateSelectDeleteContactComboBox.Name = "transporterUpdateSelectDeleteContactComboBox";
+            this.forwarderUpdateSelectDeleteContactComboBox.Name = "forwarderUpdateSelectDeleteContactComboBox";
             this.forwarderUpdateSelectDeleteContactComboBox.Size = new System.Drawing.Size(562, 29);
             this.forwarderUpdateSelectDeleteContactComboBox.Sorted = true;
             this.forwarderUpdateSelectDeleteContactComboBox.TabIndex = 64;
             this.forwarderUpdateSelectDeleteContactComboBox.SelectedIndexChanged += new System.EventHandler(this.ForwarderUpdateSelectDeleteContactComboBox_SelectedIndexChanged);
             this.forwarderUpdateSelectDeleteContactComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ForwarderUpdateSelectDeleteContactComboBox_MouseClick);
             // 
-            // transporterUpdateContactDeleteButton
+            // forwarderUpdateContactDeleteButton
             // 
             this.forwarderUpdateContactDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.forwarderUpdateContactDeleteButton.Enabled = false;
             this.forwarderUpdateContactDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.forwarderUpdateContactDeleteButton.Location = new System.Drawing.Point(161, 100);
-            this.forwarderUpdateContactDeleteButton.Name = "transporterUpdateContactDeleteButton";
+            this.forwarderUpdateContactDeleteButton.Name = "forwarderUpdateContactDeleteButton";
             this.forwarderUpdateContactDeleteButton.Size = new System.Drawing.Size(237, 30);
             this.forwarderUpdateContactDeleteButton.TabIndex = 66;
             this.forwarderUpdateContactDeleteButton.Text = "Видалити контакт";

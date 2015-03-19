@@ -444,11 +444,6 @@ namespace AtlantSovt
         }
         #endregion
 
-        //Update
-        #region Update
-
-
-        #endregion
-
+       
     }
 }
