@@ -23,7 +23,7 @@ namespace AtlantSovt
             InitializeComponent();
         }
 
-        internal void UpdateForwarderContact(Transporter update_transporter)
+        internal void UpdateTransporterContact(Transporter update_transporter)
         {
             transporter = update_transporter;
         }

@@ -2861,6 +2861,7 @@
             this.commentTransporterUpdateTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.commentTransporterUpdateTextBox.Size = new System.Drawing.Size(756, 63);
             this.commentTransporterUpdateTextBox.TabIndex = 144;
+            this.commentTransporterUpdateTextBox.TextChanged += new System.EventHandler(this.commentTransporterUpdateTextBox_TextChanged);
             // 
             // label100
             // 
@@ -2883,6 +2884,7 @@
             this.transporterUpdateButton.TabIndex = 142;
             this.transporterUpdateButton.Text = "Змінити";
             this.transporterUpdateButton.UseVisualStyleBackColor = true;
+            this.transporterUpdateButton.Click += new System.EventHandler(this.transporterUpdateButton_Click);
             // 
             // transporterUpdateContactDeleteButton
             // 
@@ -2894,6 +2896,7 @@
             this.transporterUpdateContactDeleteButton.TabIndex = 141;
             this.transporterUpdateContactDeleteButton.Text = "Видалити контакт";
             this.transporterUpdateContactDeleteButton.UseVisualStyleBackColor = true;
+            this.transporterUpdateContactDeleteButton.Click += new System.EventHandler(this.transporterUpdateContactDeleteButton_Click);
             // 
             // transporterUpdateBankDetailsDeleteButton
             // 
@@ -2905,6 +2908,7 @@
             this.transporterUpdateBankDetailsDeleteButton.TabIndex = 140;
             this.transporterUpdateBankDetailsDeleteButton.Text = "Видалити банківські данні";
             this.transporterUpdateBankDetailsDeleteButton.UseVisualStyleBackColor = true;
+            this.transporterUpdateBankDetailsDeleteButton.Click += new System.EventHandler(this.transporterUpdateBankDetaitsDeleteButton_Click);
             // 
             // transporterUpdateBankDetailsUpdateButton
             // 
@@ -2916,6 +2920,7 @@
             this.transporterUpdateBankDetailsUpdateButton.TabIndex = 139;
             this.transporterUpdateBankDetailsUpdateButton.Text = "Змінити банківські данні";
             this.transporterUpdateBankDetailsUpdateButton.UseVisualStyleBackColor = true;
+            this.transporterUpdateBankDetailsUpdateButton.Click += new System.EventHandler(this.transporterUpdateBankDetailsUpdateButton_Click);
             // 
             // transporterUpdateContactUpdateButton
             // 
@@ -2927,6 +2932,7 @@
             this.transporterUpdateContactUpdateButton.TabIndex = 138;
             this.transporterUpdateContactUpdateButton.Text = "Змінити контакт";
             this.transporterUpdateContactUpdateButton.UseVisualStyleBackColor = true;
+            this.transporterUpdateContactUpdateButton.Click += new System.EventHandler(this.transporterUpdateContactUpdateButton_Click);
             // 
             // transporterUpdateBankDetailsAddButton
             // 
@@ -2938,6 +2944,7 @@
             this.transporterUpdateBankDetailsAddButton.TabIndex = 137;
             this.transporterUpdateBankDetailsAddButton.Text = "Додати банківські данні";
             this.transporterUpdateBankDetailsAddButton.UseVisualStyleBackColor = true;
+            this.transporterUpdateBankDetailsAddButton.Click += new System.EventHandler(this.transporterUpdateBankDetailsAddButton_Click);
             // 
             // transporterUpdateContactAddButton
             // 
@@ -2949,6 +2956,7 @@
             this.transporterUpdateContactAddButton.TabIndex = 136;
             this.transporterUpdateContactAddButton.Text = "Додати контакт";
             this.transporterUpdateContactAddButton.UseVisualStyleBackColor = true;
+            this.transporterUpdateContactAddButton.Click += new System.EventHandler(this.transporterUpdateContactAddButton_Click);
             // 
             // label99
             // 
@@ -2972,6 +2980,8 @@
             this.selectTransporterUpdateComboBox.Size = new System.Drawing.Size(755, 29);
             this.selectTransporterUpdateComboBox.Sorted = true;
             this.selectTransporterUpdateComboBox.TabIndex = 134;
+            this.selectTransporterUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.selectTransporterUpdateComboBox_SelectedIndexChanged);
+            this.selectTransporterUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.selectTransporterUpdateComboBox_MouseClick);
             // 
             // filtersTransporterUpdateCheckedListBox
             // 
@@ -2990,6 +3000,7 @@
             this.filtersTransporterUpdateCheckedListBox.Name = "filtersTransporterUpdateCheckedListBox";
             this.filtersTransporterUpdateCheckedListBox.Size = new System.Drawing.Size(757, 21);
             this.filtersTransporterUpdateCheckedListBox.TabIndex = 118;
+            this.filtersTransporterUpdateCheckedListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.filtersTransporterUpdateCheckedListBox_MouseClick);
             // 
             // faxTransporterUpdateCheckBox
             // 
@@ -2998,6 +3009,7 @@
             this.faxTransporterUpdateCheckBox.Size = new System.Drawing.Size(16, 18);
             this.faxTransporterUpdateCheckBox.TabIndex = 133;
             this.faxTransporterUpdateCheckBox.UseVisualStyleBackColor = true;
+            this.faxTransporterUpdateCheckBox.CheckedChanged += new System.EventHandler(this.faxTransporterUpdateCheckBox_CheckedChanged);
             // 
             // originalTransporterUpdateCheckBox
             // 
@@ -3006,6 +3018,7 @@
             this.originalTransporterUpdateCheckBox.Size = new System.Drawing.Size(14, 18);
             this.originalTransporterUpdateCheckBox.TabIndex = 116;
             this.originalTransporterUpdateCheckBox.UseVisualStyleBackColor = true;
+            this.originalTransporterUpdateCheckBox.CheckedChanged += new System.EventHandler(this.originalTransporterUpdateCheckBox_CheckedChanged);
             // 
             // label83
             // 
@@ -3035,6 +3048,7 @@
             this.shortNameTransporterUpdateTextBox.Name = "shortNameTransporterUpdateTextBox";
             this.shortNameTransporterUpdateTextBox.Size = new System.Drawing.Size(239, 29);
             this.shortNameTransporterUpdateTextBox.TabIndex = 110;
+            this.shortNameTransporterUpdateTextBox.TextChanged += new System.EventHandler(this.shortNameTransporterUpdateTextBox_TextChanged);
             // 
             // label86
             // 
@@ -3057,6 +3071,8 @@
             this.workDocumentTransporterUpdateComboBox.Name = "workDocumentTransporterUpdateComboBox";
             this.workDocumentTransporterUpdateComboBox.Size = new System.Drawing.Size(234, 29);
             this.workDocumentTransporterUpdateComboBox.TabIndex = 114;
+            this.workDocumentTransporterUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.workDocumentTransporterUpdateComboBox_SelectedIndexChanged);
+            this.workDocumentTransporterUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.workDocumentTransporterUpdateComboBox_MouseClick);
             // 
             // label93
             // 
@@ -3091,6 +3107,8 @@
             this.taxPayerStatusTransporterUpdateComboBox.Name = "taxPayerStatusTransporterUpdateComboBox";
             this.taxPayerStatusTransporterUpdateComboBox.Size = new System.Drawing.Size(234, 29);
             this.taxPayerStatusTransporterUpdateComboBox.TabIndex = 115;
+            this.taxPayerStatusTransporterUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.taxPayerStatusTransporterUpdateComboBox_SelectedIndexChanged);
+            this.taxPayerStatusTransporterUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.taxPayerStatusTransporterUpdateComboBox_MouseClick);
             // 
             // physicalAddressTransporterUpdateTextBox
             // 
@@ -3101,6 +3119,7 @@
             this.physicalAddressTransporterUpdateTextBox.Name = "physicalAddressTransporterUpdateTextBox";
             this.physicalAddressTransporterUpdateTextBox.Size = new System.Drawing.Size(480, 29);
             this.physicalAddressTransporterUpdateTextBox.TabIndex = 113;
+            this.physicalAddressTransporterUpdateTextBox.TextChanged += new System.EventHandler(this.physicalAddressTransporterUpdateTextBox_TextChanged);
             // 
             // geographyAddressTransporterUpdateTextBox
             // 
@@ -3111,6 +3130,7 @@
             this.geographyAddressTransporterUpdateTextBox.Name = "geographyAddressTransporterUpdateTextBox";
             this.geographyAddressTransporterUpdateTextBox.Size = new System.Drawing.Size(480, 29);
             this.geographyAddressTransporterUpdateTextBox.TabIndex = 112;
+            this.geographyAddressTransporterUpdateTextBox.TextChanged += new System.EventHandler(this.geographyAddressTransporterUpdateTextBox_TextChanged);
             // 
             // directorTransporterUpdateTextBox
             // 
@@ -3120,6 +3140,7 @@
             this.directorTransporterUpdateTextBox.Name = "directorTransporterUpdateTextBox";
             this.directorTransporterUpdateTextBox.Size = new System.Drawing.Size(270, 29);
             this.directorTransporterUpdateTextBox.TabIndex = 111;
+            this.directorTransporterUpdateTextBox.TextChanged += new System.EventHandler(this.directorTransporterUpdateTextBox_TextChanged);
             // 
             // nameTransporterUpdateTextBox
             // 
@@ -3130,6 +3151,7 @@
             this.nameTransporterUpdateTextBox.Name = "nameTransporterUpdateTextBox";
             this.nameTransporterUpdateTextBox.Size = new System.Drawing.Size(235, 29);
             this.nameTransporterUpdateTextBox.TabIndex = 109;
+            this.nameTransporterUpdateTextBox.TextChanged += new System.EventHandler(this.nameTransporterUpdateTextBox_TextChanged);
             // 
             // label95
             // 
@@ -3183,6 +3205,7 @@
             this.transporterUpdateTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
             this.transporterUpdateTaxPayerStatusAddButton.TabIndex = 121;
             this.transporterUpdateTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
+            this.transporterUpdateTaxPayerStatusAddButton.Click += new System.EventHandler(this.transporterUpdateTaxPayerStatusAddButton_Click);
             // 
             // transporterUpdateWorkDocumentAddButton
             // 
@@ -3193,6 +3216,7 @@
             this.transporterUpdateWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
             this.transporterUpdateWorkDocumentAddButton.TabIndex = 120;
             this.transporterUpdateWorkDocumentAddButton.UseVisualStyleBackColor = true;
+            this.transporterUpdateWorkDocumentAddButton.Click += new System.EventHandler(this.transporterUpdateWorkDocumentAddButton_Click);
             // 
             // deleteTransporterPage
             // 
