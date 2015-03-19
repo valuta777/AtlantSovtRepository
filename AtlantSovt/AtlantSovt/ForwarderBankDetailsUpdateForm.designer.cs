@@ -207,11 +207,11 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "IBAN";
             // 
-            // updateTransporterBankDetailsButton
+            // updateForwarderBankDetailsButton
             // 
             this.updateForwarderBankDetailsButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.updateForwarderBankDetailsButton.Location = new System.Drawing.Point(12, 398);
-            this.updateForwarderBankDetailsButton.Name = "updateTransporterBankDetailsButton";
+            this.updateForwarderBankDetailsButton.Name = "updateForwarderBankDetailsButton";
             this.updateForwarderBankDetailsButton.Size = new System.Drawing.Size(536, 48);
             this.updateForwarderBankDetailsButton.TabIndex = 16;
             this.updateForwarderBankDetailsButton.Text = "Змінити";
