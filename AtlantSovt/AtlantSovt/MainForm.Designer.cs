@@ -1984,12 +1984,12 @@
             this.updateForwarderPage.Text = "updateForwarderPage";
             this.updateForwarderPage.UseVisualStyleBackColor = true;
             // 
-            // forwarderUpdateContactDeleteButton
+            // transporterUpdateContactDeleteButton
             // 
             this.forwarderUpdateContactDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.forwarderUpdateContactDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.forwarderUpdateContactDeleteButton.Location = new System.Drawing.Point(6, 458);
-            this.forwarderUpdateContactDeleteButton.Name = "forwarderUpdateContactDeleteButton";
+            this.forwarderUpdateContactDeleteButton.Name = "transporterUpdateContactDeleteButton";
             this.forwarderUpdateContactDeleteButton.Size = new System.Drawing.Size(238, 30);
             this.forwarderUpdateContactDeleteButton.TabIndex = 103;
             this.forwarderUpdateContactDeleteButton.Text = "Видалити контакт";

@@ -39,12 +39,12 @@
             this.addContactForwarderButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // nameForwarderLabel
+            // nameTransporterLabel
             // 
             this.nameForwarderLabel.AutoSize = true;
             this.nameForwarderLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameForwarderLabel.Location = new System.Drawing.Point(12, 9);
-            this.nameForwarderLabel.Name = "nameForwarderLabel";
+            this.nameForwarderLabel.Name = "nameTransporterLabel";
             this.nameForwarderLabel.Size = new System.Drawing.Size(135, 21);
             this.nameForwarderLabel.TabIndex = 2;
             this.nameForwarderLabel.Text = "Контактна особа";

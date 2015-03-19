@@ -48,11 +48,11 @@ namespace AtlantSovt
         TransporterCountryAndVehicleSelectForm transporterCountryAndVehicleSelectForm;
             //Contact
         TransporterContactAddForm addTransporterContactAddForm, updateTransporterContactAddForm;
-        //ForwarderContactUpdateForm updateForwarderContactUpdateForm;
-        //ForwarderContactDeleteForm deleteForwarderContactDeleteForm;
+        TransporterContactUpdateForm updateTransporterContactUpdateForm;
+        TransporterContactDeleteForm deleteTransporterContactDeleteForm;
             //Bank Details
         TransporterBankDetailsAddForm addTransporterBankDetailsAddForm, updateTransporterBankDetailsAddForm;
-        //ForwarderBankDetailsUpdateForm updateForwarderBankDetailsUpdateForm;
+        TransporterBankDetailsUpdateForm updateTransporterBankDetailsUpdateForm;
 
 
         //Load / Animaton / Test connection
