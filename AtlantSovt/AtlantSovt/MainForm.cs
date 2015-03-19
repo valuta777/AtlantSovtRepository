@@ -1095,9 +1095,6 @@ namespace AtlantSovt
             #endregion
 
 
-            #region Update
-            #endregion
-
             #region Delete
             #endregion
 
