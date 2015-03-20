@@ -1401,8 +1401,38 @@ namespace AtlantSovt
         }
             #endregion
 
-        #region Delete
-        #endregion
+      
+            //Delete
+            #region Delete
+        private void transporterDeleteButton_Click(object sender, EventArgs e)
+        {
+            DeleteTransporter();
+            transporterDeleteComboBox.Text = "";
+            transporterDeleteComboBox.Items.Clear();
+            transporterDeleteButton.Enabled = false;
+        }
+
+        private void transporterDeleteComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitDeleteTransporter();
+        }
+
+        private void transporterDeleteComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            transporterDeleteComboBox.Items.Clear();
+            LoadTransporterDeleteInfoComboBox();
+            transporterDeleteComboBox.DroppedDown = true;
+            if (transporterDeleteComboBox.Items.Count == 0)
+            {
+                transporterDeleteButton.Enabled = false;
+            }
+            else
+            {
+                transporterDeleteButton.Enabled = true;
+
+            }
+        }
+            #endregion
 
         #endregion
 

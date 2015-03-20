@@ -14,7 +14,7 @@ namespace AtlantSovt
 {
     public partial class MainForm
     {
-        Transporter transporter;
+        Transporter transporter, deleteTransporter;
         TransporterContact contact;
         WorkDocument transporterWorkDocument;
         TaxPayerStatu transporterTaxPayerStatus;
@@ -448,7 +448,6 @@ namespace AtlantSovt
         }
         #endregion
 
-        
         //Update
         #region Update
         void ClearAllBoxesTransporterUpdate()
@@ -666,6 +665,61 @@ namespace AtlantSovt
 
         #endregion
 
+        #endregion
+
+        //Delete
+        #region Delete
+
+        void DeleteTransporter()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (deleteTransporter != null)
+                {
+                    if (MessageBox.Show("Видалити перевізника " + deleteTransporter.FullName + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            db.Transporters.Attach(deleteTransporter);
+                            db.Transporters.Remove(deleteTransporter);
+                            db.SaveChanges();
+                            MessageBox.Show("Перевізник успішно видалений");
+                            transporterDeleteComboBox.Items.Remove(transporterDeleteComboBox.SelectedItem);
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show("Помилка!" + Environment.NewLine + e);
+                        }
+                    }
+                }
+            }
+        }
+
+        void LoadTransporterDeleteInfoComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from c in db.Transporters
+                            orderby c.Id
+                            select c;
+                foreach (var item in query)
+                {
+                    transporterDeleteComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
+                }
+            }
+        }
+
+        void SplitDeleteTransporter()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = transporterDeleteComboBox.SelectedItem.ToString();
+                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedNameAndDirector[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                deleteTransporter = db.Transporters.Find(id);
+            }
+        }
         #endregion
 
     }

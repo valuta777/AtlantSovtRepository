@@ -123,7 +123,6 @@ namespace AtlantSovt
             forwarderBankDetailsDataGridView.Visible = true;
         }
 
-
         //add
         void LoadWorkDocumentForwarderAddInfoComboBox()
         {
@@ -408,8 +407,6 @@ namespace AtlantSovt
                 deleteForwarderContactDeleteForm.DeleteForwarderContact(forwarder);
             }
         }
-
-
 
         //Delete
         void DeleteForwarder()
