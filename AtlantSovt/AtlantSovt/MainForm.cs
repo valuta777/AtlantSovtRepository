@@ -46,6 +46,7 @@ namespace AtlantSovt
         TransporterShowFiltrationForm transporterShowFiltrationForm;
             //Countries and Vehicles
         TransporterCountryAndVehicleSelectForm transporterCountryAndVehicleSelectForm;
+        TransporterCountryUpdateVehicleSelectForm transporterCountryUpdateVehicleSelectForm;
             //Contact
         TransporterContactAddForm addTransporterContactAddForm, updateTransporterContactAddForm;
         TransporterContactUpdateForm updateTransporterContactUpdateForm;
@@ -1385,11 +1386,19 @@ namespace AtlantSovt
         }
         #endregion
 
-
-
-
-
-
+        private void transporterUpdateCountriesAndVehicleUpdateButton_Click(object sender, EventArgs e)
+        {
+            if (transporter != null)
+            {
+                transporterCountryUpdateVehicleSelectForm = new TransporterCountryUpdateVehicleSelectForm();
+                transporterCountryUpdateVehicleSelectForm.Show();
+                transporterCountryUpdateVehicleSelectForm.CoutriesAndVehiclesSelect(transporter);
+            }
+            else
+            {
+                MessageBox.Show("Оберіть спочатку перевізника");
+            }
+        }
             #endregion
 
         #region Delete

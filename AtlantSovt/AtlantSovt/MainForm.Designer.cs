@@ -2848,6 +2848,7 @@
             this.transporterUpdateCountriesAndVehicleUpdateButton.TabIndex = 145;
             this.transporterUpdateCountriesAndVehicleUpdateButton.Text = "Змінити країни";
             this.transporterUpdateCountriesAndVehicleUpdateButton.UseVisualStyleBackColor = true;
+            this.transporterUpdateCountriesAndVehicleUpdateButton.Click += new System.EventHandler(this.transporterUpdateCountriesAndVehicleUpdateButton_Click);
             // 
             // commentTransporterUpdateTextBox
             // 
