@@ -268,14 +268,19 @@
             this.transporterUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
             this.transporterUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
             this.deleteTransporterPage = new System.Windows.Forms.TabPage();
+            this.transporterDeleteButton = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.transporterDeleteComboBox = new System.Windows.Forms.ComboBox();
             this.labelshow57 = new System.Windows.Forms.Label();
             this.labelshow58 = new System.Windows.Forms.Label();
             this.labelshow67 = new System.Windows.Forms.Label();
             this.labelshow68 = new System.Windows.Forms.Label();
             this.labelshow69 = new System.Windows.Forms.Label();
-            this.transporterDeleteButton = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.transporterDeleteComboBox = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.dataControl.SuspendLayout();
             this.helloPage.SuspendLayout();
@@ -435,6 +440,7 @@
             // 
             // dataControl
             // 
+            this.dataControl.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.dataControl.Controls.Add(this.helloPage);
             this.dataControl.Controls.Add(this.showClientPage);
             this.dataControl.Controls.Add(this.addClientPage);
@@ -449,11 +455,12 @@
             this.dataControl.Controls.Add(this.updateTransporterPage);
             this.dataControl.Controls.Add(this.deleteTransporterPage);
             this.dataControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataControl.ItemSize = new System.Drawing.Size(1, 0);
+            this.dataControl.ItemSize = new System.Drawing.Size(0, 1);
             this.dataControl.Location = new System.Drawing.Point(0, 24);
             this.dataControl.Name = "dataControl";
             this.dataControl.SelectedIndex = 0;
             this.dataControl.Size = new System.Drawing.Size(784, 537);
+            this.dataControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.dataControl.TabIndex = 2;
             this.dataControl.TabStop = false;
             // 
@@ -461,9 +468,9 @@
             // 
             this.helloPage.BackColor = System.Drawing.Color.White;
             this.helloPage.Controls.Add(this.pictureBox1);
-            this.helloPage.Location = new System.Drawing.Point(4, 22);
+            this.helloPage.Location = new System.Drawing.Point(4, 5);
             this.helloPage.Name = "helloPage";
-            this.helloPage.Size = new System.Drawing.Size(776, 511);
+            this.helloPage.Size = new System.Drawing.Size(776, 528);
             this.helloPage.TabIndex = 4;
             this.helloPage.Text = "Hello";
             // 
@@ -473,7 +480,7 @@
             this.pictureBox1.Image = global::AtlantSovt.Properties.Resources.demologo;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 511);
+            this.pictureBox1.Size = new System.Drawing.Size(776, 528);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -488,10 +495,10 @@
             this.showClientPage.Controls.Add(this.clientContactsDataGridView);
             this.showClientPage.Controls.Add(this.label1);
             this.showClientPage.Controls.Add(this.clientDataGridView);
-            this.showClientPage.Location = new System.Drawing.Point(4, 22);
+            this.showClientPage.Location = new System.Drawing.Point(4, 5);
             this.showClientPage.Name = "showClientPage";
             this.showClientPage.Padding = new System.Windows.Forms.Padding(3);
-            this.showClientPage.Size = new System.Drawing.Size(776, 511);
+            this.showClientPage.Size = new System.Drawing.Size(776, 528);
             this.showClientPage.TabIndex = 0;
             this.showClientPage.Text = "showClientPage";
             this.showClientPage.UseVisualStyleBackColor = true;
@@ -501,10 +508,10 @@
             this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label29.Location = new System.Drawing.Point(2, 216);
+            this.label29.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label29.Location = new System.Drawing.Point(2, 233);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(164, 21);
+            this.label29.Size = new System.Drawing.Size(156, 21);
             this.label29.TabIndex = 8;
             this.label29.Text = "Банківські реквізити";
             // 
@@ -516,7 +523,7 @@
             this.clientBankDetailsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.clientBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientBankDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clientBankDetailsDataGridView.Location = new System.Drawing.Point(0, 239);
+            this.clientBankDetailsDataGridView.Location = new System.Drawing.Point(0, 256);
             this.clientBankDetailsDataGridView.Name = "clientBankDetailsDataGridView";
             this.clientBankDetailsDataGridView.Size = new System.Drawing.Size(776, 56);
             this.clientBankDetailsDataGridView.TabIndex = 7;
@@ -525,10 +532,10 @@
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(6, 420);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(6, 437);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 21);
+            this.label10.Size = new System.Drawing.Size(77, 21);
             this.label10.TabIndex = 6;
             this.label10.Text = "Примітка";
             // 
@@ -536,7 +543,7 @@
             // 
             this.clientCommentRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientCommentRichTextBox.Location = new System.Drawing.Point(0, 444);
+            this.clientCommentRichTextBox.Location = new System.Drawing.Point(0, 461);
             this.clientCommentRichTextBox.Name = "clientCommentRichTextBox";
             this.clientCommentRichTextBox.ReadOnly = true;
             this.clientCommentRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
@@ -549,10 +556,10 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(5, 296);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(5, 313);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 21);
+            this.label2.Size = new System.Drawing.Size(76, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Контакти";
             // 
@@ -564,7 +571,7 @@
             this.clientContactsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.clientContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clientContactsDataGridView.Location = new System.Drawing.Point(0, 318);
+            this.clientContactsDataGridView.Location = new System.Drawing.Point(0, 335);
             this.clientContactsDataGridView.Name = "clientContactsDataGridView";
             this.clientContactsDataGridView.Size = new System.Drawing.Size(776, 95);
             this.clientContactsDataGridView.TabIndex = 3;
@@ -572,10 +579,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(4, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 21);
+            this.label1.Size = new System.Drawing.Size(63, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "Клієнти";
             // 
@@ -590,7 +597,7 @@
             this.clientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clientDataGridView.Location = new System.Drawing.Point(0, 27);
             this.clientDataGridView.Name = "clientDataGridView";
-            this.clientDataGridView.Size = new System.Drawing.Size(776, 190);
+            this.clientDataGridView.Size = new System.Drawing.Size(776, 207);
             this.clientDataGridView.TabIndex = 0;
             this.clientDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.clientDataGridView_CellMouseClick);
             // 
@@ -627,10 +634,10 @@
             this.addClientPage.Controls.Add(this.addTaxPayerStatusClientButton);
             this.addClientPage.Controls.Add(this.addWorkDocumentClientButton);
             this.addClientPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addClientPage.Location = new System.Drawing.Point(4, 22);
+            this.addClientPage.Location = new System.Drawing.Point(4, 5);
             this.addClientPage.Name = "addClientPage";
             this.addClientPage.Padding = new System.Windows.Forms.Padding(3);
-            this.addClientPage.Size = new System.Drawing.Size(776, 511);
+            this.addClientPage.Size = new System.Drawing.Size(776, 528);
             this.addClientPage.TabIndex = 1;
             this.addClientPage.Text = "addClientPage";
             this.addClientPage.UseVisualStyleBackColor = true;
@@ -642,7 +649,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label9.Location = new System.Drawing.Point(10, 485);
+            this.label9.Location = new System.Drawing.Point(10, 502);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(117, 13);
             this.label9.TabIndex = 31;
@@ -728,6 +735,7 @@
             // 
             // faxClientCheckBox
             // 
+            this.faxClientCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.faxClientCheckBox.Location = new System.Drawing.Point(201, 124);
             this.faxClientCheckBox.Name = "faxClientCheckBox";
             this.faxClientCheckBox.Size = new System.Drawing.Size(16, 18);
@@ -737,6 +745,7 @@
             // 
             // originalClientCheckBox
             // 
+            this.originalClientCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.originalClientCheckBox.Location = new System.Drawing.Point(92, 124);
             this.originalClientCheckBox.Name = "originalClientCheckBox";
             this.originalClientCheckBox.Size = new System.Drawing.Size(14, 18);
@@ -747,20 +756,20 @@
             // faxLabel
             // 
             this.faxLabel.AutoSize = true;
-            this.faxLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.faxLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.faxLabel.Location = new System.Drawing.Point(149, 121);
             this.faxLabel.Name = "faxLabel";
-            this.faxLabel.Size = new System.Drawing.Size(46, 21);
+            this.faxLabel.Size = new System.Drawing.Size(45, 21);
             this.faxLabel.TabIndex = 22;
             this.faxLabel.Text = "Факс";
             // 
             // originalLabel
             // 
             this.originalLabel.AutoSize = true;
-            this.originalLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.originalLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.originalLabel.Location = new System.Drawing.Point(8, 121);
             this.originalLabel.Name = "originalLabel";
-            this.originalLabel.Size = new System.Drawing.Size(78, 21);
+            this.originalLabel.Size = new System.Drawing.Size(75, 21);
             this.originalLabel.TabIndex = 21;
             this.originalLabel.Text = "Оригінал";
             // 
@@ -768,8 +777,8 @@
             // 
             this.addClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.addClientButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addClientButton.Location = new System.Drawing.Point(466, 388);
+            this.addClientButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addClientButton.Location = new System.Drawing.Point(466, 405);
             this.addClientButton.Name = "addClientButton";
             this.addClientButton.Size = new System.Drawing.Size(302, 70);
             this.addClientButton.TabIndex = 20;
@@ -781,10 +790,10 @@
             // 
             this.taxPayerStatusClientLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.taxPayerStatusClientLabel.AutoSize = true;
-            this.taxPayerStatusClientLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taxPayerStatusClientLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxPayerStatusClientLabel.Location = new System.Drawing.Point(494, 65);
             this.taxPayerStatusClientLabel.Name = "taxPayerStatusClientLabel";
-            this.taxPayerStatusClientLabel.Size = new System.Drawing.Size(193, 21);
+            this.taxPayerStatusClientLabel.Size = new System.Drawing.Size(189, 21);
             this.taxPayerStatusClientLabel.TabIndex = 17;
             this.taxPayerStatusClientLabel.Text = "Статус платника податку";
             // 
@@ -792,18 +801,18 @@
             // 
             this.workDocumentClientLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.workDocumentClientLabel.AutoSize = true;
-            this.workDocumentClientLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.workDocumentClientLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workDocumentClientLabel.Location = new System.Drawing.Point(496, 4);
             this.workDocumentClientLabel.Name = "workDocumentClientLabel";
-            this.workDocumentClientLabel.Size = new System.Drawing.Size(223, 21);
+            this.workDocumentClientLabel.Size = new System.Drawing.Size(214, 21);
             this.workDocumentClientLabel.TabIndex = 16;
             this.workDocumentClientLabel.Text = "На підставі якого документу";
             // 
             // addBankDetailsClientButton
             // 
             this.addBankDetailsClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.addBankDetailsClientButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addBankDetailsClientButton.Location = new System.Drawing.Point(253, 388);
+            this.addBankDetailsClientButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBankDetailsClientButton.Location = new System.Drawing.Point(253, 405);
             this.addBankDetailsClientButton.Name = "addBankDetailsClientButton";
             this.addBankDetailsClientButton.Size = new System.Drawing.Size(207, 70);
             this.addBankDetailsClientButton.TabIndex = 15;
@@ -814,8 +823,8 @@
             // addContactClientButton
             // 
             this.addContactClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.addContactClientButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addContactClientButton.Location = new System.Drawing.Point(8, 388);
+            this.addContactClientButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addContactClientButton.Location = new System.Drawing.Point(8, 405);
             this.addContactClientButton.Name = "addContactClientButton";
             this.addContactClientButton.Size = new System.Drawing.Size(237, 70);
             this.addContactClientButton.TabIndex = 14;
@@ -828,7 +837,7 @@
             this.taxPayerStatusClientComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.taxPayerStatusClientComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.taxPayerStatusClientComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.taxPayerStatusClientComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taxPayerStatusClientComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxPayerStatusClientComboBox.FormattingEnabled = true;
             this.taxPayerStatusClientComboBox.Location = new System.Drawing.Point(495, 89);
             this.taxPayerStatusClientComboBox.Name = "taxPayerStatusClientComboBox";
@@ -842,7 +851,7 @@
             this.workDocumentClientComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.workDocumentClientComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.workDocumentClientComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.workDocumentClientComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.workDocumentClientComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workDocumentClientComboBox.Location = new System.Drawing.Point(495, 27);
             this.workDocumentClientComboBox.Name = "workDocumentClientComboBox";
             this.workDocumentClientComboBox.Size = new System.Drawing.Size(235, 29);
@@ -855,19 +864,19 @@
             this.commentClientTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.commentClientTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentClientTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.commentClientTextBox.Location = new System.Drawing.Point(8, 186);
             this.commentClientTextBox.Multiline = true;
             this.commentClientTextBox.Name = "commentClientTextBox";
             this.commentClientTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.commentClientTextBox.Size = new System.Drawing.Size(756, 189);
+            this.commentClientTextBox.Size = new System.Drawing.Size(756, 206);
             this.commentClientTextBox.TabIndex = 11;
             // 
             // physicalAddressClientTextBox
             // 
             this.physicalAddressClientTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.physicalAddressClientTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.physicalAddressClientTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.physicalAddressClientTextBox.Location = new System.Drawing.Point(253, 89);
             this.physicalAddressClientTextBox.Name = "physicalAddressClientTextBox";
             this.physicalAddressClientTextBox.Size = new System.Drawing.Size(235, 29);
@@ -875,7 +884,7 @@
             // 
             // geographyAddressClientTextBox
             // 
-            this.geographyAddressClientTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.geographyAddressClientTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.geographyAddressClientTextBox.Location = new System.Drawing.Point(8, 89);
             this.geographyAddressClientTextBox.Name = "geographyAddressClientTextBox";
             this.geographyAddressClientTextBox.Size = new System.Drawing.Size(235, 29);
@@ -885,7 +894,7 @@
             // 
             this.directorClientTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.directorClientTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directorClientTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.directorClientTextBox.Location = new System.Drawing.Point(252, 27);
             this.directorClientTextBox.Name = "directorClientTextBox";
             this.directorClientTextBox.Size = new System.Drawing.Size(235, 29);
@@ -893,7 +902,7 @@
             // 
             // nameClientTextBox
             // 
-            this.nameClientTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameClientTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameClientTextBox.Location = new System.Drawing.Point(8, 28);
             this.nameClientTextBox.Name = "nameClientTextBox";
             this.nameClientTextBox.Size = new System.Drawing.Size(235, 29);
@@ -902,20 +911,20 @@
             // commentClientLabel
             // 
             this.commentClientLabel.AutoSize = true;
-            this.commentClientLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentClientLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.commentClientLabel.Location = new System.Drawing.Point(10, 162);
             this.commentClientLabel.Name = "commentClientLabel";
-            this.commentClientLabel.Size = new System.Drawing.Size(81, 21);
+            this.commentClientLabel.Size = new System.Drawing.Size(77, 21);
             this.commentClientLabel.TabIndex = 5;
             this.commentClientLabel.Text = "Примітка";
             // 
             // geographyAddressClientLabel
             // 
             this.geographyAddressClientLabel.AutoSize = true;
-            this.geographyAddressClientLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.geographyAddressClientLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.geographyAddressClientLabel.Location = new System.Drawing.Point(10, 65);
             this.geographyAddressClientLabel.Name = "geographyAddressClientLabel";
-            this.geographyAddressClientLabel.Size = new System.Drawing.Size(135, 21);
+            this.geographyAddressClientLabel.Size = new System.Drawing.Size(128, 21);
             this.geographyAddressClientLabel.TabIndex = 4;
             this.geographyAddressClientLabel.Text = "Поштова адреса";
             // 
@@ -924,10 +933,10 @@
             this.physicalAddressClientLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.physicalAddressClientLabel.AutoSize = true;
-            this.physicalAddressClientLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.physicalAddressClientLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.physicalAddressClientLabel.Location = new System.Drawing.Point(249, 65);
             this.physicalAddressClientLabel.Name = "physicalAddressClientLabel";
-            this.physicalAddressClientLabel.Size = new System.Drawing.Size(125, 21);
+            this.physicalAddressClientLabel.Size = new System.Drawing.Size(121, 21);
             this.physicalAddressClientLabel.TabIndex = 3;
             this.physicalAddressClientLabel.Text = "Фізична адреса";
             // 
@@ -936,20 +945,20 @@
             this.directorClientLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.directorClientLabel.AutoSize = true;
-            this.directorClientLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directorClientLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.directorClientLabel.Location = new System.Drawing.Point(249, 4);
             this.directorClientLabel.Name = "directorClientLabel";
-            this.directorClientLabel.Size = new System.Drawing.Size(137, 21);
+            this.directorClientLabel.Size = new System.Drawing.Size(125, 21);
             this.directorClientLabel.TabIndex = 2;
             this.directorClientLabel.Text = "П.І.Б. Директора";
             // 
             // nameClientLabel
             // 
             this.nameClientLabel.AutoSize = true;
-            this.nameClientLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameClientLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameClientLabel.Location = new System.Drawing.Point(10, 4);
             this.nameClientLabel.Name = "nameClientLabel";
-            this.nameClientLabel.Size = new System.Drawing.Size(54, 21);
+            this.nameClientLabel.Size = new System.Drawing.Size(52, 21);
             this.nameClientLabel.TabIndex = 1;
             this.nameClientLabel.Text = "Назва";
             // 
@@ -1008,9 +1017,9 @@
             this.updateClientPage.Controls.Add(this.label26);
             this.updateClientPage.Controls.Add(this.clientUpdateTaxPayerStatusAddButton);
             this.updateClientPage.Controls.Add(this.clientUpdateWorkDocumentAddButton);
-            this.updateClientPage.Location = new System.Drawing.Point(4, 22);
+            this.updateClientPage.Location = new System.Drawing.Point(4, 5);
             this.updateClientPage.Name = "updateClientPage";
-            this.updateClientPage.Size = new System.Drawing.Size(776, 511);
+            this.updateClientPage.Size = new System.Drawing.Size(776, 528);
             this.updateClientPage.TabIndex = 2;
             this.updateClientPage.Text = "updateClientPage";
             this.updateClientPage.UseVisualStyleBackColor = true;
@@ -1018,8 +1027,8 @@
             // clientUpdateContactDeleteButton
             // 
             this.clientUpdateContactDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.clientUpdateContactDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientUpdateContactDeleteButton.Location = new System.Drawing.Point(6, 458);
+            this.clientUpdateContactDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientUpdateContactDeleteButton.Location = new System.Drawing.Point(6, 475);
             this.clientUpdateContactDeleteButton.Name = "clientUpdateContactDeleteButton";
             this.clientUpdateContactDeleteButton.Size = new System.Drawing.Size(238, 30);
             this.clientUpdateContactDeleteButton.TabIndex = 69;
@@ -1030,8 +1039,8 @@
             // clientUpdateBankDetailsDeleteButton
             // 
             this.clientUpdateBankDetailsDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.clientUpdateBankDetailsDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientUpdateBankDetailsDeleteButton.Location = new System.Drawing.Point(251, 459);
+            this.clientUpdateBankDetailsDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientUpdateBankDetailsDeleteButton.Location = new System.Drawing.Point(251, 476);
             this.clientUpdateBankDetailsDeleteButton.Name = "clientUpdateBankDetailsDeleteButton";
             this.clientUpdateBankDetailsDeleteButton.Size = new System.Drawing.Size(207, 30);
             this.clientUpdateBankDetailsDeleteButton.TabIndex = 68;
@@ -1042,8 +1051,8 @@
             // clientUpdateBankDetailsUpdateButton
             // 
             this.clientUpdateBankDetailsUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.clientUpdateBankDetailsUpdateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientUpdateBankDetailsUpdateButton.Location = new System.Drawing.Point(252, 423);
+            this.clientUpdateBankDetailsUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientUpdateBankDetailsUpdateButton.Location = new System.Drawing.Point(252, 440);
             this.clientUpdateBankDetailsUpdateButton.Name = "clientUpdateBankDetailsUpdateButton";
             this.clientUpdateBankDetailsUpdateButton.Size = new System.Drawing.Size(207, 30);
             this.clientUpdateBankDetailsUpdateButton.TabIndex = 67;
@@ -1054,8 +1063,8 @@
             // clientUpdateContactUpdateButton
             // 
             this.clientUpdateContactUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.clientUpdateContactUpdateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientUpdateContactUpdateButton.Location = new System.Drawing.Point(7, 423);
+            this.clientUpdateContactUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientUpdateContactUpdateButton.Location = new System.Drawing.Point(7, 440);
             this.clientUpdateContactUpdateButton.Name = "clientUpdateContactUpdateButton";
             this.clientUpdateContactUpdateButton.Size = new System.Drawing.Size(237, 30);
             this.clientUpdateContactUpdateButton.TabIndex = 66;
@@ -1066,7 +1075,7 @@
             // contractNumberClientUpdateTextBox
             // 
             this.contractNumberClientUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.contractNumberClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contractNumberClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.contractNumberClientUpdateTextBox.Location = new System.Drawing.Point(495, 26);
             this.contractNumberClientUpdateTextBox.Name = "contractNumberClientUpdateTextBox";
             this.contractNumberClientUpdateTextBox.Size = new System.Drawing.Size(235, 29);
@@ -1077,20 +1086,20 @@
             // 
             this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label28.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label28.Location = new System.Drawing.Point(496, 3);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(108, 21);
+            this.label28.Size = new System.Drawing.Size(101, 21);
             this.label28.TabIndex = 64;
             this.label28.Text = "№ Договору";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label27.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label27.Location = new System.Drawing.Point(10, 3);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(134, 21);
+            this.label27.Size = new System.Drawing.Size(128, 21);
             this.label27.TabIndex = 63;
             this.label27.Text = "Виберіть клієнта";
             // 
@@ -1100,7 +1109,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.selectClientUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.selectClientUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.selectClientUpdateComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selectClientUpdateComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.selectClientUpdateComboBox.Location = new System.Drawing.Point(8, 27);
             this.selectClientUpdateComboBox.Name = "selectClientUpdateComboBox";
             this.selectClientUpdateComboBox.Size = new System.Drawing.Size(480, 29);
@@ -1111,6 +1120,7 @@
             // 
             // faxClientUpdateCheckBox
             // 
+            this.faxClientUpdateCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.faxClientUpdateCheckBox.Location = new System.Drawing.Point(201, 174);
             this.faxClientUpdateCheckBox.Name = "faxClientUpdateCheckBox";
             this.faxClientUpdateCheckBox.Size = new System.Drawing.Size(42, 18);
@@ -1120,6 +1130,7 @@
             // 
             // originalClientUpdateCheckBox
             // 
+            this.originalClientUpdateCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.originalClientUpdateCheckBox.Location = new System.Drawing.Point(92, 174);
             this.originalClientUpdateCheckBox.Name = "originalClientUpdateCheckBox";
             this.originalClientUpdateCheckBox.Size = new System.Drawing.Size(14, 18);
@@ -1130,20 +1141,20 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label18.Location = new System.Drawing.Point(149, 171);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(46, 21);
+            this.label18.Size = new System.Drawing.Size(45, 21);
             this.label18.TabIndex = 52;
             this.label18.Text = "Факс";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label19.Location = new System.Drawing.Point(8, 171);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(78, 21);
+            this.label19.Size = new System.Drawing.Size(75, 21);
             this.label19.TabIndex = 51;
             this.label19.Text = "Оригінал";
             // 
@@ -1151,8 +1162,8 @@
             // 
             this.updateClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.updateClientButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.updateClientButton.Location = new System.Drawing.Point(465, 387);
+            this.updateClientButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.updateClientButton.Location = new System.Drawing.Point(465, 404);
             this.updateClientButton.Name = "updateClientButton";
             this.updateClientButton.Size = new System.Drawing.Size(302, 101);
             this.updateClientButton.TabIndex = 50;
@@ -1164,10 +1175,10 @@
             // 
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label20.Location = new System.Drawing.Point(494, 115);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(193, 21);
+            this.label20.Size = new System.Drawing.Size(189, 21);
             this.label20.TabIndex = 47;
             this.label20.Text = "Статус платника податку";
             // 
@@ -1175,18 +1186,18 @@
             // 
             this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label21.Location = new System.Drawing.Point(496, 54);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(223, 21);
+            this.label21.Size = new System.Drawing.Size(214, 21);
             this.label21.TabIndex = 46;
             this.label21.Text = "На підставі якого документу";
             // 
             // clientUpdateAddBankDetailsButton
             // 
             this.clientUpdateAddBankDetailsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.clientUpdateAddBankDetailsButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientUpdateAddBankDetailsButton.Location = new System.Drawing.Point(252, 387);
+            this.clientUpdateAddBankDetailsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientUpdateAddBankDetailsButton.Location = new System.Drawing.Point(252, 404);
             this.clientUpdateAddBankDetailsButton.Name = "clientUpdateAddBankDetailsButton";
             this.clientUpdateAddBankDetailsButton.Size = new System.Drawing.Size(207, 30);
             this.clientUpdateAddBankDetailsButton.TabIndex = 45;
@@ -1197,8 +1208,8 @@
             // clientUpdateAddContactButton
             // 
             this.clientUpdateAddContactButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.clientUpdateAddContactButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientUpdateAddContactButton.Location = new System.Drawing.Point(7, 387);
+            this.clientUpdateAddContactButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientUpdateAddContactButton.Location = new System.Drawing.Point(7, 404);
             this.clientUpdateAddContactButton.Name = "clientUpdateAddContactButton";
             this.clientUpdateAddContactButton.Size = new System.Drawing.Size(237, 30);
             this.clientUpdateAddContactButton.TabIndex = 44;
@@ -1211,7 +1222,7 @@
             this.taxPayerStatusClientUpdateComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.taxPayerStatusClientUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.taxPayerStatusClientUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.taxPayerStatusClientUpdateComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taxPayerStatusClientUpdateComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.taxPayerStatusClientUpdateComboBox.FormattingEnabled = true;
             this.taxPayerStatusClientUpdateComboBox.Location = new System.Drawing.Point(495, 139);
             this.taxPayerStatusClientUpdateComboBox.Name = "taxPayerStatusClientUpdateComboBox";
@@ -1225,7 +1236,7 @@
             this.workDocumentClientUpdateComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.workDocumentClientUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.workDocumentClientUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.workDocumentClientUpdateComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.workDocumentClientUpdateComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.workDocumentClientUpdateComboBox.Location = new System.Drawing.Point(495, 77);
             this.workDocumentClientUpdateComboBox.Name = "workDocumentClientUpdateComboBox";
             this.workDocumentClientUpdateComboBox.Size = new System.Drawing.Size(235, 29);
@@ -1238,12 +1249,12 @@
             this.commentClientUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.commentClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.commentClientUpdateTextBox.Location = new System.Drawing.Point(8, 221);
             this.commentClientUpdateTextBox.Multiline = true;
             this.commentClientUpdateTextBox.Name = "commentClientUpdateTextBox";
             this.commentClientUpdateTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.commentClientUpdateTextBox.Size = new System.Drawing.Size(756, 159);
+            this.commentClientUpdateTextBox.Size = new System.Drawing.Size(756, 176);
             this.commentClientUpdateTextBox.TabIndex = 41;
             this.commentClientUpdateTextBox.TextChanged += new System.EventHandler(this.commentClientUpdateTextBox_TextChanged);
             // 
@@ -1251,7 +1262,7 @@
             // 
             this.physicalAddressClientUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.physicalAddressClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.physicalAddressClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.physicalAddressClientUpdateTextBox.Location = new System.Drawing.Point(253, 139);
             this.physicalAddressClientUpdateTextBox.Name = "physicalAddressClientUpdateTextBox";
             this.physicalAddressClientUpdateTextBox.Size = new System.Drawing.Size(235, 29);
@@ -1260,7 +1271,7 @@
             // 
             // geographyAddressClientUpdateTextBox
             // 
-            this.geographyAddressClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.geographyAddressClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.geographyAddressClientUpdateTextBox.Location = new System.Drawing.Point(8, 139);
             this.geographyAddressClientUpdateTextBox.Name = "geographyAddressClientUpdateTextBox";
             this.geographyAddressClientUpdateTextBox.Size = new System.Drawing.Size(235, 29);
@@ -1271,7 +1282,7 @@
             // 
             this.directorClientUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.directorClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directorClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.directorClientUpdateTextBox.Location = new System.Drawing.Point(252, 77);
             this.directorClientUpdateTextBox.Name = "directorClientUpdateTextBox";
             this.directorClientUpdateTextBox.Size = new System.Drawing.Size(235, 29);
@@ -1280,7 +1291,7 @@
             // 
             // nameClientUpdateTextBox
             // 
-            this.nameClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameClientUpdateTextBox.Location = new System.Drawing.Point(8, 78);
             this.nameClientUpdateTextBox.Name = "nameClientUpdateTextBox";
             this.nameClientUpdateTextBox.Size = new System.Drawing.Size(235, 29);
@@ -1290,20 +1301,20 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label22.Location = new System.Drawing.Point(8, 197);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(81, 21);
+            this.label22.Size = new System.Drawing.Size(77, 21);
             this.label22.TabIndex = 36;
             this.label22.Text = "Примітка";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label23.Location = new System.Drawing.Point(10, 115);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(135, 21);
+            this.label23.Size = new System.Drawing.Size(128, 21);
             this.label23.TabIndex = 35;
             this.label23.Text = "Поштова адреса";
             // 
@@ -1312,10 +1323,10 @@
             this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label24.Location = new System.Drawing.Point(249, 115);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(125, 21);
+            this.label24.Size = new System.Drawing.Size(121, 21);
             this.label24.TabIndex = 34;
             this.label24.Text = "Фізична адреса";
             // 
@@ -1324,20 +1335,20 @@
             this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label25.Location = new System.Drawing.Point(249, 54);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(137, 21);
+            this.label25.Size = new System.Drawing.Size(125, 21);
             this.label25.TabIndex = 33;
             this.label25.Text = "П.І.Б. Директора";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label26.Location = new System.Drawing.Point(10, 54);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(54, 21);
+            this.label26.Size = new System.Drawing.Size(52, 21);
             this.label26.TabIndex = 32;
             this.label26.Text = "Назва";
             // 
@@ -1368,9 +1379,9 @@
             this.deleteClientPage.Controls.Add(this.deleteClientButton);
             this.deleteClientPage.Controls.Add(this.label30);
             this.deleteClientPage.Controls.Add(this.deleteClientComboBox);
-            this.deleteClientPage.Location = new System.Drawing.Point(4, 22);
+            this.deleteClientPage.Location = new System.Drawing.Point(4, 5);
             this.deleteClientPage.Name = "deleteClientPage";
-            this.deleteClientPage.Size = new System.Drawing.Size(776, 511);
+            this.deleteClientPage.Size = new System.Drawing.Size(776, 528);
             this.deleteClientPage.TabIndex = 3;
             this.deleteClientPage.Text = "deleteClientPage";
             this.deleteClientPage.UseVisualStyleBackColor = true;
@@ -1380,8 +1391,8 @@
             this.deleteClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.deleteClientButton.Enabled = false;
-            this.deleteClientButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.deleteClientButton.Location = new System.Drawing.Point(466, 433);
+            this.deleteClientButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteClientButton.Location = new System.Drawing.Point(466, 450);
             this.deleteClientButton.Name = "deleteClientButton";
             this.deleteClientButton.Size = new System.Drawing.Size(302, 70);
             this.deleteClientButton.TabIndex = 66;
@@ -1394,10 +1405,10 @@
             this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label30.Location = new System.Drawing.Point(5, 7);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(134, 21);
+            this.label30.Size = new System.Drawing.Size(128, 21);
             this.label30.TabIndex = 65;
             this.label30.Text = "Виберіть клієнта";
             // 
@@ -1407,7 +1418,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.deleteClientComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.deleteClientComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.deleteClientComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteClientComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.deleteClientComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.deleteClientComboBox.Location = new System.Drawing.Point(3, 31);
             this.deleteClientComboBox.Name = "deleteClientComboBox";
@@ -1427,9 +1438,9 @@
             this.showForwarderPage.Controls.Add(this.forwarderContactsDataGridView);
             this.showForwarderPage.Controls.Add(this.label34);
             this.showForwarderPage.Controls.Add(this.forwarderDataGridView);
-            this.showForwarderPage.Location = new System.Drawing.Point(4, 22);
+            this.showForwarderPage.Location = new System.Drawing.Point(4, 5);
             this.showForwarderPage.Name = "showForwarderPage";
-            this.showForwarderPage.Size = new System.Drawing.Size(776, 511);
+            this.showForwarderPage.Size = new System.Drawing.Size(776, 528);
             this.showForwarderPage.TabIndex = 5;
             this.showForwarderPage.Text = "showForwarderPage";
             this.showForwarderPage.UseVisualStyleBackColor = true;
@@ -1439,10 +1450,10 @@
             this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label31.Location = new System.Drawing.Point(2, 216);
+            this.label31.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(2, 233);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(164, 21);
+            this.label31.Size = new System.Drawing.Size(156, 21);
             this.label31.TabIndex = 16;
             this.label31.Text = "Банківські реквізити";
             // 
@@ -1454,7 +1465,7 @@
             this.forwarderBankDetailsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.forwarderBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.forwarderBankDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.forwarderBankDetailsDataGridView.Location = new System.Drawing.Point(0, 239);
+            this.forwarderBankDetailsDataGridView.Location = new System.Drawing.Point(0, 256);
             this.forwarderBankDetailsDataGridView.Name = "forwarderBankDetailsDataGridView";
             this.forwarderBankDetailsDataGridView.Size = new System.Drawing.Size(776, 56);
             this.forwarderBankDetailsDataGridView.TabIndex = 15;
@@ -1463,10 +1474,10 @@
             // 
             this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label32.Location = new System.Drawing.Point(5, 420);
+            this.label32.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(5, 437);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(81, 21);
+            this.label32.Size = new System.Drawing.Size(77, 21);
             this.label32.TabIndex = 14;
             this.label32.Text = "Примітка";
             // 
@@ -1474,7 +1485,7 @@
             // 
             this.forwarderCommentRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.forwarderCommentRichTextBox.Location = new System.Drawing.Point(0, 444);
+            this.forwarderCommentRichTextBox.Location = new System.Drawing.Point(0, 461);
             this.forwarderCommentRichTextBox.Name = "forwarderCommentRichTextBox";
             this.forwarderCommentRichTextBox.ReadOnly = true;
             this.forwarderCommentRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
@@ -1487,10 +1498,10 @@
             this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label33.Location = new System.Drawing.Point(5, 296);
+            this.label33.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(5, 313);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(79, 21);
+            this.label33.Size = new System.Drawing.Size(76, 21);
             this.label33.TabIndex = 12;
             this.label33.Text = "Контакти";
             // 
@@ -1502,7 +1513,7 @@
             this.forwarderContactsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.forwarderContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.forwarderContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.forwarderContactsDataGridView.Location = new System.Drawing.Point(0, 318);
+            this.forwarderContactsDataGridView.Location = new System.Drawing.Point(0, 335);
             this.forwarderContactsDataGridView.Name = "forwarderContactsDataGridView";
             this.forwarderContactsDataGridView.Size = new System.Drawing.Size(776, 95);
             this.forwarderContactsDataGridView.TabIndex = 11;
@@ -1510,10 +1521,10 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label34.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.Location = new System.Drawing.Point(4, 5);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(108, 21);
+            this.label34.Size = new System.Drawing.Size(102, 21);
             this.label34.TabIndex = 10;
             this.label34.Text = "Експедитори";
             // 
@@ -1528,7 +1539,7 @@
             this.forwarderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.forwarderDataGridView.Location = new System.Drawing.Point(0, 27);
             this.forwarderDataGridView.Name = "forwarderDataGridView";
-            this.forwarderDataGridView.Size = new System.Drawing.Size(776, 190);
+            this.forwarderDataGridView.Size = new System.Drawing.Size(776, 207);
             this.forwarderDataGridView.TabIndex = 9;
             this.forwarderDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.forwarderDataGridView_CellMouseClick);
             // 
@@ -1560,9 +1571,9 @@
             this.addForwarderPage.Controls.Add(this.label50);
             this.addForwarderPage.Controls.Add(this.addTaxPayerStatusForwarderButton);
             this.addForwarderPage.Controls.Add(this.addWorkDocumentForwarderButton);
-            this.addForwarderPage.Location = new System.Drawing.Point(4, 22);
+            this.addForwarderPage.Location = new System.Drawing.Point(4, 5);
             this.addForwarderPage.Name = "addForwarderPage";
-            this.addForwarderPage.Size = new System.Drawing.Size(776, 511);
+            this.addForwarderPage.Size = new System.Drawing.Size(776, 528);
             this.addForwarderPage.TabIndex = 6;
             this.addForwarderPage.Text = "addForwarderPage";
             this.addForwarderPage.UseVisualStyleBackColor = true;
@@ -1572,7 +1583,7 @@
             this.workDocumentForwarderComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.workDocumentForwarderComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.workDocumentForwarderComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.workDocumentForwarderComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.workDocumentForwarderComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.workDocumentForwarderComboBox.Location = new System.Drawing.Point(495, 32);
             this.workDocumentForwarderComboBox.Name = "workDocumentForwarderComboBox";
             this.workDocumentForwarderComboBox.Size = new System.Drawing.Size(235, 29);
@@ -1587,7 +1598,7 @@
             this.label35.BackColor = System.Drawing.Color.Transparent;
             this.label35.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label35.Location = new System.Drawing.Point(10, 490);
+            this.label35.Location = new System.Drawing.Point(10, 507);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(117, 13);
             this.label35.TabIndex = 60;
@@ -1675,8 +1686,8 @@
             // 
             this.addForwarderButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.addForwarderButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addForwarderButton.Location = new System.Drawing.Point(466, 393);
+            this.addForwarderButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addForwarderButton.Location = new System.Drawing.Point(466, 410);
             this.addForwarderButton.Name = "addForwarderButton";
             this.addForwarderButton.Size = new System.Drawing.Size(302, 70);
             this.addForwarderButton.TabIndex = 49;
@@ -1688,10 +1699,10 @@
             // 
             this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label44.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label44.Location = new System.Drawing.Point(494, 70);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(193, 21);
+            this.label44.Size = new System.Drawing.Size(189, 21);
             this.label44.TabIndex = 46;
             this.label44.Text = "Статус платника податку";
             // 
@@ -1699,18 +1710,18 @@
             // 
             this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label45.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label45.Location = new System.Drawing.Point(496, 9);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(223, 21);
+            this.label45.Size = new System.Drawing.Size(214, 21);
             this.label45.TabIndex = 45;
             this.label45.Text = "На підставі якого документу";
             // 
             // addBankDetailsForwarderButton
             // 
             this.addBankDetailsForwarderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.addBankDetailsForwarderButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addBankDetailsForwarderButton.Location = new System.Drawing.Point(253, 393);
+            this.addBankDetailsForwarderButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addBankDetailsForwarderButton.Location = new System.Drawing.Point(253, 410);
             this.addBankDetailsForwarderButton.Name = "addBankDetailsForwarderButton";
             this.addBankDetailsForwarderButton.Size = new System.Drawing.Size(207, 70);
             this.addBankDetailsForwarderButton.TabIndex = 44;
@@ -1721,8 +1732,8 @@
             // addContactForwarderButton
             // 
             this.addContactForwarderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.addContactForwarderButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addContactForwarderButton.Location = new System.Drawing.Point(8, 393);
+            this.addContactForwarderButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addContactForwarderButton.Location = new System.Drawing.Point(8, 410);
             this.addContactForwarderButton.Name = "addContactForwarderButton";
             this.addContactForwarderButton.Size = new System.Drawing.Size(237, 70);
             this.addContactForwarderButton.TabIndex = 43;
@@ -1735,7 +1746,7 @@
             this.taxPayerStatusForwarderComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.taxPayerStatusForwarderComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.taxPayerStatusForwarderComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.taxPayerStatusForwarderComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taxPayerStatusForwarderComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.taxPayerStatusForwarderComboBox.FormattingEnabled = true;
             this.taxPayerStatusForwarderComboBox.Location = new System.Drawing.Point(495, 94);
             this.taxPayerStatusForwarderComboBox.Name = "taxPayerStatusForwarderComboBox";
@@ -1749,19 +1760,19 @@
             this.commentForwarderTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.commentForwarderTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentForwarderTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.commentForwarderTextBox.Location = new System.Drawing.Point(8, 191);
             this.commentForwarderTextBox.Multiline = true;
             this.commentForwarderTextBox.Name = "commentForwarderTextBox";
             this.commentForwarderTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.commentForwarderTextBox.Size = new System.Drawing.Size(756, 189);
+            this.commentForwarderTextBox.Size = new System.Drawing.Size(756, 206);
             this.commentForwarderTextBox.TabIndex = 41;
             // 
             // physicalAddressForwarderTextBox
             // 
             this.physicalAddressForwarderTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.physicalAddressForwarderTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.physicalAddressForwarderTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.physicalAddressForwarderTextBox.Location = new System.Drawing.Point(253, 94);
             this.physicalAddressForwarderTextBox.Name = "physicalAddressForwarderTextBox";
             this.physicalAddressForwarderTextBox.Size = new System.Drawing.Size(235, 29);
@@ -1769,7 +1780,7 @@
             // 
             // geographyAddressForwarderTextBox
             // 
-            this.geographyAddressForwarderTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.geographyAddressForwarderTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.geographyAddressForwarderTextBox.Location = new System.Drawing.Point(8, 94);
             this.geographyAddressForwarderTextBox.Name = "geographyAddressForwarderTextBox";
             this.geographyAddressForwarderTextBox.Size = new System.Drawing.Size(235, 29);
@@ -1779,7 +1790,7 @@
             // 
             this.directorForwarderTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.directorForwarderTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directorForwarderTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.directorForwarderTextBox.Location = new System.Drawing.Point(252, 32);
             this.directorForwarderTextBox.Name = "directorForwarderTextBox";
             this.directorForwarderTextBox.Size = new System.Drawing.Size(235, 29);
@@ -1787,7 +1798,7 @@
             // 
             // nameForwarderTextBox
             // 
-            this.nameForwarderTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameForwarderTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameForwarderTextBox.Location = new System.Drawing.Point(8, 33);
             this.nameForwarderTextBox.Name = "nameForwarderTextBox";
             this.nameForwarderTextBox.Size = new System.Drawing.Size(235, 29);
@@ -1796,20 +1807,20 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label46.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label46.Location = new System.Drawing.Point(10, 167);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(81, 21);
+            this.label46.Size = new System.Drawing.Size(77, 21);
             this.label46.TabIndex = 36;
             this.label46.Text = "Примітка";
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label47.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label47.Location = new System.Drawing.Point(10, 70);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(135, 21);
+            this.label47.Size = new System.Drawing.Size(128, 21);
             this.label47.TabIndex = 35;
             this.label47.Text = "Поштова адреса";
             // 
@@ -1818,10 +1829,10 @@
             this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label48.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label48.Location = new System.Drawing.Point(249, 70);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(125, 21);
+            this.label48.Size = new System.Drawing.Size(121, 21);
             this.label48.TabIndex = 34;
             this.label48.Text = "Фізична адреса";
             // 
@@ -1830,20 +1841,20 @@
             this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label49.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label49.Location = new System.Drawing.Point(249, 9);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(137, 21);
+            this.label49.Size = new System.Drawing.Size(125, 21);
             this.label49.TabIndex = 33;
             this.label49.Text = "П.І.Б. Директора";
             // 
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label50.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label50.Location = new System.Drawing.Point(10, 9);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(54, 21);
+            this.label50.Size = new System.Drawing.Size(52, 21);
             this.label50.TabIndex = 32;
             this.label50.Text = "Назва";
             // 
@@ -1896,9 +1907,9 @@
             this.updateForwarderPage.Controls.Add(this.label65);
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateTaxPayerStatusAddButton);
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateWorkDocumentAddButton);
-            this.updateForwarderPage.Location = new System.Drawing.Point(4, 22);
+            this.updateForwarderPage.Location = new System.Drawing.Point(4, 5);
             this.updateForwarderPage.Name = "updateForwarderPage";
-            this.updateForwarderPage.Size = new System.Drawing.Size(776, 511);
+            this.updateForwarderPage.Size = new System.Drawing.Size(776, 528);
             this.updateForwarderPage.TabIndex = 7;
             this.updateForwarderPage.Text = "updateForwarderPage";
             this.updateForwarderPage.UseVisualStyleBackColor = true;
@@ -1906,8 +1917,8 @@
             // forwarderUpdateContactDeleteButton
             // 
             this.forwarderUpdateContactDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.forwarderUpdateContactDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.forwarderUpdateContactDeleteButton.Location = new System.Drawing.Point(6, 458);
+            this.forwarderUpdateContactDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderUpdateContactDeleteButton.Location = new System.Drawing.Point(6, 475);
             this.forwarderUpdateContactDeleteButton.Name = "forwarderUpdateContactDeleteButton";
             this.forwarderUpdateContactDeleteButton.Size = new System.Drawing.Size(238, 30);
             this.forwarderUpdateContactDeleteButton.TabIndex = 103;
@@ -1918,8 +1929,8 @@
             // forwarderUpdateBankDetailsDeleteButton
             // 
             this.forwarderUpdateBankDetailsDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.forwarderUpdateBankDetailsDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.forwarderUpdateBankDetailsDeleteButton.Location = new System.Drawing.Point(251, 459);
+            this.forwarderUpdateBankDetailsDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderUpdateBankDetailsDeleteButton.Location = new System.Drawing.Point(251, 476);
             this.forwarderUpdateBankDetailsDeleteButton.Name = "forwarderUpdateBankDetailsDeleteButton";
             this.forwarderUpdateBankDetailsDeleteButton.Size = new System.Drawing.Size(207, 30);
             this.forwarderUpdateBankDetailsDeleteButton.TabIndex = 102;
@@ -1930,8 +1941,8 @@
             // forwarderUpdateBankDetailsUpdateButton
             // 
             this.forwarderUpdateBankDetailsUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.forwarderUpdateBankDetailsUpdateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.forwarderUpdateBankDetailsUpdateButton.Location = new System.Drawing.Point(252, 423);
+            this.forwarderUpdateBankDetailsUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderUpdateBankDetailsUpdateButton.Location = new System.Drawing.Point(252, 440);
             this.forwarderUpdateBankDetailsUpdateButton.Name = "forwarderUpdateBankDetailsUpdateButton";
             this.forwarderUpdateBankDetailsUpdateButton.Size = new System.Drawing.Size(207, 30);
             this.forwarderUpdateBankDetailsUpdateButton.TabIndex = 101;
@@ -1942,8 +1953,8 @@
             // forwarderUpdateContactUpdateButton
             // 
             this.forwarderUpdateContactUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.forwarderUpdateContactUpdateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.forwarderUpdateContactUpdateButton.Location = new System.Drawing.Point(7, 423);
+            this.forwarderUpdateContactUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderUpdateContactUpdateButton.Location = new System.Drawing.Point(7, 440);
             this.forwarderUpdateContactUpdateButton.Name = "forwarderUpdateContactUpdateButton";
             this.forwarderUpdateContactUpdateButton.Size = new System.Drawing.Size(237, 30);
             this.forwarderUpdateContactUpdateButton.TabIndex = 100;
@@ -1955,8 +1966,8 @@
             // 
             this.forwarderUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.forwarderUpdateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.forwarderUpdateButton.Location = new System.Drawing.Point(465, 387);
+            this.forwarderUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderUpdateButton.Location = new System.Drawing.Point(465, 404);
             this.forwarderUpdateButton.Name = "forwarderUpdateButton";
             this.forwarderUpdateButton.Size = new System.Drawing.Size(302, 101);
             this.forwarderUpdateButton.TabIndex = 98;
@@ -1967,8 +1978,8 @@
             // forwarderUpdateBankDetailsAddButton
             // 
             this.forwarderUpdateBankDetailsAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.forwarderUpdateBankDetailsAddButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.forwarderUpdateBankDetailsAddButton.Location = new System.Drawing.Point(252, 387);
+            this.forwarderUpdateBankDetailsAddButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderUpdateBankDetailsAddButton.Location = new System.Drawing.Point(252, 404);
             this.forwarderUpdateBankDetailsAddButton.Name = "forwarderUpdateBankDetailsAddButton";
             this.forwarderUpdateBankDetailsAddButton.Size = new System.Drawing.Size(207, 30);
             this.forwarderUpdateBankDetailsAddButton.TabIndex = 97;
@@ -1979,8 +1990,8 @@
             // forwarderUpdateContactAddButton
             // 
             this.forwarderUpdateContactAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.forwarderUpdateContactAddButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.forwarderUpdateContactAddButton.Location = new System.Drawing.Point(7, 387);
+            this.forwarderUpdateContactAddButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderUpdateContactAddButton.Location = new System.Drawing.Point(7, 404);
             this.forwarderUpdateContactAddButton.Name = "forwarderUpdateContactAddButton";
             this.forwarderUpdateContactAddButton.Size = new System.Drawing.Size(237, 30);
             this.forwarderUpdateContactAddButton.TabIndex = 96;
@@ -1991,10 +2002,10 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label43.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label43.Location = new System.Drawing.Point(10, 3);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(178, 21);
+            this.label43.Size = new System.Drawing.Size(168, 21);
             this.label43.TabIndex = 93;
             this.label43.Text = "Виберіть експедитора";
             // 
@@ -2004,7 +2015,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.selectForwarderUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.selectForwarderUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.selectForwarderUpdateComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selectForwarderUpdateComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.selectForwarderUpdateComboBox.Location = new System.Drawing.Point(8, 27);
             this.selectForwarderUpdateComboBox.Name = "selectForwarderUpdateComboBox";
             this.selectForwarderUpdateComboBox.Size = new System.Drawing.Size(722, 29);
@@ -2017,10 +2028,10 @@
             // 
             this.label59.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label59.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label59.Location = new System.Drawing.Point(494, 115);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(193, 21);
+            this.label59.Size = new System.Drawing.Size(189, 21);
             this.label59.TabIndex = 79;
             this.label59.Text = "Статус платника податку";
             // 
@@ -2028,10 +2039,10 @@
             // 
             this.label60.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label60.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label60.Location = new System.Drawing.Point(496, 54);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(223, 21);
+            this.label60.Size = new System.Drawing.Size(214, 21);
             this.label60.TabIndex = 78;
             this.label60.Text = "На підставі якого документу";
             // 
@@ -2040,7 +2051,7 @@
             this.taxPayerStatusForwarderUpdateComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.taxPayerStatusForwarderUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.taxPayerStatusForwarderUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.taxPayerStatusForwarderUpdateComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taxPayerStatusForwarderUpdateComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.taxPayerStatusForwarderUpdateComboBox.FormattingEnabled = true;
             this.taxPayerStatusForwarderUpdateComboBox.Location = new System.Drawing.Point(495, 139);
             this.taxPayerStatusForwarderUpdateComboBox.Name = "taxPayerStatusForwarderUpdateComboBox";
@@ -2054,7 +2065,7 @@
             this.workDocumentForwarderUpdateComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.workDocumentForwarderUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.workDocumentForwarderUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.workDocumentForwarderUpdateComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.workDocumentForwarderUpdateComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.workDocumentForwarderUpdateComboBox.Location = new System.Drawing.Point(495, 77);
             this.workDocumentForwarderUpdateComboBox.Name = "workDocumentForwarderUpdateComboBox";
             this.workDocumentForwarderUpdateComboBox.Size = new System.Drawing.Size(235, 29);
@@ -2067,12 +2078,12 @@
             this.commentForwarderUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.commentForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.commentForwarderUpdateTextBox.Location = new System.Drawing.Point(8, 195);
             this.commentForwarderUpdateTextBox.Multiline = true;
             this.commentForwarderUpdateTextBox.Name = "commentForwarderUpdateTextBox";
             this.commentForwarderUpdateTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.commentForwarderUpdateTextBox.Size = new System.Drawing.Size(758, 185);
+            this.commentForwarderUpdateTextBox.Size = new System.Drawing.Size(758, 202);
             this.commentForwarderUpdateTextBox.TabIndex = 75;
             this.commentForwarderUpdateTextBox.TextChanged += new System.EventHandler(this.commentForwarderUpdateTextBox_TextChanged);
             // 
@@ -2080,7 +2091,7 @@
             // 
             this.physicalAddressForwarderUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.physicalAddressForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.physicalAddressForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.physicalAddressForwarderUpdateTextBox.Location = new System.Drawing.Point(253, 139);
             this.physicalAddressForwarderUpdateTextBox.Name = "physicalAddressForwarderUpdateTextBox";
             this.physicalAddressForwarderUpdateTextBox.Size = new System.Drawing.Size(235, 29);
@@ -2089,7 +2100,7 @@
             // 
             // geographyAddressForwarderUpdateTextBox
             // 
-            this.geographyAddressForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.geographyAddressForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.geographyAddressForwarderUpdateTextBox.Location = new System.Drawing.Point(8, 139);
             this.geographyAddressForwarderUpdateTextBox.Name = "geographyAddressForwarderUpdateTextBox";
             this.geographyAddressForwarderUpdateTextBox.Size = new System.Drawing.Size(235, 29);
@@ -2100,7 +2111,7 @@
             // 
             this.directorForwarderUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.directorForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directorForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.directorForwarderUpdateTextBox.Location = new System.Drawing.Point(252, 77);
             this.directorForwarderUpdateTextBox.Name = "directorForwarderUpdateTextBox";
             this.directorForwarderUpdateTextBox.Size = new System.Drawing.Size(235, 29);
@@ -2109,7 +2120,7 @@
             // 
             // nameForwarderUpdateTextBox
             // 
-            this.nameForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameForwarderUpdateTextBox.Location = new System.Drawing.Point(8, 78);
             this.nameForwarderUpdateTextBox.Name = "nameForwarderUpdateTextBox";
             this.nameForwarderUpdateTextBox.Size = new System.Drawing.Size(235, 29);
@@ -2119,20 +2130,20 @@
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label61.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label61.Location = new System.Drawing.Point(10, 171);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(81, 21);
+            this.label61.Size = new System.Drawing.Size(77, 21);
             this.label61.TabIndex = 70;
             this.label61.Text = "Примітка";
             // 
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label62.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label62.Location = new System.Drawing.Point(10, 115);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(135, 21);
+            this.label62.Size = new System.Drawing.Size(128, 21);
             this.label62.TabIndex = 69;
             this.label62.Text = "Поштова адреса";
             // 
@@ -2141,10 +2152,10 @@
             this.label63.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label63.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label63.Location = new System.Drawing.Point(249, 115);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(125, 21);
+            this.label63.Size = new System.Drawing.Size(121, 21);
             this.label63.TabIndex = 68;
             this.label63.Text = "Фізична адреса";
             // 
@@ -2153,20 +2164,20 @@
             this.label64.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label64.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label64.Location = new System.Drawing.Point(249, 54);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(137, 21);
+            this.label64.Size = new System.Drawing.Size(125, 21);
             this.label64.TabIndex = 67;
             this.label64.Text = "П.І.Б. Директора";
             // 
             // label65
             // 
             this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label65.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label65.Location = new System.Drawing.Point(10, 54);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(54, 21);
+            this.label65.Size = new System.Drawing.Size(52, 21);
             this.label65.TabIndex = 66;
             this.label65.Text = "Назва";
             // 
@@ -2197,9 +2208,9 @@
             this.deleteForwarderPage.Controls.Add(this.forwarderDeleteButton);
             this.deleteForwarderPage.Controls.Add(this.label42);
             this.deleteForwarderPage.Controls.Add(this.forwarderDeleteComboBox);
-            this.deleteForwarderPage.Location = new System.Drawing.Point(4, 22);
+            this.deleteForwarderPage.Location = new System.Drawing.Point(4, 5);
             this.deleteForwarderPage.Name = "deleteForwarderPage";
-            this.deleteForwarderPage.Size = new System.Drawing.Size(776, 511);
+            this.deleteForwarderPage.Size = new System.Drawing.Size(776, 528);
             this.deleteForwarderPage.TabIndex = 8;
             this.deleteForwarderPage.Text = "deleteForwarderPage";
             this.deleteForwarderPage.UseVisualStyleBackColor = true;
@@ -2209,8 +2220,8 @@
             this.forwarderDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.forwarderDeleteButton.Enabled = false;
-            this.forwarderDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.forwarderDeleteButton.Location = new System.Drawing.Point(466, 433);
+            this.forwarderDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderDeleteButton.Location = new System.Drawing.Point(466, 450);
             this.forwarderDeleteButton.Name = "forwarderDeleteButton";
             this.forwarderDeleteButton.Size = new System.Drawing.Size(302, 70);
             this.forwarderDeleteButton.TabIndex = 69;
@@ -2223,10 +2234,10 @@
             this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label42.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label42.Location = new System.Drawing.Point(5, 7);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(178, 21);
+            this.label42.Size = new System.Drawing.Size(168, 21);
             this.label42.TabIndex = 68;
             this.label42.Text = "Виберіть експедитора";
             // 
@@ -2236,7 +2247,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.forwarderDeleteComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.forwarderDeleteComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.forwarderDeleteComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderDeleteComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.forwarderDeleteComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.forwarderDeleteComboBox.Location = new System.Drawing.Point(3, 31);
             this.forwarderDeleteComboBox.Name = "forwarderDeleteComboBox";
@@ -2248,6 +2259,11 @@
             // 
             // showTransporterPage
             // 
+            this.showTransporterPage.Controls.Add(this.label16);
+            this.showTransporterPage.Controls.Add(this.label12);
+            this.showTransporterPage.Controls.Add(this.label13);
+            this.showTransporterPage.Controls.Add(this.label14);
+            this.showTransporterPage.Controls.Add(this.label15);
             this.showTransporterPage.Controls.Add(this.transporterShowAdditionalDetailsButton);
             this.showTransporterPage.Controls.Add(this.transporterShowCountryDataGridView);
             this.showTransporterPage.Controls.Add(this.transporterShowFilterSelectButton);
@@ -2255,9 +2271,9 @@
             this.showTransporterPage.Controls.Add(this.transporterShowCommentRichTextBox);
             this.showTransporterPage.Controls.Add(this.transporterShowContactsDataGridView);
             this.showTransporterPage.Controls.Add(this.transporterShowDataGridView);
-            this.showTransporterPage.Location = new System.Drawing.Point(4, 22);
+            this.showTransporterPage.Location = new System.Drawing.Point(4, 5);
             this.showTransporterPage.Name = "showTransporterPage";
-            this.showTransporterPage.Size = new System.Drawing.Size(776, 511);
+            this.showTransporterPage.Size = new System.Drawing.Size(776, 528);
             this.showTransporterPage.TabIndex = 9;
             this.showTransporterPage.Text = "showTransporterPage";
             this.showTransporterPage.UseVisualStyleBackColor = true;
@@ -2266,7 +2282,7 @@
             // 
             this.transporterShowAdditionalDetailsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterShowAdditionalDetailsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterShowAdditionalDetailsButton.Location = new System.Drawing.Point(197, 455);
+            this.transporterShowAdditionalDetailsButton.Location = new System.Drawing.Point(197, 472);
             this.transporterShowAdditionalDetailsButton.Name = "transporterShowAdditionalDetailsButton";
             this.transporterShowAdditionalDetailsButton.Size = new System.Drawing.Size(285, 50);
             this.transporterShowAdditionalDetailsButton.TabIndex = 38;
@@ -2284,14 +2300,14 @@
             this.transporterShowCountryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.transporterShowCountryDataGridView.Location = new System.Drawing.Point(586, 24);
             this.transporterShowCountryDataGridView.Name = "transporterShowCountryDataGridView";
-            this.transporterShowCountryDataGridView.Size = new System.Drawing.Size(190, 160);
+            this.transporterShowCountryDataGridView.Size = new System.Drawing.Size(190, 177);
             this.transporterShowCountryDataGridView.TabIndex = 37;
             // 
             // transporterShowFilterSelectButton
             // 
             this.transporterShowFilterSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterShowFilterSelectButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterShowFilterSelectButton.Location = new System.Drawing.Point(488, 455);
+            this.transporterShowFilterSelectButton.Location = new System.Drawing.Point(488, 472);
             this.transporterShowFilterSelectButton.Name = "transporterShowFilterSelectButton";
             this.transporterShowFilterSelectButton.Size = new System.Drawing.Size(285, 50);
             this.transporterShowFilterSelectButton.TabIndex = 33;
@@ -2307,7 +2323,7 @@
             this.transporterShowBankDetailsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.transporterShowBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.transporterShowBankDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.transporterShowBankDetailsDataGridView.Location = new System.Drawing.Point(0, 210);
+            this.transporterShowBankDetailsDataGridView.Location = new System.Drawing.Point(0, 227);
             this.transporterShowBankDetailsDataGridView.Name = "transporterShowBankDetailsDataGridView";
             this.transporterShowBankDetailsDataGridView.Size = new System.Drawing.Size(780, 55);
             this.transporterShowBankDetailsDataGridView.TabIndex = 23;
@@ -2316,7 +2332,7 @@
             // 
             this.transporterShowCommentRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterShowCommentRichTextBox.Location = new System.Drawing.Point(0, 395);
+            this.transporterShowCommentRichTextBox.Location = new System.Drawing.Point(0, 412);
             this.transporterShowCommentRichTextBox.Name = "transporterShowCommentRichTextBox";
             this.transporterShowCommentRichTextBox.ReadOnly = true;
             this.transporterShowCommentRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
@@ -2332,7 +2348,7 @@
             this.transporterShowContactsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.transporterShowContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.transporterShowContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.transporterShowContactsDataGridView.Location = new System.Drawing.Point(0, 289);
+            this.transporterShowContactsDataGridView.Location = new System.Drawing.Point(0, 306);
             this.transporterShowContactsDataGridView.Name = "transporterShowContactsDataGridView";
             this.transporterShowContactsDataGridView.Size = new System.Drawing.Size(776, 81);
             this.transporterShowContactsDataGridView.TabIndex = 19;
@@ -2348,7 +2364,7 @@
             this.transporterShowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.transporterShowDataGridView.Location = new System.Drawing.Point(0, 24);
             this.transporterShowDataGridView.Name = "transporterShowDataGridView";
-            this.transporterShowDataGridView.Size = new System.Drawing.Size(579, 160);
+            this.transporterShowDataGridView.Size = new System.Drawing.Size(579, 177);
             this.transporterShowDataGridView.TabIndex = 17;
             this.transporterShowDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.transporterShowDataGridView_CellMouseClick);
             // 
@@ -2389,9 +2405,9 @@
             this.addTransporterPage.Controls.Add(this.label78);
             this.addTransporterPage.Controls.Add(this.transporterAddTaxPayerStatusAddButton);
             this.addTransporterPage.Controls.Add(this.transporterAddWorkDocumentAddButton);
-            this.addTransporterPage.Location = new System.Drawing.Point(4, 22);
+            this.addTransporterPage.Location = new System.Drawing.Point(4, 5);
             this.addTransporterPage.Name = "addTransporterPage";
-            this.addTransporterPage.Size = new System.Drawing.Size(776, 511);
+            this.addTransporterPage.Size = new System.Drawing.Size(776, 528);
             this.addTransporterPage.TabIndex = 10;
             this.addTransporterPage.Text = "addTransporterPage";
             this.addTransporterPage.UseVisualStyleBackColor = true;
@@ -2400,6 +2416,7 @@
             // 
             this.filtersTransporterAddCheckedListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.filtersTransporterAddCheckedListBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.filtersTransporterAddCheckedListBox.FormattingEnabled = true;
             this.filtersTransporterAddCheckedListBox.Items.AddRange(new object[] {
             "Експедитор",
@@ -2411,11 +2428,12 @@
             this.filtersTransporterAddCheckedListBox.Location = new System.Drawing.Point(7, 201);
             this.filtersTransporterAddCheckedListBox.MultiColumn = true;
             this.filtersTransporterAddCheckedListBox.Name = "filtersTransporterAddCheckedListBox";
-            this.filtersTransporterAddCheckedListBox.Size = new System.Drawing.Size(757, 21);
+            this.filtersTransporterAddCheckedListBox.Size = new System.Drawing.Size(757, 28);
             this.filtersTransporterAddCheckedListBox.TabIndex = 76;
             // 
             // faxTransporterAddCheckBox
             // 
+            this.faxTransporterAddCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.faxTransporterAddCheckBox.Location = new System.Drawing.Point(180, 181);
             this.faxTransporterAddCheckBox.Name = "faxTransporterAddCheckBox";
             this.faxTransporterAddCheckBox.Size = new System.Drawing.Size(16, 18);
@@ -2425,6 +2443,7 @@
             // 
             // originalTransporterAddCheckBox
             // 
+            this.originalTransporterAddCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.originalTransporterAddCheckBox.Location = new System.Drawing.Point(94, 180);
             this.originalTransporterAddCheckBox.Name = "originalTransporterAddCheckBox";
             this.originalTransporterAddCheckBox.Size = new System.Drawing.Size(14, 18);
@@ -2435,28 +2454,28 @@
             // label81
             // 
             this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label81.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label81.Location = new System.Drawing.Point(128, 177);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(46, 21);
+            this.label81.Size = new System.Drawing.Size(45, 21);
             this.label81.TabIndex = 103;
             this.label81.Text = "Факс";
             // 
             // label82
             // 
             this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label82.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label82.Location = new System.Drawing.Point(10, 177);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(78, 21);
+            this.label82.Size = new System.Drawing.Size(75, 21);
             this.label82.TabIndex = 102;
             this.label82.Text = "Оригінал";
             // 
             // transporterAddCountryAndVehicleSelectButton
             // 
             this.transporterAddCountryAndVehicleSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.transporterAddCountryAndVehicleSelectButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterAddCountryAndVehicleSelectButton.Location = new System.Drawing.Point(8, 415);
+            this.transporterAddCountryAndVehicleSelectButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterAddCountryAndVehicleSelectButton.Location = new System.Drawing.Point(8, 432);
             this.transporterAddCountryAndVehicleSelectButton.Name = "transporterAddCountryAndVehicleSelectButton";
             this.transporterAddCountryAndVehicleSelectButton.Size = new System.Drawing.Size(182, 70);
             this.transporterAddCountryAndVehicleSelectButton.TabIndex = 77;
@@ -2480,7 +2499,7 @@
             // shortNameTransporterAddTextBox
             // 
             this.shortNameTransporterAddTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.shortNameTransporterAddTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.shortNameTransporterAddTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.shortNameTransporterAddTextBox.Location = new System.Drawing.Point(249, 33);
             this.shortNameTransporterAddTextBox.Name = "shortNameTransporterAddTextBox";
             this.shortNameTransporterAddTextBox.Size = new System.Drawing.Size(239, 29);
@@ -2490,10 +2509,10 @@
             // 
             this.label80.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label80.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label80.Location = new System.Drawing.Point(250, 9);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(138, 21);
+            this.label80.Size = new System.Drawing.Size(133, 21);
             this.label80.TabIndex = 88;
             this.label80.Text = "Скорочена назва";
             // 
@@ -2502,7 +2521,7 @@
             this.workDocumentTransporterAddComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.workDocumentTransporterAddComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.workDocumentTransporterAddComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.workDocumentTransporterAddComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.workDocumentTransporterAddComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.workDocumentTransporterAddComboBox.Location = new System.Drawing.Point(495, 89);
             this.workDocumentTransporterAddComboBox.Name = "workDocumentTransporterAddComboBox";
             this.workDocumentTransporterAddComboBox.Size = new System.Drawing.Size(234, 29);
@@ -2517,7 +2536,7 @@
             this.label57.BackColor = System.Drawing.Color.Transparent;
             this.label57.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label57.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label57.Location = new System.Drawing.Point(10, 490);
+            this.label57.Location = new System.Drawing.Point(10, 507);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(117, 13);
             this.label57.TabIndex = 86;
@@ -2604,8 +2623,8 @@
             // 
             this.transporterAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterAddButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterAddButton.Location = new System.Drawing.Point(572, 415);
+            this.transporterAddButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterAddButton.Location = new System.Drawing.Point(572, 432);
             this.transporterAddButton.Name = "transporterAddButton";
             this.transporterAddButton.Size = new System.Drawing.Size(193, 70);
             this.transporterAddButton.TabIndex = 80;
@@ -2617,10 +2636,10 @@
             // 
             this.label72.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label72.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label72.Location = new System.Drawing.Point(498, 121);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(193, 21);
+            this.label72.Size = new System.Drawing.Size(189, 21);
             this.label72.TabIndex = 76;
             this.label72.Text = "Статус платника податку";
             // 
@@ -2628,18 +2647,18 @@
             // 
             this.label73.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label73.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label73.Location = new System.Drawing.Point(498, 65);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(223, 21);
+            this.label73.Size = new System.Drawing.Size(214, 21);
             this.label73.TabIndex = 75;
             this.label73.Text = "На підставі якого документу";
             // 
             // transporterAddBankDetailsAddButton
             // 
             this.transporterAddBankDetailsAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.transporterAddBankDetailsAddButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterAddBankDetailsAddButton.Location = new System.Drawing.Point(384, 415);
+            this.transporterAddBankDetailsAddButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterAddBankDetailsAddButton.Location = new System.Drawing.Point(384, 432);
             this.transporterAddBankDetailsAddButton.Name = "transporterAddBankDetailsAddButton";
             this.transporterAddBankDetailsAddButton.Size = new System.Drawing.Size(182, 70);
             this.transporterAddBankDetailsAddButton.TabIndex = 79;
@@ -2650,8 +2669,8 @@
             // transporterAddContactAddButton
             // 
             this.transporterAddContactAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.transporterAddContactAddButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterAddContactAddButton.Location = new System.Drawing.Point(196, 415);
+            this.transporterAddContactAddButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterAddContactAddButton.Location = new System.Drawing.Point(196, 432);
             this.transporterAddContactAddButton.Name = "transporterAddContactAddButton";
             this.transporterAddContactAddButton.Size = new System.Drawing.Size(182, 70);
             this.transporterAddContactAddButton.TabIndex = 78;
@@ -2664,7 +2683,7 @@
             this.taxPayerStatusTransporterAddComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.taxPayerStatusTransporterAddComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.taxPayerStatusTransporterAddComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.taxPayerStatusTransporterAddComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taxPayerStatusTransporterAddComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.taxPayerStatusTransporterAddComboBox.FormattingEnabled = true;
             this.taxPayerStatusTransporterAddComboBox.Location = new System.Drawing.Point(495, 145);
             this.taxPayerStatusTransporterAddComboBox.Name = "taxPayerStatusTransporterAddComboBox";
@@ -2678,19 +2697,19 @@
             this.commentTransporterAddTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.commentTransporterAddTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentTransporterAddTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.commentTransporterAddTextBox.Location = new System.Drawing.Point(8, 249);
             this.commentTransporterAddTextBox.Multiline = true;
             this.commentTransporterAddTextBox.Name = "commentTransporterAddTextBox";
             this.commentTransporterAddTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.commentTransporterAddTextBox.Size = new System.Drawing.Size(756, 160);
+            this.commentTransporterAddTextBox.Size = new System.Drawing.Size(756, 177);
             this.commentTransporterAddTextBox.TabIndex = 72;
             // 
             // physicalAddressTransporterAddTextBox
             // 
             this.physicalAddressTransporterAddTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.physicalAddressTransporterAddTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.physicalAddressTransporterAddTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.physicalAddressTransporterAddTextBox.Location = new System.Drawing.Point(8, 145);
             this.physicalAddressTransporterAddTextBox.Name = "physicalAddressTransporterAddTextBox";
             this.physicalAddressTransporterAddTextBox.Size = new System.Drawing.Size(480, 29);
@@ -2700,7 +2719,7 @@
             // 
             this.geographyAddressTransporterAddTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.geographyAddressTransporterAddTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.geographyAddressTransporterAddTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.geographyAddressTransporterAddTextBox.Location = new System.Drawing.Point(8, 89);
             this.geographyAddressTransporterAddTextBox.Name = "geographyAddressTransporterAddTextBox";
             this.geographyAddressTransporterAddTextBox.Size = new System.Drawing.Size(480, 29);
@@ -2709,7 +2728,7 @@
             // directorTransporterAddTextBox
             // 
             this.directorTransporterAddTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.directorTransporterAddTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directorTransporterAddTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.directorTransporterAddTextBox.Location = new System.Drawing.Point(494, 33);
             this.directorTransporterAddTextBox.Name = "directorTransporterAddTextBox";
             this.directorTransporterAddTextBox.Size = new System.Drawing.Size(270, 29);
@@ -2719,7 +2738,7 @@
             // 
             this.nameTransporterAddTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.nameTransporterAddTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameTransporterAddTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameTransporterAddTextBox.Location = new System.Drawing.Point(8, 33);
             this.nameTransporterAddTextBox.Name = "nameTransporterAddTextBox";
             this.nameTransporterAddTextBox.Size = new System.Drawing.Size(235, 29);
@@ -2728,20 +2747,20 @@
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label74.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label74.Location = new System.Drawing.Point(10, 225);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(81, 21);
+            this.label74.Size = new System.Drawing.Size(77, 21);
             this.label74.TabIndex = 66;
             this.label74.Text = "Примітка";
             // 
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label75.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label75.Location = new System.Drawing.Point(10, 65);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(135, 21);
+            this.label75.Size = new System.Drawing.Size(128, 21);
             this.label75.TabIndex = 65;
             this.label75.Text = "Поштова адреса";
             // 
@@ -2750,10 +2769,10 @@
             this.label76.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label76.AutoSize = true;
-            this.label76.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label76.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label76.Location = new System.Drawing.Point(10, 121);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(125, 21);
+            this.label76.Size = new System.Drawing.Size(121, 21);
             this.label76.TabIndex = 64;
             this.label76.Text = "Фізична адреса";
             // 
@@ -2761,20 +2780,20 @@
             // 
             this.label77.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label77.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label77.Location = new System.Drawing.Point(498, 9);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(137, 21);
+            this.label77.Size = new System.Drawing.Size(125, 21);
             this.label77.TabIndex = 63;
             this.label77.Text = "П.І.Б. Директора";
             // 
             // label78
             // 
             this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label78.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label78.Location = new System.Drawing.Point(10, 9);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(54, 21);
+            this.label78.Size = new System.Drawing.Size(52, 21);
             this.label78.TabIndex = 100;
             this.label78.Text = "Назва";
             // 
@@ -2802,6 +2821,7 @@
             // 
             // updateTransporterPage
             // 
+            this.updateTransporterPage.Controls.Add(this.filtersTransporterUpdateCheckedListBox);
             this.updateTransporterPage.Controls.Add(this.transporterUpdateCountriesAndVehicleUpdateButton);
             this.updateTransporterPage.Controls.Add(this.commentTransporterUpdateTextBox);
             this.updateTransporterPage.Controls.Add(this.label100);
@@ -2814,7 +2834,6 @@
             this.updateTransporterPage.Controls.Add(this.transporterUpdateContactAddButton);
             this.updateTransporterPage.Controls.Add(this.label99);
             this.updateTransporterPage.Controls.Add(this.selectTransporterUpdateComboBox);
-            this.updateTransporterPage.Controls.Add(this.filtersTransporterUpdateCheckedListBox);
             this.updateTransporterPage.Controls.Add(this.faxTransporterUpdateCheckBox);
             this.updateTransporterPage.Controls.Add(this.originalTransporterUpdateCheckBox);
             this.updateTransporterPage.Controls.Add(this.label83);
@@ -2835,9 +2854,9 @@
             this.updateTransporterPage.Controls.Add(this.label98);
             this.updateTransporterPage.Controls.Add(this.transporterUpdateTaxPayerStatusAddButton);
             this.updateTransporterPage.Controls.Add(this.transporterUpdateWorkDocumentAddButton);
-            this.updateTransporterPage.Location = new System.Drawing.Point(4, 22);
+            this.updateTransporterPage.Location = new System.Drawing.Point(4, 5);
             this.updateTransporterPage.Name = "updateTransporterPage";
-            this.updateTransporterPage.Size = new System.Drawing.Size(776, 511);
+            this.updateTransporterPage.Size = new System.Drawing.Size(776, 528);
             this.updateTransporterPage.TabIndex = 11;
             this.updateTransporterPage.Text = "updateTransporterPage";
             this.updateTransporterPage.UseVisualStyleBackColor = true;
@@ -2845,8 +2864,8 @@
             // transporterUpdateCountriesAndVehicleUpdateButton
             // 
             this.transporterUpdateCountriesAndVehicleUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.transporterUpdateCountriesAndVehicleUpdateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateCountriesAndVehicleUpdateButton.Location = new System.Drawing.Point(7, 366);
+            this.transporterUpdateCountriesAndVehicleUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterUpdateCountriesAndVehicleUpdateButton.Location = new System.Drawing.Point(7, 383);
             this.transporterUpdateCountriesAndVehicleUpdateButton.Name = "transporterUpdateCountriesAndVehicleUpdateButton";
             this.transporterUpdateCountriesAndVehicleUpdateButton.Size = new System.Drawing.Size(237, 30);
             this.transporterUpdateCountriesAndVehicleUpdateButton.TabIndex = 145;
@@ -2859,22 +2878,22 @@
             this.commentTransporterUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.commentTransporterUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentTransporterUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.commentTransporterUpdateTextBox.Location = new System.Drawing.Point(10, 297);
             this.commentTransporterUpdateTextBox.Multiline = true;
             this.commentTransporterUpdateTextBox.Name = "commentTransporterUpdateTextBox";
             this.commentTransporterUpdateTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.commentTransporterUpdateTextBox.Size = new System.Drawing.Size(756, 63);
+            this.commentTransporterUpdateTextBox.Size = new System.Drawing.Size(756, 80);
             this.commentTransporterUpdateTextBox.TabIndex = 144;
             this.commentTransporterUpdateTextBox.TextChanged += new System.EventHandler(this.commentTransporterUpdateTextBox_TextChanged);
             // 
             // label100
             // 
             this.label100.AutoSize = true;
-            this.label100.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label100.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label100.Location = new System.Drawing.Point(12, 273);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(81, 21);
+            this.label100.Size = new System.Drawing.Size(77, 21);
             this.label100.TabIndex = 143;
             this.label100.Text = "Примітка";
             // 
@@ -2882,8 +2901,8 @@
             // 
             this.transporterUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterUpdateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateButton.Location = new System.Drawing.Point(466, 402);
+            this.transporterUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterUpdateButton.Location = new System.Drawing.Point(466, 419);
             this.transporterUpdateButton.Name = "transporterUpdateButton";
             this.transporterUpdateButton.Size = new System.Drawing.Size(302, 101);
             this.transporterUpdateButton.TabIndex = 142;
@@ -2894,8 +2913,8 @@
             // transporterUpdateContactDeleteButton
             // 
             this.transporterUpdateContactDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.transporterUpdateContactDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateContactDeleteButton.Location = new System.Drawing.Point(7, 473);
+            this.transporterUpdateContactDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterUpdateContactDeleteButton.Location = new System.Drawing.Point(7, 490);
             this.transporterUpdateContactDeleteButton.Name = "transporterUpdateContactDeleteButton";
             this.transporterUpdateContactDeleteButton.Size = new System.Drawing.Size(238, 30);
             this.transporterUpdateContactDeleteButton.TabIndex = 141;
@@ -2906,8 +2925,8 @@
             // transporterUpdateBankDetailsDeleteButton
             // 
             this.transporterUpdateBankDetailsDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.transporterUpdateBankDetailsDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateBankDetailsDeleteButton.Location = new System.Drawing.Point(252, 474);
+            this.transporterUpdateBankDetailsDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterUpdateBankDetailsDeleteButton.Location = new System.Drawing.Point(252, 491);
             this.transporterUpdateBankDetailsDeleteButton.Name = "transporterUpdateBankDetailsDeleteButton";
             this.transporterUpdateBankDetailsDeleteButton.Size = new System.Drawing.Size(207, 30);
             this.transporterUpdateBankDetailsDeleteButton.TabIndex = 140;
@@ -2918,8 +2937,8 @@
             // transporterUpdateBankDetailsUpdateButton
             // 
             this.transporterUpdateBankDetailsUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.transporterUpdateBankDetailsUpdateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateBankDetailsUpdateButton.Location = new System.Drawing.Point(253, 438);
+            this.transporterUpdateBankDetailsUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterUpdateBankDetailsUpdateButton.Location = new System.Drawing.Point(253, 455);
             this.transporterUpdateBankDetailsUpdateButton.Name = "transporterUpdateBankDetailsUpdateButton";
             this.transporterUpdateBankDetailsUpdateButton.Size = new System.Drawing.Size(207, 30);
             this.transporterUpdateBankDetailsUpdateButton.TabIndex = 139;
@@ -2930,8 +2949,8 @@
             // transporterUpdateContactUpdateButton
             // 
             this.transporterUpdateContactUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.transporterUpdateContactUpdateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateContactUpdateButton.Location = new System.Drawing.Point(8, 438);
+            this.transporterUpdateContactUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterUpdateContactUpdateButton.Location = new System.Drawing.Point(8, 455);
             this.transporterUpdateContactUpdateButton.Name = "transporterUpdateContactUpdateButton";
             this.transporterUpdateContactUpdateButton.Size = new System.Drawing.Size(237, 30);
             this.transporterUpdateContactUpdateButton.TabIndex = 138;
@@ -2942,8 +2961,8 @@
             // transporterUpdateBankDetailsAddButton
             // 
             this.transporterUpdateBankDetailsAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.transporterUpdateBankDetailsAddButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateBankDetailsAddButton.Location = new System.Drawing.Point(253, 402);
+            this.transporterUpdateBankDetailsAddButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterUpdateBankDetailsAddButton.Location = new System.Drawing.Point(253, 419);
             this.transporterUpdateBankDetailsAddButton.Name = "transporterUpdateBankDetailsAddButton";
             this.transporterUpdateBankDetailsAddButton.Size = new System.Drawing.Size(207, 30);
             this.transporterUpdateBankDetailsAddButton.TabIndex = 137;
@@ -2954,8 +2973,8 @@
             // transporterUpdateContactAddButton
             // 
             this.transporterUpdateContactAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.transporterUpdateContactAddButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateContactAddButton.Location = new System.Drawing.Point(8, 402);
+            this.transporterUpdateContactAddButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterUpdateContactAddButton.Location = new System.Drawing.Point(8, 419);
             this.transporterUpdateContactAddButton.Name = "transporterUpdateContactAddButton";
             this.transporterUpdateContactAddButton.Size = new System.Drawing.Size(237, 30);
             this.transporterUpdateContactAddButton.TabIndex = 136;
@@ -2966,10 +2985,10 @@
             // label99
             // 
             this.label99.AutoSize = true;
-            this.label99.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label99.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label99.Location = new System.Drawing.Point(13, 5);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(173, 21);
+            this.label99.Size = new System.Drawing.Size(164, 21);
             this.label99.TabIndex = 135;
             this.label99.Text = "Виберіть перевізника";
             // 
@@ -2979,7 +2998,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.selectTransporterUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.selectTransporterUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.selectTransporterUpdateComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selectTransporterUpdateComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.selectTransporterUpdateComboBox.Location = new System.Drawing.Point(11, 29);
             this.selectTransporterUpdateComboBox.Name = "selectTransporterUpdateComboBox";
             this.selectTransporterUpdateComboBox.Size = new System.Drawing.Size(755, 29);
@@ -2992,6 +3011,7 @@
             // 
             this.filtersTransporterUpdateCheckedListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.filtersTransporterUpdateCheckedListBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.filtersTransporterUpdateCheckedListBox.FormattingEnabled = true;
             this.filtersTransporterUpdateCheckedListBox.Items.AddRange(new object[] {
             "Експедитор",
@@ -3000,15 +3020,16 @@
             "ЕКМТ",
             "Збірний",
             "АД"});
-            this.filtersTransporterUpdateCheckedListBox.Location = new System.Drawing.Point(9, 249);
+            this.filtersTransporterUpdateCheckedListBox.Location = new System.Drawing.Point(9, 246);
             this.filtersTransporterUpdateCheckedListBox.MultiColumn = true;
             this.filtersTransporterUpdateCheckedListBox.Name = "filtersTransporterUpdateCheckedListBox";
-            this.filtersTransporterUpdateCheckedListBox.Size = new System.Drawing.Size(757, 21);
+            this.filtersTransporterUpdateCheckedListBox.Size = new System.Drawing.Size(757, 28);
             this.filtersTransporterUpdateCheckedListBox.TabIndex = 118;
             this.filtersTransporterUpdateCheckedListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.filtersTransporterUpdateCheckedListBox_MouseClick);
             // 
             // faxTransporterUpdateCheckBox
             // 
+            this.faxTransporterUpdateCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.faxTransporterUpdateCheckBox.Location = new System.Drawing.Point(182, 229);
             this.faxTransporterUpdateCheckBox.Name = "faxTransporterUpdateCheckBox";
             this.faxTransporterUpdateCheckBox.Size = new System.Drawing.Size(16, 18);
@@ -3018,6 +3039,7 @@
             // 
             // originalTransporterUpdateCheckBox
             // 
+            this.originalTransporterUpdateCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.originalTransporterUpdateCheckBox.Location = new System.Drawing.Point(96, 228);
             this.originalTransporterUpdateCheckBox.Name = "originalTransporterUpdateCheckBox";
             this.originalTransporterUpdateCheckBox.Size = new System.Drawing.Size(14, 18);
@@ -3028,27 +3050,27 @@
             // label83
             // 
             this.label83.AutoSize = true;
-            this.label83.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label83.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label83.Location = new System.Drawing.Point(130, 225);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(46, 21);
+            this.label83.Size = new System.Drawing.Size(45, 21);
             this.label83.TabIndex = 132;
             this.label83.Text = "Факс";
             // 
             // label84
             // 
             this.label84.AutoSize = true;
-            this.label84.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label84.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label84.Location = new System.Drawing.Point(12, 225);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(78, 21);
+            this.label84.Size = new System.Drawing.Size(75, 21);
             this.label84.TabIndex = 131;
             this.label84.Text = "Оригінал";
             // 
             // shortNameTransporterUpdateTextBox
             // 
             this.shortNameTransporterUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.shortNameTransporterUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.shortNameTransporterUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.shortNameTransporterUpdateTextBox.Location = new System.Drawing.Point(251, 81);
             this.shortNameTransporterUpdateTextBox.Name = "shortNameTransporterUpdateTextBox";
             this.shortNameTransporterUpdateTextBox.Size = new System.Drawing.Size(239, 29);
@@ -3059,10 +3081,10 @@
             // 
             this.label86.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label86.AutoSize = true;
-            this.label86.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label86.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label86.Location = new System.Drawing.Point(252, 57);
             this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(138, 21);
+            this.label86.Size = new System.Drawing.Size(133, 21);
             this.label86.TabIndex = 128;
             this.label86.Text = "Скорочена назва";
             // 
@@ -3071,7 +3093,7 @@
             this.workDocumentTransporterUpdateComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.workDocumentTransporterUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.workDocumentTransporterUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.workDocumentTransporterUpdateComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.workDocumentTransporterUpdateComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.workDocumentTransporterUpdateComboBox.Location = new System.Drawing.Point(497, 137);
             this.workDocumentTransporterUpdateComboBox.Name = "workDocumentTransporterUpdateComboBox";
             this.workDocumentTransporterUpdateComboBox.Size = new System.Drawing.Size(234, 29);
@@ -3083,10 +3105,10 @@
             // 
             this.label93.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label93.AutoSize = true;
-            this.label93.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label93.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label93.Location = new System.Drawing.Point(500, 169);
             this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(193, 21);
+            this.label93.Size = new System.Drawing.Size(189, 21);
             this.label93.TabIndex = 119;
             this.label93.Text = "Статус платника податку";
             // 
@@ -3094,10 +3116,10 @@
             // 
             this.label94.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label94.AutoSize = true;
-            this.label94.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label94.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label94.Location = new System.Drawing.Point(500, 113);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(223, 21);
+            this.label94.Size = new System.Drawing.Size(214, 21);
             this.label94.TabIndex = 117;
             this.label94.Text = "На підставі якого документу";
             // 
@@ -3106,7 +3128,7 @@
             this.taxPayerStatusTransporterUpdateComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.taxPayerStatusTransporterUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.taxPayerStatusTransporterUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.taxPayerStatusTransporterUpdateComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taxPayerStatusTransporterUpdateComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.taxPayerStatusTransporterUpdateComboBox.FormattingEnabled = true;
             this.taxPayerStatusTransporterUpdateComboBox.Location = new System.Drawing.Point(497, 193);
             this.taxPayerStatusTransporterUpdateComboBox.Name = "taxPayerStatusTransporterUpdateComboBox";
@@ -3119,7 +3141,7 @@
             // 
             this.physicalAddressTransporterUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.physicalAddressTransporterUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.physicalAddressTransporterUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.physicalAddressTransporterUpdateTextBox.Location = new System.Drawing.Point(10, 193);
             this.physicalAddressTransporterUpdateTextBox.Name = "physicalAddressTransporterUpdateTextBox";
             this.physicalAddressTransporterUpdateTextBox.Size = new System.Drawing.Size(480, 29);
@@ -3130,7 +3152,7 @@
             // 
             this.geographyAddressTransporterUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.geographyAddressTransporterUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.geographyAddressTransporterUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.geographyAddressTransporterUpdateTextBox.Location = new System.Drawing.Point(10, 137);
             this.geographyAddressTransporterUpdateTextBox.Name = "geographyAddressTransporterUpdateTextBox";
             this.geographyAddressTransporterUpdateTextBox.Size = new System.Drawing.Size(480, 29);
@@ -3140,7 +3162,7 @@
             // directorTransporterUpdateTextBox
             // 
             this.directorTransporterUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.directorTransporterUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directorTransporterUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.directorTransporterUpdateTextBox.Location = new System.Drawing.Point(496, 81);
             this.directorTransporterUpdateTextBox.Name = "directorTransporterUpdateTextBox";
             this.directorTransporterUpdateTextBox.Size = new System.Drawing.Size(270, 29);
@@ -3151,7 +3173,7 @@
             // 
             this.nameTransporterUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.nameTransporterUpdateTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameTransporterUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameTransporterUpdateTextBox.Location = new System.Drawing.Point(10, 81);
             this.nameTransporterUpdateTextBox.Name = "nameTransporterUpdateTextBox";
             this.nameTransporterUpdateTextBox.Size = new System.Drawing.Size(235, 29);
@@ -3161,10 +3183,10 @@
             // label95
             // 
             this.label95.AutoSize = true;
-            this.label95.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label95.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label95.Location = new System.Drawing.Point(12, 113);
             this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(135, 21);
+            this.label95.Size = new System.Drawing.Size(128, 21);
             this.label95.TabIndex = 108;
             this.label95.Text = "Поштова адреса";
             // 
@@ -3173,10 +3195,10 @@
             this.label96.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label96.AutoSize = true;
-            this.label96.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label96.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label96.Location = new System.Drawing.Point(12, 169);
             this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(125, 21);
+            this.label96.Size = new System.Drawing.Size(121, 21);
             this.label96.TabIndex = 107;
             this.label96.Text = "Фізична адреса";
             // 
@@ -3184,20 +3206,20 @@
             // 
             this.label97.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label97.AutoSize = true;
-            this.label97.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label97.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label97.Location = new System.Drawing.Point(500, 57);
             this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(137, 21);
+            this.label97.Size = new System.Drawing.Size(125, 21);
             this.label97.TabIndex = 106;
             this.label97.Text = "П.І.Б. Директора";
             // 
             // label98
             // 
             this.label98.AutoSize = true;
-            this.label98.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label98.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label98.Location = new System.Drawing.Point(12, 57);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(54, 21);
+            this.label98.Size = new System.Drawing.Size(52, 21);
             this.label98.TabIndex = 130;
             this.label98.Text = "Назва";
             // 
@@ -3228,12 +3250,54 @@
             this.deleteTransporterPage.Controls.Add(this.transporterDeleteButton);
             this.deleteTransporterPage.Controls.Add(this.label11);
             this.deleteTransporterPage.Controls.Add(this.transporterDeleteComboBox);
-            this.deleteTransporterPage.Location = new System.Drawing.Point(4, 22);
+            this.deleteTransporterPage.Location = new System.Drawing.Point(4, 5);
             this.deleteTransporterPage.Name = "deleteTransporterPage";
-            this.deleteTransporterPage.Size = new System.Drawing.Size(776, 511);
+            this.deleteTransporterPage.Size = new System.Drawing.Size(776, 528);
             this.deleteTransporterPage.TabIndex = 12;
             this.deleteTransporterPage.Text = "deleteTransporterPage";
             this.deleteTransporterPage.UseVisualStyleBackColor = true;
+            // 
+            // transporterDeleteButton
+            // 
+            this.transporterDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterDeleteButton.Enabled = false;
+            this.transporterDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterDeleteButton.Location = new System.Drawing.Point(466, 450);
+            this.transporterDeleteButton.Name = "transporterDeleteButton";
+            this.transporterDeleteButton.Size = new System.Drawing.Size(302, 70);
+            this.transporterDeleteButton.TabIndex = 72;
+            this.transporterDeleteButton.Text = "Видалити";
+            this.transporterDeleteButton.UseVisualStyleBackColor = true;
+            this.transporterDeleteButton.Click += new System.EventHandler(this.transporterDeleteButton_Click);
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(5, 7);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(164, 21);
+            this.label11.TabIndex = 71;
+            this.label11.Text = "Виберіть перевізника";
+            // 
+            // transporterDeleteComboBox
+            // 
+            this.transporterDeleteComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterDeleteComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.transporterDeleteComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.transporterDeleteComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterDeleteComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.transporterDeleteComboBox.Location = new System.Drawing.Point(3, 31);
+            this.transporterDeleteComboBox.Name = "transporterDeleteComboBox";
+            this.transporterDeleteComboBox.Size = new System.Drawing.Size(770, 29);
+            this.transporterDeleteComboBox.Sorted = true;
+            this.transporterDeleteComboBox.TabIndex = 70;
+            this.transporterDeleteComboBox.SelectedIndexChanged += new System.EventHandler(this.transporterDeleteComboBox_SelectedIndexChanged);
+            this.transporterDeleteComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.transporterDeleteComboBox_MouseClick);
             // 
             // labelshow57
             // 
@@ -3293,47 +3357,60 @@
             this.labelshow69.TabIndex = 36;
             this.labelshow69.Text = "Країни";
             // 
-            // transporterDeleteButton
+            // label12
             // 
-            this.transporterDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterDeleteButton.Enabled = false;
-            this.transporterDeleteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterDeleteButton.Location = new System.Drawing.Point(466, 433);
-            this.transporterDeleteButton.Name = "transporterDeleteButton";
-            this.transporterDeleteButton.Size = new System.Drawing.Size(302, 70);
-            this.transporterDeleteButton.TabIndex = 72;
-            this.transporterDeleteButton.Text = "Видалити";
-            this.transporterDeleteButton.UseVisualStyleBackColor = true;
-            this.transporterDeleteButton.Click += new System.EventHandler(this.transporterDeleteButton_Click);
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(3, 204);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(156, 21);
+            this.label12.TabIndex = 42;
+            this.label12.Text = "Банківські реквізити";
             // 
-            // label11
+            // label13
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(3, 390);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 21);
+            this.label13.TabIndex = 41;
+            this.label13.Text = "Примітка";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(5, 7);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(173, 21);
-            this.label11.TabIndex = 71;
-            this.label11.Text = "Виберіть перевізника";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(3, 285);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(76, 21);
+            this.label14.TabIndex = 40;
+            this.label14.Text = "Контакти";
             // 
-            // transporterDeleteComboBox
+            // label15
             // 
-            this.transporterDeleteComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterDeleteComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.transporterDeleteComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.transporterDeleteComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterDeleteComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.transporterDeleteComboBox.Location = new System.Drawing.Point(3, 31);
-            this.transporterDeleteComboBox.Name = "transporterDeleteComboBox";
-            this.transporterDeleteComboBox.Size = new System.Drawing.Size(770, 29);
-            this.transporterDeleteComboBox.Sorted = true;
-            this.transporterDeleteComboBox.TabIndex = 70;
-            this.transporterDeleteComboBox.SelectedIndexChanged += new System.EventHandler(this.transporterDeleteComboBox_SelectedIndexChanged);
-            this.transporterDeleteComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.transporterDeleteComboBox_MouseClick);
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(3, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(100, 21);
+            this.label15.TabIndex = 39;
+            this.label15.Text = "Перевізники";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(585, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(58, 21);
+            this.label16.TabIndex = 43;
+            this.label16.Text = "Країни";
             // 
             // MainForm
             // 
@@ -3347,7 +3424,7 @@
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AtlantSovt";
+            this.Text = "Атлант-Совт";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -3377,6 +3454,7 @@
             this.deleteForwarderPage.ResumeLayout(false);
             this.deleteForwarderPage.PerformLayout();
             this.showTransporterPage.ResumeLayout(false);
+            this.showTransporterPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.transporterShowCountryDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transporterShowBankDetailsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transporterShowContactsDataGridView)).EndInit();
@@ -3686,6 +3764,11 @@
         private System.Windows.Forms.Button transporterDeleteButton;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox transporterDeleteComboBox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
         }
 }
 
