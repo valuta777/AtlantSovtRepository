@@ -39,6 +39,23 @@ namespace AtlantSovt
         ForwarderBankDetailsAddForm addForwarderBankDetailsAddForm, updateForwarderBankDetailsAddForm;
         ForwarderBankDetailsUpdateForm updateForwarderBankDetailsUpdateForm;
 
+            //Transporter Forms
+
+            //Show 
+        TransporterShowAdditionalDetailsForm transporterShowAdditionalDetailsForm;
+        TransporterShowFiltrationForm transporterShowFiltrationForm;
+            //Countries and Vehicles
+        TransporterCountryAndVehicleSelectForm transporterCountryAndVehicleSelectForm;
+        TransporterCountryUpdateVehicleSelectForm transporterCountryUpdateVehicleSelectForm;
+            //Contact
+        TransporterContactAddForm addTransporterContactAddForm, updateTransporterContactAddForm;
+        TransporterContactUpdateForm updateTransporterContactUpdateForm;
+        TransporterContactDeleteForm deleteTransporterContactDeleteForm;
+            //Bank Details
+        TransporterBankDetailsAddForm addTransporterBankDetailsAddForm, updateTransporterBankDetailsAddForm;
+        TransporterBankDetailsUpdateForm updateTransporterBankDetailsUpdateForm;
+
+
         //Load / Animaton / Test connection
         #region Load
         void Connecting()
@@ -102,6 +119,21 @@ namespace AtlantSovt
                 {
                     dataControl.SelectedIndex = 8;
                 }
+
+                private void addTransporterStrip_Click(object sender, EventArgs e)
+                {
+                     dataControl.SelectedIndex = 10;
+                }
+
+                private void updateTransporterStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 11;
+                }
+
+                private void deleteTransporterStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 12;
+                }
                 #endregion
 
         //Client
@@ -115,6 +147,11 @@ namespace AtlantSovt
             clientContactsDataGridView.Visible = false;
             clientBankDetailsDataGridView.Visible = false;
             clientCommentRichTextBox.Text = "";
+        }
+
+        private void clientDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ShowClientInfo();
         }
                 #endregion
 
@@ -158,11 +195,6 @@ namespace AtlantSovt
             geographyAddressClientTextBox.Text = "";
             commentClientTextBox.Text = "";
             
-        }
-        
-        private void clientDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            ShowClientInfo();
         }
         
         private void workDocumentClientComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -257,8 +289,8 @@ namespace AtlantSovt
             if (originalClientUpdateCheckBox.Checked)
             {
                 faxClientUpdateCheckBox.CheckState = CheckState.Unchecked;
-                clientOriginalChanged = true;
-                clientFaxChanged = false;
+                transporterOriginalChanged = true;
+                transporterFaxChanged = false;
             }
             else
             {
@@ -272,8 +304,8 @@ namespace AtlantSovt
             if (faxClientUpdateCheckBox.Checked)
             {
                 originalClientUpdateCheckBox.CheckState = CheckState.Unchecked;
-                clientOriginalChanged = false;
-                clientFaxChanged = true;
+                transporterOriginalChanged = false;
+                transporterFaxChanged = true;
             }
             else
             {
@@ -284,14 +316,14 @@ namespace AtlantSovt
 
         private void workDocumentClientUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            clientWorkDocumentChanged = true;
+            transporterWorkDocumentChanged = true;
             SplitLoadWorkDocumentClientUpdateInfo();
            
         }
 
         private void taxPayerStatusClientUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            clientTaxPayerStatusChanged = true;
+            transporterTaxPayerStatusChanged = true;
             SplitLoadTaxPayerStatusClientUpdateInfo();
         }
 
@@ -309,32 +341,32 @@ namespace AtlantSovt
 
         private void nameClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            clientNameChanged = true;
+            transporterFullNameChanged = true;
         }
 
         private void directorClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            clientDirectorChanged = true;
+            transporterDirectorChanged = true;
         }
 
         private void contractNumberClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            clientContractNumberChanged = true;
+            transporterContractNumberChanged = true;
         }
 
         private void physicalAddressClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            clientPhysicalAddressChanged = true;
+            transporterPhysicalAddressChanged = true;
         }
 
         private void geographyAddressClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            clientGeographyAddressChanged = true;
+            transporterGeographyAddressChanged = true;
         }
 
         private void commentClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            clientCommentChanged = true;
+            transporterCommentChanged = true;
         }
 
         private void updateClientButton_Click(object sender, EventArgs e)
@@ -552,16 +584,14 @@ namespace AtlantSovt
             forwarderBankDetailsDataGridView.Visible = false;
             forwarderCommentRichTextBox.Text = "";
         }
-        #endregion
-
-                //Add
-                #region Add
-
         private void forwarderDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowForwarderInfo();
         }
+        #endregion
 
+                //Add
+                #region Add
         private void workDocumentForwarderComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             workDocumentForwarderComboBox.Items.Clear();
@@ -909,5 +939,503 @@ namespace AtlantSovt
                 #endregion
 
         #endregion
+
+        //Transporter
+        #region Transporter
+
+            //Show
+            #region Show
+
+            private void showTransporterStrip_Click(object sender, EventArgs e)
+            {
+                dataControl.SelectedIndex = 9;
+                ShowTransporter();
+                transporterShowContactsDataGridView.Visible = false;
+                transporterShowBankDetailsDataGridView.Visible = false;
+                transporterShowCountryDataGridView.Visible = false;
+                transporterShowCountryDataGridView.Visible = false;
+                transporterShowCommentRichTextBox.Text = "";
+            }
+
+            private void transporterShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+            {
+                ShowTransporterInfo();
+            }
+
+            private void transporterShowAdditionalDetailsButton_Click(object sender, EventArgs e)
+            {
+                transporterShowAdditionalDetailsForm = new TransporterShowAdditionalDetailsForm();
+                if (TransporterClikedId != 0)
+                {
+                    transporterShowAdditionalDetailsForm.ShowTransporterAdditionalDetails(TransporterClikedId);
+                    transporterShowAdditionalDetailsForm.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Ви не вибрали перевізника!");
+                    transporterShowAdditionalDetailsForm.Hide();
+                }
+            }
+
+            private void transporterShowFilterSelectButton_Click(object sender, EventArgs e)
+            {
+                transporterShowFiltrationForm = new TransporterShowFiltrationForm(this);
+
+                transporterShowFiltrationForm.LoadCoutriesToTransporterShowChechedBoxList();
+
+                transporterShowFiltrationForm.LoadVehicleToTransporterShowChechedBoxList();
+
+                transporterShowFiltrationForm.Show();
+            }
+            #endregion
+
+            //Add
+            #region Add
+
+        private void transporterAddWorkDocumentAddButton_Click(object sender, EventArgs e)
+        {
+            AddWorkDocumentForm addWorkDocument = new AddWorkDocumentForm();
+            addWorkDocument.Show();
+        }
+
+        private void transporterAddTaxPayerStatusAddButton_Click(object sender, EventArgs e)
+        {
+            AddTaxPayerStatusForm addTaxPayerStatus = new AddTaxPayerStatusForm();
+            addTaxPayerStatus.Show();
+        }
+
+        private void transporterAddContactAddButton_Click(object sender, EventArgs e)
+        {
+            addTransporterContactAddForm = new TransporterContactAddForm();
+            addTransporterContactAddForm.Show();
+        }
+
+        private void transporterAddBankDetailsAddButton_Click(object sender, EventArgs e)
+        {
+            addTransporterBankDetailsAddForm = new TransporterBankDetailsAddForm();
+            addTransporterBankDetailsAddForm.Show();
+        }
+
+        private void transporterAddCountryAndVehicleSelectButton_Click(object sender, EventArgs e)
+        {
+            transporterCountryAndVehicleSelectForm = new TransporterCountryAndVehicleSelectForm();
+            transporterCountryAndVehicleSelectForm.Show();
+        }
+
+        private void workDocumentTransporterAddComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            workDocumentTransporterAddComboBox.Items.Clear();
+            LoadWorkDocumentTransporterAddInfoComboBox();
+            workDocumentTransporterAddComboBox.DroppedDown = true;
+        }
+
+        private void taxPayerStatusTransporterAddComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            taxPayerStatusTransporterAddComboBox.Items.Clear();
+            LoadTaxPayerStatusTransporterAddInfoComboBox();
+            taxPayerStatusTransporterAddComboBox.DroppedDown = true;
+        }
+
+        private void workDocumentTransporterAddComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            transporterAddWorkDocumentFlag = true;
+            SplitLoadWorkDocumentTransporterAddInfo();
+
+        }
+
+        private void taxPayerStatusTransporterAddComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            transporterAddTaxPayerStatusFlag = true;
+            SplitLoadTaxPayerStatusTransporterAddInfo();
+        }
+
+        private void originalTransporterAddCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (originalTransporterAddCheckBox.Checked)
+            {
+                faxTransporterAddCheckBox.CheckState = CheckState.Unchecked;
+            }
+            else
+            {
+                faxTransporterAddCheckBox.CheckState = CheckState.Checked;
+            }
+        }
+
+        private void faxTransporterAddCheckBox_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (faxTransporterAddCheckBox.Checked)
+            {
+                originalTransporterAddCheckBox.CheckState = CheckState.Unchecked;
+            }
+            else
+            {
+                originalTransporterAddCheckBox.CheckState = CheckState.Checked;
+            }
+        }
+
+        private void transporterAddButton_Click(object sender, EventArgs e)
+        {
+            AddTransporter();
+            nameTransporterAddTextBox.Text = "";
+            shortNameTransporterAddTextBox.Text = "";
+            directorTransporterAddTextBox.Text = "";
+            physicalAddressTransporterAddTextBox.Text = "";
+            geographyAddressTransporterAddTextBox.Text = "";
+            workDocumentTransporterAddComboBox.Text = "";
+            taxPayerStatusTransporterAddComboBox.Text = "";
+            originalTransporterAddCheckBox.Checked = true;
+
+            commentTransporterAddTextBox.Text = "";
+            filtersTransporterAddCheckedListBox.ClearSelected();
+            foreach (int i in filtersTransporterAddCheckedListBox.CheckedIndices)
+            {
+                filtersTransporterAddCheckedListBox.SetItemCheckState(i, CheckState.Unchecked);
+            }
+        }
+            #endregion
+
+            //Update
+            #region Update
+
+        private void selectTransporterUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClearAllBoxesTransporterUpdate();
+            LoadWorkDocumentTransporterUpdateInfoComboBox();
+            LoadTaxPayerStatusTransporterUpdateInfoComboBox();
+            SplitUpdateTransporter();
+        }
+
+        private void selectTransporterUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            selectTransporterUpdateComboBox.Items.Clear();
+            LoadSelectTransporterUpdateInfoComboBox();
+            selectTransporterUpdateComboBox.DroppedDown = true;
+        }
+
+        private void workDocumentTransporterUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            workDocumentTransporterUpdateComboBox.Items.Clear();
+            LoadWorkDocumentTransporterUpdateInfoComboBox();
+            workDocumentTransporterUpdateComboBox.DroppedDown = true;
+
+        }
+
+        private void taxPayerStatusTransporterUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            taxPayerStatusTransporterUpdateComboBox.Items.Clear();
+            LoadTaxPayerStatusTransporterUpdateInfoComboBox();
+            taxPayerStatusTransporterUpdateComboBox.DroppedDown = true;
+
+        }
+
+        private void originalTransporterUpdateCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (originalTransporterUpdateCheckBox.Checked)
+            {
+                faxTransporterUpdateCheckBox.CheckState = CheckState.Unchecked;
+                transporterOriginalChanged = true;
+                transporterFaxChanged = false;
+            }
+            else
+            {
+                faxTransporterUpdateCheckBox.CheckState = CheckState.Checked;
+            }
+        }
+
+        private void faxTransporterUpdateCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (faxTransporterUpdateCheckBox.Checked)
+            {
+                originalTransporterUpdateCheckBox.CheckState = CheckState.Unchecked;
+                transporterOriginalChanged = false;
+                transporterFaxChanged = true;
+            }
+            else
+            {
+                originalTransporterUpdateCheckBox.CheckState = CheckState.Checked;
+            }
+        }
+
+        private void workDocumentTransporterUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            transporterWorkDocumentChanged = true;
+            SplitLoadWorkDocumentTransporterUpdateInfo();
+
+        }
+
+        private void taxPayerStatusTransporterUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            transporterTaxPayerStatusChanged = true;
+            SplitLoadTaxPayerStatusTransporterUpdateInfo();
+        }
+
+        private void transporterUpdateWorkDocumentAddButton_Click(object sender, EventArgs e)
+        {
+            AddWorkDocumentForm addWorkDocument = new AddWorkDocumentForm();
+            addWorkDocument.Show();
+        }
+
+        private void transporterUpdateTaxPayerStatusAddButton_Click(object sender, EventArgs e)
+        {
+            AddTaxPayerStatusForm addTaxPayerStatus = new AddTaxPayerStatusForm();
+            addTaxPayerStatus.Show();
+        }
+
+        private void nameTransporterUpdateTextBox_TextChanged(object sender, EventArgs e)
+        {
+            transporterFullNameChanged = true;
+        }
+        private void shortNameTransporterUpdateTextBox_TextChanged(object sender, EventArgs e)
+        {
+            transporterShortNameChanged = true;
+        }
+
+        private void directorTransporterUpdateTextBox_TextChanged(object sender, EventArgs e)
+        {
+            transporterDirectorChanged = true;
+        }
+
+        private void contractNumberTransporterUpdateTextBox_TextChanged(object sender, EventArgs e)
+        {
+            transporterContractNumberChanged = true;
+        }
+
+        private void physicalAddressTransporterUpdateTextBox_TextChanged(object sender, EventArgs e)
+        {
+            transporterPhysicalAddressChanged = true;
+        }
+
+        private void geographyAddressTransporterUpdateTextBox_TextChanged(object sender, EventArgs e)
+        {
+            transporterGeographyAddressChanged = true;
+        }
+
+        private void commentTransporterUpdateTextBox_TextChanged(object sender, EventArgs e)
+        {
+            transporterCommentChanged = true;
+        }
+        private void filtersTransporterUpdateCheckedListBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            transporterFiltersChanged = true;
+        }
+
+        private void transporterUpdateButton_Click(object sender, EventArgs e)
+        {
+            UpdateTransporter();
+        }
+
+        //Contact
+        #region Contact
+        //Add
+        private void transporterUpdateContactAddButton_Click(object sender, EventArgs e)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (transporter != null)
+                {
+                    updateTransporterContactAddForm = new TransporterContactAddForm();
+                    updateTransporterContactAddForm.Show();
+                    AddNewTransporterContact();
+                }
+                else
+                {
+                    MessageBox.Show("Оберіть спочатку перевізника");
+                }
+            }
+        }
+
+        //Update
+        private void transporterUpdateContactUpdateButton_Click(object sender, EventArgs e)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (transporter != null)
+                {
+                    if (db.Transporters.Find(transporter.Id).TransporterContacts.Count != 0)
+                    {
+                        updateTransporterContactUpdateForm = new TransporterContactUpdateForm();
+                        updateTransporterContactUpdateForm.Show();
+                        UpdateTransporterContact();
+                    }
+                    else
+                    {
+                        MessageBox.Show("В перевізника немає контактів");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Оберіть спочатку перевізника");
+                }
+            }
+        }
+
+        //Delete
+        private void transporterUpdateContactDeleteButton_Click(object sender, EventArgs e)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (transporter != null)
+                {
+                    if (db.Transporters.Find(transporter.Id).TransporterContacts.Count != 0)
+                    {
+                        deleteTransporterContactDeleteForm = new TransporterContactDeleteForm();
+                        deleteTransporterContactDeleteForm.Show();
+                        DeleteTransporterContact();
+                    }
+                    else
+                    {
+                        MessageBox.Show("В перевізника немає контактів");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Оберіть спочатку перевізника");
+                }
+            }
+        }
+        #endregion
+
+        //Bank Details
+        #region Bank Details
+        //Add
+        private void transporterUpdateBankDetailsAddButton_Click(object sender, EventArgs e)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (transporter != null)
+                {
+                    if (db.Transporters.Find(transporter.Id).TransporterBankDetail == null)
+                    {
+                        updateTransporterBankDetailsAddForm = new TransporterBankDetailsAddForm();
+                        updateTransporterBankDetailsAddForm.Show();
+                        updateTransporterBankDetailsAddForm.AddTransporterBankDetail2(transporter.Id);
+                    }
+                    else
+                    {
+                        MessageBox.Show("В перевізника вже є банківські данні");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Оберіть спочатку перевізника");
+                }
+            }
+        }
+
+        //Update
+        private void transporterUpdateBankDetailsUpdateButton_Click(object sender, EventArgs e)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (transporter != null)
+                {
+                    if (db.Transporters.Find(transporter.Id).TransporterBankDetail != null)
+                    {
+                        updateTransporterBankDetailsUpdateForm = new TransporterBankDetailsUpdateForm();
+                        updateTransporterBankDetailsUpdateForm.Show();
+                        updateTransporterBankDetailsUpdateForm.UpdateTransporterBankDetails(db.Transporters.Find(transporter.Id).TransporterBankDetail);
+                    }
+                    else
+                    {
+                        MessageBox.Show("В перевізника ще немає банківських данних");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Оберіть спочатку перевізника");
+                }
+            }
+        }
+
+        //Delete
+        private void transporterUpdateBankDetaitsDeleteButton_Click(object sender, EventArgs e)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (transporter != null)
+                {
+                    if (db.Transporters.Find(transporter.Id).TransporterBankDetail != null)
+                    {
+                        if (MessageBox.Show("Видалити банківські данні перевізнику " + transporter.FullName + " ?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            try
+                            {
+                                db.TransporterBankDetails.Remove(db.Transporters.Find(transporter.Id).TransporterBankDetail);
+                                db.SaveChanges();
+                                MessageBox.Show("Банківські данні успішно видалено");
+                            }
+                            catch (Exception ee)
+                            {
+                                MessageBox.Show("Помилка!" + Environment.NewLine + ee);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("В перевізника ще немає банківських данних");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Оберіть спочатку перевізника");
+                }
+            }
+        }
+        #endregion
+
+        private void transporterUpdateCountriesAndVehicleUpdateButton_Click(object sender, EventArgs e)
+        {
+            if (transporter != null)
+            {
+                transporterCountryUpdateVehicleSelectForm = new TransporterCountryUpdateVehicleSelectForm();
+                transporterCountryUpdateVehicleSelectForm.Show();
+                transporterCountryUpdateVehicleSelectForm.CoutriesAndVehiclesSelect(transporter);
+            }
+            else
+            {
+                MessageBox.Show("Оберіть спочатку перевізника");
+            }
+        }
+            #endregion
+
+      
+            //Delete
+            #region Delete
+        private void transporterDeleteButton_Click(object sender, EventArgs e)
+        {
+            DeleteTransporter();
+            transporterDeleteComboBox.Text = "";
+            transporterDeleteComboBox.Items.Clear();
+            transporterDeleteButton.Enabled = false;
+        }
+
+        private void transporterDeleteComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitDeleteTransporter();
+        }
+
+        private void transporterDeleteComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            transporterDeleteComboBox.Items.Clear();
+            LoadTransporterDeleteInfoComboBox();
+            transporterDeleteComboBox.DroppedDown = true;
+            if (transporterDeleteComboBox.Items.Count == 0)
+            {
+                transporterDeleteButton.Enabled = false;
+            }
+            else
+            {
+                transporterDeleteButton.Enabled = true;
+
+            }
+        }
+            #endregion
+
+        #endregion
+
+
     }
 }

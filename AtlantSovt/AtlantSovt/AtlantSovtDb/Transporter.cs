@@ -14,6 +14,7 @@ namespace AtlantSovt.AtlantSovtDb
             Orders = new HashSet<Order>();
             TransporterContacts = new HashSet<TransporterContact>();
             TransporterCountries = new HashSet<TransporterCountry>();
+            TransporterVehicles = new HashSet<TransporterVehicle>();
         }
 
         public long Id { get; set; }
@@ -42,8 +43,8 @@ namespace AtlantSovt.AtlantSovtDb
         [StringLength(50)]
         public string ContractNumber { get; set; }
 
-        [StringLength(50)]
-        public string ContractEndDay { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? ContractEndDay { get; set; }
 
         public bool? ContractType { get; set; }
 
@@ -55,12 +56,14 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual TaxPayerStatu TaxPayerStatu { get; set; }
 
-        public virtual TransporterBankDetail TransporterBankDetail { get; set; }
-
         public virtual WorkDocument WorkDocument { get; set; }
+
+        public virtual TransporterBankDetail TransporterBankDetail { get; set; }
 
         public virtual ICollection<TransporterContact> TransporterContacts { get; set; }
 
         public virtual ICollection<TransporterCountry> TransporterCountries { get; set; }
+
+        public virtual ICollection<TransporterVehicle> TransporterVehicles { get; set; }
     }
 }

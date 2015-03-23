@@ -8,7 +8,7 @@ namespace AtlantSovt.AtlantSovtDb
     public partial class AtlantSovtContext : DbContext
     {
         public AtlantSovtContext()
-            : base("name=AtlantSovtContext1")
+            : base("name=AtlantSovtContext3")
         {
         }
 
@@ -33,8 +33,10 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<TransporterBankDetail> TransporterBankDetails { get; set; }
         public virtual DbSet<TransporterContact> TransporterContacts { get; set; }
         public virtual DbSet<TransporterCountry> TransporterCountries { get; set; }
+        public virtual DbSet<TransporterVehicle> TransporterVehicles { get; set; }
         public virtual DbSet<UnCustomsAddress> UnCustomsAddresses { get; set; }
         public virtual DbSet<UploadAddress> UploadAddresses { get; set; }
+        public virtual DbSet<Vehicle> Vehicles { get; set; }
         public virtual DbSet<WorkDocument> WorkDocuments { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -48,6 +50,11 @@ namespace AtlantSovt.AtlantSovtDb
                 .HasMany(e => e.ClientContacts)
                 .WithOptional(e => e.Client)
                 .WillCascadeOnDelete();
+
+            modelBuilder.Entity<Country>()
+                .HasMany(e => e.TransporterCountries)
+                .WithRequired(e => e.Country)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<FineForDelay>()
                 .HasMany(e => e.Orders)
@@ -100,16 +107,23 @@ namespace AtlantSovt.AtlantSovtDb
 
             modelBuilder.Entity<Transporter>()
                 .HasOptional(e => e.Filter)
-                .WithRequired(e => e.Transporter);
+                .WithRequired(e => e.Transporter)
+                .WillCascadeOnDelete();
 
             modelBuilder.Entity<Transporter>()
-                .HasMany(e => e.TransporterContacts)
+                .HasOptional(e => e.TransporterBankDetail)
                 .WithRequired(e => e.Transporter)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete();
 
-            modelBuilder.Entity<TransporterBankDetail>()
-                .HasOptional(e => e.Transporter)
-                .WithRequired(e => e.TransporterBankDetail);
+            modelBuilder.Entity<Vehicle>()
+                .Property(e => e.Type)
+                .IsFixedLength();
+
+            modelBuilder.Entity<Vehicle>()
+                .HasMany(e => e.TransporterVehicles)
+                .WithRequired(e => e.Vehicle)
+                .HasForeignKey(e => e.TransportVehicleId)
+                .WillCascadeOnDelete(false);
         }
     }
 }

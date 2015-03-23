@@ -47,75 +47,75 @@
             this.addClientBankDetailsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // clientBankNameTextBox
+            // transporterBankNameTextBox
             // 
             this.clientBankNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientBankNameTextBox.Location = new System.Drawing.Point(12, 33);
-            this.clientBankNameTextBox.Name = "clientBankNameTextBox";
+            this.clientBankNameTextBox.Name = "transporterBankNameTextBox";
             this.clientBankNameTextBox.Size = new System.Drawing.Size(536, 20);
             this.clientBankNameTextBox.TabIndex = 0;
             // 
-            // clientMFOTextBox
+            // transporterMFOTextBox
             // 
             this.clientMFOTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientMFOTextBox.Location = new System.Drawing.Point(12, 80);
-            this.clientMFOTextBox.Name = "clientMFOTextBox";
+            this.clientMFOTextBox.Name = "transporterMFOTextBox";
             this.clientMFOTextBox.Size = new System.Drawing.Size(536, 20);
             this.clientMFOTextBox.TabIndex = 1;
             // 
-            // clientAccountNumberTextBox
+            // transporterAccountNumberTextBox
             // 
             this.clientAccountNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientAccountNumberTextBox.Location = new System.Drawing.Point(12, 127);
-            this.clientAccountNumberTextBox.Name = "clientAccountNumberTextBox";
+            this.clientAccountNumberTextBox.Name = "transporterAccountNumberTextBox";
             this.clientAccountNumberTextBox.Size = new System.Drawing.Size(536, 20);
             this.clientAccountNumberTextBox.TabIndex = 2;
             // 
-            // clientEDRPOUTextBox
+            // transporterEDRPOUTextBox
             // 
             this.clientEDRPOUTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientEDRPOUTextBox.Location = new System.Drawing.Point(12, 174);
-            this.clientEDRPOUTextBox.Name = "clientEDRPOUTextBox";
+            this.clientEDRPOUTextBox.Name = "transporterEDRPOUTextBox";
             this.clientEDRPOUTextBox.Size = new System.Drawing.Size(536, 20);
             this.clientEDRPOUTextBox.TabIndex = 3;
             // 
-            // clientIPNTextBox
+            // transporterIPNTextBox
             // 
             this.clientIPNTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientIPNTextBox.Location = new System.Drawing.Point(12, 221);
-            this.clientIPNTextBox.Name = "clientIPNTextBox";
+            this.clientIPNTextBox.Name = "transporterIPNTextBox";
             this.clientIPNTextBox.Size = new System.Drawing.Size(536, 20);
             this.clientIPNTextBox.TabIndex = 4;
             // 
-            // clientCertificateNumberTextBox
+            // transporterCertificateNumberTextBox
             // 
             this.clientCertificateNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientCertificateNumberTextBox.Location = new System.Drawing.Point(12, 268);
-            this.clientCertificateNumberTextBox.Name = "clientCertificateNumberTextBox";
+            this.clientCertificateNumberTextBox.Name = "transporterCertificateNumberTextBox";
             this.clientCertificateNumberTextBox.Size = new System.Drawing.Size(536, 20);
             this.clientCertificateNumberTextBox.TabIndex = 5;
             // 
-            // clientSWIFTTextBox
+            // transporterSWIFTTextBox
             // 
             this.clientSWIFTTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientSWIFTTextBox.Location = new System.Drawing.Point(12, 315);
-            this.clientSWIFTTextBox.Name = "clientSWIFTTextBox";
+            this.clientSWIFTTextBox.Name = "transporterSWIFTTextBox";
             this.clientSWIFTTextBox.Size = new System.Drawing.Size(536, 20);
             this.clientSWIFTTextBox.TabIndex = 6;
             // 
-            // clientIBANTextBox
+            // transporterIBANTextBox
             // 
             this.clientIBANTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientIBANTextBox.Location = new System.Drawing.Point(12, 362);
-            this.clientIBANTextBox.Name = "clientIBANTextBox";
+            this.clientIBANTextBox.Name = "transporterIBANTextBox";
             this.clientIBANTextBox.Size = new System.Drawing.Size(536, 20);
             this.clientIBANTextBox.TabIndex = 7;
             // 
@@ -199,11 +199,11 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "IBAN";
             // 
-            // addClientBankDetailsButton
+            // transporterFilterAddButton
             // 
             this.addClientBankDetailsButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addClientBankDetailsButton.Location = new System.Drawing.Point(12, 398);
-            this.addClientBankDetailsButton.Name = "addClientBankDetailsButton";
+            this.addClientBankDetailsButton.Name = "transporterFilterAddButton";
             this.addClientBankDetailsButton.Size = new System.Drawing.Size(536, 48);
             this.addClientBankDetailsButton.TabIndex = 16;
             this.addClientBankDetailsButton.Text = "Додати";

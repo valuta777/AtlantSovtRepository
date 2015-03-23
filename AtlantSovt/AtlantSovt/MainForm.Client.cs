@@ -269,7 +269,7 @@ namespace AtlantSovt
                     originalClientUpdateCheckBox.Checked = client.ContractType.Value;
                     faxClientUpdateCheckBox.Checked = !client.ContractType.Value;
                 }
-                clientNameChanged =  clientDirectorChanged = clientContractNumberChanged = clientPhysicalAddressChanged =  clientGeographyAddressChanged =  clientCommentChanged = clientWorkDocumentChanged =  clientTaxPayerStatusChanged =  clientOriginalChanged =  clientFaxChanged = false;
+                transporterFullNameChanged =  transporterDirectorChanged = transporterContractNumberChanged = transporterPhysicalAddressChanged =  transporterGeographyAddressChanged =  transporterCommentChanged = transporterWorkDocumentChanged =  transporterTaxPayerStatusChanged =  transporterOriginalChanged =  transporterFaxChanged = false;
             }
         }
 
@@ -344,41 +344,41 @@ namespace AtlantSovt
             using (var db = new AtlantSovtContext())
             {
                 //якщо хоча б один з флагів = true
-                if (clientNameChanged || clientDirectorChanged || clientContractNumberChanged || clientPhysicalAddressChanged || clientGeographyAddressChanged || clientCommentChanged || clientWorkDocumentChanged || clientTaxPayerStatusChanged || clientWorkDocumentChanged || clientTaxPayerStatusChanged || clientOriginalChanged || clientFaxChanged)
+                if (transporterFullNameChanged || transporterDirectorChanged || transporterContractNumberChanged || transporterPhysicalAddressChanged || transporterGeographyAddressChanged || transporterCommentChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterOriginalChanged || transporterFaxChanged)
                 {
-                    if (clientNameChanged)
+                    if (transporterFullNameChanged)
                     {
                         client.Name = nameClientUpdateTextBox.Text;
                     }
-                    if (clientDirectorChanged)
+                    if (transporterDirectorChanged)
                     {
                         client.Director = directorClientUpdateTextBox.Text;
                     }
-                    if (clientContractNumberChanged)
+                    if (transporterContractNumberChanged)
                     {
                         client.ContractNumber = contractNumberClientUpdateTextBox.Text;
                     }
-                    if (clientPhysicalAddressChanged)
+                    if (transporterPhysicalAddressChanged)
                     {
                         client.PhysicalAddress = physicalAddressClientUpdateTextBox.Text;
                     }
-                    if (clientGeographyAddressChanged)
+                    if (transporterGeographyAddressChanged)
                     {
                         client.GeografphyAddress = geographyAddressClientUpdateTextBox.Text;
                     }
-                    if (clientCommentChanged)
+                    if (transporterCommentChanged)
                     {
                         client.Comment = commentClientUpdateTextBox.Text;
                     }
-                    if (clientWorkDocumentChanged)
+                    if (transporterWorkDocumentChanged)
                     {
                         client.WorkDocumentId = clientWorkDocument.Id;
                     }
-                    if (clientTaxPayerStatusChanged)
+                    if (transporterTaxPayerStatusChanged)
                     {
                         client.TaxPayerStatusId = clientTaxPayerStatus.Id;
                     }
-                    if (clientOriginalChanged)
+                    if (transporterOriginalChanged)
                     {
                         client.ContractType = true;
                     }

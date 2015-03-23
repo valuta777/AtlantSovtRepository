@@ -6,23 +6,17 @@ namespace AtlantSovt.AtlantSovtDb
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Filter
+    [Table("TransporterVehicle")]
+    public partial class TransporterVehicle
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
 
-        public bool? IfForwarder { get; set; }
+        public long TransporterId { get; set; }
 
-        public bool? TUR { get; set; }
-
-        public bool? CMR { get; set; }
-
-        public bool? EKMT { get; set; }
-
-        public bool? Zborny { get; set; }
-
-        public bool? AD { get; set; }
+        public long TransportVehicleId { get; set; }
 
         public virtual Transporter Transporter { get; set; }
+
+        public virtual Vehicle Vehicle { get; set; }
     }
 }

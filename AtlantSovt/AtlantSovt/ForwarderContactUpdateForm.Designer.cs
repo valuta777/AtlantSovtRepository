@@ -128,14 +128,14 @@
             this.updateForwarderContactButton.UseVisualStyleBackColor = true;
             this.updateForwarderContactButton.Click += new System.EventHandler(this.updateContactButton_Click);
             // 
-            // forwarderUpdateContactSelectComboBox
+            // ForwarderUpdateContactSelectComboBox
             // 
             this.forwarderUpdateContactSelectComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.forwarderUpdateContactSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.forwarderUpdateContactSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.forwarderUpdateContactSelectComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.forwarderUpdateContactSelectComboBox.Location = new System.Drawing.Point(11, 41);
-            this.forwarderUpdateContactSelectComboBox.Name = "forwarderUpdateContactSelectComboBox";
+            this.forwarderUpdateContactSelectComboBox.Name = "ForwarderUpdateContactSelectComboBox";
             this.forwarderUpdateContactSelectComboBox.Size = new System.Drawing.Size(313, 29);
             this.forwarderUpdateContactSelectComboBox.TabIndex = 43;
             this.forwarderUpdateContactSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.clientUpdateContactSelectComboBox_SelectedIndexChanged);

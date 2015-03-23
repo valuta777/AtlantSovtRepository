@@ -43,7 +43,7 @@
             this.label27.TabIndex = 65;
             this.label27.Text = "Виберіть контакт";
             // 
-            // forwarderUpdateSelectDeleteContactComboBox
+            // transporterUpdateSelectDeleteContactComboBox
             // 
             this.forwarderUpdateSelectDeleteContactComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
