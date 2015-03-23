@@ -34,16 +34,16 @@
             // 
             // addTaxPayerStatusTextBox
             // 
-            this.addTaxPayerStatusTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addTaxPayerStatusTextBox.Location = new System.Drawing.Point(2, 6);
+            this.addTaxPayerStatusTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addTaxPayerStatusTextBox.Location = new System.Drawing.Point(2, 5);
             this.addTaxPayerStatusTextBox.Name = "addTaxPayerStatusTextBox";
             this.addTaxPayerStatusTextBox.Size = new System.Drawing.Size(379, 29);
             this.addTaxPayerStatusTextBox.TabIndex = 0;
             // 
             // addTaxPayerStatusButton
             // 
-            this.addTaxPayerStatusButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addTaxPayerStatusButton.Location = new System.Drawing.Point(100, 40);
+            this.addTaxPayerStatusButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addTaxPayerStatusButton.Location = new System.Drawing.Point(100, 38);
             this.addTaxPayerStatusButton.Name = "addTaxPayerStatusButton";
             this.addTaxPayerStatusButton.Size = new System.Drawing.Size(200, 70);
             this.addTaxPayerStatusButton.TabIndex = 1;

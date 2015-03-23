@@ -36,10 +36,10 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label27.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label27.Location = new System.Drawing.Point(12, 9);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(138, 21);
+            this.label27.Size = new System.Drawing.Size(133, 21);
             this.label27.TabIndex = 65;
             this.label27.Text = "Виберіть контакт";
             // 
@@ -49,7 +49,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ClientUpdateSelectDeleteContactComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.ClientUpdateSelectDeleteContactComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.ClientUpdateSelectDeleteContactComboBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ClientUpdateSelectDeleteContactComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ClientUpdateSelectDeleteContactComboBox.Location = new System.Drawing.Point(10, 33);
             this.ClientUpdateSelectDeleteContactComboBox.Name = "ClientUpdateSelectDeleteContactComboBox";
             this.ClientUpdateSelectDeleteContactComboBox.Size = new System.Drawing.Size(562, 29);
@@ -62,10 +62,10 @@
             // 
             this.DeleteClientContactButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.DeleteClientContactButton.Enabled = false;
-            this.DeleteClientContactButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DeleteClientContactButton.Location = new System.Drawing.Point(161, 100);
+            this.DeleteClientContactButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteClientContactButton.Location = new System.Drawing.Point(172, 77);
             this.DeleteClientContactButton.Name = "DeleteClientContactButton";
-            this.DeleteClientContactButton.Size = new System.Drawing.Size(237, 30);
+            this.DeleteClientContactButton.Size = new System.Drawing.Size(237, 53);
             this.DeleteClientContactButton.TabIndex = 66;
             this.DeleteClientContactButton.Text = "Видалити контакт";
             this.DeleteClientContactButton.UseVisualStyleBackColor = true;

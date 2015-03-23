@@ -33,51 +33,56 @@
             this.transporterUpdateFilterSelectButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // transporterFilterSelectCountryCheckedListBox
+            // transporterUpdateFilterSelectCountryCheckedListBox
             // 
             this.transporterUpdateFilterSelectCountryCheckedListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterUpdateFilterSelectCountryCheckedListBox.CheckOnClick = true;
+            this.transporterUpdateFilterSelectCountryCheckedListBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.transporterUpdateFilterSelectCountryCheckedListBox.FormattingEnabled = true;
-            this.transporterUpdateFilterSelectCountryCheckedListBox.Location = new System.Drawing.Point(12, 12);
+            this.transporterUpdateFilterSelectCountryCheckedListBox.Location = new System.Drawing.Point(0, 0);
             this.transporterUpdateFilterSelectCountryCheckedListBox.MultiColumn = true;
-            this.transporterUpdateFilterSelectCountryCheckedListBox.Name = "transporterFilterSelectCountryCheckedListBox";
-            this.transporterUpdateFilterSelectCountryCheckedListBox.Size = new System.Drawing.Size(634, 109);
+            this.transporterUpdateFilterSelectCountryCheckedListBox.Name = "transporterUpdateFilterSelectCountryCheckedListBox";
+            this.transporterUpdateFilterSelectCountryCheckedListBox.Size = new System.Drawing.Size(801, 148);
             this.transporterUpdateFilterSelectCountryCheckedListBox.TabIndex = 103;
-             // 
-            // transporterFilterSelectVehicleCheckedListBox
+            // 
+            // transporterUpdateFilterSelectVehicleCheckedListBox
             // 
             this.transporterUpdateFilterSelectVehicleCheckedListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterUpdateFilterSelectVehicleCheckedListBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.transporterUpdateFilterSelectVehicleCheckedListBox.FormattingEnabled = true;
             this.transporterUpdateFilterSelectVehicleCheckedListBox.HorizontalExtent = 3;
             this.transporterUpdateFilterSelectVehicleCheckedListBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.transporterUpdateFilterSelectVehicleCheckedListBox.Location = new System.Drawing.Point(12, 129);
+            this.transporterUpdateFilterSelectVehicleCheckedListBox.Location = new System.Drawing.Point(0, 153);
             this.transporterUpdateFilterSelectVehicleCheckedListBox.MultiColumn = true;
-            this.transporterUpdateFilterSelectVehicleCheckedListBox.Name = "transporterFilterSelectVehicleCheckedListBox";
-            this.transporterUpdateFilterSelectVehicleCheckedListBox.Size = new System.Drawing.Size(634, 109);
+            this.transporterUpdateFilterSelectVehicleCheckedListBox.Name = "transporterUpdateFilterSelectVehicleCheckedListBox";
+            this.transporterUpdateFilterSelectVehicleCheckedListBox.Size = new System.Drawing.Size(801, 148);
             this.transporterUpdateFilterSelectVehicleCheckedListBox.TabIndex = 104;
             // 
-            // transporterFilterSelectButton
+            // transporterUpdateFilterSelectButton
             // 
-            this.transporterUpdateFilterSelectButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateFilterSelectButton.Location = new System.Drawing.Point(12, 248);
-            this.transporterUpdateFilterSelectButton.Name = "transporterFilterSelectButton";
-            this.transporterUpdateFilterSelectButton.Size = new System.Drawing.Size(634, 48);
+            this.transporterUpdateFilterSelectButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterUpdateFilterSelectButton.Location = new System.Drawing.Point(559, 307);
+            this.transporterUpdateFilterSelectButton.Name = "transporterUpdateFilterSelectButton";
+            this.transporterUpdateFilterSelectButton.Size = new System.Drawing.Size(239, 70);
             this.transporterUpdateFilterSelectButton.TabIndex = 105;
             this.transporterUpdateFilterSelectButton.Text = "Додати";
             this.transporterUpdateFilterSelectButton.UseVisualStyleBackColor = true;
             this.transporterUpdateFilterSelectButton.Click += new System.EventHandler(this.transporterFilterSelectButton_Click);
             // 
-            // TransporterCoutryAndVehicleSelectForm
+            // TransporterCountryUpdateVehicleSelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 308);
+            this.ClientSize = new System.Drawing.Size(801, 380);
             this.Controls.Add(this.transporterUpdateFilterSelectButton);
             this.Controls.Add(this.transporterUpdateFilterSelectCountryCheckedListBox);
             this.Controls.Add(this.transporterUpdateFilterSelectVehicleCheckedListBox);
-            this.Name = "TransporterCoutryAndVehicleSelectForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "TransporterCountryUpdateVehicleSelectForm";
             this.Text = "Вибір країн і типів транспорту";
             this.ResumeLayout(false);
 
