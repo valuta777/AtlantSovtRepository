@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,12 +14,20 @@ namespace AtlantSovt
 {
     public partial class MainForm
     {
-
-        int TransporterClikedId = 0;
+        Transporter transporter, deleteTransporter;
+        TransporterContact contact;
         WorkDocument transporterWorkDocument;
         TaxPayerStatu transporterTaxPayerStatus;
+        Filter filters;
+                        
+        int TransporterClikedId = 0;
+        
         bool transporterAddWorkDocumentFlag, transporterAddTaxPayerStatusFlag;
-
+        bool transporterFullNameChanged, transporterShortNameChanged, transporterDirectorChanged,
+            transporterContractNumberChanged, transporterFiltersChanged, transporterPhysicalAddressChanged,
+            transporterGeographyAddressChanged, transporterCommentChanged, transporterWorkDocumentChanged,
+            transporterTaxPayerStatusChanged, transporterOriginalChanged, transporterFaxChanged;
+        
         //Show
         #region Show
         void ShowTransporter()
@@ -444,6 +453,280 @@ namespace AtlantSovt
         }
         #endregion
 
-       
+        //Update
+        #region Update
+        void ClearAllBoxesTransporterUpdate()
+        {
+            workDocumentTransporterUpdateComboBox.Items.Clear();
+            taxPayerStatusTransporterUpdateComboBox.Items.Clear();
+            nameTransporterUpdateTextBox.Clear();
+            directorTransporterUpdateTextBox.Clear();            
+            physicalAddressTransporterUpdateTextBox.Clear();
+            geographyAddressTransporterUpdateTextBox.Clear();
+            commentTransporterUpdateTextBox.Clear();
+            shortNameTransporterUpdateTextBox.Clear();
+            filtersTransporterUpdateCheckedListBox.ClearSelected();
+            foreach (int i in filtersTransporterAddCheckedListBox.CheckedIndices)
+            {
+                filtersTransporterAddCheckedListBox.SetItemCheckState(i, CheckState.Unchecked);
+            }
+        }
+
+        void SplitUpdateTransporter()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = selectTransporterUpdateComboBox.SelectedItem.ToString();
+                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedNameAndDirector[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                transporter = db.Transporters.Find(id);
+                filters = db.Filters.Find(transporter.Id);
+                if (transporter != null)
+                {
+                    nameTransporterUpdateTextBox.Text = transporter.FullName.ToString();
+                    shortNameTransporterUpdateTextBox.Text = transporter.ShortName.ToString();
+                    directorTransporterUpdateTextBox.Text = transporter.Director.ToString();
+                    physicalAddressTransporterUpdateTextBox.Text = transporter.PhysicalAddress.ToString();
+                    geographyAddressTransporterUpdateTextBox.Text = transporter.GeographyAddress.ToString();
+                    commentTransporterUpdateTextBox.Text = transporter.Comment.ToString();
+                    workDocumentTransporterUpdateComboBox.SelectedIndex = Convert.ToInt32(transporter.WorkDocumentId - 1);
+                    taxPayerStatusTransporterUpdateComboBox.SelectedIndex = Convert.ToInt32(transporter.TaxPayerStatusId - 1);
+                    originalTransporterUpdateCheckBox.Checked = transporter.ContractType.Value;
+                    faxTransporterUpdateCheckBox.Checked = !transporter.ContractType.Value;
+
+                    filtersTransporterUpdateCheckedListBox.SetItemChecked(0, Convert.ToBoolean(transporter.Filter.IfForwarder));
+                    filtersTransporterUpdateCheckedListBox.SetItemChecked(1, Convert.ToBoolean(transporter.Filter.TUR.Value));
+                    filtersTransporterUpdateCheckedListBox.SetItemChecked(2, Convert.ToBoolean(transporter.Filter.CMR.Value));
+                    filtersTransporterUpdateCheckedListBox.SetItemChecked(3, Convert.ToBoolean(transporter.Filter.EKMT.Value));
+                    filtersTransporterUpdateCheckedListBox.SetItemChecked(4, Convert.ToBoolean(transporter.Filter.Zborny.Value));
+                    filtersTransporterUpdateCheckedListBox.SetItemChecked(5, Convert.ToBoolean(transporter.Filter.AD.Value));
+                    filtersTransporterUpdateCheckedListBox.Update();
+                }
+                transporterFullNameChanged = transporterDirectorChanged = transporterContractNumberChanged = transporterPhysicalAddressChanged = transporterGeographyAddressChanged = transporterCommentChanged = transporterWorkDocumentChanged = transporterTaxPayerStatusChanged = transporterFiltersChanged = transporterOriginalChanged = transporterFaxChanged = false;
+            }
+        }
+
+        void LoadSelectTransporterUpdateInfoComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from c in db.Transporters
+                            orderby c.Id
+                            select c;
+                foreach (var item in query)
+                {
+                    selectTransporterUpdateComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
+                }
+            }
+        }
+
+        void LoadWorkDocumentTransporterUpdateInfoComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from w in db.WorkDocuments
+                            orderby w.Id
+                            select w;
+                foreach (var item in query)
+                {
+                    workDocumentTransporterUpdateComboBox.Items.Add(item.Status + " [" + item.Id + "]");
+                }
+            }
+        }
+
+        void LoadTaxPayerStatusTransporterUpdateInfoComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from t in db.TaxPayerStatus
+                            orderby t.Id
+                            select t;
+                foreach (var item in query)
+                {
+                    taxPayerStatusTransporterUpdateComboBox.Items.Add(item.Status + " [" + item.Id + "]");
+                }
+            }
+        }
+
+        void SplitLoadWorkDocumentTransporterUpdateInfo()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = workDocumentTransporterUpdateComboBox.SelectedItem.ToString();
+                string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedStatus[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                transporterWorkDocument = db.WorkDocuments.Find(id);
+            }
+        }
+
+        void SplitLoadTaxPayerStatusTransporterUpdateInfo()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = taxPayerStatusTransporterUpdateComboBox.SelectedItem.ToString();
+                string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedStatus[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                transporterTaxPayerStatus = db.TaxPayerStatus.Find(id);
+            }
+        }
+
+        void UpdateTransporter()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                //якщо хоча б один з флагів = true
+                if (transporterFullNameChanged || transporterDirectorChanged || transporterContractNumberChanged || transporterPhysicalAddressChanged || transporterGeographyAddressChanged || transporterCommentChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterOriginalChanged || transporterFaxChanged || transporterFiltersChanged)
+                {
+                    if (transporterFullNameChanged)
+                    {
+                        transporter.FullName = nameTransporterUpdateTextBox.Text;
+                    }
+                    if (transporterShortNameChanged)
+                    {
+                        transporter.ShortName = shortNameTransporterUpdateTextBox.Text;
+                    }
+                    if (transporterDirectorChanged)
+                    {
+                        transporter.Director = directorTransporterUpdateTextBox.Text;
+                    }                    
+                    if (transporterPhysicalAddressChanged)
+                    {
+                        transporter.PhysicalAddress = physicalAddressTransporterUpdateTextBox.Text;
+                    }
+                    if (transporterGeographyAddressChanged)
+                    {
+                        transporter.GeographyAddress = geographyAddressTransporterUpdateTextBox.Text;
+                    }
+                    if (transporterCommentChanged)
+                    {
+                        transporter.Comment = commentTransporterUpdateTextBox.Text;
+                    }
+                    if (transporterWorkDocumentChanged)
+                    {
+                        transporter.WorkDocumentId = transporterWorkDocument.Id;
+                    }
+                    if (transporterTaxPayerStatusChanged)
+                    {
+                        transporter.TaxPayerStatusId = transporterTaxPayerStatus.Id;
+                    }
+                    if (transporterFiltersChanged)
+                    {
+                        filters.IfForwarder = filtersTransporterUpdateCheckedListBox.GetItemChecked(0);
+                        filters.TUR = filtersTransporterUpdateCheckedListBox.GetItemChecked(1);
+                        filters.CMR = filtersTransporterUpdateCheckedListBox.GetItemChecked(2);
+                        filters.EKMT = filtersTransporterUpdateCheckedListBox.GetItemChecked(3);
+                        filters.Zborny = filtersTransporterUpdateCheckedListBox.GetItemChecked(4);
+                        filters.AD = filtersTransporterUpdateCheckedListBox.GetItemChecked(5);
+                        db.Entry(filters).State = EntityState.Modified;
+                    }                    
+                    if (transporterOriginalChanged)
+                    {
+                        transporter.ContractType = true;
+                    }
+                    else
+                    {
+                        transporter.ContractType = false;
+                    }
+                    db.Entry(transporter).State = EntityState.Modified;
+                    db.SaveChanges();
+                    MessageBox.Show("Успішно змінено");
+                }
+                else
+                {
+                    MessageBox.Show("Змін не знайдено");
+                }
+            }
+        }
+
+        // Contact
+        #region Contact
+
+        void AddNewTransporterContact()
+        {
+            if (transporter != null)
+            {
+                updateTransporterContactAddForm.AddTransporterContact2(transporter.Id);
+                updateTransporterContactAddForm = null;
+            }
+        }
+
+        void UpdateTransporterContact()
+        {
+            if (transporter != null)
+            {
+                updateTransporterContactUpdateForm.UpdateTransporterContact(transporter);
+            }
+        }
+
+        void DeleteTransporterContact()
+        {
+            if (transporter != null)
+            {
+                deleteTransporterContactDeleteForm.DeleteTransporterContact(transporter);
+            }
+        }
+
+        #endregion
+
+        #endregion
+
+        //Delete
+        #region Delete
+
+        void DeleteTransporter()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (deleteTransporter != null)
+                {
+                    if (MessageBox.Show("Видалити перевізника " + deleteTransporter.FullName + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            db.Transporters.Attach(deleteTransporter);
+                            db.Transporters.Remove(deleteTransporter);
+                            db.SaveChanges();
+                            MessageBox.Show("Перевізник успішно видалений");
+                            transporterDeleteComboBox.Items.Remove(transporterDeleteComboBox.SelectedItem);
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show("Помилка!" + Environment.NewLine + e);
+                        }
+                    }
+                }
+            }
+        }
+
+        void LoadTransporterDeleteInfoComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from c in db.Transporters
+                            orderby c.Id
+                            select c;
+                foreach (var item in query)
+                {
+                    transporterDeleteComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
+                }
+            }
+        }
+
+        void SplitDeleteTransporter()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = transporterDeleteComboBox.SelectedItem.ToString();
+                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedNameAndDirector[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                deleteTransporter = db.Transporters.Find(id);
+            }
+        }
+        #endregion
+
     }
 }

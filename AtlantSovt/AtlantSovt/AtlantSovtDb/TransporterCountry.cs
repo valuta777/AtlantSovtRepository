@@ -11,9 +11,9 @@ namespace AtlantSovt.AtlantSovtDb
     {
         public long Id { get; set; }
 
-        public long? TransporterId { get; set; }
+        public long TransporterId { get; set; }
 
-        public long? CountryId { get; set; }
+        public long CountryId { get; set; }
 
         public virtual Country Country { get; set; }
 
