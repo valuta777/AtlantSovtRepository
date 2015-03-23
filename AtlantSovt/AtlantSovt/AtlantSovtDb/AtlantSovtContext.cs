@@ -8,7 +8,7 @@ namespace AtlantSovt.AtlantSovtDb
     public partial class AtlantSovtContext : DbContext
     {
         public AtlantSovtContext()
-            : base("name=AtlantSovtContext1")
+            : base("name=AtlantSovtContext3")
         {
         }
 
@@ -50,6 +50,11 @@ namespace AtlantSovt.AtlantSovtDb
                 .HasMany(e => e.ClientContacts)
                 .WithOptional(e => e.Client)
                 .WillCascadeOnDelete();
+
+            modelBuilder.Entity<Country>()
+                .HasMany(e => e.TransporterCountries)
+                .WithRequired(e => e.Country)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<FineForDelay>()
                 .HasMany(e => e.Orders)
@@ -102,16 +107,13 @@ namespace AtlantSovt.AtlantSovtDb
 
             modelBuilder.Entity<Transporter>()
                 .HasOptional(e => e.Filter)
-                .WithRequired(e => e.Transporter);
+                .WithRequired(e => e.Transporter)
+                .WillCascadeOnDelete();
 
             modelBuilder.Entity<Transporter>()
                 .HasOptional(e => e.TransporterBankDetail)
-                .WithRequired(e => e.Transporter);
-
-            modelBuilder.Entity<Transporter>()
-                .HasMany(e => e.TransporterContacts)
                 .WithRequired(e => e.Transporter)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete();
 
             modelBuilder.Entity<Vehicle>()
                 .Property(e => e.Type)

@@ -18,10 +18,15 @@ namespace AtlantSovt
         TransporterContact contact;
         WorkDocument transporterWorkDocument;
         TaxPayerStatu transporterTaxPayerStatus;
+        Filter filters;
+                        
         int TransporterClikedId = 0;
         
         bool transporterAddWorkDocumentFlag, transporterAddTaxPayerStatusFlag;
-        bool transporterFullNameChanged, transporterShortNameChanged, transporterDirectorChanged, transporterContractNumberChanged, transporterFiltersChanged, transporterPhysicalAddressChanged, transporterGeographyAddressChanged, transporterCommentChanged, transporterWorkDocumentChanged, transporterTaxPayerStatusChanged, transporterOriginalChanged, transporterFaxChanged;
+        bool transporterFullNameChanged, transporterShortNameChanged, transporterDirectorChanged,
+            transporterContractNumberChanged, transporterFiltersChanged, transporterPhysicalAddressChanged,
+            transporterGeographyAddressChanged, transporterCommentChanged, transporterWorkDocumentChanged,
+            transporterTaxPayerStatusChanged, transporterOriginalChanged, transporterFaxChanged;
         
         //Show
         #region Show
@@ -476,6 +481,7 @@ namespace AtlantSovt
                 string comboBoxSelectedId = selectedNameAndDirector[1];
                 long id = Convert.ToInt64(comboBoxSelectedId);
                 transporter = db.Transporters.Find(id);
+                filters = db.Filters.Find(transporter.Id);
                 if (transporter != null)
                 {
                     nameTransporterUpdateTextBox.Text = transporter.FullName.ToString();
@@ -608,12 +614,13 @@ namespace AtlantSovt
                     }
                     if (transporterFiltersChanged)
                     {
-                        transporter.Filter.IfForwarder = filtersTransporterUpdateCheckedListBox.GetItemChecked(0);
-                        transporter.Filter.TUR = filtersTransporterUpdateCheckedListBox.GetItemChecked(1);
-                        transporter.Filter.CMR = filtersTransporterUpdateCheckedListBox.GetItemChecked(2);
-                        transporter.Filter.EKMT = filtersTransporterUpdateCheckedListBox.GetItemChecked(3);
-                        transporter.Filter.Zborny = filtersTransporterUpdateCheckedListBox.GetItemChecked(4);
-                        transporter.Filter.AD = filtersTransporterUpdateCheckedListBox.GetItemChecked(5);
+                        filters.IfForwarder = filtersTransporterUpdateCheckedListBox.GetItemChecked(0);
+                        filters.TUR = filtersTransporterUpdateCheckedListBox.GetItemChecked(1);
+                        filters.CMR = filtersTransporterUpdateCheckedListBox.GetItemChecked(2);
+                        filters.EKMT = filtersTransporterUpdateCheckedListBox.GetItemChecked(3);
+                        filters.Zborny = filtersTransporterUpdateCheckedListBox.GetItemChecked(4);
+                        filters.AD = filtersTransporterUpdateCheckedListBox.GetItemChecked(5);
+                        db.Entry(filters).State = EntityState.Modified;
                     }                    
                     if (transporterOriginalChanged)
                     {
@@ -623,7 +630,6 @@ namespace AtlantSovt
                     {
                         transporter.ContractType = false;
                     }
-
                     db.Entry(transporter).State = EntityState.Modified;
                     db.SaveChanges();
                     MessageBox.Show("Успішно змінено");
