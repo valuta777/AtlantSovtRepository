@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showClientsStrip = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +48,8 @@
             this.helloPage = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.showClientPage = new System.Windows.Forms.TabPage();
+            this.clientShowSearchButton = new System.Windows.Forms.Button();
+            this.clientShowSearchTextBox = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.clientBankDetailsDataGridView = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
@@ -59,6 +60,7 @@
             this.clientDataGridView = new System.Windows.Forms.DataGridView();
             this.addClientPage = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.faxClientCheckBox = new System.Windows.Forms.CheckBox();
             this.originalClientCheckBox = new System.Windows.Forms.CheckBox();
@@ -127,8 +129,10 @@
             this.label34 = new System.Windows.Forms.Label();
             this.forwarderDataGridView = new System.Windows.Forms.DataGridView();
             this.addForwarderPage = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
             this.workDocumentForwarderComboBox = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.addForwarderButton = new System.Windows.Forms.Button();
             this.label44 = new System.Windows.Forms.Label();
@@ -179,6 +183,7 @@
             this.label42 = new System.Windows.Forms.Label();
             this.forwarderDeleteComboBox = new System.Windows.Forms.ComboBox();
             this.showTransporterPage = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
             this.transporterShowSearchButton = new System.Windows.Forms.Button();
             this.transporterShowSearchTextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -192,6 +197,7 @@
             this.transporterShowContactsDataGridView = new System.Windows.Forms.DataGridView();
             this.transporterShowDataGridView = new System.Windows.Forms.DataGridView();
             this.addTransporterPage = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
             this.filtersTransporterAddCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.faxTransporterAddCheckBox = new System.Windows.Forms.CheckBox();
             this.originalTransporterAddCheckBox = new System.Windows.Forms.CheckBox();
@@ -265,13 +271,6 @@
             this.labelshow67 = new System.Windows.Forms.Label();
             this.labelshow68 = new System.Windows.Forms.Label();
             this.labelshow69 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.clientShowSearchButton = new System.Windows.Forms.Button();
-            this.clientShowSearchTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.dataControl.SuspendLayout();
             this.helloPage.SuspendLayout();
@@ -326,28 +325,28 @@
             // showClientsStrip
             // 
             this.showClientsStrip.Name = "showClientsStrip";
-            this.showClientsStrip.Size = new System.Drawing.Size(152, 22);
+            this.showClientsStrip.Size = new System.Drawing.Size(145, 22);
             this.showClientsStrip.Text = "Переглянути";
             this.showClientsStrip.Click += new System.EventHandler(this.showClientsStrip_Click);
             // 
             // addClientsStrip
             // 
             this.addClientsStrip.Name = "addClientsStrip";
-            this.addClientsStrip.Size = new System.Drawing.Size(152, 22);
+            this.addClientsStrip.Size = new System.Drawing.Size(145, 22);
             this.addClientsStrip.Text = "Додати";
             this.addClientsStrip.Click += new System.EventHandler(this.addClientsStrip_Click);
             // 
             // updateClientsStrip
             // 
             this.updateClientsStrip.Name = "updateClientsStrip";
-            this.updateClientsStrip.Size = new System.Drawing.Size(152, 22);
+            this.updateClientsStrip.Size = new System.Drawing.Size(145, 22);
             this.updateClientsStrip.Text = "Змінити";
             this.updateClientsStrip.Click += new System.EventHandler(this.updateClientsStrip_Click);
             // 
             // deleteClientsStrip
             // 
             this.deleteClientsStrip.Name = "deleteClientsStrip";
-            this.deleteClientsStrip.Size = new System.Drawing.Size(152, 22);
+            this.deleteClientsStrip.Size = new System.Drawing.Size(145, 22);
             this.deleteClientsStrip.Text = "Видалити";
             this.deleteClientsStrip.Click += new System.EventHandler(this.deleteClientsStrip_Click);
             // 
@@ -365,28 +364,28 @@
             // showTransporterStrip
             // 
             this.showTransporterStrip.Name = "showTransporterStrip";
-            this.showTransporterStrip.Size = new System.Drawing.Size(152, 22);
+            this.showTransporterStrip.Size = new System.Drawing.Size(145, 22);
             this.showTransporterStrip.Text = "Переглянути";
             this.showTransporterStrip.Click += new System.EventHandler(this.showTransporterStrip_Click);
             // 
             // addTransporterStrip
             // 
             this.addTransporterStrip.Name = "addTransporterStrip";
-            this.addTransporterStrip.Size = new System.Drawing.Size(152, 22);
+            this.addTransporterStrip.Size = new System.Drawing.Size(145, 22);
             this.addTransporterStrip.Text = "Додати";
             this.addTransporterStrip.Click += new System.EventHandler(this.addTransporterStrip_Click);
             // 
             // updateTransporterStrip
             // 
             this.updateTransporterStrip.Name = "updateTransporterStrip";
-            this.updateTransporterStrip.Size = new System.Drawing.Size(152, 22);
+            this.updateTransporterStrip.Size = new System.Drawing.Size(145, 22);
             this.updateTransporterStrip.Text = "Змінити";
             this.updateTransporterStrip.Click += new System.EventHandler(this.updateTransporterStrip_Click);
             // 
             // deleteTransporterStrip
             // 
             this.deleteTransporterStrip.Name = "deleteTransporterStrip";
-            this.deleteTransporterStrip.Size = new System.Drawing.Size(152, 22);
+            this.deleteTransporterStrip.Size = new System.Drawing.Size(145, 22);
             this.deleteTransporterStrip.Text = "Видалити";
             this.deleteTransporterStrip.Click += new System.EventHandler(this.deleteTransporterStrip_Click);
             // 
@@ -495,6 +494,29 @@
             this.showClientPage.Text = "showClientPage";
             this.showClientPage.UseVisualStyleBackColor = true;
             // 
+            // clientShowSearchButton
+            // 
+            this.clientShowSearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientShowSearchButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientShowSearchButton.Location = new System.Drawing.Point(267, 26);
+            this.clientShowSearchButton.Name = "clientShowSearchButton";
+            this.clientShowSearchButton.Size = new System.Drawing.Size(155, 30);
+            this.clientShowSearchButton.TabIndex = 2;
+            this.clientShowSearchButton.Text = "Знайти";
+            this.clientShowSearchButton.UseVisualStyleBackColor = true;
+            this.clientShowSearchButton.Click += new System.EventHandler(this.clientShowSearchButton_Click);
+            // 
+            // clientShowSearchTextBox
+            // 
+            this.clientShowSearchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientShowSearchTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientShowSearchTextBox.Location = new System.Drawing.Point(3, 27);
+            this.clientShowSearchTextBox.Name = "clientShowSearchTextBox";
+            this.clientShowSearchTextBox.Size = new System.Drawing.Size(261, 29);
+            this.clientShowSearchTextBox.TabIndex = 1;
+            this.clientShowSearchTextBox.TextChanged += new System.EventHandler(this.clientShowSearchTextBox_TextChanged);
+            // 
             // label29
             // 
             this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -586,14 +608,6 @@
             this.clientDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.clientDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.clientDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.clientDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.clientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clientDataGridView.Location = new System.Drawing.Point(0, 62);
             this.clientDataGridView.Name = "clientDataGridView";
@@ -652,6 +666,20 @@
             this.label9.Size = new System.Drawing.Size(163, 13);
             this.label9.TabIndex = 31;
             this.label9.Text = "* - одне з обов\'язкових полів";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label4.Location = new System.Drawing.Point(383, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(17, 21);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "*";
             // 
             // label3
             // 
@@ -1138,6 +1166,7 @@
             this.taxPayerStatusClientUpdateComboBox.Size = new System.Drawing.Size(235, 29);
             this.taxPayerStatusClientUpdateComboBox.TabIndex = 43;
             this.taxPayerStatusClientUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.taxPayerStatusClientUpdateComboBox_SelectedIndexChanged);
+            this.taxPayerStatusClientUpdateComboBox.TextChanged += new System.EventHandler(this.taxPayerStatusClientUpdateComboBox_TextChanged);
             this.taxPayerStatusClientUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.taxPayerStatusClientUpdateComboBox_MouseClick);
             // 
             // workDocumentClientUpdateComboBox
@@ -1151,6 +1180,7 @@
             this.workDocumentClientUpdateComboBox.Size = new System.Drawing.Size(235, 29);
             this.workDocumentClientUpdateComboBox.TabIndex = 42;
             this.workDocumentClientUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.workDocumentClientUpdateComboBox_SelectedIndexChanged);
+            this.workDocumentClientUpdateComboBox.TextChanged += new System.EventHandler(this.workDocumentClientUpdateComboBox_TextChanged);
             this.workDocumentClientUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.workDocumentClientUpdateComboBox_MouseClick);
             // 
             // commentClientUpdateTextBox
@@ -1484,6 +1514,19 @@
             this.addForwarderPage.Text = "addForwarderPage";
             this.addForwarderPage.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label5.Location = new System.Drawing.Point(11, 490);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(163, 13);
+            this.label5.TabIndex = 62;
+            this.label5.Text = "* - одне з обов\'язкових полів";
+            // 
             // workDocumentForwarderComboBox
             // 
             this.workDocumentForwarderComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1509,6 +1552,20 @@
             this.label35.Size = new System.Drawing.Size(117, 13);
             this.label35.TabIndex = 60;
             this.label35.Text = "* - обов\'язкове поле";
+            // 
+            // label40
+            // 
+            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label40.Location = new System.Drawing.Point(383, 8);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(17, 21);
+            this.label40.TabIndex = 55;
+            this.label40.Text = "*";
             // 
             // label41
             // 
@@ -1898,6 +1955,7 @@
             this.taxPayerStatusForwarderUpdateComboBox.Size = new System.Drawing.Size(235, 29);
             this.taxPayerStatusForwarderUpdateComboBox.TabIndex = 77;
             this.taxPayerStatusForwarderUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.taxPayerStatusForwarderUpdateComboBox_SelectedIndexChanged);
+            this.taxPayerStatusForwarderUpdateComboBox.TextChanged += new System.EventHandler(this.taxPayerStatusForwarderUpdateComboBox_TextChanged);
             this.taxPayerStatusForwarderUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.taxPayerStatusForwarderUpdateComboBox_MouseClick);
             // 
             // workDocumentForwarderUpdateComboBox
@@ -1911,6 +1969,7 @@
             this.workDocumentForwarderUpdateComboBox.Size = new System.Drawing.Size(235, 29);
             this.workDocumentForwarderUpdateComboBox.TabIndex = 76;
             this.workDocumentForwarderUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.workDocumentForwarderUpdateComboBox_SelectedIndexChanged);
+            this.workDocumentForwarderUpdateComboBox.TextChanged += new System.EventHandler(this.workDocumentForwarderUpdateComboBox_TextChanged);
             this.workDocumentForwarderUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.workDocumentForwarderUpdateComboBox_MouseClick);
             // 
             // commentForwarderUpdateTextBox
@@ -2119,6 +2178,18 @@
             this.showTransporterPage.Text = "showTransporterPage";
             this.showTransporterPage.UseVisualStyleBackColor = true;
             // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(3, 3);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(100, 21);
+            this.label15.TabIndex = 45;
+            this.label15.Text = "Перевізники";
+            // 
             // transporterShowSearchButton
             // 
             this.transporterShowSearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -2306,6 +2377,19 @@
             this.addTransporterPage.TabIndex = 10;
             this.addTransporterPage.Text = "addTransporterPage";
             this.addTransporterPage.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label6.Location = new System.Drawing.Point(10, 492);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(163, 13);
+            this.label6.TabIndex = 106;
+            this.label6.Text = "* - одне з обов\'язкових полів";
             // 
             // filtersTransporterAddCheckedListBox
             // 
@@ -2929,6 +3013,7 @@
             this.workDocumentTransporterUpdateComboBox.Size = new System.Drawing.Size(234, 29);
             this.workDocumentTransporterUpdateComboBox.TabIndex = 114;
             this.workDocumentTransporterUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.workDocumentTransporterUpdateComboBox_SelectedIndexChanged);
+            this.workDocumentTransporterUpdateComboBox.TextChanged += new System.EventHandler(this.workDocumentTransporterUpdateComboBox_TextChanged);
             this.workDocumentTransporterUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.workDocumentTransporterUpdateComboBox_MouseClick);
             // 
             // label93
@@ -2965,6 +3050,7 @@
             this.taxPayerStatusTransporterUpdateComboBox.Size = new System.Drawing.Size(234, 29);
             this.taxPayerStatusTransporterUpdateComboBox.TabIndex = 115;
             this.taxPayerStatusTransporterUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.taxPayerStatusTransporterUpdateComboBox_SelectedIndexChanged);
+            this.taxPayerStatusTransporterUpdateComboBox.TextChanged += new System.EventHandler(this.taxPayerStatusTransporterUpdateComboBox_TextChanged);
             this.taxPayerStatusTransporterUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.taxPayerStatusTransporterUpdateComboBox_MouseClick);
             // 
             // physicalAddressTransporterUpdateTextBox
@@ -3185,95 +3271,6 @@
             this.labelshow69.Size = new System.Drawing.Size(61, 21);
             this.labelshow69.TabIndex = 36;
             this.labelshow69.Text = "Країни";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(3, 3);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 21);
-            this.label15.TabIndex = 45;
-            this.label15.Text = "Перевізники";
-            // 
-            // clientShowSearchButton
-            // 
-            this.clientShowSearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientShowSearchButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientShowSearchButton.Location = new System.Drawing.Point(267, 26);
-            this.clientShowSearchButton.Name = "clientShowSearchButton";
-            this.clientShowSearchButton.Size = new System.Drawing.Size(155, 30);
-            this.clientShowSearchButton.TabIndex = 2;
-            this.clientShowSearchButton.Text = "Знайти";
-            this.clientShowSearchButton.UseVisualStyleBackColor = true;
-            this.clientShowSearchButton.Click += new System.EventHandler(this.clientShowSearchButton_Click);
-            // 
-            // clientShowSearchTextBox
-            // 
-            this.clientShowSearchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientShowSearchTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientShowSearchTextBox.Location = new System.Drawing.Point(3, 27);
-            this.clientShowSearchTextBox.Name = "clientShowSearchTextBox";
-            this.clientShowSearchTextBox.Size = new System.Drawing.Size(261, 29);
-            this.clientShowSearchTextBox.TabIndex = 1;
-            this.clientShowSearchTextBox.TextChanged += new System.EventHandler(this.clientShowSearchTextBox_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label4.Location = new System.Drawing.Point(383, 3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(17, 21);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "*";
-            // 
-            // label40
-            // 
-            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Transparent;
-            this.label40.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label40.Location = new System.Drawing.Point(383, 8);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(17, 21);
-            this.label40.TabIndex = 55;
-            this.label40.Text = "*";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label5.Location = new System.Drawing.Point(11, 490);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 13);
-            this.label5.TabIndex = 62;
-            this.label5.Text = "* - одне з обов\'язкових полів";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label6.Location = new System.Drawing.Point(10, 492);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 13);
-            this.label6.TabIndex = 106;
-            this.label6.Text = "* - одне з обов\'язкових полів";
             // 
             // MainForm
             // 

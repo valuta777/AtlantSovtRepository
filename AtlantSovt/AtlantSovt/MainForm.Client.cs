@@ -387,8 +387,22 @@ namespace AtlantSovt
                     physicalAddressClientUpdateTextBox.Text = client.PhysicalAddress.ToString();
                     geographyAddressClientUpdateTextBox.Text = client.GeografphyAddress.ToString();
                     commentClientUpdateTextBox.Text = client.Comment.ToString();
-                    workDocumentClientUpdateComboBox.SelectedIndex = Convert.ToInt32(client.WorkDocumentId - 1);
-                    taxPayerStatusClientUpdateComboBox.SelectedIndex = Convert.ToInt32(client.TaxPayerStatusId - 1);
+                    if (client.WorkDocument != null)
+                    {
+                        workDocumentClientUpdateComboBox.SelectedIndex = Convert.ToInt32(client.WorkDocumentId - 1);
+                    }
+                    else 
+                    {
+                        workDocumentClientUpdateComboBox.Text = "";
+                    }
+                    if (client.TaxPayerStatu != null)
+                    {
+                        taxPayerStatusClientUpdateComboBox.SelectedIndex = Convert.ToInt32(client.TaxPayerStatusId - 1);
+                    }
+                    else 
+                    {
+                        taxPayerStatusClientUpdateComboBox.Text = "";
+                    }
                     originalClientUpdateCheckBox.Checked = client.ContractType.Value;
                     faxClientUpdateCheckBox.Checked = !client.ContractType.Value;
                 }
@@ -442,11 +456,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = workDocumentClientUpdateComboBox.SelectedItem.ToString();
-                string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedStatus[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                clientWorkDocument = db.WorkDocuments.Find(id);
+                if (workDocumentClientUpdateComboBox.Text != "")
+                {
+                    string comboboxText = workDocumentClientUpdateComboBox.SelectedItem.ToString();
+                    string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedStatus[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    clientWorkDocument = db.WorkDocuments.Find(id);
+                }
+                else 
+                {
+                    clientWorkDocument = null;
+                }
             }
         }
 
@@ -454,11 +475,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = taxPayerStatusClientUpdateComboBox.SelectedItem.ToString();
-                string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedStatus[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                clientTaxPayerStatus = db.TaxPayerStatus.Find(id);
+                if (taxPayerStatusClientUpdateComboBox.Text != "")
+                {
+                    string comboboxText = taxPayerStatusClientUpdateComboBox.SelectedItem.ToString();
+                    string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedStatus[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    clientTaxPayerStatus = db.TaxPayerStatus.Find(id);
+                }
+                else
+                {
+                    clientTaxPayerStatus = null;
+                }
             }
         }
 
@@ -492,11 +520,29 @@ namespace AtlantSovt
                     }
                     if (clientWorkDocumentChanged)
                     {
-                        client.WorkDocumentId = clientWorkDocument.Id;
+                        if (workDocumentClientUpdateComboBox.Text != "")
+                        {
+                            client.WorkDocument = null;
+                            client.WorkDocumentId = clientWorkDocument.Id;
+                        }
+                        else
+                        {
+                            client.WorkDocumentId = null;
+                            client.WorkDocument = null;
+                        }
                     }
                     if (clientTaxPayerStatusChanged)
                     {
-                        client.TaxPayerStatusId = clientTaxPayerStatus.Id;
+                        if (taxPayerStatusClientUpdateComboBox.Text != "")
+                        {
+                            client.TaxPayerStatu = null;
+                            client.TaxPayerStatusId = clientTaxPayerStatus.Id;
+                        }
+                        else 
+                        {
+                            client.TaxPayerStatusId = null;
+                            client.TaxPayerStatu = null;
+                        }
                     }
                     if (clientOriginalChanged)
                     {

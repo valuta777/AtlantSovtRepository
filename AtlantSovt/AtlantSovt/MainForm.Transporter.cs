@@ -16,8 +16,8 @@ namespace AtlantSovt
     {
         Transporter transporter, deleteTransporter;
         TransporterContact contact;
-        WorkDocument transporterWorkDocument;
-        TaxPayerStatu transporterTaxPayerStatus;
+        WorkDocument transporterWorkDocument = null;
+        TaxPayerStatu transporterTaxPayerStatus = null;
         Filter filters;
 
 
@@ -26,7 +26,6 @@ namespace AtlantSovt
         bool transporterAddWorkDocumentFlag, transporterAddTaxPayerStatusFlag;
 
         bool transporterFullNameChanged, transporterShortNameChanged, transporterDirectorChanged,
-
             transporterFiltersChanged, transporterPhysicalAddressChanged,
             transporterGeographyAddressChanged, transporterCommentChanged, transporterWorkDocumentChanged,
             transporterTaxPayerStatusChanged, transporterOriginalChanged, transporterFaxChanged, transporterIsWorkDocumentExist, transporterIsTaxPayerStatusExist;
@@ -615,8 +614,24 @@ namespace AtlantSovt
                     physicalAddressTransporterUpdateTextBox.Text = transporter.PhysicalAddress.ToString();
                     geographyAddressTransporterUpdateTextBox.Text = transporter.GeographyAddress.ToString();
                     commentTransporterUpdateTextBox.Text = transporter.Comment.ToString();
-                    workDocumentTransporterUpdateComboBox.SelectedIndex = Convert.ToInt32(transporter.WorkDocumentId - 1);
-                    taxPayerStatusTransporterUpdateComboBox.SelectedIndex = Convert.ToInt32(transporter.TaxPayerStatusId - 1);
+
+                    if (transporter.WorkDocument != null) 
+                    {
+                        workDocumentTransporterUpdateComboBox.SelectedIndex = Convert.ToInt32(transporter.WorkDocumentId - 1);
+                    }
+                    else 
+                    {
+                        workDocumentTransporterUpdateComboBox.Text = "";
+                    }
+                    if (transporter.TaxPayerStatu != null)
+                    {
+                        taxPayerStatusTransporterUpdateComboBox.SelectedIndex = Convert.ToInt32(transporter.TaxPayerStatusId - 1);
+                    }
+                    else
+                    {
+                        taxPayerStatusTransporterUpdateComboBox.Text = "";
+                    }
+
                     originalTransporterUpdateCheckBox.Checked = transporter.ContractType.Value;
                     faxTransporterUpdateCheckBox.Checked = !transporter.ContractType.Value;
 
@@ -731,11 +746,29 @@ namespace AtlantSovt
                     }
                     if (transporterWorkDocumentChanged)
                     {
-                        transporter.WorkDocumentId = transporterWorkDocument.Id;
+                        if (workDocumentTransporterUpdateComboBox.Text != "")
+                        {
+                            transporter.WorkDocument = null;
+                            transporter.WorkDocumentId = transporterWorkDocument.Id;
+                        }
+                        else 
+                        {
+                            transporter.WorkDocumentId = null;
+                            transporter.WorkDocument = null;
+                        }
                     }
                     if (transporterTaxPayerStatusChanged)
                     {
-                        transporter.TaxPayerStatusId = transporterTaxPayerStatus.Id;
+                        if (taxPayerStatusTransporterUpdateComboBox.Text != "")
+                        {
+                            transporter.TaxPayerStatu = null;
+                            transporter.TaxPayerStatusId = transporterTaxPayerStatus.Id;
+                        }
+                        else 
+                        {                           
+                            transporter.TaxPayerStatusId = null;
+                            transporter.TaxPayerStatu = null;
+                        }
                     }
                     if (transporterFiltersChanged)
                     {
@@ -757,6 +790,7 @@ namespace AtlantSovt
                     }
                     db.Entry(transporter).State = EntityState.Modified;
                     db.SaveChanges();
+                    
                     MessageBox.Show("Успішно змінено");
                 }
                 else

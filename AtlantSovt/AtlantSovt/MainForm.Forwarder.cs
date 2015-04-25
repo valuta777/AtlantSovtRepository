@@ -20,8 +20,8 @@ namespace AtlantSovt
 
 
         Forwarder forwarder, deleteForwarder;
-        WorkDocument forwarderWorkDocument;
-        TaxPayerStatu forwarderTaxPayerStatus;
+        WorkDocument forwarderWorkDocument = null;
+        TaxPayerStatu forwarderTaxPayerStatus = null;
 
         //show
         void ShowForwarder()
@@ -337,8 +337,23 @@ namespace AtlantSovt
                     physicalAddressForwarderUpdateTextBox.Text = forwarder.PhysicalAddress.ToString();
                     geographyAddressForwarderUpdateTextBox.Text = forwarder.GeographyAddress.ToString();
                     commentForwarderUpdateTextBox.Text = forwarder.Comment.ToString();
-                    workDocumentForwarderUpdateComboBox.SelectedIndex = Convert.ToInt32(forwarder.WorkDocumentId - 1);
-                    taxPayerStatusForwarderUpdateComboBox.SelectedIndex = Convert.ToInt32(forwarder.TaxPayerStatusId - 1);                    
+                    if (forwarder.WorkDocument != null)
+                    {
+                        workDocumentForwarderUpdateComboBox.SelectedIndex = Convert.ToInt32(forwarder.WorkDocumentId - 1);
+
+                    }
+                    else
+                    {
+                        workDocumentForwarderUpdateComboBox.Text = "";
+                    }
+                    if (forwarder.TaxPayerStatu != null)
+                    { 
+                        taxPayerStatusForwarderUpdateComboBox.SelectedIndex = Convert.ToInt32(forwarder.TaxPayerStatusId - 1);
+                    }
+                    else 
+                    {
+                        taxPayerStatusForwarderUpdateComboBox.Text = "";
+                    }
                 }
                 forwarderNameChanged = forwarderDirectorChanged = forwarderPhysicalAddressChanged = forwarderGeographyAddressChanged = forwarderCommentChanged = forwarderWorkDocumentChanged = forwarderTaxPayerStatusChanged = false;
             }
@@ -390,11 +405,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = workDocumentForwarderUpdateComboBox.SelectedItem.ToString();
-                string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedStatus[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                forwarderWorkDocument = db.WorkDocuments.Find(id);
+                if (workDocumentForwarderUpdateComboBox.Text != "")
+                {
+                    string comboboxText = workDocumentForwarderUpdateComboBox.SelectedItem.ToString();
+                    string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedStatus[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    forwarderWorkDocument = db.WorkDocuments.Find(id);
+                }
+                else
+                {
+                    forwarderWorkDocument = null;
+                }
             }
         }
 
@@ -402,11 +424,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = taxPayerStatusForwarderUpdateComboBox.SelectedItem.ToString();
-                string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedStatus[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                forwarderTaxPayerStatus = db.TaxPayerStatus.Find(id);
+                if (taxPayerStatusForwarderUpdateComboBox.Text != "")
+                {
+                    string comboboxText = taxPayerStatusForwarderUpdateComboBox.SelectedItem.ToString();
+                    string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedStatus[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    forwarderTaxPayerStatus = db.TaxPayerStatus.Find(id);
+                }
+                else
+                {
+                    forwarderTaxPayerStatus = null;
+                }
             }
         }
 
@@ -439,11 +468,29 @@ namespace AtlantSovt
                     }
                     if (forwarderWorkDocumentChanged)
                     {
-                        forwarder.WorkDocumentId = forwarderWorkDocument.Id;
+                        if (workDocumentForwarderUpdateComboBox.Text != "")
+                        {
+                            forwarder.WorkDocument = null;
+                            forwarder.WorkDocumentId = forwarderWorkDocument.Id;
+                        }
+                        else
+                        {
+                            forwarder.WorkDocumentId = null;
+                            forwarder.WorkDocument = null;
+                        }
                     }
                     if (forwarderTaxPayerStatusChanged)
                     {
-                        forwarder.TaxPayerStatusId = forwarderTaxPayerStatus.Id;
+                        if (taxPayerStatusForwarderUpdateComboBox.Text != "")
+                        {
+                            forwarder.TaxPayerStatu = null;
+                            forwarder.TaxPayerStatusId = forwarderTaxPayerStatus.Id;
+                        }
+                        else
+                        {
+                            forwarder.TaxPayerStatusId = null;
+                            forwarder.TaxPayerStatu = null;
+                        }
                     }
 
                     db.Entry(forwarder).State = EntityState.Modified;

@@ -331,6 +331,17 @@ namespace AtlantSovt
             SplitLoadTaxPayerStatusClientUpdateInfo();
         }
 
+        private void workDocumentClientUpdateComboBox_TextChanged(object sender, EventArgs e)
+        {
+            clientWorkDocumentChanged = true;
+        }
+
+        private void taxPayerStatusClientUpdateComboBox_TextChanged(object sender, EventArgs e)
+        {
+            clientTaxPayerStatusChanged = true;
+
+        }
+
         private void clientUpdateWorkDocumentAddButton_Click(object sender, EventArgs e)
         {
             AddWorkDocumentForm addWorkDocument = new AddWorkDocumentForm();
@@ -370,6 +381,8 @@ namespace AtlantSovt
         private void updateClientButton_Click(object sender, EventArgs e)
         {
             UpdateClient();
+            clientNameChanged = clientDirectorChanged = clientPhysicalAddressChanged = clientGeographyAddressChanged = clientCommentChanged = clientWorkDocumentChanged = clientTaxPayerStatusChanged = clientOriginalChanged = clientFaxChanged = false;
+            
         }
 
                 //Contact
@@ -572,7 +585,7 @@ namespace AtlantSovt
         //Forwarder
         #region Forwarder
 
-                //Show
+            //Show
                 #region Show
         private void showForwarderStrip_Click(object sender, EventArgs e)
         {
@@ -588,7 +601,7 @@ namespace AtlantSovt
         }
         #endregion
 
-                //Add
+            //Add
                 #region Add
         private void workDocumentForwarderComboBox_MouseClick(object sender, MouseEventArgs e)
         {
@@ -656,7 +669,7 @@ namespace AtlantSovt
         }
         #endregion
 
-                //Update
+            //Update
                 #region Update
         private void selectForwarderUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -699,6 +712,16 @@ namespace AtlantSovt
             forwarderTaxPayerStatusChanged = true;
             SplitLoadTaxPayerStatusForwarderUpdateInfo();
         }
+
+        private void workDocumentForwarderUpdateComboBox_TextChanged(object sender, EventArgs e)
+        {
+            forwarderWorkDocumentChanged = true;
+        }
+
+        private void taxPayerStatusForwarderUpdateComboBox_TextChanged(object sender, EventArgs e)
+        {
+            forwarderTaxPayerStatusChanged = true;
+        }
       
         private void forwarderUpdateWorkDocumentAddButton_Click(object sender, EventArgs e)
         {
@@ -740,6 +763,8 @@ namespace AtlantSovt
         private void updateForwarderButton_Click(object sender, EventArgs e)
         {
             UpdateForwarder();
+            forwarderNameChanged = forwarderDirectorChanged = forwarderPhysicalAddressChanged = forwarderGeographyAddressChanged = forwarderCommentChanged = forwarderWorkDocumentChanged = forwarderTaxPayerStatusChanged = false;
+            
         }
         //Contact
         #region Contact
@@ -904,7 +929,7 @@ namespace AtlantSovt
                 #endregion
 
 
-                //Delete
+            //Delete
                 #region Delete
 
         private void forwarderDeleteButton_Click(object sender, EventArgs e)
@@ -1165,13 +1190,21 @@ namespace AtlantSovt
         {
             transporterWorkDocumentChanged = true;
             SplitLoadWorkDocumentTransporterUpdateInfo();
-
         }
 
         private void taxPayerStatusTransporterUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             transporterTaxPayerStatusChanged = true;
             SplitLoadTaxPayerStatusTransporterUpdateInfo();
+        }
+        private void workDocumentTransporterUpdateComboBox_TextChanged(object sender, EventArgs e)
+        {
+            transporterWorkDocumentChanged = true;
+        }
+
+        private void taxPayerStatusTransporterUpdateComboBox_TextChanged(object sender, EventArgs e)
+        {
+            transporterTaxPayerStatusChanged = true;
         }
 
         private void transporterUpdateWorkDocumentAddButton_Click(object sender, EventArgs e)
@@ -1221,6 +1254,7 @@ namespace AtlantSovt
         private void transporterUpdateButton_Click(object sender, EventArgs e)
         {
             UpdateTransporter();
+            transporterFullNameChanged = transporterDirectorChanged = transporterPhysicalAddressChanged = transporterGeographyAddressChanged = transporterCommentChanged = transporterWorkDocumentChanged = transporterTaxPayerStatusChanged = transporterFiltersChanged = transporterOriginalChanged = transporterFaxChanged = false;
         }
 
         //Contact
@@ -1432,8 +1466,6 @@ namespace AtlantSovt
 
 
         #endregion
-
-     
 
         private void transporterShowSearchButton_Click(object sender, EventArgs e)
         {

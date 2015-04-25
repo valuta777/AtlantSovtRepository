@@ -33,7 +33,7 @@ namespace AtlantSovt
         private void addClientBankDetailsButton_Click(object sender, EventArgs e)
         {
             if (clientBankNameTextBox.Text != "" && clientMFOTextBox.Text != "" && clientAccountNumberTextBox.Text != "" && clientEDRPOUTextBox.Text != ""
-                && clientIPNTextBox.Text != "" && clientSWIFTTextBox.Text != "" && clientCertificateNumberTextBox.Text != "" && clientIBANTextBox.Text != "")
+                && clientIPNTextBox.Text != "")
             {
                 new_BankName = clientBankNameTextBox.Text;
                 new_MFO = clientMFOTextBox.Text;
