@@ -33,7 +33,7 @@ namespace AtlantSovt
         private void addForwarderBankDetailsButton_Click(object sender, EventArgs e)
         {
             if (forwarderBankNameTextBox.Text != "" && forwarderMFOTextBox.Text != "" && forwarderAccountNumberTextBox.Text != "" && forwarderEDRPOUTextBox.Text != ""
-                && forwarderIPNTextBox.Text != "" && forwarderSWIFTTextBox.Text != "" && forwarderCertificateNumberTextBox.Text != "" && forwarderIBANTextBox.Text != "")
+                && forwarderIPNTextBox.Text != "")
             {
                 new_BankName = forwarderBankNameTextBox.Text;
                 new_MFO = forwarderMFOTextBox.Text;
