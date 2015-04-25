@@ -541,6 +541,7 @@
             this.clientBankDetailsDataGridView.Name = "clientBankDetailsDataGridView";
             this.clientBankDetailsDataGridView.Size = new System.Drawing.Size(776, 56);
             this.clientBankDetailsDataGridView.TabIndex = 7;
+            this.clientBankDetailsDataGridView.TabStop = false;
             // 
             // label10
             // 
@@ -563,6 +564,7 @@
             this.clientCommentRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.clientCommentRichTextBox.Size = new System.Drawing.Size(776, 51);
             this.clientCommentRichTextBox.TabIndex = 5;
+            this.clientCommentRichTextBox.TabStop = false;
             this.clientCommentRichTextBox.Text = "";
             // 
             // label2
@@ -589,6 +591,7 @@
             this.clientContactsDataGridView.Name = "clientContactsDataGridView";
             this.clientContactsDataGridView.Size = new System.Drawing.Size(776, 106);
             this.clientContactsDataGridView.TabIndex = 3;
+            this.clientContactsDataGridView.TabStop = false;
             // 
             // label1
             // 
@@ -1331,7 +1334,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.deleteClientButton.Enabled = false;
             this.deleteClientButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.deleteClientButton.Location = new System.Drawing.Point(466, 450);
+            this.deleteClientButton.Location = new System.Drawing.Point(470, 434);
             this.deleteClientButton.Name = "deleteClientButton";
             this.deleteClientButton.Size = new System.Drawing.Size(302, 70);
             this.deleteClientButton.TabIndex = 66;
@@ -1408,6 +1411,7 @@
             this.forwarderBankDetailsDataGridView.Name = "forwarderBankDetailsDataGridView";
             this.forwarderBankDetailsDataGridView.Size = new System.Drawing.Size(776, 56);
             this.forwarderBankDetailsDataGridView.TabIndex = 15;
+            this.forwarderBankDetailsDataGridView.TabStop = false;
             // 
             // label32
             // 
@@ -1430,6 +1434,7 @@
             this.forwarderCommentRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.forwarderCommentRichTextBox.Size = new System.Drawing.Size(776, 51);
             this.forwarderCommentRichTextBox.TabIndex = 13;
+            this.forwarderCommentRichTextBox.TabStop = false;
             this.forwarderCommentRichTextBox.Text = "";
             // 
             // label33
@@ -1456,6 +1461,7 @@
             this.forwarderContactsDataGridView.Name = "forwarderContactsDataGridView";
             this.forwarderContactsDataGridView.Size = new System.Drawing.Size(776, 105);
             this.forwarderContactsDataGridView.TabIndex = 11;
+            this.forwarderContactsDataGridView.TabStop = false;
             // 
             // label34
             // 
@@ -1480,6 +1486,7 @@
             this.forwarderDataGridView.Name = "forwarderDataGridView";
             this.forwarderDataGridView.Size = new System.Drawing.Size(776, 206);
             this.forwarderDataGridView.TabIndex = 9;
+            this.forwarderDataGridView.TabStop = false;
             this.forwarderDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.forwarderDataGridView_CellMouseClick);
             // 
             // addForwarderPage
@@ -2120,7 +2127,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.forwarderDeleteButton.Enabled = false;
             this.forwarderDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.forwarderDeleteButton.Location = new System.Drawing.Point(466, 450);
+            this.forwarderDeleteButton.Location = new System.Drawing.Point(470, 434);
             this.forwarderDeleteButton.Name = "forwarderDeleteButton";
             this.forwarderDeleteButton.Size = new System.Drawing.Size(302, 70);
             this.forwarderDeleteButton.TabIndex = 69;
@@ -2256,6 +2263,7 @@
             this.transporterShowAdditionalDetailsButton.Name = "transporterShowAdditionalDetailsButton";
             this.transporterShowAdditionalDetailsButton.Size = new System.Drawing.Size(285, 50);
             this.transporterShowAdditionalDetailsButton.TabIndex = 38;
+            this.transporterShowAdditionalDetailsButton.TabStop = false;
             this.transporterShowAdditionalDetailsButton.Text = "Додаткові параметри";
             this.transporterShowAdditionalDetailsButton.UseVisualStyleBackColor = true;
             this.transporterShowAdditionalDetailsButton.Click += new System.EventHandler(this.transporterShowAdditionalDetailsButton_Click);
@@ -2272,6 +2280,7 @@
             this.transporterShowCountryDataGridView.Name = "transporterShowCountryDataGridView";
             this.transporterShowCountryDataGridView.Size = new System.Drawing.Size(190, 120);
             this.transporterShowCountryDataGridView.TabIndex = 37;
+            this.transporterShowCountryDataGridView.TabStop = false;
             // 
             // transporterShowFilterSelectButton
             // 
@@ -2281,6 +2290,7 @@
             this.transporterShowFilterSelectButton.Name = "transporterShowFilterSelectButton";
             this.transporterShowFilterSelectButton.Size = new System.Drawing.Size(285, 50);
             this.transporterShowFilterSelectButton.TabIndex = 33;
+            this.transporterShowFilterSelectButton.TabStop = false;
             this.transporterShowFilterSelectButton.Text = "Фільтрація";
             this.transporterShowFilterSelectButton.UseVisualStyleBackColor = true;
             this.transporterShowFilterSelectButton.Click += new System.EventHandler(this.transporterShowFilterSelectButton_Click);
@@ -2297,6 +2307,7 @@
             this.transporterShowBankDetailsDataGridView.Name = "transporterShowBankDetailsDataGridView";
             this.transporterShowBankDetailsDataGridView.Size = new System.Drawing.Size(780, 55);
             this.transporterShowBankDetailsDataGridView.TabIndex = 23;
+            this.transporterShowBankDetailsDataGridView.TabStop = false;
             // 
             // transporterShowCommentRichTextBox
             // 
@@ -2308,6 +2319,7 @@
             this.transporterShowCommentRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.transporterShowCommentRichTextBox.Size = new System.Drawing.Size(776, 54);
             this.transporterShowCommentRichTextBox.TabIndex = 21;
+            this.transporterShowCommentRichTextBox.TabStop = false;
             this.transporterShowCommentRichTextBox.Text = "";
             // 
             // transporterShowContactsDataGridView
@@ -2322,6 +2334,7 @@
             this.transporterShowContactsDataGridView.Name = "transporterShowContactsDataGridView";
             this.transporterShowContactsDataGridView.Size = new System.Drawing.Size(776, 81);
             this.transporterShowContactsDataGridView.TabIndex = 19;
+            this.transporterShowContactsDataGridView.TabStop = false;
             // 
             // transporterShowDataGridView
             // 
@@ -2336,6 +2349,7 @@
             this.transporterShowDataGridView.Name = "transporterShowDataGridView";
             this.transporterShowDataGridView.Size = new System.Drawing.Size(579, 120);
             this.transporterShowDataGridView.TabIndex = 17;
+            this.transporterShowDataGridView.TabStop = false;
             this.transporterShowDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.transporterShowDataGridView_CellMouseClick);
             // 
             // addTransporterPage
@@ -3179,7 +3193,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterDeleteButton.Enabled = false;
             this.transporterDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterDeleteButton.Location = new System.Drawing.Point(466, 450);
+            this.transporterDeleteButton.Location = new System.Drawing.Point(470, 434);
             this.transporterDeleteButton.Name = "transporterDeleteButton";
             this.transporterDeleteButton.Size = new System.Drawing.Size(302, 70);
             this.transporterDeleteButton.TabIndex = 72;
