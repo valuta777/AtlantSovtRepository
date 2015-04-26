@@ -51,7 +51,6 @@ namespace AtlantSovt
                     GeographyAddress = t.GeographyAddress,
                     TaxPayerStatusId = t.TaxPayerStatu.Status,
                     WorkDocumentId = t.WorkDocument.Status,
-                    Date = t.ContractEndDay
                 };
 
 
@@ -65,8 +64,6 @@ namespace AtlantSovt
                 transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
                 transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
                 transporterShowDataGridView.Columns[7].HeaderText = "На основі";
-                transporterShowDataGridView.Columns[8].HeaderText = "Дата завершення договору";
-
 
 
             } transporterShowDataGridView.Update();
@@ -187,7 +184,6 @@ namespace AtlantSovt
                         GeographyAddress = t.GeographyAddress,
                         TaxPayerStatusId = t.TaxPayerStatu.Status,
                         WorkDocumentId = t.WorkDocument.Status,
-                        Date = t.ContractEndDay
                     };
 
                         transporterShowDataGridView.DataSource = getTransporters.ToList();
@@ -199,7 +195,6 @@ namespace AtlantSovt
                         transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
                         transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
                         transporterShowDataGridView.Columns[7].HeaderText = "На основі";
-                        transporterShowDataGridView.Columns[8].HeaderText = "Дата завершення договору";
 
                     } transporterShowDataGridView.Update();
 
@@ -234,7 +229,6 @@ namespace AtlantSovt
                         GeographyAddress = t.GeographyAddress,
                         TaxPayerStatusId = t.TaxPayerStatu.Status,
                         WorkDocumentId = t.WorkDocument.Status,
-                        Date = t.ContractEndDay
                     };
 
                         transporterShowDataGridView.DataSource = getTransporters.ToList();
@@ -246,7 +240,6 @@ namespace AtlantSovt
                         transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
                         transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
                         transporterShowDataGridView.Columns[7].HeaderText = "На основі";
-                        transporterShowDataGridView.Columns[8].HeaderText = "Дата завершення договору";
 
                     } transporterShowDataGridView.Update();
                 }
@@ -286,7 +279,6 @@ namespace AtlantSovt
                         GeographyAddress = t.GeographyAddress,
                         TaxPayerStatusId = t.TaxPayerStatu.Status,
                         WorkDocumentId = t.WorkDocument.Status,
-                        Date = t.ContractEndDay
                     };
 
                         transporterShowDataGridView.DataSource = getTransporters.ToList();
@@ -298,7 +290,6 @@ namespace AtlantSovt
                         transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
                         transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
                         transporterShowDataGridView.Columns[7].HeaderText = "На основі";
-                        transporterShowDataGridView.Columns[8].HeaderText = "Дата завершення договору";
 
 
                     } transporterShowDataGridView.Update();
