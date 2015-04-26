@@ -271,6 +271,11 @@ namespace AtlantSovt
             selectClientUpdateComboBox.DroppedDown = true;
         }
 
+        private void selectClientDiapasonUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoadDiasoneClientUpdateInfoCombobox();
+        }
+
         private void workDocumentClientUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             workDocumentClientUpdateComboBox.Items.Clear();
@@ -363,6 +368,7 @@ namespace AtlantSovt
         {
             clientDirectorChanged = true;
         }
+
         private void physicalAddressClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             clientPhysicalAddressChanged = true;
@@ -548,6 +554,7 @@ namespace AtlantSovt
 
                 //Delete
                 #region Delete
+
         private void deleteClientButton_Click(object sender, EventArgs e)
         {
             deleteClientComboBox.Text = "";
@@ -559,6 +566,11 @@ namespace AtlantSovt
         private void deleteClientComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitDeleteClient();
+        }
+
+        private void deleteClientSelectDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoadDiasoneClientDeleteInfoCombobox();
         }
 
         private void deleteClientComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -577,7 +589,6 @@ namespace AtlantSovt
             }
         }
 
-           
         #endregion        
 
         #endregion
@@ -1140,6 +1151,11 @@ namespace AtlantSovt
             selectTransporterUpdateComboBox.DroppedDown = true;
         }
 
+        private void selectTransporterDiapasoneUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoadDiasoneTransporterUpdateInfoCombobox();
+        }
+
         private void workDocumentTransporterUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             workDocumentTransporterUpdateComboBox.Items.Clear();
@@ -1197,6 +1213,7 @@ namespace AtlantSovt
             transporterTaxPayerStatusChanged = true;
             SplitLoadTaxPayerStatusTransporterUpdateInfo();
         }
+
         private void workDocumentTransporterUpdateComboBox_TextChanged(object sender, EventArgs e)
         {
             transporterWorkDocumentChanged = true;
@@ -1431,7 +1448,6 @@ namespace AtlantSovt
         }
             #endregion
 
-      
             //Delete
             #region Delete
         private void transporterDeleteButton_Click(object sender, EventArgs e)
@@ -1445,6 +1461,11 @@ namespace AtlantSovt
         private void transporterDeleteComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitDeleteTransporter();
+        }
+
+        private void deleteTransporterSelectDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoadDiapasoneTransporterDeleteInfoCombobox();
         }
 
         private void transporterDeleteComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -1494,7 +1515,6 @@ namespace AtlantSovt
                 ShowClient();
             }
         }
-
 
     }
 }

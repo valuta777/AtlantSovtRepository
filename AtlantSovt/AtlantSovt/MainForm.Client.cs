@@ -360,6 +360,7 @@ namespace AtlantSovt
 
         //Update
         #region Update
+
         void ClearAllBoxesClientUpdate()
         {
             workDocumentClientUpdateComboBox.Items.Clear();
@@ -382,11 +383,12 @@ namespace AtlantSovt
                 client = db.Clients.Find(id);
                 if (client != null)
                 {
-                    nameClientUpdateTextBox.Text = client.Name.ToString();
-                    directorClientUpdateTextBox.Text = client.Director.ToString();
-                    physicalAddressClientUpdateTextBox.Text = client.PhysicalAddress.ToString();
-                    geographyAddressClientUpdateTextBox.Text = client.GeografphyAddress.ToString();
-                    commentClientUpdateTextBox.Text = client.Comment.ToString();
+                    nameClientUpdateTextBox.Text = Convert.ToString(client.Name);
+                    directorClientUpdateTextBox.Text = Convert.ToString(client.Director);
+                    physicalAddressClientUpdateTextBox.Text = Convert.ToString(client.PhysicalAddress);
+                    geographyAddressClientUpdateTextBox.Text = Convert.ToString(client.GeografphyAddress);
+                    commentClientUpdateTextBox.Text = Convert.ToString(client.Comment);
+
                     if (client.WorkDocument != null)
                     {
                         workDocumentClientUpdateComboBox.SelectedIndex = Convert.ToInt32(client.WorkDocumentId - 1);
@@ -414,12 +416,53 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
+                string text = selectClientDiapasoneUpdateComboBox.SelectedItem.ToString();
+                string[] diapasone = text.Split(new char[] {' '});
+                int diapasoneFrom = Convert.ToInt32(diapasone[0]);
+                int diapasoneTo = Convert.ToInt32(diapasone[2]);
                 var query = from c in db.Clients
                             orderby c.Id
+                            where c.Id >= diapasoneFrom && c.Id <= diapasoneTo
                             select c;
                 foreach (var item in query)
                 {
                     selectClientUpdateComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                }
+            }
+        }
+
+        void LoadDiasoneClientUpdateInfoCombobox()
+        {
+            selectClientDiapasoneUpdateComboBox.Items.Clear();
+            selectClientUpdateComboBox.Items.Clear();
+            selectClientUpdateComboBox.Text = "";
+            using (var db = new AtlantSovtContext())
+            {
+                int part = 1000;
+                double clientPart = 0;
+                if ((from c in db.Clients select c.Id).Count() != 0)
+                {
+                    long clientCount = (from c in db.Clients select c.Id).Max();
+                    if (clientCount % part == 0)
+                    {
+                        clientPart = clientCount / part;
+                    }
+                    else
+                    {
+                        clientPart = (clientCount / part) + 1;
+                    }
+
+                    for (int i = 0; i < clientPart; i++)
+                    {
+                        selectClientDiapasoneUpdateComboBox.Items.Add(((i * part) + 1) + " - " + ((i + 1) * part));
+                    }
+                    selectClientDiapasoneUpdateComboBox.DroppedDown = true;
+                    selectClientUpdateComboBox.Enabled = true;
+
+                }
+                else 
+                {
+                    MessageBox.Show("Немає жодних записів");
                 }
             }
         }
@@ -626,14 +669,54 @@ namespace AtlantSovt
 
         void LoadClientDeleteInfoComboBox()
         {
+            string text = deleteClientSelectDiapasoneComboBox.SelectedItem.ToString();
+            string[] diapasone = text.Split(new char[] { ' ' });
+            int diapasoneFrom = Convert.ToInt32(diapasone[0]);
+            int diapasoneTo = Convert.ToInt32(diapasone[2]);
             using (var db = new AtlantSovtContext())
             {
                 var query = from c in db.Clients
                             orderby c.Id
+                            where c.Id >= diapasoneFrom && c.Id <= diapasoneTo
                             select c;
                 foreach (var item in query)
                 {
                     deleteClientComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                }
+            }
+        }
+
+        void LoadDiasoneClientDeleteInfoCombobox()
+        {
+            deleteClientSelectDiapasoneComboBox.Items.Clear();
+            deleteClientComboBox.Items.Clear();
+            deleteClientComboBox.Text = "";
+            using (var db = new AtlantSovtContext())
+            {
+                int part = 1000;
+                double clientPart = 0;
+                if ((from c in db.Clients select c.Id).Count() != 0)
+                {
+                    long clientCount = (from c in db.Clients select c.Id).Max();
+                    if (clientCount % part == 0)
+                    {
+                        clientPart = clientCount / part;
+                    }
+                    else
+                    {
+                        clientPart = (clientCount / part) + 1;
+                    }
+
+                    for (int i = 0; i < clientPart; i++)
+                    {
+                        deleteClientSelectDiapasoneComboBox.Items.Add(((i * part) + 1) + " - " + ((i + 1) * part));
+                    }
+                    deleteClientSelectDiapasoneComboBox.DroppedDown = true;
+                    deleteClientComboBox.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Немає жодних записів");
                 }
             }
         }

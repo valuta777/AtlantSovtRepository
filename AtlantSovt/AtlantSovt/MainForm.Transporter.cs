@@ -570,6 +570,7 @@ namespace AtlantSovt
 
         //Update
         #region Update
+
         void ClearAllBoxesTransporterUpdate()
         {
             workDocumentTransporterUpdateComboBox.Items.Clear();
@@ -599,12 +600,12 @@ namespace AtlantSovt
                 filters = db.Filters.Find(transporter.Id);
                 if (transporter != null)
                 {
-                    nameTransporterUpdateTextBox.Text = transporter.FullName.ToString();
-                    shortNameTransporterUpdateTextBox.Text = transporter.ShortName.ToString();
-                    directorTransporterUpdateTextBox.Text = transporter.Director.ToString();
-                    physicalAddressTransporterUpdateTextBox.Text = transporter.PhysicalAddress.ToString();
-                    geographyAddressTransporterUpdateTextBox.Text = transporter.GeographyAddress.ToString();
-                    commentTransporterUpdateTextBox.Text = transporter.Comment.ToString();
+                    nameTransporterUpdateTextBox.Text = Convert.ToString(transporter.FullName);
+                    shortNameTransporterUpdateTextBox.Text = Convert.ToString(transporter.ShortName);
+                    directorTransporterUpdateTextBox.Text = Convert.ToString(transporter.Director);
+                    physicalAddressTransporterUpdateTextBox.Text = Convert.ToString(transporter.PhysicalAddress);
+                    geographyAddressTransporterUpdateTextBox.Text = Convert.ToString(transporter.GeographyAddress);
+                    commentTransporterUpdateTextBox.Text = Convert.ToString(transporter.Comment);
 
                     if (transporter.WorkDocument != null) 
                     {
@@ -642,12 +643,53 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
+                string text = selectTransporterDiapasoneUpdateComboBox.SelectedItem.ToString();
+                string[] diapasone = text.Split(new char[] { ' ' });
+                int diapasoneFrom = Convert.ToInt32(diapasone[0]);
+                int diapasoneTo = Convert.ToInt32(diapasone[2]);
                 var query = from c in db.Transporters
                             orderby c.Id
+                            where c.Id >= diapasoneFrom && c.Id <= diapasoneTo
                             select c;
                 foreach (var item in query)
                 {
                     selectTransporterUpdateComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
+                }
+            }
+        }
+
+        void LoadDiasoneTransporterUpdateInfoCombobox()
+        {
+            selectTransporterDiapasoneUpdateComboBox.Items.Clear();
+            selectTransporterUpdateComboBox.Items.Clear();
+            selectTransporterUpdateComboBox.Text = "";
+            using (var db = new AtlantSovtContext())
+            {
+                int part = 1000;
+                double transporterPart = 0;
+                if ((from c in db.Transporters select c.Id).Count() != 0)
+                {
+                    long transporterCount = (from c in db.Transporters select c.Id).Max();
+                    if (transporterCount % part == 0)
+                    {
+                        transporterPart = transporterCount / part;
+                    }
+                    else
+                    {
+                        transporterPart = (transporterCount / part) + 1;
+                    }
+
+                    for (int i = 0; i < transporterPart; i++)
+                    {
+                        selectTransporterDiapasoneUpdateComboBox.Items.Add(((i * part) + 1) + " - " + ((i + 1) * part));
+                    }
+                    selectTransporterDiapasoneUpdateComboBox.DroppedDown = true;
+                    selectTransporterUpdateComboBox.Enabled = true;
+
+                }
+                else
+                {
+                    MessageBox.Show("Немає жодних записів");
                 }
             }
         }
@@ -855,12 +897,52 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
+                string text = deleteTransporterSelectDiapasoneComboBox.SelectedItem.ToString();
+                string[] diapasone = text.Split(new char[] { ' ' });
+                int diapasoneFrom = Convert.ToInt32(diapasone[0]);
+                int diapasoneTo = Convert.ToInt32(diapasone[2]);
                 var query = from c in db.Transporters
                             orderby c.Id
+                            where c.Id >= diapasoneFrom && c.Id <= diapasoneTo
                             select c;
                 foreach (var item in query)
                 {
                     transporterDeleteComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
+                }
+            }
+        }
+
+        void LoadDiapasoneTransporterDeleteInfoCombobox()
+        {
+            deleteTransporterSelectDiapasoneComboBox.Items.Clear();
+            transporterDeleteComboBox.Items.Clear();
+            transporterDeleteComboBox.Text = "";
+            using (var db = new AtlantSovtContext())
+            {
+                int part = 1000;
+                double transporterPart = 0;
+                if ((from c in db.Transporters select c.Id).Count() != 0)
+                {
+                    long transporterCount = (from c in db.Transporters select c.Id).Max();
+                    if (transporterCount % part == 0)
+                    {
+                        transporterPart = transporterCount / part;
+                    }
+                    else
+                    {
+                        transporterPart = (transporterCount / part) + 1;
+                    }
+
+                    for (int i = 0; i < transporterPart; i++)
+                    {
+                        deleteTransporterSelectDiapasoneComboBox.Items.Add(((i * part) + 1) + " - " + ((i + 1) * part));
+                    }
+                    deleteTransporterSelectDiapasoneComboBox.DroppedDown = true;
+                    transporterDeleteComboBox.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Немає жодних записів");
                 }
             }
         }

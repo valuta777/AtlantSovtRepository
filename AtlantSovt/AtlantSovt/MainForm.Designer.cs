@@ -86,6 +86,8 @@
             this.addTaxPayerStatusClientButton = new System.Windows.Forms.Button();
             this.addWorkDocumentClientButton = new System.Windows.Forms.Button();
             this.updateClientPage = new System.Windows.Forms.TabPage();
+            this.selectClientDiapasoneUpdateComboBox = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.clientUpdateContactDeleteButton = new System.Windows.Forms.Button();
             this.clientUpdateBankDetailsDeleteButton = new System.Windows.Forms.Button();
             this.clientUpdateBankDetailsUpdateButton = new System.Windows.Forms.Button();
@@ -116,6 +118,8 @@
             this.clientUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
             this.clientUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
             this.deleteClientPage = new System.Windows.Forms.TabPage();
+            this.deleteClientSelectDiapasoneComboBox = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.deleteClientButton = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.deleteClientComboBox = new System.Windows.Forms.ComboBox();
@@ -271,6 +275,10 @@
             this.labelshow67 = new System.Windows.Forms.Label();
             this.labelshow68 = new System.Windows.Forms.Label();
             this.labelshow69 = new System.Windows.Forms.Label();
+            this.selectTransporterDiapasoneUpdateComboBox = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.deleteTransporterSelectDiapasoneComboBox = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.dataControl.SuspendLayout();
             this.helloPage.SuspendLayout();
@@ -949,6 +957,8 @@
             // 
             // updateClientPage
             // 
+            this.updateClientPage.Controls.Add(this.selectClientDiapasoneUpdateComboBox);
+            this.updateClientPage.Controls.Add(this.label7);
             this.updateClientPage.Controls.Add(this.clientUpdateContactDeleteButton);
             this.updateClientPage.Controls.Add(this.clientUpdateBankDetailsDeleteButton);
             this.updateClientPage.Controls.Add(this.clientUpdateBankDetailsUpdateButton);
@@ -984,6 +994,27 @@
             this.updateClientPage.TabIndex = 2;
             this.updateClientPage.Text = "updateClientPage";
             this.updateClientPage.UseVisualStyleBackColor = true;
+            // 
+            // selectClientDiapasoneUpdateComboBox
+            // 
+            this.selectClientDiapasoneUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.selectClientDiapasoneUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.selectClientDiapasoneUpdateComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selectClientDiapasoneUpdateComboBox.Location = new System.Drawing.Point(6, 26);
+            this.selectClientDiapasoneUpdateComboBox.Name = "selectClientDiapasoneUpdateComboBox";
+            this.selectClientDiapasoneUpdateComboBox.Size = new System.Drawing.Size(237, 29);
+            this.selectClientDiapasoneUpdateComboBox.TabIndex = 71;
+            this.selectClientDiapasoneUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.selectClientDiapasonUpdateComboBox_MouseClick);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(4, 2);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(140, 21);
+            this.label7.TabIndex = 70;
+            this.label7.Text = "Виберіть діапазон";
             // 
             // clientUpdateContactDeleteButton
             // 
@@ -1037,7 +1068,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label27.Location = new System.Drawing.Point(10, 3);
+            this.label27.Location = new System.Drawing.Point(255, 2);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(128, 21);
             this.label27.TabIndex = 63;
@@ -1049,8 +1080,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.selectClientUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.selectClientUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.selectClientUpdateComboBox.Enabled = false;
             this.selectClientUpdateComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.selectClientUpdateComboBox.Location = new System.Drawing.Point(8, 27);
+            this.selectClientUpdateComboBox.Location = new System.Drawing.Point(253, 26);
             this.selectClientUpdateComboBox.Name = "selectClientUpdateComboBox";
             this.selectClientUpdateComboBox.Size = new System.Drawing.Size(480, 29);
             this.selectClientUpdateComboBox.Sorted = true;
@@ -1318,6 +1350,8 @@
             // 
             // deleteClientPage
             // 
+            this.deleteClientPage.Controls.Add(this.deleteClientSelectDiapasoneComboBox);
+            this.deleteClientPage.Controls.Add(this.label8);
             this.deleteClientPage.Controls.Add(this.deleteClientButton);
             this.deleteClientPage.Controls.Add(this.label30);
             this.deleteClientPage.Controls.Add(this.deleteClientComboBox);
@@ -1327,6 +1361,27 @@
             this.deleteClientPage.TabIndex = 3;
             this.deleteClientPage.Text = "deleteClientPage";
             this.deleteClientPage.UseVisualStyleBackColor = true;
+            // 
+            // deleteClientSelectDiapasoneComboBox
+            // 
+            this.deleteClientSelectDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.deleteClientSelectDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.deleteClientSelectDiapasoneComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteClientSelectDiapasoneComboBox.Location = new System.Drawing.Point(5, 26);
+            this.deleteClientSelectDiapasoneComboBox.Name = "deleteClientSelectDiapasoneComboBox";
+            this.deleteClientSelectDiapasoneComboBox.Size = new System.Drawing.Size(237, 29);
+            this.deleteClientSelectDiapasoneComboBox.TabIndex = 73;
+            this.deleteClientSelectDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.deleteClientSelectDiapasoneComboBox_MouseClick);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(3, 2);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(140, 21);
+            this.label8.TabIndex = 72;
+            this.label8.Text = "Виберіть діапазон";
             // 
             // deleteClientButton
             // 
@@ -1348,7 +1403,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label30.Location = new System.Drawing.Point(5, 7);
+            this.label30.Location = new System.Drawing.Point(242, 1);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(128, 21);
             this.label30.TabIndex = 65;
@@ -1360,12 +1415,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.deleteClientComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.deleteClientComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.deleteClientComboBox.Enabled = false;
             this.deleteClientComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.deleteClientComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.deleteClientComboBox.Location = new System.Drawing.Point(3, 31);
+            this.deleteClientComboBox.Location = new System.Drawing.Point(246, 26);
             this.deleteClientComboBox.Name = "deleteClientComboBox";
-            this.deleteClientComboBox.Size = new System.Drawing.Size(770, 29);
-            this.deleteClientComboBox.Sorted = true;
+            this.deleteClientComboBox.Size = new System.Drawing.Size(527, 29);
             this.deleteClientComboBox.TabIndex = 64;
             this.deleteClientComboBox.SelectedIndexChanged += new System.EventHandler(this.deleteClientComboBox_SelectedIndexChanged);
             this.deleteClientComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.deleteClientComboBox_MouseClick);
@@ -2749,6 +2804,8 @@
             // 
             // updateTransporterPage
             // 
+            this.updateTransporterPage.Controls.Add(this.selectTransporterDiapasoneUpdateComboBox);
+            this.updateTransporterPage.Controls.Add(this.label16);
             this.updateTransporterPage.Controls.Add(this.filtersTransporterUpdateCheckedListBox);
             this.updateTransporterPage.Controls.Add(this.transporterUpdateCountriesAndVehicleUpdateButton);
             this.updateTransporterPage.Controls.Add(this.commentTransporterUpdateTextBox);
@@ -2934,7 +2991,7 @@
             // 
             this.label99.AutoSize = true;
             this.label99.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label99.Location = new System.Drawing.Point(13, 5);
+            this.label99.Location = new System.Drawing.Point(246, 5);
             this.label99.Name = "label99";
             this.label99.Size = new System.Drawing.Size(164, 21);
             this.label99.TabIndex = 135;
@@ -2946,10 +3003,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.selectTransporterUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.selectTransporterUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.selectTransporterUpdateComboBox.Enabled = false;
             this.selectTransporterUpdateComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.selectTransporterUpdateComboBox.Location = new System.Drawing.Point(11, 29);
+            this.selectTransporterUpdateComboBox.Location = new System.Drawing.Point(250, 29);
             this.selectTransporterUpdateComboBox.Name = "selectTransporterUpdateComboBox";
-            this.selectTransporterUpdateComboBox.Size = new System.Drawing.Size(755, 29);
+            this.selectTransporterUpdateComboBox.Size = new System.Drawing.Size(516, 29);
             this.selectTransporterUpdateComboBox.Sorted = true;
             this.selectTransporterUpdateComboBox.TabIndex = 134;
             this.selectTransporterUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.selectTransporterUpdateComboBox_SelectedIndexChanged);
@@ -3177,6 +3235,8 @@
             // 
             // deleteTransporterPage
             // 
+            this.deleteTransporterPage.Controls.Add(this.deleteTransporterSelectDiapasoneComboBox);
+            this.deleteTransporterPage.Controls.Add(this.label17);
             this.deleteTransporterPage.Controls.Add(this.transporterDeleteButton);
             this.deleteTransporterPage.Controls.Add(this.label11);
             this.deleteTransporterPage.Controls.Add(this.transporterDeleteComboBox);
@@ -3207,7 +3267,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(5, 7);
+            this.label11.Location = new System.Drawing.Point(244, 7);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(164, 21);
             this.label11.TabIndex = 71;
@@ -3219,11 +3279,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterDeleteComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.transporterDeleteComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.transporterDeleteComboBox.Enabled = false;
             this.transporterDeleteComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.transporterDeleteComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.transporterDeleteComboBox.Location = new System.Drawing.Point(3, 31);
+            this.transporterDeleteComboBox.Location = new System.Drawing.Point(248, 31);
             this.transporterDeleteComboBox.Name = "transporterDeleteComboBox";
-            this.transporterDeleteComboBox.Size = new System.Drawing.Size(770, 29);
+            this.transporterDeleteComboBox.Size = new System.Drawing.Size(525, 29);
+            this.transporterDeleteComboBox.Sorted = true;
             this.transporterDeleteComboBox.TabIndex = 70;
             this.transporterDeleteComboBox.SelectedIndexChanged += new System.EventHandler(this.transporterDeleteComboBox_SelectedIndexChanged);
             this.transporterDeleteComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.transporterDeleteComboBox_MouseClick);
@@ -3285,6 +3347,48 @@
             this.labelshow69.Size = new System.Drawing.Size(61, 21);
             this.labelshow69.TabIndex = 36;
             this.labelshow69.Text = "Країни";
+            // 
+            // selectTransporterDiapasoneUpdateComboBox
+            // 
+            this.selectTransporterDiapasoneUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.selectTransporterDiapasoneUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.selectTransporterDiapasoneUpdateComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selectTransporterDiapasoneUpdateComboBox.Location = new System.Drawing.Point(7, 29);
+            this.selectTransporterDiapasoneUpdateComboBox.Name = "selectTransporterDiapasoneUpdateComboBox";
+            this.selectTransporterDiapasoneUpdateComboBox.Size = new System.Drawing.Size(237, 29);
+            this.selectTransporterDiapasoneUpdateComboBox.TabIndex = 147;
+            this.selectTransporterDiapasoneUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.selectTransporterDiapasoneUpdateComboBox_MouseClick);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(5, 5);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(140, 21);
+            this.label16.TabIndex = 146;
+            this.label16.Text = "Виберіть діапазон";
+            // 
+            // deleteTransporterSelectDiapasoneComboBox
+            // 
+            this.deleteTransporterSelectDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.deleteTransporterSelectDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.deleteTransporterSelectDiapasoneComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteTransporterSelectDiapasoneComboBox.Location = new System.Drawing.Point(5, 31);
+            this.deleteTransporterSelectDiapasoneComboBox.Name = "deleteTransporterSelectDiapasoneComboBox";
+            this.deleteTransporterSelectDiapasoneComboBox.Size = new System.Drawing.Size(237, 29);
+            this.deleteTransporterSelectDiapasoneComboBox.TabIndex = 74;
+            this.deleteTransporterSelectDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.deleteTransporterSelectDiapasoneComboBox_MouseClick);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Location = new System.Drawing.Point(3, 7);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(140, 21);
+            this.label17.TabIndex = 73;
+            this.label17.Text = "Виберіть діапазон";
             // 
             // MainForm
             // 
@@ -3633,6 +3737,14 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox selectClientDiapasoneUpdateComboBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox deleteClientSelectDiapasoneComboBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox selectTransporterDiapasoneUpdateComboBox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox deleteTransporterSelectDiapasoneComboBox;
+        private System.Windows.Forms.Label label17;
         }
 }
 
