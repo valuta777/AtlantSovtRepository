@@ -12,6 +12,7 @@ namespace AtlantSovt.AtlantSovtDb
         public Client()
         {
             ClientContacts = new HashSet<ClientContact>();
+            ClientForwarderContracts = new HashSet<ClientForwarderContract>();
             Orders = new HashSet<Order>();
         }
 
@@ -47,6 +48,8 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual ClientBankDetail ClientBankDetail { get; set; }
 
         public virtual ICollection<ClientContact> ClientContacts { get; set; }
+
+        public virtual ICollection<ClientForwarderContract> ClientForwarderContracts { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
     }

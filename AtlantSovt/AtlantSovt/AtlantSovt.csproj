@@ -58,6 +58,7 @@
     <Compile Include="AtlantSovtDb\Client.cs" />
     <Compile Include="AtlantSovtDb\ClientBankDetail.cs" />
     <Compile Include="AtlantSovtDb\ClientContact.cs" />
+    <Compile Include="AtlantSovtDb\ClientForwarderContract.cs" />
     <Compile Include="AtlantSovtDb\Country.cs" />
     <Compile Include="AtlantSovtDb\CustomsAddress.cs" />
     <Compile Include="AtlantSovtDb\DownloadAddress.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="AtlantSovtDb\TransporterBankDetail.cs" />
     <Compile Include="AtlantSovtDb\TransporterContact.cs" />
     <Compile Include="AtlantSovtDb\TransporterCountry.cs" />
+    <Compile Include="AtlantSovtDb\TransporterForwarderContract.cs" />
     <Compile Include="AtlantSovtDb\TransporterVehicle.cs" />
     <Compile Include="AtlantSovtDb\UnCustomsAddress.cs" />
     <Compile Include="AtlantSovtDb\UploadAddress.cs" />

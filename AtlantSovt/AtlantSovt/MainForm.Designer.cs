@@ -48,6 +48,8 @@
             this.helloPage = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.showClientPage = new System.Windows.Forms.TabPage();
+            this.clientShowSearchButton = new System.Windows.Forms.Button();
+            this.clientShowSearchTextBox = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.clientBankDetailsDataGridView = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
@@ -58,10 +60,6 @@
             this.clientDataGridView = new System.Windows.Forms.DataGridView();
             this.addClientPage = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.faxClientCheckBox = new System.Windows.Forms.CheckBox();
@@ -92,8 +90,6 @@
             this.clientUpdateBankDetailsDeleteButton = new System.Windows.Forms.Button();
             this.clientUpdateBankDetailsUpdateButton = new System.Windows.Forms.Button();
             this.clientUpdateContactUpdateButton = new System.Windows.Forms.Button();
-            this.contractNumberClientUpdateTextBox = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.selectClientUpdateComboBox = new System.Windows.Forms.ComboBox();
             this.faxClientUpdateCheckBox = new System.Windows.Forms.CheckBox();
@@ -133,12 +129,9 @@
             this.label34 = new System.Windows.Forms.Label();
             this.forwarderDataGridView = new System.Windows.Forms.DataGridView();
             this.addForwarderPage = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
             this.workDocumentForwarderComboBox = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.addForwarderButton = new System.Windows.Forms.Button();
@@ -190,6 +183,12 @@
             this.label42 = new System.Windows.Forms.Label();
             this.forwarderDeleteComboBox = new System.Windows.Forms.ComboBox();
             this.showTransporterPage = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.transporterShowSearchButton = new System.Windows.Forms.Button();
+            this.transporterShowSearchTextBox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.transporterShowAdditionalDetailsButton = new System.Windows.Forms.Button();
             this.transporterShowCountryDataGridView = new System.Windows.Forms.DataGridView();
             this.transporterShowFilterSelectButton = new System.Windows.Forms.Button();
@@ -198,21 +197,17 @@
             this.transporterShowContactsDataGridView = new System.Windows.Forms.DataGridView();
             this.transporterShowDataGridView = new System.Windows.Forms.DataGridView();
             this.addTransporterPage = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
             this.filtersTransporterAddCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.faxTransporterAddCheckBox = new System.Windows.Forms.CheckBox();
             this.originalTransporterAddCheckBox = new System.Windows.Forms.CheckBox();
             this.label81 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
             this.transporterAddCountryAndVehicleSelectButton = new System.Windows.Forms.Button();
-            this.label79 = new System.Windows.Forms.Label();
             this.shortNameTransporterAddTextBox = new System.Windows.Forms.TextBox();
             this.label80 = new System.Windows.Forms.Label();
             this.workDocumentTransporterAddComboBox = new System.Windows.Forms.ComboBox();
             this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
             this.transporterAddButton = new System.Windows.Forms.Button();
@@ -234,6 +229,7 @@
             this.transporterAddTaxPayerStatusAddButton = new System.Windows.Forms.Button();
             this.transporterAddWorkDocumentAddButton = new System.Windows.Forms.Button();
             this.updateTransporterPage = new System.Windows.Forms.TabPage();
+            this.filtersTransporterUpdateCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.transporterUpdateCountriesAndVehicleUpdateButton = new System.Windows.Forms.Button();
             this.commentTransporterUpdateTextBox = new System.Windows.Forms.TextBox();
             this.label100 = new System.Windows.Forms.Label();
@@ -246,7 +242,6 @@
             this.transporterUpdateContactAddButton = new System.Windows.Forms.Button();
             this.label99 = new System.Windows.Forms.Label();
             this.selectTransporterUpdateComboBox = new System.Windows.Forms.ComboBox();
-            this.filtersTransporterUpdateCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.faxTransporterUpdateCheckBox = new System.Windows.Forms.CheckBox();
             this.originalTransporterUpdateCheckBox = new System.Windows.Forms.CheckBox();
             this.label83 = new System.Windows.Forms.Label();
@@ -276,11 +271,6 @@
             this.labelshow67 = new System.Windows.Forms.Label();
             this.labelshow68 = new System.Windows.Forms.Label();
             this.labelshow69 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.dataControl.SuspendLayout();
             this.helloPage.SuspendLayout();
@@ -455,12 +445,11 @@
             this.dataControl.Controls.Add(this.updateTransporterPage);
             this.dataControl.Controls.Add(this.deleteTransporterPage);
             this.dataControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataControl.ItemSize = new System.Drawing.Size(0, 1);
+            this.dataControl.ItemSize = new System.Drawing.Size(1, 0);
             this.dataControl.Location = new System.Drawing.Point(0, 24);
             this.dataControl.Name = "dataControl";
             this.dataControl.SelectedIndex = 0;
             this.dataControl.Size = new System.Drawing.Size(784, 537);
-            this.dataControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.dataControl.TabIndex = 2;
             this.dataControl.TabStop = false;
             // 
@@ -468,9 +457,9 @@
             // 
             this.helloPage.BackColor = System.Drawing.Color.White;
             this.helloPage.Controls.Add(this.pictureBox1);
-            this.helloPage.Location = new System.Drawing.Point(4, 5);
+            this.helloPage.Location = new System.Drawing.Point(4, 25);
             this.helloPage.Name = "helloPage";
-            this.helloPage.Size = new System.Drawing.Size(776, 528);
+            this.helloPage.Size = new System.Drawing.Size(776, 508);
             this.helloPage.TabIndex = 4;
             this.helloPage.Text = "Hello";
             // 
@@ -480,13 +469,15 @@
             this.pictureBox1.Image = global::AtlantSovt.Properties.Resources.demologo;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 528);
+            this.pictureBox1.Size = new System.Drawing.Size(776, 508);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // showClientPage
             // 
+            this.showClientPage.Controls.Add(this.clientShowSearchButton);
+            this.showClientPage.Controls.Add(this.clientShowSearchTextBox);
             this.showClientPage.Controls.Add(this.label29);
             this.showClientPage.Controls.Add(this.clientBankDetailsDataGridView);
             this.showClientPage.Controls.Add(this.label10);
@@ -495,13 +486,36 @@
             this.showClientPage.Controls.Add(this.clientContactsDataGridView);
             this.showClientPage.Controls.Add(this.label1);
             this.showClientPage.Controls.Add(this.clientDataGridView);
-            this.showClientPage.Location = new System.Drawing.Point(4, 5);
+            this.showClientPage.Location = new System.Drawing.Point(4, 25);
             this.showClientPage.Name = "showClientPage";
             this.showClientPage.Padding = new System.Windows.Forms.Padding(3);
-            this.showClientPage.Size = new System.Drawing.Size(776, 528);
+            this.showClientPage.Size = new System.Drawing.Size(776, 508);
             this.showClientPage.TabIndex = 0;
             this.showClientPage.Text = "showClientPage";
             this.showClientPage.UseVisualStyleBackColor = true;
+            // 
+            // clientShowSearchButton
+            // 
+            this.clientShowSearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientShowSearchButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientShowSearchButton.Location = new System.Drawing.Point(267, 26);
+            this.clientShowSearchButton.Name = "clientShowSearchButton";
+            this.clientShowSearchButton.Size = new System.Drawing.Size(155, 30);
+            this.clientShowSearchButton.TabIndex = 2;
+            this.clientShowSearchButton.Text = "Знайти";
+            this.clientShowSearchButton.UseVisualStyleBackColor = true;
+            this.clientShowSearchButton.Click += new System.EventHandler(this.clientShowSearchButton_Click);
+            // 
+            // clientShowSearchTextBox
+            // 
+            this.clientShowSearchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientShowSearchTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientShowSearchTextBox.Location = new System.Drawing.Point(3, 27);
+            this.clientShowSearchTextBox.Name = "clientShowSearchTextBox";
+            this.clientShowSearchTextBox.Size = new System.Drawing.Size(261, 29);
+            this.clientShowSearchTextBox.TabIndex = 1;
+            this.clientShowSearchTextBox.TextChanged += new System.EventHandler(this.clientShowSearchTextBox_TextChanged);
             // 
             // label29
             // 
@@ -521,12 +535,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientBankDetailsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.clientBankDetailsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.clientBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clientBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.clientBankDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clientBankDetailsDataGridView.Location = new System.Drawing.Point(0, 256);
             this.clientBankDetailsDataGridView.Name = "clientBankDetailsDataGridView";
             this.clientBankDetailsDataGridView.Size = new System.Drawing.Size(776, 56);
             this.clientBankDetailsDataGridView.TabIndex = 7;
+            this.clientBankDetailsDataGridView.TabStop = false;
             // 
             // label10
             // 
@@ -547,8 +562,9 @@
             this.clientCommentRichTextBox.Name = "clientCommentRichTextBox";
             this.clientCommentRichTextBox.ReadOnly = true;
             this.clientCommentRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.clientCommentRichTextBox.Size = new System.Drawing.Size(776, 67);
+            this.clientCommentRichTextBox.Size = new System.Drawing.Size(776, 51);
             this.clientCommentRichTextBox.TabIndex = 5;
+            this.clientCommentRichTextBox.TabStop = false;
             this.clientCommentRichTextBox.Text = "";
             // 
             // label2
@@ -569,12 +585,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientContactsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.clientContactsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.clientContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clientContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.clientContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clientContactsDataGridView.Location = new System.Drawing.Point(0, 335);
             this.clientContactsDataGridView.Name = "clientContactsDataGridView";
-            this.clientContactsDataGridView.Size = new System.Drawing.Size(776, 95);
+            this.clientContactsDataGridView.Size = new System.Drawing.Size(776, 106);
             this.clientContactsDataGridView.TabIndex = 3;
+            this.clientContactsDataGridView.TabStop = false;
             // 
             // label1
             // 
@@ -593,21 +610,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.clientDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.clientDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clientDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.clientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clientDataGridView.Location = new System.Drawing.Point(0, 27);
+            this.clientDataGridView.Location = new System.Drawing.Point(0, 62);
             this.clientDataGridView.Name = "clientDataGridView";
-            this.clientDataGridView.Size = new System.Drawing.Size(776, 207);
+            this.clientDataGridView.ReadOnly = true;
+            this.clientDataGridView.Size = new System.Drawing.Size(776, 171);
             this.clientDataGridView.TabIndex = 0;
+            this.clientDataGridView.TabStop = false;
             this.clientDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.clientDataGridView_CellMouseClick);
             // 
             // addClientPage
             // 
             this.addClientPage.Controls.Add(this.label9);
-            this.addClientPage.Controls.Add(this.label8);
-            this.addClientPage.Controls.Add(this.label7);
-            this.addClientPage.Controls.Add(this.label6);
-            this.addClientPage.Controls.Add(this.label5);
             this.addClientPage.Controls.Add(this.label4);
             this.addClientPage.Controls.Add(this.label3);
             this.addClientPage.Controls.Add(this.faxClientCheckBox);
@@ -634,10 +649,10 @@
             this.addClientPage.Controls.Add(this.addTaxPayerStatusClientButton);
             this.addClientPage.Controls.Add(this.addWorkDocumentClientButton);
             this.addClientPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addClientPage.Location = new System.Drawing.Point(4, 5);
+            this.addClientPage.Location = new System.Drawing.Point(4, 25);
             this.addClientPage.Name = "addClientPage";
             this.addClientPage.Padding = new System.Windows.Forms.Padding(3);
-            this.addClientPage.Size = new System.Drawing.Size(776, 528);
+            this.addClientPage.Size = new System.Drawing.Size(776, 508);
             this.addClientPage.TabIndex = 1;
             this.addClientPage.Text = "addClientPage";
             this.addClientPage.UseVisualStyleBackColor = true;
@@ -649,63 +664,11 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label9.Location = new System.Drawing.Point(10, 502);
+            this.label9.Location = new System.Drawing.Point(10, 488);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(117, 13);
+            this.label9.Size = new System.Drawing.Size(163, 13);
             this.label9.TabIndex = 31;
-            this.label9.Text = "* - обов\'язкове поле";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label8.Location = new System.Drawing.Point(684, 65);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(17, 21);
-            this.label8.TabIndex = 30;
-            this.label8.Text = "*";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label7.Location = new System.Drawing.Point(713, 4);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(17, 21);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "*";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label6.Location = new System.Drawing.Point(369, 65);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(17, 21);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "*";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label5.Location = new System.Drawing.Point(149, 65);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(17, 21);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "*";
+            this.label9.Text = "* - одне з обов\'язкових полів";
             // 
             // label4
             // 
@@ -990,8 +953,6 @@
             this.updateClientPage.Controls.Add(this.clientUpdateBankDetailsDeleteButton);
             this.updateClientPage.Controls.Add(this.clientUpdateBankDetailsUpdateButton);
             this.updateClientPage.Controls.Add(this.clientUpdateContactUpdateButton);
-            this.updateClientPage.Controls.Add(this.contractNumberClientUpdateTextBox);
-            this.updateClientPage.Controls.Add(this.label28);
             this.updateClientPage.Controls.Add(this.label27);
             this.updateClientPage.Controls.Add(this.selectClientUpdateComboBox);
             this.updateClientPage.Controls.Add(this.faxClientUpdateCheckBox);
@@ -1017,9 +978,9 @@
             this.updateClientPage.Controls.Add(this.label26);
             this.updateClientPage.Controls.Add(this.clientUpdateTaxPayerStatusAddButton);
             this.updateClientPage.Controls.Add(this.clientUpdateWorkDocumentAddButton);
-            this.updateClientPage.Location = new System.Drawing.Point(4, 5);
+            this.updateClientPage.Location = new System.Drawing.Point(4, 25);
             this.updateClientPage.Name = "updateClientPage";
-            this.updateClientPage.Size = new System.Drawing.Size(776, 528);
+            this.updateClientPage.Size = new System.Drawing.Size(776, 508);
             this.updateClientPage.TabIndex = 2;
             this.updateClientPage.Text = "updateClientPage";
             this.updateClientPage.UseVisualStyleBackColor = true;
@@ -1028,7 +989,7 @@
             // 
             this.clientUpdateContactDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.clientUpdateContactDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientUpdateContactDeleteButton.Location = new System.Drawing.Point(6, 475);
+            this.clientUpdateContactDeleteButton.Location = new System.Drawing.Point(6, 455);
             this.clientUpdateContactDeleteButton.Name = "clientUpdateContactDeleteButton";
             this.clientUpdateContactDeleteButton.Size = new System.Drawing.Size(238, 30);
             this.clientUpdateContactDeleteButton.TabIndex = 69;
@@ -1040,7 +1001,7 @@
             // 
             this.clientUpdateBankDetailsDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.clientUpdateBankDetailsDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientUpdateBankDetailsDeleteButton.Location = new System.Drawing.Point(251, 476);
+            this.clientUpdateBankDetailsDeleteButton.Location = new System.Drawing.Point(251, 456);
             this.clientUpdateBankDetailsDeleteButton.Name = "clientUpdateBankDetailsDeleteButton";
             this.clientUpdateBankDetailsDeleteButton.Size = new System.Drawing.Size(207, 30);
             this.clientUpdateBankDetailsDeleteButton.TabIndex = 68;
@@ -1052,7 +1013,7 @@
             // 
             this.clientUpdateBankDetailsUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.clientUpdateBankDetailsUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientUpdateBankDetailsUpdateButton.Location = new System.Drawing.Point(252, 440);
+            this.clientUpdateBankDetailsUpdateButton.Location = new System.Drawing.Point(252, 420);
             this.clientUpdateBankDetailsUpdateButton.Name = "clientUpdateBankDetailsUpdateButton";
             this.clientUpdateBankDetailsUpdateButton.Size = new System.Drawing.Size(207, 30);
             this.clientUpdateBankDetailsUpdateButton.TabIndex = 67;
@@ -1064,34 +1025,13 @@
             // 
             this.clientUpdateContactUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.clientUpdateContactUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientUpdateContactUpdateButton.Location = new System.Drawing.Point(7, 440);
+            this.clientUpdateContactUpdateButton.Location = new System.Drawing.Point(7, 420);
             this.clientUpdateContactUpdateButton.Name = "clientUpdateContactUpdateButton";
             this.clientUpdateContactUpdateButton.Size = new System.Drawing.Size(237, 30);
             this.clientUpdateContactUpdateButton.TabIndex = 66;
             this.clientUpdateContactUpdateButton.Text = "Змінити контакт";
             this.clientUpdateContactUpdateButton.UseVisualStyleBackColor = true;
             this.clientUpdateContactUpdateButton.Click += new System.EventHandler(this.updateClientContactButton_Click);
-            // 
-            // contractNumberClientUpdateTextBox
-            // 
-            this.contractNumberClientUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.contractNumberClientUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.contractNumberClientUpdateTextBox.Location = new System.Drawing.Point(495, 26);
-            this.contractNumberClientUpdateTextBox.Name = "contractNumberClientUpdateTextBox";
-            this.contractNumberClientUpdateTextBox.Size = new System.Drawing.Size(235, 29);
-            this.contractNumberClientUpdateTextBox.TabIndex = 65;
-            this.contractNumberClientUpdateTextBox.TextChanged += new System.EventHandler(this.contractNumberClientUpdateTextBox_TextChanged);
-            // 
-            // label28
-            // 
-            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label28.Location = new System.Drawing.Point(496, 3);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(101, 21);
-            this.label28.TabIndex = 64;
-            this.label28.Text = "№ Договору";
             // 
             // label27
             // 
@@ -1163,7 +1103,7 @@
             this.updateClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.updateClientButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.updateClientButton.Location = new System.Drawing.Point(465, 404);
+            this.updateClientButton.Location = new System.Drawing.Point(465, 384);
             this.updateClientButton.Name = "updateClientButton";
             this.updateClientButton.Size = new System.Drawing.Size(302, 101);
             this.updateClientButton.TabIndex = 50;
@@ -1197,7 +1137,7 @@
             // 
             this.clientUpdateAddBankDetailsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.clientUpdateAddBankDetailsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientUpdateAddBankDetailsButton.Location = new System.Drawing.Point(252, 404);
+            this.clientUpdateAddBankDetailsButton.Location = new System.Drawing.Point(252, 384);
             this.clientUpdateAddBankDetailsButton.Name = "clientUpdateAddBankDetailsButton";
             this.clientUpdateAddBankDetailsButton.Size = new System.Drawing.Size(207, 30);
             this.clientUpdateAddBankDetailsButton.TabIndex = 45;
@@ -1209,7 +1149,7 @@
             // 
             this.clientUpdateAddContactButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.clientUpdateAddContactButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientUpdateAddContactButton.Location = new System.Drawing.Point(7, 404);
+            this.clientUpdateAddContactButton.Location = new System.Drawing.Point(7, 384);
             this.clientUpdateAddContactButton.Name = "clientUpdateAddContactButton";
             this.clientUpdateAddContactButton.Size = new System.Drawing.Size(237, 30);
             this.clientUpdateAddContactButton.TabIndex = 44;
@@ -1229,6 +1169,7 @@
             this.taxPayerStatusClientUpdateComboBox.Size = new System.Drawing.Size(235, 29);
             this.taxPayerStatusClientUpdateComboBox.TabIndex = 43;
             this.taxPayerStatusClientUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.taxPayerStatusClientUpdateComboBox_SelectedIndexChanged);
+            this.taxPayerStatusClientUpdateComboBox.TextChanged += new System.EventHandler(this.taxPayerStatusClientUpdateComboBox_TextChanged);
             this.taxPayerStatusClientUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.taxPayerStatusClientUpdateComboBox_MouseClick);
             // 
             // workDocumentClientUpdateComboBox
@@ -1242,6 +1183,7 @@
             this.workDocumentClientUpdateComboBox.Size = new System.Drawing.Size(235, 29);
             this.workDocumentClientUpdateComboBox.TabIndex = 42;
             this.workDocumentClientUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.workDocumentClientUpdateComboBox_SelectedIndexChanged);
+            this.workDocumentClientUpdateComboBox.TextChanged += new System.EventHandler(this.workDocumentClientUpdateComboBox_TextChanged);
             this.workDocumentClientUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.workDocumentClientUpdateComboBox_MouseClick);
             // 
             // commentClientUpdateTextBox
@@ -1254,7 +1196,7 @@
             this.commentClientUpdateTextBox.Multiline = true;
             this.commentClientUpdateTextBox.Name = "commentClientUpdateTextBox";
             this.commentClientUpdateTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.commentClientUpdateTextBox.Size = new System.Drawing.Size(756, 176);
+            this.commentClientUpdateTextBox.Size = new System.Drawing.Size(756, 156);
             this.commentClientUpdateTextBox.TabIndex = 41;
             this.commentClientUpdateTextBox.TextChanged += new System.EventHandler(this.commentClientUpdateTextBox_TextChanged);
             // 
@@ -1379,9 +1321,9 @@
             this.deleteClientPage.Controls.Add(this.deleteClientButton);
             this.deleteClientPage.Controls.Add(this.label30);
             this.deleteClientPage.Controls.Add(this.deleteClientComboBox);
-            this.deleteClientPage.Location = new System.Drawing.Point(4, 5);
+            this.deleteClientPage.Location = new System.Drawing.Point(4, 25);
             this.deleteClientPage.Name = "deleteClientPage";
-            this.deleteClientPage.Size = new System.Drawing.Size(776, 528);
+            this.deleteClientPage.Size = new System.Drawing.Size(776, 508);
             this.deleteClientPage.TabIndex = 3;
             this.deleteClientPage.Text = "deleteClientPage";
             this.deleteClientPage.UseVisualStyleBackColor = true;
@@ -1392,7 +1334,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.deleteClientButton.Enabled = false;
             this.deleteClientButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.deleteClientButton.Location = new System.Drawing.Point(466, 450);
+            this.deleteClientButton.Location = new System.Drawing.Point(470, 434);
             this.deleteClientButton.Name = "deleteClientButton";
             this.deleteClientButton.Size = new System.Drawing.Size(302, 70);
             this.deleteClientButton.TabIndex = 66;
@@ -1438,9 +1380,9 @@
             this.showForwarderPage.Controls.Add(this.forwarderContactsDataGridView);
             this.showForwarderPage.Controls.Add(this.label34);
             this.showForwarderPage.Controls.Add(this.forwarderDataGridView);
-            this.showForwarderPage.Location = new System.Drawing.Point(4, 5);
+            this.showForwarderPage.Location = new System.Drawing.Point(4, 25);
             this.showForwarderPage.Name = "showForwarderPage";
-            this.showForwarderPage.Size = new System.Drawing.Size(776, 528);
+            this.showForwarderPage.Size = new System.Drawing.Size(776, 508);
             this.showForwarderPage.TabIndex = 5;
             this.showForwarderPage.Text = "showForwarderPage";
             this.showForwarderPage.UseVisualStyleBackColor = true;
@@ -1463,12 +1405,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.forwarderBankDetailsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.forwarderBankDetailsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.forwarderBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.forwarderBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.forwarderBankDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.forwarderBankDetailsDataGridView.Location = new System.Drawing.Point(0, 256);
             this.forwarderBankDetailsDataGridView.Name = "forwarderBankDetailsDataGridView";
             this.forwarderBankDetailsDataGridView.Size = new System.Drawing.Size(776, 56);
             this.forwarderBankDetailsDataGridView.TabIndex = 15;
+            this.forwarderBankDetailsDataGridView.TabStop = false;
             // 
             // label32
             // 
@@ -1489,8 +1432,9 @@
             this.forwarderCommentRichTextBox.Name = "forwarderCommentRichTextBox";
             this.forwarderCommentRichTextBox.ReadOnly = true;
             this.forwarderCommentRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.forwarderCommentRichTextBox.Size = new System.Drawing.Size(776, 67);
+            this.forwarderCommentRichTextBox.Size = new System.Drawing.Size(776, 51);
             this.forwarderCommentRichTextBox.TabIndex = 13;
+            this.forwarderCommentRichTextBox.TabStop = false;
             this.forwarderCommentRichTextBox.Text = "";
             // 
             // label33
@@ -1511,12 +1455,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.forwarderContactsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.forwarderContactsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.forwarderContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.forwarderContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.forwarderContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.forwarderContactsDataGridView.Location = new System.Drawing.Point(0, 335);
             this.forwarderContactsDataGridView.Name = "forwarderContactsDataGridView";
-            this.forwarderContactsDataGridView.Size = new System.Drawing.Size(776, 95);
+            this.forwarderContactsDataGridView.Size = new System.Drawing.Size(776, 105);
             this.forwarderContactsDataGridView.TabIndex = 11;
+            this.forwarderContactsDataGridView.TabStop = false;
             // 
             // label34
             // 
@@ -1535,22 +1480,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.forwarderDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.forwarderDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.forwarderDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.forwarderDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.forwarderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.forwarderDataGridView.Location = new System.Drawing.Point(0, 27);
             this.forwarderDataGridView.Name = "forwarderDataGridView";
-            this.forwarderDataGridView.Size = new System.Drawing.Size(776, 207);
+            this.forwarderDataGridView.Size = new System.Drawing.Size(776, 206);
             this.forwarderDataGridView.TabIndex = 9;
+            this.forwarderDataGridView.TabStop = false;
             this.forwarderDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.forwarderDataGridView_CellMouseClick);
             // 
             // addForwarderPage
             // 
+            this.addForwarderPage.Controls.Add(this.label5);
             this.addForwarderPage.Controls.Add(this.workDocumentForwarderComboBox);
             this.addForwarderPage.Controls.Add(this.label35);
-            this.addForwarderPage.Controls.Add(this.label36);
-            this.addForwarderPage.Controls.Add(this.label37);
-            this.addForwarderPage.Controls.Add(this.label38);
-            this.addForwarderPage.Controls.Add(this.label39);
             this.addForwarderPage.Controls.Add(this.label40);
             this.addForwarderPage.Controls.Add(this.label41);
             this.addForwarderPage.Controls.Add(this.addForwarderButton);
@@ -1571,12 +1514,25 @@
             this.addForwarderPage.Controls.Add(this.label50);
             this.addForwarderPage.Controls.Add(this.addTaxPayerStatusForwarderButton);
             this.addForwarderPage.Controls.Add(this.addWorkDocumentForwarderButton);
-            this.addForwarderPage.Location = new System.Drawing.Point(4, 5);
+            this.addForwarderPage.Location = new System.Drawing.Point(4, 25);
             this.addForwarderPage.Name = "addForwarderPage";
-            this.addForwarderPage.Size = new System.Drawing.Size(776, 528);
+            this.addForwarderPage.Size = new System.Drawing.Size(776, 508);
             this.addForwarderPage.TabIndex = 6;
             this.addForwarderPage.Text = "addForwarderPage";
             this.addForwarderPage.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label5.Location = new System.Drawing.Point(11, 490);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(163, 13);
+            this.label5.TabIndex = 62;
+            this.label5.Text = "* - одне з обов\'язкових полів";
             // 
             // workDocumentForwarderComboBox
             // 
@@ -1603,58 +1559,6 @@
             this.label35.Size = new System.Drawing.Size(117, 13);
             this.label35.TabIndex = 60;
             this.label35.Text = "* - обов\'язкове поле";
-            // 
-            // label36
-            // 
-            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label36.Location = new System.Drawing.Point(684, 70);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(17, 21);
-            this.label36.TabIndex = 59;
-            this.label36.Text = "*";
-            // 
-            // label37
-            // 
-            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.Transparent;
-            this.label37.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label37.Location = new System.Drawing.Point(713, 9);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(17, 21);
-            this.label37.TabIndex = 58;
-            this.label37.Text = "*";
-            // 
-            // label38
-            // 
-            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Transparent;
-            this.label38.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label38.Location = new System.Drawing.Point(369, 70);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(17, 21);
-            this.label38.TabIndex = 57;
-            this.label38.Text = "*";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.Transparent;
-            this.label39.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label39.Location = new System.Drawing.Point(149, 70);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(17, 21);
-            this.label39.TabIndex = 56;
-            this.label39.Text = "*";
             // 
             // label40
             // 
@@ -1907,9 +1811,9 @@
             this.updateForwarderPage.Controls.Add(this.label65);
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateTaxPayerStatusAddButton);
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateWorkDocumentAddButton);
-            this.updateForwarderPage.Location = new System.Drawing.Point(4, 5);
+            this.updateForwarderPage.Location = new System.Drawing.Point(4, 25);
             this.updateForwarderPage.Name = "updateForwarderPage";
-            this.updateForwarderPage.Size = new System.Drawing.Size(776, 528);
+            this.updateForwarderPage.Size = new System.Drawing.Size(776, 508);
             this.updateForwarderPage.TabIndex = 7;
             this.updateForwarderPage.Text = "updateForwarderPage";
             this.updateForwarderPage.UseVisualStyleBackColor = true;
@@ -2058,6 +1962,7 @@
             this.taxPayerStatusForwarderUpdateComboBox.Size = new System.Drawing.Size(235, 29);
             this.taxPayerStatusForwarderUpdateComboBox.TabIndex = 77;
             this.taxPayerStatusForwarderUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.taxPayerStatusForwarderUpdateComboBox_SelectedIndexChanged);
+            this.taxPayerStatusForwarderUpdateComboBox.TextChanged += new System.EventHandler(this.taxPayerStatusForwarderUpdateComboBox_TextChanged);
             this.taxPayerStatusForwarderUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.taxPayerStatusForwarderUpdateComboBox_MouseClick);
             // 
             // workDocumentForwarderUpdateComboBox
@@ -2071,6 +1976,7 @@
             this.workDocumentForwarderUpdateComboBox.Size = new System.Drawing.Size(235, 29);
             this.workDocumentForwarderUpdateComboBox.TabIndex = 76;
             this.workDocumentForwarderUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.workDocumentForwarderUpdateComboBox_SelectedIndexChanged);
+            this.workDocumentForwarderUpdateComboBox.TextChanged += new System.EventHandler(this.workDocumentForwarderUpdateComboBox_TextChanged);
             this.workDocumentForwarderUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.workDocumentForwarderUpdateComboBox_MouseClick);
             // 
             // commentForwarderUpdateTextBox
@@ -2208,9 +2114,9 @@
             this.deleteForwarderPage.Controls.Add(this.forwarderDeleteButton);
             this.deleteForwarderPage.Controls.Add(this.label42);
             this.deleteForwarderPage.Controls.Add(this.forwarderDeleteComboBox);
-            this.deleteForwarderPage.Location = new System.Drawing.Point(4, 5);
+            this.deleteForwarderPage.Location = new System.Drawing.Point(4, 25);
             this.deleteForwarderPage.Name = "deleteForwarderPage";
-            this.deleteForwarderPage.Size = new System.Drawing.Size(776, 528);
+            this.deleteForwarderPage.Size = new System.Drawing.Size(776, 508);
             this.deleteForwarderPage.TabIndex = 8;
             this.deleteForwarderPage.Text = "deleteForwarderPage";
             this.deleteForwarderPage.UseVisualStyleBackColor = true;
@@ -2221,7 +2127,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.forwarderDeleteButton.Enabled = false;
             this.forwarderDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.forwarderDeleteButton.Location = new System.Drawing.Point(466, 450);
+            this.forwarderDeleteButton.Location = new System.Drawing.Point(470, 434);
             this.forwarderDeleteButton.Name = "forwarderDeleteButton";
             this.forwarderDeleteButton.Size = new System.Drawing.Size(302, 70);
             this.forwarderDeleteButton.TabIndex = 69;
@@ -2259,11 +2165,12 @@
             // 
             // showTransporterPage
             // 
-            this.showTransporterPage.Controls.Add(this.label16);
+            this.showTransporterPage.Controls.Add(this.label15);
+            this.showTransporterPage.Controls.Add(this.transporterShowSearchButton);
+            this.showTransporterPage.Controls.Add(this.transporterShowSearchTextBox);
             this.showTransporterPage.Controls.Add(this.label12);
             this.showTransporterPage.Controls.Add(this.label13);
             this.showTransporterPage.Controls.Add(this.label14);
-            this.showTransporterPage.Controls.Add(this.label15);
             this.showTransporterPage.Controls.Add(this.transporterShowAdditionalDetailsButton);
             this.showTransporterPage.Controls.Add(this.transporterShowCountryDataGridView);
             this.showTransporterPage.Controls.Add(this.transporterShowFilterSelectButton);
@@ -2271,21 +2178,92 @@
             this.showTransporterPage.Controls.Add(this.transporterShowCommentRichTextBox);
             this.showTransporterPage.Controls.Add(this.transporterShowContactsDataGridView);
             this.showTransporterPage.Controls.Add(this.transporterShowDataGridView);
-            this.showTransporterPage.Location = new System.Drawing.Point(4, 5);
+            this.showTransporterPage.Location = new System.Drawing.Point(4, 25);
             this.showTransporterPage.Name = "showTransporterPage";
-            this.showTransporterPage.Size = new System.Drawing.Size(776, 528);
+            this.showTransporterPage.Size = new System.Drawing.Size(776, 508);
             this.showTransporterPage.TabIndex = 9;
             this.showTransporterPage.Text = "showTransporterPage";
             this.showTransporterPage.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(3, 3);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(100, 21);
+            this.label15.TabIndex = 45;
+            this.label15.Text = "Перевізники";
+            // 
+            // transporterShowSearchButton
+            // 
+            this.transporterShowSearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowSearchButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterShowSearchButton.Location = new System.Drawing.Point(267, 26);
+            this.transporterShowSearchButton.Name = "transporterShowSearchButton";
+            this.transporterShowSearchButton.Size = new System.Drawing.Size(155, 30);
+            this.transporterShowSearchButton.TabIndex = 44;
+            this.transporterShowSearchButton.Text = "Знайти";
+            this.transporterShowSearchButton.UseVisualStyleBackColor = true;
+            this.transporterShowSearchButton.Click += new System.EventHandler(this.transporterShowSearchButton_Click);
+            // 
+            // transporterShowSearchTextBox
+            // 
+            this.transporterShowSearchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowSearchTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transporterShowSearchTextBox.Location = new System.Drawing.Point(3, 27);
+            this.transporterShowSearchTextBox.Name = "transporterShowSearchTextBox";
+            this.transporterShowSearchTextBox.Size = new System.Drawing.Size(261, 29);
+            this.transporterShowSearchTextBox.TabIndex = 43;
+            this.transporterShowSearchTextBox.TextChanged += new System.EventHandler(this.transporterShowSearchTextBox_TextChanged);
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(3, 184);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(156, 21);
+            this.label12.TabIndex = 42;
+            this.label12.Text = "Банківські реквізити";
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(3, 370);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 21);
+            this.label13.TabIndex = 41;
+            this.label13.Text = "Примітка";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(3, 265);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(76, 21);
+            this.label14.TabIndex = 40;
+            this.label14.Text = "Контакти";
             // 
             // transporterShowAdditionalDetailsButton
             // 
             this.transporterShowAdditionalDetailsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterShowAdditionalDetailsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterShowAdditionalDetailsButton.Location = new System.Drawing.Point(197, 472);
+            this.transporterShowAdditionalDetailsButton.Location = new System.Drawing.Point(197, 452);
             this.transporterShowAdditionalDetailsButton.Name = "transporterShowAdditionalDetailsButton";
             this.transporterShowAdditionalDetailsButton.Size = new System.Drawing.Size(285, 50);
             this.transporterShowAdditionalDetailsButton.TabIndex = 38;
+            this.transporterShowAdditionalDetailsButton.TabStop = false;
             this.transporterShowAdditionalDetailsButton.Text = "Додаткові параметри";
             this.transporterShowAdditionalDetailsButton.UseVisualStyleBackColor = true;
             this.transporterShowAdditionalDetailsButton.Click += new System.EventHandler(this.transporterShowAdditionalDetailsButton_Click);
@@ -2296,21 +2274,23 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterShowCountryDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.transporterShowCountryDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.transporterShowCountryDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.transporterShowCountryDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.transporterShowCountryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.transporterShowCountryDataGridView.Location = new System.Drawing.Point(586, 24);
+            this.transporterShowCountryDataGridView.Location = new System.Drawing.Point(586, 62);
             this.transporterShowCountryDataGridView.Name = "transporterShowCountryDataGridView";
-            this.transporterShowCountryDataGridView.Size = new System.Drawing.Size(190, 177);
+            this.transporterShowCountryDataGridView.Size = new System.Drawing.Size(190, 120);
             this.transporterShowCountryDataGridView.TabIndex = 37;
+            this.transporterShowCountryDataGridView.TabStop = false;
             // 
             // transporterShowFilterSelectButton
             // 
             this.transporterShowFilterSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterShowFilterSelectButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterShowFilterSelectButton.Location = new System.Drawing.Point(488, 472);
+            this.transporterShowFilterSelectButton.Location = new System.Drawing.Point(488, 452);
             this.transporterShowFilterSelectButton.Name = "transporterShowFilterSelectButton";
             this.transporterShowFilterSelectButton.Size = new System.Drawing.Size(285, 50);
             this.transporterShowFilterSelectButton.TabIndex = 33;
+            this.transporterShowFilterSelectButton.TabStop = false;
             this.transporterShowFilterSelectButton.Text = "Фільтрація";
             this.transporterShowFilterSelectButton.UseVisualStyleBackColor = true;
             this.transporterShowFilterSelectButton.Click += new System.EventHandler(this.transporterShowFilterSelectButton_Click);
@@ -2321,23 +2301,25 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterShowBankDetailsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.transporterShowBankDetailsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.transporterShowBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.transporterShowBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.transporterShowBankDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.transporterShowBankDetailsDataGridView.Location = new System.Drawing.Point(0, 227);
+            this.transporterShowBankDetailsDataGridView.Location = new System.Drawing.Point(0, 207);
             this.transporterShowBankDetailsDataGridView.Name = "transporterShowBankDetailsDataGridView";
             this.transporterShowBankDetailsDataGridView.Size = new System.Drawing.Size(780, 55);
             this.transporterShowBankDetailsDataGridView.TabIndex = 23;
+            this.transporterShowBankDetailsDataGridView.TabStop = false;
             // 
             // transporterShowCommentRichTextBox
             // 
             this.transporterShowCommentRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterShowCommentRichTextBox.Location = new System.Drawing.Point(0, 412);
+            this.transporterShowCommentRichTextBox.Location = new System.Drawing.Point(0, 392);
             this.transporterShowCommentRichTextBox.Name = "transporterShowCommentRichTextBox";
             this.transporterShowCommentRichTextBox.ReadOnly = true;
             this.transporterShowCommentRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.transporterShowCommentRichTextBox.Size = new System.Drawing.Size(776, 54);
             this.transporterShowCommentRichTextBox.TabIndex = 21;
+            this.transporterShowCommentRichTextBox.TabStop = false;
             this.transporterShowCommentRichTextBox.Text = "";
             // 
             // transporterShowContactsDataGridView
@@ -2346,12 +2328,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterShowContactsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.transporterShowContactsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.transporterShowContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.transporterShowContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.transporterShowContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.transporterShowContactsDataGridView.Location = new System.Drawing.Point(0, 306);
+            this.transporterShowContactsDataGridView.Location = new System.Drawing.Point(0, 286);
             this.transporterShowContactsDataGridView.Name = "transporterShowContactsDataGridView";
             this.transporterShowContactsDataGridView.Size = new System.Drawing.Size(776, 81);
             this.transporterShowContactsDataGridView.TabIndex = 19;
+            this.transporterShowContactsDataGridView.TabStop = false;
             // 
             // transporterShowDataGridView
             // 
@@ -2360,31 +2343,28 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterShowDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.transporterShowDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.transporterShowDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.transporterShowDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.transporterShowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.transporterShowDataGridView.Location = new System.Drawing.Point(0, 24);
+            this.transporterShowDataGridView.Location = new System.Drawing.Point(0, 62);
             this.transporterShowDataGridView.Name = "transporterShowDataGridView";
-            this.transporterShowDataGridView.Size = new System.Drawing.Size(579, 177);
+            this.transporterShowDataGridView.Size = new System.Drawing.Size(579, 120);
             this.transporterShowDataGridView.TabIndex = 17;
+            this.transporterShowDataGridView.TabStop = false;
             this.transporterShowDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.transporterShowDataGridView_CellMouseClick);
             // 
             // addTransporterPage
             // 
+            this.addTransporterPage.Controls.Add(this.label6);
             this.addTransporterPage.Controls.Add(this.filtersTransporterAddCheckedListBox);
             this.addTransporterPage.Controls.Add(this.faxTransporterAddCheckBox);
             this.addTransporterPage.Controls.Add(this.originalTransporterAddCheckBox);
             this.addTransporterPage.Controls.Add(this.label81);
             this.addTransporterPage.Controls.Add(this.label82);
             this.addTransporterPage.Controls.Add(this.transporterAddCountryAndVehicleSelectButton);
-            this.addTransporterPage.Controls.Add(this.label79);
             this.addTransporterPage.Controls.Add(this.shortNameTransporterAddTextBox);
             this.addTransporterPage.Controls.Add(this.label80);
             this.addTransporterPage.Controls.Add(this.workDocumentTransporterAddComboBox);
             this.addTransporterPage.Controls.Add(this.label57);
-            this.addTransporterPage.Controls.Add(this.label58);
-            this.addTransporterPage.Controls.Add(this.label67);
-            this.addTransporterPage.Controls.Add(this.label68);
-            this.addTransporterPage.Controls.Add(this.label69);
             this.addTransporterPage.Controls.Add(this.label70);
             this.addTransporterPage.Controls.Add(this.label71);
             this.addTransporterPage.Controls.Add(this.transporterAddButton);
@@ -2405,12 +2385,25 @@
             this.addTransporterPage.Controls.Add(this.label78);
             this.addTransporterPage.Controls.Add(this.transporterAddTaxPayerStatusAddButton);
             this.addTransporterPage.Controls.Add(this.transporterAddWorkDocumentAddButton);
-            this.addTransporterPage.Location = new System.Drawing.Point(4, 5);
+            this.addTransporterPage.Location = new System.Drawing.Point(4, 25);
             this.addTransporterPage.Name = "addTransporterPage";
-            this.addTransporterPage.Size = new System.Drawing.Size(776, 528);
+            this.addTransporterPage.Size = new System.Drawing.Size(776, 508);
             this.addTransporterPage.TabIndex = 10;
             this.addTransporterPage.Text = "addTransporterPage";
             this.addTransporterPage.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label6.Location = new System.Drawing.Point(10, 492);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(163, 13);
+            this.label6.TabIndex = 106;
+            this.label6.Text = "* - одне з обов\'язкових полів";
             // 
             // filtersTransporterAddCheckedListBox
             // 
@@ -2477,24 +2470,11 @@
             this.transporterAddCountryAndVehicleSelectButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.transporterAddCountryAndVehicleSelectButton.Location = new System.Drawing.Point(8, 432);
             this.transporterAddCountryAndVehicleSelectButton.Name = "transporterAddCountryAndVehicleSelectButton";
-            this.transporterAddCountryAndVehicleSelectButton.Size = new System.Drawing.Size(182, 70);
+            this.transporterAddCountryAndVehicleSelectButton.Size = new System.Drawing.Size(182, 57);
             this.transporterAddCountryAndVehicleSelectButton.TabIndex = 77;
             this.transporterAddCountryAndVehicleSelectButton.Text = "Вибрати країни та типи транспорту";
             this.transporterAddCountryAndVehicleSelectButton.UseVisualStyleBackColor = true;
             this.transporterAddCountryAndVehicleSelectButton.Click += new System.EventHandler(this.transporterAddCountryAndVehicleSelectButton_Click);
-            // 
-            // label79
-            // 
-            this.label79.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label79.AutoSize = true;
-            this.label79.BackColor = System.Drawing.Color.Transparent;
-            this.label79.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label79.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label79.Location = new System.Drawing.Point(384, 8);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(17, 21);
-            this.label79.TabIndex = 90;
-            this.label79.Text = "*";
             // 
             // shortNameTransporterAddTextBox
             // 
@@ -2542,58 +2522,6 @@
             this.label57.TabIndex = 86;
             this.label57.Text = "* - обов\'язкове поле";
             // 
-            // label58
-            // 
-            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label58.AutoSize = true;
-            this.label58.BackColor = System.Drawing.Color.Transparent;
-            this.label58.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label58.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label58.Location = new System.Drawing.Point(686, 121);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(17, 21);
-            this.label58.TabIndex = 85;
-            this.label58.Text = "*";
-            // 
-            // label67
-            // 
-            this.label67.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label67.AutoSize = true;
-            this.label67.BackColor = System.Drawing.Color.Transparent;
-            this.label67.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label67.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label67.Location = new System.Drawing.Point(716, 65);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(17, 21);
-            this.label67.TabIndex = 84;
-            this.label67.Text = "*";
-            // 
-            // label68
-            // 
-            this.label68.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label68.AutoSize = true;
-            this.label68.BackColor = System.Drawing.Color.Transparent;
-            this.label68.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label68.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label68.Location = new System.Drawing.Point(128, 120);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(17, 21);
-            this.label68.TabIndex = 83;
-            this.label68.Text = "*";
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.BackColor = System.Drawing.Color.Transparent;
-            this.label69.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label69.Location = new System.Drawing.Point(141, 65);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(17, 21);
-            this.label69.TabIndex = 82;
-            this.label69.Text = "*";
-            // 
             // label70
             // 
             this.label70.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -2626,7 +2554,7 @@
             this.transporterAddButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.transporterAddButton.Location = new System.Drawing.Point(572, 432);
             this.transporterAddButton.Name = "transporterAddButton";
-            this.transporterAddButton.Size = new System.Drawing.Size(193, 70);
+            this.transporterAddButton.Size = new System.Drawing.Size(193, 57);
             this.transporterAddButton.TabIndex = 80;
             this.transporterAddButton.Text = "Додати перевізника";
             this.transporterAddButton.UseVisualStyleBackColor = true;
@@ -2660,7 +2588,7 @@
             this.transporterAddBankDetailsAddButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.transporterAddBankDetailsAddButton.Location = new System.Drawing.Point(384, 432);
             this.transporterAddBankDetailsAddButton.Name = "transporterAddBankDetailsAddButton";
-            this.transporterAddBankDetailsAddButton.Size = new System.Drawing.Size(182, 70);
+            this.transporterAddBankDetailsAddButton.Size = new System.Drawing.Size(182, 57);
             this.transporterAddBankDetailsAddButton.TabIndex = 79;
             this.transporterAddBankDetailsAddButton.Text = "Додати банківські дані";
             this.transporterAddBankDetailsAddButton.UseVisualStyleBackColor = true;
@@ -2672,7 +2600,7 @@
             this.transporterAddContactAddButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.transporterAddContactAddButton.Location = new System.Drawing.Point(196, 432);
             this.transporterAddContactAddButton.Name = "transporterAddContactAddButton";
-            this.transporterAddContactAddButton.Size = new System.Drawing.Size(182, 70);
+            this.transporterAddContactAddButton.Size = new System.Drawing.Size(182, 57);
             this.transporterAddContactAddButton.TabIndex = 78;
             this.transporterAddContactAddButton.Text = "Додати контакт";
             this.transporterAddContactAddButton.UseVisualStyleBackColor = true;
@@ -2854,12 +2782,32 @@
             this.updateTransporterPage.Controls.Add(this.label98);
             this.updateTransporterPage.Controls.Add(this.transporterUpdateTaxPayerStatusAddButton);
             this.updateTransporterPage.Controls.Add(this.transporterUpdateWorkDocumentAddButton);
-            this.updateTransporterPage.Location = new System.Drawing.Point(4, 5);
+            this.updateTransporterPage.Location = new System.Drawing.Point(4, 25);
             this.updateTransporterPage.Name = "updateTransporterPage";
-            this.updateTransporterPage.Size = new System.Drawing.Size(776, 528);
+            this.updateTransporterPage.Size = new System.Drawing.Size(776, 508);
             this.updateTransporterPage.TabIndex = 11;
             this.updateTransporterPage.Text = "updateTransporterPage";
             this.updateTransporterPage.UseVisualStyleBackColor = true;
+            // 
+            // filtersTransporterUpdateCheckedListBox
+            // 
+            this.filtersTransporterUpdateCheckedListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.filtersTransporterUpdateCheckedListBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.filtersTransporterUpdateCheckedListBox.FormattingEnabled = true;
+            this.filtersTransporterUpdateCheckedListBox.Items.AddRange(new object[] {
+            "Експедитор",
+            "ТУР",
+            "СМР",
+            "ЕКМТ",
+            "Збірний",
+            "АД"});
+            this.filtersTransporterUpdateCheckedListBox.Location = new System.Drawing.Point(9, 246);
+            this.filtersTransporterUpdateCheckedListBox.MultiColumn = true;
+            this.filtersTransporterUpdateCheckedListBox.Name = "filtersTransporterUpdateCheckedListBox";
+            this.filtersTransporterUpdateCheckedListBox.Size = new System.Drawing.Size(757, 28);
+            this.filtersTransporterUpdateCheckedListBox.TabIndex = 118;
+            this.filtersTransporterUpdateCheckedListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.filtersTransporterUpdateCheckedListBox_MouseClick);
             // 
             // transporterUpdateCountriesAndVehicleUpdateButton
             // 
@@ -3007,26 +2955,6 @@
             this.selectTransporterUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.selectTransporterUpdateComboBox_SelectedIndexChanged);
             this.selectTransporterUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.selectTransporterUpdateComboBox_MouseClick);
             // 
-            // filtersTransporterUpdateCheckedListBox
-            // 
-            this.filtersTransporterUpdateCheckedListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.filtersTransporterUpdateCheckedListBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.filtersTransporterUpdateCheckedListBox.FormattingEnabled = true;
-            this.filtersTransporterUpdateCheckedListBox.Items.AddRange(new object[] {
-            "Експедитор",
-            "ТУР",
-            "СМР",
-            "ЕКМТ",
-            "Збірний",
-            "АД"});
-            this.filtersTransporterUpdateCheckedListBox.Location = new System.Drawing.Point(9, 246);
-            this.filtersTransporterUpdateCheckedListBox.MultiColumn = true;
-            this.filtersTransporterUpdateCheckedListBox.Name = "filtersTransporterUpdateCheckedListBox";
-            this.filtersTransporterUpdateCheckedListBox.Size = new System.Drawing.Size(757, 28);
-            this.filtersTransporterUpdateCheckedListBox.TabIndex = 118;
-            this.filtersTransporterUpdateCheckedListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.filtersTransporterUpdateCheckedListBox_MouseClick);
-            // 
             // faxTransporterUpdateCheckBox
             // 
             this.faxTransporterUpdateCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -3099,6 +3027,7 @@
             this.workDocumentTransporterUpdateComboBox.Size = new System.Drawing.Size(234, 29);
             this.workDocumentTransporterUpdateComboBox.TabIndex = 114;
             this.workDocumentTransporterUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.workDocumentTransporterUpdateComboBox_SelectedIndexChanged);
+            this.workDocumentTransporterUpdateComboBox.TextChanged += new System.EventHandler(this.workDocumentTransporterUpdateComboBox_TextChanged);
             this.workDocumentTransporterUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.workDocumentTransporterUpdateComboBox_MouseClick);
             // 
             // label93
@@ -3135,6 +3064,7 @@
             this.taxPayerStatusTransporterUpdateComboBox.Size = new System.Drawing.Size(234, 29);
             this.taxPayerStatusTransporterUpdateComboBox.TabIndex = 115;
             this.taxPayerStatusTransporterUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.taxPayerStatusTransporterUpdateComboBox_SelectedIndexChanged);
+            this.taxPayerStatusTransporterUpdateComboBox.TextChanged += new System.EventHandler(this.taxPayerStatusTransporterUpdateComboBox_TextChanged);
             this.taxPayerStatusTransporterUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.taxPayerStatusTransporterUpdateComboBox_MouseClick);
             // 
             // physicalAddressTransporterUpdateTextBox
@@ -3250,9 +3180,9 @@
             this.deleteTransporterPage.Controls.Add(this.transporterDeleteButton);
             this.deleteTransporterPage.Controls.Add(this.label11);
             this.deleteTransporterPage.Controls.Add(this.transporterDeleteComboBox);
-            this.deleteTransporterPage.Location = new System.Drawing.Point(4, 5);
+            this.deleteTransporterPage.Location = new System.Drawing.Point(4, 25);
             this.deleteTransporterPage.Name = "deleteTransporterPage";
-            this.deleteTransporterPage.Size = new System.Drawing.Size(776, 528);
+            this.deleteTransporterPage.Size = new System.Drawing.Size(776, 508);
             this.deleteTransporterPage.TabIndex = 12;
             this.deleteTransporterPage.Text = "deleteTransporterPage";
             this.deleteTransporterPage.UseVisualStyleBackColor = true;
@@ -3263,7 +3193,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterDeleteButton.Enabled = false;
             this.transporterDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterDeleteButton.Location = new System.Drawing.Point(466, 450);
+            this.transporterDeleteButton.Location = new System.Drawing.Point(470, 434);
             this.transporterDeleteButton.Name = "transporterDeleteButton";
             this.transporterDeleteButton.Size = new System.Drawing.Size(302, 70);
             this.transporterDeleteButton.TabIndex = 72;
@@ -3294,7 +3224,6 @@
             this.transporterDeleteComboBox.Location = new System.Drawing.Point(3, 31);
             this.transporterDeleteComboBox.Name = "transporterDeleteComboBox";
             this.transporterDeleteComboBox.Size = new System.Drawing.Size(770, 29);
-            this.transporterDeleteComboBox.Sorted = true;
             this.transporterDeleteComboBox.TabIndex = 70;
             this.transporterDeleteComboBox.SelectedIndexChanged += new System.EventHandler(this.transporterDeleteComboBox_SelectedIndexChanged);
             this.transporterDeleteComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.transporterDeleteComboBox_MouseClick);
@@ -3356,61 +3285,6 @@
             this.labelshow69.Size = new System.Drawing.Size(61, 21);
             this.labelshow69.TabIndex = 36;
             this.labelshow69.Text = "Країни";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(3, 204);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(156, 21);
-            this.label12.TabIndex = 42;
-            this.label12.Text = "Банківські реквізити";
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(3, 390);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(77, 21);
-            this.label13.TabIndex = 41;
-            this.label13.Text = "Примітка";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 285);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(76, 21);
-            this.label14.TabIndex = 40;
-            this.label14.Text = "Контакти";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(3, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 21);
-            this.label15.TabIndex = 39;
-            this.label15.Text = "Перевізники";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(585, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(58, 21);
-            this.label16.TabIndex = 43;
-            this.label16.Text = "Країни";
             // 
             // MainForm
             // 
@@ -3530,11 +3404,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.RichTextBox clientCommentRichTextBox;
         private System.Windows.Forms.CheckBox faxClientUpdateCheckBox;
@@ -3562,8 +3431,6 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.ComboBox selectClientUpdateComboBox;
         private System.Windows.Forms.Button clientUpdateContactDeleteButton;
-        private System.Windows.Forms.TextBox contractNumberClientUpdateTextBox;
-        private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.DataGridView clientBankDetailsDataGridView;
 
@@ -3592,11 +3459,6 @@
         private System.Windows.Forms.DataGridView forwarderDataGridView;
         private System.Windows.Forms.ComboBox workDocumentForwarderComboBox;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
 
         private System.Windows.Forms.Button addForwarderButton;
@@ -3656,10 +3518,6 @@
         private System.Windows.Forms.TabPage updateTransporterPage;
         private System.Windows.Forms.TabPage deleteTransporterPage;
         private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.Label label69;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.Label label72;
@@ -3695,7 +3553,6 @@
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Label label78;        
-        private System.Windows.Forms.Label label79;        
         private System.Windows.Forms.Label label80;
         private System.Windows.Forms.Label label81;
         private System.Windows.Forms.Label label82;
@@ -3764,11 +3621,18 @@
         private System.Windows.Forms.Button transporterDeleteButton;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox transporterDeleteComboBox;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox transporterShowSearchTextBox;
+        private System.Windows.Forms.Button transporterShowSearchButton;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button clientShowSearchButton;
+        private System.Windows.Forms.TextBox clientShowSearchTextBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
         }
 }
 

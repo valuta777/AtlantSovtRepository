@@ -15,76 +15,21 @@ namespace AtlantSovt
         long id;
         bool clientWorkDocumentFlag;
         bool clientTaxPayerStatusFlag;
-        bool clientNameChanged, clientDirectorChanged, clientContractNumberChanged, clientPhysicalAddressChanged, clientGeographyAddressChanged,clientCommentChanged, clientWorkDocumentChanged, clientTaxPayerStatusChanged, clientOriginalChanged, clientFaxChanged;
+        bool clientNameChanged, clientDirectorChanged, clientPhysicalAddressChanged, clientGeographyAddressChanged,clientCommentChanged, clientWorkDocumentChanged, clientTaxPayerStatusChanged, clientOriginalChanged, clientFaxChanged, clientIsWorkDocumentExist, clientIsTaxPayerStatusExist;
         Client client, deleteClient;
-        WorkDocument clientWorkDocument;
-        TaxPayerStatu clientTaxPayerStatus;
+        WorkDocument clientWorkDocument = null;
+        TaxPayerStatu clientTaxPayerStatus = null;
 
-        //Add
-        #region Add
-        void AddClient()
-        {
-            using (var db = new AtlantSovtContext())
-            {
-                if (nameClientTextBox.Text != "" && directorClientTextBox.Text != "" && physicalAddressClientTextBox.Text != "" && geographyAddressClientTextBox.Text != "" && clientWorkDocumentFlag && clientTaxPayerStatusFlag)
-                {
-                    var new_Name = nameClientTextBox.Text;
-                    var new_Director = directorClientTextBox.Text;
-                    var new_PhysicalAddress = physicalAddressClientTextBox.Text;
-                    var new_GeografphyAddress = geographyAddressClientTextBox.Text;
-                    var new_WorkDocumentId = clientWorkDocument.Id;
-                    var new_TaxPayerStatusId = clientTaxPayerStatus.Id;
-                    var new_ContractType = originalClientCheckBox.Checked;                  
-                    var new_Comment = commentClientTextBox.Text;
+        //Show
+        #region Show
 
-                    var New_Client = new Client
-                    {
-                        Name = new_Name,
-                        Director = new_Director,
-                        PhysicalAddress = new_PhysicalAddress,
-                        GeografphyAddress = new_GeografphyAddress,
-                        WorkDocumentId = new_WorkDocumentId,
-                        TaxPayerStatusId = new_TaxPayerStatusId,
-                        ContractType = new_ContractType,                    
-                        Comment = new_Comment,
-                    };
-                    try
-                    {
-                        db.Clients.Add(New_Client);
-                        db.SaveChanges();
-                        MessageBox.Show("Клієнт успішно доданий");
-
-                        if (addClientBankDetailsAddForm != null)
-                        {
-                            addClientBankDetailsAddForm.AddClientBankDetail(New_Client.Id);
-                            addClientBankDetailsAddForm = null;
-                        }
-                        if (addClientContactAddForm != null)
-                        {
-                            addClientContactAddForm.AddClientContact(New_Client.Id);
-                            addClientContactAddForm = null;
-                        }
-                    }
-                    catch (Exception ec)
-                    {
-                        MessageBox.Show(ec.Message);         
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("Обов'язкові поля не заповнені");
-                }
-            }
-
-        }
-        
         void ShowClient()
         {
             using (var db = new AtlantSovtContext())
             {
                 var query =
                 from c in db.Clients
+                orderby c.Id
                 select
                 new
                 {
@@ -112,7 +57,7 @@ namespace AtlantSovt
             } clientDataGridView.Update();
 
         }
-        
+
         void ShowClientInfo()
         {
             using (var db = new AtlantSovtContext())
@@ -170,15 +115,180 @@ namespace AtlantSovt
                     clientBankDetailsDataGridView.Columns[6].HeaderText = "SWIFT";
                     clientBankDetailsDataGridView.Columns[7].HeaderText = "IBAN";
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("Немає жодного клієнта");
                 }
-            } 
+            }
             clientContactsDataGridView.Update();
             clientBankDetailsDataGridView.Update();
             clientContactsDataGridView.Visible = true;
             clientBankDetailsDataGridView.Visible = true;
+        }
+
+        void ShowClientSearch()
+        {
+
+            var text = clientShowSearchTextBox.Text;
+            using (var db = new AtlantSovtContext())
+            {
+                var query =
+                from c in db.Clients
+                where c.Name.Contains(text) || c.Director.Contains(text) || c.ClientContacts.Any(con => con.TelephoneNumber.Contains(text)) || c.ClientContacts.Any(con => con.Email.Contains(text)) || c.ClientContacts.Any(con => con.ContactPerson.Contains(text))
+                select
+                new
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    Director = c.Director,
+                    PhysicalAddress = c.PhysicalAddress,
+                    GeografphyAddress = c.GeografphyAddress,
+                    ContractType = c.ContractType,
+                    TaxPayerStatusId = c.TaxPayerStatu.Status,
+                    WorkDocumentId = c.WorkDocument.Status,
+                };
+
+
+                clientDataGridView.DataSource = query.ToList();
+                clientDataGridView.Columns[0].HeaderText = "Порядковий номер";
+                clientDataGridView.Columns[1].HeaderText = "Назва";
+                clientDataGridView.Columns[2].HeaderText = "П.І.Б. Директора";
+                clientDataGridView.Columns[3].HeaderText = "Фізична адреса";
+                clientDataGridView.Columns[4].HeaderText = "Юридична адреса";
+                clientDataGridView.Columns[5].HeaderText = "Оригінал договору";
+                clientDataGridView.Columns[6].HeaderText = "Статус платника податку";
+                clientDataGridView.Columns[7].HeaderText = "На основі";
+
+
+            } clientDataGridView.Update();
+
+        }
+
+        #endregion
+
+        //Add
+        #region Add
+
+        void AddClient()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (nameClientTextBox.Text != "" || directorClientTextBox.Text != "")
+                {
+                    var new_Name = nameClientTextBox.Text;
+                    var new_Director = directorClientTextBox.Text;
+                    var new_PhysicalAddress = physicalAddressClientTextBox.Text;
+                    var new_GeografphyAddress = geographyAddressClientTextBox.Text;
+                    var new_ContractType = originalClientCheckBox.Checked;
+                    var new_Comment = commentClientTextBox.Text;
+
+                    long new_WorkDocumentId = 0;
+                    long new_TaxPayerStatusId = 0;
+                    if (clientWorkDocument != null)
+                    {
+                        clientIsWorkDocumentExist = true;
+                        new_WorkDocumentId = clientWorkDocument.Id;
+                    }
+                    else
+                    {
+                        clientIsWorkDocumentExist = false;
+                    }
+                    if (clientTaxPayerStatus != null)
+                    {
+                        clientIsTaxPayerStatusExist = true;
+                        new_TaxPayerStatusId = clientTaxPayerStatus.Id;
+                    }
+                    else
+                    {
+                        clientIsTaxPayerStatusExist = false;
+                    }
+
+                    Client New_Client = new Client();
+
+                    if (!clientIsWorkDocumentExist && !clientIsTaxPayerStatusExist)
+                    {
+                        New_Client = new Client
+                        {
+                            Name = new_Name,
+                            Director = new_Director,
+                            PhysicalAddress = new_PhysicalAddress,
+                            GeografphyAddress = new_GeografphyAddress,
+                            ContractType = new_ContractType,
+                            Comment = new_Comment,
+                        };
+                    }
+
+                    else if (clientIsWorkDocumentExist && clientIsTaxPayerStatusExist)
+                    {
+                        New_Client = new Client
+                        {
+                            Name = new_Name,
+                            Director = new_Director,
+                            PhysicalAddress = new_PhysicalAddress,
+                            GeografphyAddress = new_GeografphyAddress,
+                            WorkDocumentId = new_WorkDocumentId,
+                            TaxPayerStatusId = new_TaxPayerStatusId,
+                            ContractType = new_ContractType,
+                            Comment = new_Comment,
+                        };
+                    }
+
+                    else if (clientIsWorkDocumentExist && !clientIsTaxPayerStatusExist)
+                    {
+                        New_Client = new Client
+                        {
+                            Name = new_Name,
+                            Director = new_Director,
+                            PhysicalAddress = new_PhysicalAddress,
+                            GeografphyAddress = new_GeografphyAddress,
+                            WorkDocumentId = new_WorkDocumentId,
+                            ContractType = new_ContractType,
+                            Comment = new_Comment,
+                        };
+                    }
+
+                    else if (!clientIsWorkDocumentExist && clientIsTaxPayerStatusExist)
+                    {
+                        New_Client = new Client
+                        {
+                            Name = new_Name,
+                            Director = new_Director,
+                            PhysicalAddress = new_PhysicalAddress,
+                            GeografphyAddress = new_GeografphyAddress,
+                            TaxPayerStatusId = new_TaxPayerStatusId,
+                            ContractType = new_ContractType,
+                            Comment = new_Comment,
+                        };
+                    }
+                    try
+                    {
+                        db.Clients.Add(New_Client);
+                        db.SaveChanges();
+                        MessageBox.Show("Клієнт успішно доданий");
+
+                        if (addClientBankDetailsAddForm != null)
+                        {
+                            addClientBankDetailsAddForm.AddClientBankDetail(New_Client.Id);
+                            addClientBankDetailsAddForm = null;
+                        }
+                        if (addClientContactAddForm != null)
+                        {
+                            addClientContactAddForm.AddClientContact(New_Client.Id);
+                            addClientContactAddForm = null;
+                        }
+                    }
+                    catch (Exception ec)
+                    {
+                        MessageBox.Show(ec.Message);         
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Одне з обов'язкових полів не заповнено");
+                }
+            }
+
         }
         
         void LoadTaxPayerStatusClientAddInfoComboBox()
@@ -213,11 +323,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = taxPayerStatusClientComboBox.SelectedItem.ToString();
-                string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedStatus[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                clientTaxPayerStatus = db.TaxPayerStatus.Find(id);
+                if (taxPayerStatusClientComboBox.Text != "")
+                {
+                    string comboboxText = taxPayerStatusClientComboBox.SelectedItem.ToString();
+                    string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedStatus[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    clientTaxPayerStatus = db.TaxPayerStatus.Find(id);
+                }
+                else 
+                {
+                    clientTaxPayerStatus = null;
+                }
             }
         }
         
@@ -225,11 +342,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = workDocumentClientComboBox.SelectedItem.ToString();
-                string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedStatus[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                clientWorkDocument = db.WorkDocuments.Find(id);
+                if (workDocumentClientComboBox.Text != "")
+                {
+                    string comboboxText = workDocumentClientComboBox.SelectedItem.ToString();
+                    string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedStatus[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    clientWorkDocument = db.WorkDocuments.Find(id);
+                }
+                else 
+                {
+                    clientWorkDocument = null;
+                }
             }
         }
         #endregion
@@ -242,7 +366,6 @@ namespace AtlantSovt
             taxPayerStatusClientUpdateComboBox.Items.Clear();
             nameClientUpdateTextBox.Clear();
             directorClientUpdateTextBox.Clear();
-            contractNumberClientUpdateTextBox.Clear();
             physicalAddressClientUpdateTextBox.Clear();
             geographyAddressClientUpdateTextBox.Clear();
             commentClientUpdateTextBox.Clear();
@@ -264,12 +387,26 @@ namespace AtlantSovt
                     physicalAddressClientUpdateTextBox.Text = client.PhysicalAddress.ToString();
                     geographyAddressClientUpdateTextBox.Text = client.GeografphyAddress.ToString();
                     commentClientUpdateTextBox.Text = client.Comment.ToString();
-                    workDocumentClientUpdateComboBox.SelectedIndex = Convert.ToInt32(client.WorkDocumentId - 1);
-                    taxPayerStatusClientUpdateComboBox.SelectedIndex = Convert.ToInt32(client.TaxPayerStatusId - 1);
+                    if (client.WorkDocument != null)
+                    {
+                        workDocumentClientUpdateComboBox.SelectedIndex = Convert.ToInt32(client.WorkDocumentId - 1);
+                    }
+                    else 
+                    {
+                        workDocumentClientUpdateComboBox.Text = "";
+                    }
+                    if (client.TaxPayerStatu != null)
+                    {
+                        taxPayerStatusClientUpdateComboBox.SelectedIndex = Convert.ToInt32(client.TaxPayerStatusId - 1);
+                    }
+                    else 
+                    {
+                        taxPayerStatusClientUpdateComboBox.Text = "";
+                    }
                     originalClientUpdateCheckBox.Checked = client.ContractType.Value;
                     faxClientUpdateCheckBox.Checked = !client.ContractType.Value;
                 }
-                transporterFullNameChanged =  transporterDirectorChanged = transporterContractNumberChanged = transporterPhysicalAddressChanged =  transporterGeographyAddressChanged =  transporterCommentChanged = transporterWorkDocumentChanged =  transporterTaxPayerStatusChanged =  transporterOriginalChanged =  transporterFaxChanged = false;
+                clientNameChanged =  clientDirectorChanged = clientPhysicalAddressChanged =  clientGeographyAddressChanged =  clientCommentChanged = clientWorkDocumentChanged =  clientTaxPayerStatusChanged =  clientOriginalChanged =  clientFaxChanged = false;
             }
         }
 
@@ -319,11 +456,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = workDocumentClientUpdateComboBox.SelectedItem.ToString();
-                string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedStatus[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                clientWorkDocument = db.WorkDocuments.Find(id);
+                if (workDocumentClientUpdateComboBox.Text != "")
+                {
+                    string comboboxText = workDocumentClientUpdateComboBox.SelectedItem.ToString();
+                    string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedStatus[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    clientWorkDocument = db.WorkDocuments.Find(id);
+                }
+                else 
+                {
+                    clientWorkDocument = null;
+                }
             }
         }
 
@@ -331,11 +475,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = taxPayerStatusClientUpdateComboBox.SelectedItem.ToString();
-                string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedStatus[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                clientTaxPayerStatus = db.TaxPayerStatus.Find(id);
+                if (taxPayerStatusClientUpdateComboBox.Text != "")
+                {
+                    string comboboxText = taxPayerStatusClientUpdateComboBox.SelectedItem.ToString();
+                    string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedStatus[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    clientTaxPayerStatus = db.TaxPayerStatus.Find(id);
+                }
+                else
+                {
+                    clientTaxPayerStatus = null;
+                }
             }
         }
 
@@ -344,41 +495,56 @@ namespace AtlantSovt
             using (var db = new AtlantSovtContext())
             {
                 //якщо хоча б один з флагів = true
-                if (transporterFullNameChanged || transporterDirectorChanged || transporterContractNumberChanged || transporterPhysicalAddressChanged || transporterGeographyAddressChanged || transporterCommentChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterOriginalChanged || transporterFaxChanged)
+                if (clientNameChanged || clientDirectorChanged || clientPhysicalAddressChanged || clientGeographyAddressChanged || clientCommentChanged || clientWorkDocumentChanged || clientTaxPayerStatusChanged || clientWorkDocumentChanged || clientTaxPayerStatusChanged || clientOriginalChanged || clientFaxChanged)
                 {
-                    if (transporterFullNameChanged)
+                    if (clientNameChanged)
                     {
                         client.Name = nameClientUpdateTextBox.Text;
                     }
-                    if (transporterDirectorChanged)
+                    if (clientDirectorChanged)
                     {
                         client.Director = directorClientUpdateTextBox.Text;
                     }
-                    if (transporterContractNumberChanged)
-                    {
-                        client.ContractNumber = contractNumberClientUpdateTextBox.Text;
-                    }
-                    if (transporterPhysicalAddressChanged)
+   
+                    if (clientPhysicalAddressChanged)
                     {
                         client.PhysicalAddress = physicalAddressClientUpdateTextBox.Text;
                     }
-                    if (transporterGeographyAddressChanged)
+                    if (clientGeographyAddressChanged)
                     {
                         client.GeografphyAddress = geographyAddressClientUpdateTextBox.Text;
                     }
-                    if (transporterCommentChanged)
+                    if (clientCommentChanged)
                     {
                         client.Comment = commentClientUpdateTextBox.Text;
                     }
-                    if (transporterWorkDocumentChanged)
+                    if (clientWorkDocumentChanged)
                     {
-                        client.WorkDocumentId = clientWorkDocument.Id;
+                        if (workDocumentClientUpdateComboBox.Text != "")
+                        {
+                            client.WorkDocument = null;
+                            client.WorkDocumentId = clientWorkDocument.Id;
+                        }
+                        else
+                        {
+                            client.WorkDocumentId = null;
+                            client.WorkDocument = null;
+                        }
                     }
-                    if (transporterTaxPayerStatusChanged)
+                    if (clientTaxPayerStatusChanged)
                     {
-                        client.TaxPayerStatusId = clientTaxPayerStatus.Id;
+                        if (taxPayerStatusClientUpdateComboBox.Text != "")
+                        {
+                            client.TaxPayerStatu = null;
+                            client.TaxPayerStatusId = clientTaxPayerStatus.Id;
+                        }
+                        else 
+                        {
+                            client.TaxPayerStatusId = null;
+                            client.TaxPayerStatu = null;
+                        }
                     }
-                    if (transporterOriginalChanged)
+                    if (clientOriginalChanged)
                     {
                         client.ContractType = true;
                     }

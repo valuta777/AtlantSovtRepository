@@ -184,6 +184,8 @@ namespace AtlantSovt
         
         private void addClientButton_Click(object sender, EventArgs e)
         {
+            SplitLoadWorkDocumentClientAddInfo();
+            SplitLoadTaxPayerStatusClientAddInfo();
             AddClient();
             nameClientTextBox.Text = "";
             directorClientTextBox.Text = "";
@@ -194,6 +196,8 @@ namespace AtlantSovt
             originalClientCheckBox.Checked = false;
             geographyAddressClientTextBox.Text = "";
             commentClientTextBox.Text = "";
+            clientTaxPayerStatus = null;
+            clientWorkDocument = null;
             
         }
         
@@ -214,14 +218,14 @@ namespace AtlantSovt
         private void workDocumentClientAddComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             clientWorkDocumentFlag = true;
-            SplitLoadWorkDocumentClientAddInfo();
+            //SplitLoadWorkDocumentClientAddInfo();
             
         }
         
         private void TaxPayerStatusClientAddComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             clientTaxPayerStatusFlag = true;
-            SplitLoadTaxPayerStatusClientAddInfo();
+            //SplitLoadTaxPayerStatusClientAddInfo();
         }
 
         private void originalCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -289,8 +293,8 @@ namespace AtlantSovt
             if (originalClientUpdateCheckBox.Checked)
             {
                 faxClientUpdateCheckBox.CheckState = CheckState.Unchecked;
-                transporterOriginalChanged = true;
-                transporterFaxChanged = false;
+                clientOriginalChanged = true;
+                clientFaxChanged = false;
             }
             else
             {
@@ -304,8 +308,8 @@ namespace AtlantSovt
             if (faxClientUpdateCheckBox.Checked)
             {
                 originalClientUpdateCheckBox.CheckState = CheckState.Unchecked;
-                transporterOriginalChanged = false;
-                transporterFaxChanged = true;
+                clientOriginalChanged = false;
+                clientFaxChanged = true;
             }
             else
             {
@@ -316,15 +320,26 @@ namespace AtlantSovt
 
         private void workDocumentClientUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            transporterWorkDocumentChanged = true;
+            clientWorkDocumentChanged = true;
             SplitLoadWorkDocumentClientUpdateInfo();
            
         }
 
         private void taxPayerStatusClientUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            transporterTaxPayerStatusChanged = true;
+            clientTaxPayerStatusChanged = true;
             SplitLoadTaxPayerStatusClientUpdateInfo();
+        }
+
+        private void workDocumentClientUpdateComboBox_TextChanged(object sender, EventArgs e)
+        {
+            clientWorkDocumentChanged = true;
+        }
+
+        private void taxPayerStatusClientUpdateComboBox_TextChanged(object sender, EventArgs e)
+        {
+            clientTaxPayerStatusChanged = true;
+
         }
 
         private void clientUpdateWorkDocumentAddButton_Click(object sender, EventArgs e)
@@ -341,37 +356,33 @@ namespace AtlantSovt
 
         private void nameClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            transporterFullNameChanged = true;
+            clientNameChanged = true;
         }
 
         private void directorClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            transporterDirectorChanged = true;
+            clientDirectorChanged = true;
         }
-
-        private void contractNumberClientUpdateTextBox_TextChanged(object sender, EventArgs e)
-        {
-            transporterContractNumberChanged = true;
-        }
-
         private void physicalAddressClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            transporterPhysicalAddressChanged = true;
+            clientPhysicalAddressChanged = true;
         }
 
         private void geographyAddressClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            transporterGeographyAddressChanged = true;
+            clientGeographyAddressChanged = true;
         }
 
         private void commentClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
-            transporterCommentChanged = true;
+            clientCommentChanged = true;
         }
 
         private void updateClientButton_Click(object sender, EventArgs e)
         {
             UpdateClient();
+            clientNameChanged = clientDirectorChanged = clientPhysicalAddressChanged = clientGeographyAddressChanged = clientCommentChanged = clientWorkDocumentChanged = clientTaxPayerStatusChanged = clientOriginalChanged = clientFaxChanged = false;
+            
         }
 
                 //Contact
@@ -574,7 +585,7 @@ namespace AtlantSovt
         //Forwarder
         #region Forwarder
 
-                //Show
+            //Show
                 #region Show
         private void showForwarderStrip_Click(object sender, EventArgs e)
         {
@@ -590,7 +601,7 @@ namespace AtlantSovt
         }
         #endregion
 
-                //Add
+            //Add
                 #region Add
         private void workDocumentForwarderComboBox_MouseClick(object sender, MouseEventArgs e)
         {
@@ -602,7 +613,6 @@ namespace AtlantSovt
         private void workDocumentForwarderComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             forwarderWorkDocumentAdded = true;
-            SplitLoadWorkDocumentForwarderAddInfo();
         }
 
         private void taxPayerStatusForwarderComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -615,7 +625,6 @@ namespace AtlantSovt
         private void taxPayerStatusForwarderComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             forwarderTaxPayerStatusAdded = true;
-            SplitLoadTaxPayerStatusForwarderAddInfo();
         }
 
         private void addWorkDocumentForwarderButton_Click(object sender, EventArgs e)
@@ -644,6 +653,8 @@ namespace AtlantSovt
 
         private void addForwarderButton_Click(object sender, EventArgs e)
         {
+            SplitLoadWorkDocumentForwarderAddInfo();
+            SplitLoadTaxPayerStatusForwarderAddInfo();
             AddForwarder();
             nameForwarderTextBox.Text = "";
             directorForwarderTextBox.Text = "";
@@ -653,10 +664,12 @@ namespace AtlantSovt
             taxPayerStatusForwarderComboBox.Text = "";
             geographyAddressForwarderTextBox.Text = "";
             commentForwarderTextBox.Text = "";
+            forwarderWorkDocument = null;
+            forwarderTaxPayerStatus = null;
         }
         #endregion
 
-                //Update
+            //Update
                 #region Update
         private void selectForwarderUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -699,6 +712,16 @@ namespace AtlantSovt
             forwarderTaxPayerStatusChanged = true;
             SplitLoadTaxPayerStatusForwarderUpdateInfo();
         }
+
+        private void workDocumentForwarderUpdateComboBox_TextChanged(object sender, EventArgs e)
+        {
+            forwarderWorkDocumentChanged = true;
+        }
+
+        private void taxPayerStatusForwarderUpdateComboBox_TextChanged(object sender, EventArgs e)
+        {
+            forwarderTaxPayerStatusChanged = true;
+        }
       
         private void forwarderUpdateWorkDocumentAddButton_Click(object sender, EventArgs e)
         {
@@ -740,6 +763,8 @@ namespace AtlantSovt
         private void updateForwarderButton_Click(object sender, EventArgs e)
         {
             UpdateForwarder();
+            forwarderNameChanged = forwarderDirectorChanged = forwarderPhysicalAddressChanged = forwarderGeographyAddressChanged = forwarderCommentChanged = forwarderWorkDocumentChanged = forwarderTaxPayerStatusChanged = false;
+            
         }
         //Contact
         #region Contact
@@ -904,7 +929,7 @@ namespace AtlantSovt
                 #endregion
 
 
-                //Delete
+            //Delete
                 #region Delete
 
         private void forwarderDeleteButton_Click(object sender, EventArgs e)
@@ -1040,14 +1065,12 @@ namespace AtlantSovt
         private void workDocumentTransporterAddComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             transporterAddWorkDocumentFlag = true;
-            SplitLoadWorkDocumentTransporterAddInfo();
 
         }
 
         private void taxPayerStatusTransporterAddComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             transporterAddTaxPayerStatusFlag = true;
-            SplitLoadTaxPayerStatusTransporterAddInfo();
         }
 
         private void originalTransporterAddCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -1076,6 +1099,8 @@ namespace AtlantSovt
 
         private void transporterAddButton_Click(object sender, EventArgs e)
         {
+            SplitLoadWorkDocumentTransporterAddInfo();
+            SplitLoadTaxPayerStatusTransporterAddInfo();
             AddTransporter();
             nameTransporterAddTextBox.Text = "";
             shortNameTransporterAddTextBox.Text = "";
@@ -1085,6 +1110,8 @@ namespace AtlantSovt
             workDocumentTransporterAddComboBox.Text = "";
             taxPayerStatusTransporterAddComboBox.Text = "";
             originalTransporterAddCheckBox.Checked = true;
+            transporterWorkDocument = null;
+            transporterTaxPayerStatus = null;
 
             commentTransporterAddTextBox.Text = "";
             filtersTransporterAddCheckedListBox.ClearSelected();
@@ -1163,13 +1190,21 @@ namespace AtlantSovt
         {
             transporterWorkDocumentChanged = true;
             SplitLoadWorkDocumentTransporterUpdateInfo();
-
         }
 
         private void taxPayerStatusTransporterUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             transporterTaxPayerStatusChanged = true;
             SplitLoadTaxPayerStatusTransporterUpdateInfo();
+        }
+        private void workDocumentTransporterUpdateComboBox_TextChanged(object sender, EventArgs e)
+        {
+            transporterWorkDocumentChanged = true;
+        }
+
+        private void taxPayerStatusTransporterUpdateComboBox_TextChanged(object sender, EventArgs e)
+        {
+            transporterTaxPayerStatusChanged = true;
         }
 
         private void transporterUpdateWorkDocumentAddButton_Click(object sender, EventArgs e)
@@ -1197,12 +1232,6 @@ namespace AtlantSovt
         {
             transporterDirectorChanged = true;
         }
-
-        private void contractNumberTransporterUpdateTextBox_TextChanged(object sender, EventArgs e)
-        {
-            transporterContractNumberChanged = true;
-        }
-
         private void physicalAddressTransporterUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             transporterPhysicalAddressChanged = true;
@@ -1225,6 +1254,7 @@ namespace AtlantSovt
         private void transporterUpdateButton_Click(object sender, EventArgs e)
         {
             UpdateTransporter();
+            transporterFullNameChanged = transporterDirectorChanged = transporterPhysicalAddressChanged = transporterGeographyAddressChanged = transporterCommentChanged = transporterWorkDocumentChanged = transporterTaxPayerStatusChanged = transporterFiltersChanged = transporterOriginalChanged = transporterFaxChanged = false;
         }
 
         //Contact
@@ -1434,7 +1464,36 @@ namespace AtlantSovt
         }
             #endregion
 
+
         #endregion
+
+        private void transporterShowSearchButton_Click(object sender, EventArgs e)
+        {
+            ShowTransporterSearch();
+
+        }
+
+        private void transporterShowSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (transporterShowSearchTextBox.Text == "")
+            {
+                ShowTransporter();
+            }
+        }
+
+        private void clientShowSearchButton_Click(object sender, EventArgs e)
+        {
+            ShowClientSearch();
+
+        }
+
+        private void clientShowSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (clientShowSearchTextBox.Text == "")
+            {
+                ShowClient();
+            }
+        }
 
 
     }

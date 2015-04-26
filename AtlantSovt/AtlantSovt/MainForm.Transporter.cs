@@ -16,26 +16,30 @@ namespace AtlantSovt
     {
         Transporter transporter, deleteTransporter;
         TransporterContact contact;
-        WorkDocument transporterWorkDocument;
-        TaxPayerStatu transporterTaxPayerStatus;
+        WorkDocument transporterWorkDocument = null;
+        TaxPayerStatu transporterTaxPayerStatus = null;
         Filter filters;
-                        
+
+
         int TransporterClikedId = 0;
         
         bool transporterAddWorkDocumentFlag, transporterAddTaxPayerStatusFlag;
+
         bool transporterFullNameChanged, transporterShortNameChanged, transporterDirectorChanged,
-            transporterContractNumberChanged, transporterFiltersChanged, transporterPhysicalAddressChanged,
+            transporterFiltersChanged, transporterPhysicalAddressChanged,
             transporterGeographyAddressChanged, transporterCommentChanged, transporterWorkDocumentChanged,
-            transporterTaxPayerStatusChanged, transporterOriginalChanged, transporterFaxChanged;
+            transporterTaxPayerStatusChanged, transporterOriginalChanged, transporterFaxChanged, transporterIsWorkDocumentExist, transporterIsTaxPayerStatusExist;
         
         //Show
         #region Show
+
         void ShowTransporter()
         {
             using (var db = new AtlantSovtContext())
             {
                 var query =
                 from t in db.Transporters
+                orderby t.Id
                 select
                 new
                 {
@@ -47,8 +51,9 @@ namespace AtlantSovt
                     GeographyAddress = t.GeographyAddress,
                     TaxPayerStatusId = t.TaxPayerStatu.Status,
                     WorkDocumentId = t.WorkDocument.Status,
-                    Date = t.ContractEndDay
                 };
+
+
 
                 transporterShowDataGridView.DataSource = query.ToList();
                 transporterShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
@@ -59,7 +64,7 @@ namespace AtlantSovt
                 transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
                 transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
                 transporterShowDataGridView.Columns[7].HeaderText = "На основі";
-                transporterShowDataGridView.Columns[8].HeaderText = "Дата завершення договору";
+
 
             } transporterShowDataGridView.Update();
         }
@@ -179,7 +184,6 @@ namespace AtlantSovt
                         GeographyAddress = t.GeographyAddress,
                         TaxPayerStatusId = t.TaxPayerStatu.Status,
                         WorkDocumentId = t.WorkDocument.Status,
-                        Date = t.ContractEndDay
                     };
 
                         transporterShowDataGridView.DataSource = getTransporters.ToList();
@@ -191,7 +195,6 @@ namespace AtlantSovt
                         transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
                         transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
                         transporterShowDataGridView.Columns[7].HeaderText = "На основі";
-                        transporterShowDataGridView.Columns[8].HeaderText = "Дата завершення договору";
 
                     } transporterShowDataGridView.Update();
 
@@ -226,7 +229,6 @@ namespace AtlantSovt
                         GeographyAddress = t.GeographyAddress,
                         TaxPayerStatusId = t.TaxPayerStatu.Status,
                         WorkDocumentId = t.WorkDocument.Status,
-                        Date = t.ContractEndDay
                     };
 
                         transporterShowDataGridView.DataSource = getTransporters.ToList();
@@ -238,7 +240,6 @@ namespace AtlantSovt
                         transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
                         transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
                         transporterShowDataGridView.Columns[7].HeaderText = "На основі";
-                        transporterShowDataGridView.Columns[8].HeaderText = "Дата завершення договору";
 
                     } transporterShowDataGridView.Update();
                 }
@@ -278,7 +279,6 @@ namespace AtlantSovt
                         GeographyAddress = t.GeographyAddress,
                         TaxPayerStatusId = t.TaxPayerStatu.Status,
                         WorkDocumentId = t.WorkDocument.Status,
-                        Date = t.ContractEndDay
                     };
 
                         transporterShowDataGridView.DataSource = getTransporters.ToList();
@@ -290,7 +290,7 @@ namespace AtlantSovt
                         transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
                         transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
                         transporterShowDataGridView.Columns[7].HeaderText = "На основі";
-                        transporterShowDataGridView.Columns[8].HeaderText = "Дата завершення договору";
+
 
                     } transporterShowDataGridView.Update();
                 }
@@ -309,6 +309,42 @@ namespace AtlantSovt
             vehiclesIDs.Clear();
         }
 
+        void ShowTransporterSearch()
+        {
+
+            var text = transporterShowSearchTextBox.Text;
+            using (var db = new AtlantSovtContext())
+            {
+                var query =
+                from t in db.Transporters
+                where t.FullName.Contains(text) || t.ShortName.Contains(text) || t.Director.Contains(text) || t.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || t.TransporterContacts.Any(c => c.Email.Contains(text)) || t.TransporterContacts.Any(c => c.ContactPerson.Contains(text))
+                select
+                new
+                {
+                    Id = t.Id,
+                    FullName = t.FullName,
+                    ShortName = t.ShortName,
+                    Director = t.Director,
+                    PhysicalAddress = t.PhysicalAddress,
+                    GeographyAddress = t.GeographyAddress,
+                    TaxPayerStatusId = t.TaxPayerStatu.Status,
+                    WorkDocumentId = t.WorkDocument.Status,
+                };
+
+                transporterShowDataGridView.DataSource = query.ToList();
+                transporterShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
+                transporterShowDataGridView.Columns[1].HeaderText = "Повна Назва";
+                transporterShowDataGridView.Columns[2].HeaderText = "Скорочена Назва";
+                transporterShowDataGridView.Columns[3].HeaderText = "П.І.Б. Директора";
+                transporterShowDataGridView.Columns[4].HeaderText = "Фізична адреса";
+                transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
+                transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
+                transporterShowDataGridView.Columns[7].HeaderText = "На основі";
+
+            } transporterShowDataGridView.Update();
+
+        }
+
         #endregion
 
         //Add
@@ -317,15 +353,13 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                if (nameTransporterAddTextBox.Text != "" && directorTransporterAddTextBox.Text != "" && physicalAddressTransporterAddTextBox.Text != "" && geographyAddressTransporterAddTextBox.Text != "" && transporterAddWorkDocumentFlag && transporterAddTaxPayerStatusFlag)
+                if (nameTransporterAddTextBox.Text != "" || directorTransporterAddTextBox.Text != "" )
                 {
                     var new_FullName = nameTransporterAddTextBox.Text;
                     var new_ShortName = shortNameTransporterAddTextBox.Text;
                     var new_Director = directorTransporterAddTextBox.Text;
                     var new_PhysicalAddress = physicalAddressTransporterAddTextBox.Text;
                     var new_GeographyAddress = geographyAddressTransporterAddTextBox.Text;
-                    var new_WorkDocumentId = transporterWorkDocument.Id;
-                    var new_TaxPayerStatusId = transporterTaxPayerStatus.Id;
                     var new_ContractType = originalTransporterAddCheckBox.Checked;
                     var new_Comment = commentTransporterAddTextBox.Text;
 
@@ -336,19 +370,89 @@ namespace AtlantSovt
                     var new_Zborny = filtersTransporterAddCheckedListBox.GetItemChecked(4);
                     var new_AD = filtersTransporterAddCheckedListBox.GetItemChecked(5);
 
+                    long new_WorkDocumentId = 0;
+                    long new_TaxPayerStatusId = 0;
 
-                    var New_Transporter = new Transporter
+                    if (transporterWorkDocument != null)
                     {
-                        FullName = new_FullName,
-                        ShortName = new_ShortName,
-                        Director = new_Director,
-                        PhysicalAddress = new_PhysicalAddress,
-                        GeographyAddress = new_GeographyAddress,
-                        WorkDocumentId = new_WorkDocumentId,
-                        TaxPayerStatusId = new_TaxPayerStatusId,
-                        ContractType = new_ContractType,                    
-                        Comment = new_Comment,
-                    };
+                        transporterIsWorkDocumentExist = true;
+                        new_WorkDocumentId = transporterWorkDocument.Id;
+                    }
+                    else
+                    {
+                        transporterIsWorkDocumentExist = false;
+                    }
+                    if (transporterTaxPayerStatus != null)
+                    {
+                        transporterIsTaxPayerStatusExist = true;
+                        new_TaxPayerStatusId = transporterTaxPayerStatus.Id;
+                    }
+                    else
+                    {
+                        transporterIsTaxPayerStatusExist = false;
+                    }
+
+                    Transporter New_Transporter = new Transporter();
+
+                    if (!transporterIsWorkDocumentExist && !transporterIsTaxPayerStatusExist)
+                    {
+                        New_Transporter = new Transporter
+                        {
+                            FullName = new_FullName,
+                            ShortName = new_ShortName,
+                            Director = new_Director,
+                            PhysicalAddress = new_PhysicalAddress,
+                            GeographyAddress = new_GeographyAddress,
+                            ContractType = new_ContractType,
+                            Comment = new_Comment,
+                        };
+                    }
+
+                    else if (transporterIsWorkDocumentExist && transporterIsTaxPayerStatusExist)
+                    {
+                        New_Transporter = new Transporter
+                        {
+                            FullName = new_FullName,
+                            ShortName = new_ShortName,
+                            Director = new_Director,
+                            PhysicalAddress = new_PhysicalAddress,
+                            GeographyAddress = new_GeographyAddress,
+                            WorkDocumentId = new_WorkDocumentId,
+                            TaxPayerStatusId = new_TaxPayerStatusId,
+                            ContractType = new_ContractType,
+                            Comment = new_Comment,
+                        };
+                    }
+
+                    else if (transporterIsWorkDocumentExist && !transporterIsTaxPayerStatusExist)
+                    {
+                        New_Transporter = new Transporter
+                        {
+                            FullName = new_FullName,
+                            ShortName = new_ShortName,
+                            Director = new_Director,
+                            PhysicalAddress = new_PhysicalAddress,
+                            GeographyAddress = new_GeographyAddress,
+                            WorkDocumentId = new_WorkDocumentId,
+                            ContractType = new_ContractType,
+                            Comment = new_Comment,
+                        };
+                    }
+
+                    else if (!transporterIsWorkDocumentExist && transporterIsTaxPayerStatusExist)
+                    {
+                        New_Transporter = new Transporter
+                        {
+                            FullName = new_FullName,
+                            ShortName = new_ShortName,
+                            Director = new_Director,
+                            PhysicalAddress = new_PhysicalAddress,
+                            GeographyAddress = new_GeographyAddress,
+                            TaxPayerStatusId = new_TaxPayerStatusId,
+                            ContractType = new_ContractType,
+                            Comment = new_Comment,
+                        };
+                    }
 
                     var New_Filters = new Filter
                     {
@@ -394,10 +498,9 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Обов'язкові поля не заповнені");
+                    MessageBox.Show("Одне з обов'язкових полів не заповнено");
                 }
             }
-
         }
 
         void LoadTaxPayerStatusTransporterAddInfoComboBox()
@@ -430,18 +533,26 @@ namespace AtlantSovt
 
         void SplitLoadTaxPayerStatusTransporterAddInfo()
         {
-            using (var db = new AtlantSovtContext())
+            if (taxPayerStatusTransporterAddComboBox.Text != "")
             {
-                string comboboxText = taxPayerStatusTransporterAddComboBox.SelectedItem.ToString();
-                string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedStatus[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                transporterTaxPayerStatus = db.TaxPayerStatus.Find(id);
+                using (var db = new AtlantSovtContext())
+                {
+                    string comboboxText = taxPayerStatusTransporterAddComboBox.SelectedItem.ToString();
+                    string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedStatus[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    transporterTaxPayerStatus = db.TaxPayerStatus.Find(id);
+                }
+            }
+            else 
+            {
+                transporterTaxPayerStatus = null;
             }
         }
 
         void SplitLoadWorkDocumentTransporterAddInfo()
         {
+            if (workDocumentTransporterAddComboBox.Text != "")
             using (var db = new AtlantSovtContext())
             {
                 string comboboxText = workDocumentTransporterAddComboBox.SelectedItem.ToString();
@@ -449,6 +560,10 @@ namespace AtlantSovt
                 string comboBoxSelectedId = selectedStatus[1];
                 long id = Convert.ToInt64(comboBoxSelectedId);
                 transporterWorkDocument = db.WorkDocuments.Find(id);
+            }
+            else
+            {
+                transporterWorkDocument = null;
             }
         }
         #endregion
@@ -490,8 +605,24 @@ namespace AtlantSovt
                     physicalAddressTransporterUpdateTextBox.Text = transporter.PhysicalAddress.ToString();
                     geographyAddressTransporterUpdateTextBox.Text = transporter.GeographyAddress.ToString();
                     commentTransporterUpdateTextBox.Text = transporter.Comment.ToString();
-                    workDocumentTransporterUpdateComboBox.SelectedIndex = Convert.ToInt32(transporter.WorkDocumentId - 1);
-                    taxPayerStatusTransporterUpdateComboBox.SelectedIndex = Convert.ToInt32(transporter.TaxPayerStatusId - 1);
+
+                    if (transporter.WorkDocument != null) 
+                    {
+                        workDocumentTransporterUpdateComboBox.SelectedIndex = Convert.ToInt32(transporter.WorkDocumentId - 1);
+                    }
+                    else 
+                    {
+                        workDocumentTransporterUpdateComboBox.Text = "";
+                    }
+                    if (transporter.TaxPayerStatu != null)
+                    {
+                        taxPayerStatusTransporterUpdateComboBox.SelectedIndex = Convert.ToInt32(transporter.TaxPayerStatusId - 1);
+                    }
+                    else
+                    {
+                        taxPayerStatusTransporterUpdateComboBox.Text = "";
+                    }
+
                     originalTransporterUpdateCheckBox.Checked = transporter.ContractType.Value;
                     faxTransporterUpdateCheckBox.Checked = !transporter.ContractType.Value;
 
@@ -503,7 +634,7 @@ namespace AtlantSovt
                     filtersTransporterUpdateCheckedListBox.SetItemChecked(5, Convert.ToBoolean(transporter.Filter.AD.Value));
                     filtersTransporterUpdateCheckedListBox.Update();
                 }
-                transporterFullNameChanged = transporterDirectorChanged = transporterContractNumberChanged = transporterPhysicalAddressChanged = transporterGeographyAddressChanged = transporterCommentChanged = transporterWorkDocumentChanged = transporterTaxPayerStatusChanged = transporterFiltersChanged = transporterOriginalChanged = transporterFaxChanged = false;
+                transporterFullNameChanged = transporterDirectorChanged = transporterPhysicalAddressChanged = transporterGeographyAddressChanged = transporterCommentChanged = transporterWorkDocumentChanged = transporterTaxPayerStatusChanged = transporterFiltersChanged = transporterOriginalChanged = transporterFaxChanged = false;
             }
         }
 
@@ -578,7 +709,7 @@ namespace AtlantSovt
             using (var db = new AtlantSovtContext())
             {
                 //якщо хоча б один з флагів = true
-                if (transporterFullNameChanged || transporterDirectorChanged || transporterContractNumberChanged || transporterPhysicalAddressChanged || transporterGeographyAddressChanged || transporterCommentChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterOriginalChanged || transporterFaxChanged || transporterFiltersChanged)
+                if (transporterFullNameChanged || transporterDirectorChanged || transporterPhysicalAddressChanged || transporterGeographyAddressChanged || transporterCommentChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterOriginalChanged || transporterFaxChanged || transporterFiltersChanged)
                 {
                     if (transporterFullNameChanged)
                     {
@@ -606,11 +737,29 @@ namespace AtlantSovt
                     }
                     if (transporterWorkDocumentChanged)
                     {
-                        transporter.WorkDocumentId = transporterWorkDocument.Id;
+                        if (workDocumentTransporterUpdateComboBox.Text != "")
+                        {
+                            transporter.WorkDocument = null;
+                            transporter.WorkDocumentId = transporterWorkDocument.Id;
+                        }
+                        else 
+                        {
+                            transporter.WorkDocumentId = null;
+                            transporter.WorkDocument = null;
+                        }
                     }
                     if (transporterTaxPayerStatusChanged)
                     {
-                        transporter.TaxPayerStatusId = transporterTaxPayerStatus.Id;
+                        if (taxPayerStatusTransporterUpdateComboBox.Text != "")
+                        {
+                            transporter.TaxPayerStatu = null;
+                            transporter.TaxPayerStatusId = transporterTaxPayerStatus.Id;
+                        }
+                        else 
+                        {                           
+                            transporter.TaxPayerStatusId = null;
+                            transporter.TaxPayerStatu = null;
+                        }
                     }
                     if (transporterFiltersChanged)
                     {
@@ -632,6 +781,7 @@ namespace AtlantSovt
                     }
                     db.Entry(transporter).State = EntityState.Modified;
                     db.SaveChanges();
+                    
                     MessageBox.Show("Успішно змінено");
                 }
                 else
