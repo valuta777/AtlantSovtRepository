@@ -84,6 +84,7 @@ namespace AtlantSovt
         private void MainForm_Load(object sender, EventArgs e)
         {
             Connecting();
+            this.WindowState = FormWindowState.Maximized;
         }
         #endregion
 
@@ -134,6 +135,11 @@ namespace AtlantSovt
                 {
                     dataControl.SelectedIndex = 12;
                 }
+
+                private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 13;
+                }
                 #endregion
 
         //Client
@@ -152,6 +158,21 @@ namespace AtlantSovt
         private void clientDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowClientInfo();
+        }
+
+
+        private void clientShowSearchButton_Click(object sender, EventArgs e)
+        {
+            ShowClientSearch();
+
+        }
+
+        private void clientShowSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (clientShowSearchTextBox.Text == "")
+            {
+                ShowClient();
+            }
         }
                 #endregion
 
@@ -1024,6 +1045,20 @@ namespace AtlantSovt
 
                 transporterShowFiltrationForm.Show();
             }
+
+            private void transporterShowSearchButton_Click(object sender, EventArgs e)
+            {
+                ShowTransporterSearch();
+
+            }
+
+            private void transporterShowSearchTextBox_TextChanged(object sender, EventArgs e)
+            {
+                if (transporterShowSearchTextBox.Text == "")
+                {
+                    ShowTransporter();
+                }
+            }
             #endregion
 
             //Add
@@ -1485,36 +1520,6 @@ namespace AtlantSovt
         }
             #endregion
 
-
         #endregion
-
-        private void transporterShowSearchButton_Click(object sender, EventArgs e)
-        {
-            ShowTransporterSearch();
-
-        }
-
-        private void transporterShowSearchTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (transporterShowSearchTextBox.Text == "")
-            {
-                ShowTransporter();
-            }
-        }
-
-        private void clientShowSearchButton_Click(object sender, EventArgs e)
-        {
-            ShowClientSearch();
-
-        }
-
-        private void clientShowSearchTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (clientShowSearchTextBox.Text == "")
-            {
-                ShowClient();
-            }
-        }
-
     }
 }
