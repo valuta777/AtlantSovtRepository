@@ -89,6 +89,9 @@
     <Compile Include="ClientBankDetailsAddForm.Designer.cs">
       <DependentUpon>ClientBankDetailsAddForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForm.Documentation.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransporterBankDetailsUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1521,5 +1521,121 @@ namespace AtlantSovt
             #endregion
 
         #endregion
+
+
+        //Documentation
+        #region Documentation
+
+        private void firstPersonActivityComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            firstPersonDiapasonComboBox.Text = "";
+            firstPersonNameComboBox.Text = "";
+            firstPersonNameComboBox.Enabled = false;
+            firstPersonDiapasonComboBox.Enabled = true;
+            if(firstPersonActivityComboBox.SelectedIndex == 2)
+            {
+                firstPersonDiapasonComboBox.Enabled = false;
+                firstPersonNameComboBox.Enabled = true;
+            }
+            LoadSecondPersonActivityComboBox();
+        }
+
+        private void firstPersonActivityComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            firstPersonActivityComboBox.DroppedDown = true;
+        }
+
+        private void firstPersonDiapasonComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            switch (firstPersonActivityComboBox.SelectedIndex)
+            {
+                case 0:
+                    LoadClientFirstPersonDiapasonCombobox();
+                    break;
+                case 1:
+                    LoadTransporterFirstPersonDiapasonCombobox();
+                    break;
+            }
+        }
+
+        private void firstPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            switch (firstPersonActivityComboBox.SelectedIndex)
+            {
+                case 0:
+                    firstPersonNameComboBox.Items.Clear();
+                    LoadClientFirstPersonNameComboBox();
+                    break;
+                case 1:
+                    firstPersonNameComboBox.Items.Clear();
+                    LoadTransporterFirstPersonNameComboBox();
+                    break;
+                case 2:
+                    firstPersonNameComboBox.Items.Clear();
+                    LoadForwarderFirstPersonNameComboBox();
+                    break;
+            }
+            firstPersonNameComboBox.DroppedDown = true;
+            secondPersonActivityComboBox.Enabled = true;
+        }
+
+
+        private void secondPersonActivityComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            secondPersonDiapasonComboBox.Text = "";
+            secondPersonNameComboBox.Text = "";
+            secondPersonNameComboBox.Enabled = false;
+            secondPersonDiapasonComboBox.Enabled = true;
+            if (secondPersonActivityComboBox.SelectedIndex == 2)
+            {
+                secondPersonDiapasonComboBox.Enabled = false;
+                secondPersonNameComboBox.Enabled = true;
+
+            }
+        }
+
+        private void secondPersonActivityComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            secondPersonActivityComboBox.DroppedDown = true;
+        }
+
+        private void secondPersonDiapasonComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            switch (secondPersonActivityComboBox.SelectedIndex)
+            {
+                case 0:
+                    LoadClientSecondPersonDiapasonCombobox();
+                    break;
+                case 1:
+                    LoadTransporterSecondPersonDiapasonCombobox();
+                    break;
+            }
+        }
+
+        private void secondPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            switch (secondPersonActivityComboBox.SelectedIndex)
+            {
+                case 0:
+                    secondPersonNameComboBox.Items.Clear();
+                    LoadClientSecondPersonNameComboBox();
+                    break;
+                case 1:
+                    secondPersonNameComboBox.Items.Clear();
+                    LoadTransporterSecondPersonNameComboBox();
+                    break;
+                case 2:
+                    secondPersonNameComboBox.Items.Clear();
+                    LoadForwarderSecondPersonNameComboBox();
+                    break;
+            }
+            secondPersonNameComboBox.DroppedDown = true;
+        }
+        #endregion
+
+
+
+
+
     }
 }

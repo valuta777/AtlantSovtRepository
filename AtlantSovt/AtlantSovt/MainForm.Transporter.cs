@@ -643,17 +643,24 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string text = selectTransporterDiapasoneUpdateComboBox.SelectedItem.ToString();
-                string[] diapasone = text.Split(new char[] { ' ' });
-                int diapasoneFrom = Convert.ToInt32(diapasone[0]);
-                int diapasoneTo = Convert.ToInt32(diapasone[2]);
-                var query = from c in db.Transporters
-                            orderby c.Id
-                            where c.Id >= diapasoneFrom && c.Id <= diapasoneTo
-                            select c;
-                foreach (var item in query)
+                if (selectTransporterDiapasoneUpdateComboBox.Text == "")
                 {
-                    selectTransporterUpdateComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
+                    MessageBox.Show("Ви не вибрали діапазон");
+                }
+                else
+                {
+                    string text = selectTransporterDiapasoneUpdateComboBox.SelectedItem.ToString();
+                    string[] diapasone = text.Split(new char[] { ' ' });
+                    int diapasoneFrom = Convert.ToInt32(diapasone[0]);
+                    int diapasoneTo = Convert.ToInt32(diapasone[2]);
+                    var query = from c in db.Transporters
+                                orderby c.Id
+                                where c.Id >= diapasoneFrom && c.Id <= diapasoneTo
+                                select c;
+                    foreach (var item in query)
+                    {
+                        selectTransporterUpdateComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
+                    }
                 }
             }
         }
@@ -897,17 +904,24 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string text = deleteTransporterSelectDiapasoneComboBox.SelectedItem.ToString();
-                string[] diapasone = text.Split(new char[] { ' ' });
-                int diapasoneFrom = Convert.ToInt32(diapasone[0]);
-                int diapasoneTo = Convert.ToInt32(diapasone[2]);
-                var query = from c in db.Transporters
-                            orderby c.Id
-                            where c.Id >= diapasoneFrom && c.Id <= diapasoneTo
-                            select c;
-                foreach (var item in query)
+                if (deleteTransporterSelectDiapasoneComboBox.Text == "")
                 {
-                    transporterDeleteComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
+                    MessageBox.Show("Ви не вибрали діапазон");
+                }
+                else
+                {
+                    string text = deleteTransporterSelectDiapasoneComboBox.SelectedItem.ToString();
+                    string[] diapasone = text.Split(new char[] { ' ' });
+                    int diapasoneFrom = Convert.ToInt32(diapasone[0]);
+                    int diapasoneTo = Convert.ToInt32(diapasone[2]);
+                    var query = from c in db.Transporters
+                                orderby c.Id
+                                where c.Id >= diapasoneFrom && c.Id <= diapasoneTo
+                                select c;
+                    foreach (var item in query)
+                    {
+                        transporterDeleteComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
+                    }
                 }
             }
         }

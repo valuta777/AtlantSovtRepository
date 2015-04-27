@@ -416,17 +416,24 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string text = selectClientDiapasoneUpdateComboBox.SelectedItem.ToString();
-                string[] diapasone = text.Split(new char[] {' '});
-                int diapasoneFrom = Convert.ToInt32(diapasone[0]);
-                int diapasoneTo = Convert.ToInt32(diapasone[2]);
-                var query = from c in db.Clients
-                            orderby c.Id
-                            where c.Id >= diapasoneFrom && c.Id <= diapasoneTo
-                            select c;
-                foreach (var item in query)
+                if (selectClientDiapasoneUpdateComboBox.Text == "")
                 {
-                    selectClientUpdateComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                    MessageBox.Show("Ви не вибрали діапазон");
+                }
+                else
+                {
+                    string text = selectClientDiapasoneUpdateComboBox.SelectedItem.ToString();
+                    string[] diapasone = text.Split(new char[] { ' ' });
+                    int diapasoneFrom = Convert.ToInt32(diapasone[0]);
+                    int diapasoneTo = Convert.ToInt32(diapasone[2]);
+                    var query = from c in db.Clients
+                                orderby c.Id
+                                where c.Id >= diapasoneFrom && c.Id <= diapasoneTo
+                                select c;
+                    foreach (var item in query)
+                    {
+                        selectClientUpdateComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                    }
                 }
             }
         }
@@ -669,19 +676,26 @@ namespace AtlantSovt
 
         void LoadClientDeleteInfoComboBox()
         {
-            string text = deleteClientSelectDiapasoneComboBox.SelectedItem.ToString();
-            string[] diapasone = text.Split(new char[] { ' ' });
-            int diapasoneFrom = Convert.ToInt32(diapasone[0]);
-            int diapasoneTo = Convert.ToInt32(diapasone[2]);
-            using (var db = new AtlantSovtContext())
+            if (deleteClientSelectDiapasoneComboBox.Text == "")
             {
-                var query = from c in db.Clients
-                            orderby c.Id
-                            where c.Id >= diapasoneFrom && c.Id <= diapasoneTo
-                            select c;
-                foreach (var item in query)
+                MessageBox.Show("Ви не вибрали діапазон");
+            }
+            else
+            {
+                string text = deleteClientSelectDiapasoneComboBox.SelectedItem.ToString();
+                string[] diapasone = text.Split(new char[] { ' ' });
+                int diapasoneFrom = Convert.ToInt32(diapasone[0]);
+                int diapasoneTo = Convert.ToInt32(diapasone[2]);
+                using (var db = new AtlantSovtContext())
                 {
-                    deleteClientComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                    var query = from c in db.Clients
+                                orderby c.Id
+                                where c.Id >= diapasoneFrom && c.Id <= diapasoneTo
+                                select c;
+                    foreach (var item in query)
+                    {
+                        deleteClientComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                    }
                 }
             }
         }
