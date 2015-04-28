@@ -44,11 +44,13 @@ namespace AtlantSovt
                             select vehicle.Type;
                 foreach (var item in query)
                 {
-                    transporterShowFiltersSelectVehicleCheckedListBox.Items.Add(item);
+                    if (item != null)
+                    {
+                        transporterShowFiltersSelectVehicleCheckedListBox.Items.Add(item);
+                    }
                 }
             }
         }
-
         public List<long> GetCountries()
         {
             using(var db = new AtlantSovtContext())
@@ -65,7 +67,6 @@ namespace AtlantSovt
                 else return null;
             }
         }
-
         public List<long> GetVehicle()
         {
             using(var db = new AtlantSovtContext())
@@ -81,14 +82,52 @@ namespace AtlantSovt
                 }
                 else return null;
             }
+        } 
+        public List<bool?> GetFilters()
+        {
+            List<bool?> filtersList = new List<bool?>() {null,null,null,null,null,null};
+            bool atLeastOne = false;
+            if (transporterShowFiltersSelectIfForwarderCheckBox.CheckState != CheckState.Indeterminate)
+            {
+                filtersList[0] = transporterShowFiltersSelectIfForwarderCheckBox.Checked;
+                atLeastOne = true;
+            }
+            if (transporterShowFiltersSelectTURCheckBox.CheckState != CheckState.Indeterminate)
+            {
+                filtersList[1] = transporterShowFiltersSelectTURCheckBox.Checked;
+                atLeastOne = true;
+            }
+            if (transporterShowFiltersSelectCMRCheckBox.CheckState != CheckState.Indeterminate)
+            {
+                filtersList[2] = transporterShowFiltersSelectCMRCheckBox.Checked;
+                atLeastOne = true;
+            }
+            if (transporterShowFiltersSelectEKMTCheckBox.CheckState != CheckState.Indeterminate)
+            {
+                filtersList[3] = transporterShowFiltersSelectEKMTCheckBox.Checked;
+                atLeastOne = true;
+            }
+            if (transporterShowFiltersSelectZbornyCheckBox.CheckState != CheckState.Indeterminate)
+            {
+                filtersList[4] = transporterShowFiltersSelectZbornyCheckBox.Checked;
+                atLeastOne = true;
+            }
+            if (transporterShowFiltersSelectADCheckBox.CheckState != CheckState.Indeterminate)
+            {
+                filtersList[5] = transporterShowFiltersSelectADCheckBox.Checked;
+                atLeastOne = true;
+            }
+            if (atLeastOne)
+            {
+                return filtersList;
+            }
+            else return null;
         }
  
         private void transporterShowFilterButton_Click(object sender, EventArgs e)
-        {
-          
+        {          
             mainForm.ShowTransporterFilter();
             this.Dispose();
         }
-        
     }
 }

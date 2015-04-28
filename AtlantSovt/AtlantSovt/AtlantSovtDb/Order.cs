@@ -9,15 +9,16 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("Order")]
     public partial class Order
     {
+        public Order()
+        {
+            ForwarderOrders = new HashSet<ForwarderOrder>();
+        }
+
         public long Id { get; set; }
 
         public bool? YorU { get; set; }
 
         public long? ClientId { get; set; }
-
-        public long? Forwarder1Id { get; set; }
-
-        public long? Forwarder2Id { get; set; }
 
         public long? TransporterId { get; set; }
 
@@ -70,9 +71,7 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual FineForDelay FineForDelay { get; set; }
 
-        public virtual Forwarder Forwarder { get; set; }
-
-        public virtual Forwarder Forwarder1 { get; set; }
+        public virtual ICollection<ForwarderOrder> ForwarderOrders { get; set; }
 
         public virtual OrderDeny OrderDeny { get; set; }
 

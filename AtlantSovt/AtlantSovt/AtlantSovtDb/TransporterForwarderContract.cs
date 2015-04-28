@@ -9,14 +9,10 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("TransporterForwarderContract")]
     public partial class TransporterForwarderContract
     {
-        [Key]
-        [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public long Id { get; set; }
+
         public long TransporterId { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long ForwarderId { get; set; }
 
         [StringLength(15)]
