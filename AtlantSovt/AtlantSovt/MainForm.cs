@@ -84,6 +84,7 @@ namespace AtlantSovt
         private void MainForm_Load(object sender, EventArgs e)
         {
             Connecting();
+            this.WindowState = FormWindowState.Maximized;
         }
         #endregion
 
@@ -134,6 +135,11 @@ namespace AtlantSovt
                 {
                     dataControl.SelectedIndex = 12;
                 }
+
+                private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 13;
+                }
                 #endregion
 
         //Client
@@ -152,6 +158,21 @@ namespace AtlantSovt
         private void clientDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowClientInfo();
+        }
+
+
+        private void clientShowSearchButton_Click(object sender, EventArgs e)
+        {
+            ShowClientSearch();
+
+        }
+
+        private void clientShowSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (clientShowSearchTextBox.Text == "")
+            {
+                ShowClient();
+            }
         }
                 #endregion
 
@@ -271,6 +292,11 @@ namespace AtlantSovt
             selectClientUpdateComboBox.DroppedDown = true;
         }
 
+        private void selectClientDiapasonUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoadDiasoneClientUpdateInfoCombobox();
+        }
+
         private void workDocumentClientUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             workDocumentClientUpdateComboBox.Items.Clear();
@@ -363,6 +389,7 @@ namespace AtlantSovt
         {
             clientDirectorChanged = true;
         }
+
         private void physicalAddressClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             clientPhysicalAddressChanged = true;
@@ -548,6 +575,7 @@ namespace AtlantSovt
 
                 //Delete
                 #region Delete
+
         private void deleteClientButton_Click(object sender, EventArgs e)
         {
             deleteClientComboBox.Text = "";
@@ -559,6 +587,11 @@ namespace AtlantSovt
         private void deleteClientComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitDeleteClient();
+        }
+
+        private void deleteClientSelectDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoadDiasoneClientDeleteInfoCombobox();
         }
 
         private void deleteClientComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -577,7 +610,6 @@ namespace AtlantSovt
             }
         }
 
-           
         #endregion        
 
         #endregion
@@ -1013,6 +1045,20 @@ namespace AtlantSovt
 
                 transporterShowFiltrationForm.Show();
             }
+
+            private void transporterShowSearchButton_Click(object sender, EventArgs e)
+            {
+                ShowTransporterSearch();
+
+            }
+
+            private void transporterShowSearchTextBox_TextChanged(object sender, EventArgs e)
+            {
+                if (transporterShowSearchTextBox.Text == "")
+                {
+                    ShowTransporter();
+                }
+            }
             #endregion
 
             //Add
@@ -1140,6 +1186,11 @@ namespace AtlantSovt
             selectTransporterUpdateComboBox.DroppedDown = true;
         }
 
+        private void selectTransporterDiapasoneUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoadDiasoneTransporterUpdateInfoCombobox();
+        }
+
         private void workDocumentTransporterUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             workDocumentTransporterUpdateComboBox.Items.Clear();
@@ -1197,6 +1248,7 @@ namespace AtlantSovt
             transporterTaxPayerStatusChanged = true;
             SplitLoadTaxPayerStatusTransporterUpdateInfo();
         }
+
         private void workDocumentTransporterUpdateComboBox_TextChanged(object sender, EventArgs e)
         {
             transporterWorkDocumentChanged = true;
@@ -1447,6 +1499,11 @@ namespace AtlantSovt
             SplitDeleteTransporter();
         }
 
+        private void deleteTransporterSelectDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoadDiapasoneTransporterDeleteInfoCombobox();
+        }
+
         private void transporterDeleteComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             transporterDeleteComboBox.Items.Clear();
@@ -1464,38 +1521,89 @@ namespace AtlantSovt
         }
             #endregion
 
-
         #endregion
 
-        private void transporterShowSearchButton_Click(object sender, EventArgs e)
-        {
-            ShowTransporterSearch();
 
-        }
+        //Documentation
+        #region Documentation
 
-        private void transporterShowSearchTextBox_TextChanged(object sender, EventArgs e)
+        private void firstPersonActivityComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (transporterShowSearchTextBox.Text == "")
+            firstPersonDiapasonComboBox.Text = "";
+            firstPersonNameComboBox.Text = "";
+            firstPersonNameComboBox.Enabled = false;
+            firstPersonDiapasonComboBox.Enabled = true;
+ 
+            switch(firstPersonActivityComboBox.SelectedIndex)
             {
-                ShowTransporter();
+                case 0:
+                    personNameLabel.Text = "";
+                    personNameLabel.Text = "Виберіть клієнта";
+                    break;
+                case 1:
+                    personNameLabel.Text = "";
+                    personNameLabel.Text = "Виберіть перевізника";
+                    break;
+                case 2:
+                    firstPersonDiapasonComboBox.Enabled = false;
+                    firstPersonNameComboBox.Enabled = true;
+                    personNameLabel.Text = "";
+                    personNameLabel.Text = "Виберіть експедитора";
+                    break;
             }
         }
 
-        private void clientShowSearchButton_Click(object sender, EventArgs e)
+        private void firstPersonActivityComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            ShowClientSearch();
-
+            firstPersonActivityComboBox.DroppedDown = true;
         }
 
-        private void clientShowSearchTextBox_TextChanged(object sender, EventArgs e)
+        private void firstPersonDiapasonComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            if (clientShowSearchTextBox.Text == "")
+            switch (firstPersonActivityComboBox.SelectedIndex)
             {
-                ShowClient();
+                case 0:
+                    LoadClientFirstPersonDiapasonCombobox();
+                    break;
+                case 1:
+                    LoadTransporterFirstPersonDiapasonCombobox();
+                    break;
             }
         }
 
-       
+        private void firstPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            switch (firstPersonActivityComboBox.SelectedIndex)
+            {
+                case 0:
+                    firstPersonNameComboBox.Items.Clear();
+                    LoadClientFirstPersonNameComboBox();
+                    break;
+                case 1:
+                    firstPersonNameComboBox.Items.Clear();
+                    LoadTransporterFirstPersonNameComboBox();
+                    break;
+                case 2:
+                    firstPersonNameComboBox.Items.Clear();
+                    LoadForwarderFirstPersonNameComboBox();
+                    break;
+            }
+            firstPersonNameComboBox.DroppedDown = true;
+            secondPersonNameComboBox.Enabled = true;
+            }
+
+        private void secondPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            secondPersonNameComboBox.Items.Clear();
+            LoadForwarderSecondPersonNameComboBox();
+            secondPersonNameComboBox.DroppedDown = true;
+        }
+        #endregion
+
+
+
+
+
 
     }
 }

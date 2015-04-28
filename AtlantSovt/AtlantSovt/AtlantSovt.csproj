@@ -67,6 +67,7 @@
     <Compile Include="AtlantSovtDb\Forwarder.cs" />
     <Compile Include="AtlantSovtDb\ForwarderBankDetail.cs" />
     <Compile Include="AtlantSovtDb\ForwarderContact.cs" />
+    <Compile Include="AtlantSovtDb\ForwarderOrder.cs" />
     <Compile Include="AtlantSovtDb\Order.cs" />
     <Compile Include="AtlantSovtDb\OrderDeny.cs" />
     <Compile Include="AtlantSovtDb\Payment.cs" />
@@ -87,6 +88,9 @@
     </Compile>
     <Compile Include="ClientBankDetailsAddForm.Designer.cs">
       <DependentUpon>ClientBankDetailsAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.Documentation.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="TransporterBankDetailsUpdateForm.cs">
       <SubType>Form</SubType>

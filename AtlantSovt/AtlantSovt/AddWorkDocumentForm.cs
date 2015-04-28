@@ -47,6 +47,7 @@ namespace AtlantSovt
         private void addWorkDocumentButton_Click(object sender, EventArgs e)
         {
             AddWorkDocument();
+            this.Dispose();
         }
     }
 }
