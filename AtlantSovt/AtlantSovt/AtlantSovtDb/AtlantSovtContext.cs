@@ -8,7 +8,7 @@ namespace AtlantSovt.AtlantSovtDb
     public partial class AtlantSovtContext : DbContext
     {
         public AtlantSovtContext()
-            : base("name=AtlantSovtContext3")
+            : base("name=AtlantSovtContext")
         {
         }
 
@@ -16,6 +16,7 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<ClientBankDetail> ClientBankDetails { get; set; }
         public virtual DbSet<ClientContact> ClientContacts { get; set; }
+        public virtual DbSet<ClientForwarderContract> ClientForwarderContracts { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
         public virtual DbSet<CustomsAddress> CustomsAddresses { get; set; }
         public virtual DbSet<DownloadAddress> DownloadAddresses { get; set; }
@@ -24,6 +25,7 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<Forwarder> Forwarders { get; set; }
         public virtual DbSet<ForwarderBankDetail> ForwarderBankDetails { get; set; }
         public virtual DbSet<ForwarderContact> ForwarderContacts { get; set; }
+        public virtual DbSet<ForwarderOrder> ForwarderOrders { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderDeny> OrderDenies { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
@@ -33,6 +35,7 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<TransporterBankDetail> TransporterBankDetails { get; set; }
         public virtual DbSet<TransporterContact> TransporterContacts { get; set; }
         public virtual DbSet<TransporterCountry> TransporterCountries { get; set; }
+        public virtual DbSet<TransporterForwarderContract> TransporterForwarderContracts { get; set; }
         public virtual DbSet<TransporterVehicle> TransporterVehicles { get; set; }
         public virtual DbSet<UnCustomsAddress> UnCustomsAddresses { get; set; }
         public virtual DbSet<UploadAddress> UploadAddresses { get; set; }
@@ -62,19 +65,19 @@ namespace AtlantSovt.AtlantSovtDb
                 .HasForeignKey(e => e.FineForDelaysId);
 
             modelBuilder.Entity<Forwarder>()
+                .HasMany(e => e.ClientForwarderContracts)
+                .WithRequired(e => e.Forwarder)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Forwarder>()
                 .HasOptional(e => e.ForwarderBankDetail)
                 .WithRequired(e => e.Forwarder)
                 .WillCascadeOnDelete();
 
             modelBuilder.Entity<Forwarder>()
-                .HasMany(e => e.Orders)
-                .WithOptional(e => e.Forwarder)
-                .HasForeignKey(e => e.Forwarder1Id);
-
-            modelBuilder.Entity<Forwarder>()
-                .HasMany(e => e.Orders1)
-                .WithOptional(e => e.Forwarder1)
-                .HasForeignKey(e => e.Forwarder2Id);
+                .HasMany(e => e.TransporterForwarderContracts)
+                .WithRequired(e => e.Forwarder)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Order>()
                 .Property(e => e.Freight)
