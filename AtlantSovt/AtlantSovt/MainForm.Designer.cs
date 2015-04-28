@@ -277,19 +277,15 @@
             this.transporterDeleteComboBox = new System.Windows.Forms.ComboBox();
             this.documentationPage = new System.Windows.Forms.TabPage();
             this.createContactButton = new System.Windows.Forms.Button();
-            this.secondPersonDiapasonComboBox = new System.Windows.Forms.ComboBox();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
             this.secondPersonNameComboBox = new System.Windows.Forms.ComboBox();
             this.label51 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.secondPersonActivityComboBox = new System.Windows.Forms.ComboBox();
             this.firstPersonActivityComboBox = new System.Windows.Forms.ComboBox();
             this.label37 = new System.Windows.Forms.Label();
             this.firstPersonDiapasonComboBox = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
+            this.personNameLabel = new System.Windows.Forms.Label();
             this.firstPersonNameComboBox = new System.Windows.Forms.ComboBox();
             this.labelshow57 = new System.Windows.Forms.Label();
             this.labelshow58 = new System.Windows.Forms.Label();
@@ -3362,19 +3358,15 @@
             // documentationPage
             // 
             this.documentationPage.Controls.Add(this.createContactButton);
-            this.documentationPage.Controls.Add(this.secondPersonDiapasonComboBox);
-            this.documentationPage.Controls.Add(this.label52);
-            this.documentationPage.Controls.Add(this.label53);
             this.documentationPage.Controls.Add(this.secondPersonNameComboBox);
             this.documentationPage.Controls.Add(this.label51);
             this.documentationPage.Controls.Add(this.label39);
             this.documentationPage.Controls.Add(this.label38);
-            this.documentationPage.Controls.Add(this.secondPersonActivityComboBox);
             this.documentationPage.Controls.Add(this.firstPersonActivityComboBox);
             this.documentationPage.Controls.Add(this.label37);
             this.documentationPage.Controls.Add(this.firstPersonDiapasonComboBox);
             this.documentationPage.Controls.Add(this.label28);
-            this.documentationPage.Controls.Add(this.label36);
+            this.documentationPage.Controls.Add(this.personNameLabel);
             this.documentationPage.Controls.Add(this.firstPersonNameComboBox);
             this.documentationPage.Location = new System.Drawing.Point(4, 25);
             this.documentationPage.Name = "documentationPage";
@@ -3395,40 +3387,6 @@
             this.createContactButton.Text = "Створити договір";
             this.createContactButton.UseVisualStyleBackColor = true;
             // 
-            // secondPersonDiapasonComboBox
-            // 
-            this.secondPersonDiapasonComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.secondPersonDiapasonComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.secondPersonDiapasonComboBox.Enabled = false;
-            this.secondPersonDiapasonComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.secondPersonDiapasonComboBox.Location = new System.Drawing.Point(42, 227);
-            this.secondPersonDiapasonComboBox.Name = "secondPersonDiapasonComboBox";
-            this.secondPersonDiapasonComboBox.Size = new System.Drawing.Size(138, 29);
-            this.secondPersonDiapasonComboBox.TabIndex = 88;
-            this.secondPersonDiapasonComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.secondPersonDiapasonComboBox_MouseClick);
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label52.Location = new System.Drawing.Point(40, 203);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(140, 21);
-            this.label52.TabIndex = 87;
-            this.label52.Text = "Виберіть діапазон";
-            // 
-            // label53
-            // 
-            this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label53.Location = new System.Drawing.Point(199, 203);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(164, 21);
-            this.label53.TabIndex = 86;
-            this.label53.Text = "Виберіть перевізника";
-            // 
             // secondPersonNameComboBox
             // 
             this.secondPersonNameComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -3438,9 +3396,9 @@
             this.secondPersonNameComboBox.Enabled = false;
             this.secondPersonNameComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.secondPersonNameComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.secondPersonNameComboBox.Location = new System.Drawing.Point(203, 227);
+            this.secondPersonNameComboBox.Location = new System.Drawing.Point(44, 179);
             this.secondPersonNameComboBox.Name = "secondPersonNameComboBox";
-            this.secondPersonNameComboBox.Size = new System.Drawing.Size(525, 29);
+            this.secondPersonNameComboBox.Size = new System.Drawing.Size(548, 29);
             this.secondPersonNameComboBox.Sorted = true;
             this.secondPersonNameComboBox.TabIndex = 85;
             this.secondPersonNameComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.secondPersonNameComboBox_MouseClick);
@@ -3451,11 +3409,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label51.Location = new System.Drawing.Point(3, 147);
+            this.label51.Location = new System.Drawing.Point(40, 152);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(183, 21);
+            this.label51.Size = new System.Drawing.Size(96, 21);
             this.label51.TabIndex = 84;
-            this.label51.Text = "Виберіть вид діяльності:";
+            this.label51.Text = "Експедитор:";
             // 
             // label39
             // 
@@ -3463,7 +3421,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label39.Location = new System.Drawing.Point(8, 174);
+            this.label39.Location = new System.Drawing.Point(8, 152);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(33, 21);
             this.label39.TabIndex = 83;
@@ -3480,19 +3438,6 @@
             this.label38.Size = new System.Drawing.Size(33, 21);
             this.label38.TabIndex = 82;
             this.label38.Text = "1 - ";
-            // 
-            // secondPersonActivityComboBox
-            // 
-            this.secondPersonActivityComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.secondPersonActivityComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.secondPersonActivityComboBox.Enabled = false;
-            this.secondPersonActivityComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.secondPersonActivityComboBox.Location = new System.Drawing.Point(42, 171);
-            this.secondPersonActivityComboBox.Name = "secondPersonActivityComboBox";
-            this.secondPersonActivityComboBox.Size = new System.Drawing.Size(550, 29);
-            this.secondPersonActivityComboBox.TabIndex = 81;
-            this.secondPersonActivityComboBox.SelectedIndexChanged += new System.EventHandler(this.secondPersonActivityComboBox_SelectedIndexChanged);
-            this.secondPersonActivityComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.secondPersonActivityComboBox_MouseClick);
             // 
             // firstPersonActivityComboBox
             // 
@@ -3544,17 +3489,16 @@
             this.label28.TabIndex = 77;
             this.label28.Text = "Виберіть діапазон";
             // 
-            // label36
+            // personNameLabel
             // 
-            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.personNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label36.Location = new System.Drawing.Point(199, 59);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(164, 21);
-            this.label36.TabIndex = 76;
-            this.label36.Text = "Виберіть перевізника";
+            this.personNameLabel.AutoSize = true;
+            this.personNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.personNameLabel.Location = new System.Drawing.Point(199, 59);
+            this.personNameLabel.Name = "personNameLabel";
+            this.personNameLabel.Size = new System.Drawing.Size(0, 21);
+            this.personNameLabel.TabIndex = 76;
             // 
             // firstPersonNameComboBox
             // 
@@ -3989,18 +3933,14 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ToolStripMenuItem documentationToolStripMenuItem;
         private System.Windows.Forms.TabPage documentationPage;
-        private System.Windows.Forms.ComboBox secondPersonActivityComboBox;
         private System.Windows.Forms.ComboBox firstPersonActivityComboBox;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.ComboBox firstPersonDiapasonComboBox;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label personNameLabel;
         private System.Windows.Forms.ComboBox firstPersonNameComboBox;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.ComboBox secondPersonDiapasonComboBox;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Label label53;
         private System.Windows.Forms.ComboBox secondPersonNameComboBox;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Button createContactButton;

@@ -1532,12 +1532,24 @@ namespace AtlantSovt
             firstPersonNameComboBox.Text = "";
             firstPersonNameComboBox.Enabled = false;
             firstPersonDiapasonComboBox.Enabled = true;
-            if(firstPersonActivityComboBox.SelectedIndex == 2)
+ 
+            switch(firstPersonActivityComboBox.SelectedIndex)
             {
-                firstPersonDiapasonComboBox.Enabled = false;
-                firstPersonNameComboBox.Enabled = true;
+                case 0:
+                    personNameLabel.Text = "";
+                    personNameLabel.Text = "Виберіть клієнта";
+                    break;
+                case 1:
+                    personNameLabel.Text = "";
+                    personNameLabel.Text = "Виберіть перевізника";
+                    break;
+                case 2:
+                    firstPersonDiapasonComboBox.Enabled = false;
+                    firstPersonNameComboBox.Enabled = true;
+                    personNameLabel.Text = "";
+                    personNameLabel.Text = "Виберіть експедитора";
+                    break;
             }
-            LoadSecondPersonActivityComboBox();
         }
 
         private void firstPersonActivityComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -1576,62 +1588,17 @@ namespace AtlantSovt
                     break;
             }
             firstPersonNameComboBox.DroppedDown = true;
-            secondPersonActivityComboBox.Enabled = true;
-        }
-
-
-        private void secondPersonActivityComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            secondPersonDiapasonComboBox.Text = "";
-            secondPersonNameComboBox.Text = "";
-            secondPersonNameComboBox.Enabled = false;
-            secondPersonDiapasonComboBox.Enabled = true;
-            if (secondPersonActivityComboBox.SelectedIndex == 2)
-            {
-                secondPersonDiapasonComboBox.Enabled = false;
-                secondPersonNameComboBox.Enabled = true;
-
-            }
-        }
-
-        private void secondPersonActivityComboBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            secondPersonActivityComboBox.DroppedDown = true;
-        }
-
-        private void secondPersonDiapasonComboBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            switch (secondPersonActivityComboBox.SelectedIndex)
-            {
-                case 0:
-                    LoadClientSecondPersonDiapasonCombobox();
-                    break;
-                case 1:
-                    LoadTransporterSecondPersonDiapasonCombobox();
-                    break;
-            }
+            secondPersonNameComboBox.Enabled = true;
         }
 
         private void secondPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            switch (secondPersonActivityComboBox.SelectedIndex)
-            {
-                case 0:
-                    secondPersonNameComboBox.Items.Clear();
-                    LoadClientSecondPersonNameComboBox();
-                    break;
-                case 1:
-                    secondPersonNameComboBox.Items.Clear();
-                    LoadTransporterSecondPersonNameComboBox();
-                    break;
-                case 2:
-                    secondPersonNameComboBox.Items.Clear();
-                    LoadForwarderSecondPersonNameComboBox();
-                    break;
-            }
+            secondPersonNameComboBox.Items.Clear();
+            LoadForwarderSecondPersonNameComboBox();
             secondPersonNameComboBox.DroppedDown = true;
         }
         #endregion
+
 
 
 
