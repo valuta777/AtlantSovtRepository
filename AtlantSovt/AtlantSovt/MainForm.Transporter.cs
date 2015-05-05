@@ -7108,13 +7108,37 @@ namespace AtlantSovt
                     var new_ContractType = originalTransporterAddCheckBox.Checked;
                     var new_Comment = commentTransporterAddTextBox.Text;
 
-                    var new_IfForwarder = filtersTransporterAddCheckedListBox.GetItemChecked(0);
-                    var new_TUR = filtersTransporterAddCheckedListBox.GetItemChecked(1);
-                    var new_CMR = filtersTransporterAddCheckedListBox.GetItemChecked(2);
-                    var new_EKMT = filtersTransporterAddCheckedListBox.GetItemChecked(3);
-                    var new_Zborny = filtersTransporterAddCheckedListBox.GetItemChecked(4);
-                    var new_AD = filtersTransporterAddCheckedListBox.GetItemChecked(5);
+                    bool? new_IfForwarder = null;
+                    bool? new_TUR = null;
+                    bool? new_CMR = null;
+                    bool? new_EKMT = null;
+                    bool? new_Zborny = null;
+                    bool? new_AD = null;
 
+                    if (transporterAddFiltersSelectIfForwarderCheckBox.CheckState != CheckState.Indeterminate)
+                    {
+                        new_IfForwarder = transporterAddFiltersSelectIfForwarderCheckBox.Checked;
+                    }
+                    if (transporterAddFiltersSelectTURCheckBox.CheckState != CheckState.Indeterminate)
+                    {
+                        new_TUR = transporterAddFiltersSelectTURCheckBox.Checked;
+                    }
+                    if (transporterAddFiltersSelectCMRCheckBox.CheckState != CheckState.Indeterminate)
+                    {
+                        new_CMR = transporterAddFiltersSelectCMRCheckBox.Checked;
+                    }
+                    if (transporterAddFiltersSelectEKMTCheckBox.CheckState != CheckState.Indeterminate)
+                    {
+                        new_EKMT = transporterAddFiltersSelectEKMTCheckBox.Checked;
+                    }
+                    if (transporterAddFiltersSelectZbornyCheckBox.CheckState != CheckState.Indeterminate)
+                    {
+                        new_Zborny = transporterAddFiltersSelectZbornyCheckBox.Checked;
+                    }
+                    if (transporterAddFiltersSelectADCheckBox.CheckState != CheckState.Indeterminate)
+                    {
+                        new_AD = transporterAddFiltersSelectADCheckBox.Checked;
+                    }  
                     long new_WorkDocumentId = 0;
                     long new_TaxPayerStatusId = 0;
 
@@ -7326,11 +7350,13 @@ namespace AtlantSovt
             geographyAddressTransporterUpdateTextBox.Clear();
             commentTransporterUpdateTextBox.Clear();
             shortNameTransporterUpdateTextBox.Clear();
-            filtersTransporterUpdateCheckedListBox.ClearSelected();
-            foreach (int i in filtersTransporterAddCheckedListBox.CheckedIndices)
-            {
-                filtersTransporterAddCheckedListBox.SetItemCheckState(i, CheckState.Unchecked);
-            }
+
+            transporterUpdateFiltersSelectIfForwarderCheckBox.CheckState = CheckState.Indeterminate;
+            transporterUpdateFiltersSelectADCheckBox.CheckState = CheckState.Indeterminate;
+            transporterUpdateFiltersSelectTURCheckBox.CheckState = CheckState.Indeterminate;
+            transporterUpdateFiltersSelectZbornyCheckBox.CheckState = CheckState.Indeterminate;
+            transporterUpdateFiltersSelectCMRCheckBox.CheckState = CheckState.Indeterminate;
+            transporterUpdateFiltersSelectEKMTCheckBox.CheckState = CheckState.Indeterminate;
         }
 
         void SplitUpdateTransporter()
@@ -7372,13 +7398,79 @@ namespace AtlantSovt
                     originalTransporterUpdateCheckBox.Checked = transporter.ContractType.Value;
                     faxTransporterUpdateCheckBox.Checked = !transporter.ContractType.Value;
 
-                    filtersTransporterUpdateCheckedListBox.SetItemChecked(0, Convert.ToBoolean(transporter.Filter.IfForwarder));
-                    filtersTransporterUpdateCheckedListBox.SetItemChecked(1, Convert.ToBoolean(transporter.Filter.TUR.Value));
-                    filtersTransporterUpdateCheckedListBox.SetItemChecked(2, Convert.ToBoolean(transporter.Filter.CMR.Value));
-                    filtersTransporterUpdateCheckedListBox.SetItemChecked(3, Convert.ToBoolean(transporter.Filter.EKMT.Value));
-                    filtersTransporterUpdateCheckedListBox.SetItemChecked(4, Convert.ToBoolean(transporter.Filter.Zborny.Value));
-                    filtersTransporterUpdateCheckedListBox.SetItemChecked(5, Convert.ToBoolean(transporter.Filter.AD.Value));
-                    filtersTransporterUpdateCheckedListBox.Update();
+                    if (transporter.Filter.IfForwarder != null)
+                    {
+                        transporterUpdateFiltersSelectIfForwarderCheckBox.Checked = Convert.ToBoolean(transporter.Filter.IfForwarder.Value);
+                        if (transporter.Filter.IfForwarder.Value)
+                        {
+                            transporterUpdateFiltersSelectIfForwarderCheckBox.CheckState = CheckState.Checked;
+                        }
+                        else
+                        {
+                            transporterUpdateFiltersSelectIfForwarderCheckBox.CheckState = CheckState.Unchecked;
+                        }
+                    }
+                    if (transporter.Filter.TUR != null)
+                    {
+                        transporterUpdateFiltersSelectTURCheckBox.Checked = Convert.ToBoolean(transporter.Filter.TUR.Value);
+                        if (transporter.Filter.TUR.Value)
+                        {
+                            transporterUpdateFiltersSelectTURCheckBox.CheckState = CheckState.Checked;
+                        }
+                        else
+                        {
+                            transporterUpdateFiltersSelectTURCheckBox.CheckState = CheckState.Unchecked;
+                        }
+                    }
+                    if (transporter.Filter.CMR != null)
+                    {
+                        transporterUpdateFiltersSelectCMRCheckBox.Checked = Convert.ToBoolean(transporter.Filter.CMR.Value);
+                        if (transporter.Filter.CMR.Value)
+                        {
+                            transporterUpdateFiltersSelectCMRCheckBox.CheckState = CheckState.Checked;
+                        }
+                        else
+                        {
+                            transporterUpdateFiltersSelectCMRCheckBox.CheckState = CheckState.Unchecked;
+                        }
+                    }
+                    if (transporter.Filter.EKMT != null)
+                    {
+                        transporterUpdateFiltersSelectEKMTCheckBox.Checked = Convert.ToBoolean(transporter.Filter.EKMT.Value);
+                        if (transporter.Filter.EKMT.Value)
+                        {
+                            transporterUpdateFiltersSelectEKMTCheckBox.CheckState = CheckState.Checked;
+                        }
+                        else
+                        {
+                            transporterUpdateFiltersSelectEKMTCheckBox.CheckState = CheckState.Unchecked;
+                        }
+
+                    }
+                    if (transporter.Filter.Zborny != null)
+                    {
+                        transporterUpdateFiltersSelectZbornyCheckBox.Checked = Convert.ToBoolean(transporter.Filter.Zborny.Value);
+                        if (transporter.Filter.Zborny.Value)
+                        {
+                            transporterUpdateFiltersSelectZbornyCheckBox.CheckState = CheckState.Checked;
+                        }
+                        else
+                        {
+                            transporterUpdateFiltersSelectZbornyCheckBox.CheckState = CheckState.Unchecked;
+                        }
+                    }
+                    if (transporter.Filter.AD != null)
+                    {
+                        transporterUpdateFiltersSelectADCheckBox.Checked = Convert.ToBoolean(transporter.Filter.AD.Value);
+                        if (transporter.Filter.AD.Value)
+                        {
+                            transporterUpdateFiltersSelectADCheckBox.CheckState = CheckState.Checked;
+                        }
+                        else
+                        {
+                            transporterUpdateFiltersSelectADCheckBox.CheckState = CheckState.Unchecked;
+                        }
+                    }
                 }
                 transporterFullNameChanged = transporterDirectorChanged = transporterPhysicalAddressChanged = transporterGeographyAddressChanged = transporterCommentChanged = transporterWorkDocumentChanged = transporterTaxPayerStatusChanged = transporterFiltersChanged = transporterOriginalChanged = transporterFaxChanged = false;
             }
@@ -7556,13 +7648,61 @@ namespace AtlantSovt
                         }
                     }
                     if (transporterFiltersChanged)
-                    {
-                        filters.IfForwarder = filtersTransporterUpdateCheckedListBox.GetItemChecked(0);
-                        filters.TUR = filtersTransporterUpdateCheckedListBox.GetItemChecked(1);
-                        filters.CMR = filtersTransporterUpdateCheckedListBox.GetItemChecked(2);
-                        filters.EKMT = filtersTransporterUpdateCheckedListBox.GetItemChecked(3);
-                        filters.Zborny = filtersTransporterUpdateCheckedListBox.GetItemChecked(4);
-                        filters.AD = filtersTransporterUpdateCheckedListBox.GetItemChecked(5);
+                    {                         
+
+                        if (transporterUpdateFiltersSelectIfForwarderCheckBox.CheckState != CheckState.Indeterminate)
+                        {
+                            filters.IfForwarder = transporterUpdateFiltersSelectIfForwarderCheckBox.Checked;
+                        }
+                        else 
+                        {
+                            filters.IfForwarder = null;
+                        }
+
+                        if (transporterUpdateFiltersSelectTURCheckBox.CheckState != CheckState.Indeterminate)
+                        {
+                            filters.TUR = transporterUpdateFiltersSelectTURCheckBox.Checked;
+                        }
+                        else 
+                        {
+                            filters.TUR = null;
+                        }
+
+                        if (transporterUpdateFiltersSelectCMRCheckBox.CheckState != CheckState.Indeterminate)
+                        {
+                            filters.CMR = transporterUpdateFiltersSelectCMRCheckBox.Checked;
+                        }
+                        else 
+                        {
+                            filters.CMR = null;
+                        }
+
+                        if (transporterUpdateFiltersSelectEKMTCheckBox.CheckState != CheckState.Indeterminate)
+                        {
+                            filters.EKMT = transporterUpdateFiltersSelectEKMTCheckBox.Checked;
+                        }
+                        else 
+                        {
+                            filters.EKMT = null;
+                        }
+
+                        if (transporterUpdateFiltersSelectZbornyCheckBox.CheckState != CheckState.Indeterminate)
+                        {
+                            filters.Zborny = transporterUpdateFiltersSelectZbornyCheckBox.Checked;
+                        }
+                        else 
+                        {
+                           filters.Zborny = null;
+                        }
+
+                        if (transporterUpdateFiltersSelectADCheckBox.CheckState != CheckState.Indeterminate)
+                        {
+                            filters.AD = transporterUpdateFiltersSelectADCheckBox.Checked;
+                        }
+                        else 
+                        {
+                            filters.AD = null;
+                        }
                         db.Entry(filters).State = EntityState.Modified;
                     }                    
                     if (transporterOriginalChanged)
