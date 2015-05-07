@@ -3582,7 +3582,6 @@
             this.contractBeginDateTimePicker.Name = "contractBeginDateTimePicker";
             this.contractBeginDateTimePicker.Size = new System.Drawing.Size(200, 29);
             this.contractBeginDateTimePicker.TabIndex = 90;
-            this.contractBeginDateTimePicker.ValueChanged += new System.EventHandler(this.ContractBegindateTimePicker_ValueChanged);
             // 
             // createContactButton
             // 
@@ -3654,7 +3653,6 @@
             // 
             this.firstPersonActivityComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.firstPersonActivityComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.firstPersonActivityComboBox.Enabled = false;
             this.firstPersonActivityComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.firstPersonActivityComboBox.Items.AddRange(new object[] {
             "Клієнт",

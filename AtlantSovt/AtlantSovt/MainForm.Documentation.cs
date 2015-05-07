@@ -113,7 +113,7 @@ namespace AtlantSovt
                     ReplaseWordStub("{ContractDateBegin}", contractDateBegin, wordDocument);
 
                     if (secondForwarderName == "" || secondForwarderDirector == "" || 
-                        secondForwarderWorkDocument == null || secondForwarderTaxPayerStatus == null ||
+                        secondForwarderWorkDocument == "" || secondForwarderTaxPayerStatus == "" ||
                         db.ForwarderBankDetails.Find(forwarderSecondPersonDocument.Id) == null  || secondForwarderBankDetailsBankName == "" ||
                         secondForwarderBankDetailsAccountNumber == "" || secondForwarderBankDetailsCertificateNumber == "" || 
                         secondForwarderBankDetailsEDRPOU == "" || secondForwarderBankDetailsIBAN == "" ||

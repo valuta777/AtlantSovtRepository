@@ -1665,10 +1665,5 @@ namespace AtlantSovt
             SplitForwarderSecondPersonComboBoxDocument();
             createContactButton.Enabled = true;
         }
-
-        private void ContractBegindateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-            firstPersonActivityComboBox.Enabled = true;
-        }
     }
 }
