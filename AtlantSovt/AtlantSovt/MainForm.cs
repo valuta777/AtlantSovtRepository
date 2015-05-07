@@ -1628,12 +1628,47 @@ namespace AtlantSovt
         }
         #endregion
 
+        private void createContactButton_Click(object sender, EventArgs e)
+        {
+            switch (firstPersonActivityComboBox.SelectedIndex)
+            {
+                case 0:
+                    MessageBox.Show("Not ready yet!");
+                    break;
+                case 1:
+                    CreateTransporterForwarderContract();
+                    break;
+                case 2:
+                    MessageBox.Show("Not ready yet!");
+                    break;
+            }
+        }
 
+        private void firstPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (firstPersonActivityComboBox.SelectedIndex)
+            {
+                case 0:
+                    MessageBox.Show("Not ready yet!");
+                    break;
+                case 1:
+                    SplitTransporterFirstPersonComboBoxDocument();
+                    break;
+                case 2:
+                    MessageBox.Show("Not ready yet!");
+                    break;
+            }
+        }
 
+        private void secondPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitForwarderSecondPersonComboBoxDocument();
+            createContactButton.Enabled = true;
+        }
 
-
-
-
-
+        private void ContractBegindateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            firstPersonActivityComboBox.Enabled = true;
+        }
     }
 }

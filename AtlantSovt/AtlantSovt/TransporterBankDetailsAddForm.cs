@@ -51,7 +51,7 @@ namespace AtlantSovt
             }
             else
             {
-                MessageBox.Show("Заповніть всі поля!");
+                MessageBox.Show("Заповніть обов'язкові поля!");
             }
 
         }
