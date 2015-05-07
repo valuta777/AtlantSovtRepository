@@ -276,6 +276,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.transporterDeleteComboBox = new System.Windows.Forms.ComboBox();
             this.documentationPage = new System.Windows.Forms.TabPage();
+            this.label36 = new System.Windows.Forms.Label();
+            this.contractBeginDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.createContactButton = new System.Windows.Forms.Button();
             this.secondPersonNameComboBox = new System.Windows.Forms.ComboBox();
             this.label51 = new System.Windows.Forms.Label();
@@ -292,6 +294,7 @@
             this.labelshow67 = new System.Windows.Forms.Label();
             this.labelshow68 = new System.Windows.Forms.Label();
             this.labelshow69 = new System.Windows.Forms.Label();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.menuStrip.SuspendLayout();
             this.dataControl.SuspendLayout();
             this.helloPage.SuspendLayout();
@@ -3357,6 +3360,8 @@
             // 
             // documentationPage
             // 
+            this.documentationPage.Controls.Add(this.label36);
+            this.documentationPage.Controls.Add(this.contractBeginDateTimePicker);
             this.documentationPage.Controls.Add(this.createContactButton);
             this.documentationPage.Controls.Add(this.secondPersonNameComboBox);
             this.documentationPage.Controls.Add(this.label51);
@@ -3375,6 +3380,27 @@
             this.documentationPage.Text = "documentationPage";
             this.documentationPage.UseVisualStyleBackColor = true;
             // 
+            // label36
+            // 
+            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label36.Location = new System.Drawing.Point(3, 4);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(171, 21);
+            this.label36.TabIndex = 91;
+            this.label36.Text = "Дата укладання угоди:";
+            // 
+            // contractBeginDateTimePicker
+            // 
+            this.contractBeginDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contractBeginDateTimePicker.Location = new System.Drawing.Point(180, 3);
+            this.contractBeginDateTimePicker.Name = "contractBeginDateTimePicker";
+            this.contractBeginDateTimePicker.Size = new System.Drawing.Size(200, 29);
+            this.contractBeginDateTimePicker.TabIndex = 90;
+            this.contractBeginDateTimePicker.ValueChanged += new System.EventHandler(this.ContractBegindateTimePicker_ValueChanged);
+            // 
             // createContactButton
             // 
             this.createContactButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -3386,6 +3412,7 @@
             this.createContactButton.TabIndex = 89;
             this.createContactButton.Text = "Створити договір";
             this.createContactButton.UseVisualStyleBackColor = true;
+            this.createContactButton.Click += new System.EventHandler(this.createContactButton_Click);
             // 
             // secondPersonNameComboBox
             // 
@@ -3396,11 +3423,12 @@
             this.secondPersonNameComboBox.Enabled = false;
             this.secondPersonNameComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.secondPersonNameComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.secondPersonNameComboBox.Location = new System.Drawing.Point(44, 179);
+            this.secondPersonNameComboBox.Location = new System.Drawing.Point(42, 205);
             this.secondPersonNameComboBox.Name = "secondPersonNameComboBox";
             this.secondPersonNameComboBox.Size = new System.Drawing.Size(548, 29);
             this.secondPersonNameComboBox.Sorted = true;
             this.secondPersonNameComboBox.TabIndex = 85;
+            this.secondPersonNameComboBox.SelectedIndexChanged += new System.EventHandler(this.secondPersonNameComboBox_SelectedIndexChanged);
             this.secondPersonNameComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.secondPersonNameComboBox_MouseClick);
             // 
             // label51
@@ -3409,7 +3437,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label51.Location = new System.Drawing.Point(40, 152);
+            this.label51.Location = new System.Drawing.Point(38, 178);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(96, 21);
             this.label51.TabIndex = 84;
@@ -3421,7 +3449,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label39.Location = new System.Drawing.Point(8, 152);
+            this.label39.Location = new System.Drawing.Point(6, 178);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(33, 21);
             this.label39.TabIndex = 83;
@@ -3433,7 +3461,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label38.Location = new System.Drawing.Point(8, 30);
+            this.label38.Location = new System.Drawing.Point(8, 72);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(33, 21);
             this.label38.TabIndex = 82;
@@ -3443,12 +3471,13 @@
             // 
             this.firstPersonActivityComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.firstPersonActivityComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.firstPersonActivityComboBox.Enabled = false;
             this.firstPersonActivityComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.firstPersonActivityComboBox.Items.AddRange(new object[] {
             "Клієнт",
             "Перевізник",
             "Експедитор"});
-            this.firstPersonActivityComboBox.Location = new System.Drawing.Point(42, 27);
+            this.firstPersonActivityComboBox.Location = new System.Drawing.Point(42, 69);
             this.firstPersonActivityComboBox.Name = "firstPersonActivityComboBox";
             this.firstPersonActivityComboBox.Size = new System.Drawing.Size(550, 29);
             this.firstPersonActivityComboBox.TabIndex = 80;
@@ -3461,7 +3490,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label37.Location = new System.Drawing.Point(3, 3);
+            this.label37.Location = new System.Drawing.Point(3, 45);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(183, 21);
             this.label37.TabIndex = 79;
@@ -3473,9 +3502,9 @@
             this.firstPersonDiapasonComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.firstPersonDiapasonComboBox.Enabled = false;
             this.firstPersonDiapasonComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.firstPersonDiapasonComboBox.Location = new System.Drawing.Point(42, 83);
+            this.firstPersonDiapasonComboBox.Location = new System.Drawing.Point(42, 125);
             this.firstPersonDiapasonComboBox.Name = "firstPersonDiapasonComboBox";
-            this.firstPersonDiapasonComboBox.Size = new System.Drawing.Size(138, 29);
+            this.firstPersonDiapasonComboBox.Size = new System.Drawing.Size(188, 29);
             this.firstPersonDiapasonComboBox.TabIndex = 78;
             this.firstPersonDiapasonComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.firstPersonDiapasonComboBox_MouseClick);
             // 
@@ -3483,7 +3512,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label28.Location = new System.Drawing.Point(40, 59);
+            this.label28.Location = new System.Drawing.Point(40, 101);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(140, 21);
             this.label28.TabIndex = 77;
@@ -3495,7 +3524,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.personNameLabel.AutoSize = true;
             this.personNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.personNameLabel.Location = new System.Drawing.Point(199, 59);
+            this.personNameLabel.Location = new System.Drawing.Point(199, 101);
             this.personNameLabel.Name = "personNameLabel";
             this.personNameLabel.Size = new System.Drawing.Size(0, 21);
             this.personNameLabel.TabIndex = 76;
@@ -3509,11 +3538,12 @@
             this.firstPersonNameComboBox.Enabled = false;
             this.firstPersonNameComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.firstPersonNameComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.firstPersonNameComboBox.Location = new System.Drawing.Point(203, 83);
+            this.firstPersonNameComboBox.Location = new System.Drawing.Point(236, 125);
             this.firstPersonNameComboBox.Name = "firstPersonNameComboBox";
-            this.firstPersonNameComboBox.Size = new System.Drawing.Size(525, 29);
+            this.firstPersonNameComboBox.Size = new System.Drawing.Size(492, 29);
             this.firstPersonNameComboBox.Sorted = true;
             this.firstPersonNameComboBox.TabIndex = 75;
+            this.firstPersonNameComboBox.SelectedIndexChanged += new System.EventHandler(this.firstPersonNameComboBox_SelectedIndexChanged);
             this.firstPersonNameComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.firstPersonNameComboBox_MouseClick);
             // 
             // labelshow57
@@ -3944,6 +3974,9 @@
         private System.Windows.Forms.ComboBox secondPersonNameComboBox;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Button createContactButton;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.DateTimePicker contractBeginDateTimePicker;
         }
 }
 
