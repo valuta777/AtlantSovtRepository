@@ -1160,11 +1160,13 @@ namespace AtlantSovt
             transporterTaxPayerStatus = null;
 
             commentTransporterAddTextBox.Text = "";
-            filtersTransporterAddCheckedListBox.ClearSelected();
-            foreach (int i in filtersTransporterAddCheckedListBox.CheckedIndices)
-            {
-                filtersTransporterAddCheckedListBox.SetItemCheckState(i, CheckState.Unchecked);
-            }
+            
+            transporterAddFiltersSelectIfForwarderCheckBox.CheckState =  CheckState.Indeterminate;
+            transporterAddFiltersSelectADCheckBox.CheckState =  CheckState.Indeterminate;
+            transporterAddFiltersSelectTURCheckBox.CheckState =  CheckState.Indeterminate;
+            transporterAddFiltersSelectZbornyCheckBox.CheckState =  CheckState.Indeterminate;
+            transporterAddFiltersSelectCMRCheckBox.CheckState =  CheckState.Indeterminate;
+            transporterAddFiltersSelectEKMTCheckBox.CheckState = CheckState.Indeterminate;
         }
             #endregion
 
@@ -1298,7 +1300,33 @@ namespace AtlantSovt
         {
             transporterCommentChanged = true;
         }
-        private void filtersTransporterUpdateCheckedListBox_MouseClick(object sender, MouseEventArgs e)
+        
+        private void transporterUpdateFiltersSelectIfForwarderCheckBox_CheckStateChanged(object sender, EventArgs e)
+        {
+            transporterFiltersChanged = true;
+        }
+
+        private void transporterUpdateFiltersSelectTURCheckBox_CheckStateChanged(object sender, EventArgs e)
+        {
+            transporterFiltersChanged = true;
+        }
+
+        private void transporterUpdateFiltersSelectCMRCheckBox_CheckStateChanged(object sender, EventArgs e)
+        {
+            transporterFiltersChanged = true;
+        }
+
+        private void transporterUpdateFiltersSelectEKMTCheckBox_CheckStateChanged(object sender, EventArgs e)
+        {
+            transporterFiltersChanged = true;
+        }
+
+        private void transporterUpdateFiltersSelectZbornyCheckBox_CheckStateChanged(object sender, EventArgs e)
+        {
+            transporterFiltersChanged = true;
+        }
+
+        private void transporterUpdateFiltersSelectADCheckBox_CheckStateChanged(object sender, EventArgs e)
         {
             transporterFiltersChanged = true;
         }
@@ -1599,6 +1627,8 @@ namespace AtlantSovt
             secondPersonNameComboBox.DroppedDown = true;
         }
         #endregion
+
+
 
 
 
