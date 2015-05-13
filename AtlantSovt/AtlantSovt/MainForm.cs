@@ -1665,5 +1665,10 @@ namespace AtlantSovt
             SplitForwarderSecondPersonComboBoxDocument();
             createContactButton.Enabled = true;
         }
+
+        private void addOrderUkrStrip_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 14;
+        }
     }
 }
