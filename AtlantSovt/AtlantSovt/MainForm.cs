@@ -1827,7 +1827,7 @@ namespace AtlantSovt
 
         private void OrderAddUploadAddressAddButton_Click(object sender, EventArgs e)
         {
-            UploadAddressForm();
+          //  UploadAddressForm();
         }
 
 
