@@ -11,7 +11,7 @@ namespace AtlantSovt.AtlantSovtDb
     {
         public CustomsAddress()
         {
-            Orders = new HashSet<Order>();
+            OrderCustomsAddresses = new HashSet<OrderCustomsAddress>();
         }
 
         public long Id { get; set; }
@@ -46,6 +46,6 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual Country Country { get; set; }
 
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<OrderCustomsAddress> OrderCustomsAddresses { get; set; }
     }
 }

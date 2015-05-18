@@ -12,9 +12,15 @@ namespace AtlantSovt.AtlantSovtDb
         public Order()
         {
             ForwarderOrders = new HashSet<ForwarderOrder>();
+            OrderCustomsAddresses = new HashSet<OrderCustomsAddress>();
+            OrderDownloadAddresses = new HashSet<OrderDownloadAddress>();
+            OrderUnCustomsAddresses = new HashSet<OrderUnCustomsAddress>();
+            OrderUploadAdresses = new HashSet<OrderUploadAdress>();
         }
 
         public long Id { get; set; }
+
+        public long? AdrTurId { get; set; }
 
         public bool? YorU { get; set; }
 
@@ -23,6 +29,10 @@ namespace AtlantSovt.AtlantSovtDb
         public long? TransporterId { get; set; }
 
         public DateTime? Date { get; set; }
+
+        public long? TrailerId { get; set; }
+
+        public long? CubeId { get; set; }
 
         public DateTime? DownloadDate { get; set; }
 
@@ -61,17 +71,19 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long? OrderDenyId { get; set; }
 
+        public virtual AdditionalTerm AdditionalTerm { get; set; }
+
         public virtual Cargo Cargo { get; set; }
 
         public virtual Client Client { get; set; }
 
-        public virtual CustomsAddress CustomsAddress { get; set; }
-
-        public virtual DownloadAddress DownloadAddress { get; set; }
+        public virtual Cube Cube { get; set; }
 
         public virtual FineForDelay FineForDelay { get; set; }
 
         public virtual ICollection<ForwarderOrder> ForwarderOrders { get; set; }
+
+        public virtual TirCmr TirCmr { get; set; }
 
         public virtual OrderDeny OrderDeny { get; set; }
 
@@ -79,10 +91,16 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual RegularyDelay RegularyDelay { get; set; }
 
+        public virtual Trailer Trailer { get; set; }
+
         public virtual Transporter Transporter { get; set; }
 
-        public virtual UnCustomsAddress UnCustomsAddress { get; set; }
+        public virtual ICollection<OrderCustomsAddress> OrderCustomsAddresses { get; set; }
 
-        public virtual UploadAddress UploadAddress { get; set; }
+        public virtual ICollection<OrderDownloadAddress> OrderDownloadAddresses { get; set; }
+
+        public virtual ICollection<OrderUnCustomsAddress> OrderUnCustomsAddresses { get; set; }
+
+        public virtual ICollection<OrderUploadAdress> OrderUploadAdresses { get; set; }
     }
 }

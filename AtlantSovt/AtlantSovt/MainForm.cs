@@ -55,7 +55,6 @@ namespace AtlantSovt
         TransporterBankDetailsAddForm addTransporterBankDetailsAddForm, updateTransporterBankDetailsAddForm;
         TransporterBankDetailsUpdateForm updateTransporterBankDetailsUpdateForm;
 
-
         //Load / Animaton / Test connection
         #region Load
         void Connecting()
@@ -1565,17 +1564,17 @@ namespace AtlantSovt
             switch(firstPersonActivityComboBox.SelectedIndex)
             {
                 case 0:
-                    personNameLabel.Text = "";
+                    //personNameLabel.Text = "";
                     personNameLabel.Text = "Виберіть клієнта";
                     break;
                 case 1:
-                    personNameLabel.Text = "";
+                    //personNameLabel.Text = "";
                     personNameLabel.Text = "Виберіть перевізника";
                     break;
                 case 2:
                     firstPersonDiapasonComboBox.Enabled = false;
                     firstPersonNameComboBox.Enabled = true;
-                    personNameLabel.Text = "";
+                    //personNameLabel.Text = "";
                     personNameLabel.Text = "Виберіть експедитора";
                     break;
             }
@@ -1670,5 +1669,168 @@ namespace AtlantSovt
         {
             dataControl.SelectedIndex = 14;
         }
+
+
+        
+        /// Order
+       
+        private void OrderAddClientDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoadOrderAddClientDiapasonCombobox();
+        }
+
+        private void OrderAddClientSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAddClientSelectComboBox.Items.Clear();
+            LoadOrderAddClientSelectComboBox();
+            OrderAddClientSelectComboBox.DroppedDown = true;
+            OrderAddForwarder1SelectComboBox.Enabled = true;
+        }
+
+        private void OrderAddTransporterDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoadOrderAddTransporterDiapasonCombobox();
+        }
+
+        private void OrderAddTransporterSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAddTransporterSelectComboBox.Items.Clear();
+            LoadOrderAddTransporterSelectComboBox();
+            OrderAddTransporterSelectComboBox.DroppedDown = true;
+            OrderAddForwarder2SelectComboBox.Enabled = true;
+        }
+
+        private void OrderAddForwarder1SelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAddForwarder1SelectComboBox.Items.Clear();
+            LoadOrderAddForwarder1SelectComboBox();
+            OrderAddForwarder1SelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderAddForwarder2SelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+            OrderAddForwarder2SelectComboBox.Items.Clear();
+            LoadOrderAddForwarder2SelectComboBox();
+            OrderAddForwarder2SelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderAddClientSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitClientOrderAdd();
+            OrderAddUploadAddressAddButton.Enabled = true;
+            OrderAddDeliveryAddressAddButton.Enabled = true;
+            OrderAddCustomsAddressAddButton.Enabled = true;
+            OrderAddUncustomsAddressAddButton.Enabled = true;
+        }
+
+        private void OrderAddForwarder1SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            SplitForwarder1OrderAdd();
+        }
+
+        private void OrderAddForwarder2SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitForwarder2OrderAdd();
+            
+        }
+
+        private void OrderAddTransporterSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitTransporterOrderAdd();
+        }
+
+        private void OrderAddUploadDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            SetOrderUploadDate();
+        }
+
+        private void OrderAddUploadDateTimePicker_CloseUp(object sender, EventArgs e)
+        {
+            SetOrderUploadDate();
+        }
+
+        private void OrderAddDateSelectDateTimePicker_CloseUp(object sender, EventArgs e)
+        {
+            SetOrderDate();
+        }
+
+        private void OrderAddDateSelectDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            SetOrderDate();
+        }
+
+        private void OrderAddDeliveryDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            SetOrderDeliveryDate();
+        }
+
+        private void OrderAddDeliveryDateTimePicker_CloseUp(object sender, EventArgs e)
+        {
+            SetOrderDeliveryDate();
+        }
+
+        private void OrderAddCargoAddButton_Click(object sender, EventArgs e)
+        {
+            AddCargoForm addCargoForm = new AddCargoForm();
+            addCargoForm.Show();
+        }
+
+        private void OrderAddTirCmrAddButton_Click(object sender, EventArgs e)
+        {
+            AddTirCmrForm addTirCmrForm = new AddTirCmrForm();
+            addTirCmrForm.Show();
+        }
+
+        private void OrderAddRegularyDelayAddButton_Click(object sender, EventArgs e)
+        {
+            AddRegularyDelayForm addRegularyDelayForm = new AddRegularyDelayForm();
+            addRegularyDelayForm.Show();
+        }
+
+        private void OrderAddFineForDelayAddButton_Click(object sender, EventArgs e)
+        {
+            AddFineForDelayForm addFineForDelayForm = new AddFineForDelayForm();
+            addFineForDelayForm.Show();
+        }
+
+        private void OrderAddCubeAddButton_Click(object sender, EventArgs e)
+        {
+            AddCubeForm addCubeForm = new AddCubeForm();
+            addCubeForm.Show();
+        }
+
+        private void OrderAddTrailerAddButton_Click(object sender, EventArgs e)
+        {
+            AddTrailerForm addTrailerForm = new AddTrailerForm();
+            addTrailerForm.Show();
+        }
+
+        private void OrderAddPaymentTermsAddButton_Click(object sender, EventArgs e)
+        {
+            AddPaymentTermsForm addPaymentTermsForm = new AddPaymentTermsForm();
+            addPaymentTermsForm.Show();
+        }
+
+        private void OrderAddAdditionalTermsAddButton_Click(object sender, EventArgs e)
+        {
+            AddAdditionalTermsForm addAdditionalTermsForm = new AddAdditionalTermsForm();
+            addAdditionalTermsForm.Show();
+        }
+
+        private void OrderAddOrderDenyAddButton_Click(object sender, EventArgs e)
+        {
+            AddOrderDenyForm addOrderDenyForm = new AddOrderDenyForm();
+            addOrderDenyForm.Show();
+        }
+
+        private void OrderAddUploadAddressAddButton_Click(object sender, EventArgs e)
+        {
+            UploadAddressForm();
+        }
+
+
+
     }
 }

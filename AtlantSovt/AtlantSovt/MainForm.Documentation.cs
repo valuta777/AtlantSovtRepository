@@ -12,8 +12,6 @@ namespace AtlantSovt
 {
     partial class MainForm
     {
-        readonly string TemplateFileName = @"C:\Users\v2\Desktop\doc.docx";
-
         Client clientFirstPersonDocument;
         Transporter transporterFirstPersonDocument;
         Forwarder forwarderFirstPersonDocument;
@@ -71,13 +69,11 @@ namespace AtlantSovt
         {
             var wordApp = new Word.Application();
             wordApp.Visible = false;
-            
+            var wordDocument = wordApp.Documents.Open(System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\ukrDocumentationTransporterForwarder.docx");
             try
             {
                 using (var db = new AtlantSovtContext())
-                {
-                    var wordDocument = wordApp.Documents.Open(TemplateFileName);
-
+                {    
                     var secondForwarderName = forwarderSecondPersonDocument.Name;
                     var secondForwarderDirector = forwarderSecondPersonDocument.Director;
                     string secondForwarderWorkDocument = "";                    
@@ -217,6 +213,7 @@ namespace AtlantSovt
             catch(Exception e)
             {
                 MessageBox.Show("Помилка: " + e);
+                wordDocument.Close(Word.WdSaveOptions.wdDoNotSaveChanges);
             }
         }
 
