@@ -44,6 +44,8 @@ namespace AtlantSovt.AtlantSovtDb
         [StringLength(100)]
         public string ShortRoute { get; set; }
 
+        public virtual Client Client { get; set; }
+
         public virtual Country Country { get; set; }
 
         public virtual ICollection<OrderUploadAdress> OrderUploadAdresses { get; set; }

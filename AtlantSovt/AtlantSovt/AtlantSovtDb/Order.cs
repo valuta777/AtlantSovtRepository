@@ -14,8 +14,10 @@ namespace AtlantSovt.AtlantSovtDb
             ForwarderOrders = new HashSet<ForwarderOrder>();
             OrderCustomsAddresses = new HashSet<OrderCustomsAddress>();
             OrderDownloadAddresses = new HashSet<OrderDownloadAddress>();
+            OrderLoadingForms = new HashSet<OrderLoadingForm>();
             OrderUnCustomsAddresses = new HashSet<OrderUnCustomsAddress>();
             OrderUploadAdresses = new HashSet<OrderUploadAdress>();
+            TrackingComments = new HashSet<TrackingComment>();
         }
 
         public long Id { get; set; }
@@ -35,14 +37,6 @@ namespace AtlantSovt.AtlantSovtDb
         public long? CubeId { get; set; }
 
         public DateTime? DownloadDate { get; set; }
-
-        public long? DownloadAddressId { get; set; }
-
-        public long? CustomsAddressId { get; set; }
-
-        public long? UnCustomsAddressId { get; set; }
-
-        public long? UploadAddressId { get; set; }
 
         public long? CargoId { get; set; }
 
@@ -70,6 +64,8 @@ namespace AtlantSovt.AtlantSovtDb
         public long? FineForDelaysId { get; set; }
 
         public long? OrderDenyId { get; set; }
+
+        public bool? State { get; set; }
 
         public virtual AdditionalTerm AdditionalTerm { get; set; }
 
@@ -99,8 +95,12 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual ICollection<OrderDownloadAddress> OrderDownloadAddresses { get; set; }
 
+        public virtual ICollection<OrderLoadingForm> OrderLoadingForms { get; set; }
+
         public virtual ICollection<OrderUnCustomsAddress> OrderUnCustomsAddresses { get; set; }
 
         public virtual ICollection<OrderUploadAdress> OrderUploadAdresses { get; set; }
+
+        public virtual ICollection<TrackingComment> TrackingComments { get; set; }
     }
 }

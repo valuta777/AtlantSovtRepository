@@ -130,17 +130,19 @@
     <Compile Include="AtlantSovtDb\ForwarderBankDetail.cs" />
     <Compile Include="AtlantSovtDb\ForwarderContact.cs" />
     <Compile Include="AtlantSovtDb\ForwarderOrder.cs" />
+    <Compile Include="AtlantSovtDb\LoadingForm.cs" />
     <Compile Include="AtlantSovtDb\Order.cs" />
     <Compile Include="AtlantSovtDb\OrderCustomsAddress.cs" />
     <Compile Include="AtlantSovtDb\OrderDeny.cs" />
     <Compile Include="AtlantSovtDb\OrderDownloadAddress.cs" />
+    <Compile Include="AtlantSovtDb\OrderLoadingForm.cs" />
     <Compile Include="AtlantSovtDb\OrderUnCustomsAddress.cs" />
     <Compile Include="AtlantSovtDb\OrderUploadAdress.cs" />
     <Compile Include="AtlantSovtDb\Payment.cs" />
     <Compile Include="AtlantSovtDb\RegularyDelay.cs" />
-    <Compile Include="AtlantSovtDb\sysdiagram.cs" />
     <Compile Include="AtlantSovtDb\TaxPayerStatu.cs" />
     <Compile Include="AtlantSovtDb\TirCmr.cs" />
+    <Compile Include="AtlantSovtDb\TrackingComment.cs" />
     <Compile Include="AtlantSovtDb\Trailer.cs" />
     <Compile Include="AtlantSovtDb\Transporter.cs" />
     <Compile Include="AtlantSovtDb\TransporterBankDetail.cs" />
@@ -425,6 +427,9 @@
     <EmbeddedResource Include="TransporterShowFiltrationForm.resx">
       <DependentUpon>TransporterShowFiltrationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="MainForm.Tracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

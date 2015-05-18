@@ -139,6 +139,16 @@ namespace AtlantSovt
                 {
                     dataControl.SelectedIndex = 13;
                 }
+
+                private void addOrderUkrStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 14;
+                }
+
+                private void trackingOrderUkrStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 15;
+                }
                 #endregion
 
         //Client
@@ -618,6 +628,7 @@ namespace AtlantSovt
 
             //Show
                 #region Show
+
         private void showForwarderStrip_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 5;
@@ -1580,22 +1591,25 @@ namespace AtlantSovt
             }
         }
 
-        private void firstPersonActivityComboBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            firstPersonActivityComboBox.DroppedDown = true;
-        }
-
-        private void firstPersonDiapasonComboBox_MouseClick(object sender, MouseEventArgs e)
+        private void firstPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (firstPersonActivityComboBox.SelectedIndex)
             {
                 case 0:
-                    LoadClientFirstPersonDiapasonCombobox();
+                    MessageBox.Show("Not ready yet!");
                     break;
                 case 1:
-                    LoadTransporterFirstPersonDiapasonCombobox();
+                    SplitTransporterFirstPersonComboBoxDocument();
+                    break;
+                case 2:
+                    MessageBox.Show("Not ready yet!");
                     break;
             }
+        }
+
+        private void firstPersonActivityComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            firstPersonActivityComboBox.DroppedDown = true;
         }
 
         private void firstPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -1615,9 +1629,29 @@ namespace AtlantSovt
                     LoadForwarderFirstPersonNameComboBox();
                     break;
             }
+
             firstPersonNameComboBox.DroppedDown = true;
             secondPersonNameComboBox.Enabled = true;
+        }
+
+        private void firstPersonDiapasonComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            switch (firstPersonActivityComboBox.SelectedIndex)
+            {
+                case 0:
+                    LoadClientFirstPersonDiapasonCombobox();
+                    break;
+                case 1:
+                    LoadTransporterFirstPersonDiapasonCombobox();
+                    break;
             }
+        }
+
+        private void secondPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitForwarderSecondPersonComboBoxDocument();
+            createContactButton.Enabled = true;
+        }
 
         private void secondPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
         {
@@ -1625,7 +1659,6 @@ namespace AtlantSovt
             LoadForwarderSecondPersonNameComboBox();
             secondPersonNameComboBox.DroppedDown = true;
         }
-        #endregion
 
         private void createContactButton_Click(object sender, EventArgs e)
         {
@@ -1643,36 +1676,15 @@ namespace AtlantSovt
             }
         }
 
-        private void firstPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (firstPersonActivityComboBox.SelectedIndex)
-            {
-                case 0:
-                    MessageBox.Show("Not ready yet!");
-                    break;
-                case 1:
-                    SplitTransporterFirstPersonComboBoxDocument();
-                    break;
-                case 2:
-                    MessageBox.Show("Not ready yet!");
-                    break;
-            }
-        }
-
-        private void secondPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SplitForwarderSecondPersonComboBoxDocument();
-            createContactButton.Enabled = true;
-        }
-
-        private void addOrderUkrStrip_Click(object sender, EventArgs e)
-        {
-            dataControl.SelectedIndex = 14;
-        }
+        #endregion
 
 
-        
-        /// Order
+        //Tracking
+        #region Tracking
+
+        #endregion
+
+        // Order
        
         private void OrderAddClientDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
         {
@@ -1829,7 +1841,6 @@ namespace AtlantSovt
         {
           //  UploadAddressForm();
         }
-
 
 
     }

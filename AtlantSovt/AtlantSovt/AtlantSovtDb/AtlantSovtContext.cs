@@ -28,13 +28,15 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<ForwarderBankDetail> ForwarderBankDetails { get; set; }
         public virtual DbSet<ForwarderContact> ForwarderContacts { get; set; }
         public virtual DbSet<ForwarderOrder> ForwarderOrders { get; set; }
+        public virtual DbSet<LoadingForm> LoadingForms { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderDeny> OrderDenies { get; set; }
+        public virtual DbSet<OrderLoadingForm> OrderLoadingForms { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
         public virtual DbSet<RegularyDelay> RegularyDelays { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaxPayerStatu> TaxPayerStatus { get; set; }
         public virtual DbSet<TirCmr> TirCmrs { get; set; }
+        public virtual DbSet<TrackingComment> TrackingComments { get; set; }
         public virtual DbSet<Trailer> Trailers { get; set; }
         public virtual DbSet<Transporter> Transporters { get; set; }
         public virtual DbSet<TransporterBankDetail> TransporterBankDetails { get; set; }
@@ -65,6 +67,16 @@ namespace AtlantSovt.AtlantSovtDb
 
             modelBuilder.Entity<Client>()
                 .HasMany(e => e.ClientContacts)
+                .WithOptional(e => e.Client)
+                .WillCascadeOnDelete();
+
+            modelBuilder.Entity<Client>()
+                .HasMany(e => e.DownloadAddresses)
+                .WithOptional(e => e.Client)
+                .WillCascadeOnDelete();
+
+            modelBuilder.Entity<Client>()
+                .HasMany(e => e.UploadAddresses)
                 .WithOptional(e => e.Client)
                 .WillCascadeOnDelete();
 
@@ -105,9 +117,19 @@ namespace AtlantSovt.AtlantSovtDb
                 .WithRequired(e => e.Forwarder)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<LoadingForm>()
+                .HasMany(e => e.OrderLoadingForms)
+                .WithRequired(e => e.LoadingForm)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<Order>()
                 .Property(e => e.Freight)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Order>()
+                .HasMany(e => e.ForwarderOrders)
+                .WithOptional(e => e.Order)
+                .WillCascadeOnDelete();
 
             modelBuilder.Entity<Order>()
                 .HasMany(e => e.OrderCustomsAddresses)
