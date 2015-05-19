@@ -6,20 +6,20 @@ namespace AtlantSovt.AtlantSovtDb
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("ForwarderOrder")]
-    public partial class ForwarderOrder
+    [Table("LoadingForm")]
+    public partial class LoadingForm
     {
+        public LoadingForm()
+        {
+            OrderLoadingForms = new HashSet<OrderLoadingForm>();
+        }
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
 
-        public long? ForwarderId { get; set; }
+        [StringLength(50)]
+        public string Type { get; set; }
 
-        public long? OrderId { get; set; }
-
-        public bool IsFirst { get; set; }
-
-        public virtual Forwarder Forwarder { get; set; }
-
-        public virtual Order Order { get; set; }
+        public virtual ICollection<OrderLoadingForm> OrderLoadingForms { get; set; }
     }
 }

@@ -1827,10 +1827,141 @@ namespace AtlantSovt
 
         private void OrderAddUploadAddressAddButton_Click(object sender, EventArgs e)
         {
-            UploadAddressForm();
         }
 
+        private void OrderAddAdditionalTermsSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitAdditionalTermOrderAdd();
+        }
 
+        private void OrderAddAdditionalTermsSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAddAdditionalTermsSelectComboBox.Items.Clear();
+            LoadOrderAddAdditionalTermsSelectComboBox();
+            OrderAddAdditionalTermsSelectComboBox.DroppedDown = true;
+        }
 
+        private void OrderAddCargoSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitCargoOrderAdd();
+        }
+
+        private void OrderAddCargoSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            OrderAddCargoSelectComboBox.Items.Clear();
+            LoadOrderAddCargoSelectComboBox();
+            OrderAddCargoSelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderAddFineForDelaySelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitFineForDelayOrderAdd();
+        }
+
+        private void OrderAddFineForDelaySelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            OrderAddFineForDelaySelectComboBox.Items.Clear();
+            LoadOrderAddFineForDelaySelectComboBox();
+            OrderAddFineForDelaySelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderAddTirCmrSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitTirCmrAddOrderAdd();
+        }
+
+        private void OrderAddTirCmrSelectComboBox_Click(object sender, EventArgs e)
+        {
+            OrderAddTirCmrSelectComboBox.Items.Clear();
+            LoadOrderAddTirCmrSelectComboBox();
+            OrderAddTirCmrSelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderAddDenyFineSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitOrderDenyOrderAdd();
+        }
+
+        private void OrderAddDenyFineSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAddDenyFineSelectComboBox.Items.Clear();
+            LoadOrderAddDenyFineSelectComboBox();
+            OrderAddDenyFineSelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderAddPaymentTermsSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitPaymentOrderAdd();
+        }
+
+        private void OrderAddPaymentTermsSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAddPaymentTermsSelectComboBox.Items.Clear();
+            LoadOrderAddPaymentSelectComboBox();
+            OrderAddPaymentTermsSelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderAddRegularyDelaySelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitRegularyDelayOrderAdd();
+        }
+
+        private void OrderAddRegularyDelaySelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            OrderAddRegularyDelaySelectComboBox.Items.Clear();
+            LoadOrderAddRegularyDelaySelectComboBox();
+            OrderAddRegularyDelaySelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderAddCubeSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitCubeOrderAdd();
+        }
+
+        private void OrderAddCubeSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAddCubeSelectComboBox.Items.Clear();
+            LoadOrderAddCubeSelectComboBox();
+            OrderAddCubeSelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderAddTrailerSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitTrailerOrderAdd();
+        }
+
+        private void OrderAddTrailerSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAddTrailerSelectComboBox.Items.Clear();
+            LoadOrderAddTrailerSelectComboBox();
+            OrderAddTrailerSelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderAddLoadingForm1SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitLoadingForm1OrderAdd();
+        }
+
+        private void OrderAddLoadingForm1SelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAddLoadingForm1SelectComboBox.Items.Clear();
+            LoadOrderAddLoadingForm1SelectComboBox();
+            OrderAddLoadingForm1SelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderAddLoadingForm2SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitLoadingForm2OrderAdd();
+        }
+
+        private void OrderAddLoadingForm2SelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAddLoadingForm2SelectComboBox.Items.Clear();
+            LoadOrderAddLoadingForm2SelectComboBox();
+            OrderAddLoadingForm2SelectComboBox.DroppedDown = true;
+        }
     }
 }

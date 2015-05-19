@@ -6,19 +6,14 @@ namespace AtlantSovt.AtlantSovtDb
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("ForwarderOrder")]
-    public partial class ForwarderOrder
+    [Table("TrackingComment")]
+    public partial class TrackingComment
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
 
-        public long? ForwarderId { get; set; }
+        public string Comment { get; set; }
 
-        public long? OrderId { get; set; }
-
-        public bool IsFirst { get; set; }
-
-        public virtual Forwarder Forwarder { get; set; }
+        public long OrderId { get; set; }
 
         public virtual Order Order { get; set; }
     }

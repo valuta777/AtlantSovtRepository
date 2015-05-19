@@ -31,6 +31,8 @@ namespace AtlantSovt
         Cube cubeOrderAdd;
         Trailer trailerOrderAdd;
 
+        LoadingForm loadingForm1OrderAdd;
+        LoadingForm loadingForm2OrderAdd;
 
         DateTime orderDate;
         DateTime orderUploadDate;
@@ -362,5 +364,250 @@ namespace AtlantSovt
                 }
             }
         }
+
+        void SplitCargoOrderAdd()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = OrderAddCargoSelectComboBox.SelectedItem.ToString();
+                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedText[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                cargoOrderAdd = db.Cargoes.Find(id);
+            }
+        }
+        void LoadOrderAddCargoSelectComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from c in db.Cargoes
+                            orderby c.Id
+                            select c;
+                foreach (var item in query)
+                {
+                    OrderAddCargoSelectComboBox.Items.Add(item.Type + " [" + item.Id + "]");
+                }
+            }
+        }
+        void SplitFineForDelayOrderAdd()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = OrderAddFineForDelaySelectComboBox.SelectedItem.ToString();
+                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedText[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                fineForDelayOrderAdd = db.FineForDelays.Find(id);
+            }
+        }
+        void LoadOrderAddFineForDelaySelectComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from f in db.FineForDelays
+                            orderby f.Id
+                            select f;
+                foreach (var item in query)
+                {
+                    OrderAddFineForDelaySelectComboBox.Items.Add(item.Type + " [" + item.Id + "]");
+                }
+            }
+        }
+
+        void SplitTirCmrAddOrderAdd()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = OrderAddTirCmrSelectComboBox.SelectedItem.ToString();
+                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedText[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                tirCmrOrderAdd = db.TirCmrs.Find(id);
+            }
+        }
+        void LoadOrderAddTirCmrSelectComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from Tc in db.TirCmrs
+                            orderby Tc.Id
+                            select Tc;
+                foreach (var item in query)
+                {
+                    OrderAddTirCmrSelectComboBox.Items.Add(item.Type + " [" + item.Id + "]");
+                }
+            }
+        }
+        void SplitOrderDenyOrderAdd()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = OrderAddDenyFineSelectComboBox.SelectedItem.ToString();
+                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedText[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                orderDenyOrderAdd = db.OrderDenies.Find(id);
+            }
+        }
+        void LoadOrderAddDenyFineSelectComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from od in db.OrderDenies
+                            orderby od.Id
+                            select od;
+                foreach (var item in query)
+                {
+                    OrderAddDenyFineSelectComboBox.Items.Add(item.Type + " [" + item.Id + "]");
+                }
+            }
+        }
+        
+        void SplitPaymentOrderAdd()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = OrderAddPaymentTermsSelectComboBox.SelectedItem.ToString();
+                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedText[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                paymentOrderAdd = db.Payments.Find(id);
+            }
+        }
+        void LoadOrderAddPaymentSelectComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from p in db.Payments
+                            orderby p.Id
+                            select p;
+                foreach (var item in query)
+                {
+                    OrderAddPaymentTermsSelectComboBox.Items.Add(item.Type + " [" + item.Id + "]");
+                }
+            }
+        }
+        void SplitRegularyDelayOrderAdd()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = OrderAddRegularyDelaySelectComboBox.SelectedItem.ToString();
+                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedText[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                regularyDelayOrderAdd = db.RegularyDelays.Find(id);
+            }
+        }
+        void LoadOrderAddRegularyDelaySelectComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from rd in db.RegularyDelays
+                            orderby rd.Id
+                            select rd;
+                foreach (var item in query)
+                {
+                    OrderAddRegularyDelaySelectComboBox.Items.Add(item.Type + " [" + item.Id + "]");
+                }
+            }
+        }
+        void SplitCubeOrderAdd()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = OrderAddCubeSelectComboBox.SelectedItem.ToString();
+                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedText[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                cubeOrderAdd = db.Cubes.Find(id);
+            }
+        }
+        void LoadOrderAddCubeSelectComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from c in db.Cubes
+                            orderby c.Id
+                            select c;
+                foreach (var item in query)
+                {
+                    OrderAddCubeSelectComboBox.Items.Add(item.Type + " [" + item.Id + "]");
+                }
+            }
+        }
+        void SplitTrailerOrderAdd()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = OrderAddTrailerSelectComboBox.SelectedItem.ToString();
+                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedText[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                trailerOrderAdd = db.Trailers.Find(id);
+            }
+        }
+        void LoadOrderAddTrailerSelectComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from t in db.Trailers
+                            orderby t.Id
+                            select t;
+                foreach (var item in query)
+                {
+                    OrderAddTrailerSelectComboBox.Items.Add(item.Type + " [" + item.Id + "]");
+                }
+            }
+        }
+
+        void SplitLoadingForm1OrderAdd()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = OrderAddLoadingForm1SelectComboBox.SelectedItem.ToString();
+                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedText[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                loadingForm1OrderAdd = db.LoadingForms.Find(id);
+            }
+        }
+        void SplitLoadingForm2OrderAdd()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = OrderAddLoadingForm2SelectComboBox.SelectedItem.ToString();
+                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedText[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                loadingForm2OrderAdd = db.LoadingForms.Find(id);
+            }
+        }
+        void LoadOrderAddLoadingForm1SelectComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from lf in db.LoadingForms
+                            orderby lf.Id
+                            select lf;
+                foreach (var item in query)
+                {
+                    OrderAddLoadingForm1SelectComboBox.Items.Add(item.Type + " [" + item.Id + "]");
+                }
+            }
+        }
+        void LoadOrderAddLoadingForm2SelectComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from lf in db.LoadingForms
+                            orderby lf.Id
+                            select lf;
+                foreach (var item in query)
+                {
+                    OrderAddLoadingForm2SelectComboBox.Items.Add(item.Type + " [" + item.Id + "]");
+                }
+            }
+        }
+
     }
 }
