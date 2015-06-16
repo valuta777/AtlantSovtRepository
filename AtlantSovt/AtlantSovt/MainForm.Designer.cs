@@ -52,16 +52,16 @@
             this.ukrOrderStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.addOrderUkrStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.updateOrderUkrStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.trackingOrderUkrStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteOrderUkrStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.trackingOrderUkrStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.intOrderStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.addOrderIntStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.trackingOrderIntStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.updateOrderIntStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteOrderIntStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.trackingOrderIntStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.dataControl = new System.Windows.Forms.TabControl();
             this.helloPage = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.helloPictureBox = new System.Windows.Forms.PictureBox();
             this.showClientPage = new System.Windows.Forms.TabPage();
             this.clientShowSearchButton = new System.Windows.Forms.Button();
             this.clientShowSearchTextBox = new System.Windows.Forms.TextBox();
@@ -141,12 +141,12 @@
             this.showForwarderPage = new System.Windows.Forms.TabPage();
             this.label31 = new System.Windows.Forms.Label();
             this.forwarderBankDetailsDataGridView = new System.Windows.Forms.DataGridView();
-            this.label32 = new System.Windows.Forms.Label();
             this.forwarderCommentRichTextBox = new System.Windows.Forms.RichTextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.forwarderContactsDataGridView = new System.Windows.Forms.DataGridView();
             this.label34 = new System.Windows.Forms.Label();
             this.forwarderDataGridView = new System.Windows.Forms.DataGridView();
+            this.label32 = new System.Windows.Forms.Label();
             this.addForwarderPage = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.workDocumentForwarderComboBox = new System.Windows.Forms.ComboBox();
@@ -309,7 +309,6 @@
             this.label51 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.firstPersonActivityComboBox = new System.Windows.Forms.ComboBox();
             this.label37 = new System.Windows.Forms.Label();
             this.firstPersonDiapasonComboBox = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
@@ -387,17 +386,25 @@
             this.label58 = new System.Windows.Forms.Label();
             this.OrderAddTransporterDiapasoneComboBox = new System.Windows.Forms.ComboBox();
             this.OrderAddForwarder2SelectComboBox = new System.Windows.Forms.ComboBox();
+            this.showTrackingPage = new System.Windows.Forms.TabPage();
+            this.showTrackingDataSwitcher = new System.Windows.Forms.CheckBox();
+            this.showTrackingDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.trackingLabel1 = new System.Windows.Forms.Label();
+            this.trackingShowTransporterContactsDataGridView = new System.Windows.Forms.DataGridView();
+            this.trackingLabel2 = new System.Windows.Forms.Label();
+            this.trackingShowSearchButton = new System.Windows.Forms.Button();
+            this.trackingShowSearchTextBox = new System.Windows.Forms.TextBox();
+            this.trackingShowDataGridView = new System.Windows.Forms.DataGridView();
             this.labelshow57 = new System.Windows.Forms.Label();
             this.labelshow58 = new System.Windows.Forms.Label();
             this.labelshow67 = new System.Windows.Forms.Label();
             this.labelshow68 = new System.Windows.Forms.Label();
             this.labelshow69 = new System.Windows.Forms.Label();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
-            this.showTrackingPage = new System.Windows.Forms.TabPage();
             this.menuStrip.SuspendLayout();
             this.dataControl.SuspendLayout();
             this.helloPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helloPictureBox)).BeginInit();
             this.showClientPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBankDetailsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientContactsDataGridView)).BeginInit();
@@ -458,6 +465,9 @@
             this.splitContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.showTrackingPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowTransporterContactsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -484,6 +494,7 @@
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
             this.clientToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.clientToolStripMenuItem.Text = "Клієнт";
+            this.clientToolStripMenuItem.Click += new System.EventHandler(this.clientToolStripMenuItem_Click);
             // 
             // showClientsStrip
             // 
@@ -523,6 +534,7 @@
             this.trasporterToolStripMenuItem.Name = "trasporterToolStripMenuItem";
             this.trasporterToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.trasporterToolStripMenuItem.Text = "Перевізник";
+            this.trasporterToolStripMenuItem.Click += new System.EventHandler(this.trasporterToolStripMenuItem_Click);
             // 
             // showTransporterStrip
             // 
@@ -562,32 +574,33 @@
             this.forwarderToolStripMenuItem.Name = "forwarderToolStripMenuItem";
             this.forwarderToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.forwarderToolStripMenuItem.Text = "Експедитор";
+            this.forwarderToolStripMenuItem.Click += new System.EventHandler(this.forwarderToolStripMenuItem_Click);
             // 
             // showForwarderStrip
             // 
             this.showForwarderStrip.Name = "showForwarderStrip";
-            this.showForwarderStrip.Size = new System.Drawing.Size(152, 22);
+            this.showForwarderStrip.Size = new System.Drawing.Size(145, 22);
             this.showForwarderStrip.Text = "Переглянути";
             this.showForwarderStrip.Click += new System.EventHandler(this.showForwarderStrip_Click);
             // 
             // addForwarderStrip
             // 
             this.addForwarderStrip.Name = "addForwarderStrip";
-            this.addForwarderStrip.Size = new System.Drawing.Size(152, 22);
+            this.addForwarderStrip.Size = new System.Drawing.Size(145, 22);
             this.addForwarderStrip.Text = "Додати";
             this.addForwarderStrip.Click += new System.EventHandler(this.addForwarderStrip_Click);
             // 
             // updateForwarderStrip
             // 
             this.updateForwarderStrip.Name = "updateForwarderStrip";
-            this.updateForwarderStrip.Size = new System.Drawing.Size(152, 22);
+            this.updateForwarderStrip.Size = new System.Drawing.Size(145, 22);
             this.updateForwarderStrip.Text = "Змінити";
             this.updateForwarderStrip.Click += new System.EventHandler(this.updateForwarderStrip_Click);
             // 
             // deleteForwarderStrip
             // 
             this.deleteForwarderStrip.Name = "deleteForwarderStrip";
-            this.deleteForwarderStrip.Size = new System.Drawing.Size(152, 22);
+            this.deleteForwarderStrip.Size = new System.Drawing.Size(145, 22);
             this.deleteForwarderStrip.Text = "Видалити";
             this.deleteForwarderStrip.Click += new System.EventHandler(this.deleteForwarderStrip_Click);
             // 
@@ -599,6 +612,7 @@
             this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
             this.documentationToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.documentationToolStripMenuItem.Text = "Документація";
+            this.documentationToolStripMenuItem.Click += new System.EventHandler(this.documentationToolStripMenuItem_Click_1);
             // 
             // documentationUkrStrip
             // 
@@ -621,6 +635,7 @@
             this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
             this.orderToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.orderToolStripMenuItem.Text = "Заявка";
+            this.orderToolStripMenuItem.Click += new System.EventHandler(this.orderToolStripMenuItem_Click);
             // 
             // ukrOrderStrip
             // 
@@ -646,6 +661,12 @@
             this.updateOrderUkrStrip.Size = new System.Drawing.Size(152, 22);
             this.updateOrderUkrStrip.Text = "Змінити";
             // 
+            // deleteOrderUkrStrip
+            // 
+            this.deleteOrderUkrStrip.Name = "deleteOrderUkrStrip";
+            this.deleteOrderUkrStrip.Size = new System.Drawing.Size(152, 22);
+            this.deleteOrderUkrStrip.Text = "Видалити";
+            // 
             // trackingOrderUkrStrip
             // 
             this.trackingOrderUkrStrip.Name = "trackingOrderUkrStrip";
@@ -653,19 +674,13 @@
             this.trackingOrderUkrStrip.Text = "Відстежити";
             this.trackingOrderUkrStrip.Click += new System.EventHandler(this.trackingOrderUkrStrip_Click);
             // 
-            // deleteOrderUkrStrip
-            // 
-            this.deleteOrderUkrStrip.Name = "deleteOrderUkrStrip";
-            this.deleteOrderUkrStrip.Size = new System.Drawing.Size(152, 22);
-            this.deleteOrderUkrStrip.Text = "Видалити";
-            // 
             // intOrderStrip
             // 
             this.intOrderStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addOrderIntStrip,
-            this.trackingOrderIntStrip,
             this.updateOrderIntStrip,
-            this.deleteOrderIntStrip});
+            this.deleteOrderIntStrip,
+            this.trackingOrderIntStrip});
             this.intOrderStrip.Name = "intOrderStrip";
             this.intOrderStrip.Size = new System.Drawing.Size(152, 22);
             this.intOrderStrip.Text = "Закордон";
@@ -673,26 +688,26 @@
             // addOrderIntStrip
             // 
             this.addOrderIntStrip.Name = "addOrderIntStrip";
-            this.addOrderIntStrip.Size = new System.Drawing.Size(135, 22);
+            this.addOrderIntStrip.Size = new System.Drawing.Size(152, 22);
             this.addOrderIntStrip.Text = "Додати";
-            // 
-            // trackingOrderIntStrip
-            // 
-            this.trackingOrderIntStrip.Name = "trackingOrderIntStrip";
-            this.trackingOrderIntStrip.Size = new System.Drawing.Size(135, 22);
-            this.trackingOrderIntStrip.Text = "Відстежити";
             // 
             // updateOrderIntStrip
             // 
             this.updateOrderIntStrip.Name = "updateOrderIntStrip";
-            this.updateOrderIntStrip.Size = new System.Drawing.Size(135, 22);
+            this.updateOrderIntStrip.Size = new System.Drawing.Size(152, 22);
             this.updateOrderIntStrip.Text = "Змінити";
             // 
             // deleteOrderIntStrip
             // 
             this.deleteOrderIntStrip.Name = "deleteOrderIntStrip";
-            this.deleteOrderIntStrip.Size = new System.Drawing.Size(135, 22);
+            this.deleteOrderIntStrip.Size = new System.Drawing.Size(152, 22);
             this.deleteOrderIntStrip.Text = "Видалити";
+            // 
+            // trackingOrderIntStrip
+            // 
+            this.trackingOrderIntStrip.Name = "trackingOrderIntStrip";
+            this.trackingOrderIntStrip.Size = new System.Drawing.Size(152, 22);
+            this.trackingOrderIntStrip.Text = "Відстежити";
             // 
             // dataControl
             // 
@@ -725,23 +740,23 @@
             // helloPage
             // 
             this.helloPage.BackColor = System.Drawing.Color.White;
-            this.helloPage.Controls.Add(this.pictureBox1);
+            this.helloPage.Controls.Add(this.helloPictureBox);
             this.helloPage.Location = new System.Drawing.Point(4, 25);
             this.helloPage.Name = "helloPage";
             this.helloPage.Size = new System.Drawing.Size(776, 508);
             this.helloPage.TabIndex = 4;
             this.helloPage.Text = "Hello";
             // 
-            // pictureBox1
+            // helloPictureBox
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 508);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.helloPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.helloPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("helloPictureBox.Image")));
+            this.helloPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.helloPictureBox.Name = "helloPictureBox";
+            this.helloPictureBox.Size = new System.Drawing.Size(776, 508);
+            this.helloPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.helloPictureBox.TabIndex = 0;
+            this.helloPictureBox.TabStop = false;
             // 
             // showClientPage
             // 
@@ -1690,12 +1705,12 @@
             // 
             this.showForwarderPage.Controls.Add(this.label31);
             this.showForwarderPage.Controls.Add(this.forwarderBankDetailsDataGridView);
-            this.showForwarderPage.Controls.Add(this.label32);
             this.showForwarderPage.Controls.Add(this.forwarderCommentRichTextBox);
             this.showForwarderPage.Controls.Add(this.label33);
             this.showForwarderPage.Controls.Add(this.forwarderContactsDataGridView);
             this.showForwarderPage.Controls.Add(this.label34);
             this.showForwarderPage.Controls.Add(this.forwarderDataGridView);
+            this.showForwarderPage.Controls.Add(this.label32);
             this.showForwarderPage.Location = new System.Drawing.Point(4, 25);
             this.showForwarderPage.Name = "showForwarderPage";
             this.showForwarderPage.Size = new System.Drawing.Size(776, 508);
@@ -1728,17 +1743,6 @@
             this.forwarderBankDetailsDataGridView.Size = new System.Drawing.Size(776, 56);
             this.forwarderBankDetailsDataGridView.TabIndex = 15;
             this.forwarderBankDetailsDataGridView.TabStop = false;
-            // 
-            // label32
-            // 
-            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(5, 437);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(77, 21);
-            this.label32.TabIndex = 14;
-            this.label32.Text = "Примітка";
             // 
             // forwarderCommentRichTextBox
             // 
@@ -1804,6 +1808,17 @@
             this.forwarderDataGridView.TabIndex = 9;
             this.forwarderDataGridView.TabStop = false;
             this.forwarderDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.forwarderDataGridView_CellMouseClick);
+            // 
+            // label32
+            // 
+            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(5, 437);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(77, 21);
+            this.label32.TabIndex = 14;
+            this.label32.Text = "Примітка";
             // 
             // addForwarderPage
             // 
@@ -3325,7 +3340,7 @@
             this.transporterUpdateCountriesAndVehicleUpdateButton.Name = "transporterUpdateCountriesAndVehicleUpdateButton";
             this.transporterUpdateCountriesAndVehicleUpdateButton.Size = new System.Drawing.Size(237, 30);
             this.transporterUpdateCountriesAndVehicleUpdateButton.TabIndex = 145;
-            this.transporterUpdateCountriesAndVehicleUpdateButton.Text = "Змінити країни";
+            this.transporterUpdateCountriesAndVehicleUpdateButton.Text = "Змінити країни та тип транспортеру";
             this.transporterUpdateCountriesAndVehicleUpdateButton.UseVisualStyleBackColor = true;
             this.transporterUpdateCountriesAndVehicleUpdateButton.Click += new System.EventHandler(this.transporterUpdateCountriesAndVehicleUpdateButton_Click);
             // 
@@ -3771,7 +3786,6 @@
             this.documentationPage.Controls.Add(this.label51);
             this.documentationPage.Controls.Add(this.label39);
             this.documentationPage.Controls.Add(this.label38);
-            this.documentationPage.Controls.Add(this.firstPersonActivityComboBox);
             this.documentationPage.Controls.Add(this.label37);
             this.documentationPage.Controls.Add(this.firstPersonDiapasonComboBox);
             this.documentationPage.Controls.Add(this.label28);
@@ -3826,7 +3840,7 @@
             this.secondPersonNameComboBox.Enabled = false;
             this.secondPersonNameComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.secondPersonNameComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.secondPersonNameComboBox.Location = new System.Drawing.Point(42, 205);
+            this.secondPersonNameComboBox.Location = new System.Drawing.Point(42, 187);
             this.secondPersonNameComboBox.Name = "secondPersonNameComboBox";
             this.secondPersonNameComboBox.Size = new System.Drawing.Size(548, 29);
             this.secondPersonNameComboBox.Sorted = true;
@@ -3840,7 +3854,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label51.Location = new System.Drawing.Point(38, 178);
+            this.label51.Location = new System.Drawing.Point(38, 160);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(96, 21);
             this.label51.TabIndex = 84;
@@ -3852,7 +3866,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label39.Location = new System.Drawing.Point(6, 178);
+            this.label39.Location = new System.Drawing.Point(6, 160);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(33, 21);
             this.label39.TabIndex = 83;
@@ -3864,27 +3878,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label38.Location = new System.Drawing.Point(8, 72);
+            this.label38.Location = new System.Drawing.Point(6, 55);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(33, 21);
             this.label38.TabIndex = 82;
             this.label38.Text = "1 - ";
-            // 
-            // firstPersonActivityComboBox
-            // 
-            this.firstPersonActivityComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.firstPersonActivityComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.firstPersonActivityComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.firstPersonActivityComboBox.Items.AddRange(new object[] {
-            "Клієнт",
-            "Перевізник",
-            "Експедитор"});
-            this.firstPersonActivityComboBox.Location = new System.Drawing.Point(42, 69);
-            this.firstPersonActivityComboBox.Name = "firstPersonActivityComboBox";
-            this.firstPersonActivityComboBox.Size = new System.Drawing.Size(550, 29);
-            this.firstPersonActivityComboBox.TabIndex = 80;
-            this.firstPersonActivityComboBox.SelectedIndexChanged += new System.EventHandler(this.firstPersonActivityComboBox_SelectedIndexChanged);
-            this.firstPersonActivityComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.firstPersonActivityComboBox_MouseClick);
             // 
             // label37
             // 
@@ -3892,19 +3890,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label37.Location = new System.Drawing.Point(3, 45);
+            this.label37.Location = new System.Drawing.Point(40, 55);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(183, 21);
+            this.label37.Size = new System.Drawing.Size(94, 21);
             this.label37.TabIndex = 79;
-            this.label37.Text = "Виберіть вид діяльності:";
+            this.label37.Text = "Перевізник:";
             // 
             // firstPersonDiapasonComboBox
             // 
             this.firstPersonDiapasonComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.firstPersonDiapasonComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.firstPersonDiapasonComboBox.Enabled = false;
             this.firstPersonDiapasonComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.firstPersonDiapasonComboBox.Location = new System.Drawing.Point(42, 125);
+            this.firstPersonDiapasonComboBox.Location = new System.Drawing.Point(42, 109);
             this.firstPersonDiapasonComboBox.Name = "firstPersonDiapasonComboBox";
             this.firstPersonDiapasonComboBox.Size = new System.Drawing.Size(188, 29);
             this.firstPersonDiapasonComboBox.TabIndex = 78;
@@ -3914,7 +3911,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label28.Location = new System.Drawing.Point(40, 101);
+            this.label28.Location = new System.Drawing.Point(40, 85);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(140, 21);
             this.label28.TabIndex = 77;
@@ -3926,7 +3923,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.personNameLabel.AutoSize = true;
             this.personNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.personNameLabel.Location = new System.Drawing.Point(199, 101);
+            this.personNameLabel.Location = new System.Drawing.Point(199, 85);
             this.personNameLabel.Name = "personNameLabel";
             this.personNameLabel.Size = new System.Drawing.Size(0, 21);
             this.personNameLabel.TabIndex = 76;
@@ -3940,7 +3937,7 @@
             this.firstPersonNameComboBox.Enabled = false;
             this.firstPersonNameComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.firstPersonNameComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.firstPersonNameComboBox.Location = new System.Drawing.Point(236, 125);
+            this.firstPersonNameComboBox.Location = new System.Drawing.Point(236, 109);
             this.firstPersonNameComboBox.Name = "firstPersonNameComboBox";
             this.firstPersonNameComboBox.Size = new System.Drawing.Size(492, 29);
             this.firstPersonNameComboBox.Sorted = true;
@@ -4105,7 +4102,7 @@
             // 
             this.OrderAddOrderDenyAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddOrderDenyAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddOrderDenyAddButton.Image")));
-            this.OrderAddOrderDenyAddButton.Location = new System.Drawing.Point(352, 23);
+            this.OrderAddOrderDenyAddButton.Location = new System.Drawing.Point(364, 23);
             this.OrderAddOrderDenyAddButton.Name = "OrderAddOrderDenyAddButton";
             this.OrderAddOrderDenyAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddOrderDenyAddButton.TabIndex = 140;
@@ -4119,7 +4116,7 @@
             this.OrderAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddButton.Location = new System.Drawing.Point(8, 59);
             this.OrderAddButton.Name = "OrderAddButton";
-            this.OrderAddButton.Size = new System.Drawing.Size(381, 45);
+            this.OrderAddButton.Size = new System.Drawing.Size(393, 45);
             this.OrderAddButton.TabIndex = 139;
             this.OrderAddButton.Text = "Сформувати";
             this.OrderAddButton.UseVisualStyleBackColor = true;
@@ -4148,7 +4145,7 @@
             "зад"});
             this.OrderAddDenyFineSelectComboBox.Location = new System.Drawing.Point(7, 24);
             this.OrderAddDenyFineSelectComboBox.Name = "OrderAddDenyFineSelectComboBox";
-            this.OrderAddDenyFineSelectComboBox.Size = new System.Drawing.Size(337, 29);
+            this.OrderAddDenyFineSelectComboBox.Size = new System.Drawing.Size(349, 29);
             this.OrderAddDenyFineSelectComboBox.Sorted = true;
             this.OrderAddDenyFineSelectComboBox.TabIndex = 136;
             // 
@@ -4329,7 +4326,7 @@
             "зад"});
             this.OrderAddLoadingForm2SelectComboBox.Location = new System.Drawing.Point(6, 83);
             this.OrderAddLoadingForm2SelectComboBox.Name = "OrderAddLoadingForm2SelectComboBox";
-            this.OrderAddLoadingForm2SelectComboBox.Size = new System.Drawing.Size(178, 29);
+            this.OrderAddLoadingForm2SelectComboBox.Size = new System.Drawing.Size(196, 29);
             this.OrderAddLoadingForm2SelectComboBox.Sorted = true;
             this.OrderAddLoadingForm2SelectComboBox.TabIndex = 130;
             // 
@@ -4357,7 +4354,7 @@
             "зад"});
             this.OrderAddLoadingForm1SelectComboBox.Location = new System.Drawing.Point(8, 21);
             this.OrderAddLoadingForm1SelectComboBox.Name = "OrderAddLoadingForm1SelectComboBox";
-            this.OrderAddLoadingForm1SelectComboBox.Size = new System.Drawing.Size(176, 29);
+            this.OrderAddLoadingForm1SelectComboBox.Size = new System.Drawing.Size(194, 29);
             this.OrderAddLoadingForm1SelectComboBox.Sorted = true;
             this.OrderAddLoadingForm1SelectComboBox.TabIndex = 128;
             // 
@@ -4490,7 +4487,7 @@
             this.OrderAddTrailerSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddTrailerSelectComboBox.Location = new System.Drawing.Point(9, 83);
             this.OrderAddTrailerSelectComboBox.Name = "OrderAddTrailerSelectComboBox";
-            this.OrderAddTrailerSelectComboBox.Size = new System.Drawing.Size(146, 29);
+            this.OrderAddTrailerSelectComboBox.Size = new System.Drawing.Size(164, 29);
             this.OrderAddTrailerSelectComboBox.Sorted = true;
             this.OrderAddTrailerSelectComboBox.TabIndex = 135;
             // 
@@ -4510,7 +4507,7 @@
             // 
             this.OrderAddTrailerAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddTrailerAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddTrailerAddButton.Image")));
-            this.OrderAddTrailerAddButton.Location = new System.Drawing.Point(163, 82);
+            this.OrderAddTrailerAddButton.Location = new System.Drawing.Point(181, 82);
             this.OrderAddTrailerAddButton.Name = "OrderAddTrailerAddButton";
             this.OrderAddTrailerAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddTrailerAddButton.TabIndex = 134;
@@ -4528,7 +4525,7 @@
             this.OrderAddCubeSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddCubeSelectComboBox.Location = new System.Drawing.Point(9, 21);
             this.OrderAddCubeSelectComboBox.Name = "OrderAddCubeSelectComboBox";
-            this.OrderAddCubeSelectComboBox.Size = new System.Drawing.Size(146, 29);
+            this.OrderAddCubeSelectComboBox.Size = new System.Drawing.Size(164, 29);
             this.OrderAddCubeSelectComboBox.Sorted = true;
             this.OrderAddCubeSelectComboBox.TabIndex = 132;
             // 
@@ -4548,7 +4545,7 @@
             // 
             this.OrderAddCubeAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddCubeAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddCubeAddButton.Image")));
-            this.OrderAddCubeAddButton.Location = new System.Drawing.Point(161, 20);
+            this.OrderAddCubeAddButton.Location = new System.Drawing.Point(179, 20);
             this.OrderAddCubeAddButton.Name = "OrderAddCubeAddButton";
             this.OrderAddCubeAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddCubeAddButton.TabIndex = 131;
@@ -4667,7 +4664,7 @@
             this.OrderAddDeliveryAddressAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddDeliveryAddressAddButton.Location = new System.Drawing.Point(6, 8);
             this.OrderAddDeliveryAddressAddButton.Name = "OrderAddDeliveryAddressAddButton";
-            this.OrderAddDeliveryAddressAddButton.Size = new System.Drawing.Size(187, 30);
+            this.OrderAddDeliveryAddressAddButton.Size = new System.Drawing.Size(205, 30);
             this.OrderAddDeliveryAddressAddButton.TabIndex = 123;
             this.OrderAddDeliveryAddressAddButton.Text = "Розвантаження";
             this.OrderAddDeliveryAddressAddButton.UseVisualStyleBackColor = true;
@@ -4681,7 +4678,7 @@
             this.OrderAddDeliveryDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.OrderAddDeliveryDateTimePicker.Location = new System.Drawing.Point(6, 65);
             this.OrderAddDeliveryDateTimePicker.Name = "OrderAddDeliveryDateTimePicker";
-            this.OrderAddDeliveryDateTimePicker.Size = new System.Drawing.Size(178, 29);
+            this.OrderAddDeliveryDateTimePicker.Size = new System.Drawing.Size(196, 29);
             this.OrderAddDeliveryDateTimePicker.TabIndex = 125;
             this.OrderAddDeliveryDateTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
             this.OrderAddDeliveryDateTimePicker.CloseUp += new System.EventHandler(this.OrderAddDeliveryDateTimePicker_CloseUp);
@@ -4767,7 +4764,7 @@
             this.OrderAddUncustomsAddressAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddUncustomsAddressAddButton.Location = new System.Drawing.Point(9, 8);
             this.OrderAddUncustomsAddressAddButton.Name = "OrderAddUncustomsAddressAddButton";
-            this.OrderAddUncustomsAddressAddButton.Size = new System.Drawing.Size(180, 30);
+            this.OrderAddUncustomsAddressAddButton.Size = new System.Drawing.Size(198, 30);
             this.OrderAddUncustomsAddressAddButton.TabIndex = 129;
             this.OrderAddUncustomsAddressAddButton.Text = "Розмитнення";
             this.OrderAddUncustomsAddressAddButton.UseVisualStyleBackColor = true;
@@ -4984,6 +4981,124 @@
             this.OrderAddForwarder2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddForwarder2SelectComboBox_SelectedIndexChanged);
             this.OrderAddForwarder2SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddForwarder2SelectComboBox_MouseClick);
             // 
+            // showTrackingPage
+            // 
+            this.showTrackingPage.Controls.Add(this.showTrackingDataSwitcher);
+            this.showTrackingPage.Controls.Add(this.showTrackingDateTimePicker);
+            this.showTrackingPage.Controls.Add(this.trackingLabel1);
+            this.showTrackingPage.Controls.Add(this.trackingShowTransporterContactsDataGridView);
+            this.showTrackingPage.Controls.Add(this.trackingLabel2);
+            this.showTrackingPage.Controls.Add(this.trackingShowSearchButton);
+            this.showTrackingPage.Controls.Add(this.trackingShowSearchTextBox);
+            this.showTrackingPage.Controls.Add(this.trackingShowDataGridView);
+            this.showTrackingPage.Location = new System.Drawing.Point(4, 25);
+            this.showTrackingPage.Name = "showTrackingPage";
+            this.showTrackingPage.Size = new System.Drawing.Size(776, 508);
+            this.showTrackingPage.TabIndex = 16;
+            this.showTrackingPage.Text = "showTrackingPage";
+            this.showTrackingPage.UseVisualStyleBackColor = true;
+            // 
+            // showTrackingDataSwitcher
+            // 
+            this.showTrackingDataSwitcher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.showTrackingDataSwitcher.AutoSize = true;
+            this.showTrackingDataSwitcher.Location = new System.Drawing.Point(563, 35);
+            this.showTrackingDataSwitcher.Name = "showTrackingDataSwitcher";
+            this.showTrackingDataSwitcher.Size = new System.Drawing.Size(15, 14);
+            this.showTrackingDataSwitcher.TabIndex = 52;
+            this.showTrackingDataSwitcher.UseVisualStyleBackColor = true;
+            this.showTrackingDataSwitcher.CheckedChanged += new System.EventHandler(this.showTrackingDataSwitcher_CheckedChanged);
+            // 
+            // showTrackingDateTimePicker
+            // 
+            this.showTrackingDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.showTrackingDateTimePicker.CustomFormat = "MMMM yyyy";
+            this.showTrackingDateTimePicker.Enabled = false;
+            this.showTrackingDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.showTrackingDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.showTrackingDateTimePicker.Location = new System.Drawing.Point(407, 29);
+            this.showTrackingDateTimePicker.Name = "showTrackingDateTimePicker";
+            this.showTrackingDateTimePicker.Size = new System.Drawing.Size(151, 25);
+            this.showTrackingDateTimePicker.TabIndex = 51;
+            this.showTrackingDateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // trackingLabel1
+            // 
+            this.trackingLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingLabel1.AutoSize = true;
+            this.trackingLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trackingLabel1.Location = new System.Drawing.Point(3, 186);
+            this.trackingLabel1.Name = "trackingLabel1";
+            this.trackingLabel1.Size = new System.Drawing.Size(205, 21);
+            this.trackingLabel1.TabIndex = 50;
+            this.trackingLabel1.Text = "Контактні дані перевізника";
+            // 
+            // trackingShowTransporterContactsDataGridView
+            // 
+            this.trackingShowTransporterContactsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingShowTransporterContactsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.trackingShowTransporterContactsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.trackingShowTransporterContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.trackingShowTransporterContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.trackingShowTransporterContactsDataGridView.Location = new System.Drawing.Point(0, 207);
+            this.trackingShowTransporterContactsDataGridView.Name = "trackingShowTransporterContactsDataGridView";
+            this.trackingShowTransporterContactsDataGridView.Size = new System.Drawing.Size(776, 81);
+            this.trackingShowTransporterContactsDataGridView.TabIndex = 49;
+            this.trackingShowTransporterContactsDataGridView.TabStop = false;
+            // 
+            // trackingLabel2
+            // 
+            this.trackingLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingLabel2.AutoSize = true;
+            this.trackingLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trackingLabel2.Location = new System.Drawing.Point(3, 3);
+            this.trackingLabel2.Name = "trackingLabel2";
+            this.trackingLabel2.Size = new System.Drawing.Size(100, 21);
+            this.trackingLabel2.TabIndex = 48;
+            this.trackingLabel2.Text = "Відстеження";
+            // 
+            // trackingShowSearchButton
+            // 
+            this.trackingShowSearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingShowSearchButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.trackingShowSearchButton.Location = new System.Drawing.Point(267, 26);
+            this.trackingShowSearchButton.Name = "trackingShowSearchButton";
+            this.trackingShowSearchButton.Size = new System.Drawing.Size(138, 30);
+            this.trackingShowSearchButton.TabIndex = 47;
+            this.trackingShowSearchButton.Text = "Знайти";
+            this.trackingShowSearchButton.UseVisualStyleBackColor = true;
+            this.trackingShowSearchButton.Click += new System.EventHandler(this.trackingShowSearchButton_Click);
+            // 
+            // trackingShowSearchTextBox
+            // 
+            this.trackingShowSearchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingShowSearchTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.trackingShowSearchTextBox.Location = new System.Drawing.Point(3, 27);
+            this.trackingShowSearchTextBox.Name = "trackingShowSearchTextBox";
+            this.trackingShowSearchTextBox.Size = new System.Drawing.Size(261, 29);
+            this.trackingShowSearchTextBox.TabIndex = 46;
+            this.trackingShowSearchTextBox.TextChanged += new System.EventHandler(this.trackingShowSearchTextBox_TextChanged);
+            // 
+            // trackingShowDataGridView
+            // 
+            this.trackingShowDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingShowDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.trackingShowDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.trackingShowDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.trackingShowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.trackingShowDataGridView.Location = new System.Drawing.Point(0, 62);
+            this.trackingShowDataGridView.Name = "trackingShowDataGridView";
+            this.trackingShowDataGridView.Size = new System.Drawing.Size(579, 120);
+            this.trackingShowDataGridView.TabIndex = 18;
+            this.trackingShowDataGridView.TabStop = false;
+            this.trackingShowDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.trackingShowDataGridView_CellMouseClick);
+            // 
             // labelshow57
             // 
             this.labelshow57.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -5042,15 +5157,6 @@
             this.labelshow69.TabIndex = 36;
             this.labelshow69.Text = "Країни";
             // 
-            // showTrackingPage
-            // 
-            this.showTrackingPage.Location = new System.Drawing.Point(4, 25);
-            this.showTrackingPage.Name = "showTrackingPage";
-            this.showTrackingPage.Size = new System.Drawing.Size(776, 508);
-            this.showTrackingPage.TabIndex = 16;
-            this.showTrackingPage.Text = "showTrackingPage";
-            this.showTrackingPage.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5069,7 +5175,7 @@
             this.menuStrip.PerformLayout();
             this.dataControl.ResumeLayout(false);
             this.helloPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helloPictureBox)).EndInit();
             this.showClientPage.ResumeLayout(false);
             this.showClientPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBankDetailsDataGridView)).EndInit();
@@ -5158,6 +5264,10 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.showTrackingPage.ResumeLayout(false);
+            this.showTrackingPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowTransporterContactsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5220,7 +5330,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView clientContactsDataGridView;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox helloPictureBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -5473,7 +5583,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ToolStripMenuItem documentationToolStripMenuItem;
         private System.Windows.Forms.TabPage documentationPage;
-        private System.Windows.Forms.ComboBox firstPersonActivityComboBox;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.ComboBox firstPersonDiapasonComboBox;
         private System.Windows.Forms.Label label28;
@@ -5573,6 +5682,14 @@
         private System.Windows.Forms.Button OrderAddPaymentTermsAddButton;
         private System.Windows.Forms.Button OrderAddOrderDenyAddButton;
         private System.Windows.Forms.TabPage showTrackingPage;
+        private System.Windows.Forms.DataGridView trackingShowDataGridView;
+        private System.Windows.Forms.Label trackingLabel2;
+        private System.Windows.Forms.Button trackingShowSearchButton;
+        private System.Windows.Forms.TextBox trackingShowSearchTextBox;
+        private System.Windows.Forms.Label trackingLabel1;
+        private System.Windows.Forms.DataGridView trackingShowTransporterContactsDataGridView;
+        private System.Windows.Forms.DateTimePicker showTrackingDateTimePicker;
+        private System.Windows.Forms.CheckBox showTrackingDataSwitcher;
         }
 }
 

@@ -32,6 +32,7 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderDeny> OrderDenies { get; set; }
         public virtual DbSet<OrderLoadingForm> OrderLoadingForms { get; set; }
+        public virtual DbSet<OrderUploadAdress> OrderUploadAdresses { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
         public virtual DbSet<RegularyDelay> RegularyDelays { get; set; }
         public virtual DbSet<TaxPayerStatu> TaxPayerStatus { get; set; }
@@ -51,7 +52,6 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<OrderCustomsAddress> OrderCustomsAddresses { get; set; }
         public virtual DbSet<OrderDownloadAddress> OrderDownloadAddresses { get; set; }
         public virtual DbSet<OrderUnCustomsAddress> OrderUnCustomsAddresses { get; set; }
-        public virtual DbSet<OrderUploadAdress> OrderUploadAdresses { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -123,6 +123,11 @@ namespace AtlantSovt.AtlantSovtDb
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Order>()
+                .Property(e => e.YorU)
+                .IsFixedLength()
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Order>()
                 .Property(e => e.Freight)
                 .IsUnicode(false);
 
@@ -175,11 +180,6 @@ namespace AtlantSovt.AtlantSovtDb
                 .HasMany(e => e.Transporters)
                 .WithOptional(e => e.TaxPayerStatu)
                 .HasForeignKey(e => e.TaxPayerStatusId);
-
-            modelBuilder.Entity<TirCmr>()
-                .HasMany(e => e.Orders)
-                .WithOptional(e => e.TirCmr)
-                .HasForeignKey(e => e.AdrTurId);
 
             modelBuilder.Entity<Transporter>()
                 .HasOptional(e => e.Filter)

@@ -13,8 +13,10 @@ namespace AtlantSovt.AtlantSovtDb
         {
             ClientContacts = new HashSet<ClientContact>();
             ClientForwarderContracts = new HashSet<ClientForwarderContract>();
+            CustomsAddresses = new HashSet<CustomsAddress>();
             DownloadAddresses = new HashSet<DownloadAddress>();
             Orders = new HashSet<Order>();
+            UnCustomsAddresses = new HashSet<UnCustomsAddress>();
             UploadAddresses = new HashSet<UploadAddress>();
         }
 
@@ -53,9 +55,13 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual ICollection<ClientForwarderContract> ClientForwarderContracts { get; set; }
 
+        public virtual ICollection<CustomsAddress> CustomsAddresses { get; set; }
+
         public virtual ICollection<DownloadAddress> DownloadAddresses { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
+
+        public virtual ICollection<UnCustomsAddress> UnCustomsAddresses { get; set; }
 
         public virtual ICollection<UploadAddress> UploadAddresses { get; set; }
     }

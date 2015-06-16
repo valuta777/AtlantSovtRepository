@@ -148,27 +148,51 @@ namespace AtlantSovt
                 private void trackingOrderUkrStrip_Click(object sender, EventArgs e)
                 {
                     dataControl.SelectedIndex = 15;
+                    ShowTracking();
+                    trackingShowTransporterContactsDataGridView.Visible = false;
+                }
+
+                private void clientToolStripMenuItem_Click(object sender, EventArgs e)
+                {
+                    helloPictureBox.Image = null;
+                }
+
+                private void trasporterToolStripMenuItem_Click(object sender, EventArgs e)
+                {
+                    helloPictureBox.Image = null;
+                }
+
+                private void forwarderToolStripMenuItem_Click(object sender, EventArgs e)
+                {
+                    helloPictureBox.Image = null;
+                }
+
+                private void documentationToolStripMenuItem_Click_1(object sender, EventArgs e)
+                {
+                    helloPictureBox.Image = null;
+                }
+
+                private void orderToolStripMenuItem_Click(object sender, EventArgs e)
+                {
+                    helloPictureBox.Image = null;
                 }
                 #endregion
 
         //Client
         #region Client
+
                 //Show
                 #region Show
         private void showClientsStrip_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 1;
             ShowClient();
-            clientContactsDataGridView.Visible = false;
-            clientBankDetailsDataGridView.Visible = false;
-            clientCommentRichTextBox.Text = "";
         }
 
         private void clientDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowClientInfo();
         }
-
 
         private void clientShowSearchButton_Click(object sender, EventArgs e)
         {
@@ -633,9 +657,6 @@ namespace AtlantSovt
         {
             dataControl.SelectedIndex = 5;
             ShowForwarder();
-            forwarderContactsDataGridView.Visible = false;
-            forwarderBankDetailsDataGridView.Visible = false;
-            forwarderCommentRichTextBox.Text = "";
         }
         private void forwarderDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -1017,11 +1038,6 @@ namespace AtlantSovt
             {
                 dataControl.SelectedIndex = 9;
                 ShowTransporter();
-                transporterShowContactsDataGridView.Visible = false;
-                transporterShowBankDetailsDataGridView.Visible = false;
-                transporterShowCountryDataGridView.Visible = false;
-                transporterShowCountryDataGridView.Visible = false;
-                transporterShowCommentRichTextBox.Text = "";
             }
 
             private void transporterShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -1565,86 +1581,22 @@ namespace AtlantSovt
         //Documentation
         #region Documentation
 
-        private void firstPersonActivityComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            firstPersonDiapasonComboBox.Text = "";
-            firstPersonNameComboBox.Text = "";
-            firstPersonNameComboBox.Enabled = false;
-            firstPersonDiapasonComboBox.Enabled = true;
- 
-            switch(firstPersonActivityComboBox.SelectedIndex)
-            {
-                case 0:
-                    //personNameLabel.Text = "";
-                    personNameLabel.Text = "Виберіть клієнта";
-                    break;
-                case 1:
-                    //personNameLabel.Text = "";
-                    personNameLabel.Text = "Виберіть перевізника";
-                    break;
-                case 2:
-                    firstPersonDiapasonComboBox.Enabled = false;
-                    firstPersonNameComboBox.Enabled = true;
-                    //personNameLabel.Text = "";
-                    personNameLabel.Text = "Виберіть експедитора";
-                    break;
-            }
-        }
-
         private void firstPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (firstPersonActivityComboBox.SelectedIndex)
-            {
-                case 0:
-                    MessageBox.Show("Not ready yet!");
-                    break;
-                case 1:
-                    SplitTransporterFirstPersonComboBoxDocument();
-                    break;
-                case 2:
-                    MessageBox.Show("Not ready yet!");
-                    break;
-            }
-        }
-
-        private void firstPersonActivityComboBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            firstPersonActivityComboBox.DroppedDown = true;
+            SplitTransporterFirstPersonComboBoxDocument();
         }
 
         private void firstPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            switch (firstPersonActivityComboBox.SelectedIndex)
-            {
-                case 0:
-                    firstPersonNameComboBox.Items.Clear();
-                    LoadClientFirstPersonNameComboBox();
-                    break;
-                case 1:
-                    firstPersonNameComboBox.Items.Clear();
-                    LoadTransporterFirstPersonNameComboBox();
-                    break;
-                case 2:
-                    firstPersonNameComboBox.Items.Clear();
-                    LoadForwarderFirstPersonNameComboBox();
-                    break;
-            }
-
+            firstPersonNameComboBox.Items.Clear();
+            LoadTransporterFirstPersonNameComboBox();
             firstPersonNameComboBox.DroppedDown = true;
             secondPersonNameComboBox.Enabled = true;
         }
 
         private void firstPersonDiapasonComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            switch (firstPersonActivityComboBox.SelectedIndex)
-            {
-                case 0:
-                    LoadClientFirstPersonDiapasonCombobox();
-                    break;
-                case 1:
-                    LoadTransporterFirstPersonDiapasonCombobox();
-                    break;
-            }
+            LoadTransporterFirstPersonDiapasonCombobox();
         }
 
         private void secondPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -1662,18 +1614,7 @@ namespace AtlantSovt
 
         private void createContactButton_Click(object sender, EventArgs e)
         {
-            switch (firstPersonActivityComboBox.SelectedIndex)
-            {
-                case 0:
-                    MessageBox.Show("Not ready yet!");
-                    break;
-                case 1:
-                    CreateTransporterForwarderContract();
-                    break;
-                case 2:
-                    MessageBox.Show("Not ready yet!");
-                    break;
-            }
+            CreateTransporterForwarderContract();
         }
 
         #endregion
@@ -1682,6 +1623,43 @@ namespace AtlantSovt
         //Tracking
         #region Tracking
 
+        private void trackingShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ShowTrackingInfo();
+        }
+
+        private void trackingShowSearchButton_Click(object sender, EventArgs e)
+        {
+            ShowTrackingSearch();
+        }
+
+
+        private void trackingShowSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (trackingShowSearchTextBox.Text == "")
+            {
+                ShowTracking();
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            ShowTrackingSearch();
+        }
+
+        private void showTrackingDataSwitcher_CheckedChanged(object sender, EventArgs e)
+        {
+            if (showTrackingDataSwitcher.Checked == true)
+            {
+                showTrackingDateTimePicker.Enabled = true;
+                isDatePickerEnabled = true;
+            }
+            else
+            {
+                showTrackingDateTimePicker.Enabled = false;
+                isDatePickerEnabled = false;
+            }
+        }
         #endregion
 
         // Order
@@ -1839,9 +1817,7 @@ namespace AtlantSovt
 
         private void OrderAddUploadAddressAddButton_Click(object sender, EventArgs e)
         {
-          //  UploadAddressForm();
+            //  UploadAddressForm();
         }
-
-
     }
 }

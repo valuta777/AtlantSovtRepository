@@ -25,6 +25,10 @@ namespace AtlantSovt
 
         void ShowClient()
         {
+            clientContactsDataGridView.Visible = false;
+            clientBankDetailsDataGridView.Visible = false;
+            clientCommentRichTextBox.Text = "";
+
             using (var db = new AtlantSovtContext())
             {
                 var query =
@@ -128,6 +132,10 @@ namespace AtlantSovt
 
         void ShowClientSearch()
         {
+
+            clientContactsDataGridView.Visible = false;
+            clientBankDetailsDataGridView.Visible = false;
+            clientCommentRichTextBox.Text = "";
 
             var text = clientShowSearchTextBox.Text;
             using (var db = new AtlantSovtContext())

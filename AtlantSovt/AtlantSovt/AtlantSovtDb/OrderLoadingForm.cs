@@ -9,6 +9,8 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("OrderLoadingForm")]
     public partial class OrderLoadingForm
     {
+        [Key]
+        [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
 
@@ -16,6 +18,8 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long LoadingFormId { get; set; }
 
+        [Key]
+        [Column(Order = 1)]
         public bool IsFirst { get; set; }
 
         public virtual LoadingForm LoadingForm { get; set; }

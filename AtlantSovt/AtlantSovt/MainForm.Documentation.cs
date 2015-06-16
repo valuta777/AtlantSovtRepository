@@ -17,18 +17,6 @@ namespace AtlantSovt
         Forwarder forwarderFirstPersonDocument;
         Forwarder forwarderSecondPersonDocument;
 
-        void SplitClientFirstPersonComboBoxDocument()
-        {
-            using (var db = new AtlantSovtContext())
-            {
-                string comboboxText = firstPersonNameComboBox.SelectedItem.ToString();
-                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedNameAndDirector[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                clientFirstPersonDocument = db.Clients.Find(id);
-            }
-        }
-
         void SplitTransporterFirstPersonComboBoxDocument()
         {
             using (var db = new AtlantSovtContext())
@@ -41,18 +29,6 @@ namespace AtlantSovt
             }
         }
 
-        void SplitForwarderFirstPersonComboBoxDocument()
-        {
-            using (var db = new AtlantSovtContext())
-            {
-                string comboboxText = firstPersonNameComboBox.SelectedItem.ToString();
-                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedNameAndDirector[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                forwarderFirstPersonDocument = db.Forwarders.Find(id);
-            }
-        }
-
         void SplitForwarderSecondPersonComboBoxDocument()
         {
             using (var db = new AtlantSovtContext())
@@ -62,68 +38,6 @@ namespace AtlantSovt
                 string comboBoxSelectedId = selectedNameAndDirector[1];
                 long id = Convert.ToInt64(comboBoxSelectedId);
                 forwarderSecondPersonDocument = db.Forwarders.Find(id);
-            }
-        }
-
-        void LoadClientFirstPersonDiapasonCombobox()
-        {
-            firstPersonDiapasonComboBox.Items.Clear();
-            firstPersonNameComboBox.Items.Clear();
-            firstPersonNameComboBox.Text = "";
-            using (var db = new AtlantSovtContext())
-            {
-                int part = 1000;
-                double clientPart = 0;
-                if ((from c in db.Clients select c.Id).Count() != 0)
-                {
-                    long clientCount = (from c in db.Clients select c.Id).Max();
-                    if (clientCount % part == 0)
-                    {
-                        clientPart = clientCount / part;
-                    }
-                    else
-                    {
-                        clientPart = (clientCount / part) + 1;
-                    }
-
-                    for (int i = 0; i < clientPart; i++)
-                    {
-                        firstPersonDiapasonComboBox.Items.Add(((i * part) + 1) + " - " + ((i + 1) * part));
-                    }
-                    firstPersonDiapasonComboBox.DroppedDown = true;
-                    firstPersonNameComboBox.Enabled = true;
-
-                }
-                else
-                {
-                    MessageBox.Show("Немає жодних записів");
-                }
-            }
-        }
-
-        void LoadClientFirstPersonNameComboBox()
-        {
-            using (var db = new AtlantSovtContext())
-            {
-                if (firstPersonDiapasonComboBox.Text == "")
-                {
-                    MessageBox.Show("Ви не вибрали діапазон");
-                }
-                else
-                {
-                    string text = firstPersonDiapasonComboBox.SelectedItem.ToString();
-                    string[] diapasone = text.Split(new char[] { ' ' });
-                    int diapasoneFrom = Convert.ToInt32(diapasone[0]);
-                    int diapasoneTo = Convert.ToInt32(diapasone[2]);
-                    var query = from c in db.Clients
-                                orderby c.Id
-                                where c.Id >= diapasoneFrom && c.Id <= diapasoneTo
-                                select c;
-                    foreach (var item in query)
-                    {
-                        firstPersonNameComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
-                    }
-                }
             }
         }
 
@@ -185,20 +99,6 @@ namespace AtlantSovt
                     {
                         firstPersonNameComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
                     }
-                }
-            }
-        }
-
-        void LoadForwarderFirstPersonNameComboBox()
-        {
-            using (var db = new AtlantSovtContext())
-            {
-                var query = from f in db.Forwarders
-                            orderby f.Id
-                            select f;
-                foreach (var item in query)
-                {
-                    firstPersonNameComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
                 }
             }
         }
