@@ -13,11 +13,13 @@ using System.Windows.Forms;
 
 namespace AtlantSovt
 {
+
     public partial class MainForm : Form
     {
         public MainForm()
         {            
             InitializeComponent();
+            menuStrip.Renderer = new menuStripRenderer(); 
         }
             //Client Forms
 
@@ -150,31 +152,6 @@ namespace AtlantSovt
                     dataControl.SelectedIndex = 15;
                     ShowTracking();
                     trackingShowTransporterContactsDataGridView.Visible = false;
-                }
-
-                private void clientToolStripMenuItem_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
-                }
-
-                private void trasporterToolStripMenuItem_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
-                }
-
-                private void forwarderToolStripMenuItem_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
-                }
-
-                private void documentationToolStripMenuItem_Click_1(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
-                }
-
-                private void orderToolStripMenuItem_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
                 }
                 #endregion
 
@@ -1602,7 +1579,7 @@ namespace AtlantSovt
         private void secondPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitForwarderSecondPersonComboBoxDocument();
-            createContactButton.Enabled = true;
+            forwarderAsComboBox.Enabled = true;
         }
 
         private void secondPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -1616,6 +1593,17 @@ namespace AtlantSovt
         {
             CreateTransporterForwarderContract();
         }
+
+        private void forwarderAsComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            forwarderAsComboBox.DroppedDown = true;
+        }
+
+        private void forwarderAsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            createContactButton.Enabled = true;
+        }
+
 
         #endregion
 
@@ -1819,5 +1807,6 @@ namespace AtlantSovt
         {
             //  UploadAddressForm();
         }
+
     }
 }
