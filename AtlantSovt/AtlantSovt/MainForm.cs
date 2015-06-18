@@ -19,7 +19,8 @@ namespace AtlantSovt
         public MainForm()
         {            
             InitializeComponent();
-            menuStrip.Renderer = new menuStripRenderer(); 
+            menuStrip.Renderer = new menuStripRenderer();
+            yearLabel.Text = DateTime.Now.ToShortDateString();
         }
             //Client Forms
 
@@ -1604,7 +1605,6 @@ namespace AtlantSovt
             createContactButton.Enabled = true;
         }
 
-
         #endregion
 
 
@@ -1647,6 +1647,11 @@ namespace AtlantSovt
                 showTrackingDateTimePicker.Enabled = false;
                 isDatePickerEnabled = false;
             }
+        }
+
+        private void showTrackingOnlyActive_CheckedChanged(object sender, EventArgs e)
+        {
+            ShowTrackingSearch();
         }
         #endregion
 
@@ -1807,6 +1812,7 @@ namespace AtlantSovt
         {
             //  UploadAddressForm();
         }
+
 
     }
 }

@@ -7061,9 +7061,6 @@ namespace AtlantSovt
                 }
                 countriesIDs.Clear();
                 vehiclesIDs.Clear();
-
-                // TODO Throw Ex!!!!!!!!!!!!!!
-                filtersStates.Clear();
             }
         }
 

@@ -117,6 +117,11 @@ namespace AtlantSovt
             }
         }
 
+        void AddDocument()
+        {
+
+        }
+
         void CreateTransporterForwarderContract()
         {
             var wordApp = new Word.Application();

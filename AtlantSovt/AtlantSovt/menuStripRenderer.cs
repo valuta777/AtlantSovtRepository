@@ -18,9 +18,9 @@ namespace AtlantSovt
             {
                 Rectangle menuRectangle = new Rectangle(Point.Empty, myMenu.Item.Size);
                 //Fill Color
-                myMenu.Graphics.FillRectangle(Brushes.CornflowerBlue, menuRectangle);
+                myMenu.Graphics.FillRectangle(Brushes.AliceBlue, menuRectangle);
                 // Border Color
-                myMenu.Graphics.DrawRectangle(Pens.CornflowerBlue, 1, 0, menuRectangle.Width - 2, menuRectangle.Height - 1);
+                myMenu.Graphics.DrawRectangle(Pens.AliceBlue, 1, 0, menuRectangle.Width - 2, menuRectangle.Height - 1);
             }
         }
     }

@@ -97,38 +97,28 @@ namespace AtlantSovt
             trackingShowTransporterContactsDataGridView.Update();
             trackingShowTransporterContactsDataGridView.Visible = false;
 
-            int textInt = 0;
-
             var text = trackingShowSearchTextBox.Text;
-
-
-            if (text.GetType() == textInt.GetType())
-            {
-                textInt = Convert.ToInt32(trackingShowSearchTextBox.Text);
-            }
 
             using (var db = new AtlantSovtContext())
             {
 
-                if (isDatePickerEnabled == true)
+                if (showTrackingOnlyActive.Checked != true && isDatePickerEnabled != true && trackingShowSearchTextBox.Text == "")// 0 0 0
                 {
                     var queryTextAndDate =
-                    from o in db.Orders
-                    where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.YorU.Contains(text) ||
-                          o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) && (o.DownloadDate.Value.Month == showTrackingDateTimePicker.Value.Month) && (o.DownloadDate.Value.Year == showTrackingDateTimePicker.Value.Year)
-                    select
-                    new
-                    {
-                        Id = o.Id,
-                        //TODO OrderNumber
-                        OrderNumber = "Номер заявки",
-                        YorU = o.YorU,
-                        ClientName = o.Client.Name,
-                        TransporterName = o.Transporter.FullName,
-                        DownloadDate = o.DownloadDate,
-                        State = o.State
+                   from o in db.Orders
+                   select
+                   new
+                   {
+                       Id = o.Id,
+                       //TODO OrderNumber
+                       OrderNumber = "Номер заявки",
+                       YorU = o.YorU,
+                       ClientName = o.Client.Name,
+                       TransporterName = o.Transporter.FullName,
+                       DownloadDate = o.DownloadDate,
+                       State = o.State
 
-                    };
+                   };
 
                     trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
                     trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
@@ -138,29 +128,28 @@ namespace AtlantSovt
                     trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
                     trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
                     trackingShowDataGridView.Columns[6].HeaderText = "Стан";
-
                 }
-                else
+                else if (showTrackingOnlyActive.Checked != true && isDatePickerEnabled != true && trackingShowSearchTextBox.Text != "") // 0 0 1
                 {
-                    var queryTextOnly =
-                    from o in db.Orders
-                    where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.YorU.Contains(text) ||
-                          o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text)))
-                    select
-                    new
-                    {
-                        Id = o.Id,
-                        //TODO OrderNumber
-                        OrderNumber = "Номер заявки",
-                        YorU = o.YorU,
-                        ClientName = o.Client.Name,
-                        TransporterName = o.Transporter.FullName,
-                        DownloadDate = o.DownloadDate,
-                        State = o.State
+                    var queryTextAndDate =
+                   from o in db.Orders
+                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.YorU.Contains(text) ||
+                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text)))
+                   select
+                   new
+                   {
+                       Id = o.Id,
+                       //TODO OrderNumber
+                       OrderNumber = "Номер заявки",
+                       YorU = o.YorU,
+                       ClientName = o.Client.Name,
+                       TransporterName = o.Transporter.FullName,
+                       DownloadDate = o.DownloadDate,
+                       State = o.State
 
-                    };
+                   };
 
-                    trackingShowDataGridView.DataSource = queryTextOnly.ToList();
+                    trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
                     trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
                     trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
                     trackingShowDataGridView.Columns[2].HeaderText = "У / І";
@@ -168,7 +157,177 @@ namespace AtlantSovt
                     trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
                     trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
                     trackingShowDataGridView.Columns[6].HeaderText = "Стан";
+                }
+                else if (showTrackingOnlyActive.Checked != true && isDatePickerEnabled == true && trackingShowSearchTextBox.Text == "") // 0 1 0
+                {
+                    var queryTextAndDate =
+                   from o in db.Orders
+                   where (o.DownloadDate.Value.Month == showTrackingDateTimePicker.Value.Month) && (o.DownloadDate.Value.Year == showTrackingDateTimePicker.Value.Year)
+                   select
+                   new
+                   {
+                       Id = o.Id,
+                       //TODO OrderNumber
+                       OrderNumber = "Номер заявки",
+                       YorU = o.YorU,
+                       ClientName = o.Client.Name,
+                       TransporterName = o.Transporter.FullName,
+                       DownloadDate = o.DownloadDate,
+                       State = o.State
 
+                   };
+
+                    trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
+                    trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
+                    trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
+                    trackingShowDataGridView.Columns[2].HeaderText = "У / І";
+                    trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
+                    trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
+                    trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
+                    trackingShowDataGridView.Columns[6].HeaderText = "Стан";
+                }
+                else if (showTrackingOnlyActive.Checked != true && isDatePickerEnabled == true && trackingShowSearchTextBox.Text != "")// 0 1 1
+                {
+                    var queryTextAndDate =
+                   from o in db.Orders
+                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.YorU.Contains(text) ||
+                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) && (o.DownloadDate.Value.Month == showTrackingDateTimePicker.Value.Month) && (o.DownloadDate.Value.Year == showTrackingDateTimePicker.Value.Year)
+                   select
+                   new
+                   {
+                       Id = o.Id,
+                       //TODO OrderNumber
+                       OrderNumber = "Номер заявки",
+                       YorU = o.YorU,
+                       ClientName = o.Client.Name,
+                       TransporterName = o.Transporter.FullName,
+                       DownloadDate = o.DownloadDate,
+                       State = o.State
+
+                   };
+
+                    trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
+                    trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
+                    trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
+                    trackingShowDataGridView.Columns[2].HeaderText = "У / І";
+                    trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
+                    trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
+                    trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
+                    trackingShowDataGridView.Columns[6].HeaderText = "Стан";
+                }
+                else if (showTrackingOnlyActive.Checked == true && isDatePickerEnabled != true && trackingShowSearchTextBox.Text == "") // 1 0 0
+                {
+                    var queryTextAndDate =
+                   from o in db.Orders
+                   where (o.State == true)
+                   select
+                   new
+                   {
+                       Id = o.Id,
+                       //TODO OrderNumber
+                       OrderNumber = "Номер заявки",
+                       YorU = o.YorU,
+                       ClientName = o.Client.Name,
+                       TransporterName = o.Transporter.FullName,
+                       DownloadDate = o.DownloadDate,
+                       State = o.State
+
+                   };
+
+                    trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
+                    trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
+                    trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
+                    trackingShowDataGridView.Columns[2].HeaderText = "У / І";
+                    trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
+                    trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
+                    trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
+                    trackingShowDataGridView.Columns[6].HeaderText = "Стан";
+                }
+                else if (showTrackingOnlyActive.Checked == true && isDatePickerEnabled != true && trackingShowSearchTextBox.Text != "") // 1 0 1
+                {
+                    var queryTextAndDate =
+                   from o in db.Orders
+                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.YorU.Contains(text) ||
+                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text)) && (o.State == true)) 
+                   select
+                   new
+                   {
+                       Id = o.Id,
+                       //TODO OrderNumber
+                       OrderNumber = "Номер заявки",
+                       YorU = o.YorU,
+                       ClientName = o.Client.Name,
+                       TransporterName = o.Transporter.FullName,
+                       DownloadDate = o.DownloadDate,
+                       State = o.State
+
+                   };
+
+                    trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
+                    trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
+                    trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
+                    trackingShowDataGridView.Columns[2].HeaderText = "У / І";
+                    trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
+                    trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
+                    trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
+                    trackingShowDataGridView.Columns[6].HeaderText = "Стан";
+                }
+                else if (showTrackingOnlyActive.Checked == true && isDatePickerEnabled == true && trackingShowSearchTextBox.Text == "")// 1 1 0
+                {
+                    var queryTextAndDate =
+                  from o in db.Orders
+                  where (o.State == true && (o.DownloadDate.Value.Month == showTrackingDateTimePicker.Value.Month) && (o.DownloadDate.Value.Year == showTrackingDateTimePicker.Value.Year))
+                  select
+                  new
+                  {
+                      Id = o.Id,
+                      //TODO OrderNumber
+                      OrderNumber = "Номер заявки",
+                      YorU = o.YorU,
+                      ClientName = o.Client.Name,
+                      TransporterName = o.Transporter.FullName,
+                      DownloadDate = o.DownloadDate,
+                      State = o.State
+
+                  };
+
+                    trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
+                    trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
+                    trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
+                    trackingShowDataGridView.Columns[2].HeaderText = "У / І";
+                    trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
+                    trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
+                    trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
+                    trackingShowDataGridView.Columns[6].HeaderText = "Стан";
+                }
+                else if (showTrackingOnlyActive.Checked == true && isDatePickerEnabled == true && trackingShowSearchTextBox.Text != "")// 1 1 1
+                {
+                     var queryTextAndDate =
+                   from o in db.Orders
+                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.YorU.Contains(text) ||
+                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) && (o.DownloadDate.Value.Month == showTrackingDateTimePicker.Value.Month) && (o.DownloadDate.Value.Year == showTrackingDateTimePicker.Value.Year && o.State == true)
+                   select
+                   new
+                   {
+                       Id = o.Id,
+                       //TODO OrderNumber
+                       OrderNumber = "Номер заявки",
+                       YorU = o.YorU,
+                       ClientName = o.Client.Name,
+                       TransporterName = o.Transporter.FullName,
+                       DownloadDate = o.DownloadDate,
+                       State = o.State
+
+                   };
+
+                    trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
+                    trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
+                    trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
+                    trackingShowDataGridView.Columns[2].HeaderText = "У / І";
+                    trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
+                    trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
+                    trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
+                    trackingShowDataGridView.Columns[6].HeaderText = "Стан";
                 }
 
             } trackingShowDataGridView.Update();
