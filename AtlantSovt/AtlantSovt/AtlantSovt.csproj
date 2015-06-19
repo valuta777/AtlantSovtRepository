@@ -71,6 +71,12 @@
     <Compile Include="AddPaymentTermsForm.Designer.cs">
       <DependentUpon>AddPaymentTermsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddTrackingCommentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTrackingCommentForm.Designer.cs">
+      <DependentUpon>AddTrackingCommentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddTrailerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddPaymentTermsForm.resx">
       <DependentUpon>AddPaymentTermsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTrackingCommentForm.resx">
+      <DependentUpon>AddTrackingCommentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddTrailerForm.resx">
       <DependentUpon>AddTrailerForm.cs</DependentUpon>

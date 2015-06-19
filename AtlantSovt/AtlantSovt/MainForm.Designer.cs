@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,7 +64,6 @@
             this.helloPage = new System.Windows.Forms.TabPage();
             this.yearLabel = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
-            this.helloPictureBox = new System.Windows.Forms.PictureBox();
             this.showClientPage = new System.Windows.Forms.TabPage();
             this.clientShowSearchButton = new System.Windows.Forms.Button();
             this.clientShowSearchTextBox = new System.Windows.Forms.TextBox();
@@ -100,8 +100,6 @@
             this.physicalAddressClientLabel = new System.Windows.Forms.Label();
             this.directorClientLabel = new System.Windows.Forms.Label();
             this.nameClientLabel = new System.Windows.Forms.Label();
-            this.addTaxPayerStatusClientButton = new System.Windows.Forms.Button();
-            this.addWorkDocumentClientButton = new System.Windows.Forms.Button();
             this.updateClientPage = new System.Windows.Forms.TabPage();
             this.selectClientDiapasoneUpdateComboBox = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -132,8 +130,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.clientUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
-            this.clientUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
             this.deleteClientPage = new System.Windows.Forms.TabPage();
             this.deleteClientSelectDiapasoneComboBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -171,8 +167,6 @@
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
-            this.addTaxPayerStatusForwarderButton = new System.Windows.Forms.Button();
-            this.addWorkDocumentForwarderButton = new System.Windows.Forms.Button();
             this.updateForwarderPage = new System.Windows.Forms.TabPage();
             this.forwarderUpdateContactDeleteButton = new System.Windows.Forms.Button();
             this.forwarderUpdateBankDetailsDeleteButton = new System.Windows.Forms.Button();
@@ -197,8 +191,6 @@
             this.label63 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
-            this.forwarderUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
-            this.forwarderUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
             this.deleteForwarderPage = new System.Windows.Forms.TabPage();
             this.forwarderDeleteButton = new System.Windows.Forms.Button();
             this.label42 = new System.Windows.Forms.Label();
@@ -253,8 +245,6 @@
             this.label76 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.label78 = new System.Windows.Forms.Label();
-            this.transporterAddTaxPayerStatusAddButton = new System.Windows.Forms.Button();
-            this.transporterAddWorkDocumentAddButton = new System.Windows.Forms.Button();
             this.updateTransporterPage = new System.Windows.Forms.TabPage();
             this.transporterUpdateFilterPanel = new System.Windows.Forms.Panel();
             this.transporterUpdateFiltersSelectIfForwarderCheckBox = new System.Windows.Forms.CheckBox();
@@ -295,8 +285,6 @@
             this.label96 = new System.Windows.Forms.Label();
             this.label97 = new System.Windows.Forms.Label();
             this.label98 = new System.Windows.Forms.Label();
-            this.transporterUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
-            this.transporterUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
             this.deleteTransporterPage = new System.Windows.Forms.TabPage();
             this.deleteTransporterSelectDiapasoneComboBox = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -322,14 +310,10 @@
             this.OrderAddPage = new System.Windows.Forms.TabPage();
             this.OrderAddYOrUComboBox = new System.Windows.Forms.ComboBox();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.OrderAddAdditionalTermsAddButton = new System.Windows.Forms.Button();
-            this.OrderAddPaymentTermsAddButton = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.OrderAddAdditionalTermsSelectComboBox = new System.Windows.Forms.ComboBox();
             this.label103 = new System.Windows.Forms.Label();
             this.OrderAddPaymentTermsSelectComboBox = new System.Windows.Forms.ComboBox();
             this.label102 = new System.Windows.Forms.Label();
-            this.OrderAddOrderDenyAddButton = new System.Windows.Forms.Button();
             this.OrderAddButton = new System.Windows.Forms.Button();
             this.label108 = new System.Windows.Forms.Label();
             this.OrderAddDenyFineSelectComboBox = new System.Windows.Forms.ComboBox();
@@ -343,24 +327,19 @@
             this.label91 = new System.Windows.Forms.Label();
             this.OrderAddCargoSelectComboBox = new System.Windows.Forms.ComboBox();
             this.label87 = new System.Windows.Forms.Label();
-            this.OrderAddCargoAddButton = new System.Windows.Forms.Button();
             this.OrderAddLoadingForm2SelectComboBox = new System.Windows.Forms.ComboBox();
             this.label88 = new System.Windows.Forms.Label();
             this.OrderAddLoadingForm1SelectComboBox = new System.Windows.Forms.ComboBox();
             this.label85 = new System.Windows.Forms.Label();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.OrderAddFineForDelayAddButton = new System.Windows.Forms.Button();
             this.OrderAddFineForDelaySelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderAddRegularyDelayAddButton = new System.Windows.Forms.Button();
             this.label107 = new System.Windows.Forms.Label();
             this.OrderAddRegularyDelaySelectComboBox = new System.Windows.Forms.ComboBox();
             this.label106 = new System.Windows.Forms.Label();
             this.OrderAddTrailerSelectComboBox = new System.Windows.Forms.ComboBox();
             this.label104 = new System.Windows.Forms.Label();
-            this.OrderAddTrailerAddButton = new System.Windows.Forms.Button();
             this.OrderAddCubeSelectComboBox = new System.Windows.Forms.ComboBox();
             this.label105 = new System.Windows.Forms.Label();
-            this.OrderAddCubeAddButton = new System.Windows.Forms.Button();
             this.OrderAddDateSelectDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
@@ -372,7 +351,6 @@
             this.OrderAddDeliveryDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.OrderAddTirCmrSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderAddTirCmrAddButton = new System.Windows.Forms.Button();
             this.OrderAddCustomsAddressAddButton = new System.Windows.Forms.Button();
             this.label79 = new System.Windows.Forms.Label();
             this.OrderAddUncustomsAddressAddButton = new System.Windows.Forms.Button();
@@ -392,6 +370,8 @@
             this.OrderAddTransporterDiapasoneComboBox = new System.Windows.Forms.ComboBox();
             this.OrderAddForwarder2SelectComboBox = new System.Windows.Forms.ComboBox();
             this.showTrackingPage = new System.Windows.Forms.TabPage();
+            this.showTrackingOnlyActive = new System.Windows.Forms.CheckBox();
+            this.onlyActiveLabel = new System.Windows.Forms.Label();
             this.showTrackingDataSwitcher = new System.Windows.Forms.CheckBox();
             this.showTrackingDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.trackingLabel1 = new System.Windows.Forms.Label();
@@ -406,12 +386,35 @@
             this.labelshow68 = new System.Windows.Forms.Label();
             this.labelshow69 = new System.Windows.Forms.Label();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
-            this.onlyActiveLabel = new System.Windows.Forms.Label();
-            this.showTrackingOnlyActive = new System.Windows.Forms.CheckBox();
+            this.trackingShowCloseOrder = new System.Windows.Forms.Button();
+            this.trackingShowCommentDataGridView = new System.Windows.Forms.DataGridView();
+            this.helloPictureBox = new System.Windows.Forms.PictureBox();
+            this.addTaxPayerStatusClientButton = new System.Windows.Forms.Button();
+            this.addWorkDocumentClientButton = new System.Windows.Forms.Button();
+            this.clientUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
+            this.clientUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
+            this.addTaxPayerStatusForwarderButton = new System.Windows.Forms.Button();
+            this.addWorkDocumentForwarderButton = new System.Windows.Forms.Button();
+            this.forwarderUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
+            this.forwarderUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
+            this.transporterAddTaxPayerStatusAddButton = new System.Windows.Forms.Button();
+            this.transporterAddWorkDocumentAddButton = new System.Windows.Forms.Button();
+            this.transporterUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
+            this.transporterUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
+            this.OrderAddAdditionalTermsAddButton = new System.Windows.Forms.Button();
+            this.OrderAddPaymentTermsAddButton = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.OrderAddOrderDenyAddButton = new System.Windows.Forms.Button();
+            this.OrderAddCargoAddButton = new System.Windows.Forms.Button();
+            this.OrderAddFineForDelayAddButton = new System.Windows.Forms.Button();
+            this.OrderAddRegularyDelayAddButton = new System.Windows.Forms.Button();
+            this.OrderAddTrailerAddButton = new System.Windows.Forms.Button();
+            this.OrderAddCubeAddButton = new System.Windows.Forms.Button();
+            this.OrderAddTirCmrAddButton = new System.Windows.Forms.Button();
+            this.trackingShowAddCommentButton = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.dataControl.SuspendLayout();
             this.helloPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.helloPictureBox)).BeginInit();
             this.showClientPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBankDetailsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientContactsDataGridView)).BeginInit();
@@ -475,6 +478,8 @@
             this.showTrackingPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackingShowTransporterContactsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingShowDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowCommentDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helloPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -640,7 +645,7 @@
             // 
             this.documentationUkrStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.documentationUkrStrip.Name = "documentationUkrStrip";
-            this.documentationUkrStrip.Size = new System.Drawing.Size(152, 24);
+            this.documentationUkrStrip.Size = new System.Drawing.Size(144, 24);
             this.documentationUkrStrip.Text = "По Україні";
             this.documentationUkrStrip.Click += new System.EventHandler(this.documentationToolStripMenuItem_Click);
             // 
@@ -648,7 +653,7 @@
             // 
             this.documentationIntStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.documentationIntStrip.Name = "documentationIntStrip";
-            this.documentationIntStrip.Size = new System.Drawing.Size(152, 24);
+            this.documentationIntStrip.Size = new System.Drawing.Size(144, 24);
             this.documentationIntStrip.Text = "Закордон";
             // 
             // orderToolStripMenuItem
@@ -670,7 +675,7 @@
             this.deleteOrderUkrStrip,
             this.trackingOrderUkrStrip});
             this.ukrOrderStrip.Name = "ukrOrderStrip";
-            this.ukrOrderStrip.Size = new System.Drawing.Size(152, 24);
+            this.ukrOrderStrip.Size = new System.Drawing.Size(144, 24);
             this.ukrOrderStrip.Text = "По Україні";
             // 
             // addOrderUkrStrip
@@ -708,7 +713,7 @@
             this.deleteOrderIntStrip,
             this.trackingOrderIntStrip});
             this.intOrderStrip.Name = "intOrderStrip";
-            this.intOrderStrip.Size = new System.Drawing.Size(152, 24);
+            this.intOrderStrip.Size = new System.Drawing.Size(144, 24);
             this.intOrderStrip.Text = "Закордон";
             // 
             // addOrderIntStrip
@@ -801,18 +806,6 @@
             this.label68.TabIndex = 1;
             this.label68.Text = "ТЗОВ \"Атлант-Совт\"";
             // 
-            // helloPictureBox
-            // 
-            this.helloPictureBox.BackColor = System.Drawing.Color.Wheat;
-            this.helloPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.helloPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("helloPictureBox.Image")));
-            this.helloPictureBox.Location = new System.Drawing.Point(0, 0);
-            this.helloPictureBox.Name = "helloPictureBox";
-            this.helloPictureBox.Size = new System.Drawing.Size(776, 505);
-            this.helloPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.helloPictureBox.TabIndex = 0;
-            this.helloPictureBox.TabStop = false;
-            // 
             // showClientPage
             // 
             this.showClientPage.BackColor = System.Drawing.Color.AliceBlue;
@@ -877,7 +870,9 @@
             this.clientBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientBankDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clientBankDetailsDataGridView.Location = new System.Drawing.Point(0, 256);
+            this.clientBankDetailsDataGridView.MultiSelect = false;
             this.clientBankDetailsDataGridView.Name = "clientBankDetailsDataGridView";
+            this.clientBankDetailsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.clientBankDetailsDataGridView.Size = new System.Drawing.Size(776, 56);
             this.clientBankDetailsDataGridView.TabIndex = 7;
             this.clientBankDetailsDataGridView.TabStop = false;
@@ -929,7 +924,9 @@
             this.clientContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clientContactsDataGridView.Location = new System.Drawing.Point(0, 335);
+            this.clientContactsDataGridView.MultiSelect = false;
             this.clientContactsDataGridView.Name = "clientContactsDataGridView";
+            this.clientContactsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.clientContactsDataGridView.Size = new System.Drawing.Size(776, 106);
             this.clientContactsDataGridView.TabIndex = 3;
             this.clientContactsDataGridView.TabStop = false;
@@ -954,8 +951,10 @@
             this.clientDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clientDataGridView.Location = new System.Drawing.Point(0, 62);
+            this.clientDataGridView.MultiSelect = false;
             this.clientDataGridView.Name = "clientDataGridView";
             this.clientDataGridView.ReadOnly = true;
+            this.clientDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.clientDataGridView.Size = new System.Drawing.Size(776, 171);
             this.clientDataGridView.TabIndex = 0;
             this.clientDataGridView.TabStop = false;
@@ -1265,28 +1264,6 @@
             this.nameClientLabel.Size = new System.Drawing.Size(52, 21);
             this.nameClientLabel.TabIndex = 1;
             this.nameClientLabel.Text = "Назва";
-            // 
-            // addTaxPayerStatusClientButton
-            // 
-            this.addTaxPayerStatusClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addTaxPayerStatusClientButton.Image = ((System.Drawing.Image)(resources.GetObject("addTaxPayerStatusClientButton.Image")));
-            this.addTaxPayerStatusClientButton.Location = new System.Drawing.Point(738, 89);
-            this.addTaxPayerStatusClientButton.Name = "addTaxPayerStatusClientButton";
-            this.addTaxPayerStatusClientButton.Size = new System.Drawing.Size(30, 30);
-            this.addTaxPayerStatusClientButton.TabIndex = 19;
-            this.addTaxPayerStatusClientButton.UseVisualStyleBackColor = true;
-            this.addTaxPayerStatusClientButton.Click += new System.EventHandler(this.addTaxPayerStatusClientButton_Click);
-            // 
-            // addWorkDocumentClientButton
-            // 
-            this.addWorkDocumentClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addWorkDocumentClientButton.Image = ((System.Drawing.Image)(resources.GetObject("addWorkDocumentClientButton.Image")));
-            this.addWorkDocumentClientButton.Location = new System.Drawing.Point(736, 27);
-            this.addWorkDocumentClientButton.Name = "addWorkDocumentClientButton";
-            this.addWorkDocumentClientButton.Size = new System.Drawing.Size(30, 30);
-            this.addWorkDocumentClientButton.TabIndex = 18;
-            this.addWorkDocumentClientButton.UseVisualStyleBackColor = true;
-            this.addWorkDocumentClientButton.Click += new System.EventHandler(this.addWorkDocumentClientButton_Click);
             // 
             // updateClientPage
             // 
@@ -1659,28 +1636,6 @@
             this.label26.TabIndex = 32;
             this.label26.Text = "Назва";
             // 
-            // clientUpdateTaxPayerStatusAddButton
-            // 
-            this.clientUpdateTaxPayerStatusAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientUpdateTaxPayerStatusAddButton.Image = ((System.Drawing.Image)(resources.GetObject("clientUpdateTaxPayerStatusAddButton.Image")));
-            this.clientUpdateTaxPayerStatusAddButton.Location = new System.Drawing.Point(738, 139);
-            this.clientUpdateTaxPayerStatusAddButton.Name = "clientUpdateTaxPayerStatusAddButton";
-            this.clientUpdateTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
-            this.clientUpdateTaxPayerStatusAddButton.TabIndex = 49;
-            this.clientUpdateTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
-            this.clientUpdateTaxPayerStatusAddButton.Click += new System.EventHandler(this.clientUpdateTaxPayerStatusAddButton_Click);
-            // 
-            // clientUpdateWorkDocumentAddButton
-            // 
-            this.clientUpdateWorkDocumentAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.clientUpdateWorkDocumentAddButton.Image = ((System.Drawing.Image)(resources.GetObject("clientUpdateWorkDocumentAddButton.Image")));
-            this.clientUpdateWorkDocumentAddButton.Location = new System.Drawing.Point(736, 77);
-            this.clientUpdateWorkDocumentAddButton.Name = "clientUpdateWorkDocumentAddButton";
-            this.clientUpdateWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
-            this.clientUpdateWorkDocumentAddButton.TabIndex = 48;
-            this.clientUpdateWorkDocumentAddButton.UseVisualStyleBackColor = true;
-            this.clientUpdateWorkDocumentAddButton.Click += new System.EventHandler(this.clientUpdateWorkDocumentAddButton_Click);
-            // 
             // deleteClientPage
             // 
             this.deleteClientPage.BackColor = System.Drawing.Color.AliceBlue;
@@ -1796,7 +1751,9 @@
             this.forwarderBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.forwarderBankDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.forwarderBankDetailsDataGridView.Location = new System.Drawing.Point(0, 256);
+            this.forwarderBankDetailsDataGridView.MultiSelect = false;
             this.forwarderBankDetailsDataGridView.Name = "forwarderBankDetailsDataGridView";
+            this.forwarderBankDetailsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.forwarderBankDetailsDataGridView.Size = new System.Drawing.Size(776, 56);
             this.forwarderBankDetailsDataGridView.TabIndex = 15;
             this.forwarderBankDetailsDataGridView.TabStop = false;
@@ -1836,7 +1793,9 @@
             this.forwarderContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.forwarderContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.forwarderContactsDataGridView.Location = new System.Drawing.Point(0, 335);
+            this.forwarderContactsDataGridView.MultiSelect = false;
             this.forwarderContactsDataGridView.Name = "forwarderContactsDataGridView";
+            this.forwarderContactsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.forwarderContactsDataGridView.Size = new System.Drawing.Size(776, 105);
             this.forwarderContactsDataGridView.TabIndex = 11;
             this.forwarderContactsDataGridView.TabStop = false;
@@ -1861,7 +1820,16 @@
             this.forwarderDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.forwarderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.forwarderDataGridView.Location = new System.Drawing.Point(0, 27);
+            this.forwarderDataGridView.MultiSelect = false;
             this.forwarderDataGridView.Name = "forwarderDataGridView";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.forwarderDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.forwarderDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.forwarderDataGridView.Size = new System.Drawing.Size(776, 206);
             this.forwarderDataGridView.TabIndex = 9;
             this.forwarderDataGridView.TabStop = false;
@@ -2150,28 +2118,6 @@
             this.label50.Size = new System.Drawing.Size(52, 21);
             this.label50.TabIndex = 32;
             this.label50.Text = "Назва";
-            // 
-            // addTaxPayerStatusForwarderButton
-            // 
-            this.addTaxPayerStatusForwarderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addTaxPayerStatusForwarderButton.Image = ((System.Drawing.Image)(resources.GetObject("addTaxPayerStatusForwarderButton.Image")));
-            this.addTaxPayerStatusForwarderButton.Location = new System.Drawing.Point(738, 94);
-            this.addTaxPayerStatusForwarderButton.Name = "addTaxPayerStatusForwarderButton";
-            this.addTaxPayerStatusForwarderButton.Size = new System.Drawing.Size(30, 30);
-            this.addTaxPayerStatusForwarderButton.TabIndex = 48;
-            this.addTaxPayerStatusForwarderButton.UseVisualStyleBackColor = true;
-            this.addTaxPayerStatusForwarderButton.Click += new System.EventHandler(this.addTaxPayerStatusForwarderButton_Click);
-            // 
-            // addWorkDocumentForwarderButton
-            // 
-            this.addWorkDocumentForwarderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addWorkDocumentForwarderButton.Image = ((System.Drawing.Image)(resources.GetObject("addWorkDocumentForwarderButton.Image")));
-            this.addWorkDocumentForwarderButton.Location = new System.Drawing.Point(738, 31);
-            this.addWorkDocumentForwarderButton.Name = "addWorkDocumentForwarderButton";
-            this.addWorkDocumentForwarderButton.Size = new System.Drawing.Size(30, 30);
-            this.addWorkDocumentForwarderButton.TabIndex = 47;
-            this.addWorkDocumentForwarderButton.UseVisualStyleBackColor = true;
-            this.addWorkDocumentForwarderButton.Click += new System.EventHandler(this.addWorkDocumentForwarderButton_Click);
             // 
             // updateForwarderPage
             // 
@@ -2476,28 +2422,6 @@
             this.label65.TabIndex = 66;
             this.label65.Text = "Назва";
             // 
-            // forwarderUpdateTaxPayerStatusAddButton
-            // 
-            this.forwarderUpdateTaxPayerStatusAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.forwarderUpdateTaxPayerStatusAddButton.Image = ((System.Drawing.Image)(resources.GetObject("forwarderUpdateTaxPayerStatusAddButton.Image")));
-            this.forwarderUpdateTaxPayerStatusAddButton.Location = new System.Drawing.Point(738, 139);
-            this.forwarderUpdateTaxPayerStatusAddButton.Name = "forwarderUpdateTaxPayerStatusAddButton";
-            this.forwarderUpdateTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
-            this.forwarderUpdateTaxPayerStatusAddButton.TabIndex = 81;
-            this.forwarderUpdateTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
-            this.forwarderUpdateTaxPayerStatusAddButton.Click += new System.EventHandler(this.forwarderUpdateTaxPayerStatusAddButton_Click);
-            // 
-            // forwarderUpdateWorkDocumentAddButton
-            // 
-            this.forwarderUpdateWorkDocumentAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.forwarderUpdateWorkDocumentAddButton.Image = ((System.Drawing.Image)(resources.GetObject("forwarderUpdateWorkDocumentAddButton.Image")));
-            this.forwarderUpdateWorkDocumentAddButton.Location = new System.Drawing.Point(736, 77);
-            this.forwarderUpdateWorkDocumentAddButton.Name = "forwarderUpdateWorkDocumentAddButton";
-            this.forwarderUpdateWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
-            this.forwarderUpdateWorkDocumentAddButton.TabIndex = 80;
-            this.forwarderUpdateWorkDocumentAddButton.UseVisualStyleBackColor = true;
-            this.forwarderUpdateWorkDocumentAddButton.Click += new System.EventHandler(this.forwarderUpdateWorkDocumentAddButton_Click);
-            // 
             // deleteForwarderPage
             // 
             this.deleteForwarderPage.BackColor = System.Drawing.Color.AliceBlue;
@@ -2666,7 +2590,9 @@
             this.transporterShowCountryDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.transporterShowCountryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.transporterShowCountryDataGridView.Location = new System.Drawing.Point(586, 62);
+            this.transporterShowCountryDataGridView.MultiSelect = false;
             this.transporterShowCountryDataGridView.Name = "transporterShowCountryDataGridView";
+            this.transporterShowCountryDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.transporterShowCountryDataGridView.Size = new System.Drawing.Size(190, 120);
             this.transporterShowCountryDataGridView.TabIndex = 37;
             this.transporterShowCountryDataGridView.TabStop = false;
@@ -2693,7 +2619,9 @@
             this.transporterShowBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.transporterShowBankDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.transporterShowBankDetailsDataGridView.Location = new System.Drawing.Point(0, 207);
+            this.transporterShowBankDetailsDataGridView.MultiSelect = false;
             this.transporterShowBankDetailsDataGridView.Name = "transporterShowBankDetailsDataGridView";
+            this.transporterShowBankDetailsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.transporterShowBankDetailsDataGridView.Size = new System.Drawing.Size(780, 55);
             this.transporterShowBankDetailsDataGridView.TabIndex = 23;
             this.transporterShowBankDetailsDataGridView.TabStop = false;
@@ -2721,7 +2649,9 @@
             this.transporterShowContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.transporterShowContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.transporterShowContactsDataGridView.Location = new System.Drawing.Point(0, 286);
+            this.transporterShowContactsDataGridView.MultiSelect = false;
             this.transporterShowContactsDataGridView.Name = "transporterShowContactsDataGridView";
+            this.transporterShowContactsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.transporterShowContactsDataGridView.Size = new System.Drawing.Size(776, 81);
             this.transporterShowContactsDataGridView.TabIndex = 19;
             this.transporterShowContactsDataGridView.TabStop = false;
@@ -2736,7 +2666,9 @@
             this.transporterShowDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.transporterShowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.transporterShowDataGridView.Location = new System.Drawing.Point(0, 62);
+            this.transporterShowDataGridView.MultiSelect = false;
             this.transporterShowDataGridView.Name = "transporterShowDataGridView";
+            this.transporterShowDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.transporterShowDataGridView.Size = new System.Drawing.Size(579, 120);
             this.transporterShowDataGridView.TabIndex = 17;
             this.transporterShowDataGridView.TabStop = false;
@@ -3196,28 +3128,6 @@
             this.label78.Size = new System.Drawing.Size(52, 21);
             this.label78.TabIndex = 100;
             this.label78.Text = "Назва";
-            // 
-            // transporterAddTaxPayerStatusAddButton
-            // 
-            this.transporterAddTaxPayerStatusAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterAddTaxPayerStatusAddButton.Image = ((System.Drawing.Image)(resources.GetObject("transporterAddTaxPayerStatusAddButton.Image")));
-            this.transporterAddTaxPayerStatusAddButton.Location = new System.Drawing.Point(735, 144);
-            this.transporterAddTaxPayerStatusAddButton.Name = "transporterAddTaxPayerStatusAddButton";
-            this.transporterAddTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
-            this.transporterAddTaxPayerStatusAddButton.TabIndex = 78;
-            this.transporterAddTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
-            this.transporterAddTaxPayerStatusAddButton.Click += new System.EventHandler(this.transporterAddTaxPayerStatusAddButton_Click);
-            // 
-            // transporterAddWorkDocumentAddButton
-            // 
-            this.transporterAddWorkDocumentAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterAddWorkDocumentAddButton.Image = ((System.Drawing.Image)(resources.GetObject("transporterAddWorkDocumentAddButton.Image")));
-            this.transporterAddWorkDocumentAddButton.Location = new System.Drawing.Point(734, 88);
-            this.transporterAddWorkDocumentAddButton.Name = "transporterAddWorkDocumentAddButton";
-            this.transporterAddWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
-            this.transporterAddWorkDocumentAddButton.TabIndex = 77;
-            this.transporterAddWorkDocumentAddButton.UseVisualStyleBackColor = true;
-            this.transporterAddWorkDocumentAddButton.Click += new System.EventHandler(this.transporterAddWorkDocumentAddButton_Click);
             // 
             // updateTransporterPage
             // 
@@ -3736,28 +3646,6 @@
             this.label98.TabIndex = 130;
             this.label98.Text = "Назва";
             // 
-            // transporterUpdateTaxPayerStatusAddButton
-            // 
-            this.transporterUpdateTaxPayerStatusAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterUpdateTaxPayerStatusAddButton.Image = ((System.Drawing.Image)(resources.GetObject("transporterUpdateTaxPayerStatusAddButton.Image")));
-            this.transporterUpdateTaxPayerStatusAddButton.Location = new System.Drawing.Point(737, 192);
-            this.transporterUpdateTaxPayerStatusAddButton.Name = "transporterUpdateTaxPayerStatusAddButton";
-            this.transporterUpdateTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
-            this.transporterUpdateTaxPayerStatusAddButton.TabIndex = 121;
-            this.transporterUpdateTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
-            this.transporterUpdateTaxPayerStatusAddButton.Click += new System.EventHandler(this.transporterUpdateTaxPayerStatusAddButton_Click);
-            // 
-            // transporterUpdateWorkDocumentAddButton
-            // 
-            this.transporterUpdateWorkDocumentAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterUpdateWorkDocumentAddButton.Image = ((System.Drawing.Image)(resources.GetObject("transporterUpdateWorkDocumentAddButton.Image")));
-            this.transporterUpdateWorkDocumentAddButton.Location = new System.Drawing.Point(736, 136);
-            this.transporterUpdateWorkDocumentAddButton.Name = "transporterUpdateWorkDocumentAddButton";
-            this.transporterUpdateWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
-            this.transporterUpdateWorkDocumentAddButton.TabIndex = 120;
-            this.transporterUpdateWorkDocumentAddButton.UseVisualStyleBackColor = true;
-            this.transporterUpdateWorkDocumentAddButton.Click += new System.EventHandler(this.transporterUpdateWorkDocumentAddButton_Click);
-            // 
             // deleteTransporterPage
             // 
             this.deleteTransporterPage.BackColor = System.Drawing.Color.AliceBlue;
@@ -4106,38 +3994,6 @@
             this.splitContainer6.SplitterWidth = 2;
             this.splitContainer6.TabIndex = 137;
             // 
-            // OrderAddAdditionalTermsAddButton
-            // 
-            this.OrderAddAdditionalTermsAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderAddAdditionalTermsAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddAdditionalTermsAddButton.Image")));
-            this.OrderAddAdditionalTermsAddButton.Location = new System.Drawing.Point(346, 74);
-            this.OrderAddAdditionalTermsAddButton.Name = "OrderAddAdditionalTermsAddButton";
-            this.OrderAddAdditionalTermsAddButton.Size = new System.Drawing.Size(30, 30);
-            this.OrderAddAdditionalTermsAddButton.TabIndex = 140;
-            this.OrderAddAdditionalTermsAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddAdditionalTermsAddButton.Click += new System.EventHandler(this.OrderAddAdditionalTermsAddButton_Click);
-            // 
-            // OrderAddPaymentTermsAddButton
-            // 
-            this.OrderAddPaymentTermsAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderAddPaymentTermsAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddPaymentTermsAddButton.Image")));
-            this.OrderAddPaymentTermsAddButton.Location = new System.Drawing.Point(346, 24);
-            this.OrderAddPaymentTermsAddButton.Name = "OrderAddPaymentTermsAddButton";
-            this.OrderAddPaymentTermsAddButton.Size = new System.Drawing.Size(30, 30);
-            this.OrderAddPaymentTermsAddButton.TabIndex = 139;
-            this.OrderAddPaymentTermsAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddPaymentTermsAddButton.Click += new System.EventHandler(this.OrderAddPaymentTermsAddButton_Click);
-            // 
-            // button11
-            // 
-            this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(391, 11);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(30, 30);
-            this.button11.TabIndex = 138;
-            this.button11.UseVisualStyleBackColor = true;
-            // 
             // OrderAddAdditionalTermsSelectComboBox
             // 
             this.OrderAddAdditionalTermsSelectComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -4200,17 +4056,6 @@
             this.label102.TabIndex = 133;
             this.label102.Text = "Додаткові умови";
             // 
-            // OrderAddOrderDenyAddButton
-            // 
-            this.OrderAddOrderDenyAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderAddOrderDenyAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddOrderDenyAddButton.Image")));
-            this.OrderAddOrderDenyAddButton.Location = new System.Drawing.Point(378, 23);
-            this.OrderAddOrderDenyAddButton.Name = "OrderAddOrderDenyAddButton";
-            this.OrderAddOrderDenyAddButton.Size = new System.Drawing.Size(30, 30);
-            this.OrderAddOrderDenyAddButton.TabIndex = 140;
-            this.OrderAddOrderDenyAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddOrderDenyAddButton.Click += new System.EventHandler(this.OrderAddOrderDenyAddButton_Click);
-            // 
             // OrderAddButton
             // 
             this.OrderAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -4218,7 +4063,7 @@
             this.OrderAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddButton.Location = new System.Drawing.Point(8, 59);
             this.OrderAddButton.Name = "OrderAddButton";
-            this.OrderAddButton.Size = new System.Drawing.Size(407, 45);
+            this.OrderAddButton.Size = new System.Drawing.Size(409, 45);
             this.OrderAddButton.TabIndex = 139;
             this.OrderAddButton.Text = "Сформувати";
             this.OrderAddButton.UseVisualStyleBackColor = true;
@@ -4247,7 +4092,7 @@
             "зад"});
             this.OrderAddDenyFineSelectComboBox.Location = new System.Drawing.Point(7, 24);
             this.OrderAddDenyFineSelectComboBox.Name = "OrderAddDenyFineSelectComboBox";
-            this.OrderAddDenyFineSelectComboBox.Size = new System.Drawing.Size(363, 29);
+            this.OrderAddDenyFineSelectComboBox.Size = new System.Drawing.Size(365, 29);
             this.OrderAddDenyFineSelectComboBox.Sorted = true;
             this.OrderAddDenyFineSelectComboBox.TabIndex = 136;
             // 
@@ -4403,17 +4248,6 @@
             this.label87.TabIndex = 91;
             this.label87.Text = "Тип вантажу";
             // 
-            // OrderAddCargoAddButton
-            // 
-            this.OrderAddCargoAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderAddCargoAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddCargoAddButton.Image")));
-            this.OrderAddCargoAddButton.Location = new System.Drawing.Point(152, 21);
-            this.OrderAddCargoAddButton.Name = "OrderAddCargoAddButton";
-            this.OrderAddCargoAddButton.Size = new System.Drawing.Size(30, 30);
-            this.OrderAddCargoAddButton.TabIndex = 122;
-            this.OrderAddCargoAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddCargoAddButton.Click += new System.EventHandler(this.OrderAddCargoAddButton_Click);
-            // 
             // OrderAddLoadingForm2SelectComboBox
             // 
             this.OrderAddLoadingForm2SelectComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -4428,7 +4262,7 @@
             "зад"});
             this.OrderAddLoadingForm2SelectComboBox.Location = new System.Drawing.Point(6, 83);
             this.OrderAddLoadingForm2SelectComboBox.Name = "OrderAddLoadingForm2SelectComboBox";
-            this.OrderAddLoadingForm2SelectComboBox.Size = new System.Drawing.Size(217, 29);
+            this.OrderAddLoadingForm2SelectComboBox.Size = new System.Drawing.Size(220, 29);
             this.OrderAddLoadingForm2SelectComboBox.Sorted = true;
             this.OrderAddLoadingForm2SelectComboBox.TabIndex = 130;
             // 
@@ -4456,7 +4290,7 @@
             "зад"});
             this.OrderAddLoadingForm1SelectComboBox.Location = new System.Drawing.Point(8, 21);
             this.OrderAddLoadingForm1SelectComboBox.Name = "OrderAddLoadingForm1SelectComboBox";
-            this.OrderAddLoadingForm1SelectComboBox.Size = new System.Drawing.Size(215, 29);
+            this.OrderAddLoadingForm1SelectComboBox.Size = new System.Drawing.Size(218, 29);
             this.OrderAddLoadingForm1SelectComboBox.Sorted = true;
             this.OrderAddLoadingForm1SelectComboBox.TabIndex = 128;
             // 
@@ -4500,17 +4334,6 @@
             this.splitContainer5.SplitterWidth = 1;
             this.splitContainer5.TabIndex = 0;
             // 
-            // OrderAddFineForDelayAddButton
-            // 
-            this.OrderAddFineForDelayAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderAddFineForDelayAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddFineForDelayAddButton.Image")));
-            this.OrderAddFineForDelayAddButton.Location = new System.Drawing.Point(157, 82);
-            this.OrderAddFineForDelayAddButton.Name = "OrderAddFineForDelayAddButton";
-            this.OrderAddFineForDelayAddButton.Size = new System.Drawing.Size(30, 30);
-            this.OrderAddFineForDelayAddButton.TabIndex = 137;
-            this.OrderAddFineForDelayAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddFineForDelayAddButton.Click += new System.EventHandler(this.OrderAddFineForDelayAddButton_Click);
-            // 
             // OrderAddFineForDelaySelectComboBox
             // 
             this.OrderAddFineForDelaySelectComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -4528,17 +4351,6 @@
             this.OrderAddFineForDelaySelectComboBox.Size = new System.Drawing.Size(140, 29);
             this.OrderAddFineForDelaySelectComboBox.Sorted = true;
             this.OrderAddFineForDelaySelectComboBox.TabIndex = 134;
-            // 
-            // OrderAddRegularyDelayAddButton
-            // 
-            this.OrderAddRegularyDelayAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderAddRegularyDelayAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddRegularyDelayAddButton.Image")));
-            this.OrderAddRegularyDelayAddButton.Location = new System.Drawing.Point(156, 21);
-            this.OrderAddRegularyDelayAddButton.Name = "OrderAddRegularyDelayAddButton";
-            this.OrderAddRegularyDelayAddButton.Size = new System.Drawing.Size(30, 30);
-            this.OrderAddRegularyDelayAddButton.TabIndex = 136;
-            this.OrderAddRegularyDelayAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddRegularyDelayAddButton.Click += new System.EventHandler(this.OrderAddRegularyDelayAddButton_Click);
             // 
             // label107
             // 
@@ -4589,7 +4401,7 @@
             this.OrderAddTrailerSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddTrailerSelectComboBox.Location = new System.Drawing.Point(9, 83);
             this.OrderAddTrailerSelectComboBox.Name = "OrderAddTrailerSelectComboBox";
-            this.OrderAddTrailerSelectComboBox.Size = new System.Drawing.Size(185, 29);
+            this.OrderAddTrailerSelectComboBox.Size = new System.Drawing.Size(188, 29);
             this.OrderAddTrailerSelectComboBox.Sorted = true;
             this.OrderAddTrailerSelectComboBox.TabIndex = 135;
             // 
@@ -4605,17 +4417,6 @@
             this.label104.TabIndex = 133;
             this.label104.Text = "Причіп";
             // 
-            // OrderAddTrailerAddButton
-            // 
-            this.OrderAddTrailerAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderAddTrailerAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddTrailerAddButton.Image")));
-            this.OrderAddTrailerAddButton.Location = new System.Drawing.Point(202, 82);
-            this.OrderAddTrailerAddButton.Name = "OrderAddTrailerAddButton";
-            this.OrderAddTrailerAddButton.Size = new System.Drawing.Size(30, 30);
-            this.OrderAddTrailerAddButton.TabIndex = 134;
-            this.OrderAddTrailerAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddTrailerAddButton.Click += new System.EventHandler(this.OrderAddTrailerAddButton_Click);
-            // 
             // OrderAddCubeSelectComboBox
             // 
             this.OrderAddCubeSelectComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -4627,7 +4428,7 @@
             this.OrderAddCubeSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddCubeSelectComboBox.Location = new System.Drawing.Point(9, 21);
             this.OrderAddCubeSelectComboBox.Name = "OrderAddCubeSelectComboBox";
-            this.OrderAddCubeSelectComboBox.Size = new System.Drawing.Size(185, 29);
+            this.OrderAddCubeSelectComboBox.Size = new System.Drawing.Size(188, 29);
             this.OrderAddCubeSelectComboBox.Sorted = true;
             this.OrderAddCubeSelectComboBox.TabIndex = 132;
             // 
@@ -4642,17 +4443,6 @@
             this.label105.Size = new System.Drawing.Size(36, 21);
             this.label105.TabIndex = 130;
             this.label105.Text = "Куб";
-            // 
-            // OrderAddCubeAddButton
-            // 
-            this.OrderAddCubeAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderAddCubeAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddCubeAddButton.Image")));
-            this.OrderAddCubeAddButton.Location = new System.Drawing.Point(200, 20);
-            this.OrderAddCubeAddButton.Name = "OrderAddCubeAddButton";
-            this.OrderAddCubeAddButton.Size = new System.Drawing.Size(30, 30);
-            this.OrderAddCubeAddButton.TabIndex = 131;
-            this.OrderAddCubeAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddCubeAddButton.Click += new System.EventHandler(this.OrderAddCubeAddButton_Click);
             // 
             // OrderAddDateSelectDateTimePicker
             // 
@@ -4766,7 +4556,7 @@
             this.OrderAddDeliveryAddressAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddDeliveryAddressAddButton.Location = new System.Drawing.Point(6, 8);
             this.OrderAddDeliveryAddressAddButton.Name = "OrderAddDeliveryAddressAddButton";
-            this.OrderAddDeliveryAddressAddButton.Size = new System.Drawing.Size(226, 30);
+            this.OrderAddDeliveryAddressAddButton.Size = new System.Drawing.Size(229, 30);
             this.OrderAddDeliveryAddressAddButton.TabIndex = 123;
             this.OrderAddDeliveryAddressAddButton.Text = "Розвантаження";
             this.OrderAddDeliveryAddressAddButton.UseVisualStyleBackColor = true;
@@ -4780,7 +4570,7 @@
             this.OrderAddDeliveryDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.OrderAddDeliveryDateTimePicker.Location = new System.Drawing.Point(6, 65);
             this.OrderAddDeliveryDateTimePicker.Name = "OrderAddDeliveryDateTimePicker";
-            this.OrderAddDeliveryDateTimePicker.Size = new System.Drawing.Size(217, 29);
+            this.OrderAddDeliveryDateTimePicker.Size = new System.Drawing.Size(220, 29);
             this.OrderAddDeliveryDateTimePicker.TabIndex = 125;
             this.OrderAddDeliveryDateTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
             this.OrderAddDeliveryDateTimePicker.CloseUp += new System.EventHandler(this.OrderAddDeliveryDateTimePicker_CloseUp);
@@ -4824,17 +4614,6 @@
             this.OrderAddTirCmrSelectComboBox.Sorted = true;
             this.OrderAddTirCmrSelectComboBox.TabIndex = 130;
             // 
-            // OrderAddTirCmrAddButton
-            // 
-            this.OrderAddTirCmrAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderAddTirCmrAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddTirCmrAddButton.Image")));
-            this.OrderAddTirCmrAddButton.Location = new System.Drawing.Point(156, 64);
-            this.OrderAddTirCmrAddButton.Name = "OrderAddTirCmrAddButton";
-            this.OrderAddTirCmrAddButton.Size = new System.Drawing.Size(30, 30);
-            this.OrderAddTirCmrAddButton.TabIndex = 132;
-            this.OrderAddTirCmrAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddTirCmrAddButton.Click += new System.EventHandler(this.OrderAddTirCmrAddButton_Click);
-            // 
             // OrderAddCustomsAddressAddButton
             // 
             this.OrderAddCustomsAddressAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -4866,7 +4645,7 @@
             this.OrderAddUncustomsAddressAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddUncustomsAddressAddButton.Location = new System.Drawing.Point(9, 8);
             this.OrderAddUncustomsAddressAddButton.Name = "OrderAddUncustomsAddressAddButton";
-            this.OrderAddUncustomsAddressAddButton.Size = new System.Drawing.Size(219, 30);
+            this.OrderAddUncustomsAddressAddButton.Size = new System.Drawing.Size(222, 30);
             this.OrderAddUncustomsAddressAddButton.TabIndex = 129;
             this.OrderAddUncustomsAddressAddButton.Text = "Розмитнення";
             this.OrderAddUncustomsAddressAddButton.UseVisualStyleBackColor = true;
@@ -5086,6 +4865,9 @@
             // showTrackingPage
             // 
             this.showTrackingPage.BackColor = System.Drawing.Color.AliceBlue;
+            this.showTrackingPage.Controls.Add(this.trackingShowAddCommentButton);
+            this.showTrackingPage.Controls.Add(this.trackingShowCommentDataGridView);
+            this.showTrackingPage.Controls.Add(this.trackingShowCloseOrder);
             this.showTrackingPage.Controls.Add(this.showTrackingOnlyActive);
             this.showTrackingPage.Controls.Add(this.onlyActiveLabel);
             this.showTrackingPage.Controls.Add(this.showTrackingDataSwitcher);
@@ -5101,6 +4883,28 @@
             this.showTrackingPage.Size = new System.Drawing.Size(776, 505);
             this.showTrackingPage.TabIndex = 16;
             this.showTrackingPage.Text = "showTrackingPage";
+            // 
+            // showTrackingOnlyActive
+            // 
+            this.showTrackingOnlyActive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.showTrackingOnlyActive.AutoSize = true;
+            this.showTrackingOnlyActive.Location = new System.Drawing.Point(694, 36);
+            this.showTrackingOnlyActive.Name = "showTrackingOnlyActive";
+            this.showTrackingOnlyActive.Size = new System.Drawing.Size(15, 14);
+            this.showTrackingOnlyActive.TabIndex = 54;
+            this.showTrackingOnlyActive.UseVisualStyleBackColor = true;
+            this.showTrackingOnlyActive.CheckedChanged += new System.EventHandler(this.showTrackingOnlyActive_CheckedChanged);
+            // 
+            // onlyActiveLabel
+            // 
+            this.onlyActiveLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.onlyActiveLabel.AutoSize = true;
+            this.onlyActiveLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.onlyActiveLabel.Location = new System.Drawing.Point(579, 30);
+            this.onlyActiveLabel.Name = "onlyActiveLabel";
+            this.onlyActiveLabel.Size = new System.Drawing.Size(115, 21);
+            this.onlyActiveLabel.TabIndex = 53;
+            this.onlyActiveLabel.Text = "Тільки активні:";
             // 
             // showTrackingDataSwitcher
             // 
@@ -5143,11 +4947,13 @@
             this.trackingShowTransporterContactsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackingShowTransporterContactsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.trackingShowTransporterContactsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.trackingShowTransporterContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.trackingShowTransporterContactsDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.trackingShowTransporterContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.trackingShowTransporterContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.trackingShowTransporterContactsDataGridView.Location = new System.Drawing.Point(0, 204);
+            this.trackingShowTransporterContactsDataGridView.MultiSelect = false;
             this.trackingShowTransporterContactsDataGridView.Name = "trackingShowTransporterContactsDataGridView";
+            this.trackingShowTransporterContactsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.trackingShowTransporterContactsDataGridView.Size = new System.Drawing.Size(776, 81);
             this.trackingShowTransporterContactsDataGridView.TabIndex = 49;
             this.trackingShowTransporterContactsDataGridView.TabStop = false;
@@ -5193,11 +4999,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackingShowDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.trackingShowDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.trackingShowDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.trackingShowDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.trackingShowDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.trackingShowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.trackingShowDataGridView.Location = new System.Drawing.Point(0, 62);
+            this.trackingShowDataGridView.MultiSelect = false;
             this.trackingShowDataGridView.Name = "trackingShowDataGridView";
+            this.trackingShowDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.trackingShowDataGridView.Size = new System.Drawing.Size(776, 117);
             this.trackingShowDataGridView.TabIndex = 18;
             this.trackingShowDataGridView.TabStop = false;
@@ -5261,27 +5069,297 @@
             this.labelshow69.TabIndex = 36;
             this.labelshow69.Text = "Країни";
             // 
-            // onlyActiveLabel
+            // trackingShowCloseOrder
             // 
-            this.onlyActiveLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.onlyActiveLabel.AutoSize = true;
-            this.onlyActiveLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.onlyActiveLabel.Location = new System.Drawing.Point(579, 30);
-            this.onlyActiveLabel.Name = "onlyActiveLabel";
-            this.onlyActiveLabel.Size = new System.Drawing.Size(115, 21);
-            this.onlyActiveLabel.TabIndex = 53;
-            this.onlyActiveLabel.Text = "Тільки активні:";
+            this.trackingShowCloseOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingShowCloseOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.trackingShowCloseOrder.Location = new System.Drawing.Point(618, 397);
+            this.trackingShowCloseOrder.Name = "trackingShowCloseOrder";
+            this.trackingShowCloseOrder.Size = new System.Drawing.Size(138, 30);
+            this.trackingShowCloseOrder.TabIndex = 55;
+            this.trackingShowCloseOrder.Text = "Закрити заявку";
+            this.trackingShowCloseOrder.UseVisualStyleBackColor = true;
+            this.trackingShowCloseOrder.Click += new System.EventHandler(this.trackingShowCloseOrder_Click);
             // 
-            // showTrackingOnlyActive
+            // trackingShowCommentDataGridView
             // 
-            this.showTrackingOnlyActive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.showTrackingOnlyActive.AutoSize = true;
-            this.showTrackingOnlyActive.Location = new System.Drawing.Point(694, 36);
-            this.showTrackingOnlyActive.Name = "showTrackingOnlyActive";
-            this.showTrackingOnlyActive.Size = new System.Drawing.Size(15, 14);
-            this.showTrackingOnlyActive.TabIndex = 54;
-            this.showTrackingOnlyActive.UseVisualStyleBackColor = true;
-            this.showTrackingOnlyActive.CheckedChanged += new System.EventHandler(this.showTrackingOnlyActive_CheckedChanged);
+            this.trackingShowCommentDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingShowCommentDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.trackingShowCommentDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.trackingShowCommentDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.trackingShowCommentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.trackingShowCommentDataGridView.Location = new System.Drawing.Point(13, 331);
+            this.trackingShowCommentDataGridView.MultiSelect = false;
+            this.trackingShowCommentDataGridView.Name = "trackingShowCommentDataGridView";
+            this.trackingShowCommentDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.trackingShowCommentDataGridView.Size = new System.Drawing.Size(392, 144);
+            this.trackingShowCommentDataGridView.TabIndex = 56;
+            this.trackingShowCommentDataGridView.TabStop = false;
+            // 
+            // helloPictureBox
+            // 
+            this.helloPictureBox.BackColor = System.Drawing.Color.Wheat;
+            this.helloPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.helloPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("helloPictureBox.Image")));
+            this.helloPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.helloPictureBox.Name = "helloPictureBox";
+            this.helloPictureBox.Size = new System.Drawing.Size(776, 505);
+            this.helloPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.helloPictureBox.TabIndex = 0;
+            this.helloPictureBox.TabStop = false;
+            // 
+            // addTaxPayerStatusClientButton
+            // 
+            this.addTaxPayerStatusClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addTaxPayerStatusClientButton.Image = ((System.Drawing.Image)(resources.GetObject("addTaxPayerStatusClientButton.Image")));
+            this.addTaxPayerStatusClientButton.Location = new System.Drawing.Point(738, 89);
+            this.addTaxPayerStatusClientButton.Name = "addTaxPayerStatusClientButton";
+            this.addTaxPayerStatusClientButton.Size = new System.Drawing.Size(30, 30);
+            this.addTaxPayerStatusClientButton.TabIndex = 19;
+            this.addTaxPayerStatusClientButton.UseVisualStyleBackColor = true;
+            this.addTaxPayerStatusClientButton.Click += new System.EventHandler(this.addTaxPayerStatusClientButton_Click);
+            // 
+            // addWorkDocumentClientButton
+            // 
+            this.addWorkDocumentClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addWorkDocumentClientButton.Image = ((System.Drawing.Image)(resources.GetObject("addWorkDocumentClientButton.Image")));
+            this.addWorkDocumentClientButton.Location = new System.Drawing.Point(736, 27);
+            this.addWorkDocumentClientButton.Name = "addWorkDocumentClientButton";
+            this.addWorkDocumentClientButton.Size = new System.Drawing.Size(30, 30);
+            this.addWorkDocumentClientButton.TabIndex = 18;
+            this.addWorkDocumentClientButton.UseVisualStyleBackColor = true;
+            this.addWorkDocumentClientButton.Click += new System.EventHandler(this.addWorkDocumentClientButton_Click);
+            // 
+            // clientUpdateTaxPayerStatusAddButton
+            // 
+            this.clientUpdateTaxPayerStatusAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientUpdateTaxPayerStatusAddButton.Image = ((System.Drawing.Image)(resources.GetObject("clientUpdateTaxPayerStatusAddButton.Image")));
+            this.clientUpdateTaxPayerStatusAddButton.Location = new System.Drawing.Point(738, 139);
+            this.clientUpdateTaxPayerStatusAddButton.Name = "clientUpdateTaxPayerStatusAddButton";
+            this.clientUpdateTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
+            this.clientUpdateTaxPayerStatusAddButton.TabIndex = 49;
+            this.clientUpdateTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
+            this.clientUpdateTaxPayerStatusAddButton.Click += new System.EventHandler(this.clientUpdateTaxPayerStatusAddButton_Click);
+            // 
+            // clientUpdateWorkDocumentAddButton
+            // 
+            this.clientUpdateWorkDocumentAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientUpdateWorkDocumentAddButton.Image = ((System.Drawing.Image)(resources.GetObject("clientUpdateWorkDocumentAddButton.Image")));
+            this.clientUpdateWorkDocumentAddButton.Location = new System.Drawing.Point(736, 77);
+            this.clientUpdateWorkDocumentAddButton.Name = "clientUpdateWorkDocumentAddButton";
+            this.clientUpdateWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
+            this.clientUpdateWorkDocumentAddButton.TabIndex = 48;
+            this.clientUpdateWorkDocumentAddButton.UseVisualStyleBackColor = true;
+            this.clientUpdateWorkDocumentAddButton.Click += new System.EventHandler(this.clientUpdateWorkDocumentAddButton_Click);
+            // 
+            // addTaxPayerStatusForwarderButton
+            // 
+            this.addTaxPayerStatusForwarderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addTaxPayerStatusForwarderButton.Image = ((System.Drawing.Image)(resources.GetObject("addTaxPayerStatusForwarderButton.Image")));
+            this.addTaxPayerStatusForwarderButton.Location = new System.Drawing.Point(738, 94);
+            this.addTaxPayerStatusForwarderButton.Name = "addTaxPayerStatusForwarderButton";
+            this.addTaxPayerStatusForwarderButton.Size = new System.Drawing.Size(30, 30);
+            this.addTaxPayerStatusForwarderButton.TabIndex = 48;
+            this.addTaxPayerStatusForwarderButton.UseVisualStyleBackColor = true;
+            this.addTaxPayerStatusForwarderButton.Click += new System.EventHandler(this.addTaxPayerStatusForwarderButton_Click);
+            // 
+            // addWorkDocumentForwarderButton
+            // 
+            this.addWorkDocumentForwarderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addWorkDocumentForwarderButton.Image = ((System.Drawing.Image)(resources.GetObject("addWorkDocumentForwarderButton.Image")));
+            this.addWorkDocumentForwarderButton.Location = new System.Drawing.Point(738, 31);
+            this.addWorkDocumentForwarderButton.Name = "addWorkDocumentForwarderButton";
+            this.addWorkDocumentForwarderButton.Size = new System.Drawing.Size(30, 30);
+            this.addWorkDocumentForwarderButton.TabIndex = 47;
+            this.addWorkDocumentForwarderButton.UseVisualStyleBackColor = true;
+            this.addWorkDocumentForwarderButton.Click += new System.EventHandler(this.addWorkDocumentForwarderButton_Click);
+            // 
+            // forwarderUpdateTaxPayerStatusAddButton
+            // 
+            this.forwarderUpdateTaxPayerStatusAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderUpdateTaxPayerStatusAddButton.Image = ((System.Drawing.Image)(resources.GetObject("forwarderUpdateTaxPayerStatusAddButton.Image")));
+            this.forwarderUpdateTaxPayerStatusAddButton.Location = new System.Drawing.Point(738, 139);
+            this.forwarderUpdateTaxPayerStatusAddButton.Name = "forwarderUpdateTaxPayerStatusAddButton";
+            this.forwarderUpdateTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
+            this.forwarderUpdateTaxPayerStatusAddButton.TabIndex = 81;
+            this.forwarderUpdateTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateTaxPayerStatusAddButton.Click += new System.EventHandler(this.forwarderUpdateTaxPayerStatusAddButton_Click);
+            // 
+            // forwarderUpdateWorkDocumentAddButton
+            // 
+            this.forwarderUpdateWorkDocumentAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderUpdateWorkDocumentAddButton.Image = ((System.Drawing.Image)(resources.GetObject("forwarderUpdateWorkDocumentAddButton.Image")));
+            this.forwarderUpdateWorkDocumentAddButton.Location = new System.Drawing.Point(736, 77);
+            this.forwarderUpdateWorkDocumentAddButton.Name = "forwarderUpdateWorkDocumentAddButton";
+            this.forwarderUpdateWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
+            this.forwarderUpdateWorkDocumentAddButton.TabIndex = 80;
+            this.forwarderUpdateWorkDocumentAddButton.UseVisualStyleBackColor = true;
+            this.forwarderUpdateWorkDocumentAddButton.Click += new System.EventHandler(this.forwarderUpdateWorkDocumentAddButton_Click);
+            // 
+            // transporterAddTaxPayerStatusAddButton
+            // 
+            this.transporterAddTaxPayerStatusAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterAddTaxPayerStatusAddButton.Image = ((System.Drawing.Image)(resources.GetObject("transporterAddTaxPayerStatusAddButton.Image")));
+            this.transporterAddTaxPayerStatusAddButton.Location = new System.Drawing.Point(735, 144);
+            this.transporterAddTaxPayerStatusAddButton.Name = "transporterAddTaxPayerStatusAddButton";
+            this.transporterAddTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
+            this.transporterAddTaxPayerStatusAddButton.TabIndex = 78;
+            this.transporterAddTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
+            this.transporterAddTaxPayerStatusAddButton.Click += new System.EventHandler(this.transporterAddTaxPayerStatusAddButton_Click);
+            // 
+            // transporterAddWorkDocumentAddButton
+            // 
+            this.transporterAddWorkDocumentAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterAddWorkDocumentAddButton.Image = ((System.Drawing.Image)(resources.GetObject("transporterAddWorkDocumentAddButton.Image")));
+            this.transporterAddWorkDocumentAddButton.Location = new System.Drawing.Point(734, 88);
+            this.transporterAddWorkDocumentAddButton.Name = "transporterAddWorkDocumentAddButton";
+            this.transporterAddWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
+            this.transporterAddWorkDocumentAddButton.TabIndex = 77;
+            this.transporterAddWorkDocumentAddButton.UseVisualStyleBackColor = true;
+            this.transporterAddWorkDocumentAddButton.Click += new System.EventHandler(this.transporterAddWorkDocumentAddButton_Click);
+            // 
+            // transporterUpdateTaxPayerStatusAddButton
+            // 
+            this.transporterUpdateTaxPayerStatusAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterUpdateTaxPayerStatusAddButton.Image = ((System.Drawing.Image)(resources.GetObject("transporterUpdateTaxPayerStatusAddButton.Image")));
+            this.transporterUpdateTaxPayerStatusAddButton.Location = new System.Drawing.Point(737, 192);
+            this.transporterUpdateTaxPayerStatusAddButton.Name = "transporterUpdateTaxPayerStatusAddButton";
+            this.transporterUpdateTaxPayerStatusAddButton.Size = new System.Drawing.Size(30, 30);
+            this.transporterUpdateTaxPayerStatusAddButton.TabIndex = 121;
+            this.transporterUpdateTaxPayerStatusAddButton.UseVisualStyleBackColor = true;
+            this.transporterUpdateTaxPayerStatusAddButton.Click += new System.EventHandler(this.transporterUpdateTaxPayerStatusAddButton_Click);
+            // 
+            // transporterUpdateWorkDocumentAddButton
+            // 
+            this.transporterUpdateWorkDocumentAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterUpdateWorkDocumentAddButton.Image = ((System.Drawing.Image)(resources.GetObject("transporterUpdateWorkDocumentAddButton.Image")));
+            this.transporterUpdateWorkDocumentAddButton.Location = new System.Drawing.Point(736, 136);
+            this.transporterUpdateWorkDocumentAddButton.Name = "transporterUpdateWorkDocumentAddButton";
+            this.transporterUpdateWorkDocumentAddButton.Size = new System.Drawing.Size(30, 30);
+            this.transporterUpdateWorkDocumentAddButton.TabIndex = 120;
+            this.transporterUpdateWorkDocumentAddButton.UseVisualStyleBackColor = true;
+            this.transporterUpdateWorkDocumentAddButton.Click += new System.EventHandler(this.transporterUpdateWorkDocumentAddButton_Click);
+            // 
+            // OrderAddAdditionalTermsAddButton
+            // 
+            this.OrderAddAdditionalTermsAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderAddAdditionalTermsAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddAdditionalTermsAddButton.Image")));
+            this.OrderAddAdditionalTermsAddButton.Location = new System.Drawing.Point(346, 74);
+            this.OrderAddAdditionalTermsAddButton.Name = "OrderAddAdditionalTermsAddButton";
+            this.OrderAddAdditionalTermsAddButton.Size = new System.Drawing.Size(30, 30);
+            this.OrderAddAdditionalTermsAddButton.TabIndex = 140;
+            this.OrderAddAdditionalTermsAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddAdditionalTermsAddButton.Click += new System.EventHandler(this.OrderAddAdditionalTermsAddButton_Click);
+            // 
+            // OrderAddPaymentTermsAddButton
+            // 
+            this.OrderAddPaymentTermsAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderAddPaymentTermsAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddPaymentTermsAddButton.Image")));
+            this.OrderAddPaymentTermsAddButton.Location = new System.Drawing.Point(346, 24);
+            this.OrderAddPaymentTermsAddButton.Name = "OrderAddPaymentTermsAddButton";
+            this.OrderAddPaymentTermsAddButton.Size = new System.Drawing.Size(30, 30);
+            this.OrderAddPaymentTermsAddButton.TabIndex = 139;
+            this.OrderAddPaymentTermsAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddPaymentTermsAddButton.Click += new System.EventHandler(this.OrderAddPaymentTermsAddButton_Click);
+            // 
+            // button11
+            // 
+            this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
+            this.button11.Location = new System.Drawing.Point(391, 11);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(30, 30);
+            this.button11.TabIndex = 138;
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // OrderAddOrderDenyAddButton
+            // 
+            this.OrderAddOrderDenyAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderAddOrderDenyAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddOrderDenyAddButton.Image")));
+            this.OrderAddOrderDenyAddButton.Location = new System.Drawing.Point(380, 23);
+            this.OrderAddOrderDenyAddButton.Name = "OrderAddOrderDenyAddButton";
+            this.OrderAddOrderDenyAddButton.Size = new System.Drawing.Size(30, 30);
+            this.OrderAddOrderDenyAddButton.TabIndex = 140;
+            this.OrderAddOrderDenyAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddOrderDenyAddButton.Click += new System.EventHandler(this.OrderAddOrderDenyAddButton_Click);
+            // 
+            // OrderAddCargoAddButton
+            // 
+            this.OrderAddCargoAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderAddCargoAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddCargoAddButton.Image")));
+            this.OrderAddCargoAddButton.Location = new System.Drawing.Point(152, 21);
+            this.OrderAddCargoAddButton.Name = "OrderAddCargoAddButton";
+            this.OrderAddCargoAddButton.Size = new System.Drawing.Size(30, 30);
+            this.OrderAddCargoAddButton.TabIndex = 122;
+            this.OrderAddCargoAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddCargoAddButton.Click += new System.EventHandler(this.OrderAddCargoAddButton_Click);
+            // 
+            // OrderAddFineForDelayAddButton
+            // 
+            this.OrderAddFineForDelayAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderAddFineForDelayAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddFineForDelayAddButton.Image")));
+            this.OrderAddFineForDelayAddButton.Location = new System.Drawing.Point(157, 82);
+            this.OrderAddFineForDelayAddButton.Name = "OrderAddFineForDelayAddButton";
+            this.OrderAddFineForDelayAddButton.Size = new System.Drawing.Size(30, 30);
+            this.OrderAddFineForDelayAddButton.TabIndex = 137;
+            this.OrderAddFineForDelayAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddFineForDelayAddButton.Click += new System.EventHandler(this.OrderAddFineForDelayAddButton_Click);
+            // 
+            // OrderAddRegularyDelayAddButton
+            // 
+            this.OrderAddRegularyDelayAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderAddRegularyDelayAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddRegularyDelayAddButton.Image")));
+            this.OrderAddRegularyDelayAddButton.Location = new System.Drawing.Point(156, 21);
+            this.OrderAddRegularyDelayAddButton.Name = "OrderAddRegularyDelayAddButton";
+            this.OrderAddRegularyDelayAddButton.Size = new System.Drawing.Size(30, 30);
+            this.OrderAddRegularyDelayAddButton.TabIndex = 136;
+            this.OrderAddRegularyDelayAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddRegularyDelayAddButton.Click += new System.EventHandler(this.OrderAddRegularyDelayAddButton_Click);
+            // 
+            // OrderAddTrailerAddButton
+            // 
+            this.OrderAddTrailerAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderAddTrailerAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddTrailerAddButton.Image")));
+            this.OrderAddTrailerAddButton.Location = new System.Drawing.Point(205, 82);
+            this.OrderAddTrailerAddButton.Name = "OrderAddTrailerAddButton";
+            this.OrderAddTrailerAddButton.Size = new System.Drawing.Size(30, 30);
+            this.OrderAddTrailerAddButton.TabIndex = 134;
+            this.OrderAddTrailerAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddTrailerAddButton.Click += new System.EventHandler(this.OrderAddTrailerAddButton_Click);
+            // 
+            // OrderAddCubeAddButton
+            // 
+            this.OrderAddCubeAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderAddCubeAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddCubeAddButton.Image")));
+            this.OrderAddCubeAddButton.Location = new System.Drawing.Point(203, 20);
+            this.OrderAddCubeAddButton.Name = "OrderAddCubeAddButton";
+            this.OrderAddCubeAddButton.Size = new System.Drawing.Size(30, 30);
+            this.OrderAddCubeAddButton.TabIndex = 131;
+            this.OrderAddCubeAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddCubeAddButton.Click += new System.EventHandler(this.OrderAddCubeAddButton_Click);
+            // 
+            // OrderAddTirCmrAddButton
+            // 
+            this.OrderAddTirCmrAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderAddTirCmrAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddTirCmrAddButton.Image")));
+            this.OrderAddTirCmrAddButton.Location = new System.Drawing.Point(156, 64);
+            this.OrderAddTirCmrAddButton.Name = "OrderAddTirCmrAddButton";
+            this.OrderAddTirCmrAddButton.Size = new System.Drawing.Size(30, 30);
+            this.OrderAddTirCmrAddButton.TabIndex = 132;
+            this.OrderAddTirCmrAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddTirCmrAddButton.Click += new System.EventHandler(this.OrderAddTirCmrAddButton_Click);
+            // 
+            // trackingShowAddCommentButton
+            // 
+            this.trackingShowAddCommentButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingShowAddCommentButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.trackingShowAddCommentButton.Location = new System.Drawing.Point(456, 445);
+            this.trackingShowAddCommentButton.Name = "trackingShowAddCommentButton";
+            this.trackingShowAddCommentButton.Size = new System.Drawing.Size(213, 30);
+            this.trackingShowAddCommentButton.TabIndex = 57;
+            this.trackingShowAddCommentButton.Text = "Додати коментар";
+            this.trackingShowAddCommentButton.UseVisualStyleBackColor = true;
+            this.trackingShowAddCommentButton.Click += new System.EventHandler(this.trackingShowAddCommentButton_Click);
             // 
             // MainForm
             // 
@@ -5302,7 +5380,6 @@
             this.dataControl.ResumeLayout(false);
             this.helloPage.ResumeLayout(false);
             this.helloPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.helloPictureBox)).EndInit();
             this.showClientPage.ResumeLayout(false);
             this.showClientPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBankDetailsDataGridView)).EndInit();
@@ -5395,6 +5472,8 @@
             this.showTrackingPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackingShowTransporterContactsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingShowDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowCommentDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helloPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5824,6 +5903,9 @@
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label onlyActiveLabel;
         private System.Windows.Forms.CheckBox showTrackingOnlyActive;
+        private System.Windows.Forms.Button trackingShowCloseOrder;
+        private System.Windows.Forms.DataGridView trackingShowCommentDataGridView;
+        private System.Windows.Forms.Button trackingShowAddCommentButton;
         }
 }
 

@@ -1653,6 +1653,11 @@ namespace AtlantSovt
         {
             ShowTrackingSearch();
         }
+
+        private void trackingShowCloseOrder_Click(object sender, EventArgs e)
+        {
+            ShowTrackingCloseOrder();
+        }
         #endregion
 
         // Order
@@ -1812,6 +1817,24 @@ namespace AtlantSovt
         {
             //  UploadAddressForm();
         }
+
+        private void trackingShowAddCommentButton_Click(object sender, EventArgs e)
+        {
+            AddTrackingCommentForm trackingShowAddComment = new AddTrackingCommentForm();
+            trackingShowAddComment.Show();
+            try
+            {
+                trackingShowAddComment.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+            }
+            catch(Exception ex)
+            {
+                trackingShowAddComment.Dispose();
+                MessageBox.Show("Немає жодної заявки");
+            }
+
+        }
+
+
 
 
     }
