@@ -62,6 +62,8 @@ namespace AtlantSovt.AtlantSovtDb
 
         public bool? State { get; set; }
 
+        public long? IndexNumber { get; set; }
+
         public virtual AdditionalTerm AdditionalTerm { get; set; }
 
         public virtual Cargo Cargo { get; set; }

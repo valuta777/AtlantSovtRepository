@@ -21,6 +21,7 @@ namespace AtlantSovt
             InitializeComponent();
             menuStrip.Renderer = new menuStripRenderer();
             yearLabel.Text = DateTime.Now.ToShortDateString();
+
         }
             //Client Forms
 
@@ -1611,16 +1612,19 @@ namespace AtlantSovt
         //Tracking
         #region Tracking
 
+        ShowTrackingCommentForm comment;
+
         private void trackingShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowTrackingInfo();
+            trackingShowAddCommentButton.Enabled = true;
+            trackingShowCloseOrderButton.Enabled = true;
         }
 
         private void trackingShowSearchButton_Click(object sender, EventArgs e)
         {
             ShowTrackingSearch();
         }
-
 
         private void trackingShowSearchTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -1658,6 +1662,44 @@ namespace AtlantSovt
         {
             ShowTrackingCloseOrder();
         }
+
+        private void trackingShowAddCommentButton_Click(object sender, EventArgs e)
+        {
+            AddTrackingCommentForm trackingShowAddComment = new AddTrackingCommentForm();
+            trackingShowAddComment.Show();
+            try
+            {
+                trackingShowAddComment.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+            }
+            catch (Exception ex)
+            {
+                trackingShowAddComment.Dispose();
+                MessageBox.Show("Немає жодної заявки");
+            }
+        }
+
+        private void trackingShowCommentDataGridView_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                comment = new ShowTrackingCommentForm();
+                comment.Location = new Point(Cursor.Position.X, Cursor.Position.Y - 200);
+                trackingShowCommentDataGridView.ClearSelection();
+                comment.comment = trackingShowCommentDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+                comment.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Натисніть на коментар");
+            }
+        }
+
+        private void trackingShowCommentDataGridView_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            comment.comment = "";
+            comment.Dispose();
+        }
+
         #endregion
 
         // Order
@@ -1697,7 +1739,6 @@ namespace AtlantSovt
 
         private void OrderAddForwarder2SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            
             OrderAddForwarder2SelectComboBox.Items.Clear();
             LoadOrderAddForwarder2SelectComboBox();
             OrderAddForwarder2SelectComboBox.DroppedDown = true;
@@ -1714,14 +1755,12 @@ namespace AtlantSovt
 
         private void OrderAddForwarder1SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             SplitForwarder1OrderAdd();
         }
 
         private void OrderAddForwarder2SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitForwarder2OrderAdd();
-            
         }
 
         private void OrderAddTransporterSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -1818,21 +1857,8 @@ namespace AtlantSovt
             //  UploadAddressForm();
         }
 
-        private void trackingShowAddCommentButton_Click(object sender, EventArgs e)
-        {
-            AddTrackingCommentForm trackingShowAddComment = new AddTrackingCommentForm();
-            trackingShowAddComment.Show();
-            try
-            {
-                trackingShowAddComment.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
-            }
-            catch(Exception ex)
-            {
-                trackingShowAddComment.Dispose();
-                MessageBox.Show("Немає жодної заявки");
-            }
 
-        }
+
 
 
 

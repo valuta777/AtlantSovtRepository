@@ -8,18 +8,10 @@ namespace AtlantSovt.AtlantSovtDb
 
     public partial class OrderCustomsAddress
     {
-        [Key]
-        [Column(Order = 0)]
         public long Id { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long AddressId { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long OrderId { get; set; }
 
         public virtual CustomsAddress CustomsAddress { get; set; }

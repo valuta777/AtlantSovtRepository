@@ -27,13 +27,13 @@ namespace AtlantSovt
                 new
                 {
                     Id = o.Id,
-                    //TODO OrderNumber
-                    OrderNumber = "Номер заявки",
+                    OrderNumber = o.IndexNumber + "/" + o.Date.Value.Year,
                     YorU = o.YorU,
                     ClientName = o.Client.Name,
                     TransporterName = o.Transporter.FullName,
                     DownloadDate = o.DownloadDate,
-                    State = o.State
+                    State = (o.State == true) ? "Відкрита" : "Закрита"  
+
                 };
 
                 trackingShowDataGridView.DataSource = query.ToList();
@@ -89,13 +89,38 @@ namespace AtlantSovt
                         createDate = com.CreateDate,
                         lastChangeDate = com.LastChangeDate
                     };
-                    
+
                     trackingShowCommentDataGridView.DataSource = query1.ToList();
                     trackingShowCommentDataGridView.Columns[0].HeaderText = "Коментар";
                     trackingShowCommentDataGridView.Columns[1].HeaderText = "Дата додавання";
                     trackingShowCommentDataGridView.Columns[2].HeaderText = "Дата останньої зміни";
 
+                    trackingShowCommentDataGridView.Columns[1].Width = 50;
+                    trackingShowCommentDataGridView.Columns[2].Width = 150;
 
+                    var query3 =
+                  from add in db.OrderDownloadAddresses
+                  where add.OrderId == TrackingClikedId
+                  select new
+                  {
+                      country = add.DownloadAddress.Country.Name,
+                      cityCode = add.DownloadAddress.CityCode
+                  };
+                    trackingShowDownloadAddressDataGridView.DataSource = query3.ToList();
+                    trackingShowDownloadAddressDataGridView.Columns[0].HeaderText = "Країна";
+                    trackingShowDownloadAddressDataGridView.Columns[1].HeaderText = "Код міста";
+
+                    var query4 =
+                 from add in db.OrderUploadAdresses
+                 where add.OrderId == TrackingClikedId
+                 select new
+                 {
+                     country = add.UploadAddress.Country.Name,
+                     cityCode = add.UploadAddress.CityCode
+                 };
+                    trackingShowUploadAddressDataGridView.DataSource = query4.ToList();
+                    trackingShowUploadAddressDataGridView.Columns[0].HeaderText = "Країна";
+                    trackingShowUploadAddressDataGridView.Columns[1].HeaderText = "Код міста";
                 }
                 catch (Exception ex)
                 {
@@ -156,8 +181,7 @@ namespace AtlantSovt
                    new
                    {
                        Id = o.Id,
-                       //TODO OrderNumber
-                       OrderNumber = "Номер заявки",
+                       OrderNumber = o.IndexNumber + "/" + o.Date.Value.Year,
                        YorU = o.YorU,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
@@ -186,8 +210,7 @@ namespace AtlantSovt
                    new
                    {
                        Id = o.Id,
-                       //TODO OrderNumber
-                       OrderNumber = "Номер заявки",
+                       OrderNumber = o.IndexNumber + "/" + o.Date.Value.Year,
                        YorU = o.YorU,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
@@ -215,8 +238,7 @@ namespace AtlantSovt
                    new
                    {
                        Id = o.Id,
-                       //TODO OrderNumber
-                       OrderNumber = "Номер заявки",
+                       OrderNumber = o.IndexNumber + "/" + o.Date.Value.Year,
                        YorU = o.YorU,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
@@ -245,8 +267,7 @@ namespace AtlantSovt
                    new
                    {
                        Id = o.Id,
-                       //TODO OrderNumber
-                       OrderNumber = "Номер заявки",
+                       OrderNumber = o.IndexNumber + "/" + o.Date.Value.Year,
                        YorU = o.YorU,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
@@ -274,8 +295,7 @@ namespace AtlantSovt
                    new
                    {
                        Id = o.Id,
-                       //TODO OrderNumber
-                       OrderNumber = "Номер заявки",
+                       OrderNumber = o.IndexNumber + "/" + o.Date.Value.Year,
                        YorU = o.YorU,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
@@ -304,8 +324,7 @@ namespace AtlantSovt
                    new
                    {
                        Id = o.Id,
-                       //TODO OrderNumber
-                       OrderNumber = "Номер заявки",
+                       OrderNumber = o.IndexNumber + "/" + o.Date.Value.Year,
                        YorU = o.YorU,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
@@ -333,8 +352,7 @@ namespace AtlantSovt
                   new
                   {
                       Id = o.Id,
-                      //TODO OrderNumber
-                      OrderNumber = "Номер заявки",
+                      OrderNumber = o.IndexNumber + "/" + o.Date.Value.Year,
                       YorU = o.YorU,
                       ClientName = o.Client.Name,
                       TransporterName = o.Transporter.FullName,
@@ -363,8 +381,7 @@ namespace AtlantSovt
                    new
                    {
                        Id = o.Id,
-                       //TODO OrderNumber
-                       OrderNumber = "Номер заявки",
+                       OrderNumber = o.IndexNumber + "/" + o.Date.Value.Year,
                        YorU = o.YorU,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,

@@ -13,6 +13,20 @@ namespace AtlantSovt
 {
     public partial class AddTrackingCommentForm : Form
     {
+
+        private long id;
+        public long Id
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                id = value;
+            }
+        }
+
         public AddTrackingCommentForm()
         {
             InitializeComponent();
@@ -39,19 +53,8 @@ namespace AtlantSovt
                 {
                     MessageBox.Show(ec.Message);
                 }
-            }
-        }
 
-        private long id;
-        public long Id
-        {
-            get
-            {
-                return id;
-            }
-            set
-            {
-                id = value;
+                
             }
         }
 

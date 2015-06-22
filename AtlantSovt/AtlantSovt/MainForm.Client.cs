@@ -42,7 +42,7 @@ namespace AtlantSovt
                     Director = c.Director,
                     PhysicalAddress = c.PhysicalAddress,
                     GeografphyAddress = c.GeografphyAddress,
-                    ContractType = c.ContractType,
+                    ContractType = (c.ContractType == true) ? "Оригінал" : "Факс",
                     TaxPayerStatusId = c.TaxPayerStatu.Status,
                     WorkDocumentId = c.WorkDocument.Status,
                 };
@@ -53,7 +53,7 @@ namespace AtlantSovt
                 clientDataGridView.Columns[2].HeaderText = "П.І.Б. Директора";
                 clientDataGridView.Columns[3].HeaderText = "Фізична адреса";
                 clientDataGridView.Columns[4].HeaderText = "Юридична адреса";
-                clientDataGridView.Columns[5].HeaderText = "Оригінал договору";
+                clientDataGridView.Columns[5].HeaderText = "Стан договору";
                 clientDataGridView.Columns[6].HeaderText = "Статус платника податку";
                 clientDataGridView.Columns[7].HeaderText = "На основі";
 
@@ -187,7 +187,15 @@ namespace AtlantSovt
                     var new_Director = directorClientTextBox.Text;
                     var new_PhysicalAddress = physicalAddressClientTextBox.Text;
                     var new_GeografphyAddress = geographyAddressClientTextBox.Text;
-                    var new_ContractType = originalClientCheckBox.Checked;
+                    bool new_ContractType;
+                    if (faxClientCheckBox.Checked)
+                    {
+                         new_ContractType = false;
+                    }
+                    else
+                    {
+                         new_ContractType = true;
+                    }
                     var new_Comment = commentClientTextBox.Text;
 
                     long new_WorkDocumentId = 0;
