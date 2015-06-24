@@ -38,6 +38,12 @@ namespace AtlantSovt
 
         void ShowTransporter()
         {
+            transporterShowContactsDataGridView.Visible = false;
+            transporterShowBankDetailsDataGridView.Visible = false;
+            transporterShowCountryDataGridView.Visible = false;
+            transporterShowCountryDataGridView.Visible = false;
+            transporterShowCommentRichTextBox.Text = "";
+
             using (var db = new AtlantSovtContext())
             {
                 var query =
@@ -153,18 +159,23 @@ namespace AtlantSovt
 
         public void ShowTransporterFilter()
         {
+            transporterShowContactsDataGridView.Visible = false;
+            transporterShowBankDetailsDataGridView.Visible = false;
+            transporterShowCountryDataGridView.Visible = false;
+            transporterShowCountryDataGridView.Visible = false;
+            transporterShowCommentRichTextBox.Text = "";
 
             List<long> countriesIDs = new List<long>();
             List<long> vehiclesIDs = new List<long>();
             List<Nullable<bool>> filtersStates = new List<Nullable<bool>>();
-
 
             countriesIDs = transporterShowFiltrationForm.GetCountries();
             vehiclesIDs = transporterShowFiltrationForm.GetVehicle();
             filtersStates = transporterShowFiltrationForm.GetFilters();
 
             //bool list to bools
-            #region FiltersResorses
+            #region FiltersResources
+
             bool IfForwarderChecked, TURChecked, CMRChecked, EKMTChecked, ZbornyChecked, ADChecked;
             IfForwarderChecked = TURChecked = CMRChecked = EKMTChecked = ZbornyChecked = ADChecked = false;
 
@@ -7050,12 +7061,16 @@ namespace AtlantSovt
                 }
                 countriesIDs.Clear();
                 vehiclesIDs.Clear();
-                filtersStates.Clear();
             }
         }
 
-        void ShowTransporterSearch()
+        void  ShowTransporterSearch()
         {
+            transporterShowContactsDataGridView.Visible = false;
+            transporterShowBankDetailsDataGridView.Visible = false;
+            transporterShowCountryDataGridView.Visible = false;
+            transporterShowCountryDataGridView.Visible = false;
+            transporterShowCommentRichTextBox.Text = "";
 
             var text = transporterShowSearchTextBox.Text;
             using (var db = new AtlantSovtContext())
@@ -7595,7 +7610,7 @@ namespace AtlantSovt
             using (var db = new AtlantSovtContext())
             {
                 //якщо хоча б один з флагів = true
-                if (transporterFullNameChanged || transporterDirectorChanged || transporterPhysicalAddressChanged || transporterGeographyAddressChanged || transporterCommentChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterOriginalChanged || transporterFaxChanged || transporterFiltersChanged)
+                if (transporterFullNameChanged || transporterDirectorChanged || transporterPhysicalAddressChanged || transporterGeographyAddressChanged || transporterCommentChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterOriginalChanged || transporterFaxChanged || transporterFiltersChanged || transporterShortNameChanged)
                 {
                     if (transporterFullNameChanged)
                     {

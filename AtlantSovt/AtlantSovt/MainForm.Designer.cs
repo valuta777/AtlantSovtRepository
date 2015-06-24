@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showClientsStrip = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,16 +53,18 @@
             this.ukrOrderStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.addOrderUkrStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.updateOrderUkrStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.trackingOrderUkrStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteOrderUkrStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.trackingOrderUkrStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.intOrderStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.addOrderIntStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.trackingOrderIntStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.updateOrderIntStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteOrderIntStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.trackingOrderIntStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.dataControl = new System.Windows.Forms.TabControl();
             this.helloPage = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.yearLabel = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.helloPictureBox = new System.Windows.Forms.PictureBox();
             this.showClientPage = new System.Windows.Forms.TabPage();
             this.clientShowSearchButton = new System.Windows.Forms.Button();
             this.clientShowSearchTextBox = new System.Windows.Forms.TextBox();
@@ -141,12 +144,12 @@
             this.showForwarderPage = new System.Windows.Forms.TabPage();
             this.label31 = new System.Windows.Forms.Label();
             this.forwarderBankDetailsDataGridView = new System.Windows.Forms.DataGridView();
-            this.label32 = new System.Windows.Forms.Label();
             this.forwarderCommentRichTextBox = new System.Windows.Forms.RichTextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.forwarderContactsDataGridView = new System.Windows.Forms.DataGridView();
             this.label34 = new System.Windows.Forms.Label();
             this.forwarderDataGridView = new System.Windows.Forms.DataGridView();
+            this.label32 = new System.Windows.Forms.Label();
             this.addForwarderPage = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.workDocumentForwarderComboBox = new System.Windows.Forms.ComboBox();
@@ -302,6 +305,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.transporterDeleteComboBox = new System.Windows.Forms.ComboBox();
             this.documentationPage = new System.Windows.Forms.TabPage();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.forwarderAsComboBox = new System.Windows.Forms.ComboBox();
             this.label36 = new System.Windows.Forms.Label();
             this.contractBeginDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.createContactButton = new System.Windows.Forms.Button();
@@ -309,7 +315,6 @@
             this.label51 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.firstPersonActivityComboBox = new System.Windows.Forms.ComboBox();
             this.label37 = new System.Windows.Forms.Label();
             this.firstPersonDiapasonComboBox = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
@@ -387,16 +392,57 @@
             this.label58 = new System.Windows.Forms.Label();
             this.OrderAddTransporterDiapasoneComboBox = new System.Windows.Forms.ComboBox();
             this.OrderAddForwarder2SelectComboBox = new System.Windows.Forms.ComboBox();
+            this.showTrackingPage = new System.Windows.Forms.TabPage();
+            this.trackingShowUploadAddressDataGridView = new System.Windows.Forms.DataGridView();
+            this.trackingShowDownloadAddressDataGridView = new System.Windows.Forms.DataGridView();
+            this.trackingShowCommentDataGridView = new System.Windows.Forms.DataGridView();
+            this.trackingLabel16 = new System.Windows.Forms.Label();
+            this.trackingLabel17 = new System.Windows.Forms.Label();
+            this.trackingShowAddCommentButton = new System.Windows.Forms.Button();
+            this.trackingShowCloseOrderButton = new System.Windows.Forms.Button();
+            this.showTrackingOnlyActive = new System.Windows.Forms.CheckBox();
+            this.onlyActiveLabel = new System.Windows.Forms.Label();
+            this.showTrackingDataSwitcher = new System.Windows.Forms.CheckBox();
+            this.showTrackingDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.trackingLabel1 = new System.Windows.Forms.Label();
+            this.trackingShowTransporterContactsDataGridView = new System.Windows.Forms.DataGridView();
+            this.trackingLabel2 = new System.Windows.Forms.Label();
+            this.trackingShowSearchButton = new System.Windows.Forms.Button();
+            this.trackingShowSearchTextBox = new System.Windows.Forms.TextBox();
+            this.trackingShowDataGridView = new System.Windows.Forms.DataGridView();
             this.labelshow57 = new System.Windows.Forms.Label();
             this.labelshow58 = new System.Windows.Forms.Label();
             this.labelshow67 = new System.Windows.Forms.Label();
             this.labelshow68 = new System.Windows.Forms.Label();
             this.labelshow69 = new System.Windows.Forms.Label();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.addTaxPayerStatusClientButton = new System.Windows.Forms.Button();
+            this.addWorkDocumentClientButton = new System.Windows.Forms.Button();
+            this.clientUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
+            this.clientUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
+            this.addTaxPayerStatusForwarderButton = new System.Windows.Forms.Button();
+            this.addWorkDocumentForwarderButton = new System.Windows.Forms.Button();
+            this.forwarderUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
+            this.forwarderUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
+            this.transporterAddTaxPayerStatusAddButton = new System.Windows.Forms.Button();
+            this.transporterAddWorkDocumentAddButton = new System.Windows.Forms.Button();
+            this.transporterUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
+            this.transporterUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
+            this.OrderAddAdditionalTermsAddButton = new System.Windows.Forms.Button();
+            this.OrderAddPaymentTermsAddButton = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.OrderAddOrderDenyAddButton = new System.Windows.Forms.Button();
+            this.OrderAddCargoAddButton = new System.Windows.Forms.Button();
+            this.OrderAddFineForDelayAddButton = new System.Windows.Forms.Button();
+            this.OrderAddRegularyDelayAddButton = new System.Windows.Forms.Button();
+            this.OrderAddTrailerAddButton = new System.Windows.Forms.Button();
+            this.OrderAddCubeAddButton = new System.Windows.Forms.Button();
+            this.OrderAddTirCmrAddButton = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.dataControl.SuspendLayout();
             this.helloPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.helloPictureBox)).BeginInit();
             this.showClientPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBankDetailsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientContactsDataGridView)).BeginInit();
@@ -457,10 +503,18 @@
             this.splitContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.showTrackingPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowUploadAddressDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowDownloadAddressDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowCommentDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowTransporterContactsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
             // 
+            this.menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(84)))), ((int)(((byte)(107)))));
+            this.menuStrip.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientToolStripMenuItem,
             this.trasporterToolStripMenuItem,
@@ -469,232 +523,255 @@
             this.orderToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(784, 24);
+            this.menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip.Size = new System.Drawing.Size(784, 27);
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip";
             // 
             // clientToolStripMenuItem
             // 
+            this.clientToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.clientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showClientsStrip,
             this.addClientsStrip,
             this.updateClientsStrip,
             this.deleteClientsStrip});
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(59, 23);
             this.clientToolStripMenuItem.Text = "Клієнт";
             // 
             // showClientsStrip
             // 
+            this.showClientsStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.showClientsStrip.Name = "showClientsStrip";
-            this.showClientsStrip.Size = new System.Drawing.Size(145, 22);
+            this.showClientsStrip.Size = new System.Drawing.Size(158, 24);
             this.showClientsStrip.Text = "Переглянути";
             this.showClientsStrip.Click += new System.EventHandler(this.showClientsStrip_Click);
             // 
             // addClientsStrip
             // 
+            this.addClientsStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.addClientsStrip.Name = "addClientsStrip";
-            this.addClientsStrip.Size = new System.Drawing.Size(145, 22);
+            this.addClientsStrip.Size = new System.Drawing.Size(158, 24);
             this.addClientsStrip.Text = "Додати";
             this.addClientsStrip.Click += new System.EventHandler(this.addClientsStrip_Click);
             // 
             // updateClientsStrip
             // 
+            this.updateClientsStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.updateClientsStrip.Name = "updateClientsStrip";
-            this.updateClientsStrip.Size = new System.Drawing.Size(145, 22);
+            this.updateClientsStrip.Size = new System.Drawing.Size(158, 24);
             this.updateClientsStrip.Text = "Змінити";
             this.updateClientsStrip.Click += new System.EventHandler(this.updateClientsStrip_Click);
             // 
             // deleteClientsStrip
             // 
+            this.deleteClientsStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteClientsStrip.Name = "deleteClientsStrip";
-            this.deleteClientsStrip.Size = new System.Drawing.Size(145, 22);
+            this.deleteClientsStrip.Size = new System.Drawing.Size(158, 24);
             this.deleteClientsStrip.Text = "Видалити";
             this.deleteClientsStrip.Click += new System.EventHandler(this.deleteClientsStrip_Click);
             // 
             // trasporterToolStripMenuItem
             // 
+            this.trasporterToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.trasporterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showTransporterStrip,
             this.addTransporterStrip,
             this.updateTransporterStrip,
             this.deleteTransporterStrip});
             this.trasporterToolStripMenuItem.Name = "trasporterToolStripMenuItem";
-            this.trasporterToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.trasporterToolStripMenuItem.Size = new System.Drawing.Size(92, 23);
             this.trasporterToolStripMenuItem.Text = "Перевізник";
             // 
             // showTransporterStrip
             // 
+            this.showTransporterStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.showTransporterStrip.Name = "showTransporterStrip";
-            this.showTransporterStrip.Size = new System.Drawing.Size(145, 22);
+            this.showTransporterStrip.Size = new System.Drawing.Size(158, 24);
             this.showTransporterStrip.Text = "Переглянути";
             this.showTransporterStrip.Click += new System.EventHandler(this.showTransporterStrip_Click);
             // 
             // addTransporterStrip
             // 
+            this.addTransporterStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.addTransporterStrip.Name = "addTransporterStrip";
-            this.addTransporterStrip.Size = new System.Drawing.Size(145, 22);
+            this.addTransporterStrip.Size = new System.Drawing.Size(158, 24);
             this.addTransporterStrip.Text = "Додати";
             this.addTransporterStrip.Click += new System.EventHandler(this.addTransporterStrip_Click);
             // 
             // updateTransporterStrip
             // 
+            this.updateTransporterStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.updateTransporterStrip.Name = "updateTransporterStrip";
-            this.updateTransporterStrip.Size = new System.Drawing.Size(145, 22);
+            this.updateTransporterStrip.Size = new System.Drawing.Size(158, 24);
             this.updateTransporterStrip.Text = "Змінити";
             this.updateTransporterStrip.Click += new System.EventHandler(this.updateTransporterStrip_Click);
             // 
             // deleteTransporterStrip
             // 
+            this.deleteTransporterStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteTransporterStrip.Name = "deleteTransporterStrip";
-            this.deleteTransporterStrip.Size = new System.Drawing.Size(145, 22);
+            this.deleteTransporterStrip.Size = new System.Drawing.Size(158, 24);
             this.deleteTransporterStrip.Text = "Видалити";
             this.deleteTransporterStrip.Click += new System.EventHandler(this.deleteTransporterStrip_Click);
             // 
             // forwarderToolStripMenuItem
             // 
+            this.forwarderToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.forwarderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showForwarderStrip,
             this.addForwarderStrip,
             this.updateForwarderStrip,
             this.deleteForwarderStrip});
             this.forwarderToolStripMenuItem.Name = "forwarderToolStripMenuItem";
-            this.forwarderToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.forwarderToolStripMenuItem.Size = new System.Drawing.Size(94, 23);
             this.forwarderToolStripMenuItem.Text = "Експедитор";
             // 
             // showForwarderStrip
             // 
+            this.showForwarderStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.showForwarderStrip.Name = "showForwarderStrip";
-            this.showForwarderStrip.Size = new System.Drawing.Size(145, 22);
+            this.showForwarderStrip.Size = new System.Drawing.Size(158, 24);
             this.showForwarderStrip.Text = "Переглянути";
             this.showForwarderStrip.Click += new System.EventHandler(this.showForwarderStrip_Click);
             // 
             // addForwarderStrip
             // 
+            this.addForwarderStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.addForwarderStrip.Name = "addForwarderStrip";
-            this.addForwarderStrip.Size = new System.Drawing.Size(145, 22);
+            this.addForwarderStrip.Size = new System.Drawing.Size(158, 24);
             this.addForwarderStrip.Text = "Додати";
             this.addForwarderStrip.Click += new System.EventHandler(this.addForwarderStrip_Click);
             // 
             // updateForwarderStrip
             // 
+            this.updateForwarderStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.updateForwarderStrip.Name = "updateForwarderStrip";
-            this.updateForwarderStrip.Size = new System.Drawing.Size(145, 22);
+            this.updateForwarderStrip.Size = new System.Drawing.Size(158, 24);
             this.updateForwarderStrip.Text = "Змінити";
             this.updateForwarderStrip.Click += new System.EventHandler(this.updateForwarderStrip_Click);
             // 
             // deleteForwarderStrip
             // 
+            this.deleteForwarderStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteForwarderStrip.Name = "deleteForwarderStrip";
-            this.deleteForwarderStrip.Size = new System.Drawing.Size(145, 22);
+            this.deleteForwarderStrip.Size = new System.Drawing.Size(158, 24);
             this.deleteForwarderStrip.Text = "Видалити";
             this.deleteForwarderStrip.Click += new System.EventHandler(this.deleteForwarderStrip_Click);
             // 
             // documentationToolStripMenuItem
             // 
+            this.documentationToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.documentationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.documentationUkrStrip,
             this.documentationIntStrip});
             this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
-            this.documentationToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.documentationToolStripMenuItem.Size = new System.Drawing.Size(109, 23);
             this.documentationToolStripMenuItem.Text = "Документація";
             // 
             // documentationUkrStrip
             // 
+            this.documentationUkrStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.documentationUkrStrip.Name = "documentationUkrStrip";
-            this.documentationUkrStrip.Size = new System.Drawing.Size(132, 22);
+            this.documentationUkrStrip.Size = new System.Drawing.Size(144, 24);
             this.documentationUkrStrip.Text = "По Україні";
             this.documentationUkrStrip.Click += new System.EventHandler(this.documentationToolStripMenuItem_Click);
             // 
             // documentationIntStrip
             // 
+            this.documentationIntStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.documentationIntStrip.Name = "documentationIntStrip";
-            this.documentationIntStrip.Size = new System.Drawing.Size(132, 22);
+            this.documentationIntStrip.Size = new System.Drawing.Size(144, 24);
             this.documentationIntStrip.Text = "Закордон";
             // 
             // orderToolStripMenuItem
             // 
+            this.orderToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.orderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ukrOrderStrip,
             this.intOrderStrip});
             this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            this.orderToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.orderToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
             this.orderToolStripMenuItem.Text = "Заявка";
             // 
             // ukrOrderStrip
             // 
+            this.ukrOrderStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.ukrOrderStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addOrderUkrStrip,
             this.updateOrderUkrStrip,
-            this.trackingOrderUkrStrip,
-            this.deleteOrderUkrStrip});
+            this.deleteOrderUkrStrip,
+            this.trackingOrderUkrStrip});
             this.ukrOrderStrip.Name = "ukrOrderStrip";
-            this.ukrOrderStrip.Size = new System.Drawing.Size(132, 22);
+            this.ukrOrderStrip.Size = new System.Drawing.Size(144, 24);
             this.ukrOrderStrip.Text = "По Україні";
             // 
             // addOrderUkrStrip
             // 
             this.addOrderUkrStrip.Name = "addOrderUkrStrip";
-            this.addOrderUkrStrip.Size = new System.Drawing.Size(135, 22);
+            this.addOrderUkrStrip.Size = new System.Drawing.Size(148, 24);
             this.addOrderUkrStrip.Text = "Додати";
             this.addOrderUkrStrip.Click += new System.EventHandler(this.addOrderUkrStrip_Click);
             // 
             // updateOrderUkrStrip
             // 
             this.updateOrderUkrStrip.Name = "updateOrderUkrStrip";
-            this.updateOrderUkrStrip.Size = new System.Drawing.Size(135, 22);
+            this.updateOrderUkrStrip.Size = new System.Drawing.Size(148, 24);
             this.updateOrderUkrStrip.Text = "Змінити";
-            // 
-            // trackingOrderUkrStrip
-            // 
-            this.trackingOrderUkrStrip.Name = "trackingOrderUkrStrip";
-            this.trackingOrderUkrStrip.Size = new System.Drawing.Size(135, 22);
-            this.trackingOrderUkrStrip.Text = "Відстежити";
             // 
             // deleteOrderUkrStrip
             // 
             this.deleteOrderUkrStrip.Name = "deleteOrderUkrStrip";
-            this.deleteOrderUkrStrip.Size = new System.Drawing.Size(135, 22);
+            this.deleteOrderUkrStrip.Size = new System.Drawing.Size(148, 24);
             this.deleteOrderUkrStrip.Text = "Видалити";
+            // 
+            // trackingOrderUkrStrip
+            // 
+            this.trackingOrderUkrStrip.Name = "trackingOrderUkrStrip";
+            this.trackingOrderUkrStrip.Size = new System.Drawing.Size(148, 24);
+            this.trackingOrderUkrStrip.Text = "Відстежити";
+            this.trackingOrderUkrStrip.Click += new System.EventHandler(this.trackingOrderUkrStrip_Click);
             // 
             // intOrderStrip
             // 
+            this.intOrderStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.intOrderStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addOrderIntStrip,
-            this.trackingOrderIntStrip,
             this.updateOrderIntStrip,
-            this.deleteOrderIntStrip});
+            this.deleteOrderIntStrip,
+            this.trackingOrderIntStrip});
             this.intOrderStrip.Name = "intOrderStrip";
-            this.intOrderStrip.Size = new System.Drawing.Size(132, 22);
+            this.intOrderStrip.Size = new System.Drawing.Size(144, 24);
             this.intOrderStrip.Text = "Закордон";
             // 
             // addOrderIntStrip
             // 
             this.addOrderIntStrip.Name = "addOrderIntStrip";
-            this.addOrderIntStrip.Size = new System.Drawing.Size(135, 22);
+            this.addOrderIntStrip.Size = new System.Drawing.Size(148, 24);
             this.addOrderIntStrip.Text = "Додати";
-            // 
-            // trackingOrderIntStrip
-            // 
-            this.trackingOrderIntStrip.Name = "trackingOrderIntStrip";
-            this.trackingOrderIntStrip.Size = new System.Drawing.Size(135, 22);
-            this.trackingOrderIntStrip.Text = "Відстежити";
             // 
             // updateOrderIntStrip
             // 
             this.updateOrderIntStrip.Name = "updateOrderIntStrip";
-            this.updateOrderIntStrip.Size = new System.Drawing.Size(135, 22);
+            this.updateOrderIntStrip.Size = new System.Drawing.Size(148, 24);
             this.updateOrderIntStrip.Text = "Змінити";
             // 
             // deleteOrderIntStrip
             // 
             this.deleteOrderIntStrip.Name = "deleteOrderIntStrip";
-            this.deleteOrderIntStrip.Size = new System.Drawing.Size(135, 22);
+            this.deleteOrderIntStrip.Size = new System.Drawing.Size(148, 24);
             this.deleteOrderIntStrip.Text = "Видалити";
+            // 
+            // trackingOrderIntStrip
+            // 
+            this.trackingOrderIntStrip.Name = "trackingOrderIntStrip";
+            this.trackingOrderIntStrip.Size = new System.Drawing.Size(148, 24);
+            this.trackingOrderIntStrip.Text = "Відстежити";
             // 
             // dataControl
             // 
-            this.dataControl.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.dataControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.dataControl.Controls.Add(this.helloPage);
             this.dataControl.Controls.Add(this.showClientPage);
             this.dataControl.Controls.Add(this.addClientPage);
@@ -710,38 +787,69 @@
             this.dataControl.Controls.Add(this.deleteTransporterPage);
             this.dataControl.Controls.Add(this.documentationPage);
             this.dataControl.Controls.Add(this.OrderAddPage);
+            this.dataControl.Controls.Add(this.showTrackingPage);
             this.dataControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataControl.ItemSize = new System.Drawing.Size(1, 0);
-            this.dataControl.Location = new System.Drawing.Point(0, 24);
+            this.dataControl.Location = new System.Drawing.Point(0, 27);
             this.dataControl.Name = "dataControl";
             this.dataControl.SelectedIndex = 0;
-            this.dataControl.Size = new System.Drawing.Size(784, 537);
+            this.dataControl.Size = new System.Drawing.Size(784, 534);
             this.dataControl.TabIndex = 2;
             this.dataControl.TabStop = false;
             // 
             // helloPage
             // 
             this.helloPage.BackColor = System.Drawing.Color.White;
-            this.helloPage.Controls.Add(this.pictureBox1);
+            this.helloPage.Controls.Add(this.yearLabel);
+            this.helloPage.Controls.Add(this.label68);
+            this.helloPage.Controls.Add(this.helloPictureBox);
             this.helloPage.Location = new System.Drawing.Point(4, 25);
             this.helloPage.Name = "helloPage";
-            this.helloPage.Size = new System.Drawing.Size(776, 508);
+            this.helloPage.Size = new System.Drawing.Size(776, 505);
             this.helloPage.TabIndex = 4;
             this.helloPage.Text = "Hello";
             // 
-            // pictureBox1
+            // yearLabel
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 508);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.yearLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.yearLabel.AutoSize = true;
+            this.yearLabel.BackColor = System.Drawing.Color.Wheat;
+            this.yearLabel.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.yearLabel.ForeColor = System.Drawing.Color.IndianRed;
+            this.yearLabel.Location = new System.Drawing.Point(579, 465);
+            this.yearLabel.Name = "yearLabel";
+            this.yearLabel.Size = new System.Drawing.Size(77, 37);
+            this.yearLabel.TabIndex = 2;
+            this.yearLabel.Text = "2015";
+            // 
+            // label68
+            // 
+            this.label68.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label68.AutoSize = true;
+            this.label68.BackColor = System.Drawing.Color.Wheat;
+            this.label68.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.label68.ForeColor = System.Drawing.Color.IndianRed;
+            this.label68.Location = new System.Drawing.Point(511, 428);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(262, 37);
+            this.label68.TabIndex = 1;
+            this.label68.Text = "ТЗОВ \"Атлант-Совт\"";
+            // 
+            // helloPictureBox
+            // 
+            this.helloPictureBox.BackColor = System.Drawing.Color.Wheat;
+            this.helloPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.helloPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("helloPictureBox.Image")));
+            this.helloPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.helloPictureBox.Name = "helloPictureBox";
+            this.helloPictureBox.Size = new System.Drawing.Size(776, 505);
+            this.helloPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.helloPictureBox.TabIndex = 0;
+            this.helloPictureBox.TabStop = false;
             // 
             // showClientPage
             // 
+            this.showClientPage.BackColor = System.Drawing.Color.AliceBlue;
             this.showClientPage.Controls.Add(this.clientShowSearchButton);
             this.showClientPage.Controls.Add(this.clientShowSearchTextBox);
             this.showClientPage.Controls.Add(this.label29);
@@ -755,10 +863,9 @@
             this.showClientPage.Location = new System.Drawing.Point(4, 25);
             this.showClientPage.Name = "showClientPage";
             this.showClientPage.Padding = new System.Windows.Forms.Padding(3);
-            this.showClientPage.Size = new System.Drawing.Size(776, 508);
+            this.showClientPage.Size = new System.Drawing.Size(776, 505);
             this.showClientPage.TabIndex = 0;
             this.showClientPage.Text = "showClientPage";
-            this.showClientPage.UseVisualStyleBackColor = true;
             // 
             // clientShowSearchButton
             // 
@@ -800,11 +907,13 @@
             this.clientBankDetailsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientBankDetailsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.clientBankDetailsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.clientBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.clientBankDetailsDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.clientBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientBankDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clientBankDetailsDataGridView.Location = new System.Drawing.Point(0, 256);
+            this.clientBankDetailsDataGridView.MultiSelect = false;
             this.clientBankDetailsDataGridView.Name = "clientBankDetailsDataGridView";
+            this.clientBankDetailsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.clientBankDetailsDataGridView.Size = new System.Drawing.Size(776, 56);
             this.clientBankDetailsDataGridView.TabIndex = 7;
             this.clientBankDetailsDataGridView.TabStop = false;
@@ -824,6 +933,8 @@
             // 
             this.clientCommentRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientCommentRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clientCommentRichTextBox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.clientCommentRichTextBox.Location = new System.Drawing.Point(0, 461);
             this.clientCommentRichTextBox.Name = "clientCommentRichTextBox";
             this.clientCommentRichTextBox.ReadOnly = true;
@@ -850,11 +961,13 @@
             this.clientContactsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientContactsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.clientContactsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.clientContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.clientContactsDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.clientContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clientContactsDataGridView.Location = new System.Drawing.Point(0, 335);
+            this.clientContactsDataGridView.MultiSelect = false;
             this.clientContactsDataGridView.Name = "clientContactsDataGridView";
+            this.clientContactsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.clientContactsDataGridView.Size = new System.Drawing.Size(776, 106);
             this.clientContactsDataGridView.TabIndex = 3;
             this.clientContactsDataGridView.TabStop = false;
@@ -875,12 +988,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.clientDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.clientDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.clientDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.clientDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clientDataGridView.Location = new System.Drawing.Point(0, 62);
+            this.clientDataGridView.MultiSelect = false;
             this.clientDataGridView.Name = "clientDataGridView";
             this.clientDataGridView.ReadOnly = true;
+            this.clientDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.clientDataGridView.Size = new System.Drawing.Size(776, 171);
             this.clientDataGridView.TabIndex = 0;
             this.clientDataGridView.TabStop = false;
@@ -888,6 +1003,7 @@
             // 
             // addClientPage
             // 
+            this.addClientPage.BackColor = System.Drawing.Color.AliceBlue;
             this.addClientPage.Controls.Add(this.label9);
             this.addClientPage.Controls.Add(this.label4);
             this.addClientPage.Controls.Add(this.label3);
@@ -918,10 +1034,9 @@
             this.addClientPage.Location = new System.Drawing.Point(4, 25);
             this.addClientPage.Name = "addClientPage";
             this.addClientPage.Padding = new System.Windows.Forms.Padding(3);
-            this.addClientPage.Size = new System.Drawing.Size(776, 508);
+            this.addClientPage.Size = new System.Drawing.Size(776, 505);
             this.addClientPage.TabIndex = 1;
             this.addClientPage.Text = "addClientPage";
-            this.addClientPage.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -1215,6 +1330,7 @@
             // 
             // updateClientPage
             // 
+            this.updateClientPage.BackColor = System.Drawing.Color.AliceBlue;
             this.updateClientPage.Controls.Add(this.selectClientDiapasoneUpdateComboBox);
             this.updateClientPage.Controls.Add(this.label7);
             this.updateClientPage.Controls.Add(this.clientUpdateContactDeleteButton);
@@ -1248,10 +1364,9 @@
             this.updateClientPage.Controls.Add(this.clientUpdateWorkDocumentAddButton);
             this.updateClientPage.Location = new System.Drawing.Point(4, 25);
             this.updateClientPage.Name = "updateClientPage";
-            this.updateClientPage.Size = new System.Drawing.Size(776, 508);
+            this.updateClientPage.Size = new System.Drawing.Size(776, 505);
             this.updateClientPage.TabIndex = 2;
             this.updateClientPage.Text = "updateClientPage";
-            this.updateClientPage.UseVisualStyleBackColor = true;
             // 
             // selectClientDiapasoneUpdateComboBox
             // 
@@ -1608,6 +1723,7 @@
             // 
             // deleteClientPage
             // 
+            this.deleteClientPage.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteClientPage.Controls.Add(this.deleteClientSelectDiapasoneComboBox);
             this.deleteClientPage.Controls.Add(this.label8);
             this.deleteClientPage.Controls.Add(this.deleteClientButton);
@@ -1615,10 +1731,9 @@
             this.deleteClientPage.Controls.Add(this.deleteClientComboBox);
             this.deleteClientPage.Location = new System.Drawing.Point(4, 25);
             this.deleteClientPage.Name = "deleteClientPage";
-            this.deleteClientPage.Size = new System.Drawing.Size(776, 508);
+            this.deleteClientPage.Size = new System.Drawing.Size(776, 505);
             this.deleteClientPage.TabIndex = 3;
             this.deleteClientPage.Text = "deleteClientPage";
-            this.deleteClientPage.UseVisualStyleBackColor = true;
             // 
             // deleteClientSelectDiapasoneComboBox
             // 
@@ -1685,20 +1800,20 @@
             // 
             // showForwarderPage
             // 
+            this.showForwarderPage.BackColor = System.Drawing.Color.AliceBlue;
             this.showForwarderPage.Controls.Add(this.label31);
             this.showForwarderPage.Controls.Add(this.forwarderBankDetailsDataGridView);
-            this.showForwarderPage.Controls.Add(this.label32);
             this.showForwarderPage.Controls.Add(this.forwarderCommentRichTextBox);
             this.showForwarderPage.Controls.Add(this.label33);
             this.showForwarderPage.Controls.Add(this.forwarderContactsDataGridView);
             this.showForwarderPage.Controls.Add(this.label34);
             this.showForwarderPage.Controls.Add(this.forwarderDataGridView);
+            this.showForwarderPage.Controls.Add(this.label32);
             this.showForwarderPage.Location = new System.Drawing.Point(4, 25);
             this.showForwarderPage.Name = "showForwarderPage";
-            this.showForwarderPage.Size = new System.Drawing.Size(776, 508);
+            this.showForwarderPage.Size = new System.Drawing.Size(776, 505);
             this.showForwarderPage.TabIndex = 5;
             this.showForwarderPage.Text = "showForwarderPage";
-            this.showForwarderPage.UseVisualStyleBackColor = true;
             // 
             // label31
             // 
@@ -1717,30 +1832,22 @@
             this.forwarderBankDetailsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.forwarderBankDetailsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.forwarderBankDetailsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.forwarderBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.forwarderBankDetailsDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.forwarderBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.forwarderBankDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.forwarderBankDetailsDataGridView.Location = new System.Drawing.Point(0, 256);
+            this.forwarderBankDetailsDataGridView.MultiSelect = false;
             this.forwarderBankDetailsDataGridView.Name = "forwarderBankDetailsDataGridView";
+            this.forwarderBankDetailsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.forwarderBankDetailsDataGridView.Size = new System.Drawing.Size(776, 56);
             this.forwarderBankDetailsDataGridView.TabIndex = 15;
             this.forwarderBankDetailsDataGridView.TabStop = false;
-            // 
-            // label32
-            // 
-            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(5, 437);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(77, 21);
-            this.label32.TabIndex = 14;
-            this.label32.Text = "Примітка";
             // 
             // forwarderCommentRichTextBox
             // 
             this.forwarderCommentRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwarderCommentRichTextBox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.forwarderCommentRichTextBox.Location = new System.Drawing.Point(0, 461);
             this.forwarderCommentRichTextBox.Name = "forwarderCommentRichTextBox";
             this.forwarderCommentRichTextBox.ReadOnly = true;
@@ -1767,11 +1874,13 @@
             this.forwarderContactsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.forwarderContactsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.forwarderContactsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.forwarderContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.forwarderContactsDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.forwarderContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.forwarderContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.forwarderContactsDataGridView.Location = new System.Drawing.Point(0, 335);
+            this.forwarderContactsDataGridView.MultiSelect = false;
             this.forwarderContactsDataGridView.Name = "forwarderContactsDataGridView";
+            this.forwarderContactsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.forwarderContactsDataGridView.Size = new System.Drawing.Size(776, 105);
             this.forwarderContactsDataGridView.TabIndex = 11;
             this.forwarderContactsDataGridView.TabStop = false;
@@ -1792,18 +1901,39 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.forwarderDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.forwarderDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.forwarderDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.forwarderDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.forwarderDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.forwarderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.forwarderDataGridView.Location = new System.Drawing.Point(0, 27);
+            this.forwarderDataGridView.MultiSelect = false;
             this.forwarderDataGridView.Name = "forwarderDataGridView";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.forwarderDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.forwarderDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.forwarderDataGridView.Size = new System.Drawing.Size(776, 206);
             this.forwarderDataGridView.TabIndex = 9;
             this.forwarderDataGridView.TabStop = false;
             this.forwarderDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.forwarderDataGridView_CellMouseClick);
             // 
+            // label32
+            // 
+            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(5, 437);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(77, 21);
+            this.label32.TabIndex = 14;
+            this.label32.Text = "Примітка";
+            // 
             // addForwarderPage
             // 
+            this.addForwarderPage.BackColor = System.Drawing.Color.AliceBlue;
             this.addForwarderPage.Controls.Add(this.label5);
             this.addForwarderPage.Controls.Add(this.workDocumentForwarderComboBox);
             this.addForwarderPage.Controls.Add(this.label35);
@@ -1829,10 +1959,9 @@
             this.addForwarderPage.Controls.Add(this.addWorkDocumentForwarderButton);
             this.addForwarderPage.Location = new System.Drawing.Point(4, 25);
             this.addForwarderPage.Name = "addForwarderPage";
-            this.addForwarderPage.Size = new System.Drawing.Size(776, 508);
+            this.addForwarderPage.Size = new System.Drawing.Size(776, 505);
             this.addForwarderPage.TabIndex = 6;
             this.addForwarderPage.Text = "addForwarderPage";
-            this.addForwarderPage.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -2099,6 +2228,7 @@
             // 
             // updateForwarderPage
             // 
+            this.updateForwarderPage.BackColor = System.Drawing.Color.AliceBlue;
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateContactDeleteButton);
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateBankDetailsDeleteButton);
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateBankDetailsUpdateButton);
@@ -2126,10 +2256,9 @@
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateWorkDocumentAddButton);
             this.updateForwarderPage.Location = new System.Drawing.Point(4, 25);
             this.updateForwarderPage.Name = "updateForwarderPage";
-            this.updateForwarderPage.Size = new System.Drawing.Size(776, 508);
+            this.updateForwarderPage.Size = new System.Drawing.Size(776, 505);
             this.updateForwarderPage.TabIndex = 7;
             this.updateForwarderPage.Text = "updateForwarderPage";
-            this.updateForwarderPage.UseVisualStyleBackColor = true;
             // 
             // forwarderUpdateContactDeleteButton
             // 
@@ -2424,15 +2553,15 @@
             // 
             // deleteForwarderPage
             // 
+            this.deleteForwarderPage.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteForwarderPage.Controls.Add(this.forwarderDeleteButton);
             this.deleteForwarderPage.Controls.Add(this.label42);
             this.deleteForwarderPage.Controls.Add(this.forwarderDeleteComboBox);
             this.deleteForwarderPage.Location = new System.Drawing.Point(4, 25);
             this.deleteForwarderPage.Name = "deleteForwarderPage";
-            this.deleteForwarderPage.Size = new System.Drawing.Size(776, 508);
+            this.deleteForwarderPage.Size = new System.Drawing.Size(776, 505);
             this.deleteForwarderPage.TabIndex = 8;
             this.deleteForwarderPage.Text = "deleteForwarderPage";
-            this.deleteForwarderPage.UseVisualStyleBackColor = true;
             // 
             // forwarderDeleteButton
             // 
@@ -2478,6 +2607,7 @@
             // 
             // showTransporterPage
             // 
+            this.showTransporterPage.BackColor = System.Drawing.Color.AliceBlue;
             this.showTransporterPage.Controls.Add(this.label15);
             this.showTransporterPage.Controls.Add(this.transporterShowSearchButton);
             this.showTransporterPage.Controls.Add(this.transporterShowSearchTextBox);
@@ -2493,10 +2623,9 @@
             this.showTransporterPage.Controls.Add(this.transporterShowDataGridView);
             this.showTransporterPage.Location = new System.Drawing.Point(4, 25);
             this.showTransporterPage.Name = "showTransporterPage";
-            this.showTransporterPage.Size = new System.Drawing.Size(776, 508);
+            this.showTransporterPage.Size = new System.Drawing.Size(776, 505);
             this.showTransporterPage.TabIndex = 9;
             this.showTransporterPage.Text = "showTransporterPage";
-            this.showTransporterPage.UseVisualStyleBackColor = true;
             // 
             // label15
             // 
@@ -2586,11 +2715,13 @@
             this.transporterShowCountryDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterShowCountryDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.transporterShowCountryDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.transporterShowCountryDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.transporterShowCountryDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.transporterShowCountryDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.transporterShowCountryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.transporterShowCountryDataGridView.Location = new System.Drawing.Point(586, 62);
+            this.transporterShowCountryDataGridView.MultiSelect = false;
             this.transporterShowCountryDataGridView.Name = "transporterShowCountryDataGridView";
+            this.transporterShowCountryDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.transporterShowCountryDataGridView.Size = new System.Drawing.Size(190, 120);
             this.transporterShowCountryDataGridView.TabIndex = 37;
             this.transporterShowCountryDataGridView.TabStop = false;
@@ -2613,11 +2744,13 @@
             this.transporterShowBankDetailsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterShowBankDetailsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.transporterShowBankDetailsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.transporterShowBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.transporterShowBankDetailsDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.transporterShowBankDetailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.transporterShowBankDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.transporterShowBankDetailsDataGridView.Location = new System.Drawing.Point(0, 207);
+            this.transporterShowBankDetailsDataGridView.MultiSelect = false;
             this.transporterShowBankDetailsDataGridView.Name = "transporterShowBankDetailsDataGridView";
+            this.transporterShowBankDetailsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.transporterShowBankDetailsDataGridView.Size = new System.Drawing.Size(780, 55);
             this.transporterShowBankDetailsDataGridView.TabIndex = 23;
             this.transporterShowBankDetailsDataGridView.TabStop = false;
@@ -2626,6 +2759,7 @@
             // 
             this.transporterShowCommentRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.transporterShowCommentRichTextBox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.transporterShowCommentRichTextBox.Location = new System.Drawing.Point(0, 392);
             this.transporterShowCommentRichTextBox.Name = "transporterShowCommentRichTextBox";
             this.transporterShowCommentRichTextBox.ReadOnly = true;
@@ -2640,11 +2774,13 @@
             this.transporterShowContactsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterShowContactsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.transporterShowContactsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.transporterShowContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.transporterShowContactsDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.transporterShowContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.transporterShowContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.transporterShowContactsDataGridView.Location = new System.Drawing.Point(0, 286);
+            this.transporterShowContactsDataGridView.MultiSelect = false;
             this.transporterShowContactsDataGridView.Name = "transporterShowContactsDataGridView";
+            this.transporterShowContactsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.transporterShowContactsDataGridView.Size = new System.Drawing.Size(776, 81);
             this.transporterShowContactsDataGridView.TabIndex = 19;
             this.transporterShowContactsDataGridView.TabStop = false;
@@ -2655,11 +2791,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterShowDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.transporterShowDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.transporterShowDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.transporterShowDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.transporterShowDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.transporterShowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.transporterShowDataGridView.Location = new System.Drawing.Point(0, 62);
+            this.transporterShowDataGridView.MultiSelect = false;
             this.transporterShowDataGridView.Name = "transporterShowDataGridView";
+            this.transporterShowDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.transporterShowDataGridView.Size = new System.Drawing.Size(579, 120);
             this.transporterShowDataGridView.TabIndex = 17;
             this.transporterShowDataGridView.TabStop = false;
@@ -2667,6 +2805,7 @@
             // 
             // addTransporterPage
             // 
+            this.addTransporterPage.BackColor = System.Drawing.Color.AliceBlue;
             this.addTransporterPage.Controls.Add(this.transporterAddFilterPanel);
             this.addTransporterPage.Controls.Add(this.label6);
             this.addTransporterPage.Controls.Add(this.faxTransporterAddCheckBox);
@@ -2700,10 +2839,9 @@
             this.addTransporterPage.Controls.Add(this.transporterAddWorkDocumentAddButton);
             this.addTransporterPage.Location = new System.Drawing.Point(4, 25);
             this.addTransporterPage.Name = "addTransporterPage";
-            this.addTransporterPage.Size = new System.Drawing.Size(776, 508);
+            this.addTransporterPage.Size = new System.Drawing.Size(776, 505);
             this.addTransporterPage.TabIndex = 10;
             this.addTransporterPage.Text = "addTransporterPage";
-            this.addTransporterPage.UseVisualStyleBackColor = true;
             // 
             // transporterAddFilterPanel
             // 
@@ -2813,7 +2951,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label6.Location = new System.Drawing.Point(10, 492);
+            this.label6.Location = new System.Drawing.Point(10, 489);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(163, 13);
             this.label6.TabIndex = 106;
@@ -2863,7 +3001,7 @@
             // 
             this.transporterAddCountryAndVehicleSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.transporterAddCountryAndVehicleSelectButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterAddCountryAndVehicleSelectButton.Location = new System.Drawing.Point(8, 432);
+            this.transporterAddCountryAndVehicleSelectButton.Location = new System.Drawing.Point(8, 429);
             this.transporterAddCountryAndVehicleSelectButton.Name = "transporterAddCountryAndVehicleSelectButton";
             this.transporterAddCountryAndVehicleSelectButton.Size = new System.Drawing.Size(182, 57);
             this.transporterAddCountryAndVehicleSelectButton.TabIndex = 77;
@@ -2911,7 +3049,7 @@
             this.label57.BackColor = System.Drawing.Color.Transparent;
             this.label57.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label57.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label57.Location = new System.Drawing.Point(10, 507);
+            this.label57.Location = new System.Drawing.Point(10, 504);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(117, 13);
             this.label57.TabIndex = 86;
@@ -2947,7 +3085,7 @@
             this.transporterAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterAddButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterAddButton.Location = new System.Drawing.Point(572, 432);
+            this.transporterAddButton.Location = new System.Drawing.Point(572, 429);
             this.transporterAddButton.Name = "transporterAddButton";
             this.transporterAddButton.Size = new System.Drawing.Size(193, 57);
             this.transporterAddButton.TabIndex = 80;
@@ -2981,7 +3119,7 @@
             // 
             this.transporterAddBankDetailsAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.transporterAddBankDetailsAddButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterAddBankDetailsAddButton.Location = new System.Drawing.Point(384, 432);
+            this.transporterAddBankDetailsAddButton.Location = new System.Drawing.Point(384, 429);
             this.transporterAddBankDetailsAddButton.Name = "transporterAddBankDetailsAddButton";
             this.transporterAddBankDetailsAddButton.Size = new System.Drawing.Size(182, 57);
             this.transporterAddBankDetailsAddButton.TabIndex = 79;
@@ -2993,7 +3131,7 @@
             // 
             this.transporterAddContactAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.transporterAddContactAddButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterAddContactAddButton.Location = new System.Drawing.Point(196, 432);
+            this.transporterAddContactAddButton.Location = new System.Drawing.Point(196, 429);
             this.transporterAddContactAddButton.Name = "transporterAddContactAddButton";
             this.transporterAddContactAddButton.Size = new System.Drawing.Size(182, 57);
             this.transporterAddContactAddButton.TabIndex = 78;
@@ -3025,7 +3163,7 @@
             this.commentTransporterAddTextBox.Multiline = true;
             this.commentTransporterAddTextBox.Name = "commentTransporterAddTextBox";
             this.commentTransporterAddTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.commentTransporterAddTextBox.Size = new System.Drawing.Size(756, 163);
+            this.commentTransporterAddTextBox.Size = new System.Drawing.Size(756, 160);
             this.commentTransporterAddTextBox.TabIndex = 72;
             // 
             // physicalAddressTransporterAddTextBox
@@ -3144,6 +3282,7 @@
             // 
             // updateTransporterPage
             // 
+            this.updateTransporterPage.BackColor = System.Drawing.Color.AliceBlue;
             this.updateTransporterPage.Controls.Add(this.transporterUpdateFilterPanel);
             this.updateTransporterPage.Controls.Add(this.selectTransporterDiapasoneUpdateComboBox);
             this.updateTransporterPage.Controls.Add(this.label16);
@@ -3181,10 +3320,9 @@
             this.updateTransporterPage.Controls.Add(this.transporterUpdateWorkDocumentAddButton);
             this.updateTransporterPage.Location = new System.Drawing.Point(4, 25);
             this.updateTransporterPage.Name = "updateTransporterPage";
-            this.updateTransporterPage.Size = new System.Drawing.Size(776, 508);
+            this.updateTransporterPage.Size = new System.Drawing.Size(776, 505);
             this.updateTransporterPage.TabIndex = 11;
             this.updateTransporterPage.Text = "updateTransporterPage";
-            this.updateTransporterPage.UseVisualStyleBackColor = true;
             // 
             // transporterUpdateFilterPanel
             // 
@@ -3318,11 +3456,11 @@
             // 
             this.transporterUpdateCountriesAndVehicleUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.transporterUpdateCountriesAndVehicleUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateCountriesAndVehicleUpdateButton.Location = new System.Drawing.Point(7, 383);
+            this.transporterUpdateCountriesAndVehicleUpdateButton.Location = new System.Drawing.Point(7, 365);
             this.transporterUpdateCountriesAndVehicleUpdateButton.Name = "transporterUpdateCountriesAndVehicleUpdateButton";
             this.transporterUpdateCountriesAndVehicleUpdateButton.Size = new System.Drawing.Size(237, 30);
             this.transporterUpdateCountriesAndVehicleUpdateButton.TabIndex = 145;
-            this.transporterUpdateCountriesAndVehicleUpdateButton.Text = "Змінити країни";
+            this.transporterUpdateCountriesAndVehicleUpdateButton.Text = "Змінити країни та тип транспортеру";
             this.transporterUpdateCountriesAndVehicleUpdateButton.UseVisualStyleBackColor = true;
             this.transporterUpdateCountriesAndVehicleUpdateButton.Click += new System.EventHandler(this.transporterUpdateCountriesAndVehicleUpdateButton_Click);
             // 
@@ -3336,7 +3474,7 @@
             this.commentTransporterUpdateTextBox.Multiline = true;
             this.commentTransporterUpdateTextBox.Name = "commentTransporterUpdateTextBox";
             this.commentTransporterUpdateTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.commentTransporterUpdateTextBox.Size = new System.Drawing.Size(756, 67);
+            this.commentTransporterUpdateTextBox.Size = new System.Drawing.Size(756, 49);
             this.commentTransporterUpdateTextBox.TabIndex = 144;
             this.commentTransporterUpdateTextBox.TextChanged += new System.EventHandler(this.commentTransporterUpdateTextBox_TextChanged);
             // 
@@ -3355,7 +3493,7 @@
             this.transporterUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateButton.Location = new System.Drawing.Point(466, 419);
+            this.transporterUpdateButton.Location = new System.Drawing.Point(464, 401);
             this.transporterUpdateButton.Name = "transporterUpdateButton";
             this.transporterUpdateButton.Size = new System.Drawing.Size(302, 101);
             this.transporterUpdateButton.TabIndex = 142;
@@ -3367,7 +3505,7 @@
             // 
             this.transporterUpdateContactDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.transporterUpdateContactDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateContactDeleteButton.Location = new System.Drawing.Point(7, 490);
+            this.transporterUpdateContactDeleteButton.Location = new System.Drawing.Point(7, 472);
             this.transporterUpdateContactDeleteButton.Name = "transporterUpdateContactDeleteButton";
             this.transporterUpdateContactDeleteButton.Size = new System.Drawing.Size(238, 30);
             this.transporterUpdateContactDeleteButton.TabIndex = 141;
@@ -3379,7 +3517,7 @@
             // 
             this.transporterUpdateBankDetailsDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.transporterUpdateBankDetailsDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateBankDetailsDeleteButton.Location = new System.Drawing.Point(252, 491);
+            this.transporterUpdateBankDetailsDeleteButton.Location = new System.Drawing.Point(252, 473);
             this.transporterUpdateBankDetailsDeleteButton.Name = "transporterUpdateBankDetailsDeleteButton";
             this.transporterUpdateBankDetailsDeleteButton.Size = new System.Drawing.Size(207, 30);
             this.transporterUpdateBankDetailsDeleteButton.TabIndex = 140;
@@ -3391,7 +3529,7 @@
             // 
             this.transporterUpdateBankDetailsUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.transporterUpdateBankDetailsUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateBankDetailsUpdateButton.Location = new System.Drawing.Point(253, 455);
+            this.transporterUpdateBankDetailsUpdateButton.Location = new System.Drawing.Point(253, 437);
             this.transporterUpdateBankDetailsUpdateButton.Name = "transporterUpdateBankDetailsUpdateButton";
             this.transporterUpdateBankDetailsUpdateButton.Size = new System.Drawing.Size(207, 30);
             this.transporterUpdateBankDetailsUpdateButton.TabIndex = 139;
@@ -3403,7 +3541,7 @@
             // 
             this.transporterUpdateContactUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.transporterUpdateContactUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateContactUpdateButton.Location = new System.Drawing.Point(8, 455);
+            this.transporterUpdateContactUpdateButton.Location = new System.Drawing.Point(8, 437);
             this.transporterUpdateContactUpdateButton.Name = "transporterUpdateContactUpdateButton";
             this.transporterUpdateContactUpdateButton.Size = new System.Drawing.Size(237, 30);
             this.transporterUpdateContactUpdateButton.TabIndex = 138;
@@ -3415,7 +3553,7 @@
             // 
             this.transporterUpdateBankDetailsAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.transporterUpdateBankDetailsAddButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateBankDetailsAddButton.Location = new System.Drawing.Point(253, 419);
+            this.transporterUpdateBankDetailsAddButton.Location = new System.Drawing.Point(253, 401);
             this.transporterUpdateBankDetailsAddButton.Name = "transporterUpdateBankDetailsAddButton";
             this.transporterUpdateBankDetailsAddButton.Size = new System.Drawing.Size(207, 30);
             this.transporterUpdateBankDetailsAddButton.TabIndex = 137;
@@ -3427,7 +3565,7 @@
             // 
             this.transporterUpdateContactAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.transporterUpdateContactAddButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateContactAddButton.Location = new System.Drawing.Point(8, 419);
+            this.transporterUpdateContactAddButton.Location = new System.Drawing.Point(8, 401);
             this.transporterUpdateContactAddButton.Name = "transporterUpdateContactAddButton";
             this.transporterUpdateContactAddButton.Size = new System.Drawing.Size(237, 30);
             this.transporterUpdateContactAddButton.TabIndex = 136;
@@ -3683,6 +3821,7 @@
             // 
             // deleteTransporterPage
             // 
+            this.deleteTransporterPage.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteTransporterPage.Controls.Add(this.deleteTransporterSelectDiapasoneComboBox);
             this.deleteTransporterPage.Controls.Add(this.label17);
             this.deleteTransporterPage.Controls.Add(this.transporterDeleteButton);
@@ -3690,10 +3829,9 @@
             this.deleteTransporterPage.Controls.Add(this.transporterDeleteComboBox);
             this.deleteTransporterPage.Location = new System.Drawing.Point(4, 25);
             this.deleteTransporterPage.Name = "deleteTransporterPage";
-            this.deleteTransporterPage.Size = new System.Drawing.Size(776, 508);
+            this.deleteTransporterPage.Size = new System.Drawing.Size(776, 505);
             this.deleteTransporterPage.TabIndex = 12;
             this.deleteTransporterPage.Text = "deleteTransporterPage";
-            this.deleteTransporterPage.UseVisualStyleBackColor = true;
             // 
             // deleteTransporterSelectDiapasoneComboBox
             // 
@@ -3722,7 +3860,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.transporterDeleteButton.Enabled = false;
             this.transporterDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterDeleteButton.Location = new System.Drawing.Point(470, 434);
+            this.transporterDeleteButton.Location = new System.Drawing.Point(470, 431);
             this.transporterDeleteButton.Name = "transporterDeleteButton";
             this.transporterDeleteButton.Size = new System.Drawing.Size(302, 70);
             this.transporterDeleteButton.TabIndex = 72;
@@ -3761,6 +3899,10 @@
             // 
             // documentationPage
             // 
+            this.documentationPage.BackColor = System.Drawing.Color.AliceBlue;
+            this.documentationPage.Controls.Add(this.label66);
+            this.documentationPage.Controls.Add(this.label67);
+            this.documentationPage.Controls.Add(this.forwarderAsComboBox);
             this.documentationPage.Controls.Add(this.label36);
             this.documentationPage.Controls.Add(this.contractBeginDateTimePicker);
             this.documentationPage.Controls.Add(this.createContactButton);
@@ -3768,7 +3910,6 @@
             this.documentationPage.Controls.Add(this.label51);
             this.documentationPage.Controls.Add(this.label39);
             this.documentationPage.Controls.Add(this.label38);
-            this.documentationPage.Controls.Add(this.firstPersonActivityComboBox);
             this.documentationPage.Controls.Add(this.label37);
             this.documentationPage.Controls.Add(this.firstPersonDiapasonComboBox);
             this.documentationPage.Controls.Add(this.label28);
@@ -3776,10 +3917,49 @@
             this.documentationPage.Controls.Add(this.firstPersonNameComboBox);
             this.documentationPage.Location = new System.Drawing.Point(4, 25);
             this.documentationPage.Name = "documentationPage";
-            this.documentationPage.Size = new System.Drawing.Size(776, 508);
+            this.documentationPage.Size = new System.Drawing.Size(776, 505);
             this.documentationPage.TabIndex = 13;
             this.documentationPage.Text = "documentationPage";
-            this.documentationPage.UseVisualStyleBackColor = true;
+            // 
+            // label66
+            // 
+            this.label66.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label66.Location = new System.Drawing.Point(38, 243);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(136, 21);
+            this.label66.TabIndex = 94;
+            this.label66.Text = "Виступає у якості:";
+            // 
+            // label67
+            // 
+            this.label67.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label67.Location = new System.Drawing.Point(6, 243);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(33, 21);
+            this.label67.TabIndex = 93;
+            this.label67.Text = "3 - ";
+            // 
+            // forwarderAsComboBox
+            // 
+            this.forwarderAsComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.forwarderAsComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.forwarderAsComboBox.Enabled = false;
+            this.forwarderAsComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderAsComboBox.Items.AddRange(new object[] {
+            "Замовника",
+            "Перевізника"});
+            this.forwarderAsComboBox.Location = new System.Drawing.Point(42, 267);
+            this.forwarderAsComboBox.Name = "forwarderAsComboBox";
+            this.forwarderAsComboBox.Size = new System.Drawing.Size(188, 29);
+            this.forwarderAsComboBox.TabIndex = 92;
+            this.forwarderAsComboBox.SelectedIndexChanged += new System.EventHandler(this.forwarderAsComboBox_SelectedIndexChanged);
+            this.forwarderAsComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.forwarderAsComboBox_MouseClick);
             // 
             // label36
             // 
@@ -3806,7 +3986,7 @@
             this.createContactButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.createContactButton.Enabled = false;
             this.createContactButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.createContactButton.Location = new System.Drawing.Point(470, 434);
+            this.createContactButton.Location = new System.Drawing.Point(470, 431);
             this.createContactButton.Name = "createContactButton";
             this.createContactButton.Size = new System.Drawing.Size(302, 70);
             this.createContactButton.TabIndex = 89;
@@ -3823,9 +4003,9 @@
             this.secondPersonNameComboBox.Enabled = false;
             this.secondPersonNameComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.secondPersonNameComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.secondPersonNameComboBox.Location = new System.Drawing.Point(42, 205);
+            this.secondPersonNameComboBox.Location = new System.Drawing.Point(42, 187);
             this.secondPersonNameComboBox.Name = "secondPersonNameComboBox";
-            this.secondPersonNameComboBox.Size = new System.Drawing.Size(548, 29);
+            this.secondPersonNameComboBox.Size = new System.Drawing.Size(686, 29);
             this.secondPersonNameComboBox.Sorted = true;
             this.secondPersonNameComboBox.TabIndex = 85;
             this.secondPersonNameComboBox.SelectedIndexChanged += new System.EventHandler(this.secondPersonNameComboBox_SelectedIndexChanged);
@@ -3837,7 +4017,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label51.Location = new System.Drawing.Point(38, 178);
+            this.label51.Location = new System.Drawing.Point(38, 160);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(96, 21);
             this.label51.TabIndex = 84;
@@ -3849,7 +4029,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label39.Location = new System.Drawing.Point(6, 178);
+            this.label39.Location = new System.Drawing.Point(6, 160);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(33, 21);
             this.label39.TabIndex = 83;
@@ -3861,27 +4041,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label38.Location = new System.Drawing.Point(8, 72);
+            this.label38.Location = new System.Drawing.Point(6, 55);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(33, 21);
             this.label38.TabIndex = 82;
             this.label38.Text = "1 - ";
-            // 
-            // firstPersonActivityComboBox
-            // 
-            this.firstPersonActivityComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.firstPersonActivityComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.firstPersonActivityComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.firstPersonActivityComboBox.Items.AddRange(new object[] {
-            "Клієнт",
-            "Перевізник",
-            "Експедитор"});
-            this.firstPersonActivityComboBox.Location = new System.Drawing.Point(42, 69);
-            this.firstPersonActivityComboBox.Name = "firstPersonActivityComboBox";
-            this.firstPersonActivityComboBox.Size = new System.Drawing.Size(550, 29);
-            this.firstPersonActivityComboBox.TabIndex = 80;
-            this.firstPersonActivityComboBox.SelectedIndexChanged += new System.EventHandler(this.firstPersonActivityComboBox_SelectedIndexChanged);
-            this.firstPersonActivityComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.firstPersonActivityComboBox_MouseClick);
             // 
             // label37
             // 
@@ -3889,19 +4053,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label37.Location = new System.Drawing.Point(3, 45);
+            this.label37.Location = new System.Drawing.Point(40, 55);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(183, 21);
+            this.label37.Size = new System.Drawing.Size(94, 21);
             this.label37.TabIndex = 79;
-            this.label37.Text = "Виберіть вид діяльності:";
+            this.label37.Text = "Перевізник:";
             // 
             // firstPersonDiapasonComboBox
             // 
             this.firstPersonDiapasonComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.firstPersonDiapasonComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.firstPersonDiapasonComboBox.Enabled = false;
             this.firstPersonDiapasonComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.firstPersonDiapasonComboBox.Location = new System.Drawing.Point(42, 125);
+            this.firstPersonDiapasonComboBox.Location = new System.Drawing.Point(42, 109);
             this.firstPersonDiapasonComboBox.Name = "firstPersonDiapasonComboBox";
             this.firstPersonDiapasonComboBox.Size = new System.Drawing.Size(188, 29);
             this.firstPersonDiapasonComboBox.TabIndex = 78;
@@ -3911,7 +4074,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label28.Location = new System.Drawing.Point(40, 101);
+            this.label28.Location = new System.Drawing.Point(40, 85);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(140, 21);
             this.label28.TabIndex = 77;
@@ -3923,7 +4086,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.personNameLabel.AutoSize = true;
             this.personNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.personNameLabel.Location = new System.Drawing.Point(199, 101);
+            this.personNameLabel.Location = new System.Drawing.Point(199, 85);
             this.personNameLabel.Name = "personNameLabel";
             this.personNameLabel.Size = new System.Drawing.Size(0, 21);
             this.personNameLabel.TabIndex = 76;
@@ -3937,7 +4100,7 @@
             this.firstPersonNameComboBox.Enabled = false;
             this.firstPersonNameComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.firstPersonNameComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.firstPersonNameComboBox.Location = new System.Drawing.Point(236, 125);
+            this.firstPersonNameComboBox.Location = new System.Drawing.Point(236, 109);
             this.firstPersonNameComboBox.Name = "firstPersonNameComboBox";
             this.firstPersonNameComboBox.Size = new System.Drawing.Size(492, 29);
             this.firstPersonNameComboBox.Sorted = true;
@@ -3947,6 +4110,7 @@
             // 
             // OrderAddPage
             // 
+            this.OrderAddPage.BackColor = System.Drawing.Color.AliceBlue;
             this.OrderAddPage.Controls.Add(this.OrderAddYOrUComboBox);
             this.OrderAddPage.Controls.Add(this.splitContainer6);
             this.OrderAddPage.Controls.Add(this.splitContainer3);
@@ -3956,10 +4120,9 @@
             this.OrderAddPage.Location = new System.Drawing.Point(4, 25);
             this.OrderAddPage.Name = "OrderAddPage";
             this.OrderAddPage.Padding = new System.Windows.Forms.Padding(3);
-            this.OrderAddPage.Size = new System.Drawing.Size(776, 508);
+            this.OrderAddPage.Size = new System.Drawing.Size(776, 505);
             this.OrderAddPage.TabIndex = 15;
             this.OrderAddPage.Text = "OrderAddPage";
-            this.OrderAddPage.UseVisualStyleBackColor = true;
             // 
             // OrderAddYOrUComboBox
             // 
@@ -3999,7 +4162,7 @@
             this.splitContainer6.Panel2.Controls.Add(this.OrderAddButton);
             this.splitContainer6.Panel2.Controls.Add(this.label108);
             this.splitContainer6.Panel2.Controls.Add(this.OrderAddDenyFineSelectComboBox);
-            this.splitContainer6.Size = new System.Drawing.Size(760, 110);
+            this.splitContainer6.Size = new System.Drawing.Size(760, 94);
             this.splitContainer6.SplitterDistance = 379;
             this.splitContainer6.SplitterWidth = 2;
             this.splitContainer6.TabIndex = 137;
@@ -4122,7 +4285,7 @@
             this.OrderAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddButton.Location = new System.Drawing.Point(8, 59);
             this.OrderAddButton.Name = "OrderAddButton";
-            this.OrderAddButton.Size = new System.Drawing.Size(391, 45);
+            this.OrderAddButton.Size = new System.Drawing.Size(423, 45);
             this.OrderAddButton.TabIndex = 139;
             this.OrderAddButton.Text = "Сформувати";
             this.OrderAddButton.UseVisualStyleBackColor = true;
@@ -4152,7 +4315,7 @@
             "зад"});
             this.OrderAddDenyFineSelectComboBox.Location = new System.Drawing.Point(7, 24);
             this.OrderAddDenyFineSelectComboBox.Name = "OrderAddDenyFineSelectComboBox";
-            this.OrderAddDenyFineSelectComboBox.Size = new System.Drawing.Size(335, 29);
+            this.OrderAddDenyFineSelectComboBox.Size = new System.Drawing.Size(379, 29);
             this.OrderAddDenyFineSelectComboBox.Sorted = true;
             this.OrderAddDenyFineSelectComboBox.TabIndex = 136;
             this.OrderAddDenyFineSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddDenyFineSelectComboBox_SelectedIndexChanged);
@@ -4511,7 +4674,7 @@
             this.OrderAddTrailerSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddTrailerSelectComboBox.Location = new System.Drawing.Point(9, 83);
             this.OrderAddTrailerSelectComboBox.Name = "OrderAddTrailerSelectComboBox";
-            this.OrderAddTrailerSelectComboBox.Size = new System.Drawing.Size(143, 29);
+            this.OrderAddTrailerSelectComboBox.Size = new System.Drawing.Size(209, 29);
             this.OrderAddTrailerSelectComboBox.Sorted = true;
             this.OrderAddTrailerSelectComboBox.TabIndex = 135;
             this.OrderAddTrailerSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddTrailerSelectComboBox_SelectedIndexChanged);
@@ -4551,7 +4714,7 @@
             this.OrderAddCubeSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddCubeSelectComboBox.Location = new System.Drawing.Point(9, 21);
             this.OrderAddCubeSelectComboBox.Name = "OrderAddCubeSelectComboBox";
-            this.OrderAddCubeSelectComboBox.Size = new System.Drawing.Size(143, 29);
+            this.OrderAddCubeSelectComboBox.Size = new System.Drawing.Size(209, 29);
             this.OrderAddCubeSelectComboBox.Sorted = true;
             this.OrderAddCubeSelectComboBox.TabIndex = 132;
             this.OrderAddCubeSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddCubeSelectComboBox_SelectedIndexChanged);
@@ -5019,6 +5182,257 @@
             this.OrderAddForwarder2SelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddForwarder2SelectComboBox_TextUpdate);
             this.OrderAddForwarder2SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddForwarder2SelectComboBox_MouseClick);
             // 
+            // showTrackingPage
+            // 
+            this.showTrackingPage.BackColor = System.Drawing.Color.AliceBlue;
+            this.showTrackingPage.Controls.Add(this.trackingShowUploadAddressDataGridView);
+            this.showTrackingPage.Controls.Add(this.trackingShowDownloadAddressDataGridView);
+            this.showTrackingPage.Controls.Add(this.trackingShowCommentDataGridView);
+            this.showTrackingPage.Controls.Add(this.trackingLabel16);
+            this.showTrackingPage.Controls.Add(this.trackingLabel17);
+            this.showTrackingPage.Controls.Add(this.trackingShowAddCommentButton);
+            this.showTrackingPage.Controls.Add(this.trackingShowCloseOrderButton);
+            this.showTrackingPage.Controls.Add(this.showTrackingOnlyActive);
+            this.showTrackingPage.Controls.Add(this.onlyActiveLabel);
+            this.showTrackingPage.Controls.Add(this.showTrackingDataSwitcher);
+            this.showTrackingPage.Controls.Add(this.showTrackingDateTimePicker);
+            this.showTrackingPage.Controls.Add(this.trackingLabel1);
+            this.showTrackingPage.Controls.Add(this.trackingShowTransporterContactsDataGridView);
+            this.showTrackingPage.Controls.Add(this.trackingLabel2);
+            this.showTrackingPage.Controls.Add(this.trackingShowSearchButton);
+            this.showTrackingPage.Controls.Add(this.trackingShowSearchTextBox);
+            this.showTrackingPage.Controls.Add(this.trackingShowDataGridView);
+            this.showTrackingPage.Location = new System.Drawing.Point(4, 25);
+            this.showTrackingPage.Name = "showTrackingPage";
+            this.showTrackingPage.Size = new System.Drawing.Size(776, 505);
+            this.showTrackingPage.TabIndex = 16;
+            this.showTrackingPage.Text = "showTrackingPage";
+            // 
+            // trackingShowUploadAddressDataGridView
+            // 
+            this.trackingShowUploadAddressDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.trackingShowUploadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.trackingShowUploadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.trackingShowUploadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.trackingShowUploadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.trackingShowUploadAddressDataGridView.Location = new System.Drawing.Point(387, 437);
+            this.trackingShowUploadAddressDataGridView.MultiSelect = false;
+            this.trackingShowUploadAddressDataGridView.Name = "trackingShowUploadAddressDataGridView";
+            this.trackingShowUploadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.trackingShowUploadAddressDataGridView.Size = new System.Drawing.Size(385, 65);
+            this.trackingShowUploadAddressDataGridView.TabIndex = 62;
+            this.trackingShowUploadAddressDataGridView.TabStop = false;
+            // 
+            // trackingShowDownloadAddressDataGridView
+            // 
+            this.trackingShowDownloadAddressDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.trackingShowDownloadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.trackingShowDownloadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.trackingShowDownloadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.trackingShowDownloadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.trackingShowDownloadAddressDataGridView.Location = new System.Drawing.Point(0, 437);
+            this.trackingShowDownloadAddressDataGridView.MultiSelect = false;
+            this.trackingShowDownloadAddressDataGridView.Name = "trackingShowDownloadAddressDataGridView";
+            this.trackingShowDownloadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.trackingShowDownloadAddressDataGridView.Size = new System.Drawing.Size(385, 65);
+            this.trackingShowDownloadAddressDataGridView.TabIndex = 61;
+            this.trackingShowDownloadAddressDataGridView.TabStop = false;
+            // 
+            // trackingShowCommentDataGridView
+            // 
+            this.trackingShowCommentDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingShowCommentDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.trackingShowCommentDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.trackingShowCommentDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.trackingShowCommentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.trackingShowCommentDataGridView.Location = new System.Drawing.Point(0, 285);
+            this.trackingShowCommentDataGridView.MultiSelect = false;
+            this.trackingShowCommentDataGridView.Name = "trackingShowCommentDataGridView";
+            this.trackingShowCommentDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.trackingShowCommentDataGridView.Size = new System.Drawing.Size(535, 125);
+            this.trackingShowCommentDataGridView.TabIndex = 60;
+            this.trackingShowCommentDataGridView.TabStop = false;
+            this.trackingShowCommentDataGridView.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.trackingShowCommentDataGridView_CellMouseDown);
+            this.trackingShowCommentDataGridView.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.trackingShowCommentDataGridView_CellMouseUp);
+            // 
+            // trackingLabel16
+            // 
+            this.trackingLabel16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingLabel16.AutoSize = true;
+            this.trackingLabel16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trackingLabel16.Location = new System.Drawing.Point(4, 413);
+            this.trackingLabel16.Name = "trackingLabel16";
+            this.trackingLabel16.Size = new System.Drawing.Size(83, 21);
+            this.trackingLabel16.TabIndex = 59;
+            this.trackingLabel16.Text = "Напрямок";
+            // 
+            // trackingLabel17
+            // 
+            this.trackingLabel17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingLabel17.AutoSize = true;
+            this.trackingLabel17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trackingLabel17.Location = new System.Drawing.Point(3, 261);
+            this.trackingLabel17.Name = "trackingLabel17";
+            this.trackingLabel17.Size = new System.Drawing.Size(80, 21);
+            this.trackingLabel17.TabIndex = 58;
+            this.trackingLabel17.Text = "Коментар";
+            // 
+            // trackingShowAddCommentButton
+            // 
+            this.trackingShowAddCommentButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingShowAddCommentButton.Enabled = false;
+            this.trackingShowAddCommentButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.trackingShowAddCommentButton.Location = new System.Drawing.Point(537, 285);
+            this.trackingShowAddCommentButton.Name = "trackingShowAddCommentButton";
+            this.trackingShowAddCommentButton.Size = new System.Drawing.Size(235, 62);
+            this.trackingShowAddCommentButton.TabIndex = 57;
+            this.trackingShowAddCommentButton.Text = "Додати коментар";
+            this.trackingShowAddCommentButton.UseVisualStyleBackColor = true;
+            this.trackingShowAddCommentButton.Click += new System.EventHandler(this.trackingShowAddCommentButton_Click);
+            // 
+            // trackingShowCloseOrderButton
+            // 
+            this.trackingShowCloseOrderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingShowCloseOrderButton.Enabled = false;
+            this.trackingShowCloseOrderButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.trackingShowCloseOrderButton.Location = new System.Drawing.Point(537, 348);
+            this.trackingShowCloseOrderButton.Name = "trackingShowCloseOrderButton";
+            this.trackingShowCloseOrderButton.Size = new System.Drawing.Size(235, 62);
+            this.trackingShowCloseOrderButton.TabIndex = 55;
+            this.trackingShowCloseOrderButton.Text = "Закрити заявку";
+            this.trackingShowCloseOrderButton.UseVisualStyleBackColor = true;
+            this.trackingShowCloseOrderButton.Click += new System.EventHandler(this.trackingShowCloseOrder_Click);
+            // 
+            // showTrackingOnlyActive
+            // 
+            this.showTrackingOnlyActive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.showTrackingOnlyActive.AutoSize = true;
+            this.showTrackingOnlyActive.Location = new System.Drawing.Point(694, 36);
+            this.showTrackingOnlyActive.Name = "showTrackingOnlyActive";
+            this.showTrackingOnlyActive.Size = new System.Drawing.Size(15, 14);
+            this.showTrackingOnlyActive.TabIndex = 54;
+            this.showTrackingOnlyActive.UseVisualStyleBackColor = true;
+            this.showTrackingOnlyActive.CheckedChanged += new System.EventHandler(this.showTrackingOnlyActive_CheckedChanged);
+            // 
+            // onlyActiveLabel
+            // 
+            this.onlyActiveLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.onlyActiveLabel.AutoSize = true;
+            this.onlyActiveLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.onlyActiveLabel.Location = new System.Drawing.Point(579, 30);
+            this.onlyActiveLabel.Name = "onlyActiveLabel";
+            this.onlyActiveLabel.Size = new System.Drawing.Size(115, 21);
+            this.onlyActiveLabel.TabIndex = 53;
+            this.onlyActiveLabel.Text = "Тільки активні:";
+            // 
+            // showTrackingDataSwitcher
+            // 
+            this.showTrackingDataSwitcher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.showTrackingDataSwitcher.AutoSize = true;
+            this.showTrackingDataSwitcher.Location = new System.Drawing.Point(563, 35);
+            this.showTrackingDataSwitcher.Name = "showTrackingDataSwitcher";
+            this.showTrackingDataSwitcher.Size = new System.Drawing.Size(15, 14);
+            this.showTrackingDataSwitcher.TabIndex = 52;
+            this.showTrackingDataSwitcher.UseVisualStyleBackColor = true;
+            this.showTrackingDataSwitcher.CheckedChanged += new System.EventHandler(this.showTrackingDataSwitcher_CheckedChanged);
+            // 
+            // showTrackingDateTimePicker
+            // 
+            this.showTrackingDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.showTrackingDateTimePicker.CustomFormat = "MMMM yyyy";
+            this.showTrackingDateTimePicker.Enabled = false;
+            this.showTrackingDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.showTrackingDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.showTrackingDateTimePicker.Location = new System.Drawing.Point(407, 29);
+            this.showTrackingDateTimePicker.Name = "showTrackingDateTimePicker";
+            this.showTrackingDateTimePicker.Size = new System.Drawing.Size(151, 25);
+            this.showTrackingDateTimePicker.TabIndex = 51;
+            this.showTrackingDateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // trackingLabel1
+            // 
+            this.trackingLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingLabel1.AutoSize = true;
+            this.trackingLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trackingLabel1.Location = new System.Drawing.Point(3, 156);
+            this.trackingLabel1.Name = "trackingLabel1";
+            this.trackingLabel1.Size = new System.Drawing.Size(205, 21);
+            this.trackingLabel1.TabIndex = 50;
+            this.trackingLabel1.Text = "Контактні дані перевізника";
+            // 
+            // trackingShowTransporterContactsDataGridView
+            // 
+            this.trackingShowTransporterContactsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingShowTransporterContactsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.trackingShowTransporterContactsDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.trackingShowTransporterContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.trackingShowTransporterContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.trackingShowTransporterContactsDataGridView.Location = new System.Drawing.Point(0, 177);
+            this.trackingShowTransporterContactsDataGridView.MultiSelect = false;
+            this.trackingShowTransporterContactsDataGridView.Name = "trackingShowTransporterContactsDataGridView";
+            this.trackingShowTransporterContactsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.trackingShowTransporterContactsDataGridView.Size = new System.Drawing.Size(776, 81);
+            this.trackingShowTransporterContactsDataGridView.TabIndex = 49;
+            this.trackingShowTransporterContactsDataGridView.TabStop = false;
+            // 
+            // trackingLabel2
+            // 
+            this.trackingLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingLabel2.AutoSize = true;
+            this.trackingLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trackingLabel2.Location = new System.Drawing.Point(3, 3);
+            this.trackingLabel2.Name = "trackingLabel2";
+            this.trackingLabel2.Size = new System.Drawing.Size(100, 21);
+            this.trackingLabel2.TabIndex = 48;
+            this.trackingLabel2.Text = "Відстеження";
+            // 
+            // trackingShowSearchButton
+            // 
+            this.trackingShowSearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingShowSearchButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.trackingShowSearchButton.Location = new System.Drawing.Point(267, 26);
+            this.trackingShowSearchButton.Name = "trackingShowSearchButton";
+            this.trackingShowSearchButton.Size = new System.Drawing.Size(138, 30);
+            this.trackingShowSearchButton.TabIndex = 47;
+            this.trackingShowSearchButton.Text = "Знайти";
+            this.trackingShowSearchButton.UseVisualStyleBackColor = true;
+            this.trackingShowSearchButton.Click += new System.EventHandler(this.trackingShowSearchButton_Click);
+            // 
+            // trackingShowSearchTextBox
+            // 
+            this.trackingShowSearchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingShowSearchTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.trackingShowSearchTextBox.Location = new System.Drawing.Point(3, 27);
+            this.trackingShowSearchTextBox.Name = "trackingShowSearchTextBox";
+            this.trackingShowSearchTextBox.Size = new System.Drawing.Size(261, 29);
+            this.trackingShowSearchTextBox.TabIndex = 46;
+            this.trackingShowSearchTextBox.TextChanged += new System.EventHandler(this.trackingShowSearchTextBox_TextChanged);
+            // 
+            // trackingShowDataGridView
+            // 
+            this.trackingShowDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingShowDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.trackingShowDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.trackingShowDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.trackingShowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.trackingShowDataGridView.Location = new System.Drawing.Point(0, 62);
+            this.trackingShowDataGridView.MultiSelect = false;
+            this.trackingShowDataGridView.Name = "trackingShowDataGridView";
+            this.trackingShowDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.trackingShowDataGridView.Size = new System.Drawing.Size(776, 87);
+            this.trackingShowDataGridView.TabIndex = 18;
+            this.trackingShowDataGridView.TabStop = false;
+            this.trackingShowDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.trackingShowDataGridView_CellMouseClick);
+            // 
             // labelshow57
             // 
             this.labelshow57.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -5095,7 +5509,8 @@
             this.menuStrip.PerformLayout();
             this.dataControl.ResumeLayout(false);
             this.helloPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.helloPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.helloPictureBox)).EndInit();
             this.showClientPage.ResumeLayout(false);
             this.showClientPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBankDetailsDataGridView)).EndInit();
@@ -5184,6 +5599,13 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.showTrackingPage.ResumeLayout(false);
+            this.showTrackingPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowUploadAddressDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowDownloadAddressDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowCommentDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowTransporterContactsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5246,7 +5668,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView clientContactsDataGridView;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox helloPictureBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -5499,7 +5921,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ToolStripMenuItem documentationToolStripMenuItem;
         private System.Windows.Forms.TabPage documentationPage;
-        private System.Windows.Forms.ComboBox firstPersonActivityComboBox;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.ComboBox firstPersonDiapasonComboBox;
         private System.Windows.Forms.Label label28;
@@ -5598,6 +6019,29 @@
         private System.Windows.Forms.Button OrderAddAdditionalTermsAddButton;
         private System.Windows.Forms.Button OrderAddPaymentTermsAddButton;
         private System.Windows.Forms.Button OrderAddOrderDenyAddButton;
+        private System.Windows.Forms.TabPage showTrackingPage;
+        private System.Windows.Forms.DataGridView trackingShowDataGridView;
+        private System.Windows.Forms.Label trackingLabel2;
+        private System.Windows.Forms.Button trackingShowSearchButton;
+        private System.Windows.Forms.TextBox trackingShowSearchTextBox;
+        private System.Windows.Forms.Label trackingLabel1;
+        private System.Windows.Forms.DataGridView trackingShowTransporterContactsDataGridView;
+        private System.Windows.Forms.DateTimePicker showTrackingDateTimePicker;
+        private System.Windows.Forms.CheckBox showTrackingDataSwitcher;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.ComboBox forwarderAsComboBox;
+        private System.Windows.Forms.Label yearLabel;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label onlyActiveLabel;
+        private System.Windows.Forms.CheckBox showTrackingOnlyActive;
+        private System.Windows.Forms.Button trackingShowCloseOrderButton;
+        private System.Windows.Forms.Button trackingShowAddCommentButton;
+        private System.Windows.Forms.Label trackingLabel17;
+        private System.Windows.Forms.Label trackingLabel16;
+        private System.Windows.Forms.DataGridView trackingShowCommentDataGridView;
+        private System.Windows.Forms.DataGridView trackingShowUploadAddressDataGridView;
+        private System.Windows.Forms.DataGridView trackingShowDownloadAddressDataGridView;
         }
 }
 

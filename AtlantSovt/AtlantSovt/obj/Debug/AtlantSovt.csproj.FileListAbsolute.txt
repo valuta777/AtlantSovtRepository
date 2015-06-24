@@ -164,3 +164,17 @@ E:\AtlantSovtRepository\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\Atl
 E:\AtlantSovtRepository\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.TransporterShowFiltrationForm.resources
 E:\AtlantSovtRepository\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csproj.GenerateResource.Cache
 E:\AtlantSovtRepository\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csproj.ResolveComReference.cache
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csproj.ResolveComReference.cache
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddOrderDenyForm.resources
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddAdditionalTermsForm.resources
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddPaymentTermsForm.resources
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddTrailerForm.resources
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddCubeForm.resources
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddFineForDelayForm.resources
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddRegularyDelayForm.resources
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddTirCmrForm.resources
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddCargoForm.resources
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddAddressForm.resources
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.SelectUploadAddressesForm.resources
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddTrackingCommentForm.resources
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.ShowTrackingCommentForm.resources

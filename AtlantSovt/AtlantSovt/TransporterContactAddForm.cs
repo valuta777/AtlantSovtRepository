@@ -23,7 +23,6 @@ namespace AtlantSovt
         public TransporterContactAddForm()
         {
             InitializeComponent();
-            long Id = 0;
         }
 
         internal void AddTransporterContact(long id)
@@ -48,7 +47,6 @@ namespace AtlantSovt
                 {
                     MessageBox.Show(ec.Message);
                 }
-
             }
         }
 

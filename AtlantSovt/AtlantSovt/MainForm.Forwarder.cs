@@ -26,6 +26,10 @@ namespace AtlantSovt
         //show
         void ShowForwarder()
         {
+            forwarderContactsDataGridView.Visible = false;
+            forwarderBankDetailsDataGridView.Visible = false;
+            forwarderCommentRichTextBox.Text = "";
+
             using (var db = new AtlantSovtContext())
             {
                 var query =

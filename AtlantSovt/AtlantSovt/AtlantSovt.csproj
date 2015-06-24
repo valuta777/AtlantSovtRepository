@@ -71,6 +71,12 @@
     <Compile Include="AddPaymentTermsForm.Designer.cs">
       <DependentUpon>AddPaymentTermsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddTrackingCommentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTrackingCommentForm.Designer.cs">
+      <DependentUpon>AddTrackingCommentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddTrailerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,7 +148,6 @@
     <Compile Include="AtlantSovtDb\OrderUploadAdress.cs" />
     <Compile Include="AtlantSovtDb\Payment.cs" />
     <Compile Include="AtlantSovtDb\RegularyDelay.cs" />
-    <Compile Include="AtlantSovtDb\sysdiagram.cs" />
     <Compile Include="AtlantSovtDb\TaxPayerStatu.cs" />
     <Compile Include="AtlantSovtDb\TirCmr.cs" />
     <Compile Include="AtlantSovtDb\TrackingComment.cs" />
@@ -169,29 +174,18 @@
     <Compile Include="MainForm.Order.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectCustomsAddressesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SelectCustomsAddressesForm.Designer.cs">
-      <DependentUpon>SelectCustomsAddressesForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SelectDownloadAddressesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SelectDownloadAddressesForm.Designer.cs">
-      <DependentUpon>SelectDownloadAddressesForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SelectUncustomsAddressesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SelectUncustomsAddressesForm.Designer.cs">
-      <DependentUpon>SelectUncustomsAddressesForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="menuStripRenderer.cs" />
     <Compile Include="SelectUploadAddressesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SelectUploadAddressesForm.Designer.cs">
       <DependentUpon>SelectUploadAddressesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowTrackingCommentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowTrackingCommentForm.Designer.cs">
+      <DependentUpon>ShowTrackingCommentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="TransporterBankDetailsUpdateForm.cs">
       <SubType>Form</SubType>
@@ -345,6 +339,9 @@
     <EmbeddedResource Include="AddPaymentTermsForm.resx">
       <DependentUpon>AddPaymentTermsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddTrackingCommentForm.resx">
+      <DependentUpon>AddTrackingCommentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddTrailerForm.resx">
       <DependentUpon>AddTrailerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -369,17 +366,11 @@
     <EmbeddedResource Include="ClientBankDetailsAddForm.resx">
       <DependentUpon>ClientBankDetailsAddForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectCustomsAddressesForm.resx">
-      <DependentUpon>SelectCustomsAddressesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SelectDownloadAddressesForm.resx">
-      <DependentUpon>SelectDownloadAddressesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SelectUncustomsAddressesForm.resx">
-      <DependentUpon>SelectUncustomsAddressesForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SelectUploadAddressesForm.resx">
       <DependentUpon>SelectUploadAddressesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowTrackingCommentForm.resx">
+      <DependentUpon>ShowTrackingCommentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransporterBankDetailsUpdateForm.resx">
       <DependentUpon>TransporterBankDetailsUpdateForm.cs</DependentUpon>
@@ -419,6 +410,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -457,6 +449,9 @@
     <EmbeddedResource Include="TransporterShowFiltrationForm.resx">
       <DependentUpon>TransporterShowFiltrationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="MainForm.Tracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -467,6 +462,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\ukrDocumentationTransporterForwarder.docx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

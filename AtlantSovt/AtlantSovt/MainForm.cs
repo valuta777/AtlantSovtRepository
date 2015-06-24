@@ -13,11 +13,15 @@ using System.Windows.Forms;
 
 namespace AtlantSovt
 {
+
     public partial class MainForm : Form
     {
         public MainForm()
         {            
             InitializeComponent();
+            menuStrip.Renderer = new menuStripRenderer();
+            yearLabel.Text = DateTime.Now.ToShortDateString();
+
         }
             //Client Forms
 
@@ -139,26 +143,35 @@ namespace AtlantSovt
                 {
                     dataControl.SelectedIndex = 13;
                 }
+
+                private void addOrderUkrStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 14;
+                }
+
+                private void trackingOrderUkrStrip_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 15;
+                    ShowTracking();
+                    trackingShowTransporterContactsDataGridView.Visible = false;
+                }
                 #endregion
 
         //Client
         #region Client
+
                 //Show
                 #region Show
         private void showClientsStrip_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 1;
             ShowClient();
-            clientContactsDataGridView.Visible = false;
-            clientBankDetailsDataGridView.Visible = false;
-            clientCommentRichTextBox.Text = "";
         }
 
         private void clientDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowClientInfo();
         }
-
 
         private void clientShowSearchButton_Click(object sender, EventArgs e)
         {
@@ -618,13 +631,11 @@ namespace AtlantSovt
 
             //Show
                 #region Show
+
         private void showForwarderStrip_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 5;
             ShowForwarder();
-            forwarderContactsDataGridView.Visible = false;
-            forwarderBankDetailsDataGridView.Visible = false;
-            forwarderCommentRichTextBox.Text = "";
         }
         private void forwarderDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -1006,11 +1017,6 @@ namespace AtlantSovt
             {
                 dataControl.SelectedIndex = 9;
                 ShowTransporter();
-                transporterShowContactsDataGridView.Visible = false;
-                transporterShowBankDetailsDataGridView.Visible = false;
-                transporterShowCountryDataGridView.Visible = false;
-                transporterShowCountryDataGridView.Visible = false;
-                transporterShowCommentRichTextBox.Text = "";
             }
 
             private void transporterShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -1554,69 +1560,28 @@ namespace AtlantSovt
         //Documentation
         #region Documentation
 
-        private void firstPersonActivityComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void firstPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            firstPersonDiapasonComboBox.Text = "";
-            firstPersonNameComboBox.Text = "";
-            firstPersonNameComboBox.Enabled = false;
-            firstPersonDiapasonComboBox.Enabled = true;
- 
-            switch(firstPersonActivityComboBox.SelectedIndex)
-            {
-                case 0:
-                    //personNameLabel.Text = "";
-                    personNameLabel.Text = "Виберіть клієнта";
-                    break;
-                case 1:
-                    //personNameLabel.Text = "";
-                    personNameLabel.Text = "Виберіть перевізника";
-                    break;
-                case 2:
-                    firstPersonDiapasonComboBox.Enabled = false;
-                    firstPersonNameComboBox.Enabled = true;
-                    //personNameLabel.Text = "";
-                    personNameLabel.Text = "Виберіть експедитора";
-                    break;
+            SplitTransporterFirstPersonComboBoxDocument();
             }
-        }
 
-        private void firstPersonActivityComboBox_MouseClick(object sender, MouseEventArgs e)
+        private void firstPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            firstPersonActivityComboBox.DroppedDown = true;
+            firstPersonNameComboBox.Items.Clear();
+            LoadTransporterFirstPersonNameComboBox();
+            firstPersonNameComboBox.DroppedDown = true;
+            secondPersonNameComboBox.Enabled = true;
         }
 
         private void firstPersonDiapasonComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            switch (firstPersonActivityComboBox.SelectedIndex)
-            {
-                case 0:
-                    LoadClientFirstPersonDiapasonCombobox();
-                    break;
-                case 1:
                     LoadTransporterFirstPersonDiapasonCombobox();
-                    break;
-            }
         }
 
-        private void firstPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            switch (firstPersonActivityComboBox.SelectedIndex)
+        private void secondPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
             {
-                case 0:
-                    firstPersonNameComboBox.Items.Clear();
-                    LoadClientFirstPersonNameComboBox();
-                    break;
-                case 1:
-                    firstPersonNameComboBox.Items.Clear();
-                    LoadTransporterFirstPersonNameComboBox();
-                    break;
-                case 2:
-                    firstPersonNameComboBox.Items.Clear();
-                    LoadForwarderFirstPersonNameComboBox();
-                    break;
-            }
-            firstPersonNameComboBox.DroppedDown = true;
-            secondPersonNameComboBox.Enabled = true;
+            SplitForwarderSecondPersonComboBoxDocument();
+            forwarderAsComboBox.Enabled = true;
             }
 
         private void secondPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -1625,54 +1590,119 @@ namespace AtlantSovt
             LoadForwarderSecondPersonNameComboBox();
             secondPersonNameComboBox.DroppedDown = true;
         }
-        #endregion
 
         private void createContactButton_Click(object sender, EventArgs e)
         {
-            switch (firstPersonActivityComboBox.SelectedIndex)
-            {
-                case 0:
-                    MessageBox.Show("Not ready yet!");
-                    break;
-                case 1:
-                    CreateTransporterForwarderContract();
-                    break;
-                case 2:
-                    MessageBox.Show("Not ready yet!");
-                    break;
-            }
+            CreateTransporterForwarderContract();
         }
 
-        private void firstPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void forwarderAsComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            switch (firstPersonActivityComboBox.SelectedIndex)
-            {
-                case 0:
-                    MessageBox.Show("Not ready yet!");
-                    break;
-                case 1:
-                    SplitTransporterFirstPersonComboBoxDocument();
-                    break;
-                case 2:
-                    MessageBox.Show("Not ready yet!");
-                    break;
-            }
+            forwarderAsComboBox.DroppedDown = true;
         }
 
-        private void secondPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void forwarderAsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SplitForwarderSecondPersonComboBoxDocument();
             createContactButton.Enabled = true;
         }
 
-        private void addOrderUkrStrip_Click(object sender, EventArgs e)
+        #endregion
+
+
+        //Tracking
+        #region Tracking
+
+        ShowTrackingCommentForm comment;
+
+        private void trackingShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            dataControl.SelectedIndex = 14;
+            ShowTrackingInfo();
+            trackingShowAddCommentButton.Enabled = true;
+            trackingShowCloseOrderButton.Enabled = true;
         }
 
+        private void trackingShowSearchButton_Click(object sender, EventArgs e)
+            {
+            ShowTrackingSearch();
+            }
 
+        private void trackingShowSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (trackingShowSearchTextBox.Text == "")
+            {
+                ShowTracking();
+        }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            ShowTrackingSearch();
+        }
+
+        private void showTrackingDataSwitcher_CheckedChanged(object sender, EventArgs e)
+            {
+            if (showTrackingDataSwitcher.Checked == true)
+            {
+                showTrackingDateTimePicker.Enabled = true;
+                isDatePickerEnabled = true;
+            }
+            else
+            {
+                showTrackingDateTimePicker.Enabled = false;
+                isDatePickerEnabled = false;
+            }
+        }
+
+        private void showTrackingOnlyActive_CheckedChanged(object sender, EventArgs e)
+        {
+            ShowTrackingSearch();
+            }
+
+        private void trackingShowCloseOrder_Click(object sender, EventArgs e)
+        {
+            ShowTrackingCloseOrder();
+        }
+
+        private void trackingShowAddCommentButton_Click(object sender, EventArgs e)
+        {
+            AddTrackingCommentForm trackingShowAddComment = new AddTrackingCommentForm();
+            trackingShowAddComment.Show();
+            try
+            {
+                trackingShowAddComment.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+            }
+            catch (Exception ex)
+        {
+                trackingShowAddComment.Dispose();
+                MessageBox.Show("Немає жодної заявки");
+            }
+        }
+
+        private void trackingShowCommentDataGridView_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                comment = new ShowTrackingCommentForm();
+                comment.Location = new Point(Cursor.Position.X, Cursor.Position.Y - 200);
+                trackingShowCommentDataGridView.ClearSelection();
+                comment.comment = trackingShowCommentDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+                comment.Show();
+            }
+            catch
+        {
+                MessageBox.Show("Натисніть на коментар");
+            }
+        }
+
+        private void trackingShowCommentDataGridView_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            comment.comment = "";
+            comment.Dispose();
+        }
+
+        #endregion
         
-        /// Order
+        // Order
        
         private void OrderAddClientDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
         {
@@ -1709,7 +1739,6 @@ namespace AtlantSovt
 
         private void OrderAddForwarder2SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            
             OrderAddForwarder2SelectComboBox.Items.Clear();
             LoadOrderAddForwarder2SelectComboBox();
             OrderAddForwarder2SelectComboBox.DroppedDown = true;
@@ -1729,7 +1758,6 @@ namespace AtlantSovt
         }
         private void OrderAddForwarder1SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             SplitForwarder1OrderAdd();
         }
         private void OrderAddForwarder1SelectComboBox_TextUpdate(object sender, EventArgs e)
@@ -1739,8 +1767,7 @@ namespace AtlantSovt
         private void OrderAddForwarder2SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitForwarder2OrderAdd();
-            
-        }        
+        }
         private void OrderAddForwarder2SelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitForwarder2OrderAdd();
@@ -1845,7 +1872,7 @@ namespace AtlantSovt
         }
         private void OrderAddUploadAddressAddButton_Click(object sender, EventArgs e)
         {
-            UploadAddressForm();
+            //  UploadAddressForm();
         }
 
         private void OrderAddCustomsAddressAddButton_Click(object sender, EventArgs e)
@@ -2040,6 +2067,6 @@ namespace AtlantSovt
                 e.Handled = true;
             }
         }
-        
+
     }
 }
