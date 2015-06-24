@@ -14,7 +14,6 @@ namespace AtlantSovt.AtlantSovtDb
             OrderLoadingForms = new HashSet<OrderLoadingForm>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
 
         [StringLength(50)]

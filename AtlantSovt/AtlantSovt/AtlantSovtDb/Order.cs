@@ -22,9 +22,10 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long Id { get; set; }
 
-        public long? AdrTurId { get; set; }
+        public long? TirCmrId { get; set; }
 
-        public bool? YorU { get; set; }
+        [StringLength(1)]
+        public string YorU { get; set; }
 
         public long? ClientId { get; set; }
 
@@ -42,15 +43,9 @@ namespace AtlantSovt.AtlantSovtDb
 
         public double? CargoWeight { get; set; }
 
-        [StringLength(20)]
-        public string LoadingForm1 { get; set; }
-
-        [StringLength(20)]
-        public string LoadingForm2 { get; set; }
-
         public int? ADRNumber { get; set; }
 
-        public DateTime? DeliveryDate { get; set; }
+        public DateTime? UploadDate { get; set; }
 
         [StringLength(50)]
         public string Freight { get; set; }
@@ -66,6 +61,8 @@ namespace AtlantSovt.AtlantSovtDb
         public long? OrderDenyId { get; set; }
 
         public bool? State { get; set; }
+
+        public long? IndexNumber { get; set; }
 
         public virtual AdditionalTerm AdditionalTerm { get; set; }
 

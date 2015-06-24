@@ -15,14 +15,15 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long ForwarderId { get; set; }
 
-        [StringLength(15)]
-        public string ContractNumber { get; set; }
+        public long? ContractNumber { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime? ContractDataBegin { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime? ContractDataEnd { get; set; }
+
+        public bool? PorZ { get; set; }
 
         public virtual Forwarder Forwarder { get; set; }
 

@@ -1718,25 +1718,39 @@ namespace AtlantSovt
         private void OrderAddClientSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitClientOrderAdd();
+            OrderAddDownloadAddressAddButton.Enabled = true;
             OrderAddUploadAddressAddButton.Enabled = true;
-            OrderAddDeliveryAddressAddButton.Enabled = true;
             OrderAddCustomsAddressAddButton.Enabled = true;
             OrderAddUncustomsAddressAddButton.Enabled = true;
         }
-
+        private void OrderAddClientSelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitClientOrderAdd();
+        }
         private void OrderAddForwarder1SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             SplitForwarder1OrderAdd();
         }
-
+        private void OrderAddForwarder1SelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitForwarder1OrderAdd();
+        }
         private void OrderAddForwarder2SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitForwarder2OrderAdd();
             
+        }        
+        private void OrderAddForwarder2SelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitForwarder2OrderAdd();
         }
 
         private void OrderAddTransporterSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitTransporterOrderAdd();
+        }
+        private void OrderAddTransporterSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitTransporterOrderAdd();
         }
@@ -1825,23 +1839,44 @@ namespace AtlantSovt
             addOrderDenyForm.Show();
         }
 
+        private void OrderAddDownloadAddressAddButton_Click(object sender, EventArgs e)
+        {
+            DownloadAddressForm();
+        }
         private void OrderAddUploadAddressAddButton_Click(object sender, EventArgs e)
         {
+            UploadAddressForm();
+        }
+
+        private void OrderAddCustomsAddressAddButton_Click(object sender, EventArgs e)
+        {
+            CustomsAddressForm();
+        }
+
+        private void OrderAddUncustomsAddressAddButton_Click(object sender, EventArgs e)
+        {
+            UncustomsAddressForm();
         }
 
         private void OrderAddAdditionalTermsSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitAdditionalTermOrderAdd();
         }
-
+        private void OrderAddAdditionalTermsSelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitAdditionalTermOrderAdd();
+        }
         private void OrderAddAdditionalTermsSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddAdditionalTermsSelectComboBox.Items.Clear();
             LoadOrderAddAdditionalTermsSelectComboBox();
             OrderAddAdditionalTermsSelectComboBox.DroppedDown = true;
         }
-
         private void OrderAddCargoSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitCargoOrderAdd();
+        }
+        private void OrderAddCargoSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitCargoOrderAdd();
         }
@@ -1858,6 +1893,10 @@ namespace AtlantSovt
         {
             SplitFineForDelayOrderAdd();
         }
+        private void OrderAddFineForDelaySelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitFineForDelayOrderAdd();
+        }
 
         private void OrderAddFineForDelaySelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
@@ -1868,6 +1907,10 @@ namespace AtlantSovt
         }
 
         private void OrderAddTirCmrSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitTirCmrAddOrderAdd();
+        }
+        private void OrderAddTirCmrSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitTirCmrAddOrderAdd();
         }
@@ -1883,6 +1926,10 @@ namespace AtlantSovt
         {
             SplitOrderDenyOrderAdd();
         }
+        private void OrderAddDenyFineSelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitOrderDenyOrderAdd();
+        }
 
         private void OrderAddDenyFineSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
@@ -1892,6 +1939,10 @@ namespace AtlantSovt
         }
 
         private void OrderAddPaymentTermsSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitPaymentOrderAdd();
+        }
+        private void OrderAddPaymentTermsSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitPaymentOrderAdd();
         }
@@ -1907,7 +1958,10 @@ namespace AtlantSovt
         {
             SplitRegularyDelayOrderAdd();
         }
-
+        private void OrderAddRegularyDelaySelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitRegularyDelayOrderAdd();
+        }
         private void OrderAddRegularyDelaySelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
 
@@ -1915,12 +1969,14 @@ namespace AtlantSovt
             LoadOrderAddRegularyDelaySelectComboBox();
             OrderAddRegularyDelaySelectComboBox.DroppedDown = true;
         }
-
         private void OrderAddCubeSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitCubeOrderAdd();
         }
-
+        private void OrderAddCubeSelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitCubeOrderAdd();
+        }
         private void OrderAddCubeSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddCubeSelectComboBox.Items.Clear();
@@ -1929,6 +1985,10 @@ namespace AtlantSovt
         }
 
         private void OrderAddTrailerSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitTrailerOrderAdd();
+        }
+        private void OrderAddTrailerSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitTrailerOrderAdd();
         }
@@ -1944,24 +2004,42 @@ namespace AtlantSovt
         {
             SplitLoadingForm1OrderAdd();
         }
-
+        private void OrderAddLoadingForm1SelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitLoadingForm1OrderAdd();
+        }
         private void OrderAddLoadingForm1SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddLoadingForm1SelectComboBox.Items.Clear();
             LoadOrderAddLoadingForm1SelectComboBox();
             OrderAddLoadingForm1SelectComboBox.DroppedDown = true;
         }
-
         private void OrderAddLoadingForm2SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitLoadingForm2OrderAdd();
         }
-
+        private void OrderAddLoadingForm2SelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitLoadingForm2OrderAdd();
+        }
         private void OrderAddLoadingForm2SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddLoadingForm2SelectComboBox.Items.Clear();
             LoadOrderAddLoadingForm2SelectComboBox();
             OrderAddLoadingForm2SelectComboBox.DroppedDown = true;
         }
+        private void OrderAddButton_Click(object sender, EventArgs e)
+        {
+            OrderAdd();
+        }
+
+        private void OrderAddWeightTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(46) && e.KeyChar != Convert.ToChar(8))
+            {
+                e.Handled = true;
+            }
+        }
+        
     }
 }

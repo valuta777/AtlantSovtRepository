@@ -30,10 +30,15 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<ForwarderOrder> ForwarderOrders { get; set; }
         public virtual DbSet<LoadingForm> LoadingForms { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<OrderCustomsAddress> OrderCustomsAddresses { get; set; }
         public virtual DbSet<OrderDeny> OrderDenies { get; set; }
+        public virtual DbSet<OrderDownloadAddress> OrderDownloadAddresses { get; set; }
         public virtual DbSet<OrderLoadingForm> OrderLoadingForms { get; set; }
+        public virtual DbSet<OrderUnCustomsAddress> OrderUnCustomsAddresses { get; set; }
+        public virtual DbSet<OrderUploadAdress> OrderUploadAdresses { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
         public virtual DbSet<RegularyDelay> RegularyDelays { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaxPayerStatu> TaxPayerStatus { get; set; }
         public virtual DbSet<TirCmr> TirCmrs { get; set; }
         public virtual DbSet<TrackingComment> TrackingComments { get; set; }
@@ -48,10 +53,8 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<UploadAddress> UploadAddresses { get; set; }
         public virtual DbSet<Vehicle> Vehicles { get; set; }
         public virtual DbSet<WorkDocument> WorkDocuments { get; set; }
-        public virtual DbSet<OrderCustomsAddress> OrderCustomsAddresses { get; set; }
-        public virtual DbSet<OrderDownloadAddress> OrderDownloadAddresses { get; set; }
-        public virtual DbSet<OrderUnCustomsAddress> OrderUnCustomsAddresses { get; set; }
-        public virtual DbSet<OrderUploadAdress> OrderUploadAdresses { get; set; }
+        public virtual DbSet<DocumentCounter> DocumentCounters { get; set; }
+        public virtual DbSet<OrderCounter> OrderCounters { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -123,6 +126,11 @@ namespace AtlantSovt.AtlantSovtDb
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Order>()
+                .Property(e => e.YorU)
+                .IsFixedLength()
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Order>()
                 .Property(e => e.Freight)
                 .IsUnicode(false);
 
@@ -175,11 +183,6 @@ namespace AtlantSovt.AtlantSovtDb
                 .HasMany(e => e.Transporters)
                 .WithOptional(e => e.TaxPayerStatu)
                 .HasForeignKey(e => e.TaxPayerStatusId);
-
-            modelBuilder.Entity<TirCmr>()
-                .HasMany(e => e.Orders)
-                .WithOptional(e => e.TirCmr)
-                .HasForeignKey(e => e.AdrTurId);
 
             modelBuilder.Entity<Transporter>()
                 .HasOptional(e => e.Filter)

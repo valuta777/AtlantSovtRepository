@@ -3,7 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,52 +37,166 @@ namespace AtlantSovt
         LoadingForm loadingForm1OrderAdd;
         LoadingForm loadingForm2OrderAdd;
 
-        DateTime orderDate;
-        DateTime orderUploadDate;
-        DateTime orderDeliveryDate;
+        DateTime? orderDate;
+        DateTime? orderUploadDate;
+        DateTime? orderDeliveryDate;
 
         SelectUploadAddressesForm selectUploadAddressesForm;
-        // SelectDownloadAddressesForm selectDownloadAddressesForm;
-        // SelectCustomsAddressesForm selectCustomsAddressesForm;
+        SelectDownloadAddressesForm selectDownloadAddressesForm;
+        SelectCustomsAddressesForm selectCustomsAddressesForm;
+        SelectUncustomsAddressesForm selectUncustomsAddressesForm;
+
         void OrderAdd() 
         {
-
-          //  bool new_YorU 
-
-           // double new_CargoWeight 
-
-          //  string new_LoadingForm1 
-
-          //  string new_LoadingForm2 
-
-          //  int new_ADRNumber 
-
-           // string new_Freight 
-
-
-            if (selectUploadAddressesForm != null)
+            using (var db = new AtlantSovtContext())
             {
-                //selectUploadAddressesForm.UploadAdressesSelect(db.Orders.Find(New_Order.Id));
-                selectUploadAddressesForm = null;
+                Order New_Order = new Order
+                {
+                    AdditionalTermsId = (additionalTermOrderAdd != null) ? (long?)additionalTermOrderAdd.Id : null,
+                    ADRNumber = (OrderAddADRSelectComboBox.Text != "") ? (int?)Convert.ToInt32(OrderAddADRSelectComboBox.Text) : null,
+                    TirCmrId = (tirCmrOrderAdd != null) ? (long?)tirCmrOrderAdd.Id : null,
+                    CargoId = (cargoOrderAdd != null) ? (long?)cargoOrderAdd.Id : null,
+                    CargoWeight = (OrderAddWeightTextBox.Text != "") ? (double?)Double.Parse(OrderAddWeightTextBox.Text, CultureInfo.InvariantCulture) : null,
+                    ClientId = (clientOrderAdd != null) ? (long?)clientOrderAdd.Id : null,
+                    CubeId = (cubeOrderAdd != null) ? (long?)cubeOrderAdd.Id : null,
+                    FineForDelaysId = (fineForDelayOrderAdd != null) ? (long?)fineForDelayOrderAdd.Id : null,
+                    Freight = (OrderAddFreightTextBox.Text != "") ? OrderAddFreightTextBox.Text : null,
+                    OrderDenyId = (orderDenyOrderAdd != null) ? (long?)orderDenyOrderAdd.Id : null,
+                    PaymentTermsId = (paymentOrderAdd != null) ? (long?)paymentOrderAdd.Id : null,
+                    RegularyDelaysId = (regularyDelayOrderAdd != null) ? (long?)regularyDelayOrderAdd.Id : null,
+                    TrailerId = (trailerOrderAdd != null) ? (long?)trailerOrderAdd.Id : null,
+                    TransporterId = (transporterOrderAdd != null) ? (long?)transporterOrderAdd.Id : null,
+                    Date = orderDate ?? null,
+                    DownloadDate = orderDeliveryDate ?? null,
+                    UploadDate = orderUploadDate ?? null,
+                    State = null,
+                    YorU = ((OrderAddYOrUComboBox.SelectedIndex != -1) || (OrderAddYOrUComboBox.Text != "")) ? ((OrderAddYOrUComboBox.SelectedIndex == 0) ? "У" : "І") : null
+                };
+                try
+                {
+                    db.Orders.Add(New_Order);
+                    db.Entry(New_Order).State = EntityState.Added;
+                    db.SaveChanges();
+                    MessageBox.Show("Заявку успішно створено");
+                    BridgeAddes(New_Order);
+                }
+                catch (DbEntityValidationException e)
+                {
+                    MessageBox.Show("Помилка при створенні заявки\n" + e);
+                }
             }
-            //if (selectDownloadAddressesForm != null)
-            //{
-            //    selectDownloadAddressesForm.DownloadAdressesSelect(db.Orders.Find(New_Order.Id));
-            //    selectDownloadAddressesForm = null;
-            //}
-            //if (selectCustomsAddressesForm != null)
-            //{
-            //    selectCustomsAddressesForm.CustomsAdressesSelect(db.Orders.Find(New_Order.Id));
-            //    selectCustomsAddressesForm = null;
-            //}
-            //if (selectUncustomsAddressesForm != null)
-            //{
-            //    selectUncustomsAddressesForm.UncustomsAdressesSelect(db.Orders.Find(New_Order.Id));
-            //    selectUncustomsAddressesForm = null;
-            //}
         }
+        void BridgeAddes(Order New_Order)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (loadingForm1OrderAdd != null)
+                {
+                    try
+                    {
+                        OrderLoadingForm New_OrderLoadingForm1 = new OrderLoadingForm
+                        {
+                            LoadingFormId = loadingForm1OrderAdd.Id,
+                            IsFirst = true
+                        };
+                        db.Orders.Find(New_Order.Id).OrderLoadingForms.Add(New_OrderLoadingForm1);
+                        db.Entry(New_OrderLoadingForm1).State = EntityState.Added;
+                        db.SaveChanges();
+                        MessageBox.Show("Успішно вибрано першу форму завантаження");
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Помилка (1 форма завантаження)\n" + e.Message);
+                    }
+                }
+                if (loadingForm2OrderAdd != null)
+                {
+                    try
+                    {
+                        OrderLoadingForm New_OrderLoadingForm2 = new OrderLoadingForm
+                        {
+                            LoadingFormId = loadingForm2OrderAdd.Id,
+                            IsFirst = false
+                        };
+                        db.Orders.Find(New_Order.Id).OrderLoadingForms.Add(New_OrderLoadingForm2);
+                        db.Entry(New_OrderLoadingForm2).State = EntityState.Added;
+                        db.SaveChanges();
+                        MessageBox.Show("Успішно вибрано другу форму завантаження");
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Помилка (2 форма завантаження)\n" + e.Message);
+                    }
+                }
 
+                //адреси              
+                if (selectDownloadAddressesForm != null)
+                {
+                    selectDownloadAddressesForm.DownloadAddressesSelect(db.Orders.Find(New_Order.Id));
+                    selectDownloadAddressesForm = null;
+                }
+                if (selectUploadAddressesForm != null)
+                {
+                    selectUploadAddressesForm.UploadAddressesSelect(db.Orders.Find(New_Order.Id));
+                    selectUploadAddressesForm = null;
+                }
+                if (selectCustomsAddressesForm != null)
+                {
+                    selectCustomsAddressesForm.CustomsAddressesSelect(db.Orders.Find(New_Order.Id));
+                    selectCustomsAddressesForm = null;
+                }
+                if (selectUncustomsAddressesForm != null)
+                {
+                    selectUncustomsAddressesForm.UncustomsAddressesSelect(db.Orders.Find(New_Order.Id));
+                    selectUncustomsAddressesForm = null;
+                }
 
+                //експедитори
+                if (forwarder1OrderAdd != null)
+                {
+                    try
+                    {
+                        ForwarderOrder New_Forwarder1Order = new ForwarderOrder
+                        {
+                            ForwarderId = forwarder1OrderAdd.Id,
+                            IsFirst = true
+                        };
+                        db.Orders.Find(New_Order.Id).ForwarderOrders.Add(New_Forwarder1Order);
+                        db.Entry(New_Forwarder1Order).State = EntityState.Added;
+                        db.SaveChanges();
+
+                        MessageBox.Show("Успішно вибрано першого експедитора");
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Помилка (1 експедитор)\n" + e.Message);
+                    }
+
+                }
+                if (forwarder2OrderAdd != null)
+                {
+                    try
+                    {
+                        ForwarderOrder New_Forwarder2Order = new ForwarderOrder
+                        {
+                            ForwarderId = forwarder2OrderAdd.Id,
+                            IsFirst = false
+                        };
+                        db.Orders.Find(New_Order.Id).ForwarderOrders.Add(New_Forwarder2Order);
+                        db.Entry(New_Forwarder2Order).State = EntityState.Added;
+                        db.SaveChanges();
+                        MessageBox.Show("Успішно вибрано другого експедитора");
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Помилка (2 експедитор)\n" + e.Message);
+                    }
+                }
+
+            }
+        }
+            
+    
         void SetOrderDate()
         {
             orderDate = OrderAddDateSelectDateTimePicker.Value;
@@ -114,14 +231,12 @@ namespace AtlantSovt
                     {
                         clientPart = (clientCount / part) + 1;
                     }
-
                     for (int i = 0; i < clientPart; i++)
                     {
                         OrderAddClientDiapasoneComboBox.Items.Add(((i * part) + 1) + " - " + ((i + 1) * part));
                     }
                     OrderAddClientDiapasoneComboBox.DroppedDown = true;
                     OrderAddClientSelectComboBox.Enabled = true;
-
                 }
                 else
                 {
@@ -158,14 +273,20 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = OrderAddClientSelectComboBox.SelectedItem.ToString();
-                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedNameAndDirector[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                clientOrderAdd = db.Clients.Find(id);
+                if (OrderAddClientSelectComboBox.SelectedIndex != -1 && OrderAddClientSelectComboBox.Text == OrderAddClientSelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddClientSelectComboBox.SelectedItem.ToString();
+                    string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedNameAndDirector[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    clientOrderAdd = db.Clients.Find(id);
+                }
+                else 
+                {
+                    clientOrderAdd = null;
+                }
             }
         }
-
         //Transporter
         void LoadOrderAddTransporterDiapasonCombobox()
         {
@@ -231,14 +352,20 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = OrderAddTransporterSelectComboBox.SelectedItem.ToString();
-                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedNameAndDirector[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                transporterOrderAdd = db.Transporters.Find(id);
+                if (OrderAddTransporterSelectComboBox.SelectedIndex != -1 && OrderAddTransporterSelectComboBox.Text == OrderAddTransporterSelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddTransporterSelectComboBox.SelectedItem.ToString();
+                    string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedNameAndDirector[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    transporterOrderAdd = db.Transporters.Find(id);
+                }
+                else 
+                {
+                    transporterOrderAdd = null;
+                }
             }
         }
-
         //Forwarders
         void LoadOrderAddForwarder1SelectComboBox()
         {
@@ -270,85 +397,104 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = OrderAddForwarder1SelectComboBox.SelectedItem.ToString();
-                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedNameAndDirector[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                forwarder1OrderAdd = db.Forwarders.Find(id);
+                if (OrderAddForwarder1SelectComboBox.SelectedIndex != -1 && OrderAddForwarder1SelectComboBox.Text == OrderAddForwarder1SelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddForwarder1SelectComboBox.SelectedItem.ToString();
+                    string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedNameAndDirector[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    forwarder1OrderAdd = db.Forwarders.Find(id);
+                }
+                else 
+                {
+                    forwarder1OrderAdd = null;
+                }
             }
         }
         void SplitForwarder2OrderAdd()
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = OrderAddForwarder2SelectComboBox.SelectedItem.ToString();
-                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedNameAndDirector[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                forwarder2OrderAdd = db.Forwarders.Find(id);
+                if (OrderAddForwarder2SelectComboBox.SelectedIndex != -1 && OrderAddForwarder2SelectComboBox.Text == OrderAddForwarder2SelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddForwarder2SelectComboBox.SelectedItem.ToString();
+                    string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedNameAndDirector[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    forwarder2OrderAdd = db.Forwarders.Find(id);
+                }
+                else 
+                {
+                    forwarder2OrderAdd = null;
+                }
             }
         }
-
-
-        //Adresses
-        //void UploadAddressForm()
-        //{
-        //    if (clientOrderAdd != null)
-        //    {
-        //        selectUploadAddressesForm = new SelectUploadAddressesForm(clientOrderAdd);
-        //        selectUploadAddressesForm.Show();
-        //    }
-        //    else 
-        //    {
-        //        MessageBox.Show("Виберіть спочатку клієнта");
-        //    }
-        //}
-        //void DownloadAddressForm()
-        //{
-        //    if (clientOrderAdd != null)
-        //    {
-        //        selectDownloadAddressesForm = new SelectDownloadAddressesForm(clientOrderAdd);
-        //        selectDownloadAddressesForm.Show();
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Виберіть спочатку клієнта");
-        //    }
-        //}
-        //void CustomsAddressForm()
-        //{
-        //    if (clientOrderAdd != null)
-        //    {
-        //        selectCustomsAddressesForm = new SelectCustomsAddressesForm(clientOrderAdd);
-        //        selectCustomsAddressesForm.Show();
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Виберіть спочатку клієнта");
-        //    }
-        //}
-        //void UncustomsAddressForm()
-        //{
-        //    if (clientOrderAdd != null)
-        //    {
-        //        selectUncustomsAddressesForm = new SelectUncustomsAddressesForm(clientOrderAdd);
-        //        selectUncustomsAddressesForm.Show();
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Виберіть спочатку клієнта");
-        //    }
-        //}
-
+       // Adresses
+        void UploadAddressForm()
+        {
+            if (clientOrderAdd != null)
+            {
+                selectUploadAddressesForm = new SelectUploadAddressesForm(clientOrderAdd);
+                selectUploadAddressesForm.Show();
+            }
+            else 
+            {
+                MessageBox.Show("Виберіть спочатку клієнта");
+            }
+        }
+        void DownloadAddressForm()
+        {
+            if (clientOrderAdd != null)
+            {
+                selectDownloadAddressesForm = new SelectDownloadAddressesForm(clientOrderAdd);
+                selectDownloadAddressesForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Виберіть спочатку клієнта");
+            }
+        }
+        void CustomsAddressForm()
+        {
+            if (clientOrderAdd != null)
+            {
+                selectCustomsAddressesForm = new SelectCustomsAddressesForm(clientOrderAdd);
+                selectCustomsAddressesForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Виберіть спочатку клієнта");
+            }
+        }
+        void UncustomsAddressForm()
+        {
+            if (clientOrderAdd != null)
+            {
+                selectUncustomsAddressesForm = new SelectUncustomsAddressesForm(clientOrderAdd);
+                selectUncustomsAddressesForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Виберіть спочатку клієнта");
+            }
+        }
+        //інші комбобокси
         void SplitAdditionalTermOrderAdd()
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = OrderAddAdditionalTermsSelectComboBox.SelectedItem.ToString();
-                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedText[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                additionalTermOrderAdd = db.AdditionalTerms.Find(id);
+                if (OrderAddAdditionalTermsSelectComboBox.SelectedIndex != -1 && OrderAddAdditionalTermsSelectComboBox.Text == OrderAddAdditionalTermsSelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddAdditionalTermsSelectComboBox.SelectedItem.ToString();
+                    string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedText[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    additionalTermOrderAdd = db.AdditionalTerms.Find(id);
+                }
+                else                
+                {
+                    additionalTermOrderAdd = null;
+                }
             }
         }
         void LoadOrderAddAdditionalTermsSelectComboBox()
@@ -364,16 +510,22 @@ namespace AtlantSovt
                 }
             }
         }
-
         void SplitCargoOrderAdd()
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = OrderAddCargoSelectComboBox.SelectedItem.ToString();
-                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedText[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                cargoOrderAdd = db.Cargoes.Find(id);
+                if (OrderAddCargoSelectComboBox.SelectedIndex != -1 && OrderAddCargoSelectComboBox.Text == OrderAddCargoSelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddCargoSelectComboBox.SelectedItem.ToString();
+                    string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedText[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    cargoOrderAdd = db.Cargoes.Find(id);
+                }
+                else 
+                {
+                    cargoOrderAdd = null;
+                }
             }
         }
         void LoadOrderAddCargoSelectComboBox()
@@ -393,11 +545,19 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = OrderAddFineForDelaySelectComboBox.SelectedItem.ToString();
-                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedText[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                fineForDelayOrderAdd = db.FineForDelays.Find(id);
+
+                if (OrderAddFineForDelaySelectComboBox.SelectedIndex != -1 && OrderAddFineForDelaySelectComboBox.Text == OrderAddFineForDelaySelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddFineForDelaySelectComboBox.SelectedItem.ToString();
+                    string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedText[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    fineForDelayOrderAdd = db.FineForDelays.Find(id);
+                }
+                else
+                {
+                    fineForDelayOrderAdd = null;
+                }
             }
         }
         void LoadOrderAddFineForDelaySelectComboBox()
@@ -413,16 +573,22 @@ namespace AtlantSovt
                 }
             }
         }
-
         void SplitTirCmrAddOrderAdd()
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = OrderAddTirCmrSelectComboBox.SelectedItem.ToString();
-                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedText[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                tirCmrOrderAdd = db.TirCmrs.Find(id);
+                if (OrderAddTirCmrSelectComboBox.SelectedIndex != -1 && OrderAddTirCmrSelectComboBox.Text == OrderAddTirCmrSelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddTirCmrSelectComboBox.SelectedItem.ToString();
+                    string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedText[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    tirCmrOrderAdd = db.TirCmrs.Find(id);
+                }
+                else
+                {
+                    tirCmrOrderAdd = null;
+                }
             }
         }
         void LoadOrderAddTirCmrSelectComboBox()
@@ -442,11 +608,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = OrderAddDenyFineSelectComboBox.SelectedItem.ToString();
-                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedText[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                orderDenyOrderAdd = db.OrderDenies.Find(id);
+                if (OrderAddDenyFineSelectComboBox.SelectedIndex != -1 && OrderAddDenyFineSelectComboBox.Text == OrderAddDenyFineSelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddDenyFineSelectComboBox.SelectedItem.ToString();
+                    string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedText[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    orderDenyOrderAdd = db.OrderDenies.Find(id);
+                }
+                else 
+                {
+                    orderDenyOrderAdd = null;
+                }
             }
         }
         void LoadOrderAddDenyFineSelectComboBox()
@@ -461,17 +634,23 @@ namespace AtlantSovt
                     OrderAddDenyFineSelectComboBox.Items.Add(item.Type + " [" + item.Id + "]");
                 }
             }
-        }
-        
+        }        
         void SplitPaymentOrderAdd()
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = OrderAddPaymentTermsSelectComboBox.SelectedItem.ToString();
-                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedText[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                paymentOrderAdd = db.Payments.Find(id);
+                if (OrderAddPaymentTermsSelectComboBox.SelectedIndex != -1 && OrderAddPaymentTermsSelectComboBox.Text == OrderAddPaymentTermsSelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddPaymentTermsSelectComboBox.SelectedItem.ToString();
+                    string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedText[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    paymentOrderAdd = db.Payments.Find(id);
+                }
+                else 
+                {
+                    paymentOrderAdd = null;
+                }
             }
         }
         void LoadOrderAddPaymentSelectComboBox()
@@ -491,11 +670,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = OrderAddRegularyDelaySelectComboBox.SelectedItem.ToString();
-                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedText[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                regularyDelayOrderAdd = db.RegularyDelays.Find(id);
+                if (OrderAddRegularyDelaySelectComboBox.SelectedIndex != -1 && OrderAddRegularyDelaySelectComboBox.Text == OrderAddRegularyDelaySelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddRegularyDelaySelectComboBox.SelectedItem.ToString();
+                    string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedText[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    regularyDelayOrderAdd = db.RegularyDelays.Find(id);
+                }
+                else 
+                {
+                    regularyDelayOrderAdd = null;
+                }
             }
         }
         void LoadOrderAddRegularyDelaySelectComboBox()
@@ -515,11 +701,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = OrderAddCubeSelectComboBox.SelectedItem.ToString();
-                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedText[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                cubeOrderAdd = db.Cubes.Find(id);
+                if (OrderAddCubeSelectComboBox.SelectedIndex != -1 && OrderAddCubeSelectComboBox.Text == OrderAddCubeSelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddCubeSelectComboBox.SelectedItem.ToString();
+                    string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedText[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    cubeOrderAdd = db.Cubes.Find(id);
+                }
+                else
+                {
+                    cubeOrderAdd = null;
+                }
             }
         }
         void LoadOrderAddCubeSelectComboBox()
@@ -539,11 +732,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = OrderAddTrailerSelectComboBox.SelectedItem.ToString();
-                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedText[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                trailerOrderAdd = db.Trailers.Find(id);
+                if (OrderAddTrailerSelectComboBox.SelectedIndex != -1 && OrderAddTrailerSelectComboBox.Text == OrderAddTrailerSelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddTrailerSelectComboBox.SelectedItem.ToString();
+                    string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedText[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    trailerOrderAdd = db.Trailers.Find(id);
+                }
+                else
+                {
+                    trailerOrderAdd = null;
+                }
             }
         }
         void LoadOrderAddTrailerSelectComboBox()
@@ -559,27 +759,40 @@ namespace AtlantSovt
                 }
             }
         }
-
         void SplitLoadingForm1OrderAdd()
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = OrderAddLoadingForm1SelectComboBox.SelectedItem.ToString();
-                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedText[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                loadingForm1OrderAdd = db.LoadingForms.Find(id);
+                if (OrderAddLoadingForm1SelectComboBox.SelectedIndex != -1 && OrderAddLoadingForm1SelectComboBox.Text == OrderAddLoadingForm1SelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddLoadingForm1SelectComboBox.SelectedItem.ToString();
+                    string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedText[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    loadingForm1OrderAdd = db.LoadingForms.Find(id);
+                }
+                else 
+                {
+                    loadingForm1OrderAdd = null;                                 
+                }
             }
         }
         void SplitLoadingForm2OrderAdd()
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = OrderAddLoadingForm2SelectComboBox.SelectedItem.ToString();
-                string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedText[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                loadingForm2OrderAdd = db.LoadingForms.Find(id);
+                if (OrderAddLoadingForm2SelectComboBox.SelectedIndex != -1 && OrderAddLoadingForm2SelectComboBox.Text == OrderAddLoadingForm2SelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddLoadingForm2SelectComboBox.SelectedItem.ToString();
+                    string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedText[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    loadingForm2OrderAdd = db.LoadingForms.Find(id);
+                }
+                else
+                {
+                    loadingForm2OrderAdd = null;
+                }
             }
         }
         void LoadOrderAddLoadingForm1SelectComboBox()
@@ -608,6 +821,5 @@ namespace AtlantSovt
                 }
             }
         }
-
     }
 }

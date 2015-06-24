@@ -51,7 +51,7 @@ namespace AtlantSovt
             this.Hide();
         }
 
-        internal void UploadAdressesSelect(Order new_order)
+        internal void UploadAddressesSelect(Order new_order)
         {
             order = new_order;
             SaveUploadAdresses();
@@ -65,18 +65,19 @@ namespace AtlantSovt
                 {
                     using (var db = new AtlantSovtContext())
                     {
-                        foreach (var ItemAddress in uploadAddressListBox.CheckedItems.ToString().Split(new char[]{'[',']'}))
+                        foreach (var ItemAddress in uploadAddressListBox.CheckedItems)
                         {
-                            UploadAddress address = db.UploadAddresses.Find(ItemAddress);
+                            string fullText = ItemAddress.ToString();
+                            string[] tempAddress = fullText.Split(new char[] { '[', ']' });
+                            long tempAddressId = Convert.ToInt64(tempAddress[1]);
+                            UploadAddress address = db.UploadAddresses.Find(tempAddressId);
 
                             var new_OrderUploadAdress = new OrderUploadAdress
                             {
-                                OrderId = order.Id,
                                 AddressId = address.Id
                             };
                             db.Orders.Find(order.Id).OrderUploadAdresses.Add(new_OrderUploadAdress);
                         }
-
                         db.SaveChanges();
                         MessageBox.Show("Успішно вибрано " + uploadAddressListBox.CheckedItems.Count + " Адрес завантаження");
                     }

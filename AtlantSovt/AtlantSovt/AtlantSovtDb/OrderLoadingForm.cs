@@ -9,7 +9,6 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("OrderLoadingForm")]
     public partial class OrderLoadingForm
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
 
         public long OrderId { get; set; }
