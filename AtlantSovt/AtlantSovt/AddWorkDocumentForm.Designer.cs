@@ -32,22 +32,22 @@
             this.addWorkDocumentTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // addWorkDocumentButton
+            // addTirCmrButton
             // 
             this.addWorkDocumentButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addWorkDocumentButton.Location = new System.Drawing.Point(101, 37);
-            this.addWorkDocumentButton.Name = "addWorkDocumentButton";
+            this.addWorkDocumentButton.Name = "addTirCmrButton";
             this.addWorkDocumentButton.Size = new System.Drawing.Size(200, 70);
             this.addWorkDocumentButton.TabIndex = 3;
             this.addWorkDocumentButton.Text = "Додати";
             this.addWorkDocumentButton.UseVisualStyleBackColor = true;
             this.addWorkDocumentButton.Click += new System.EventHandler(this.addWorkDocumentButton_Click);
             // 
-            // addWorkDocumentTextBox
+            // addTirCmrTextBox
             // 
             this.addWorkDocumentTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addWorkDocumentTextBox.Location = new System.Drawing.Point(3, 5);
-            this.addWorkDocumentTextBox.Name = "addWorkDocumentTextBox";
+            this.addWorkDocumentTextBox.Name = "addTirCmrTextBox";
             this.addWorkDocumentTextBox.Size = new System.Drawing.Size(379, 29);
             this.addWorkDocumentTextBox.TabIndex = 2;
             // 

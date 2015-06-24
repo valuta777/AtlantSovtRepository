@@ -11,7 +11,7 @@ namespace AtlantSovt.AtlantSovtDb
     {
         public DownloadAddress()
         {
-            Orders = new HashSet<Order>();
+            OrderDownloadAddresses = new HashSet<OrderDownloadAddress>();
         }
 
         public long Id { get; set; }
@@ -44,8 +44,10 @@ namespace AtlantSovt.AtlantSovtDb
         [StringLength(100)]
         public string ShortRoute { get; set; }
 
+        public virtual Client Client { get; set; }
+
         public virtual Country Country { get; set; }
 
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<OrderDownloadAddress> OrderDownloadAddresses { get; set; }
     }
 }
