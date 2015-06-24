@@ -416,7 +416,7 @@
             this.labelshow68 = new System.Windows.Forms.Label();
             this.labelshow69 = new System.Windows.Forms.Label();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            
             this.addTaxPayerStatusClientButton = new System.Windows.Forms.Button();
             this.addWorkDocumentClientButton = new System.Windows.Forms.Button();
             this.clientUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
