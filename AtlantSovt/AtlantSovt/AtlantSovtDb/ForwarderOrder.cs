@@ -9,7 +9,6 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("ForwarderOrder")]
     public partial class ForwarderOrder
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
 
         public long? ForwarderId { get; set; }
