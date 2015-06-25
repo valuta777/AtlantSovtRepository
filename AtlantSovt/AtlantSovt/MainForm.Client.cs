@@ -25,6 +25,10 @@ namespace AtlantSovt
 
         void ShowClient()
         {
+            clientContactsDataGridView.Visible = false;
+            clientBankDetailsDataGridView.Visible = false;
+            clientCommentRichTextBox.Text = "";
+
             using (var db = new AtlantSovtContext())
             {
                 var query =
@@ -38,7 +42,7 @@ namespace AtlantSovt
                     Director = c.Director,
                     PhysicalAddress = c.PhysicalAddress,
                     GeografphyAddress = c.GeografphyAddress,
-                    ContractType = c.ContractType,
+                    ContractType = (c.ContractType == true) ? "Оригінал" : "Факс",
                     TaxPayerStatusId = c.TaxPayerStatu.Status,
                     WorkDocumentId = c.WorkDocument.Status,
                 };
@@ -49,7 +53,7 @@ namespace AtlantSovt
                 clientDataGridView.Columns[2].HeaderText = "П.І.Б. Директора";
                 clientDataGridView.Columns[3].HeaderText = "Фізична адреса";
                 clientDataGridView.Columns[4].HeaderText = "Юридична адреса";
-                clientDataGridView.Columns[5].HeaderText = "Оригінал договору";
+                clientDataGridView.Columns[5].HeaderText = "Стан договору";
                 clientDataGridView.Columns[6].HeaderText = "Статус платника податку";
                 clientDataGridView.Columns[7].HeaderText = "На основі";
 
@@ -129,6 +133,10 @@ namespace AtlantSovt
         void ShowClientSearch()
         {
 
+            clientContactsDataGridView.Visible = false;
+            clientBankDetailsDataGridView.Visible = false;
+            clientCommentRichTextBox.Text = "";
+
             var text = clientShowSearchTextBox.Text;
             using (var db = new AtlantSovtContext())
             {
@@ -179,7 +187,15 @@ namespace AtlantSovt
                     var new_Director = directorClientTextBox.Text;
                     var new_PhysicalAddress = physicalAddressClientTextBox.Text;
                     var new_GeografphyAddress = geographyAddressClientTextBox.Text;
-                    var new_ContractType = originalClientCheckBox.Checked;
+                    bool new_ContractType;
+                    if (faxClientCheckBox.Checked)
+                    {
+                         new_ContractType = false;
+                    }
+                    else
+                    {
+                         new_ContractType = true;
+                    }
                     var new_Comment = commentClientTextBox.Text;
 
                     long new_WorkDocumentId = 0;
@@ -360,6 +376,7 @@ namespace AtlantSovt
 
         //Update
         #region Update
+
         void ClearAllBoxesClientUpdate()
         {
             workDocumentClientUpdateComboBox.Items.Clear();
@@ -382,11 +399,12 @@ namespace AtlantSovt
                 client = db.Clients.Find(id);
                 if (client != null)
                 {
-                    nameClientUpdateTextBox.Text = client.Name.ToString();
-                    directorClientUpdateTextBox.Text = client.Director.ToString();
-                    physicalAddressClientUpdateTextBox.Text = client.PhysicalAddress.ToString();
-                    geographyAddressClientUpdateTextBox.Text = client.GeografphyAddress.ToString();
-                    commentClientUpdateTextBox.Text = client.Comment.ToString();
+                    nameClientUpdateTextBox.Text = Convert.ToString(client.Name);
+                    directorClientUpdateTextBox.Text = Convert.ToString(client.Director);
+                    physicalAddressClientUpdateTextBox.Text = Convert.ToString(client.PhysicalAddress);
+                    geographyAddressClientUpdateTextBox.Text = Convert.ToString(client.GeografphyAddress);
+                    commentClientUpdateTextBox.Text = Convert.ToString(client.Comment);
+
                     if (client.WorkDocument != null)
                     {
                         workDocumentClientUpdateComboBox.SelectedIndex = Convert.ToInt32(client.WorkDocumentId - 1);
@@ -414,12 +432,60 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                var query = from c in db.Clients
-                            orderby c.Id
-                            select c;
-                foreach (var item in query)
+                if (selectClientDiapasoneUpdateComboBox.Text == "")
                 {
-                    selectClientUpdateComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                    MessageBox.Show("Ви не вибрали діапазон");
+                }
+                else
+                {
+                    string text = selectClientDiapasoneUpdateComboBox.SelectedItem.ToString();
+                    string[] diapasone = text.Split(new char[] { ' ' });
+                    int diapasoneFrom = Convert.ToInt32(diapasone[0]);
+                    int diapasoneTo = Convert.ToInt32(diapasone[2]);
+                    var query = from c in db.Clients
+                                orderby c.Id
+                                where c.Id >= diapasoneFrom && c.Id <= diapasoneTo
+                                select c;
+                    foreach (var item in query)
+                    {
+                        selectClientUpdateComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                    }
+                }
+            }
+        }
+
+        void LoadDiasoneClientUpdateInfoCombobox()
+        {
+            selectClientDiapasoneUpdateComboBox.Items.Clear();
+            selectClientUpdateComboBox.Items.Clear();
+            selectClientUpdateComboBox.Text = "";
+            using (var db = new AtlantSovtContext())
+            {
+                int part = 1000;
+                double clientPart = 0;
+                if ((from c in db.Clients select c.Id).Count() != 0)
+                {
+                    long clientCount = (from c in db.Clients select c.Id).Max();
+                    if (clientCount % part == 0)
+                    {
+                        clientPart = clientCount / part;
+                    }
+                    else
+                    {
+                        clientPart = (clientCount / part) + 1;
+                    }
+
+                    for (int i = 0; i < clientPart; i++)
+                    {
+                        selectClientDiapasoneUpdateComboBox.Items.Add(((i * part) + 1) + " - " + ((i + 1) * part));
+                    }
+                    selectClientDiapasoneUpdateComboBox.DroppedDown = true;
+                    selectClientUpdateComboBox.Enabled = true;
+
+                }
+                else 
+                {
+                    MessageBox.Show("Немає жодних записів");
                 }
             }
         }
@@ -626,14 +692,61 @@ namespace AtlantSovt
 
         void LoadClientDeleteInfoComboBox()
         {
+            if (deleteClientSelectDiapasoneComboBox.Text == "")
+            {
+                MessageBox.Show("Ви не вибрали діапазон");
+            }
+            else
+            {
+                string text = deleteClientSelectDiapasoneComboBox.SelectedItem.ToString();
+                string[] diapasone = text.Split(new char[] { ' ' });
+                int diapasoneFrom = Convert.ToInt32(diapasone[0]);
+                int diapasoneTo = Convert.ToInt32(diapasone[2]);
+                using (var db = new AtlantSovtContext())
+                {
+                    var query = from c in db.Clients
+                                orderby c.Id
+                                where c.Id >= diapasoneFrom && c.Id <= diapasoneTo
+                                select c;
+                    foreach (var item in query)
+                    {
+                        deleteClientComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                    }
+                }
+            }
+        }
+
+        void LoadDiasoneClientDeleteInfoCombobox()
+        {
+            deleteClientSelectDiapasoneComboBox.Items.Clear();
+            deleteClientComboBox.Items.Clear();
+            deleteClientComboBox.Text = "";
             using (var db = new AtlantSovtContext())
             {
-                var query = from c in db.Clients
-                            orderby c.Id
-                            select c;
-                foreach (var item in query)
+                int part = 1000;
+                double clientPart = 0;
+                if ((from c in db.Clients select c.Id).Count() != 0)
                 {
-                    deleteClientComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                    long clientCount = (from c in db.Clients select c.Id).Max();
+                    if (clientCount % part == 0)
+                    {
+                        clientPart = clientCount / part;
+                    }
+                    else
+                    {
+                        clientPart = (clientCount / part) + 1;
+                    }
+
+                    for (int i = 0; i < clientPart; i++)
+                    {
+                        deleteClientSelectDiapasoneComboBox.Items.Add(((i * part) + 1) + " - " + ((i + 1) * part));
+                    }
+                    deleteClientSelectDiapasoneComboBox.DroppedDown = true;
+                    deleteClientComboBox.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Немає жодних записів");
                 }
             }
         }

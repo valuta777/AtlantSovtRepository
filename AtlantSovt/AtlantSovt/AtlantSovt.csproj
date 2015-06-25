@@ -53,6 +53,73 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddOrderDenyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrderDenyForm.Designer.cs">
+      <DependentUpon>AddOrderDenyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAdditionalTermsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAdditionalTermsForm.Designer.cs">
+      <DependentUpon>AddAdditionalTermsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPaymentTermsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPaymentTermsForm.Designer.cs">
+      <DependentUpon>AddPaymentTermsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTrackingCommentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTrackingCommentForm.designer.cs">
+      <DependentUpon>AddTrackingCommentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTrailerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTrailerForm.Designer.cs">
+      <DependentUpon>AddTrailerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCubeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCubeForm.Designer.cs">
+      <DependentUpon>AddCubeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFineForDelayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFineForDelayForm.Designer.cs">
+      <DependentUpon>AddFineForDelayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddRegularyDelayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRegularyDelayForm.Designer.cs">
+      <DependentUpon>AddRegularyDelayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTirCmrForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTirCmrForm.Designer.cs">
+      <DependentUpon>AddTirCmrForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCargoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCargoForm.Designer.cs">
+      <DependentUpon>AddCargoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAddressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAddressForm.Designer.cs">
+      <DependentUpon>AddAddressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AtlantSovtDb\AdditionalTerm.cs" />
     <Compile Include="AtlantSovtDb\AtlantSovtContext.cs" />
     <Compile Include="AtlantSovtDb\Cargo.cs" />
     <Compile Include="AtlantSovtDb\Client.cs" />
@@ -60,18 +127,31 @@
     <Compile Include="AtlantSovtDb\ClientContact.cs" />
     <Compile Include="AtlantSovtDb\ClientForwarderContract.cs" />
     <Compile Include="AtlantSovtDb\Country.cs" />
+    <Compile Include="AtlantSovtDb\Cube.cs" />
     <Compile Include="AtlantSovtDb\CustomsAddress.cs" />
+    <Compile Include="AtlantSovtDb\DocumentCounter.cs" />
     <Compile Include="AtlantSovtDb\DownloadAddress.cs" />
     <Compile Include="AtlantSovtDb\Filter.cs" />
     <Compile Include="AtlantSovtDb\FineForDelay.cs" />
     <Compile Include="AtlantSovtDb\Forwarder.cs" />
     <Compile Include="AtlantSovtDb\ForwarderBankDetail.cs" />
     <Compile Include="AtlantSovtDb\ForwarderContact.cs" />
+    <Compile Include="AtlantSovtDb\ForwarderOrder.cs" />
+    <Compile Include="AtlantSovtDb\LoadingForm.cs" />
     <Compile Include="AtlantSovtDb\Order.cs" />
+    <Compile Include="AtlantSovtDb\OrderCounter.cs" />
+    <Compile Include="AtlantSovtDb\OrderCustomsAddress.cs" />
     <Compile Include="AtlantSovtDb\OrderDeny.cs" />
+    <Compile Include="AtlantSovtDb\OrderDownloadAddress.cs" />
+    <Compile Include="AtlantSovtDb\OrderLoadingForm.cs" />
+    <Compile Include="AtlantSovtDb\OrderUnCustomsAddress.cs" />
+    <Compile Include="AtlantSovtDb\OrderUploadAdress.cs" />
     <Compile Include="AtlantSovtDb\Payment.cs" />
     <Compile Include="AtlantSovtDb\RegularyDelay.cs" />
     <Compile Include="AtlantSovtDb\TaxPayerStatu.cs" />
+    <Compile Include="AtlantSovtDb\TirCmr.cs" />
+    <Compile Include="AtlantSovtDb\TrackingComment.cs" />
+    <Compile Include="AtlantSovtDb\Trailer.cs" />
     <Compile Include="AtlantSovtDb\Transporter.cs" />
     <Compile Include="AtlantSovtDb\TransporterBankDetail.cs" />
     <Compile Include="AtlantSovtDb\TransporterContact.cs" />
@@ -87,6 +167,43 @@
     </Compile>
     <Compile Include="ClientBankDetailsAddForm.Designer.cs">
       <DependentUpon>ClientBankDetailsAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.Documentation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuStripRenderer.cs" />
+    <Compile Include="SelectCustomsAddressesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectCustomsAddressesForm.Designer.cs">
+      <DependentUpon>SelectCustomsAddressesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDownloadAddressesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDownloadAddressesForm.Designer.cs">
+      <DependentUpon>SelectDownloadAddressesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUncustomsAddressesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUncustomsAddressesForm.Designer.cs">
+      <DependentUpon>SelectUncustomsAddressesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUploadAddressesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUploadAddressesForm.Designer.cs">
+      <DependentUpon>SelectUploadAddressesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowTrackingCommentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowTrackingCommentForm.designer.cs">
+      <DependentUpon>ShowTrackingCommentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="TransporterBankDetailsUpdateForm.cs">
       <SubType>Form</SubType>
@@ -231,8 +348,56 @@
     <Compile Include="TransporterShowFiltrationForm.Designer.cs">
       <DependentUpon>TransporterShowFiltrationForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddOrderDenyForm.resx">
+      <DependentUpon>AddOrderDenyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAdditionalTermsForm.resx">
+      <DependentUpon>AddAdditionalTermsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPaymentTermsForm.resx">
+      <DependentUpon>AddPaymentTermsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTrackingCommentForm.resx">
+      <DependentUpon>AddTrackingCommentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTrailerForm.resx">
+      <DependentUpon>AddTrailerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCubeForm.resx">
+      <DependentUpon>AddCubeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFineForDelayForm.resx">
+      <DependentUpon>AddFineForDelayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRegularyDelayForm.resx">
+      <DependentUpon>AddRegularyDelayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTirCmrForm.resx">
+      <DependentUpon>AddTirCmrForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCargoForm.resx">
+      <DependentUpon>AddCargoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAddressForm.resx">
+      <DependentUpon>AddAddressForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientBankDetailsAddForm.resx">
       <DependentUpon>ClientBankDetailsAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectCustomsAddressesForm.resx">
+      <DependentUpon>SelectCustomsAddressesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectDownloadAddressesForm.resx">
+      <DependentUpon>SelectDownloadAddressesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectUncustomsAddressesForm.resx">
+      <DependentUpon>SelectUncustomsAddressesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectUploadAddressesForm.resx">
+      <DependentUpon>SelectUploadAddressesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowTrackingCommentForm.resx">
+      <DependentUpon>ShowTrackingCommentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransporterBankDetailsUpdateForm.resx">
       <DependentUpon>TransporterBankDetailsUpdateForm.cs</DependentUpon>
@@ -272,6 +437,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -310,6 +476,9 @@
     <EmbeddedResource Include="TransporterShowFiltrationForm.resx">
       <DependentUpon>TransporterShowFiltrationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="MainForm.Tracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -320,6 +489,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\ukrDocumentationTransporterForwarder.docx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -334,6 +504,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\demologo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

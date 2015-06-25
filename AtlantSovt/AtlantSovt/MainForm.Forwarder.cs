@@ -26,6 +26,10 @@ namespace AtlantSovt
         //show
         void ShowForwarder()
         {
+            forwarderContactsDataGridView.Visible = false;
+            forwarderBankDetailsDataGridView.Visible = false;
+            forwarderCommentRichTextBox.Text = "";
+
             using (var db = new AtlantSovtContext())
             {
                 var query =
@@ -332,11 +336,11 @@ namespace AtlantSovt
                 forwarder = db.Forwarders.Find(id);
                 if (forwarder != null)
                 {
-                    nameForwarderUpdateTextBox.Text = forwarder.Name.ToString();
-                    directorForwarderUpdateTextBox.Text = forwarder.Director.ToString();
-                    physicalAddressForwarderUpdateTextBox.Text = forwarder.PhysicalAddress.ToString();
-                    geographyAddressForwarderUpdateTextBox.Text = forwarder.GeographyAddress.ToString();
-                    commentForwarderUpdateTextBox.Text = forwarder.Comment.ToString();
+                    nameForwarderUpdateTextBox.Text = Convert.ToString(forwarder.Name);
+                    directorForwarderUpdateTextBox.Text = Convert.ToString(forwarder.Director);
+                    physicalAddressForwarderUpdateTextBox.Text = Convert.ToString(forwarder.PhysicalAddress);
+                    geographyAddressForwarderUpdateTextBox.Text = Convert.ToString(forwarder.GeographyAddress);
+                    commentForwarderUpdateTextBox.Text = Convert.ToString(forwarder.Comment);
                     if (forwarder.WorkDocument != null)
                     {
                         workDocumentForwarderUpdateComboBox.SelectedIndex = Convert.ToInt32(forwarder.WorkDocumentId - 1);

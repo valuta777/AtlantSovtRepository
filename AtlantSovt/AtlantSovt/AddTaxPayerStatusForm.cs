@@ -46,6 +46,7 @@ namespace AtlantSovt
         private void addTaxPayerStatusButton_Click(object sender, EventArgs e)
         {
             AddTaxPayerStatus();
+            this.Dispose();
         }
     }
 }
