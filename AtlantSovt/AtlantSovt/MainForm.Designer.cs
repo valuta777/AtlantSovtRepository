@@ -416,29 +416,6 @@
             this.labelshow68 = new System.Windows.Forms.Label();
             this.labelshow69 = new System.Windows.Forms.Label();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
-            
-            this.addTaxPayerStatusClientButton = new System.Windows.Forms.Button();
-            this.addWorkDocumentClientButton = new System.Windows.Forms.Button();
-            this.clientUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
-            this.clientUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
-            this.addTaxPayerStatusForwarderButton = new System.Windows.Forms.Button();
-            this.addWorkDocumentForwarderButton = new System.Windows.Forms.Button();
-            this.forwarderUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
-            this.forwarderUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
-            this.transporterAddTaxPayerStatusAddButton = new System.Windows.Forms.Button();
-            this.transporterAddWorkDocumentAddButton = new System.Windows.Forms.Button();
-            this.transporterUpdateTaxPayerStatusAddButton = new System.Windows.Forms.Button();
-            this.transporterUpdateWorkDocumentAddButton = new System.Windows.Forms.Button();
-            this.OrderAddAdditionalTermsAddButton = new System.Windows.Forms.Button();
-            this.OrderAddPaymentTermsAddButton = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.OrderAddOrderDenyAddButton = new System.Windows.Forms.Button();
-            this.OrderAddCargoAddButton = new System.Windows.Forms.Button();
-            this.OrderAddFineForDelayAddButton = new System.Windows.Forms.Button();
-            this.OrderAddRegularyDelayAddButton = new System.Windows.Forms.Button();
-            this.OrderAddTrailerAddButton = new System.Windows.Forms.Button();
-            this.OrderAddCubeAddButton = new System.Windows.Forms.Button();
-            this.OrderAddTirCmrAddButton = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.dataControl.SuspendLayout();
             this.helloPage.SuspendLayout();
@@ -4271,7 +4248,7 @@
             // 
             this.OrderAddOrderDenyAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddOrderDenyAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddOrderDenyAddButton.Image")));
-            this.OrderAddOrderDenyAddButton.Location = new System.Drawing.Point(349, 23);
+            this.OrderAddOrderDenyAddButton.Location = new System.Drawing.Point(351, 23);
             this.OrderAddOrderDenyAddButton.Name = "OrderAddOrderDenyAddButton";
             this.OrderAddOrderDenyAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddOrderDenyAddButton.TabIndex = 140;
@@ -4285,7 +4262,7 @@
             this.OrderAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddButton.Location = new System.Drawing.Point(8, 59);
             this.OrderAddButton.Name = "OrderAddButton";
-            this.OrderAddButton.Size = new System.Drawing.Size(423, 45);
+            this.OrderAddButton.Size = new System.Drawing.Size(425, 45);
             this.OrderAddButton.TabIndex = 139;
             this.OrderAddButton.Text = "Сформувати";
             this.OrderAddButton.UseVisualStyleBackColor = true;
@@ -4315,7 +4292,7 @@
             "зад"});
             this.OrderAddDenyFineSelectComboBox.Location = new System.Drawing.Point(7, 24);
             this.OrderAddDenyFineSelectComboBox.Name = "OrderAddDenyFineSelectComboBox";
-            this.OrderAddDenyFineSelectComboBox.Size = new System.Drawing.Size(379, 29);
+            this.OrderAddDenyFineSelectComboBox.Size = new System.Drawing.Size(381, 29);
             this.OrderAddDenyFineSelectComboBox.Sorted = true;
             this.OrderAddDenyFineSelectComboBox.TabIndex = 136;
             this.OrderAddDenyFineSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddDenyFineSelectComboBox_SelectedIndexChanged);
@@ -4502,7 +4479,7 @@
             "зад"});
             this.OrderAddLoadingForm2SelectComboBox.Location = new System.Drawing.Point(6, 83);
             this.OrderAddLoadingForm2SelectComboBox.Name = "OrderAddLoadingForm2SelectComboBox";
-            this.OrderAddLoadingForm2SelectComboBox.Size = new System.Drawing.Size(144, 29);
+            this.OrderAddLoadingForm2SelectComboBox.Size = new System.Drawing.Size(147, 29);
             this.OrderAddLoadingForm2SelectComboBox.Sorted = true;
             this.OrderAddLoadingForm2SelectComboBox.TabIndex = 130;
             this.OrderAddLoadingForm2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddLoadingForm2SelectComboBox_SelectedIndexChanged);
@@ -4533,7 +4510,7 @@
             "зад"});
             this.OrderAddLoadingForm1SelectComboBox.Location = new System.Drawing.Point(8, 21);
             this.OrderAddLoadingForm1SelectComboBox.Name = "OrderAddLoadingForm1SelectComboBox";
-            this.OrderAddLoadingForm1SelectComboBox.Size = new System.Drawing.Size(142, 29);
+            this.OrderAddLoadingForm1SelectComboBox.Size = new System.Drawing.Size(145, 29);
             this.OrderAddLoadingForm1SelectComboBox.Sorted = true;
             this.OrderAddLoadingForm1SelectComboBox.TabIndex = 128;
             this.OrderAddLoadingForm1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddLoadingForm1SelectComboBox_SelectedIndexChanged);
@@ -4674,7 +4651,7 @@
             this.OrderAddTrailerSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddTrailerSelectComboBox.Location = new System.Drawing.Point(9, 83);
             this.OrderAddTrailerSelectComboBox.Name = "OrderAddTrailerSelectComboBox";
-            this.OrderAddTrailerSelectComboBox.Size = new System.Drawing.Size(209, 29);
+            this.OrderAddTrailerSelectComboBox.Size = new System.Drawing.Size(212, 29);
             this.OrderAddTrailerSelectComboBox.Sorted = true;
             this.OrderAddTrailerSelectComboBox.TabIndex = 135;
             this.OrderAddTrailerSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddTrailerSelectComboBox_SelectedIndexChanged);
@@ -4697,7 +4674,7 @@
             // 
             this.OrderAddTrailerAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddTrailerAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddTrailerAddButton.Image")));
-            this.OrderAddTrailerAddButton.Location = new System.Drawing.Point(159, 80);
+            this.OrderAddTrailerAddButton.Location = new System.Drawing.Point(162, 80);
             this.OrderAddTrailerAddButton.Name = "OrderAddTrailerAddButton";
             this.OrderAddTrailerAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddTrailerAddButton.TabIndex = 134;
@@ -4714,7 +4691,7 @@
             this.OrderAddCubeSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddCubeSelectComboBox.Location = new System.Drawing.Point(9, 21);
             this.OrderAddCubeSelectComboBox.Name = "OrderAddCubeSelectComboBox";
-            this.OrderAddCubeSelectComboBox.Size = new System.Drawing.Size(209, 29);
+            this.OrderAddCubeSelectComboBox.Size = new System.Drawing.Size(212, 29);
             this.OrderAddCubeSelectComboBox.Sorted = true;
             this.OrderAddCubeSelectComboBox.TabIndex = 132;
             this.OrderAddCubeSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddCubeSelectComboBox_SelectedIndexChanged);
@@ -4737,7 +4714,7 @@
             // 
             this.OrderAddCubeAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddCubeAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddCubeAddButton.Image")));
-            this.OrderAddCubeAddButton.Location = new System.Drawing.Point(159, 20);
+            this.OrderAddCubeAddButton.Location = new System.Drawing.Point(162, 20);
             this.OrderAddCubeAddButton.Name = "OrderAddCubeAddButton";
             this.OrderAddCubeAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddCubeAddButton.TabIndex = 131;
@@ -4856,7 +4833,7 @@
             this.OrderAddUploadAddressAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddUploadAddressAddButton.Location = new System.Drawing.Point(6, 8);
             this.OrderAddUploadAddressAddButton.Name = "OrderAddUploadAddressAddButton";
-            this.OrderAddUploadAddressAddButton.Size = new System.Drawing.Size(177, 30);
+            this.OrderAddUploadAddressAddButton.Size = new System.Drawing.Size(180, 30);
             this.OrderAddUploadAddressAddButton.TabIndex = 123;
             this.OrderAddUploadAddressAddButton.Text = "Розвантаження";
             this.OrderAddUploadAddressAddButton.UseVisualStyleBackColor = true;
@@ -4871,7 +4848,7 @@
             this.OrderAddDeliveryDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.OrderAddDeliveryDateTimePicker.Location = new System.Drawing.Point(6, 65);
             this.OrderAddDeliveryDateTimePicker.Name = "OrderAddDeliveryDateTimePicker";
-            this.OrderAddDeliveryDateTimePicker.Size = new System.Drawing.Size(177, 29);
+            this.OrderAddDeliveryDateTimePicker.Size = new System.Drawing.Size(180, 29);
             this.OrderAddDeliveryDateTimePicker.TabIndex = 125;
             this.OrderAddDeliveryDateTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
             this.OrderAddDeliveryDateTimePicker.CloseUp += new System.EventHandler(this.OrderAddDeliveryDateTimePicker_CloseUp);
@@ -4960,7 +4937,7 @@
             this.OrderAddUncustomsAddressAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddUncustomsAddressAddButton.Location = new System.Drawing.Point(9, 8);
             this.OrderAddUncustomsAddressAddButton.Name = "OrderAddUncustomsAddressAddButton";
-            this.OrderAddUncustomsAddressAddButton.Size = new System.Drawing.Size(174, 30);
+            this.OrderAddUncustomsAddressAddButton.Size = new System.Drawing.Size(177, 30);
             this.OrderAddUncustomsAddressAddButton.TabIndex = 129;
             this.OrderAddUncustomsAddressAddButton.Text = "Розмитнення";
             this.OrderAddUncustomsAddressAddButton.UseVisualStyleBackColor = true;
