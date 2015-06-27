@@ -116,6 +116,7 @@ namespace AtlantSovt
                         AccountNumber = b.AccountNumber,
                         EDRPOU = b.EDRPOU,
                         IPN = b.IPN,
+                        CertificateSerial = b.CertificateSerial,
                         CertificateNumber = b.CertificateNamber,
                         SWIFT = b.SWIFT,
                         IBAN = b.IBAN
@@ -127,9 +128,10 @@ namespace AtlantSovt
                     transporterShowBankDetailsDataGridView.Columns[2].HeaderText = "Номер рахунку";
                     transporterShowBankDetailsDataGridView.Columns[3].HeaderText = "ЕДРПОУ";
                     transporterShowBankDetailsDataGridView.Columns[4].HeaderText = "IPN";
-                    transporterShowBankDetailsDataGridView.Columns[5].HeaderText = "Номер свідоцтва";
-                    transporterShowBankDetailsDataGridView.Columns[6].HeaderText = "SWIFT";
-                    transporterShowBankDetailsDataGridView.Columns[7].HeaderText = "IBAN";
+                    transporterShowBankDetailsDataGridView.Columns[5].HeaderText = "Серія свідоцтва";
+                    transporterShowBankDetailsDataGridView.Columns[6].HeaderText = "Номер свідоцтва";
+                    transporterShowBankDetailsDataGridView.Columns[7].HeaderText = "SWIFT";
+                    transporterShowBankDetailsDataGridView.Columns[8].HeaderText = "IBAN";
 
                    var query3 =
                    from tc in db.TransporterCountries

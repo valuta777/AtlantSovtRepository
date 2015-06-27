@@ -20,6 +20,7 @@ namespace AtlantSovt
         string new_EDRPOU;
         string new_IPN;
         string new_CertificateNumber;
+        string new_CertificateSerial;
         string new_SWIFT;
         string new_IBAN;
         long ID;
@@ -33,7 +34,7 @@ namespace AtlantSovt
         private void addTransporterBankDetailsButton_Click(object sender, EventArgs e)
         {
             if (transporterBankNameTextBox.Text != "" && transporterMFOTextBox.Text != "" && transporterAccountNumberTextBox.Text != "" && transporterEDRPOUTextBox.Text != ""
-                && transporterIPNTextBox.Text != "" && transporterSWIFTTextBox.Text != "" && transporterCertificateNumberTextBox.Text != "" && transporterIBANTextBox.Text != "")
+                && transporterIPNTextBox.Text != "")
             {
                 new_BankName = transporterBankNameTextBox.Text;
                 new_MFO = transporterMFOTextBox.Text;
@@ -41,6 +42,7 @@ namespace AtlantSovt
                 new_EDRPOU = transporterEDRPOUTextBox.Text;
                 new_IPN = transporterIPNTextBox.Text;
                 new_CertificateNumber = transporterCertificateNumberTextBox.Text;
+                new_CertificateSerial = transporterCertificateSerialTextBox.Text;
                 new_SWIFT = transporterSWIFTTextBox.Text;
                 new_IBAN = transporterIBANTextBox.Text;
                 this.Hide();
@@ -67,6 +69,7 @@ namespace AtlantSovt
                     AccountNumber = new_AccountNumber,
                     EDRPOU = new_EDRPOU,
                     IPN = new_IPN,
+                    CertificateSerial = new_CertificateSerial,
                     CertificateNamber = new_CertificateNumber,
                     SWIFT = new_SWIFT,
                     IBAN = new_IBAN                    

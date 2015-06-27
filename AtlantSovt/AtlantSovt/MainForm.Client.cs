@@ -68,7 +68,6 @@ namespace AtlantSovt
             {
                 try
                 {
-
                     var ClikedId = Convert.ToInt32(clientDataGridView.CurrentRow.Cells[0].Value);
                     var query =
                     from con in db.ClientContacts
@@ -93,7 +92,6 @@ namespace AtlantSovt
 
                     clientCommentRichTextBox.Text = query1.FirstOrDefault();
 
-
                     var query2 =
                     from b in db.ClientBankDetails
                     where b.Id == ClikedId
@@ -104,6 +102,7 @@ namespace AtlantSovt
                         AccountNumber = b.AccountNumber,
                         EDRPOU = b.EDRPOU,
                         IPN = b.IPN,
+                        CertificateSerial = b.CertificateSerial,
                         CertificateNumber = b.CertificateNamber,
                         SWIFT = b.SWIFT,
                         IBAN = b.IBAN
@@ -115,9 +114,10 @@ namespace AtlantSovt
                     clientBankDetailsDataGridView.Columns[2].HeaderText = "Номер рахунку";
                     clientBankDetailsDataGridView.Columns[3].HeaderText = "ЕДРПОУ";
                     clientBankDetailsDataGridView.Columns[4].HeaderText = "IPN";
-                    clientBankDetailsDataGridView.Columns[5].HeaderText = "Номер свідоцтва";
-                    clientBankDetailsDataGridView.Columns[6].HeaderText = "SWIFT";
-                    clientBankDetailsDataGridView.Columns[7].HeaderText = "IBAN";
+                    clientBankDetailsDataGridView.Columns[5].HeaderText = "Серія свідоцтва";
+                    clientBankDetailsDataGridView.Columns[6].HeaderText = "Номер свідоцтва";
+                    clientBankDetailsDataGridView.Columns[7].HeaderText = "SWIFT";
+                    clientBankDetailsDataGridView.Columns[8].HeaderText = "IBAN";
                 }
                 catch (Exception ex)
                 {

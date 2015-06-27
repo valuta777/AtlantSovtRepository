@@ -17,7 +17,6 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<ClientBankDetail> ClientBankDetails { get; set; }
         public virtual DbSet<ClientContact> ClientContacts { get; set; }
-        public virtual DbSet<ClientForwarderContract> ClientForwarderContracts { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
         public virtual DbSet<Cube> Cubes { get; set; }
         public virtual DbSet<CustomsAddress> CustomsAddresses { get; set; }
@@ -103,11 +102,6 @@ namespace AtlantSovt.AtlantSovtDb
                 .HasMany(e => e.Orders)
                 .WithOptional(e => e.FineForDelay)
                 .HasForeignKey(e => e.FineForDelaysId);
-
-            modelBuilder.Entity<Forwarder>()
-                .HasMany(e => e.ClientForwarderContracts)
-                .WithRequired(e => e.Forwarder)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Forwarder>()
                 .HasOptional(e => e.ForwarderBankDetail)
