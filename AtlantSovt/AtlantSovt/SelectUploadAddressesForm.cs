@@ -42,7 +42,7 @@ namespace AtlantSovt
 
         private void addUploadAddressButton_Click(object sender, EventArgs e)
         {
-            AddAddressForm addAddressForm = new AddAddressForm(client,"UploadAddress");
+            AddAddressForm addAddressForm = new AddAddressForm(client,2);
             addAddressForm.Show();
         }
 

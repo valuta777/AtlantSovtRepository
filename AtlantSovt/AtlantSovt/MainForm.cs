@@ -2068,5 +2068,11 @@ namespace AtlantSovt
             }
         }
 
+        private void OrderAddLoadingForm1AddButton_Click(object sender, EventArgs e)
+        {
+            AddLoadingFormForm addLoadingFormForm = new AddLoadingFormForm();
+            addLoadingFormForm.Show();
+        }
+
     }
 }

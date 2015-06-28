@@ -36,7 +36,7 @@
             // 
             this.addCubeButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addCubeButton.Location = new System.Drawing.Point(101, 37);
-            this.addCubeButton.Name = "addCubeButton";
+            this.addCubeButton.Name = "addLoadingFormButton";
             this.addCubeButton.Size = new System.Drawing.Size(200, 70);
             this.addCubeButton.TabIndex = 3;
             this.addCubeButton.Text = "Додати";
@@ -47,7 +47,7 @@
             // 
             this.addCubeTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addCubeTextBox.Location = new System.Drawing.Point(3, 5);
-            this.addCubeTextBox.Name = "addCubeTextBox";
+            this.addCubeTextBox.Name = "addLoadingFormTextBox";
             this.addCubeTextBox.Size = new System.Drawing.Size(379, 29);
             this.addCubeTextBox.TabIndex = 2;
             // 

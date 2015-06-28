@@ -90,6 +90,7 @@
             this.addressAddCountryAddButton.Size = new System.Drawing.Size(31, 30);
             this.addressAddCountryAddButton.TabIndex = 50;
             this.addressAddCountryAddButton.UseVisualStyleBackColor = true;
+            this.addressAddCountryAddButton.Click += new System.EventHandler(this.addressAddCountryAddButton_Click);
             // 
             // label1
             // 
