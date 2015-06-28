@@ -57,7 +57,6 @@ namespace AtlantSovt
                 {
                     MessageBox.Show(ec.Message);
                 }
-
             }
         }
         private void AddDownloadAddress()
