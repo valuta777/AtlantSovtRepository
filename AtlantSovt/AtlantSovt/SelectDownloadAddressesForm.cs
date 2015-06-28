@@ -42,7 +42,7 @@ namespace AtlantSovt
 
         private void addDownloadAddressButton_Click(object sender, EventArgs e)
         {
-            AddAddressForm addDownloadAddressForm = new AddAddressForm(client, "DownloadAddress");
+            AddAddressForm addDownloadAddressForm = new AddAddressForm(client, 1);
             addDownloadAddressForm.Show();
         }
 

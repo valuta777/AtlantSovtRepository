@@ -15,8 +15,8 @@ namespace AtlantSovt
     {
         Client client;
         Country country;
-        String currentCase;
-        public AddAddressForm(Client new_client , String new_currentCase)
+        Byte currentCase;
+        public AddAddressForm(Client new_client , Byte new_currentCase)
         {
             InitializeComponent();
             client = new_client;
@@ -39,13 +39,13 @@ namespace AtlantSovt
                 {
                     CountryId = country.Id,
                     ClientId = client.Id,
-                    CountryCode =  new_CountryCode,
                     CityCode = new_CityCode,
-                    CityName = new_CityName,
                     StreetName = new_StreetName,
                     HouseNumber = new_HouseNumber,
                     CompanyName = new_CompanyName,
-                    ContactPerson = new_ContactPerson
+                    ContactPerson = new_ContactPerson,
+                    CityName = new_CityName,
+                    CountryCode = new_CountryCode,
                 };
                 try
                 {
@@ -68,11 +68,13 @@ namespace AtlantSovt
                 {
                     CountryId = country.Id,
                     ClientId = client.Id,
-                    CityCode = new_CountryCode,
+                    CityCode = new_CityCode,
                     StreetName = new_StreetName,
                     HouseNumber = new_HouseNumber,
                     CompanyName = new_CompanyName,
-                    ContactPerson = new_ContactPerson
+                    ContactPerson = new_ContactPerson,
+                    CityName = new_CityName,
+                    CountryCode = new_CountryCode,
                 };
                 try
                 {
@@ -95,11 +97,13 @@ namespace AtlantSovt
                 {
                     CountryId = country.Id,
                     ClientId = client.Id,
-                    CityCode = new_CountryCode,
+                    CityCode = new_CityCode,
                     StreetName = new_StreetName,
                     HouseNumber = new_HouseNumber,
                     CompanyName = new_CompanyName,
-                    ContactPerson = new_ContactPerson
+                    ContactPerson = new_ContactPerson,
+                    CityName = new_CityName,
+                    CountryCode = new_CountryCode,
                 };
                 try
                 {
@@ -118,19 +122,21 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                var New_CustomsAddress = new CustomsAddress
+                var New_UnCustomsAddress = new UnCustomsAddress
                 {
                     CountryId = country.Id,
                     ClientId = client.Id,
-                    CityCode = new_CountryCode,
+                    CityCode = new_CityCode,
                     StreetName = new_StreetName,
                     HouseNumber = new_HouseNumber,
                     CompanyName =  new_CompanyName,
-                    ContactPerson =  new_ContactPerson
+                    ContactPerson =  new_ContactPerson,
+                    CityName = new_CityName,
+                    CountryCode = new_CountryCode,
                 };
                 try
                 {
-                    db.CustomsAddresses.Add(New_CustomsAddress);
+                    db.UnCustomsAddresses.Add(New_UnCustomsAddress);
                     db.SaveChanges();
                     MessageBox.Show("Адреса успішно додана ");
                 }
@@ -153,13 +159,13 @@ namespace AtlantSovt
 
             switch(currentCase)
             {
-                case "UploadAddress": AddUploadAddress(); break;
+                case 1 : AddDownloadAddress();break;
+
+                case 2 : AddUploadAddress(); break; 
                     
-                case "DownloadAddress" : AddDownloadAddress();break;
+                case 3 : AddCustomsAddress();break;
                     
-                case "CustomAddress" : AddCustomsAddress();break;
-                    
-                case "UnCustomAddress" : AddUnCustomsAddress();break;
+                case 4 : AddUnCustomsAddress();break;
 
                 default: MessageBox.Show("Error");break;
             }
@@ -208,6 +214,10 @@ namespace AtlantSovt
         {
 
         }
-
+        private void addressAddCountryAddButton_Click(object sender, EventArgs e)
+        {
+            AddCountryForm addCountryForm = new AddCountryForm();
+            addCountryForm.Show();
+        }
     }    
 }
