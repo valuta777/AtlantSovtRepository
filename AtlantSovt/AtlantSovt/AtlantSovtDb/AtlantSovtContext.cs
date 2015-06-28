@@ -8,7 +8,7 @@ namespace AtlantSovt.AtlantSovtDb
     public partial class AtlantSovtContext : DbContext
     {
         public AtlantSovtContext()
-            : base("name=AtlantSovtContext")
+            : base("name=AtlantSovtContext1")
         {
         }
 
@@ -20,6 +20,7 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<Country> Countries { get; set; }
         public virtual DbSet<Cube> Cubes { get; set; }
         public virtual DbSet<CustomsAddress> CustomsAddresses { get; set; }
+        public virtual DbSet<DocumentCounter> DocumentCounters { get; set; }
         public virtual DbSet<DownloadAddress> DownloadAddresses { get; set; }
         public virtual DbSet<Filter> Filters { get; set; }
         public virtual DbSet<FineForDelay> FineForDelays { get; set; }
@@ -51,7 +52,6 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<UploadAddress> UploadAddresses { get; set; }
         public virtual DbSet<Vehicle> Vehicles { get; set; }
         public virtual DbSet<WorkDocument> WorkDocuments { get; set; }
-        public virtual DbSet<DocumentCounter> DocumentCounters { get; set; }
         public virtual DbSet<OrderCounter> OrderCounters { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -72,7 +72,17 @@ namespace AtlantSovt.AtlantSovtDb
                 .WillCascadeOnDelete();
 
             modelBuilder.Entity<Client>()
+                .HasMany(e => e.CustomsAddresses)
+                .WithOptional(e => e.Client)
+                .WillCascadeOnDelete();
+
+            modelBuilder.Entity<Client>()
                 .HasMany(e => e.DownloadAddresses)
+                .WithOptional(e => e.Client)
+                .WillCascadeOnDelete();
+
+            modelBuilder.Entity<Client>()
+                .HasMany(e => e.UnCustomsAddresses)
                 .WithOptional(e => e.Client)
                 .WillCascadeOnDelete();
 
@@ -89,14 +99,12 @@ namespace AtlantSovt.AtlantSovtDb
             modelBuilder.Entity<CustomsAddress>()
                 .HasMany(e => e.OrderCustomsAddresses)
                 .WithRequired(e => e.CustomsAddress)
-                .HasForeignKey(e => e.AddressId)
-                .WillCascadeOnDelete(false);
+                .HasForeignKey(e => e.AddressId);
 
             modelBuilder.Entity<DownloadAddress>()
                 .HasMany(e => e.OrderDownloadAddresses)
                 .WithRequired(e => e.DownloadAddress)
-                .HasForeignKey(e => e.AddressId)
-                .WillCascadeOnDelete(false);
+                .HasForeignKey(e => e.AddressId);
 
             modelBuilder.Entity<FineForDelay>()
                 .HasMany(e => e.Orders)
@@ -107,11 +115,6 @@ namespace AtlantSovt.AtlantSovtDb
                 .HasOptional(e => e.ForwarderBankDetail)
                 .WithRequired(e => e.Forwarder)
                 .WillCascadeOnDelete();
-
-            modelBuilder.Entity<Forwarder>()
-                .HasMany(e => e.TransporterForwarderContracts)
-                .WithRequired(e => e.Forwarder)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<LoadingForm>()
                 .HasMany(e => e.OrderLoadingForms)
@@ -143,12 +146,22 @@ namespace AtlantSovt.AtlantSovtDb
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Order>()
+                .HasMany(e => e.OrderLoadingForms)
+                .WithRequired(e => e.Order)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Order>()
                 .HasMany(e => e.OrderUnCustomsAddresses)
                 .WithRequired(e => e.Order)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Order>()
                 .HasMany(e => e.OrderUploadAdresses)
+                .WithRequired(e => e.Order)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Order>()
+                .HasMany(e => e.TrackingComments)
                 .WithRequired(e => e.Order)
                 .WillCascadeOnDelete(false);
 
@@ -190,14 +203,12 @@ namespace AtlantSovt.AtlantSovtDb
             modelBuilder.Entity<UnCustomsAddress>()
                 .HasMany(e => e.OrderUnCustomsAddresses)
                 .WithRequired(e => e.UnCustomsAddress)
-                .HasForeignKey(e => e.AddressId)
-                .WillCascadeOnDelete(false);
+                .HasForeignKey(e => e.AddressId);
 
             modelBuilder.Entity<UploadAddress>()
                 .HasMany(e => e.OrderUploadAdresses)
                 .WithRequired(e => e.UploadAddress)
-                .HasForeignKey(e => e.AddressId)
-                .WillCascadeOnDelete(false);
+                .HasForeignKey(e => e.AddressId);
 
             modelBuilder.Entity<Vehicle>()
                 .Property(e => e.Type)

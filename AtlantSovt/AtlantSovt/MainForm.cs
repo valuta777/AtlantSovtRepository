@@ -1563,26 +1563,26 @@ namespace AtlantSovt
         private void firstPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitTransporterFirstPersonComboBoxDocument();
-            }
+            secondPersonNameComboBox.Enabled = true;
+        }
 
         private void firstPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             firstPersonNameComboBox.Items.Clear();
             LoadTransporterFirstPersonNameComboBox();
             firstPersonNameComboBox.DroppedDown = true;
-            secondPersonNameComboBox.Enabled = true;
         }
 
         private void firstPersonDiapasonComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-                    LoadTransporterFirstPersonDiapasonCombobox();
+            LoadTransporterFirstPersonDiapasonCombobox();
         }
 
         private void secondPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
-            {
+        {
             SplitForwarderSecondPersonComboBoxDocument();
             forwarderAsComboBox.Enabled = true;
-            }
+        }
 
         private void secondPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
         {
@@ -1593,6 +1593,12 @@ namespace AtlantSovt
 
         private void createContactButton_Click(object sender, EventArgs e)
         {
+            IsForwarderAndTransporterFull();
+            if (!isForwarderFull || !isTransporterFull)
+            {
+                return;
+            }
+            AddDocument();
             CreateTransporterForwarderContract();
         }
 
