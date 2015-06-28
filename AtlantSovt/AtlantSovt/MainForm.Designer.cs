@@ -419,6 +419,9 @@
             this.labelshow68 = new System.Windows.Forms.Label();
             this.labelshow69 = new System.Windows.Forms.Label();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label109 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip.SuspendLayout();
             this.dataControl.SuspendLayout();
             this.helloPage.SuspendLayout();
@@ -3881,6 +3884,9 @@
             // documentationPage
             // 
             this.documentationPage.BackColor = System.Drawing.Color.AliceBlue;
+            this.documentationPage.Controls.Add(this.label69);
+            this.documentationPage.Controls.Add(this.label109);
+            this.documentationPage.Controls.Add(this.comboBox1);
             this.documentationPage.Controls.Add(this.label66);
             this.documentationPage.Controls.Add(this.label67);
             this.documentationPage.Controls.Add(this.forwarderAsComboBox);
@@ -3908,7 +3914,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label66.Location = new System.Drawing.Point(38, 243);
+            this.label66.Location = new System.Drawing.Point(38, 266);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(136, 21);
             this.label66.TabIndex = 94;
@@ -3920,11 +3926,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label67.Location = new System.Drawing.Point(6, 243);
+            this.label67.Location = new System.Drawing.Point(6, 266);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(33, 21);
             this.label67.TabIndex = 93;
-            this.label67.Text = "3 - ";
+            this.label67.Text = "4 - ";
             // 
             // forwarderAsComboBox
             // 
@@ -3935,7 +3941,7 @@
             this.forwarderAsComboBox.Items.AddRange(new object[] {
             "Замовника",
             "Перевізника"});
-            this.forwarderAsComboBox.Location = new System.Drawing.Point(42, 267);
+            this.forwarderAsComboBox.Location = new System.Drawing.Point(42, 290);
             this.forwarderAsComboBox.Name = "forwarderAsComboBox";
             this.forwarderAsComboBox.Size = new System.Drawing.Size(188, 29);
             this.forwarderAsComboBox.TabIndex = 92;
@@ -3984,7 +3990,7 @@
             this.secondPersonNameComboBox.Enabled = false;
             this.secondPersonNameComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.secondPersonNameComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.secondPersonNameComboBox.Location = new System.Drawing.Point(42, 187);
+            this.secondPersonNameComboBox.Location = new System.Drawing.Point(42, 222);
             this.secondPersonNameComboBox.Name = "secondPersonNameComboBox";
             this.secondPersonNameComboBox.Size = new System.Drawing.Size(686, 29);
             this.secondPersonNameComboBox.Sorted = true;
@@ -3998,7 +4004,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label51.Location = new System.Drawing.Point(38, 160);
+            this.label51.Location = new System.Drawing.Point(38, 195);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(96, 21);
             this.label51.TabIndex = 84;
@@ -4010,11 +4016,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label39.Location = new System.Drawing.Point(6, 160);
+            this.label39.Location = new System.Drawing.Point(6, 195);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(33, 21);
             this.label39.TabIndex = 83;
-            this.label39.Text = "2 - ";
+            this.label39.Text = "3 - ";
             // 
             // label38
             // 
@@ -4022,11 +4028,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label38.Location = new System.Drawing.Point(6, 55);
+            this.label38.Location = new System.Drawing.Point(6, 102);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(33, 21);
             this.label38.TabIndex = 82;
-            this.label38.Text = "1 - ";
+            this.label38.Text = "2 - ";
             // 
             // label37
             // 
@@ -4034,7 +4040,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label37.Location = new System.Drawing.Point(40, 55);
+            this.label37.Location = new System.Drawing.Point(40, 102);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(94, 21);
             this.label37.TabIndex = 79;
@@ -4045,7 +4051,7 @@
             this.firstPersonDiapasonComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.firstPersonDiapasonComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.firstPersonDiapasonComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.firstPersonDiapasonComboBox.Location = new System.Drawing.Point(42, 109);
+            this.firstPersonDiapasonComboBox.Location = new System.Drawing.Point(42, 156);
             this.firstPersonDiapasonComboBox.Name = "firstPersonDiapasonComboBox";
             this.firstPersonDiapasonComboBox.Size = new System.Drawing.Size(188, 29);
             this.firstPersonDiapasonComboBox.TabIndex = 78;
@@ -4055,7 +4061,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label28.Location = new System.Drawing.Point(40, 85);
+            this.label28.Location = new System.Drawing.Point(40, 132);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(140, 21);
             this.label28.TabIndex = 77;
@@ -4067,7 +4073,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.personNameLabel.AutoSize = true;
             this.personNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.personNameLabel.Location = new System.Drawing.Point(199, 85);
+            this.personNameLabel.Location = new System.Drawing.Point(199, 132);
             this.personNameLabel.Name = "personNameLabel";
             this.personNameLabel.Size = new System.Drawing.Size(0, 21);
             this.personNameLabel.TabIndex = 76;
@@ -4081,7 +4087,7 @@
             this.firstPersonNameComboBox.Enabled = false;
             this.firstPersonNameComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.firstPersonNameComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.firstPersonNameComboBox.Location = new System.Drawing.Point(236, 109);
+            this.firstPersonNameComboBox.Location = new System.Drawing.Point(236, 156);
             this.firstPersonNameComboBox.Name = "firstPersonNameComboBox";
             this.firstPersonNameComboBox.Size = new System.Drawing.Size(492, 29);
             this.firstPersonNameComboBox.Sorted = true;
@@ -5505,6 +5511,44 @@
             this.labelshow69.TabIndex = 36;
             this.labelshow69.Text = "Країни";
             // 
+            // label69
+            // 
+            this.label69.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label69.Location = new System.Drawing.Point(38, 39);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(136, 21);
+            this.label69.TabIndex = 97;
+            this.label69.Text = "Виступає у якості:";
+            // 
+            // label109
+            // 
+            this.label109.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label109.AutoSize = true;
+            this.label109.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label109.Location = new System.Drawing.Point(6, 39);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(33, 21);
+            this.label109.TabIndex = 96;
+            this.label109.Text = "1 - ";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.Enabled = false;
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox1.Items.AddRange(new object[] {
+            "Замовника",
+            "Перевізника"});
+            this.comboBox1.Location = new System.Drawing.Point(42, 63);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(188, 29);
+            this.comboBox1.TabIndex = 95;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6056,6 +6100,9 @@
         private System.Windows.Forms.DataGridView trackingShowCommentDataGridView;
         private System.Windows.Forms.DataGridView trackingShowUploadAddressDataGridView;
         private System.Windows.Forms.DataGridView trackingShowDownloadAddressDataGridView;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label109;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button OrderAddLoadingForm2AddButton;
         private System.Windows.Forms.Button OrderAddLoadingForm1AddButton;
         private System.Windows.Forms.TabPage updateOrderPage;

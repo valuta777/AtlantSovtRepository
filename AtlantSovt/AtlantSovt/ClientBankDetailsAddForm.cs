@@ -19,6 +19,7 @@ namespace AtlantSovt
         string new_AccountNumber;
         string new_EDRPOU;
         string new_IPN;
+        string new_CertificateSerial;
         string new_CertificateNumber;
         string new_SWIFT;
         string new_IBAN;
@@ -41,6 +42,7 @@ namespace AtlantSovt
                 new_EDRPOU = clientEDRPOUTextBox.Text;
                 new_IPN = clientIPNTextBox.Text;
                 new_CertificateNumber = clientCertificateNumberTextBox.Text;
+                new_CertificateSerial = clientCertificateSerialTextBox.Text;
                 new_SWIFT = clientSWIFTTextBox.Text;
                 new_IBAN = clientIBANTextBox.Text;
                 this.Hide();
@@ -53,7 +55,6 @@ namespace AtlantSovt
             {
                 MessageBox.Show("Заповніть обов'язкові поля!");
             }
-
         }
         internal void AddClientBankDetail(long id)
         {
@@ -68,6 +69,7 @@ namespace AtlantSovt
                     EDRPOU = new_EDRPOU,
                     IPN = new_IPN,
                     CertificateNamber = new_CertificateNumber,
+                    CertificateSerial = new_CertificateSerial,
                     SWIFT = new_SWIFT,
                     IBAN = new_IBAN                    
                 };
@@ -79,10 +81,8 @@ namespace AtlantSovt
                 }
                 catch (Exception ec)
                 {
-                    MessageBox.Show(ec.Message);
-                    
+                    MessageBox.Show(ec.Message);  
                 }
-
             }
         }                    
         internal void AddClientBankDetail2(long id) 

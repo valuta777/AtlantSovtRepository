@@ -20,6 +20,7 @@ namespace AtlantSovt
         string new_EDRPOU;
         string new_IPN;
         string new_CertificateNumber;
+        string new_CertificateSerial;
         string new_SWIFT;
         string new_IBAN;
         long ID;
@@ -40,6 +41,7 @@ namespace AtlantSovt
                 new_AccountNumber = forwarderAccountNumberTextBox.Text;
                 new_EDRPOU = forwarderEDRPOUTextBox.Text;
                 new_IPN = forwarderIPNTextBox.Text;
+                new_CertificateSerial = forwarderCertificateSerialTextBox.Text;
                 new_CertificateNumber = forwarderCertificateNumberTextBox.Text;
                 new_SWIFT = forwarderSWIFTTextBox.Text;
                 new_IBAN = forwarderIBANTextBox.Text;
@@ -67,6 +69,7 @@ namespace AtlantSovt
                     AccountNumber = new_AccountNumber,
                     EDRPOU = new_EDRPOU,
                     IPN = new_IPN,
+                    CertificateSerial = new_CertificateSerial,
                     CertificateNamber = new_CertificateNumber,
                     SWIFT = new_SWIFT,
                     IBAN = new_IBAN
@@ -82,7 +85,6 @@ namespace AtlantSovt
                     MessageBox.Show(ec.Message);
 
                 }
-
             }
         }
         internal void AddForwarderBankDetail2(long id)

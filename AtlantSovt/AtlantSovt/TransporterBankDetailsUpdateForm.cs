@@ -15,7 +15,7 @@ namespace AtlantSovt
     public partial class TransporterBankDetailsUpdateForm : Form
     {
         TransporterBankDetail bankDetails;
-        bool bankNameChanged, MFOChanged, accountNumberChanged, EDRPOUChanged, IPNChanged, certificateNumberChanged, SWIFTChanged, IBANChanged;
+        bool bankNameChanged, MFOChanged, accountNumberChanged, EDRPOUChanged, IPNChanged, certificateSerialChanged, certificateNumberChanged, SWIFTChanged, IBANChanged;
 
         public TransporterBankDetailsUpdateForm()
         {
@@ -35,11 +35,12 @@ namespace AtlantSovt
                 accountNumberUpdateTransporterBankDetailsTextBox.Text = bankDetails.AccountNumber;
                 EDRPOUUpdateTransporterBankDetailsTextBox.Text = bankDetails.EDRPOU;
                 IPNUpdateTransporterBankDetailsTextBox.Text = bankDetails.IPN;
+                certificateSerialUpdateTransporterBankDetailsTextBox.Text = bankDetails.CertificateSerial;
                 certificateNumberUpdateTransporterBankDetailsTextBox.Text = bankDetails.CertificateNamber;
                 SWIFTUpdateTransporterBankDetailsTextBox.Text = bankDetails.SWIFT;
                 IBANUpdateTransporterBankDetailsTextBox.Text = bankDetails.IBAN;
             }
-            bankNameChanged =  MFOChanged = accountNumberChanged = EDRPOUChanged = IPNChanged = certificateNumberChanged = SWIFTChanged = IBANChanged = false;
+            bankNameChanged = MFOChanged = accountNumberChanged = EDRPOUChanged = IPNChanged = certificateNumberChanged = certificateSerialChanged = SWIFTChanged = IBANChanged = false;
         }
 
         private void UpdateTransporterBankDetails()
@@ -47,7 +48,7 @@ namespace AtlantSovt
             using (var db = new AtlantSovtContext())
             {
                 //якщо хоча б один з флагів = true
-                if (bankNameChanged ||  MFOChanged || accountNumberChanged || EDRPOUChanged || IPNChanged || certificateNumberChanged || SWIFTChanged || IBANChanged)
+                if (bankNameChanged || MFOChanged || accountNumberChanged || EDRPOUChanged || IPNChanged || certificateNumberChanged || certificateSerialChanged || SWIFTChanged || IBANChanged)
                 {
                     if (bankNameChanged)
                     {
@@ -68,6 +69,10 @@ namespace AtlantSovt
                     if (IPNChanged)
                     {
                         bankDetails.IPN = IPNUpdateTransporterBankDetailsTextBox.Text;
+                    }
+                    if (certificateSerialChanged)
+                    {
+                        bankDetails.CertificateSerial = certificateSerialUpdateTransporterBankDetailsTextBox.Text;
                     }
                     if (certificateNumberChanged)
                     {
@@ -135,8 +140,12 @@ namespace AtlantSovt
         private void IBANUpdateTransporterBankDetailsTextBox_TextChanged(object sender, EventArgs e)
         {
             IBANChanged = true;
-        }                    
+        }
 
+        private void certificateSerialUpdateTransporterBankDetailsTextBox_TextChanged(object sender, EventArgs e)
+        {
+            certificateSerialChanged = true;
+        }               
     }    
 }
 

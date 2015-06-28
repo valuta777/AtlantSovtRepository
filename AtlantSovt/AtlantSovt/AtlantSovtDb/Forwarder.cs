@@ -11,7 +11,6 @@ namespace AtlantSovt.AtlantSovtDb
     {
         public Forwarder()
         {
-            ClientForwarderContracts = new HashSet<ClientForwarderContract>();
             ForwarderContacts = new HashSet<ForwarderContact>();
             ForwarderOrders = new HashSet<ForwarderOrder>();
             TransporterForwarderContracts = new HashSet<TransporterForwarderContract>();
@@ -36,8 +35,6 @@ namespace AtlantSovt.AtlantSovtDb
         public long? TaxPayerStatusId { get; set; }
 
         public string Comment { get; set; }
-
-        public virtual ICollection<ClientForwarderContract> ClientForwarderContracts { get; set; }
 
         public virtual TaxPayerStatu TaxPayerStatu { get; set; }
 

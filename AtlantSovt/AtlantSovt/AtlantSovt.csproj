@@ -137,7 +137,6 @@
     <Compile Include="AtlantSovtDb\Client.cs" />
     <Compile Include="AtlantSovtDb\ClientBankDetail.cs" />
     <Compile Include="AtlantSovtDb\ClientContact.cs" />
-    <Compile Include="AtlantSovtDb\ClientForwarderContract.cs" />
     <Compile Include="AtlantSovtDb\Country.cs" />
     <Compile Include="AtlantSovtDb\Cube.cs" />
     <Compile Include="AtlantSovtDb\CustomsAddress.cs" />
