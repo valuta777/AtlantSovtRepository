@@ -1560,7 +1560,6 @@ namespace AtlantSovt
 
         #endregion
 
-
         //Documentation
         #region Documentation
 
@@ -2091,6 +2090,16 @@ namespace AtlantSovt
         {
             AddLoadingFormForm addLoadingFormForm = new AddLoadingFormForm();
             addLoadingFormForm.Show();
+        }
+
+        private void OrderAddADRSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAddADRSelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderAddYOrUComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAddYOrUComboBox.DroppedDown = true;
         }
     }
 }

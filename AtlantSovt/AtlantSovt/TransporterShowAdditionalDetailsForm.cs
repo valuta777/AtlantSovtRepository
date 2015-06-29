@@ -30,12 +30,12 @@ namespace AtlantSovt
                     where f.Id == ClikedId
                     select new
                     {
-                        TUR = f.TUR,
-                        CMR = f.CMR,
-                        EKMT = f.EKMT,
-                        Zborny = f.Zborny,
-                        AD = f.AD,
-                        IfForwarder = f.IfForwarder
+                        TUR = (f.TUR == true) ? "Так" : (f.TUR == false) ? "Ні" : "",
+                        CMR = (f.CMR == true) ? "Так" : (f.CMR == false) ? "Ні" : "",
+                        EKMT = (f.EKMT == true) ? "Так" : (f.EKMT == false) ? "Ні" : "",
+                        Zborny = (f.Zborny == true) ? "Так" : (f.Zborny == false) ? "Ні" : "",
+                        AD = (f.AD == true) ? "Так" : (f.AD == false) ? "Ні" : "",
+                        IfForwarder = (f.IfForwarder == true) ? "Так" : (f.IfForwarder == false) ? "Ні" : "",
                     };
                     transporterShowAdditionalDetailsGridView.DataSource = query.ToList();
                     transporterShowAdditionalDetailsGridView.Columns[0].HeaderText = "TUR";

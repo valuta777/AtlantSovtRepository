@@ -101,7 +101,6 @@ E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Debug\EntityFramework.SqlServe
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Debug\EntityFramework.xml
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Debug\EntityFramework.SqlServer.xml
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Debug\ru\EntityFramework.resources.dll
-E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csprojResolveAssemblyReference.cache
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.ClientBankDetailsAddForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.ForwarderBankDetailsUpdateForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.ClientContactAddForm.resources
@@ -207,3 +206,5 @@ R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.SelectCustomsAddressesForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.SelectDownloadAddressesForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.SelectUncustomsAddressesForm.resources
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddCountryForm.resources
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddLoadingFormForm.resources
