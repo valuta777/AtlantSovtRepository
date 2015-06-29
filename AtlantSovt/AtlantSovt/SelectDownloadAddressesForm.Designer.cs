@@ -82,6 +82,7 @@
             // 
             // downloadAddresssListBox
             // 
+            this.downloadAddresssListBox.CheckOnClick = true;
             this.downloadAddresssListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.downloadAddresssListBox.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.downloadAddresssListBox.FormattingEnabled = true;
@@ -98,8 +99,9 @@
             this.ClientSize = new System.Drawing.Size(564, 274);
             this.Controls.Add(this.downloadAddresssListBox);
             this.Controls.Add(this.splitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SelectDownloadAddressesForm";
-            this.Text = "Виберіть адреси доставки(розвантаження)";
+            this.Text = "Виберіть адреси завантаження";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

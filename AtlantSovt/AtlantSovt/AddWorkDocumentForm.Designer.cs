@@ -49,7 +49,7 @@
             this.addWorkDocumentTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addWorkDocumentTextBox.Location = new System.Drawing.Point(0, 0);
             this.addWorkDocumentTextBox.Name = "addWorkDocumentTextBox";
-            this.addWorkDocumentTextBox.Size = new System.Drawing.Size(379, 29);
+            this.addWorkDocumentTextBox.Size = new System.Drawing.Size(384, 29);
             this.addWorkDocumentTextBox.TabIndex = 2;
             // 
             // AddWorkDocumentForm
