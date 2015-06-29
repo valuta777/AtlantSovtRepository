@@ -345,20 +345,21 @@ namespace AtlantSovt
                     commentForwarderUpdateTextBox.Text = Convert.ToString(forwarder.Comment);
                     if (forwarder.WorkDocument != null)
                     {
-                        workDocumentForwarderUpdateComboBox.SelectedIndex = Convert.ToInt32(forwarder.WorkDocumentId - 1);
-
+                       workDocumentForwarderUpdateComboBox.SelectedIndex = workDocumentForwarderUpdateComboBox.FindString(forwarder.WorkDocument.Status + " [" + forwarder.WorkDocument.Id + ']');
                     }
                     else
                     {
                         workDocumentForwarderUpdateComboBox.Text = "";
+                        workDocumentForwarderUpdateComboBox.SelectedIndex = -1;
                     }
                     if (forwarder.TaxPayerStatu != null)
-                    { 
-                        taxPayerStatusForwarderUpdateComboBox.SelectedIndex = Convert.ToInt32(forwarder.TaxPayerStatusId - 1);
+                    {
+                        taxPayerStatusForwarderUpdateComboBox.SelectedIndex = taxPayerStatusForwarderUpdateComboBox.FindString(forwarder.TaxPayerStatu.Status + " [" + forwarder.TaxPayerStatu.Id + ']');
                     }
                     else 
                     {
                         taxPayerStatusForwarderUpdateComboBox.Text = "";
+                        taxPayerStatusForwarderUpdateComboBox.SelectedIndex = -1;
                     }
                 }
                 forwarderNameChanged = forwarderDirectorChanged = forwarderPhysicalAddressChanged = forwarderGeographyAddressChanged = forwarderCommentChanged = forwarderWorkDocumentChanged = forwarderTaxPayerStatusChanged = false;
