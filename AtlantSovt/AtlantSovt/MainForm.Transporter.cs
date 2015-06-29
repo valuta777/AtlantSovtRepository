@@ -7407,19 +7407,21 @@ namespace AtlantSovt
 
                     if (transporter.WorkDocument != null) 
                     {
-                        workDocumentTransporterUpdateComboBox.SelectedIndex = Convert.ToInt32(transporter.WorkDocumentId - 1);
+                        workDocumentTransporterUpdateComboBox.SelectedIndex = workDocumentTransporterUpdateComboBox.FindString(transporter.WorkDocument.Status + " [" + transporter.WorkDocument.Id + ']');
                     }
                     else 
                     {
                         workDocumentTransporterUpdateComboBox.Text = "";
+                        workDocumentTransporterUpdateComboBox.SelectedIndex = -1;
                     }
                     if (transporter.TaxPayerStatu != null)
                     {
-                        taxPayerStatusTransporterUpdateComboBox.SelectedIndex = Convert.ToInt32(transporter.TaxPayerStatusId - 1);
+                        taxPayerStatusTransporterUpdateComboBox.SelectedIndex = taxPayerStatusTransporterUpdateComboBox.FindString(transporter.TaxPayerStatu.Status + " [" + transporter.TaxPayerStatu.Id + ']');   
                     }
                     else
                     {
                         taxPayerStatusTransporterUpdateComboBox.Text = "";
+                        taxPayerStatusTransporterUpdateComboBox.SelectedIndex = -1;
                     }
 
                     originalTransporterUpdateCheckBox.Checked = transporter.ContractType.Value;
