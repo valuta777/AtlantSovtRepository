@@ -7,15 +7,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
+using System.Data.Entity;
 
 namespace AtlantSovt
 {
     partial class MainForm
     {
-        Client clientFirstPersonDocument;
-        Transporter transporterFirstPersonDocument;
-        Forwarder forwarderFirstPersonDocument;
-        Forwarder forwarderSecondPersonDocument;
+        Transporter transporterDocument;
+        Forwarder forwarderDocument;
+        DocumentCounter documentCount;
+        TransporterForwarderContract contract;
+
+        bool isLocal;
+        bool isForwarderFull;
+        bool isTransporterFull;
 
         void SplitTransporterFirstPersonComboBoxDocument()
         {
@@ -25,7 +30,7 @@ namespace AtlantSovt
                 string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
                 string comboBoxSelectedId = selectedNameAndDirector[1];
                 long id = Convert.ToInt64(comboBoxSelectedId);
-                transporterFirstPersonDocument = db.Transporters.Find(id);
+                transporterDocument = db.Transporters.Find(id);
             }
         }
 
@@ -37,7 +42,7 @@ namespace AtlantSovt
                 string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
                 string comboBoxSelectedId = selectedNameAndDirector[1];
                 long id = Convert.ToInt64(comboBoxSelectedId);
-                forwarderSecondPersonDocument = db.Forwarders.Find(id);
+                forwarderDocument = db.Forwarders.Find(id);
             }
         }
 
@@ -117,31 +122,22 @@ namespace AtlantSovt
             }
         }
 
-        void AddDocument()
+        void IsForwarderAndTransporterFull()
         {
-
-        }
-
-        void CreateTransporterForwarderContract()
-        {
-            var wordApp = new Word.Application();
-            bool isForwarderFull = false;
-            bool isTransporterFull = false;
-            wordApp.Visible = false;
-            var wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\ukrDocumentationTransporterForwarder.docx").Replace("\\bin\\Debug", ""));
+            isForwarderFull = false;
+            isTransporterFull = false;
             try
             {
                 using (var db = new AtlantSovtContext())
                 {
-                    var contractDateBegin = contractBeginDateTimePicker.Value.ToLongDateString();
+                    var secondForwarderName = forwarderDocument.Name;
+                    var secondForwarderDirector = forwarderDocument.Director;
+                    var secondForwarderPhysicalAddress = forwarderDocument.PhysicalAddress;
+                    var secondForwarderGeographycalAddress = forwarderDocument.GeographyAddress;
 
-                    var secondForwarderName = forwarderSecondPersonDocument.Name;
-                    var secondForwarderDirector = forwarderSecondPersonDocument.Director;
-                    var secondForwarderPhysicalAddress = forwarderSecondPersonDocument.PhysicalAddress;
-                    var secondForwarderGeographycalAddress = forwarderSecondPersonDocument.GeographyAddress;
-
-                    string secondForwarderWorkDocument = "";                    
-                    string secondForwarderTaxPayerStatus = "";    
+                    string secondForwarderWorkDocument = "";
+                    string secondForwarderTaxPayerStatus = "";
+                    string secondForwarderBankDetailsCertificateSerial = "";
                     string secondForwarderBankDetailsCertificateNumber = "";
                     string secondForwarderBankDetailsEDRPOU = "";
                     string secondForwarderBankDetailsAccountNumber = "";
@@ -151,13 +147,14 @@ namespace AtlantSovt
                     string secondForwarderBankDetailsIPN = "";
                     string secondForwarderBankDetailsSWIFT = "";
 
-                    var transporterFullName = transporterFirstPersonDocument.FullName;
-                    var transporterDirector = transporterFirstPersonDocument.Director;
-                    var transporterPhysicalAddress = transporterFirstPersonDocument.PhysicalAddress;
-                    var transporterGeographycalAddress = transporterFirstPersonDocument.GeographyAddress;
+                    var transporterFullName = transporterDocument.FullName;
+                    var transporterDirector = transporterDocument.Director;
+                    var transporterPhysicalAddress = transporterDocument.PhysicalAddress;
+                    var transporterGeographycalAddress = transporterDocument.GeographyAddress;
 
                     string transporterWorkDocument = "";
                     string transporterTaxPayerStatus = "";
+                    string transporterBankDetailsCertificateSerial = "";
                     string transporterBankDetailsCertificateNumber = "";
                     string transporterBankDetailsEDRPOU = "";
                     string transporterBankDetailsAccountNumber = "";
@@ -167,55 +164,263 @@ namespace AtlantSovt
                     string transporterBankDetailsIPN = "";
                     string transporterBankDetailsSWIFT = "";
 
-                    if (forwarderSecondPersonDocument.WorkDocumentId != null)
+                    if (forwarderDocument.WorkDocumentId != null)
                     {
-                        secondForwarderWorkDocument = db.WorkDocuments.Find(forwarderSecondPersonDocument.WorkDocumentId).Status;
+                        secondForwarderWorkDocument = db.WorkDocuments.Find(forwarderDocument.WorkDocumentId).Status;
                     }
 
-                    if(forwarderSecondPersonDocument.TaxPayerStatusId != null)
+                    if (forwarderDocument.TaxPayerStatusId != null)
                     {
-                        secondForwarderTaxPayerStatus = db.TaxPayerStatus.Find(forwarderSecondPersonDocument.TaxPayerStatusId).Status;
+                        secondForwarderTaxPayerStatus = db.TaxPayerStatus.Find(forwarderDocument.TaxPayerStatusId).Status;
                     }
 
-                    if (transporterFirstPersonDocument.WorkDocumentId != null)
+                    if (transporterDocument.WorkDocumentId != null)
                     {
-                        transporterWorkDocument = db.WorkDocuments.Find(transporterFirstPersonDocument.WorkDocumentId).Status;
+                        transporterWorkDocument = db.WorkDocuments.Find(transporterDocument.WorkDocumentId).Status;
                     }
 
-                    if (transporterFirstPersonDocument.TaxPayerStatusId != null)
+                    if (transporterDocument.TaxPayerStatusId != null)
                     {
-                        transporterTaxPayerStatus = db.TaxPayerStatus.Find(transporterFirstPersonDocument.TaxPayerStatusId).Status;
+                        transporterTaxPayerStatus = db.TaxPayerStatus.Find(transporterDocument.TaxPayerStatusId).Status;
                     }
 
-                    if(db.Forwarders.Find(forwarderSecondPersonDocument.Id).ForwarderBankDetail != null)
+                    if (db.Forwarders.Find(forwarderDocument.Id).ForwarderBankDetail != null)
                     {
-                        secondForwarderBankDetailsCertificateNumber = db.ForwarderBankDetails.Find(forwarderSecondPersonDocument.Id).CertificateNamber;
-                        secondForwarderBankDetailsEDRPOU = db.ForwarderBankDetails.Find(forwarderSecondPersonDocument.Id).EDRPOU;
-                        secondForwarderBankDetailsAccountNumber = db.ForwarderBankDetails.Find(forwarderSecondPersonDocument.Id).AccountNumber;
-                        secondForwarderBankDetailsBankName = db.ForwarderBankDetails.Find(forwarderSecondPersonDocument.Id).BankName;
-                        secondForwarderBankDetailsMFO = db.ForwarderBankDetails.Find(forwarderSecondPersonDocument.Id).MFO;
-                        secondForwarderBankDetailsIBAN = db.ForwarderBankDetails.Find(forwarderSecondPersonDocument.Id).IBAN;
-                        secondForwarderBankDetailsIPN = db.ForwarderBankDetails.Find(forwarderSecondPersonDocument.Id).IPN;
-                        secondForwarderBankDetailsSWIFT = db.ForwarderBankDetails.Find(forwarderSecondPersonDocument.Id).SWIFT;
+                        secondForwarderBankDetailsCertificateSerial = db.ForwarderBankDetails.Find(forwarderDocument.Id).CertificateSerial;
+                        secondForwarderBankDetailsCertificateNumber = db.ForwarderBankDetails.Find(forwarderDocument.Id).CertificateNamber;
+                        secondForwarderBankDetailsEDRPOU = db.ForwarderBankDetails.Find(forwarderDocument.Id).EDRPOU;
+                        secondForwarderBankDetailsAccountNumber = db.ForwarderBankDetails.Find(forwarderDocument.Id).AccountNumber;
+                        secondForwarderBankDetailsBankName = db.ForwarderBankDetails.Find(forwarderDocument.Id).BankName;
+                        secondForwarderBankDetailsMFO = db.ForwarderBankDetails.Find(forwarderDocument.Id).MFO;
+                        secondForwarderBankDetailsIBAN = db.ForwarderBankDetails.Find(forwarderDocument.Id).IBAN;
+                        secondForwarderBankDetailsIPN = db.ForwarderBankDetails.Find(forwarderDocument.Id).IPN;
+                        secondForwarderBankDetailsSWIFT = db.ForwarderBankDetails.Find(forwarderDocument.Id).SWIFT;
+                    }
+
+                    if (db.Transporters.Find(transporterDocument.Id).TransporterBankDetail != null)
+                    {
+                        transporterBankDetailsCertificateSerial = db.TransporterBankDetails.Find(transporterDocument.Id).CertificateSerial;
+                        transporterBankDetailsCertificateNumber = db.TransporterBankDetails.Find(transporterDocument.Id).CertificateNamber;
+                        transporterBankDetailsEDRPOU = db.TransporterBankDetails.Find(transporterDocument.Id).EDRPOU;
+                        transporterBankDetailsAccountNumber = db.TransporterBankDetails.Find(transporterDocument.Id).AccountNumber;
+                        transporterBankDetailsBankName = db.TransporterBankDetails.Find(transporterDocument.Id).BankName;
+                        transporterBankDetailsMFO = db.TransporterBankDetails.Find(transporterDocument.Id).MFO;
+                        transporterBankDetailsIBAN = db.TransporterBankDetails.Find(transporterDocument.Id).IBAN;
+                        transporterBankDetailsIPN = db.TransporterBankDetails.Find(transporterDocument.Id).IPN;
+                        transporterBankDetailsSWIFT = db.TransporterBankDetails.Find(transporterDocument.Id).SWIFT;
+                    }
+
+                    if (secondForwarderName == "" || secondForwarderDirector == "" ||
+                        secondForwarderWorkDocument == "" || secondForwarderTaxPayerStatus == "" ||
+                        secondForwarderBankDetailsBankName == "" || secondForwarderBankDetailsAccountNumber == "" || secondForwarderBankDetailsCertificateNumber == "" || secondForwarderBankDetailsCertificateSerial == "" ||
+                        secondForwarderBankDetailsEDRPOU == "" || secondForwarderBankDetailsIBAN == "" ||
+                        secondForwarderBankDetailsIPN == "" || secondForwarderBankDetailsMFO == "" || secondForwarderBankDetailsSWIFT == "")
+                    {
+                        MessageBox.Show("Заповніть спочатку всі дані експедитора");
+                    }
+                    else
+                    {
+                        isForwarderFull = true;
+                    }
+
+                    if (transporterFullName == "" || transporterDirector == "" || transporterWorkDocument == "" ||
+                        transporterTaxPayerStatus == "" || transporterBankDetailsBankName == "" || transporterBankDetailsAccountNumber == "" ||
+                        transporterBankDetailsCertificateNumber == "" || transporterBankDetailsCertificateSerial == "" || transporterBankDetailsEDRPOU == "" || transporterBankDetailsIBAN == "" ||
+                        transporterBankDetailsIPN == "" || transporterBankDetailsMFO == "" || transporterBankDetailsSWIFT == "")
+                    {
+                        MessageBox.Show("Заповніть спочатку всі дані перевізника");
+                    }
+                    else
+                    {
+                        isTransporterFull = true;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Помилка: " + e.Message);
+            }
+        }
+
+        void AddDocument()
+        {
+            isLocal = true;
+            using (var db = new AtlantSovtContext())
+            {
+                var query =
+                    from d in db.DocumentCounters
+                    select d;
+
+                try
+                {
+                    if (query.Count() == 0)
+                    {
+                        documentCount = new DocumentCounter
+                        {
+                            Id = 1,
+                            ForeignDocument = 0,
+                            LocalDocument = 0
+                        };
+                        db.DocumentCounters.Add(documentCount);
+                        db.SaveChanges();
+                        documentCount = null;
+                    }
+                }
+                catch(Exception e)
+                {
+                    MessageBox.Show("Помилка: " + e.Message);
+                }
+                documentCount = new DocumentCounter();
+                try
+                {
+                    if (isLocal)
+                    {
+                        documentCount = db.DocumentCounters.Find(1);
+                        documentCount.LocalDocument += 1;
+                        db.Entry(documentCount).State = EntityState.Modified;
+                        db.SaveChanges();
+
+                    }
+                    else
+                    {
+                        documentCount = db.DocumentCounters.Find(1);
+                        documentCount.ForeignDocument += 1;
+                        db.Entry(documentCount).State = EntityState.Modified;
+                        db.SaveChanges();
+
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Помилка: " + e.Message);
+                }
+
+                try
+                {
+                    contract = new TransporterForwarderContract();
+                    contract.ForwarderId = forwarderDocument.Id;
+                    contract.TransporterId = transporterDocument.Id;
+                    if (isLocal)
+                    {
+                        contract.ContractNumber = documentCount.LocalDocument;
+                    }
+                    else
+                    {
+                        contract.ContractNumber = documentCount.ForeignDocument;
+                    }
+                    contract.ContractDataBegin = contractBeginDateTimePicker.Value.Date;
+                    contract.ContractDataEnd = contractBeginDateTimePicker.Value.AddYears(1);
+                    contract.PorZ = (forwarderAsComboBox.SelectedIndex == 0) ? true : false;
+                    db.TransporterForwarderContracts.Add(contract);
+                    db.SaveChanges();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Помилка: " + e.Message);
+                }
+            }
+        }
+
+        void CreateTransporterForwarderContract()
+        {
+            var wordApp = new Word.Application();
+            wordApp.Visible = false;
+            var wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\ukrDocumentationTransporterForwarder.docx").Replace("\\bin\\Debug", ""));
+            try
+            {
+                using (var db = new AtlantSovtContext())
+                {
+                    string title = contract.ContractNumber + @"\" + contract.ContractDataBegin.Value.Year + @"\" + ((contract.PorZ == true) ? "З": "П");
+
+                    var contractDateBegin = contractBeginDateTimePicker.Value.ToLongDateString();
+
+                    var secondForwarderName = forwarderDocument.Name;
+                    var secondForwarderDirector = forwarderDocument.Director;
+                    var secondForwarderPhysicalAddress = forwarderDocument.PhysicalAddress;
+                    var secondForwarderGeographycalAddress = forwarderDocument.GeographyAddress;
+
+                    string secondForwarderWorkDocument = "";                    
+                    string secondForwarderTaxPayerStatus = "";
+                    string secondForwarderBankDetailsCertificateSerial = "";
+                    string secondForwarderBankDetailsCertificateNumber = "";
+                    string secondForwarderBankDetailsEDRPOU = "";
+                    string secondForwarderBankDetailsAccountNumber = "";
+                    string secondForwarderBankDetailsBankName = "";
+                    string secondForwarderBankDetailsMFO = "";
+                    string secondForwarderBankDetailsIBAN = "";
+                    string secondForwarderBankDetailsIPN = "";
+                    string secondForwarderBankDetailsSWIFT = "";
+
+                    var transporterFullName = transporterDocument.FullName;
+                    var transporterDirector = transporterDocument.Director;
+                    var transporterPhysicalAddress = transporterDocument.PhysicalAddress;
+                    var transporterGeographycalAddress = transporterDocument.GeographyAddress;
+
+                    string transporterWorkDocument = "";
+                    string transporterTaxPayerStatus = "";
+                    string transporterBankDetailsCertificateSerial = "";
+                    string transporterBankDetailsCertificateNumber = "";
+                    string transporterBankDetailsEDRPOU = "";
+                    string transporterBankDetailsAccountNumber = "";
+                    string transporterBankDetailsBankName = "";
+                    string transporterBankDetailsMFO = "";
+                    string transporterBankDetailsIBAN = "";
+                    string transporterBankDetailsIPN = "";
+                    string transporterBankDetailsSWIFT = "";
+
+                    if (forwarderDocument.WorkDocumentId != null)
+                    {
+                        secondForwarderWorkDocument = db.WorkDocuments.Find(forwarderDocument.WorkDocumentId).Status;
+                    }
+
+                    if(forwarderDocument.TaxPayerStatusId != null)
+                    {
+                        secondForwarderTaxPayerStatus = db.TaxPayerStatus.Find(forwarderDocument.TaxPayerStatusId).Status;
+                    }
+
+                    if (transporterDocument.WorkDocumentId != null)
+                    {
+                        transporterWorkDocument = db.WorkDocuments.Find(transporterDocument.WorkDocumentId).Status;
+                    }
+
+                    if (transporterDocument.TaxPayerStatusId != null)
+                    {
+                        transporterTaxPayerStatus = db.TaxPayerStatus.Find(transporterDocument.TaxPayerStatusId).Status;
+                    }
+
+                    if(db.Forwarders.Find(forwarderDocument.Id).ForwarderBankDetail != null)
+                    {
+                        secondForwarderBankDetailsCertificateSerial = db.ForwarderBankDetails.Find(forwarderDocument.Id).CertificateSerial;
+                        secondForwarderBankDetailsCertificateNumber = db.ForwarderBankDetails.Find(forwarderDocument.Id).CertificateNamber;
+                        secondForwarderBankDetailsEDRPOU = db.ForwarderBankDetails.Find(forwarderDocument.Id).EDRPOU;
+                        secondForwarderBankDetailsAccountNumber = db.ForwarderBankDetails.Find(forwarderDocument.Id).AccountNumber;
+                        secondForwarderBankDetailsBankName = db.ForwarderBankDetails.Find(forwarderDocument.Id).BankName;
+                        secondForwarderBankDetailsMFO = db.ForwarderBankDetails.Find(forwarderDocument.Id).MFO;
+                        secondForwarderBankDetailsIBAN = db.ForwarderBankDetails.Find(forwarderDocument.Id).IBAN;
+                        secondForwarderBankDetailsIPN = db.ForwarderBankDetails.Find(forwarderDocument.Id).IPN;
+                        secondForwarderBankDetailsSWIFT = db.ForwarderBankDetails.Find(forwarderDocument.Id).SWIFT;
                     }
                     
-                    if (db.Transporters.Find(transporterFirstPersonDocument.Id).TransporterBankDetail != null)
+                    if (db.Transporters.Find(transporterDocument.Id).TransporterBankDetail != null)
                     {
-                        transporterBankDetailsCertificateNumber = db.TransporterBankDetails.Find(transporterFirstPersonDocument.Id).CertificateNamber;
-                        transporterBankDetailsEDRPOU = db.TransporterBankDetails.Find(transporterFirstPersonDocument.Id).EDRPOU;
-                        transporterBankDetailsAccountNumber = db.TransporterBankDetails.Find(transporterFirstPersonDocument.Id).AccountNumber;
-                        transporterBankDetailsBankName = db.TransporterBankDetails.Find(transporterFirstPersonDocument.Id).BankName;
-                        transporterBankDetailsMFO = db.TransporterBankDetails.Find(transporterFirstPersonDocument.Id).MFO;
-                        transporterBankDetailsIBAN = db.TransporterBankDetails.Find(transporterFirstPersonDocument.Id).IBAN;
-                        transporterBankDetailsIPN = db.TransporterBankDetails.Find(transporterFirstPersonDocument.Id).IPN;
-                        transporterBankDetailsSWIFT = db.TransporterBankDetails.Find(transporterFirstPersonDocument.Id).SWIFT;
+                        transporterBankDetailsCertificateSerial = db.TransporterBankDetails.Find(transporterDocument.Id).CertificateSerial;
+                        transporterBankDetailsCertificateNumber = db.TransporterBankDetails.Find(transporterDocument.Id).CertificateNamber;
+                        transporterBankDetailsEDRPOU = db.TransporterBankDetails.Find(transporterDocument.Id).EDRPOU;
+                        transporterBankDetailsAccountNumber = db.TransporterBankDetails.Find(transporterDocument.Id).AccountNumber;
+                        transporterBankDetailsBankName = db.TransporterBankDetails.Find(transporterDocument.Id).BankName;
+                        transporterBankDetailsMFO = db.TransporterBankDetails.Find(transporterDocument.Id).MFO;
+                        transporterBankDetailsIBAN = db.TransporterBankDetails.Find(transporterDocument.Id).IBAN;
+                        transporterBankDetailsIPN = db.TransporterBankDetails.Find(transporterDocument.Id).IPN;
+                        transporterBankDetailsSWIFT = db.TransporterBankDetails.Find(transporterDocument.Id).SWIFT;
                     }
 
                     ReplaseWordStub("{ContractDateBegin}", contractDateBegin, wordDocument);
+                    ReplaseWordStub("{ContractNumber}", title, wordDocument);
+
 
                     if (secondForwarderName == "" || secondForwarderDirector == "" || 
                         secondForwarderWorkDocument == "" || secondForwarderTaxPayerStatus == "" ||
-                        secondForwarderBankDetailsBankName == "" || secondForwarderBankDetailsAccountNumber == "" || secondForwarderBankDetailsCertificateNumber == "" || 
+                        secondForwarderBankDetailsBankName == "" || secondForwarderBankDetailsAccountNumber == "" || secondForwarderBankDetailsCertificateNumber == "" || secondForwarderBankDetailsCertificateSerial == "" ||
                         secondForwarderBankDetailsEDRPOU == "" || secondForwarderBankDetailsIBAN == "" ||
                         secondForwarderBankDetailsIPN == "" || secondForwarderBankDetailsMFO == "" || secondForwarderBankDetailsSWIFT == "")
                     {
@@ -229,17 +434,17 @@ namespace AtlantSovt
                         ReplaseWordStub("{ForwarderTaxPayerStatus}", secondForwarderTaxPayerStatus, wordDocument);
                         ReplaseWordStub("{ForwarderPhysicalAddress}", secondForwarderPhysicalAddress, wordDocument);
                         ReplaseWordStub("{ForwarderGeographycalAddress}", secondForwarderGeographycalAddress, wordDocument);
+                        ReplaseWordStub("{ForwarderCerificateSerial}", secondForwarderBankDetailsCertificateSerial, wordDocument);
                         ReplaseWordStub("{ForwarderCerificateNumber}", secondForwarderBankDetailsCertificateNumber, wordDocument);
                         ReplaseWordStub("{ForwarderEDRPOU}", secondForwarderBankDetailsEDRPOU, wordDocument);
                         ReplaseWordStub("{ForwarderAccountNumber}", secondForwarderBankDetailsAccountNumber, wordDocument);
                         ReplaseWordStub("{ForwarderBankName}", secondForwarderBankDetailsBankName, wordDocument);
                         ReplaseWordStub("{ForwarderMFO}", secondForwarderBankDetailsMFO, wordDocument);
-                        isForwarderFull = true;
                     }
 
                     if (transporterFullName == "" || transporterDirector == "" ||    transporterWorkDocument == "" || 
                         transporterTaxPayerStatus == "" || transporterBankDetailsBankName == "" || transporterBankDetailsAccountNumber == "" ||
-                        transporterBankDetailsCertificateNumber == "" || transporterBankDetailsEDRPOU == "" || transporterBankDetailsIBAN == "" ||
+                        transporterBankDetailsCertificateNumber == "" || transporterBankDetailsCertificateSerial == "" || transporterBankDetailsEDRPOU == "" || transporterBankDetailsIBAN == "" ||
                         transporterBankDetailsIPN == "" || transporterBankDetailsMFO == "" || transporterBankDetailsSWIFT == "")
                     {
                         MessageBox.Show("Заповніть спочатку всі дані перевізника");
@@ -252,19 +457,20 @@ namespace AtlantSovt
                         ReplaseWordStub("{TransporterTaxPayerStatus}", transporterTaxPayerStatus, wordDocument);
                         ReplaseWordStub("{TransporterPhysicalAddress}", transporterPhysicalAddress, wordDocument);
                         ReplaseWordStub("{TransporterGeographycalAddress}", transporterGeographycalAddress, wordDocument);
+                        ReplaseWordStub("{TransporterCerificateSerial}", transporterBankDetailsCertificateSerial, wordDocument);
                         ReplaseWordStub("{TransporterCerificateNumber}", transporterBankDetailsCertificateNumber, wordDocument);
                         ReplaseWordStub("{TransporterEDRPOU}", transporterBankDetailsEDRPOU, wordDocument);
                         ReplaseWordStub("{TransporterAccountNumber}", transporterBankDetailsAccountNumber, wordDocument);
                         ReplaseWordStub("{TransporterBankName}", transporterBankDetailsBankName, wordDocument);
                         ReplaseWordStub("{TransporterMFO}", transporterBankDetailsMFO, wordDocument);
-                        isTransporterFull = true;
                     }
 
                     if (isForwarderFull && isTransporterFull)
                     {
                         if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                         {
-                            wordDocument.SaveAs(folderBrowserDialog.SelectedPath + @"\test.docx");
+                            title = title.Replace(@"\", "_");
+                            wordDocument.SaveAs(folderBrowserDialog.SelectedPath + "\\" + title + ".docx");
                             wordApp.Visible = true;
                         }
                         else
@@ -280,7 +486,7 @@ namespace AtlantSovt
             }
             catch(Exception e)
             {
-                MessageBox.Show("Помилка: " + e);
+                MessageBox.Show("Помилка: " + e.Message);
                 wordDocument.Close(Word.WdSaveOptions.wdDoNotSaveChanges);
             }
         }

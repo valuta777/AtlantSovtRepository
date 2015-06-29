@@ -155,6 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(336, 361);
             this.Controls.Add(this.label4t);
             this.Controls.Add(this.transporterUpdateContactSelectComboBox);
@@ -167,7 +168,7 @@
             this.Controls.Add(this.label2t);
             this.Controls.Add(this.label1t);
             this.Controls.Add(this.nameTransporterLabel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TransporterContactUpdateForm";

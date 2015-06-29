@@ -32,36 +32,37 @@
             this.addTrailerTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // addTirCmrButton
+            // addTrailerButton
             // 
+            this.addTrailerButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.addTrailerButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addTrailerButton.Location = new System.Drawing.Point(101, 37);
-            this.addTrailerButton.Name = "addTirCmrButton";
-            this.addTrailerButton.Size = new System.Drawing.Size(200, 70);
+            this.addTrailerButton.Location = new System.Drawing.Point(0, 29);
+            this.addTrailerButton.Name = "addTrailerButton";
+            this.addTrailerButton.Size = new System.Drawing.Size(384, 52);
             this.addTrailerButton.TabIndex = 3;
             this.addTrailerButton.Text = "Додати";
             this.addTrailerButton.UseVisualStyleBackColor = true;
             this.addTrailerButton.Click += new System.EventHandler(this.addCargoButton_Click);
             // 
-            // addTirCmrTextBox
+            // addTrailerTextBox
             // 
             this.addTrailerTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addTrailerTextBox.Location = new System.Drawing.Point(3, 5);
-            this.addTrailerTextBox.Name = "addTirCmrTextBox";
-            this.addTrailerTextBox.Size = new System.Drawing.Size(379, 29);
+            this.addTrailerTextBox.Location = new System.Drawing.Point(0, 0);
+            this.addTrailerTextBox.Name = "addTrailerTextBox";
+            this.addTrailerTextBox.Size = new System.Drawing.Size(384, 29);
             this.addTrailerTextBox.TabIndex = 2;
             // 
-            // AddWorkDocumentForm
+            // AddTrailerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 111);
+            this.ClientSize = new System.Drawing.Size(384, 81);
             this.Controls.Add(this.addTrailerButton);
             this.Controls.Add(this.addTrailerTextBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "AddCargoForm";
+            this.Name = "AddTrailerForm";
             this.Text = "Додавання типу вантажу";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -9,14 +9,11 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("DocumentCounter")]
     public partial class DocumentCounter
     {
-        [Key]
-        [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int Id { get; set; }
+
         public long LocalDocument { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long ForeignDocument { get; set; }
     }
 }

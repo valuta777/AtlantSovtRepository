@@ -54,10 +54,11 @@
             // 
             // transporterShowFilterButton
             // 
+            this.transporterShowFilterButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.transporterShowFilterButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterShowFilterButton.Location = new System.Drawing.Point(2, 307);
+            this.transporterShowFilterButton.Location = new System.Drawing.Point(0, 305);
             this.transporterShowFilterButton.Name = "transporterShowFilterButton";
-            this.transporterShowFilterButton.Size = new System.Drawing.Size(796, 70);
+            this.transporterShowFilterButton.Size = new System.Drawing.Size(800, 75);
             this.transporterShowFilterButton.TabIndex = 1;
             this.transporterShowFilterButton.Text = "Фільтрувати";
             this.transporterShowFilterButton.UseVisualStyleBackColor = true;
@@ -74,91 +75,91 @@
             this.transporterShowFiltersSelectVehicleCheckedListBox.Size = new System.Drawing.Size(800, 124);
             this.transporterShowFiltersSelectVehicleCheckedListBox.TabIndex = 2;
             // 
-            // transporterAddFiltersSelectADCheckBox
+            // transporterShowFiltersSelectADCheckBox
             // 
             this.transporterShowFiltersSelectADCheckBox.AutoSize = true;
             this.transporterShowFiltersSelectADCheckBox.Checked = true;
             this.transporterShowFiltersSelectADCheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.transporterShowFiltersSelectADCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transporterShowFiltersSelectADCheckBox.Location = new System.Drawing.Point(725, 13);
-            this.transporterShowFiltersSelectADCheckBox.Name = "transporterAddFiltersSelectADCheckBox";
+            this.transporterShowFiltersSelectADCheckBox.Name = "transporterShowFiltersSelectADCheckBox";
             this.transporterShowFiltersSelectADCheckBox.Size = new System.Drawing.Size(50, 25);
             this.transporterShowFiltersSelectADCheckBox.TabIndex = 4;
             this.transporterShowFiltersSelectADCheckBox.Text = "АД";
             this.transporterShowFiltersSelectADCheckBox.ThreeState = true;
             this.transporterShowFiltersSelectADCheckBox.UseVisualStyleBackColor = true;
             // 
-            // transporterAddFiltersSelectZbornyCheckBox
+            // transporterShowFiltersSelectZbornyCheckBox
             // 
             this.transporterShowFiltersSelectZbornyCheckBox.AutoSize = true;
             this.transporterShowFiltersSelectZbornyCheckBox.Checked = true;
             this.transporterShowFiltersSelectZbornyCheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.transporterShowFiltersSelectZbornyCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transporterShowFiltersSelectZbornyCheckBox.Location = new System.Drawing.Point(572, 13);
-            this.transporterShowFiltersSelectZbornyCheckBox.Name = "transporterAddFiltersSelectZbornyCheckBox";
+            this.transporterShowFiltersSelectZbornyCheckBox.Name = "transporterShowFiltersSelectZbornyCheckBox";
             this.transporterShowFiltersSelectZbornyCheckBox.Size = new System.Drawing.Size(87, 25);
             this.transporterShowFiltersSelectZbornyCheckBox.TabIndex = 5;
             this.transporterShowFiltersSelectZbornyCheckBox.Text = "Збірний";
             this.transporterShowFiltersSelectZbornyCheckBox.ThreeState = true;
             this.transporterShowFiltersSelectZbornyCheckBox.UseVisualStyleBackColor = true;
             // 
-            // transporterAddFiltersSelectEKMTCheckBox
+            // transporterShowFiltersSelectEKMTCheckBox
             // 
             this.transporterShowFiltersSelectEKMTCheckBox.AutoSize = true;
             this.transporterShowFiltersSelectEKMTCheckBox.Checked = true;
             this.transporterShowFiltersSelectEKMTCheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.transporterShowFiltersSelectEKMTCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transporterShowFiltersSelectEKMTCheckBox.Location = new System.Drawing.Point(438, 13);
-            this.transporterShowFiltersSelectEKMTCheckBox.Name = "transporterAddFiltersSelectEKMTCheckBox";
+            this.transporterShowFiltersSelectEKMTCheckBox.Name = "transporterShowFiltersSelectEKMTCheckBox";
             this.transporterShowFiltersSelectEKMTCheckBox.Size = new System.Drawing.Size(68, 25);
             this.transporterShowFiltersSelectEKMTCheckBox.TabIndex = 6;
             this.transporterShowFiltersSelectEKMTCheckBox.Text = "ЕКМТ";
             this.transporterShowFiltersSelectEKMTCheckBox.ThreeState = true;
             this.transporterShowFiltersSelectEKMTCheckBox.UseVisualStyleBackColor = true;
             // 
-            // transporterAddFiltersSelectCMRCheckBox
+            // transporterShowFiltersSelectCMRCheckBox
             // 
             this.transporterShowFiltersSelectCMRCheckBox.AutoSize = true;
             this.transporterShowFiltersSelectCMRCheckBox.Checked = true;
             this.transporterShowFiltersSelectCMRCheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.transporterShowFiltersSelectCMRCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transporterShowFiltersSelectCMRCheckBox.Location = new System.Drawing.Point(310, 13);
-            this.transporterShowFiltersSelectCMRCheckBox.Name = "transporterAddFiltersSelectCMRCheckBox";
+            this.transporterShowFiltersSelectCMRCheckBox.Name = "transporterShowFiltersSelectCMRCheckBox";
             this.transporterShowFiltersSelectCMRCheckBox.Size = new System.Drawing.Size(62, 25);
             this.transporterShowFiltersSelectCMRCheckBox.TabIndex = 7;
             this.transporterShowFiltersSelectCMRCheckBox.Text = "СМР";
             this.transporterShowFiltersSelectCMRCheckBox.ThreeState = true;
             this.transporterShowFiltersSelectCMRCheckBox.UseVisualStyleBackColor = true;
             // 
-            // transporterAddFiltersSelectTURCheckBox
+            // transporterShowFiltersSelectTURCheckBox
             // 
             this.transporterShowFiltersSelectTURCheckBox.AutoSize = true;
             this.transporterShowFiltersSelectTURCheckBox.Checked = true;
             this.transporterShowFiltersSelectTURCheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.transporterShowFiltersSelectTURCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transporterShowFiltersSelectTURCheckBox.Location = new System.Drawing.Point(189, 13);
-            this.transporterShowFiltersSelectTURCheckBox.Name = "transporterAddFiltersSelectTURCheckBox";
-            this.transporterShowFiltersSelectTURCheckBox.Size = new System.Drawing.Size(55, 25);
+            this.transporterShowFiltersSelectTURCheckBox.Name = "transporterShowFiltersSelectTURCheckBox";
+            this.transporterShowFiltersSelectTURCheckBox.Size = new System.Drawing.Size(51, 25);
             this.transporterShowFiltersSelectTURCheckBox.TabIndex = 8;
-            this.transporterShowFiltersSelectTURCheckBox.Text = "ТУР";
+            this.transporterShowFiltersSelectTURCheckBox.Text = "TIR";
             this.transporterShowFiltersSelectTURCheckBox.ThreeState = true;
             this.transporterShowFiltersSelectTURCheckBox.UseVisualStyleBackColor = true;
             // 
-            // transporterAddFiltersSelectIfForwarderCheckBox
+            // transporterShowFiltersSelectIfForwarderCheckBox
             // 
             this.transporterShowFiltersSelectIfForwarderCheckBox.AutoSize = true;
             this.transporterShowFiltersSelectIfForwarderCheckBox.Checked = true;
             this.transporterShowFiltersSelectIfForwarderCheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.transporterShowFiltersSelectIfForwarderCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transporterShowFiltersSelectIfForwarderCheckBox.Location = new System.Drawing.Point(11, 13);
-            this.transporterShowFiltersSelectIfForwarderCheckBox.Name = "transporterAddFiltersSelectIfForwarderCheckBox";
+            this.transporterShowFiltersSelectIfForwarderCheckBox.Name = "transporterShowFiltersSelectIfForwarderCheckBox";
             this.transporterShowFiltersSelectIfForwarderCheckBox.Size = new System.Drawing.Size(112, 25);
             this.transporterShowFiltersSelectIfForwarderCheckBox.TabIndex = 9;
             this.transporterShowFiltersSelectIfForwarderCheckBox.Text = "Експедитор";
             this.transporterShowFiltersSelectIfForwarderCheckBox.ThreeState = true;
             this.transporterShowFiltersSelectIfForwarderCheckBox.UseVisualStyleBackColor = true;
             // 
-            // transporterAddFilterPanel
+            // transporterShowFilterPanel
             // 
             this.transporterShowFilterPanel.BackColor = System.Drawing.SystemColors.Window;
             this.transporterShowFilterPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -169,7 +170,7 @@
             this.transporterShowFilterPanel.Controls.Add(this.transporterShowFiltersSelectCMRCheckBox);
             this.transporterShowFilterPanel.Controls.Add(this.transporterShowFiltersSelectEKMTCheckBox);
             this.transporterShowFilterPanel.Location = new System.Drawing.Point(0, 252);
-            this.transporterShowFilterPanel.Name = "transporterAddFilterPanel";
+            this.transporterShowFilterPanel.Name = "transporterShowFilterPanel";
             this.transporterShowFilterPanel.Size = new System.Drawing.Size(800, 52);
             this.transporterShowFilterPanel.TabIndex = 10;
             // 
@@ -177,12 +178,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(800, 380);
             this.Controls.Add(this.transporterShowFilterPanel);
             this.Controls.Add(this.transporterShowFiltersSelectVehicleCheckedListBox);
             this.Controls.Add(this.transporterShowFilterButton);
             this.Controls.Add(this.transporterShowFiltersSelectCountryCheckedListBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TransporterShowFiltrationForm";

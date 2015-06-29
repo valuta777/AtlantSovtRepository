@@ -21,7 +21,6 @@ namespace AtlantSovt
             InitializeComponent();
             menuStrip.Renderer = new menuStripRenderer();
             yearLabel.Text = DateTime.Now.ToShortDateString();
-
         }
             //Client Forms
 
@@ -139,21 +138,26 @@ namespace AtlantSovt
                     dataControl.SelectedIndex = 12;
                 }
 
-                private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
+                private void createContractMenuItem_Click(object sender, EventArgs e)
                 {
                     dataControl.SelectedIndex = 13;
                 }
 
-                private void addOrderUkrStrip_Click(object sender, EventArgs e)
+                private void addOrderMenuItem_Click(object sender, EventArgs e)
                 {
                     dataControl.SelectedIndex = 14;
-                }
 
-                private void trackingOrderUkrStrip_Click(object sender, EventArgs e)
+                }
+                private void showTrackingMenuItem_Click(object sender, EventArgs e)
                 {
                     dataControl.SelectedIndex = 15;
                     ShowTracking();
                     trackingShowTransporterContactsDataGridView.Visible = false;
+                }
+
+                private void updateOrderMenuItem_DoubleClick(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 16;
                 }
                 #endregion
 
@@ -1563,26 +1567,26 @@ namespace AtlantSovt
         private void firstPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitTransporterFirstPersonComboBoxDocument();
-            }
+            secondPersonNameComboBox.Enabled = true;
+        }
 
         private void firstPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             firstPersonNameComboBox.Items.Clear();
             LoadTransporterFirstPersonNameComboBox();
             firstPersonNameComboBox.DroppedDown = true;
-            secondPersonNameComboBox.Enabled = true;
         }
 
         private void firstPersonDiapasonComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-                    LoadTransporterFirstPersonDiapasonCombobox();
+            LoadTransporterFirstPersonDiapasonCombobox();
         }
 
         private void secondPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
-            {
+        {
             SplitForwarderSecondPersonComboBoxDocument();
             forwarderAsComboBox.Enabled = true;
-            }
+        }
 
         private void secondPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
         {
@@ -1593,6 +1597,12 @@ namespace AtlantSovt
 
         private void createContactButton_Click(object sender, EventArgs e)
         {
+            IsForwarderAndTransporterFull();
+            if (!isForwarderFull || !isTransporterFull)
+            {
+                return;
+            }
+            AddDocument();
             CreateTransporterForwarderContract();
         }
 
@@ -1606,8 +1616,17 @@ namespace AtlantSovt
             createContactButton.Enabled = true;
         }
 
-        #endregion
+        private void contractLanguageComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            firstPersonDiapasonComboBox.Enabled = true;
+        }
 
+        private void contractLanguageComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            contractLanguageComboBox.DroppedDown = true;
+        }
+
+        #endregion
 
         //Tracking
         #region Tracking
@@ -1640,7 +1659,7 @@ namespace AtlantSovt
         }
 
         private void showTrackingDataSwitcher_CheckedChanged(object sender, EventArgs e)
-            {
+        {
             if (showTrackingDataSwitcher.Checked == true)
             {
                 showTrackingDateTimePicker.Enabled = true;
@@ -1656,7 +1675,7 @@ namespace AtlantSovt
         private void showTrackingOnlyActive_CheckedChanged(object sender, EventArgs e)
         {
             ShowTrackingSearch();
-            }
+        }
 
         private void trackingShowCloseOrder_Click(object sender, EventArgs e)
         {
@@ -1672,7 +1691,7 @@ namespace AtlantSovt
                 trackingShowAddComment.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
             }
             catch (Exception ex)
-        {
+            {
                 trackingShowAddComment.Dispose();
                 MessageBox.Show("Немає жодної заявки");
             }
@@ -2068,5 +2087,10 @@ namespace AtlantSovt
             }
         }
 
+        private void OrderAddLoadingForm1AddButton_Click(object sender, EventArgs e)
+        {
+            AddLoadingFormForm addLoadingFormForm = new AddLoadingFormForm();
+            addLoadingFormForm.Show();
+        }
     }
 }

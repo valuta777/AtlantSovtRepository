@@ -55,7 +55,7 @@
             this.addressAddCountryCodeTextBox.Location = new System.Drawing.Point(12, 89);
             this.addressAddCountryCodeTextBox.Name = "addressAddCountryCodeTextBox";
             this.addressAddCountryCodeTextBox.Size = new System.Drawing.Size(401, 29);
-            this.addressAddCountryCodeTextBox.TabIndex = 39;
+            this.addressAddCountryCodeTextBox.TabIndex = 2;
             // 
             // label50
             // 
@@ -77,7 +77,7 @@
             this.addressAddCountryNameComboBox.Location = new System.Drawing.Point(12, 33);
             this.addressAddCountryNameComboBox.Name = "addressAddCountryNameComboBox";
             this.addressAddCountryNameComboBox.Size = new System.Drawing.Size(364, 29);
-            this.addressAddCountryNameComboBox.TabIndex = 49;
+            this.addressAddCountryNameComboBox.TabIndex = 1;
             this.addressAddCountryNameComboBox.SelectedIndexChanged += new System.EventHandler(this.addressAddCountryNameComboBox_SelectedIndexChanged);
             this.addressAddCountryNameComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.addressAddCountryNameComboBox_MouseClick);
             // 
@@ -89,7 +89,9 @@
             this.addressAddCountryAddButton.Name = "addressAddCountryAddButton";
             this.addressAddCountryAddButton.Size = new System.Drawing.Size(31, 30);
             this.addressAddCountryAddButton.TabIndex = 50;
+            this.addressAddCountryAddButton.TabStop = false;
             this.addressAddCountryAddButton.UseVisualStyleBackColor = true;
+            this.addressAddCountryAddButton.Click += new System.EventHandler(this.addressAddCountryAddButton_Click);
             // 
             // label1
             // 
@@ -117,7 +119,7 @@
             this.addressAddCityNameTextBox.Location = new System.Drawing.Point(12, 145);
             this.addressAddCityNameTextBox.Name = "addressAddCityNameTextBox";
             this.addressAddCityNameTextBox.Size = new System.Drawing.Size(401, 29);
-            this.addressAddCityNameTextBox.TabIndex = 52;
+            this.addressAddCityNameTextBox.TabIndex = 3;
             // 
             // label3
             // 
@@ -135,7 +137,7 @@
             this.addressAddCityCodeTextBox.Location = new System.Drawing.Point(12, 201);
             this.addressAddCityCodeTextBox.Name = "addressAddCityCodeTextBox";
             this.addressAddCityCodeTextBox.Size = new System.Drawing.Size(401, 29);
-            this.addressAddCityCodeTextBox.TabIndex = 54;
+            this.addressAddCityCodeTextBox.TabIndex = 4;
             // 
             // label4
             // 
@@ -153,7 +155,7 @@
             this.addressAddStreetNameTextBox.Location = new System.Drawing.Point(12, 257);
             this.addressAddStreetNameTextBox.Name = "addressAddStreetNameTextBox";
             this.addressAddStreetNameTextBox.Size = new System.Drawing.Size(401, 29);
-            this.addressAddStreetNameTextBox.TabIndex = 56;
+            this.addressAddStreetNameTextBox.TabIndex = 5;
             // 
             // label5
             // 
@@ -171,7 +173,7 @@
             this.addressAddHouseNumberTextBox.Location = new System.Drawing.Point(12, 313);
             this.addressAddHouseNumberTextBox.Name = "addressAddHouseNumberTextBox";
             this.addressAddHouseNumberTextBox.Size = new System.Drawing.Size(401, 29);
-            this.addressAddHouseNumberTextBox.TabIndex = 58;
+            this.addressAddHouseNumberTextBox.TabIndex = 6;
             // 
             // label6
             // 
@@ -189,7 +191,7 @@
             this.addressAddCompanyNameTextBox.Location = new System.Drawing.Point(12, 369);
             this.addressAddCompanyNameTextBox.Name = "addressAddCompanyNameTextBox";
             this.addressAddCompanyNameTextBox.Size = new System.Drawing.Size(401, 29);
-            this.addressAddCompanyNameTextBox.TabIndex = 60;
+            this.addressAddCompanyNameTextBox.TabIndex = 7;
             // 
             // label7
             // 
@@ -207,16 +209,16 @@
             this.addressAddContactPersonTextBox.Location = new System.Drawing.Point(12, 425);
             this.addressAddContactPersonTextBox.Name = "addressAddContactPersonTextBox";
             this.addressAddContactPersonTextBox.Size = new System.Drawing.Size(401, 29);
-            this.addressAddContactPersonTextBox.TabIndex = 62;
+            this.addressAddContactPersonTextBox.TabIndex = 8;
             // 
             // addAddressButton
             // 
-            this.addAddressButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.addAddressButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.addAddressButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addAddressButton.Location = new System.Drawing.Point(122, 460);
+            this.addAddressButton.Location = new System.Drawing.Point(0, 460);
             this.addAddressButton.Name = "addAddressButton";
-            this.addAddressButton.Size = new System.Drawing.Size(174, 37);
-            this.addAddressButton.TabIndex = 64;
+            this.addAddressButton.Size = new System.Drawing.Size(425, 49);
+            this.addAddressButton.TabIndex = 9;
             this.addAddressButton.Text = "Додати адресу";
             this.addAddressButton.UseVisualStyleBackColor = true;
             this.addAddressButton.Click += new System.EventHandler(this.addAddressButton_Click);
@@ -225,6 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(425, 509);
             this.Controls.Add(this.addAddressButton);
             this.Controls.Add(this.label7);
@@ -244,8 +247,9 @@
             this.Controls.Add(this.addressAddCountryAddButton);
             this.Controls.Add(this.addressAddCountryCodeTextBox);
             this.Controls.Add(this.label50);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddAddressForm";
-            this.Text = "AddUploadAddressForm";
+            this.Text = "Додавання адреси розвантаження";
             this.Load += new System.EventHandler(this.AddAddressForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

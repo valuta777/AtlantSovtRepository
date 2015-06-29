@@ -44,7 +44,7 @@
             this.addUploadAddressButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.addUploadAddressButton.Location = new System.Drawing.Point(0, 0);
             this.addUploadAddressButton.Name = "addUploadAddressButton";
-            this.addUploadAddressButton.Size = new System.Drawing.Size(265, 46);
+            this.addUploadAddressButton.Size = new System.Drawing.Size(281, 46);
             this.addUploadAddressButton.TabIndex = 1;
             this.addUploadAddressButton.Text = "Додати нову адресу";
             this.addUploadAddressButton.UseVisualStyleBackColor = true;
@@ -64,7 +64,8 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.addUploadAdressesToOrderButton);
             this.splitContainer1.Size = new System.Drawing.Size(564, 46);
-            this.splitContainer1.SplitterDistance = 265;
+            this.splitContainer1.SplitterDistance = 281;
+            this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 3;
             // 
             // addUploadAdressesToOrderButton
@@ -73,7 +74,7 @@
             this.addUploadAdressesToOrderButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.addUploadAdressesToOrderButton.Location = new System.Drawing.Point(0, 0);
             this.addUploadAdressesToOrderButton.Name = "addUploadAdressesToOrderButton";
-            this.addUploadAdressesToOrderButton.Size = new System.Drawing.Size(295, 46);
+            this.addUploadAdressesToOrderButton.Size = new System.Drawing.Size(281, 46);
             this.addUploadAdressesToOrderButton.TabIndex = 2;
             this.addUploadAdressesToOrderButton.Text = "Додати до заявки";
             this.addUploadAdressesToOrderButton.UseVisualStyleBackColor = true;

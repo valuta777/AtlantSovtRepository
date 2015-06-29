@@ -101,6 +101,7 @@ namespace AtlantSovt
                         AccountNumber = b.AccountNumber,
                         EDRPOU = b.EDRPOU,
                         IPN = b.IPN,
+                        CertificateSerial = b.CertificateSerial,
                         CertificateNumber = b.CertificateNamber,
                         SWIFT = b.SWIFT,
                         IBAN = b.IBAN
@@ -112,9 +113,10 @@ namespace AtlantSovt
                     forwarderBankDetailsDataGridView.Columns[2].HeaderText = "Номер рахунку";
                     forwarderBankDetailsDataGridView.Columns[3].HeaderText = "ЕДРПОУ";
                     forwarderBankDetailsDataGridView.Columns[4].HeaderText = "IPN";
-                    forwarderBankDetailsDataGridView.Columns[5].HeaderText = "Номер свідоцтва";
-                    forwarderBankDetailsDataGridView.Columns[6].HeaderText = "SWIFT";
-                    forwarderBankDetailsDataGridView.Columns[7].HeaderText = "IBAN";
+                    forwarderBankDetailsDataGridView.Columns[5].HeaderText = "Серія свідоцтва";
+                    forwarderBankDetailsDataGridView.Columns[6].HeaderText = "Номер свідоцтва";
+                    forwarderBankDetailsDataGridView.Columns[7].HeaderText = "SWIFT";
+                    forwarderBankDetailsDataGridView.Columns[8].HeaderText = "IBAN";
                 }
                 catch (Exception ex)
                 {

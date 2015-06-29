@@ -95,7 +95,7 @@ namespace AtlantSovt
                     trackingShowCommentDataGridView.Columns[1].HeaderText = "Дата додавання";
                     trackingShowCommentDataGridView.Columns[2].HeaderText = "Дата останньої зміни";
 
-                    trackingShowCommentDataGridView.Columns[1].Width = 50;
+                    trackingShowCommentDataGridView.Columns[1].Width = 150;
                     trackingShowCommentDataGridView.Columns[2].Width = 150;
 
                     var query3 =

@@ -42,7 +42,7 @@ namespace AtlantSovt
 
         private void addCustomsAddressButton_Click(object sender, EventArgs e)
         {
-            AddAddressForm addCustomsAddressForm = new AddAddressForm(client, "CustomsAddress");
+            AddAddressForm addCustomsAddressForm = new AddAddressForm(client, 3);
             addCustomsAddressForm.Show();
         }
 

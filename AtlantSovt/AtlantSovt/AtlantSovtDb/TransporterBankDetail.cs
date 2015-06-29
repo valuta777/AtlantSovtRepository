@@ -27,6 +27,9 @@ namespace AtlantSovt.AtlantSovtDb
         public string IPN { get; set; }
 
         [StringLength(50)]
+        public string CertificateSerial { get; set; }
+
+        [StringLength(50)]
         public string CertificateNamber { get; set; }
 
         [StringLength(50)]

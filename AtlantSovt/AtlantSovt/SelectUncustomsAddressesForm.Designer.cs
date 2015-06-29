@@ -44,7 +44,7 @@
             this.addUncustomsAddressesButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.addUncustomsAddressesButton.Location = new System.Drawing.Point(0, 0);
             this.addUncustomsAddressesButton.Name = "addUncustomsAddressesButton";
-            this.addUncustomsAddressesButton.Size = new System.Drawing.Size(265, 46);
+            this.addUncustomsAddressesButton.Size = new System.Drawing.Size(281, 46);
             this.addUncustomsAddressesButton.TabIndex = 1;
             this.addUncustomsAddressesButton.Text = "Додати нову адресу";
             this.addUncustomsAddressesButton.UseVisualStyleBackColor = true;
@@ -64,7 +64,8 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.addUncustomsAddressesToOrderButton);
             this.splitContainer1.Size = new System.Drawing.Size(564, 46);
-            this.splitContainer1.SplitterDistance = 265;
+            this.splitContainer1.SplitterDistance = 281;
+            this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 3;
             // 
             // addUncustomsAddressesToOrderButton
@@ -73,7 +74,7 @@
             this.addUncustomsAddressesToOrderButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.addUncustomsAddressesToOrderButton.Location = new System.Drawing.Point(0, 0);
             this.addUncustomsAddressesToOrderButton.Name = "addUncustomsAddressesToOrderButton";
-            this.addUncustomsAddressesToOrderButton.Size = new System.Drawing.Size(295, 46);
+            this.addUncustomsAddressesToOrderButton.Size = new System.Drawing.Size(281, 46);
             this.addUncustomsAddressesToOrderButton.TabIndex = 2;
             this.addUncustomsAddressesToOrderButton.Text = "Додати до заявки";
             this.addUncustomsAddressesToOrderButton.UseVisualStyleBackColor = true;
@@ -90,14 +91,14 @@
             this.uncustomsAddressesListBox.TabIndex = 4;
             this.uncustomsAddressesListBox.DoubleClick += new System.EventHandler(this.unсustomsAddressListBox_DoubleClick);
             // 
-            // SelectCustomsAddressesForm
+            // SelectUncustomsAddressesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 274);
             this.Controls.Add(this.uncustomsAddressesListBox);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "SelectCustomsAddressesForm";
+            this.Name = "SelectUncustomsAddressesForm";
             this.Text = "Виберіть адреси розмитнення";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

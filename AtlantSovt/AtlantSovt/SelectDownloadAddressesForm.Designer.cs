@@ -38,13 +38,13 @@
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // addUncustomsAddressesButton
+            // addDownloadAddressButton
             // 
             this.addDownloadAddressButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addDownloadAddressButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.addDownloadAddressButton.Location = new System.Drawing.Point(0, 0);
-            this.addDownloadAddressButton.Name = "addUncustomsAddressesButton";
-            this.addDownloadAddressButton.Size = new System.Drawing.Size(265, 46);
+            this.addDownloadAddressButton.Name = "addDownloadAddressButton";
+            this.addDownloadAddressButton.Size = new System.Drawing.Size(281, 46);
             this.addDownloadAddressButton.TabIndex = 1;
             this.addDownloadAddressButton.Text = "Додати нову адресу";
             this.addDownloadAddressButton.UseVisualStyleBackColor = true;
@@ -64,33 +64,34 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.addDownloadAddressToOrderButton);
             this.splitContainer1.Size = new System.Drawing.Size(564, 46);
-            this.splitContainer1.SplitterDistance = 265;
+            this.splitContainer1.SplitterDistance = 281;
+            this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 3;
             // 
-            // addUncustomsAddressesToOrderButton
+            // addDownloadAddressToOrderButton
             // 
             this.addDownloadAddressToOrderButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addDownloadAddressToOrderButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.addDownloadAddressToOrderButton.Location = new System.Drawing.Point(0, 0);
-            this.addDownloadAddressToOrderButton.Name = "addUncustomsAddressesToOrderButton";
-            this.addDownloadAddressToOrderButton.Size = new System.Drawing.Size(295, 46);
+            this.addDownloadAddressToOrderButton.Name = "addDownloadAddressToOrderButton";
+            this.addDownloadAddressToOrderButton.Size = new System.Drawing.Size(281, 46);
             this.addDownloadAddressToOrderButton.TabIndex = 2;
             this.addDownloadAddressToOrderButton.Text = "Додати до заявки";
             this.addDownloadAddressToOrderButton.UseVisualStyleBackColor = true;
             this.addDownloadAddressToOrderButton.Click += new System.EventHandler(this.addDownloadAddressToOrderButton_Click);
             // 
-            // uncustomsAddressesListBox
+            // downloadAddresssListBox
             // 
             this.downloadAddresssListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.downloadAddresssListBox.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.downloadAddresssListBox.FormattingEnabled = true;
             this.downloadAddresssListBox.Location = new System.Drawing.Point(0, 0);
-            this.downloadAddresssListBox.Name = "uncustomsAddressesListBox";
+            this.downloadAddresssListBox.Name = "downloadAddresssListBox";
             this.downloadAddresssListBox.Size = new System.Drawing.Size(564, 228);
             this.downloadAddresssListBox.TabIndex = 4;
             this.downloadAddresssListBox.DoubleClick += new System.EventHandler(this.downloadAddressListBox_DoubleClick);
             // 
-            // SelectUploadAddressesForm
+            // SelectDownloadAddressesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

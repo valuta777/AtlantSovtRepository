@@ -51,6 +51,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.clientCertificateSerialTextBox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // clientBankNameTextBox
@@ -58,7 +60,7 @@
             this.clientBankNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientBankNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientBankNameTextBox.Location = new System.Drawing.Point(12, 33);
+            this.clientBankNameTextBox.Location = new System.Drawing.Point(13, 33);
             this.clientBankNameTextBox.Name = "clientBankNameTextBox";
             this.clientBankNameTextBox.Size = new System.Drawing.Size(536, 25);
             this.clientBankNameTextBox.TabIndex = 0;
@@ -68,7 +70,7 @@
             this.clientMFOTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientMFOTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientMFOTextBox.Location = new System.Drawing.Point(12, 80);
+            this.clientMFOTextBox.Location = new System.Drawing.Point(13, 80);
             this.clientMFOTextBox.Name = "clientMFOTextBox";
             this.clientMFOTextBox.Size = new System.Drawing.Size(536, 25);
             this.clientMFOTextBox.TabIndex = 1;
@@ -78,7 +80,7 @@
             this.clientAccountNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientAccountNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientAccountNumberTextBox.Location = new System.Drawing.Point(12, 127);
+            this.clientAccountNumberTextBox.Location = new System.Drawing.Point(13, 127);
             this.clientAccountNumberTextBox.Name = "clientAccountNumberTextBox";
             this.clientAccountNumberTextBox.Size = new System.Drawing.Size(536, 25);
             this.clientAccountNumberTextBox.TabIndex = 2;
@@ -88,7 +90,7 @@
             this.clientEDRPOUTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientEDRPOUTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientEDRPOUTextBox.Location = new System.Drawing.Point(12, 174);
+            this.clientEDRPOUTextBox.Location = new System.Drawing.Point(13, 174);
             this.clientEDRPOUTextBox.Name = "clientEDRPOUTextBox";
             this.clientEDRPOUTextBox.Size = new System.Drawing.Size(536, 25);
             this.clientEDRPOUTextBox.TabIndex = 3;
@@ -98,7 +100,7 @@
             this.clientIPNTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientIPNTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientIPNTextBox.Location = new System.Drawing.Point(12, 221);
+            this.clientIPNTextBox.Location = new System.Drawing.Point(13, 221);
             this.clientIPNTextBox.Name = "clientIPNTextBox";
             this.clientIPNTextBox.Size = new System.Drawing.Size(536, 25);
             this.clientIPNTextBox.TabIndex = 4;
@@ -108,36 +110,36 @@
             this.clientCertificateNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientCertificateNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientCertificateNumberTextBox.Location = new System.Drawing.Point(12, 268);
+            this.clientCertificateNumberTextBox.Location = new System.Drawing.Point(13, 316);
             this.clientCertificateNumberTextBox.Name = "clientCertificateNumberTextBox";
             this.clientCertificateNumberTextBox.Size = new System.Drawing.Size(536, 25);
-            this.clientCertificateNumberTextBox.TabIndex = 5;
+            this.clientCertificateNumberTextBox.TabIndex = 6;
             // 
             // clientSWIFTTextBox
             // 
             this.clientSWIFTTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientSWIFTTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientSWIFTTextBox.Location = new System.Drawing.Point(12, 315);
+            this.clientSWIFTTextBox.Location = new System.Drawing.Point(13, 363);
             this.clientSWIFTTextBox.Name = "clientSWIFTTextBox";
             this.clientSWIFTTextBox.Size = new System.Drawing.Size(536, 25);
-            this.clientSWIFTTextBox.TabIndex = 6;
+            this.clientSWIFTTextBox.TabIndex = 7;
             // 
             // clientIBANTextBox
             // 
             this.clientIBANTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clientIBANTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clientIBANTextBox.Location = new System.Drawing.Point(12, 362);
+            this.clientIBANTextBox.Location = new System.Drawing.Point(13, 410);
             this.clientIBANTextBox.Name = "clientIBANTextBox";
             this.clientIBANTextBox.Size = new System.Drawing.Size(536, 25);
-            this.clientIBANTextBox.TabIndex = 7;
+            this.clientIBANTextBox.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Location = new System.Drawing.Point(9, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 21);
             this.label3.TabIndex = 8;
@@ -147,7 +149,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 56);
+            this.label1.Location = new System.Drawing.Point(9, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 21);
             this.label1.TabIndex = 9;
@@ -157,7 +159,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 103);
+            this.label2.Location = new System.Drawing.Point(9, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 21);
             this.label2.TabIndex = 10;
@@ -167,17 +169,17 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 150);
+            this.label4.Location = new System.Drawing.Point(9, 150);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 21);
+            this.label4.Size = new System.Drawing.Size(72, 21);
             this.label4.TabIndex = 11;
-            this.label4.Text = "ЕДРПОУ";
+            this.label4.Text = "ЄДРПОУ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 197);
+            this.label5.Location = new System.Drawing.Point(9, 197);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 21);
             this.label5.TabIndex = 12;
@@ -187,7 +189,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 244);
+            this.label6.Location = new System.Drawing.Point(9, 292);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(132, 21);
             this.label6.TabIndex = 13;
@@ -197,7 +199,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 291);
+            this.label7.Location = new System.Drawing.Point(9, 339);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 21);
             this.label7.TabIndex = 14;
@@ -207,7 +209,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 338);
+            this.label8.Location = new System.Drawing.Point(9, 386);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 21);
             this.label8.TabIndex = 15;
@@ -215,11 +217,12 @@
             // 
             // addClientBankDetailsButton
             // 
+            this.addClientBankDetailsButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.addClientBankDetailsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addClientBankDetailsButton.Location = new System.Drawing.Point(11, 387);
+            this.addClientBankDetailsButton.Location = new System.Drawing.Point(0, 443);
             this.addClientBankDetailsButton.Name = "addClientBankDetailsButton";
-            this.addClientBankDetailsButton.Size = new System.Drawing.Size(536, 48);
-            this.addClientBankDetailsButton.TabIndex = 16;
+            this.addClientBankDetailsButton.Size = new System.Drawing.Size(560, 48);
+            this.addClientBankDetailsButton.TabIndex = 9;
             this.addClientBankDetailsButton.Text = "Додати";
             this.addClientBankDetailsButton.UseVisualStyleBackColor = true;
             this.addClientBankDetailsButton.Click += new System.EventHandler(this.addClientBankDetailsButton_Click);
@@ -230,7 +233,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label9.Location = new System.Drawing.Point(105, 9);
+            this.label9.Location = new System.Drawing.Point(103, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(17, 21);
             this.label9.TabIndex = 26;
@@ -242,7 +245,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label10.Location = new System.Drawing.Point(55, 57);
+            this.label10.Location = new System.Drawing.Point(53, 57);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(17, 21);
             this.label10.TabIndex = 27;
@@ -254,7 +257,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label11.Location = new System.Drawing.Point(127, 103);
+            this.label11.Location = new System.Drawing.Point(125, 103);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(17, 21);
             this.label11.TabIndex = 28;
@@ -266,7 +269,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label12.Location = new System.Drawing.Point(77, 150);
+            this.label12.Location = new System.Drawing.Point(75, 150);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(17, 21);
             this.label12.TabIndex = 29;
@@ -278,7 +281,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label13.Location = new System.Drawing.Point(49, 197);
+            this.label13.Location = new System.Drawing.Point(41, 197);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(17, 21);
             this.label13.TabIndex = 30;
@@ -288,20 +291,43 @@
             // 
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.BackColor = System.Drawing.SystemColors.Control;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label14.Location = new System.Drawing.Point(13, 436);
+            this.label14.Location = new System.Drawing.Point(4, 474);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(163, 13);
             this.label14.TabIndex = 32;
             this.label14.Text = "* - одне з обов\'язкових полів";
             // 
+            // clientCertificateSerialTextBox
+            // 
+            this.clientCertificateSerialTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientCertificateSerialTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientCertificateSerialTextBox.Location = new System.Drawing.Point(13, 271);
+            this.clientCertificateSerialTextBox.Name = "clientCertificateSerialTextBox";
+            this.clientCertificateSerialTextBox.Size = new System.Drawing.Size(536, 25);
+            this.clientCertificateSerialTextBox.TabIndex = 5;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(9, 247);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(123, 21);
+            this.label15.TabIndex = 34;
+            this.label15.Text = "Серія свідоцтва";
+            // 
             // ClientBankDetailsAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 458);
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(560, 491);
+            this.Controls.Add(this.clientCertificateSerialTextBox);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.addClientBankDetailsButton);
@@ -325,7 +351,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ClientBankDetailsAddForm";
@@ -360,5 +386,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox clientCertificateSerialTextBox;
+        private System.Windows.Forms.Label label15;
     }
 }

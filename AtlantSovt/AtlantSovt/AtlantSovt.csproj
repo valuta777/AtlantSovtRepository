@@ -53,6 +53,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCountryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCountryForm.Designer.cs">
+      <DependentUpon>AddCountryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddLoadingFormForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddLoadingFormForm.Designer.cs">
+      <DependentUpon>AddLoadingFormForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddOrderDenyForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,7 +137,6 @@
     <Compile Include="AtlantSovtDb\Client.cs" />
     <Compile Include="AtlantSovtDb\ClientBankDetail.cs" />
     <Compile Include="AtlantSovtDb\ClientContact.cs" />
-    <Compile Include="AtlantSovtDb\ClientForwarderContract.cs" />
     <Compile Include="AtlantSovtDb\Country.cs" />
     <Compile Include="AtlantSovtDb\Cube.cs" />
     <Compile Include="AtlantSovtDb\CustomsAddress.cs" />
@@ -348,6 +359,12 @@
     <Compile Include="TransporterShowFiltrationForm.Designer.cs">
       <DependentUpon>TransporterShowFiltrationForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddCountryForm.resx">
+      <DependentUpon>AddCountryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddLoadingFormForm.resx">
+      <DependentUpon>AddLoadingFormForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddOrderDenyForm.resx">
       <DependentUpon>AddOrderDenyForm.cs</DependentUpon>
     </EmbeddedResource>

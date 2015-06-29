@@ -38,13 +38,13 @@
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // addUncustomsAddressesButton
+            // addCustomsAddressesButton
             // 
             this.addCustomsAddressesButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addCustomsAddressesButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.addCustomsAddressesButton.Location = new System.Drawing.Point(0, 0);
-            this.addCustomsAddressesButton.Name = "addUncustomsAddressesButton";
-            this.addCustomsAddressesButton.Size = new System.Drawing.Size(265, 46);
+            this.addCustomsAddressesButton.Name = "addCustomsAddressesButton";
+            this.addCustomsAddressesButton.Size = new System.Drawing.Size(281, 46);
             this.addCustomsAddressesButton.TabIndex = 1;
             this.addCustomsAddressesButton.Text = "Додати нову адресу";
             this.addCustomsAddressesButton.UseVisualStyleBackColor = true;
@@ -64,28 +64,29 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.addCustomsAddressesToOrderButton);
             this.splitContainer1.Size = new System.Drawing.Size(564, 46);
-            this.splitContainer1.SplitterDistance = 265;
+            this.splitContainer1.SplitterDistance = 281;
+            this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 3;
             // 
-            // addUncustomsAddressesToOrderButton
+            // addCustomsAddressesToOrderButton
             // 
             this.addCustomsAddressesToOrderButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addCustomsAddressesToOrderButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.addCustomsAddressesToOrderButton.Location = new System.Drawing.Point(0, 0);
-            this.addCustomsAddressesToOrderButton.Name = "addUncustomsAddressesToOrderButton";
-            this.addCustomsAddressesToOrderButton.Size = new System.Drawing.Size(295, 46);
+            this.addCustomsAddressesToOrderButton.Name = "addCustomsAddressesToOrderButton";
+            this.addCustomsAddressesToOrderButton.Size = new System.Drawing.Size(281, 46);
             this.addCustomsAddressesToOrderButton.TabIndex = 2;
             this.addCustomsAddressesToOrderButton.Text = "Додати до заявки";
             this.addCustomsAddressesToOrderButton.UseVisualStyleBackColor = true;
             this.addCustomsAddressesToOrderButton.Click += new System.EventHandler(this.addCustomsAddressToOrderButton_Click);
             // 
-            // uncustomsAddressesListBox
+            // customsAddressesListBox
             // 
             this.customsAddressesListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customsAddressesListBox.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.customsAddressesListBox.FormattingEnabled = true;
             this.customsAddressesListBox.Location = new System.Drawing.Point(0, 0);
-            this.customsAddressesListBox.Name = "uncustomsAddressesListBox";
+            this.customsAddressesListBox.Name = "customsAddressesListBox";
             this.customsAddressesListBox.Size = new System.Drawing.Size(564, 228);
             this.customsAddressesListBox.TabIndex = 4;
             this.customsAddressesListBox.DoubleClick += new System.EventHandler(this.сustomsAddressListBox_DoubleClick);
