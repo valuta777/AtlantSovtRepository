@@ -82,6 +82,7 @@
             // 
             // customsAddressesListBox
             // 
+            this.customsAddressesListBox.CheckOnClick = true;
             this.customsAddressesListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customsAddressesListBox.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.customsAddressesListBox.FormattingEnabled = true;
@@ -98,6 +99,7 @@
             this.ClientSize = new System.Drawing.Size(564, 274);
             this.Controls.Add(this.customsAddressesListBox);
             this.Controls.Add(this.splitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SelectCustomsAddressesForm";
             this.Text = "Виберіть адреси замитнення";
             this.splitContainer1.Panel1.ResumeLayout(false);

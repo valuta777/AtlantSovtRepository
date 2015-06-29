@@ -82,6 +82,7 @@
             // 
             // uncustomsAddressesListBox
             // 
+            this.uncustomsAddressesListBox.CheckOnClick = true;
             this.uncustomsAddressesListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uncustomsAddressesListBox.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.uncustomsAddressesListBox.FormattingEnabled = true;
@@ -98,6 +99,7 @@
             this.ClientSize = new System.Drawing.Size(564, 274);
             this.Controls.Add(this.uncustomsAddressesListBox);
             this.Controls.Add(this.splitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SelectUncustomsAddressesForm";
             this.Text = "Виберіть адреси розмитнення";
             this.splitContainer1.Panel1.ResumeLayout(false);

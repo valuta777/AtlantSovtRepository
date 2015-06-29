@@ -58,6 +58,7 @@ namespace AtlantSovt
                     Director = t.Director,
                     PhysicalAddress = t.PhysicalAddress,
                     GeographyAddress = t.GeographyAddress,
+                    ContractType = (t.ContractType == true) ? "Оригінал" : "Факс",
                     TaxPayerStatusId = t.TaxPayerStatu.Status,
                     WorkDocumentId = t.WorkDocument.Status,
                 };
@@ -69,8 +70,9 @@ namespace AtlantSovt
                 transporterShowDataGridView.Columns[3].HeaderText = "П.І.Б. Директора";
                 transporterShowDataGridView.Columns[4].HeaderText = "Фізична адреса";
                 transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
-                transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
-                transporterShowDataGridView.Columns[7].HeaderText = "На основі";
+                transporterShowDataGridView.Columns[6].HeaderText = "Стан договору";
+                transporterShowDataGridView.Columns[7].HeaderText = "Статус платника податку";
+                transporterShowDataGridView.Columns[8].HeaderText = "На основі";
 
 
             } transporterShowDataGridView.Update();
@@ -7122,7 +7124,15 @@ namespace AtlantSovt
                     var new_Director = directorTransporterAddTextBox.Text;
                     var new_PhysicalAddress = physicalAddressTransporterAddTextBox.Text;
                     var new_GeographyAddress = geographyAddressTransporterAddTextBox.Text;
-                    var new_ContractType = originalTransporterAddCheckBox.Checked;
+                    bool new_ContractType;
+                    if (faxTransporterAddCheckBox.Checked)
+                    {
+                        new_ContractType = false;
+                    }
+                    else
+                    {
+                        new_ContractType = true;
+                    }
                     var new_Comment = commentTransporterAddTextBox.Text;
 
                     bool? new_IfForwarder = null;
