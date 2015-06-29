@@ -32,37 +32,38 @@
             this.addRegularyDelayTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // addTirCmrButton
+            // addRegularyDelayButton
             // 
+            this.addRegularyDelayButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.addRegularyDelayButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addRegularyDelayButton.Location = new System.Drawing.Point(101, 37);
-            this.addRegularyDelayButton.Name = "addTirCmrButton";
-            this.addRegularyDelayButton.Size = new System.Drawing.Size(200, 70);
+            this.addRegularyDelayButton.Location = new System.Drawing.Point(0, 29);
+            this.addRegularyDelayButton.Name = "addRegularyDelayButton";
+            this.addRegularyDelayButton.Size = new System.Drawing.Size(384, 52);
             this.addRegularyDelayButton.TabIndex = 3;
             this.addRegularyDelayButton.Text = "Додати";
             this.addRegularyDelayButton.UseVisualStyleBackColor = true;
             this.addRegularyDelayButton.Click += new System.EventHandler(this.addCargoButton_Click);
             // 
-            // addTirCmrTextBox
+            // addRegularyDelayTextBox
             // 
             this.addRegularyDelayTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addRegularyDelayTextBox.Location = new System.Drawing.Point(3, 5);
-            this.addRegularyDelayTextBox.Name = "addTirCmrTextBox";
-            this.addRegularyDelayTextBox.Size = new System.Drawing.Size(379, 29);
+            this.addRegularyDelayTextBox.Location = new System.Drawing.Point(0, 0);
+            this.addRegularyDelayTextBox.Name = "addRegularyDelayTextBox";
+            this.addRegularyDelayTextBox.Size = new System.Drawing.Size(384, 29);
             this.addRegularyDelayTextBox.TabIndex = 2;
             // 
-            // AddWorkDocumentForm
+            // AddRegularyDelayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 111);
+            this.ClientSize = new System.Drawing.Size(384, 81);
             this.Controls.Add(this.addRegularyDelayButton);
             this.Controls.Add(this.addRegularyDelayTextBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "AddCargoForm";
-            this.Text = "Додавання типу вантажу";
+            this.Name = "AddRegularyDelayForm";
+            this.Text = "Додавання нормативних простоїв";
             this.ResumeLayout(false);
             this.PerformLayout();
 

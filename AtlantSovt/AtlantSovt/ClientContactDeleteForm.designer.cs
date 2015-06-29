@@ -37,7 +37,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label27.Location = new System.Drawing.Point(12, 9);
+            this.label27.Location = new System.Drawing.Point(0, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(133, 21);
             this.label27.TabIndex = 65;
@@ -50,9 +50,9 @@
             this.ClientUpdateSelectDeleteContactComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.ClientUpdateSelectDeleteContactComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.ClientUpdateSelectDeleteContactComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ClientUpdateSelectDeleteContactComboBox.Location = new System.Drawing.Point(10, 33);
+            this.ClientUpdateSelectDeleteContactComboBox.Location = new System.Drawing.Point(0, 24);
             this.ClientUpdateSelectDeleteContactComboBox.Name = "ClientUpdateSelectDeleteContactComboBox";
-            this.ClientUpdateSelectDeleteContactComboBox.Size = new System.Drawing.Size(562, 29);
+            this.ClientUpdateSelectDeleteContactComboBox.Size = new System.Drawing.Size(499, 29);
             this.ClientUpdateSelectDeleteContactComboBox.Sorted = true;
             this.ClientUpdateSelectDeleteContactComboBox.TabIndex = 64;
             this.ClientUpdateSelectDeleteContactComboBox.SelectedIndexChanged += new System.EventHandler(this.ClientUpdateSelectDeleteContactComboBox_SelectedIndexChanged);
@@ -60,12 +60,12 @@
             // 
             // DeleteClientContactButton
             // 
-            this.DeleteClientContactButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DeleteClientContactButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.DeleteClientContactButton.Enabled = false;
             this.DeleteClientContactButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DeleteClientContactButton.Location = new System.Drawing.Point(172, 77);
+            this.DeleteClientContactButton.Location = new System.Drawing.Point(0, 52);
             this.DeleteClientContactButton.Name = "DeleteClientContactButton";
-            this.DeleteClientContactButton.Size = new System.Drawing.Size(237, 53);
+            this.DeleteClientContactButton.Size = new System.Drawing.Size(499, 52);
             this.DeleteClientContactButton.TabIndex = 66;
             this.DeleteClientContactButton.Text = "Видалити контакт";
             this.DeleteClientContactButton.UseVisualStyleBackColor = true;
@@ -75,11 +75,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 142);
+            this.ClientSize = new System.Drawing.Size(499, 104);
             this.Controls.Add(this.DeleteClientContactButton);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.ClientUpdateSelectDeleteContactComboBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ClientContactDeleteForm";

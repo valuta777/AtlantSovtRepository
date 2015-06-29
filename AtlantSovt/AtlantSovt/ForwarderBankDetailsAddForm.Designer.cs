@@ -113,7 +113,7 @@
             this.forwarderCertificateNumberTextBox.Location = new System.Drawing.Point(13, 316);
             this.forwarderCertificateNumberTextBox.Name = "forwarderCertificateNumberTextBox";
             this.forwarderCertificateNumberTextBox.Size = new System.Drawing.Size(536, 25);
-            this.forwarderCertificateNumberTextBox.TabIndex = 5;
+            this.forwarderCertificateNumberTextBox.TabIndex = 6;
             // 
             // forwarderSWIFTTextBox
             // 
@@ -123,7 +123,7 @@
             this.forwarderSWIFTTextBox.Location = new System.Drawing.Point(13, 363);
             this.forwarderSWIFTTextBox.Name = "forwarderSWIFTTextBox";
             this.forwarderSWIFTTextBox.Size = new System.Drawing.Size(536, 25);
-            this.forwarderSWIFTTextBox.TabIndex = 6;
+            this.forwarderSWIFTTextBox.TabIndex = 7;
             // 
             // forwarderIBANTextBox
             // 
@@ -133,7 +133,7 @@
             this.forwarderIBANTextBox.Location = new System.Drawing.Point(13, 410);
             this.forwarderIBANTextBox.Name = "forwarderIBANTextBox";
             this.forwarderIBANTextBox.Size = new System.Drawing.Size(536, 25);
-            this.forwarderIBANTextBox.TabIndex = 7;
+            this.forwarderIBANTextBox.TabIndex = 8;
             // 
             // label3
             // 
@@ -222,7 +222,7 @@
             this.addClientBankDetailsButton.Location = new System.Drawing.Point(0, 443);
             this.addClientBankDetailsButton.Name = "addClientBankDetailsButton";
             this.addClientBankDetailsButton.Size = new System.Drawing.Size(560, 48);
-            this.addClientBankDetailsButton.TabIndex = 16;
+            this.addClientBankDetailsButton.TabIndex = 9;
             this.addClientBankDetailsButton.Text = "Додати";
             this.addClientBankDetailsButton.UseVisualStyleBackColor = true;
             this.addClientBankDetailsButton.Click += new System.EventHandler(this.addForwarderBankDetailsButton_Click);
@@ -231,7 +231,7 @@
             // 
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.BackColor = System.Drawing.SystemColors.Control;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.label14.Location = new System.Drawing.Point(2, 476);
@@ -308,7 +308,7 @@
             this.forwarderCertificateSerialTextBox.Location = new System.Drawing.Point(13, 271);
             this.forwarderCertificateSerialTextBox.Name = "forwarderCertificateSerialTextBox";
             this.forwarderCertificateSerialTextBox.Size = new System.Drawing.Size(536, 25);
-            this.forwarderCertificateSerialTextBox.TabIndex = 39;
+            this.forwarderCertificateSerialTextBox.TabIndex = 5;
             // 
             // label15
             // 
@@ -324,6 +324,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(560, 491);
             this.Controls.Add(this.forwarderCertificateSerialTextBox);
             this.Controls.Add(this.label14);
@@ -350,7 +351,7 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label15);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ForwarderBankDetailsAddForm";

@@ -35,17 +35,18 @@
             // addTaxPayerStatusTextBox
             // 
             this.addTaxPayerStatusTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addTaxPayerStatusTextBox.Location = new System.Drawing.Point(2, 5);
+            this.addTaxPayerStatusTextBox.Location = new System.Drawing.Point(0, 0);
             this.addTaxPayerStatusTextBox.Name = "addTaxPayerStatusTextBox";
-            this.addTaxPayerStatusTextBox.Size = new System.Drawing.Size(379, 29);
+            this.addTaxPayerStatusTextBox.Size = new System.Drawing.Size(386, 29);
             this.addTaxPayerStatusTextBox.TabIndex = 0;
             // 
             // addTaxPayerStatusButton
             // 
+            this.addTaxPayerStatusButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.addTaxPayerStatusButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addTaxPayerStatusButton.Location = new System.Drawing.Point(100, 38);
+            this.addTaxPayerStatusButton.Location = new System.Drawing.Point(0, 29);
             this.addTaxPayerStatusButton.Name = "addTaxPayerStatusButton";
-            this.addTaxPayerStatusButton.Size = new System.Drawing.Size(200, 70);
+            this.addTaxPayerStatusButton.Size = new System.Drawing.Size(384, 52);
             this.addTaxPayerStatusButton.TabIndex = 1;
             this.addTaxPayerStatusButton.Text = "Додати";
             this.addTaxPayerStatusButton.UseVisualStyleBackColor = true;
@@ -55,10 +56,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 111);
+            this.ClientSize = new System.Drawing.Size(384, 81);
             this.Controls.Add(this.addTaxPayerStatusButton);
             this.Controls.Add(this.addTaxPayerStatusTextBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddTaxPayerStatusForm";

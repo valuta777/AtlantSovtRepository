@@ -54,7 +54,7 @@
             this.transporterUpdateFilterSelectVehicleCheckedListBox.FormattingEnabled = true;
             this.transporterUpdateFilterSelectVehicleCheckedListBox.HorizontalExtent = 3;
             this.transporterUpdateFilterSelectVehicleCheckedListBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.transporterUpdateFilterSelectVehicleCheckedListBox.Location = new System.Drawing.Point(0, 153);
+            this.transporterUpdateFilterSelectVehicleCheckedListBox.Location = new System.Drawing.Point(0, 152);
             this.transporterUpdateFilterSelectVehicleCheckedListBox.MultiColumn = true;
             this.transporterUpdateFilterSelectVehicleCheckedListBox.Name = "transporterUpdateFilterSelectVehicleCheckedListBox";
             this.transporterUpdateFilterSelectVehicleCheckedListBox.Size = new System.Drawing.Size(801, 148);
@@ -62,10 +62,11 @@
             // 
             // transporterUpdateFilterSelectButton
             // 
+            this.transporterUpdateFilterSelectButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.transporterUpdateFilterSelectButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateFilterSelectButton.Location = new System.Drawing.Point(559, 307);
+            this.transporterUpdateFilterSelectButton.Location = new System.Drawing.Point(0, 303);
             this.transporterUpdateFilterSelectButton.Name = "transporterUpdateFilterSelectButton";
-            this.transporterUpdateFilterSelectButton.Size = new System.Drawing.Size(239, 70);
+            this.transporterUpdateFilterSelectButton.Size = new System.Drawing.Size(801, 77);
             this.transporterUpdateFilterSelectButton.TabIndex = 105;
             this.transporterUpdateFilterSelectButton.Text = "Додати";
             this.transporterUpdateFilterSelectButton.UseVisualStyleBackColor = true;
@@ -75,11 +76,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(801, 380);
             this.Controls.Add(this.transporterUpdateFilterSelectButton);
             this.Controls.Add(this.transporterUpdateFilterSelectCountryCheckedListBox);
             this.Controls.Add(this.transporterUpdateFilterSelectVehicleCheckedListBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TransporterCountryUpdateVehicleSelectForm";

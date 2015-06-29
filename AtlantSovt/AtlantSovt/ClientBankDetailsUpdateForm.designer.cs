@@ -112,7 +112,7 @@
             this.certificateNumberUpdateClientBankDetailsTextBox.Location = new System.Drawing.Point(13, 316);
             this.certificateNumberUpdateClientBankDetailsTextBox.Name = "certificateNumberUpdateClientBankDetailsTextBox";
             this.certificateNumberUpdateClientBankDetailsTextBox.Size = new System.Drawing.Size(536, 25);
-            this.certificateNumberUpdateClientBankDetailsTextBox.TabIndex = 5;
+            this.certificateNumberUpdateClientBankDetailsTextBox.TabIndex = 6;
             this.certificateNumberUpdateClientBankDetailsTextBox.TextChanged += new System.EventHandler(this.certificateNumberUpdateClientBankDetailsTextBox_TextChanged);
             // 
             // SWIFTUpdateClientBankDetailsTextBox
@@ -123,7 +123,7 @@
             this.SWIFTUpdateClientBankDetailsTextBox.Location = new System.Drawing.Point(13, 363);
             this.SWIFTUpdateClientBankDetailsTextBox.Name = "SWIFTUpdateClientBankDetailsTextBox";
             this.SWIFTUpdateClientBankDetailsTextBox.Size = new System.Drawing.Size(536, 25);
-            this.SWIFTUpdateClientBankDetailsTextBox.TabIndex = 6;
+            this.SWIFTUpdateClientBankDetailsTextBox.TabIndex = 7;
             this.SWIFTUpdateClientBankDetailsTextBox.TextChanged += new System.EventHandler(this.SWIFTUpdateClientBankDetailsTextBox_TextChanged);
             // 
             // IBANUpdateClientBankDetailsTextBox
@@ -134,7 +134,7 @@
             this.IBANUpdateClientBankDetailsTextBox.Location = new System.Drawing.Point(13, 410);
             this.IBANUpdateClientBankDetailsTextBox.Name = "IBANUpdateClientBankDetailsTextBox";
             this.IBANUpdateClientBankDetailsTextBox.Size = new System.Drawing.Size(536, 25);
-            this.IBANUpdateClientBankDetailsTextBox.TabIndex = 7;
+            this.IBANUpdateClientBankDetailsTextBox.TabIndex = 8;
             this.IBANUpdateClientBankDetailsTextBox.TextChanged += new System.EventHandler(this.IBANUpdateClientBankDetailsTextBox_TextChanged);
             // 
             // label3
@@ -224,7 +224,7 @@
             this.updateClientBankDetailsButton.Location = new System.Drawing.Point(0, 443);
             this.updateClientBankDetailsButton.Name = "updateClientBankDetailsButton";
             this.updateClientBankDetailsButton.Size = new System.Drawing.Size(560, 48);
-            this.updateClientBankDetailsButton.TabIndex = 16;
+            this.updateClientBankDetailsButton.TabIndex = 9;
             this.updateClientBankDetailsButton.Text = "Змінити";
             this.updateClientBankDetailsButton.UseVisualStyleBackColor = true;
             this.updateClientBankDetailsButton.Click += new System.EventHandler(this.updateClientBankDetailsButton_Click);
@@ -237,7 +237,7 @@
             this.certificateSerialUpdateClientBankDetailsTextBox.Location = new System.Drawing.Point(13, 271);
             this.certificateSerialUpdateClientBankDetailsTextBox.Name = "certificateSerialUpdateClientBankDetailsTextBox";
             this.certificateSerialUpdateClientBankDetailsTextBox.Size = new System.Drawing.Size(536, 25);
-            this.certificateSerialUpdateClientBankDetailsTextBox.TabIndex = 17;
+            this.certificateSerialUpdateClientBankDetailsTextBox.TabIndex = 5;
             this.certificateSerialUpdateClientBankDetailsTextBox.TextChanged += new System.EventHandler(this.certificateSerialUpdateClientBankDetailsTextBox_TextChanged);
             // 
             // label9
@@ -254,6 +254,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(560, 491);
             this.Controls.Add(this.certificateSerialUpdateClientBankDetailsTextBox);
             this.Controls.Add(this.IBANUpdateClientBankDetailsTextBox);
@@ -274,7 +275,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label9);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ClientBankDetailsUpdateForm";

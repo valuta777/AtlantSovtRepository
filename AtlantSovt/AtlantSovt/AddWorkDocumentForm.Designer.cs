@@ -32,22 +32,23 @@
             this.addWorkDocumentTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // addTirCmrButton
+            // addWorkDocumentButton
             // 
+            this.addWorkDocumentButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.addWorkDocumentButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addWorkDocumentButton.Location = new System.Drawing.Point(101, 37);
-            this.addWorkDocumentButton.Name = "addTirCmrButton";
-            this.addWorkDocumentButton.Size = new System.Drawing.Size(200, 70);
+            this.addWorkDocumentButton.Location = new System.Drawing.Point(0, 29);
+            this.addWorkDocumentButton.Name = "addWorkDocumentButton";
+            this.addWorkDocumentButton.Size = new System.Drawing.Size(384, 52);
             this.addWorkDocumentButton.TabIndex = 3;
             this.addWorkDocumentButton.Text = "Додати";
             this.addWorkDocumentButton.UseVisualStyleBackColor = true;
             this.addWorkDocumentButton.Click += new System.EventHandler(this.addWorkDocumentButton_Click);
             // 
-            // addTirCmrTextBox
+            // addWorkDocumentTextBox
             // 
             this.addWorkDocumentTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addWorkDocumentTextBox.Location = new System.Drawing.Point(3, 5);
-            this.addWorkDocumentTextBox.Name = "addTirCmrTextBox";
+            this.addWorkDocumentTextBox.Location = new System.Drawing.Point(0, 0);
+            this.addWorkDocumentTextBox.Name = "addWorkDocumentTextBox";
             this.addWorkDocumentTextBox.Size = new System.Drawing.Size(379, 29);
             this.addWorkDocumentTextBox.TabIndex = 2;
             // 
@@ -55,10 +56,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 111);
+            this.ClientSize = new System.Drawing.Size(384, 81);
             this.Controls.Add(this.addWorkDocumentButton);
             this.Controls.Add(this.addWorkDocumentTextBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddWorkDocumentForm";

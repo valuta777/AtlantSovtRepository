@@ -113,7 +113,7 @@
             this.transporterCertificateNumberTextBox.Location = new System.Drawing.Point(13, 316);
             this.transporterCertificateNumberTextBox.Name = "transporterCertificateNumberTextBox";
             this.transporterCertificateNumberTextBox.Size = new System.Drawing.Size(536, 25);
-            this.transporterCertificateNumberTextBox.TabIndex = 5;
+            this.transporterCertificateNumberTextBox.TabIndex = 6;
             // 
             // transporterSWIFTTextBox
             // 
@@ -123,7 +123,7 @@
             this.transporterSWIFTTextBox.Location = new System.Drawing.Point(13, 363);
             this.transporterSWIFTTextBox.Name = "transporterSWIFTTextBox";
             this.transporterSWIFTTextBox.Size = new System.Drawing.Size(536, 25);
-            this.transporterSWIFTTextBox.TabIndex = 6;
+            this.transporterSWIFTTextBox.TabIndex = 7;
             // 
             // transporterIBANTextBox
             // 
@@ -133,7 +133,7 @@
             this.transporterIBANTextBox.Location = new System.Drawing.Point(13, 410);
             this.transporterIBANTextBox.Name = "transporterIBANTextBox";
             this.transporterIBANTextBox.Size = new System.Drawing.Size(536, 25);
-            this.transporterIBANTextBox.TabIndex = 7;
+            this.transporterIBANTextBox.TabIndex = 8;
             // 
             // label3
             // 
@@ -222,7 +222,7 @@
             this.addTransporterBankDetailsButton.Location = new System.Drawing.Point(0, 443);
             this.addTransporterBankDetailsButton.Name = "addTransporterBankDetailsButton";
             this.addTransporterBankDetailsButton.Size = new System.Drawing.Size(560, 48);
-            this.addTransporterBankDetailsButton.TabIndex = 16;
+            this.addTransporterBankDetailsButton.TabIndex = 9;
             this.addTransporterBankDetailsButton.Text = "Додати";
             this.addTransporterBankDetailsButton.UseVisualStyleBackColor = true;
             this.addTransporterBankDetailsButton.Click += new System.EventHandler(this.addTransporterBankDetailsButton_Click);
@@ -231,7 +231,7 @@
             // 
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.BackColor = System.Drawing.SystemColors.Control;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.label14.Location = new System.Drawing.Point(4, 474);
@@ -308,7 +308,7 @@
             this.transporterCertificateSerialTextBox.Location = new System.Drawing.Point(13, 270);
             this.transporterCertificateSerialTextBox.Name = "transporterCertificateSerialTextBox";
             this.transporterCertificateSerialTextBox.Size = new System.Drawing.Size(536, 25);
-            this.transporterCertificateSerialTextBox.TabIndex = 39;
+            this.transporterCertificateSerialTextBox.TabIndex = 5;
             // 
             // label15
             // 
@@ -324,6 +324,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(560, 491);
             this.Controls.Add(this.transporterCertificateSerialTextBox);
             this.Controls.Add(this.label15);
@@ -350,7 +351,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TransporterBankDetailsAddForm";

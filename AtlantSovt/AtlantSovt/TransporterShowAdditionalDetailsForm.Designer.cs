@@ -36,7 +36,7 @@
             // 
             // transporterShowAdditionalDetailsGridView
             // 
-            this.transporterShowAdditionalDetailsGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.transporterShowAdditionalDetailsGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.transporterShowAdditionalDetailsGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.transporterShowAdditionalDetailsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.transporterShowAdditionalDetailsGridView.Dock = System.Windows.Forms.DockStyle.Top;
@@ -48,7 +48,7 @@
             // transporterShowVehicleAdditionalDetailsGridView
             // 
             this.transporterShowVehicleAdditionalDetailsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.transporterShowVehicleAdditionalDetailsGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.transporterShowVehicleAdditionalDetailsGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.transporterShowVehicleAdditionalDetailsGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.transporterShowVehicleAdditionalDetailsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.transporterShowVehicleAdditionalDetailsGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -61,10 +61,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(645, 219);
             this.Controls.Add(this.transporterShowVehicleAdditionalDetailsGridView);
             this.Controls.Add(this.transporterShowAdditionalDetailsGridView);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TransporterShowAdditionalDetailsForm";
