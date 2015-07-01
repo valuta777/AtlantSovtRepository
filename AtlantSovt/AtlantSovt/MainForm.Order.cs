@@ -37,9 +37,9 @@ namespace AtlantSovt
         LoadingForm loadingForm1OrderAdd;
         LoadingForm loadingForm2OrderAdd;
 
-        DateTime? orderDate;
-        DateTime? orderUploadDate;
-        DateTime? orderDeliveryDate;
+        DateTime? orderAddDate;
+        DateTime? orderAddUploadDate;
+        DateTime? orderAddDeliveryDate;
 
         SelectUploadAddressesForm selectUploadAddressesForm;
         SelectDownloadAddressesForm selectDownloadAddressesForm;
@@ -66,9 +66,9 @@ namespace AtlantSovt
                     RegularyDelaysId = (regularyDelayOrderAdd != null) ? (long?)regularyDelayOrderAdd.Id : null,
                     TrailerId = (trailerOrderAdd != null) ? (long?)trailerOrderAdd.Id : null,
                     TransporterId = (transporterOrderAdd != null) ? (long?)transporterOrderAdd.Id : null,
-                    Date = orderDate ?? null,
-                    DownloadDate = orderDeliveryDate ?? null,
-                    UploadDate = orderUploadDate ?? null,
+                    Date = orderAddDate ?? null,
+                    DownloadDate = orderAddDeliveryDate ?? null,
+                    UploadDate = orderAddUploadDate ?? null,
                     State = null,
                     YorU = ((OrderAddYOrUComboBox.SelectedIndex != -1) || (OrderAddYOrUComboBox.Text != "")) ? ((OrderAddYOrUComboBox.SelectedIndex == 0) ? "У" : "І") : null
                 };
@@ -199,15 +199,15 @@ namespace AtlantSovt
     
         void SetOrderDate()
         {
-            orderDate = OrderAddDateSelectDateTimePicker.Value;
+            orderAddDate = OrderAddDateSelectDateTimePicker.Value;
         }
         void SetOrderUploadDate()
         {
-            orderUploadDate = OrderAddUploadDateTimePicker.Value;
+            orderAddUploadDate = OrderAddUploadDateTimePicker.Value;
         }
         void SetOrderDeliveryDate()
         {
-            orderDeliveryDate = OrderAddDeliveryDateTimePicker.Value;
+            orderAddDeliveryDate = OrderAddDeliveryDateTimePicker.Value;
         }
 
         //Client

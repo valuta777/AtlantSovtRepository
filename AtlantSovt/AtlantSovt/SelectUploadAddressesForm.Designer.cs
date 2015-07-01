@@ -50,17 +50,17 @@
             this.addUploadAddressButton.UseVisualStyleBackColor = true;
             this.addUploadAddressButton.Click += new System.EventHandler(this.addUploadAddressButton_Click);
             // 
-            // splitContainer1
+            // OrderUpdateSplitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.splitContainer1.Location = new System.Drawing.Point(0, 228);
-            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Name = "OrderUpdateSplitContainer1";
             // 
-            // splitContainer1.Panel1
+            // OrderUpdateSplitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.addUploadAddressButton);
             // 
-            // splitContainer1.Panel2
+            // OrderUpdateSplitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.addUploadAdressesToOrderButton);
             this.splitContainer1.Size = new System.Drawing.Size(564, 46);

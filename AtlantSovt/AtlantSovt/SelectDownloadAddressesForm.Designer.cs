@@ -50,17 +50,17 @@
             this.addDownloadAddressButton.UseVisualStyleBackColor = true;
             this.addDownloadAddressButton.Click += new System.EventHandler(this.addDownloadAddressButton_Click);
             // 
-            // splitContainer1
+            // OrderUpdateSplitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.splitContainer1.Location = new System.Drawing.Point(0, 228);
-            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Name = "OrderUpdateSplitContainer1";
             // 
-            // splitContainer1.Panel1
+            // OrderUpdateSplitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.addDownloadAddressButton);
             // 
-            // splitContainer1.Panel2
+            // OrderUpdateSplitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.addDownloadAddressToOrderButton);
             this.splitContainer1.Size = new System.Drawing.Size(564, 46);
