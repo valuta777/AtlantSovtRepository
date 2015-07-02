@@ -25,7 +25,7 @@ namespace AtlantSovt.AtlantSovtDb
 
         public bool? PorZ { get; set; }
 
-        public bool? IsLocal { get; set; }
+        public byte? Language { get; set; }
 
         public virtual Forwarder Forwarder { get; set; }
 

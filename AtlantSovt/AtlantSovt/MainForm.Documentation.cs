@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
 using System.Data.Entity;
+using Microsoft.Office.Interop.Word;
 
 namespace AtlantSovt
 {
@@ -18,7 +19,7 @@ namespace AtlantSovt
         DocumentCounter documentCount;
         TransporterForwarderContract contract;
 
-        bool isLocal;
+        int contractLanguage;
         bool isForwarderFull;
         bool isTransporterFull;
 
@@ -268,12 +269,12 @@ namespace AtlantSovt
                 new
                 {
                     Id = c.Id,
-                    ContractNumber = c.ContractNumber + @"\" + c.ContractDataBegin.Value.Year +  @"\" + ((c.IsLocal == true) ? ((c.PorZ == true) ? "З" : "П") : "P"),
+                    ContractNumber = c.ContractNumber + @"\" + c.ContractDataBegin.Value.Year +  @"\" + ((c.Language == 1) ? ((c.PorZ == true) ? "З" : "П") : "P"),
                     Forwarder = c.Forwarder.Name,
                     Transporter = c.Transporter.FullName,
                     ContractDateBegin = c.ContractDataBegin,
                     ContractDateEnd = c.ContractDataEnd,
-                    Language = (c.IsLocal == true) ? "Українська" : "Англійська/Російська",
+                    Language = (c.Language == 1) ? "Українська" : (c.Language == 2) ? "Англійська/Російська" : "Німецька/Російська",
                     PorZ = (c.PorZ == true) ? "Замовника" : "Перевізника"
                 };
 
@@ -310,7 +311,7 @@ namespace AtlantSovt
                     Transporter = c.Transporter.FullName,
                     ContractDateBegin = c.ContractDataBegin,
                     ContractDateEnd = c.ContractDataEnd,
-                    Language = (c.IsLocal == true) ? "Українська" : "Англійська/Російська",
+                    Language = (c.Language == 1) ? "Українська" : (c.Language == 2) ? "Англійська/Російська" : "Німецька/Російська",
                     PorZ = (c.PorZ == true) ? "Замовника" : "Перевізника"
                 };
 
@@ -400,7 +401,7 @@ namespace AtlantSovt
                 documentCount = new DocumentCounter();
                 try
                 {
-                    if (isLocal)
+                    if (contractLanguage == 1)
                     {
                         documentCount = db.DocumentCounters.Find(1);
                         documentCount.LocalDocument += 1;
@@ -427,16 +428,22 @@ namespace AtlantSovt
                     contract = new TransporterForwarderContract();
                     contract.ForwarderId = forwarderDocument.Id;
                     contract.TransporterId = transporterDocument.Id;
-                    if (isLocal)
+                    if (contractLanguage == 1)
                     {
                         contract.ContractNumber = documentCount.LocalDocument;
-                        contract.IsLocal = true;
+                        contract.Language = 1;
                     }
-                    else
+                    else if (contractLanguage == 2)
                     {
                         contract.ContractNumber = documentCount.ForeignDocument;
-                        contract.IsLocal = false;
+                        contract.Language = 2;
                     }
+                    else if (contractLanguage == 3)
+                    {
+                        contract.ContractNumber = documentCount.ForeignDocument;
+                        contract.Language = 3;
+                    }
+
                     contract.ContractDataBegin = contractBeginDateTimePicker.Value.Date;
                     contract.ContractDataEnd = contractBeginDateTimePicker.Value.AddYears(1);
                     contract.PorZ = (forwarderAsComboBox.SelectedIndex == 0) ? true : false;
@@ -454,13 +461,13 @@ namespace AtlantSovt
         {
             var wordApp = new Word.Application();
             wordApp.Visible = false;
-            var wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((isLocal) ? @"Resources\ukrDocumentationTransporterForwarder.docx" : @"Resources\intDocumentationTransporterForwarder.docx")).Replace("\\bin\\Debug", ""));
+            var wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((contractLanguage == 1) ? @"Resources\ukrDocumentationTransporterForwarder.docx" : (contractLanguage == 2) ? @"Resources\engDocumentationTransporterForwarder.docx" : @"Resources\gerDocumentationTransporterForwarder.docx")).Replace("\\bin\\Debug", ""));
             try
             {
                 using (var db = new AtlantSovtContext())
                 {
                     string title;
-                    if (isLocal)
+                    if (contractLanguage == 1)
                     {
                         title = contract.ContractNumber + @"\" + contract.ContractDataBegin.Value.Year + @"\" + ((contract.PorZ == true) ? "З" : "П");
                     }
@@ -550,14 +557,19 @@ namespace AtlantSovt
                         transporterBankDetailsSWIFT = (db.TransporterBankDetails.Find(transporterDocument.Id).SWIFT == "" || db.TransporterBankDetails.Find(transporterDocument.Id).SWIFT == null) ? "_______________" : db.TransporterBankDetails.Find(transporterDocument.Id).SWIFT;
                     }
 
-                    if (isLocal)
+                    if (contractLanguage == 1)
                     {
                         ReplaseWordStub("{ContractDateBegin}", contractDateBegin.ToLongDateString(), wordDocument);
                     }
-                    else
+                    else if (contractLanguage == 2)
                     {
                         ReplaseWordStub("{ContractDateBegin}", contractDateBegin.ToString("D",new System.Globalization.CultureInfo("ru-RU")), wordDocument);
-                        ReplaseWordStub("{intContractDateBegin}", contractDateBegin.ToString("D",new System.Globalization.CultureInfo("en-US")), wordDocument);
+                        ReplaseWordStub("{engContractDateBegin}", contractDateBegin.ToString("D",new System.Globalization.CultureInfo("en-US")), wordDocument);
+                    }
+                    else if (contractLanguage == 3)
+                    {
+                        ReplaseWordStub("{ContractDateBegin}", contractDateBegin.ToString("D", new System.Globalization.CultureInfo("ru-RU")), wordDocument);
+                        ReplaseWordStub("{gerContractDateBegin}", contractDateBegin.ToString("D", new System.Globalization.CultureInfo("de-DE")), wordDocument);
                     }
                     ReplaseWordStub("{ContractNumber}", title, wordDocument);
 
@@ -625,7 +637,7 @@ namespace AtlantSovt
 
                 if (contract != null)
                 {
-                    if (MessageBox.Show("Видалити договір " + contract.ContractNumber + @"\" + contract.ContractDataBegin.Value.Year + @"\" + ((contract.IsLocal == true) ? ((contract.PorZ == true) ? "З" : "П") : "P") + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Видалити договір " + contract.ContractNumber + @"\" + contract.ContractDataBegin.Value.Year + @"\" + ((contract.Language == 1) ? ((contract.PorZ == true) ? "З" : "П") : "P") + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         try
                         {
@@ -652,22 +664,24 @@ namespace AtlantSovt
 
         void OpenWordDoc()
         {
+            var wordApp = new Word.Application();
+            Document wordDocument = null;
             try
             {
                 var ClikedId = Convert.ToInt32(contractShowDataGridView.CurrentRow.Cells[0].Value);
 
                 using (var db = new AtlantSovtContext())
                 {
+
                     contract = db.TransporterForwarderContracts.Find(ClikedId);
+                    wordApp.Visible = false;
+                    wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((contract.Language == 1) ? @"Resources\ukrDocumentationTransporterForwarder.docx" : (contract.Language == 2) ? @"Resources\engDocumentationTransporterForwarder.docx" : @"Resources\gerDocumentationTransporterForwarder.docx")).Replace("\\bin\\Debug", ""));
+
 
                     if (contract != null)
                     {
-                        var wordApp = new Word.Application();
-                        wordApp.Visible = false;
-                        var wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((contract.IsLocal == true) ? @"Resources\ukrDocumentationTransporterForwarder.docx" : @"Resources\intDocumentationTransporterForwarder.docx")).Replace("\\bin\\Debug", ""));
-
                         string title;
-                        if (contract.IsLocal == true)
+                        if (contract.Language == 1)
                         {
                             title = contract.ContractNumber + @"\" + contract.ContractDataBegin.Value.Year + @"\" + ((contract.PorZ == true) ? "З" : "П");
                         }
@@ -757,15 +771,21 @@ namespace AtlantSovt
                             transporterBankDetailsSWIFT = (db.TransporterBankDetails.Find(contract.Transporter.Id).SWIFT == "" || db.TransporterBankDetails.Find(contract.Transporter.Id).SWIFT == null) ? "_______________" : db.TransporterBankDetails.Find(contract.Transporter.Id).SWIFT;
                         }
 
-                        if (contract.IsLocal == true)
+                        if (contract.Language == 1)
                         {
                             ReplaseWordStub("{ContractDateBegin}", contract.ContractDataBegin.Value.ToLongDateString(), wordDocument);
                         }
-                        else
+                        else if (contract.Language == 2)
                         {
                             ReplaseWordStub("{ContractDateBegin}", contract.ContractDataBegin.Value.ToString("D", new System.Globalization.CultureInfo("ru-RU")), wordDocument);
-                            ReplaseWordStub("{intContractDateBegin}", contract.ContractDataBegin.Value.ToString("D", new System.Globalization.CultureInfo("en-US")), wordDocument);
+                            ReplaseWordStub("{engContractDateBegin}", contract.ContractDataBegin.Value.ToString("D", new System.Globalization.CultureInfo("en-US")), wordDocument);
                         }
+                        else if (contract.Language == 3)
+                        {
+                            ReplaseWordStub("{ContractDateBegin}", contract.ContractDataBegin.Value.ToString("D", new System.Globalization.CultureInfo("ru-RU")), wordDocument);
+                            ReplaseWordStub("{gerContractDateBegin}", contract.ContractDataBegin.Value.ToString("D", new System.Globalization.CultureInfo("de-DE")), wordDocument);
+                        }
+
                         ReplaseWordStub("{ContractNumber}", title, wordDocument);
 
                         ReplaseWordStub("{ForwarderName}", secondForwarderName, wordDocument);
@@ -808,11 +828,17 @@ namespace AtlantSovt
                     }
                 }
             }
-            catch (Exception e)
+            catch (NullReferenceException nullClickedId)
             {
                 contractShowOpenDocButton.Enabled = false;
                 contractShowDeleteContractButton.Enabled = false;
+                contractShowTransporterContactDataGridView.Visible = false;
                 MessageBox.Show("Немає жодного договору");
+            }
+            catch(System.Runtime.InteropServices.COMException wordException)
+            {
+                wordDocument.Close(Word.WdSaveOptions.wdDoNotSaveChanges);
+                MessageBox.Show("Помилка, спробуйте ще раз");
             }
 
         }

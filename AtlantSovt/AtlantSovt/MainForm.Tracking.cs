@@ -12,7 +12,6 @@ namespace AtlantSovt
 {
     partial class MainForm
     {
-
         int TrackingClikedId = 0;
         bool isDatePickerEnabled = false;
 
@@ -32,7 +31,7 @@ namespace AtlantSovt
                     ClientName = o.Client.Name,
                     TransporterName = o.Transporter.FullName,
                     DownloadDate = o.DownloadDate,
-                    State = (o.State == true) ? "Відкрита" : "Закрита"  
+                    State = (!o.State.HasValue) ? "Не створена"  : ((o.State == false) ? "Закрита" : "Відкрита")  
 
                 };
 
@@ -148,9 +147,19 @@ namespace AtlantSovt
                         db.SaveChanges();
                         ShowTrackingSearch();
                     }
-                    else
+                    else if(order.State == false)
                     {
                         MessageBox.Show("Заявка вже закрита");
+                    }
+                    else if(!order.State.HasValue)
+                    {
+                        if (MessageBox.Show("Заявка ще не створена, все рівно закрити?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            order.State = false;
+                            db.Entry(order).State = EntityState.Modified;
+                            db.SaveChanges();
+                            ShowTrackingSearch();
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -186,7 +195,7 @@ namespace AtlantSovt
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = o.DownloadDate,
-                       State = o.State
+                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита")  
 
                    };
 
@@ -215,7 +224,7 @@ namespace AtlantSovt
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = o.DownloadDate,
-                       State = o.State
+                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита")  
 
                    };
 
@@ -243,7 +252,7 @@ namespace AtlantSovt
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = o.DownloadDate,
-                       State = o.State
+                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита")  
 
                    };
 
@@ -272,7 +281,7 @@ namespace AtlantSovt
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = o.DownloadDate,
-                       State = o.State
+                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита")  
 
                    };
 
@@ -300,7 +309,7 @@ namespace AtlantSovt
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = o.DownloadDate,
-                       State = o.State
+                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита")  
 
                    };
 
@@ -329,7 +338,7 @@ namespace AtlantSovt
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = o.DownloadDate,
-                       State = o.State
+                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита")  
 
                    };
 
@@ -357,7 +366,7 @@ namespace AtlantSovt
                       ClientName = o.Client.Name,
                       TransporterName = o.Transporter.FullName,
                       DownloadDate = o.DownloadDate,
-                      State = o.State
+                      State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита")  
 
                   };
 
@@ -386,7 +395,7 @@ namespace AtlantSovt
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = o.DownloadDate,
-                       State = o.State
+                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита")  
 
                    };
 

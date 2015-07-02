@@ -1627,11 +1627,15 @@ namespace AtlantSovt
         {
             if (contractLanguageComboBox.SelectedIndex == 0)
             {
-                isLocal = true;
+                contractLanguage = 1;
             }
-            else
+            else if (contractLanguageComboBox.SelectedIndex == 1)
             {
-                isLocal = false;
+                contractLanguage = 2;
+            }
+            else if (contractLanguageComboBox.SelectedIndex == 2)
+            {
+                contractLanguage = 3;
             }
             firstPersonDiapasonComboBox.Enabled = true;
         }
@@ -1693,6 +1697,7 @@ namespace AtlantSovt
             ShowTrackingInfo();
             trackingShowAddCommentButton.Enabled = true;
             trackingShowCloseOrderButton.Enabled = true;
+            showTrackingCreateOrderDoc.Enabled = true;
         }
 
         private void trackingShowSearchButton_Click(object sender, EventArgs e)
@@ -2156,6 +2161,11 @@ namespace AtlantSovt
         private void OrderAddYOrUComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddYOrUComboBox.DroppedDown = true;
+        }
+
+        private void showTrackingCreateOrderDoc_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
