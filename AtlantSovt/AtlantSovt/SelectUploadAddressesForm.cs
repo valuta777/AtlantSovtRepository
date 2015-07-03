@@ -15,11 +15,119 @@ namespace AtlantSovt
     {
         Client client;
         Order order;
+        bool IsUpdate;
         public SelectUploadAddressesForm(Client new_client)
         {
             InitializeComponent();
             client = new_client;
+            LoadClientUploadAddresses();
         }
+        public SelectUploadAddressesForm(Client new_client, Order new_order)
+        {
+            InitializeComponent();
+            client = new_client;
+            order = new_order;
+            LoadClientUploadAddresses();
+            CheckSelectedUploadAddresses();
+            IsUpdate = true;
+        }
+
+        private void CheckSelectedUploadAddresses()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var getAddreses = from UA in db.Orders.Find(order.Id).OrderUploadAdresses
+                                  orderby UA.UploadAddress.Id
+                                  select UA.UploadAddress.Id;
+
+                List<long> GetAddresses = getAddreses.ToList();
+                List<int> index = new List<int>();
+
+                if (GetAddresses.Count != 0)
+                {
+                    foreach (var ItemAddress in uploadAddressListBox.Items)
+                    {
+                        string fullText = ItemAddress.ToString();
+                        string[] tempAddress = fullText.Split(new char[] { '[', ']' });
+                        long tempAddressId = Convert.ToInt64(tempAddress[1]);
+
+                        if (GetAddresses.Contains(tempAddressId))
+                        {
+                            index.Add(uploadAddressListBox.Items.IndexOf(ItemAddress));
+                        }
+                    }
+                    foreach (int i in index)
+                    {
+                        uploadAddressListBox.SetItemChecked(i, true);
+                    }
+                    uploadAddressListBox.Update();
+                }
+            }
+        }
+
+        private void UpdateUploadAddresses()
+        {
+            if (order != null)
+            {
+                try
+                {
+                    using (var db = new AtlantSovtContext())
+                    {
+                        var getAddreses = from address in db.Orders.Find(order.Id).OrderUploadAdresses
+                                          select address.AddressId;
+
+                        List<long> GetAddreses = getAddreses.ToList();
+                        List<long> getCheked = new List<long>();
+                        foreach (var ItemAddress in uploadAddressListBox.CheckedItems)
+                        {
+                            string fullText = ItemAddress.ToString();
+                            string[] tempAddress = fullText.Split(new char[] { '[', ']' });
+                            long tempAddressId = Convert.ToInt64(tempAddress[1]);
+                            getCheked.Add(tempAddressId);
+                        }
+                        List<long> newAddreses = getCheked.Except(GetAddreses).ToList();
+                        List<long> deletedAdresses = GetAddreses.Except(getCheked).ToList();
+
+                        if (deletedAdresses.Count != 0 || newAddreses.Count != 0)
+                        {
+                            if (deletedAdresses.Count != 0)
+                            {
+                                foreach (var deleteItem in deletedAdresses)
+                                {
+                                    UploadAddress Address = db.UploadAddresses.Find(deleteItem);
+
+                                    OrderUploadAdress OrderAddress = db.Orders.Find(order.Id).OrderUploadAdresses.Where(Oua => Oua.AddressId == Address.Id).FirstOrDefault();
+
+                                    db.OrderUploadAdresses.Remove(OrderAddress);
+                                }
+                                MessageBox.Show("Успішно видалено " + deletedAdresses.Count + " Адрес розвантаження ");
+                            }
+
+                            if (newAddreses.Count != 0)
+                            {
+                                foreach (var newItem in newAddreses)
+                                {
+                                    UploadAddress Address = db.UploadAddresses.Find(newItem);
+
+                                    OrderUploadAdress new_OrderAddress = new OrderUploadAdress
+                                    {
+                                        AddressId = Address.Id
+                                    };
+                                    db.Orders.Find(order.Id).OrderUploadAdresses.Add(new_OrderAddress);
+                                }
+                                MessageBox.Show("Успішно додано " + newAddreses.Count + " Адрес завантаження");
+                            }
+                            db.SaveChanges();
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Помилка!!", e.ToString());
+                }
+            }
+        }
+
         void LoadClientUploadAddresses()
         {
             using (var db = new AtlantSovtContext())
@@ -48,7 +156,15 @@ namespace AtlantSovt
 
         private void addUploadAdressesToOrderButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            if (IsUpdate)
+            {
+                UpdateUploadAddresses();
+                this.Dispose();
+            }
+            else
+            {
+                this.Hide();
+            }
         }
 
         internal void UploadAddressesSelect(Order new_order)
@@ -88,6 +204,5 @@ namespace AtlantSovt
                 }
             }
         }
-
     }
 }

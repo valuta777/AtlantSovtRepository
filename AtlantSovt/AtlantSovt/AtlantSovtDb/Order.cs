@@ -64,6 +64,8 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long? IndexNumber { get; set; }
 
+        public byte? Language { get; set; }
+
         public virtual AdditionalTerm AdditionalTerm { get; set; }
 
         public virtual Cargo Cargo { get; set; }
@@ -76,13 +78,13 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual ICollection<ForwarderOrder> ForwarderOrders { get; set; }
 
-        public virtual TirCmr TirCmr { get; set; }
-
         public virtual OrderDeny OrderDeny { get; set; }
 
         public virtual Payment Payment { get; set; }
 
         public virtual RegularyDelay RegularyDelay { get; set; }
+
+        public virtual TirCmr TirCmr { get; set; }
 
         public virtual Trailer Trailer { get; set; }
 
