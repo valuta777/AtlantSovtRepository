@@ -16,7 +16,6 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long Id { get; set; }
 
-        [StringLength(50)]
         public string Type { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }

@@ -8,7 +8,7 @@ namespace AtlantSovt.AtlantSovtDb
     public partial class AtlantSovtContext : DbContext
     {
         public AtlantSovtContext()
-            : base("name=AtlantSovtContext")
+            : base("name=AtlantSovtContext1")
         {
         }
 
@@ -30,6 +30,7 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<ForwarderOrder> ForwarderOrders { get; set; }
         public virtual DbSet<LoadingForm> LoadingForms { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<OrderCounter> OrderCounters { get; set; }
         public virtual DbSet<OrderCustomsAddress> OrderCustomsAddresses { get; set; }
         public virtual DbSet<OrderDeny> OrderDenies { get; set; }
         public virtual DbSet<OrderDownloadAddress> OrderDownloadAddresses { get; set; }
@@ -52,7 +53,6 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<UploadAddress> UploadAddresses { get; set; }
         public virtual DbSet<Vehicle> Vehicles { get; set; }
         public virtual DbSet<WorkDocument> WorkDocuments { get; set; }
-        public virtual DbSet<OrderCounter> OrderCounters { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

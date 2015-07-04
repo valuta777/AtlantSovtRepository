@@ -153,6 +153,9 @@ namespace AtlantSovt
                     dataControl.SelectedIndex = 15;
                     ShowTracking();
                     trackingShowTransporterContactsDataGridView.Visible = false;
+                    trackingShowCommentDataGridView.Visible = false;
+                    trackingShowUploadAddressDataGridView.Visible = false;
+                    trackingShowDownloadAddressDataGridView.Visible = false;
                 }
 
                 private void updateOrderMenuItem_DoubleClick(object sender, EventArgs e)
@@ -1701,16 +1704,16 @@ namespace AtlantSovt
         }
 
         private void trackingShowSearchButton_Click(object sender, EventArgs e)
-            {
+        {
             ShowTrackingSearch();
-            }
+        }
 
         private void trackingShowSearchTextBox_TextChanged(object sender, EventArgs e)
         {
             if (trackingShowSearchTextBox.Text == "")
             {
                 ShowTracking();
-        }
+            }
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -2165,7 +2168,13 @@ namespace AtlantSovt
 
         private void showTrackingCreateOrderDoc_Click(object sender, EventArgs e)
         {
-
+            IsOrderFull();
+            if (!isOrderFull)
+            {
+                return;
+            }
+            OrderCounter();
+            CreateOrderDocument();
         }
     }
 }

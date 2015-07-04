@@ -78,13 +78,13 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual ICollection<ForwarderOrder> ForwarderOrders { get; set; }
 
-        public virtual TirCmr TirCmr { get; set; }
-
         public virtual OrderDeny OrderDeny { get; set; }
 
         public virtual Payment Payment { get; set; }
 
         public virtual RegularyDelay RegularyDelay { get; set; }
+
+        public virtual TirCmr TirCmr { get; set; }
 
         public virtual Trailer Trailer { get; set; }
 

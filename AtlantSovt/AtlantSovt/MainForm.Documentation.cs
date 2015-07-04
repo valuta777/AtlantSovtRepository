@@ -835,12 +835,11 @@ namespace AtlantSovt
                 contractShowTransporterContactDataGridView.Visible = false;
                 MessageBox.Show("Немає жодного договору");
             }
-            catch(System.Runtime.InteropServices.COMException wordException)
+            catch (System.Runtime.InteropServices.COMException wordException)
             {
                 wordDocument.Close(Word.WdSaveOptions.wdDoNotSaveChanges);
                 MessageBox.Show("Помилка, спробуйте ще раз");
             }
-
         }
 
         void ReplaseWordStub(string stubToReplace, string text, Word.Document wordDocument)
