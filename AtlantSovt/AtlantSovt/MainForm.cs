@@ -153,11 +153,20 @@ namespace AtlantSovt
                     dataControl.SelectedIndex = 15;
                     ShowTracking();
                     trackingShowTransporterContactsDataGridView.Visible = false;
+                    trackingShowCommentDataGridView.Visible = false;
+                    trackingShowUploadAddressDataGridView.Visible = false;
+                    trackingShowDownloadAddressDataGridView.Visible = false;
                 }
 
                 private void updateOrderMenuItem_DoubleClick(object sender, EventArgs e)
                 {
                     dataControl.SelectedIndex = 16;
+                }
+
+                private void showContractMenuItem_Click(object sender, EventArgs e)
+                {
+                    dataControl.SelectedIndex = 17;
+                    ShowContract();
                 }
                 #endregion
 
@@ -1560,6 +1569,8 @@ namespace AtlantSovt
         //Documentation
         #region Documentation
 
+        //Create
+        #region Create
         private void firstPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitTransporterFirstPersonComboBoxDocument();
@@ -1598,7 +1609,7 @@ namespace AtlantSovt
             {
                 return;
             }
-            AddDocument();
+            AddContract();
             CreateTransporterForwarderContract();
         }
 
@@ -1614,6 +1625,18 @@ namespace AtlantSovt
 
         private void contractLanguageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (contractLanguageComboBox.SelectedIndex == 0)
+            {
+                contractLanguage = 1;
+            }
+            else if (contractLanguageComboBox.SelectedIndex == 1)
+            {
+                contractLanguage = 2;
+            }
+            else if (contractLanguageComboBox.SelectedIndex == 2)
+            {
+                contractLanguage = 3;
+            }
             firstPersonDiapasonComboBox.Enabled = true;
         }
 
@@ -1621,6 +1644,46 @@ namespace AtlantSovt
         {
             contractLanguageComboBox.DroppedDown = true;
         }
+        #endregion
+
+        //Show
+        #region Show
+
+        private void contractShowSearchButton_Click(object sender, EventArgs e)
+        {
+            ShowContractSearch();
+        }
+
+        private void contractShowSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (contractShowSearchTextBox.Text == "")
+            {
+                ShowContract();
+            }
+        }
+
+        private void contractShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ShowContractInfo();
+        }
+
+        private void contractShowOpenDocButton_Click(object sender, EventArgs e)
+        {
+            OpenWordDoc();
+        }
+
+        #endregion
+
+        //Delete
+        #region Delete
+
+        private void contractShowDeleteContractButton_Click(object sender, EventArgs e)
+        {
+            DeleteContract();
+            ShowContract();
+        }
+
+        #endregion
 
         #endregion
 
@@ -1634,6 +1697,7 @@ namespace AtlantSovt
             ShowTrackingInfo();
             trackingShowAddCommentButton.Enabled = true;
             trackingShowCloseOrderButton.Enabled = true;
+            showTrackingCreateOrderDoc.Enabled = true;
         }
 
         private void trackingShowSearchButton_Click(object sender, EventArgs e)
@@ -2487,6 +2551,17 @@ namespace AtlantSovt
         private void OrderUpdateYOrUComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateYOrUComboBox.DroppedDown = true;
+        }
+
+        private void showTrackingCreateOrderDoc_Click(object sender, EventArgs e)
+        {
+            IsOrderFull();
+            if (!isOrderFull)
+            {
+                return;
+            }
+            OrderCounter();
+            CreateOrderDocument();
         }
     }
 }
