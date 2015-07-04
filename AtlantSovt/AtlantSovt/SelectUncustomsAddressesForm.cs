@@ -16,11 +16,133 @@ namespace AtlantSovt
     {
         Client client;
         Order order;
+        bool IsUpdate;
         public SelectUncustomsAddressesForm(Client new_client)
         {
             InitializeComponent();
             client = new_client;
+            IsUpdate = false;
         }
+        public SelectUncustomsAddressesForm(Client new_client, Order new_order)
+        {
+            InitializeComponent();
+            client = new_client;
+            order = new_order;
+            LoadClientUncustomsAddresses();
+            CheckSelectedUncustomsAddresses();
+            IsUpdate = true;
+        }
+
+        private void CheckSelectedUncustomsAddresses()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var getAddreses = from DA in db.Orders.Find(order.Id).OrderUnCustomsAddresses
+                                  orderby DA.UnCustomsAddress.Id
+                                  select DA.UnCustomsAddress.Id;
+
+                List<long> GetAddresses = getAddreses.ToList();
+                List<int> index = new List<int>();
+
+                if (GetAddresses.Count != 0)
+                {
+                    foreach (var ItemAddress in uncustomsAddressesListBox.Items)
+                    {
+                        string fullText = ItemAddress.ToString();
+                        string[] tempAddress = fullText.Split(new char[] { '[', ']' });
+                        long tempAddressId = Convert.ToInt64(tempAddress[1]);
+
+                        if (GetAddresses.Contains(tempAddressId))
+                        {
+                            index.Add(uncustomsAddressesListBox.Items.IndexOf(ItemAddress));
+                        }
+                    }
+                    foreach (int i in index)
+                    {
+                        uncustomsAddressesListBox.SetItemChecked(i, true);
+                    }
+                    uncustomsAddressesListBox.Update();
+                }
+            }
+        }
+
+        private void addUncustomsAddressToOrderButton_Click(object sender, EventArgs e)
+        {
+            if (IsUpdate)
+            {
+                UpdateUncustomsAddresses();
+                this.Dispose();
+            }
+            else
+            {
+                this.Hide();
+            }
+
+        }
+
+        private void UpdateUncustomsAddresses()
+        {
+            if (order != null)
+            {
+                try
+                {
+                    using (var db = new AtlantSovtContext())
+                    {
+                        var getAddreses = from address in db.Orders.Find(order.Id).OrderUnCustomsAddresses
+                                          select address.AddressId;
+
+                        List<long> GetAddreses = getAddreses.ToList();
+                        List<long> getCheked = new List<long>();
+                        foreach (var ItemAddress in uncustomsAddressesListBox.CheckedItems)
+                        {
+                            string fullText = ItemAddress.ToString();
+                            string[] tempAddress = fullText.Split(new char[] { '[', ']' });
+                            long tempAddressId = Convert.ToInt64(tempAddress[1]);
+                            getCheked.Add(tempAddressId);
+                        }
+                        List<long> newAddreses = getCheked.Except(GetAddreses).ToList();
+                        List<long> deletedAdresses = GetAddreses.Except(getCheked).ToList();
+
+                        if (deletedAdresses.Count != 0 || newAddreses.Count != 0)
+                        {
+                            if (deletedAdresses.Count != 0)
+                            {
+                                foreach (var deleteItem in deletedAdresses)
+                                {
+                                    UnCustomsAddress Address = db.UnCustomsAddresses.Find(deleteItem);
+
+                                    OrderUnCustomsAddress OrderAddress = db.Orders.Find(order.Id).OrderUnCustomsAddresses.Where(Oda => Oda.AddressId == Address.Id).FirstOrDefault();
+
+                                    db.OrderUnCustomsAddresses.Remove(OrderAddress);
+                                }
+                                MessageBox.Show("Успішно видалено " + deletedAdresses.Count + " Адрес розмитнення");
+                            }
+
+                            if (newAddreses.Count != 0)
+                            {
+                                foreach (var newItem in newAddreses)
+                                {
+                                    UnCustomsAddress Address = db.UnCustomsAddresses.Find(newItem);
+
+                                    OrderUnCustomsAddress new_OrderAddress = new OrderUnCustomsAddress
+                                    {
+                                        AddressId = Address.Id
+                                    };
+                                    db.Orders.Find(order.Id).OrderUnCustomsAddresses.Add(new_OrderAddress);
+                                }
+                                MessageBox.Show("Успішно додано " + newAddreses.Count + " Адрес розмитнення");
+                            }
+                            db.SaveChanges();
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Помилка!!", e.ToString());
+                }
+            }
+        }
+
         void LoadClientUncustomsAddresses()
         {
             using (var db = new AtlantSovtContext())
@@ -45,11 +167,6 @@ namespace AtlantSovt
         {
             AddAddressForm addUncustomsAddressForm = new AddAddressForm(client, 4);
             addUncustomsAddressForm.Show();
-        }
-
-        private void addUncustomsAddressToOrderButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
 
         internal void UncustomsAddressesSelect(Order new_order)
@@ -89,6 +206,11 @@ namespace AtlantSovt
                     MessageBox.Show("Помилка!!", e.ToString());
                 }
             }
+        }
+
+        private void SelectUncustomsAddressesForm_Load(object sender, EventArgs e)
+        {
+            LoadClientUncustomsAddresses();
         }
 
     }

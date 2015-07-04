@@ -9,14 +9,11 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("OrderCounter")]
     public partial class OrderCounter
     {
-        [Key]
-        [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int Id { get; set; }
+
         public long LocalOrder { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long ForeignOrder { get; set; }
     }
 }
