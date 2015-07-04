@@ -15,12 +15,135 @@ namespace AtlantSovt
     {
         Client client;
         Order order;
+        bool IsUpdate;
         public SelectDownloadAddressesForm(Client new_client)
         {
             InitializeComponent();
-            client = new_client;
+            client = new_client;            
+            LoadClientDownloadAddresses();
+            IsUpdate = false;
         }
-        void LoadClientDownloadAddresses()
+        public SelectDownloadAddressesForm(Client new_client, Order new_order)
+        {
+            InitializeComponent();
+            client = new_client;
+            order = new_order;
+            LoadClientDownloadAddresses();
+            CheckSelectedDownloadAddresses();
+            IsUpdate = true;
+        }
+
+        private void CheckSelectedDownloadAddresses()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var getAddreses = from DA in db.Orders.Find(order.Id).OrderDownloadAddresses
+                                  orderby DA.DownloadAddress.Id
+                                  select DA.DownloadAddress.Id;
+
+                List<long> GetAddresses = getAddreses.ToList();
+                List<int> index = new List<int>();
+
+                if (GetAddresses.Count != 0)
+                {
+                    foreach (var ItemAddress in downloadAddresssListBox.Items)
+                    {
+                        string fullText = ItemAddress.ToString();
+                        string[] tempAddress = fullText.Split(new char[] { '[', ']' });
+                        long tempAddressId = Convert.ToInt64(tempAddress[1]);
+
+                        if (GetAddresses.Contains(tempAddressId))
+                        {
+                            index.Add(downloadAddresssListBox.Items.IndexOf(ItemAddress));
+                        }
+                    }
+                    foreach (int i in index)
+                    {
+                        downloadAddresssListBox.SetItemChecked(i, true);
+                    }
+                    downloadAddresssListBox.Update();
+                }
+            }
+        }
+
+        private void addDownloadAddressToOrderButton_Click(object sender, EventArgs e)
+        {
+            if (IsUpdate)
+            {
+                UpdateDownloadAddresses();
+                this.Dispose();
+            }
+            else
+            {
+                this.Hide();
+            }
+
+        }
+
+        private void UpdateDownloadAddresses()
+        {
+            if (order != null)
+            {
+                try
+                {
+                    using (var db = new AtlantSovtContext())
+                    {
+                        var getAddreses = from address in db.Orders.Find(order.Id).OrderDownloadAddresses
+                                          select address.AddressId;
+
+                        List<long> GetAddreses = getAddreses.ToList();
+                        List<long> getCheked = new List<long>();
+                        foreach (var ItemAddress in downloadAddresssListBox.CheckedItems)
+                        {
+                            string fullText = ItemAddress.ToString();
+                            string[] tempAddress = fullText.Split(new char[] { '[', ']' });
+                            long tempAddressId = Convert.ToInt64(tempAddress[1]);
+                            getCheked.Add(tempAddressId);
+                        }
+                        List<long> newAddreses = getCheked.Except(GetAddreses).ToList();
+                        List<long> deletedAdresses = GetAddreses.Except(getCheked).ToList();
+
+                        if (deletedAdresses.Count != 0 || newAddreses.Count != 0)
+                        {
+                            if (deletedAdresses.Count != 0)
+                            {
+                                foreach (var deleteItem in deletedAdresses)
+                                {
+                                    DownloadAddress Address = db.DownloadAddresses.Find(deleteItem);
+
+                                    OrderDownloadAddress OrderAddress = db.Orders.Find(order.Id).OrderDownloadAddresses.Where(Oda => Oda.AddressId == Address.Id).FirstOrDefault();
+
+                                    db.OrderDownloadAddresses.Remove(OrderAddress);
+                                }
+                                MessageBox.Show("Успішно видалено " + deletedAdresses.Count + " Адрес завантаження");
+                            }
+
+                            if (newAddreses.Count != 0)
+                            {
+                                foreach (var newItem in newAddreses)
+                                {
+                                    DownloadAddress Address = db.DownloadAddresses.Find(newItem);
+
+                                    OrderDownloadAddress new_OrderAddress = new OrderDownloadAddress
+                                    {
+                                        AddressId = Address.Id
+                                    };
+                                    db.Orders.Find(order.Id).OrderDownloadAddresses.Add(new_OrderAddress);
+                                }
+                                MessageBox.Show("Успішно додано " + newAddreses.Count + " Адрес завантаження");
+                            }
+                            db.SaveChanges();
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Помилка!!", e.ToString());
+                }
+            }
+        }
+
+        private void LoadClientDownloadAddresses()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -32,7 +155,7 @@ namespace AtlantSovt
                     downloadAddresssListBox.Items.Add(item.Country.Name + "," +item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
                 }
             }
-        }
+        }        
 
         private void downloadAddressListBox_DoubleClick(object sender, EventArgs e)
         {
@@ -44,11 +167,6 @@ namespace AtlantSovt
         {
             AddAddressForm addDownloadAddressForm = new AddAddressForm(client, 1);
             addDownloadAddressForm.Show();
-        }
-
-        private void addDownloadAddressToOrderButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
 
         internal void DownloadAddressesSelect(Order new_order)
@@ -88,6 +206,5 @@ namespace AtlantSovt
                 }
             }
         }
-
     }
 }
