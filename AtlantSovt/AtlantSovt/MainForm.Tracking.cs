@@ -58,7 +58,7 @@ namespace AtlantSovt
             trackingShowDataGridView.ClearSelection();
         }
 
-        void ShowTrackingInfo()
+        public void ShowTrackingInfo()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -134,13 +134,22 @@ namespace AtlantSovt
                 {
                     MessageBox.Show("Немає жодної заявки");
                 }
+
+                var query5 = 
+                        from o in db.Orders
+                        where o.Id == TrackingClikedId
+                        select o.Note;
+                trackingShowAddNoteRichTextBox.Text = query5.FirstOrDefault();
             }
             trackingShowTransporterContactsDataGridView.Update();
+
+
 
             trackingShowTransporterContactsDataGridView.Visible = true;
             trackingShowCommentDataGridView.Visible = true;
             trackingShowUploadAddressDataGridView.Visible = true;
             trackingShowDownloadAddressDataGridView.Visible = true;
+            trackingShowAddNoteRichTextBox.Visible = true;
         }
 
         void ShowTrackingCloseOrder()
@@ -192,6 +201,8 @@ namespace AtlantSovt
             trackingShowCommentDataGridView.Visible = false;
             trackingShowUploadAddressDataGridView.Visible = false;
             trackingShowDownloadAddressDataGridView.Visible = false;
+            trackingShowAddNoteRichTextBox.Visible = false;
+
 
             var text = trackingShowSearchTextBox.Text;
 

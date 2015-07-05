@@ -13,7 +13,6 @@ namespace AtlantSovt
 {
     public partial class AddTrackingCommentForm : Form
     {
-
         private long id;
         public long Id
         {
@@ -27,9 +26,12 @@ namespace AtlantSovt
             }
         }
 
-        public AddTrackingCommentForm()
+        private MainForm MainForm { get; set; }
+
+        public AddTrackingCommentForm(MainForm form)
         {
             InitializeComponent();
+            MainForm = form;
         }
 
         void ShowTrackingAddComment(long id)
@@ -39,7 +41,7 @@ namespace AtlantSovt
                 var New_TrackingComment = new TrackingComment
                 {
                     OrderId = id,
-                    Comment = commentForwarderUpdateTextBox.Text,
+                    Comment = addTrackingCommentTextBox.Text,
                     CreateDate = DateTime.Now,
                     LastChangeDate = DateTime.Now
                 };
@@ -58,10 +60,12 @@ namespace AtlantSovt
             }
         }
 
-        private void createContactButton_Click(object sender, EventArgs e)
+        private void addCommentButton_Click(object sender, EventArgs e)
         {
             ShowTrackingAddComment(id);
+            MainForm.ShowTrackingInfo();
             this.Close();
         }
+
     }
 }

@@ -1701,16 +1701,16 @@ namespace AtlantSovt
         }
 
         private void trackingShowSearchButton_Click(object sender, EventArgs e)
-            {
+        {
             ShowTrackingSearch();
-            }
+        }
 
         private void trackingShowSearchTextBox_TextChanged(object sender, EventArgs e)
         {
             if (trackingShowSearchTextBox.Text == "")
             {
                 ShowTracking();
-        }
+            }
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -1744,17 +1744,18 @@ namespace AtlantSovt
 
         private void trackingShowAddCommentButton_Click(object sender, EventArgs e)
         {
-            AddTrackingCommentForm trackingShowAddComment = new AddTrackingCommentForm();
-            trackingShowAddComment.Show();
+            AddTrackingCommentForm trackingShowAddComment = new AddTrackingCommentForm(this);
             try
             {
                 trackingShowAddComment.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+                trackingShowAddComment.Show();
             }
             catch (Exception ex)
             {
                 trackingShowAddComment.Dispose();
                 MessageBox.Show("Немає жодної заявки");
             }
+
         }
 
         private void trackingShowCommentDataGridView_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
@@ -1790,6 +1791,21 @@ namespace AtlantSovt
             CreateOrderDocument();
             ShowTrackingSearch();
         }
+
+        private void trackingShowAddNoteRichTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            AddOrderNoteForm orderNoteForm = new AddOrderNoteForm(this);
+            try
+            {
+                orderNoteForm.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+                orderNoteForm.Show();
+            }
+            catch (Exception ex)
+            {
+                orderNoteForm.Dispose();
+                MessageBox.Show("Немає жодної заявки");
+            }
+        }    
 
         #endregion
         
@@ -2563,6 +2579,6 @@ namespace AtlantSovt
         private void OrderUpdateYOrUComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateYOrUComboBox.DroppedDown = true;
-        }    
+        }
     }
 }

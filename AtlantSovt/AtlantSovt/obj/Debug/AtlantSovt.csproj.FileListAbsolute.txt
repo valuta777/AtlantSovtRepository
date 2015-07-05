@@ -209,3 +209,4 @@ E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.SelectUncusto
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddCountryForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddLoadingFormForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csprojResolveAssemblyReference.cache
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddOrderNoteForm.resources
