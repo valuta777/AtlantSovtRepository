@@ -23,18 +23,24 @@ namespace AtlantSovt
         Forwarder forwarder2OrderAdd;
 
         AdditionalTerm additionalTermOrderAdd;
-        Cargo cargoOrderAdd;        
+        Cargo cargoOrderAdd;
+        
         FineForDelay fineForDelayOrderAdd;
         TirCmr tirCmrOrderAdd;
         OrderDeny orderDenyOrderAdd;
         Payment paymentOrderAdd;
         RegularyDelay regularyDelayOrderAdd;
+
         Cube cubeOrderAdd;
         Trailer trailerOrderAdd;
 
         LoadingForm loadingForm1OrderAdd;
         LoadingForm loadingForm2OrderAdd;
-        
+
+        DateTime? orderAddDate;
+        DateTime? orderAddUploadDate;
+        DateTime? orderAddDeliveryDate;
+
         SelectUploadAddressesForm selectUploadAddressesForm;
         SelectDownloadAddressesForm selectDownloadAddressesForm;
         SelectCustomsAddressesForm selectCustomsAddressesForm;
@@ -64,8 +70,7 @@ namespace AtlantSovt
                     DownloadDate =  OrderAddDownloadDateTimePicker.Checked ? (DateTime?)OrderAddDownloadDateTimePicker.Value : null,
                     UploadDate = OrderAddUploadDateTimePicker.Checked ? (DateTime?)OrderUpdateDownloadDateTimePicker.Value : null,
                     State = null,
-                    YorU = ((OrderAddYOrUComboBox.SelectedIndex != -1 && OrderAddYOrUComboBox.Text == OrderAddYOrUComboBox.SelectedItem.ToString())) ? ((OrderAddYOrUComboBox.SelectedIndex == 0) ? "У" : "І") : null,
-                    Language = (OrderAddLanduageSelectComboBox.SelectedIndex != -1 && OrderAddLanduageSelectComboBox.Text == OrderAddLanduageSelectComboBox.SelectedItem.ToString()) ? null : (OrderAddLanduageSelectComboBox.SelectedIndex == 0) ? (byte?)0 : (OrderAddLanduageSelectComboBox.SelectedIndex == 1) ? (byte?)1 : (byte?)2
+                    YorU = ((OrderAddYOrUComboBox.SelectedIndex != -1) || (OrderAddYOrUComboBox.Text != "")) ? ((OrderAddYOrUComboBox.SelectedIndex == 0) ? "У" : "І") : null
                 };
                 try
                 {
@@ -192,7 +197,19 @@ namespace AtlantSovt
         }
             
     
-       
+        void SetOrderDate()
+        {
+            orderAddDate = OrderAddDateSelectDateTimePicker.Value;
+        }
+        void SetOrderUploadDate()
+        {
+            orderAddUploadDate = OrderAddDownloadDateTimePicker.Value;
+        }
+        void SetOrderDeliveryDate()
+        {
+            orderAddDeliveryDate = OrderAddUploadDateTimePicker.Value;
+        }
+
         //Client
         void LoadOrderAddClientDiapasonCombobox()
         {
@@ -856,14 +873,16 @@ namespace AtlantSovt
 
         LoadingForm loadingForm1OrderUpdate;
         LoadingForm loadingForm2OrderUpdate;
-        
+
+        DateTime? orderUpdateDate;
+        DateTime? orderUpdateUploUpdateate;
+        DateTime? orderUpdateDeliveryDate;
+
 
         SelectUploadAddressesForm updateUploadAddressesForm;
         SelectDownloadAddressesForm updateDownloadAddressesForm;
         SelectCustomsAddressesForm updateCustomsAddressesForm;
         SelectUncustomsAddressesForm updateUncustomsAddressesForm;
-
-        bool IsModified = false;
 
         void ClearAllBoxesOrderUpdate() 
         {
@@ -912,7 +931,6 @@ namespace AtlantSovt
 
             OrderUpdateWeightTextBox.Text = "";
             OrderUpdateFreightTextBox.Text = "";
-            IsModified = false;
         }
         void LoadOrderUpdateOrderSelectComboBox()
         {
@@ -927,14 +945,7 @@ namespace AtlantSovt
                                 select or;
                     foreach (var item in query)
                     {
-                        if (item.Client != null)
-                        {
-                            OrderUpdateOrderSelectComboBox.Items.Add(item.Client.Name + " ," + item.Date + " [" + item.Id + "]");
-                        }
-                        else 
-                        {
-                            OrderUpdateOrderSelectComboBox.Items.Add("" + " ," + item.Date + " [" + item.Id + "]");
-                        }
+                        OrderUpdateOrderSelectComboBox.Items.Add(item.Client.Name + " ," + item.Date + " [" + item.Id + "]");
                     }
                 }
             }
@@ -949,14 +960,7 @@ namespace AtlantSovt
                                 select or;
                     foreach (var item in query)
                     {
-                        if (item.Client != null)
-                        {
-                            OrderUpdateOrderSelectComboBox.Items.Add(item.Client.Name + " ," + item.Date + " [" + item.Id + "]");
-                        }
-                        else
-                        {
-                            OrderUpdateOrderSelectComboBox.Items.Add(" ," + item.Date + " [" + item.Id + "]");
-                        }
+                        OrderUpdateOrderSelectComboBox.Items.Add(item.Client.Name + " ," + item.Date + " [" + item.Id + "]");
                     }
                 }
                 
@@ -1656,8 +1660,8 @@ namespace AtlantSovt
             {
                 if (updateOrder != null)
                 {
-                    updateCustomsAddressesForm = new SelectCustomsAddressesForm(clientOrderUpdate, updateOrder);
-                    updateCustomsAddressesForm.Show();
+                    selectCustomsAddressesForm = new SelectCustomsAddressesForm(clientOrderUpdate, updateOrder);
+                    selectCustomsAddressesForm.Show();
                 }
                 else
                 {
@@ -1676,8 +1680,8 @@ namespace AtlantSovt
             {
                 if (updateOrder != null)
                 {
-                    updateUncustomsAddressesForm = new SelectUncustomsAddressesForm(clientOrderUpdate, updateOrder);
-                    updateUncustomsAddressesForm.Show();
+                    selectUncustomsAddressesForm = new SelectUncustomsAddressesForm(clientOrderUpdate, updateOrder);
+                    selectUncustomsAddressesForm.Show();
                 }
                 else
                 {
@@ -1906,503 +1910,134 @@ namespace AtlantSovt
                 }
             }
         }
+
         void OrderUpdate()
         {
             using (var db = new AtlantSovtContext())
             {
-                if (updateOrder != null)
+                updateOrder = db.Orders.Find(updateOrder.Id);
+                updateOrder.AdditionalTermsId = (additionalTermOrderUpdate != null) ? (long?)additionalTermOrderUpdate.Id : null;
+                updateOrder.ADRNumber = (OrderUpdateADRSelectComboBox.Text != "") ? (int?)Convert.ToInt32(OrderUpdateADRSelectComboBox.Text) : null;
+                updateOrder.TirCmrId = (tirCmrOrderUpdate != null) ? (long?)tirCmrOrderUpdate.Id : null;
+                updateOrder.CargoId = (cargoOrderUpdate != null) ? (long?)cargoOrderUpdate.Id : null;
+                updateOrder.CargoWeight = (OrderUpdateWeightTextBox.Text != "") ? (double?)Double.Parse(OrderUpdateWeightTextBox.Text, CultureInfo.InvariantCulture) : null;
+                updateOrder.ClientId = (clientOrderUpdate != null) ? (long?)clientOrderUpdate.Id : null;
+                updateOrder.CubeId = (cubeOrderUpdate != null) ? (long?)cubeOrderUpdate.Id : null;
+                updateOrder.FineForDelaysId = (fineForDelayOrderUpdate != null) ? (long?)fineForDelayOrderUpdate.Id : null;
+                updateOrder.Freight = (OrderUpdateFreightTextBox.Text != "") ? OrderUpdateFreightTextBox.Text : null;
+                updateOrder.OrderDenyId = (orderDenyOrderUpdate != null) ? (long?)orderDenyOrderUpdate.Id : null;
+                updateOrder.PaymentTermsId = (paymentOrderUpdate != null) ? (long?)paymentOrderUpdate.Id : null;
+                updateOrder.RegularyDelaysId = (regularyDelayOrderUpdate != null) ? (long?)regularyDelayOrderUpdate.Id : null;
+                updateOrder.TrailerId = (trailerOrderUpdate != null) ? (long?)trailerOrderUpdate.Id : null;
+                updateOrder.TransporterId = (transporterOrderUpdate != null) ? (long?)transporterOrderUpdate.Id : null;
+                updateOrder.Date = OrderUpdateDateDateTimePicker.Value;
+                updateOrder.DownloadDate =  OrderUpdateDownloadDateTimePicker.Checked ? (DateTime?)OrderUpdateDownloadDateTimePicker.Value : null;
+                updateOrder.UploadDate = OrderUpdateUploadDateTimePicker.Checked ? (DateTime?)OrderUpdateUploadDateTimePicker.Value : null;
+                updateOrder.YorU = ((OrderUpdateYOrUComboBox.SelectedIndex != -1) || (OrderUpdateYOrUComboBox.Text != "")) ? ((OrderUpdateYOrUComboBox.SelectedIndex == 0) ? "У" : "І") : null;
+            
+                try
                 {
+                    db.Entry(updateOrder).State = EntityState.Modified;
+                    db.SaveChanges();
+                    MessageBox.Show("Зміни збереженно");
+                    BridgeUpdates();
+                    ClearAllBoxesOrderUpdate();
+                }
+                catch (DbEntityValidationException e)
+                {
+                    MessageBox.Show("Помилка при створенні заявки\n" + e);
+                }
+            }
+        }
+        void BridgeUpdates()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                updateOrder = db.Orders.Find(updateOrder.Id);
+                db.Orders.Find(updateOrder.Id).OrderLoadingForms.Remove(db.Orders.Find(updateOrder.Id).OrderLoadingForms.Where(lf1 => lf1.IsFirst == true).FirstOrDefault());
+                if (loadingForm1OrderUpdate != null)
+                {
+
                     try
                     {
-                        updateOrder = db.Orders.Find(updateOrder.Id);
-
-                        //1/////////////////////////////////////////////
-                        if (additionalTermOrderUpdate != null)
+                        OrderLoadingForm New_OrderLoadingForm1 = new OrderLoadingForm
                         {
-                            if (updateOrder.AdditionalTermsId != additionalTermOrderUpdate.Id)
-                            {
-                                updateOrder.AdditionalTermsId = additionalTermOrderUpdate.Id;
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.AdditionalTerm != null) 
-                        {
-                            updateOrder.AdditionalTermsId = null;
-                            IsModified = true;
-                        }
-                        //2/////////////////////////////////////////////
-                        if ((OrderUpdateADRSelectComboBox.SelectedIndex != -1 && OrderUpdateADRSelectComboBox.Text == OrderUpdateADRSelectComboBox.SelectedItem.ToString()))
-                        {
-                            if (updateOrder.ADRNumber != Convert.ToInt32(OrderUpdateADRSelectComboBox.Text))
-                            {
-                                updateOrder.ADRNumber = Convert.ToInt32(OrderUpdateADRSelectComboBox.Text);
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.ADRNumber != null)
-                        {
-                            updateOrder.ADRNumber = null;
-                            IsModified = true;
-                        }
-                        //3/////////////////////////////////////////////
-                        if (tirCmrOrderUpdate != null)
-                        {
-                            if (updateOrder.AdditionalTermsId != tirCmrOrderUpdate.Id)
-                            {
-                                updateOrder.AdditionalTermsId = tirCmrOrderUpdate.Id;
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.TirCmr != null)
-                        {
-                            updateOrder.TirCmrId = null;
-                            IsModified = true;
-                        }
-                        //4///////////////////////////////////////////////
-                        if (tirCmrOrderUpdate != null)
-                        {
-                            if (updateOrder.TirCmrId != tirCmrOrderUpdate.Id)
-                            {
-                                updateOrder.TirCmrId = tirCmrOrderUpdate.Id;
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.TirCmr != null)
-                        {
-                            updateOrder.TirCmrId = null;
-                            IsModified = true;
-                        }
-                        //4/////////////////////////////////////////////
-                        if (cargoOrderUpdate != null)
-                        {
-                            if (updateOrder.CargoId != cargoOrderUpdate.Id)
-                            {
-                                updateOrder.CargoId = cargoOrderUpdate.Id;
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.Cargo != null)
-                        {
-                            updateOrder.CargoId = null;
-                            IsModified = true;
-                        }
-                        //4/////////////////////////////////////////////
-                        if (clientOrderUpdate != null)
-                        {
-                            if (updateOrder.ClientId != clientOrderUpdate.Id)
-                            {
-                                updateOrder.ClientId = clientOrderUpdate.Id;
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.Client != null)
-                        {
-                            updateOrder.ClientId = null;
-                            IsModified = true;
-                        }
-                        //4/////////////////////////////////////////////
-                        if (cubeOrderUpdate != null)
-                        {
-                            if (updateOrder.CubeId != cubeOrderUpdate.Id)
-                            {
-                                updateOrder.CubeId = cubeOrderUpdate.Id;
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.Cube != null)
-                        {
-                            updateOrder.CubeId = null;
-                            IsModified = true;
-                        }
-                        //4/////////////////////////////////////////////
-                        if (fineForDelayOrderUpdate != null)
-                        {
-                            if (updateOrder.FineForDelaysId != fineForDelayOrderUpdate.Id)
-                            {
-                                updateOrder.FineForDelaysId = fineForDelayOrderUpdate.Id;
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.FineForDelay != null)
-                        {
-                            updateOrder.FineForDelaysId = null;
-                            IsModified = true;
-                        }
-                        //4/////////////////////////////////////////////
-                        
-                        if (orderDenyOrderUpdate != null)
-                        {
-                            if (updateOrder.OrderDenyId != orderDenyOrderUpdate.Id)
-                            {
-                                updateOrder.OrderDenyId = orderDenyOrderUpdate.Id;
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.OrderDeny!= null)
-                        {
-                            updateOrder.OrderDenyId = null;
-                            IsModified = true;
-                        }
-                        //5//////////////////////////////////////////////
-                        if (paymentOrderUpdate != null)
-                        {
-                            if (updateOrder.PaymentTermsId != paymentOrderUpdate.Id)
-                            {
-                                updateOrder.PaymentTermsId = paymentOrderUpdate.Id;
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.Payment != null)
-                        {
-                            updateOrder.PaymentTermsId = null;
-                            IsModified = true;
-                        }
-                        //4/////////////////////////////////////////////
-                        if (regularyDelayOrderUpdate != null)
-                        {
-                            if (updateOrder.RegularyDelaysId != regularyDelayOrderUpdate.Id)
-                            {
-                                updateOrder.RegularyDelaysId = regularyDelayOrderUpdate.Id;
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.RegularyDelay != null)
-                        {
-                            updateOrder.RegularyDelaysId = null;
-                            IsModified = true;
-                        }
-                        //4/////////////////////////////////////////////
-                        if (trailerOrderUpdate != null)
-                        {
-                            if (updateOrder.TrailerId != trailerOrderUpdate.Id)
-                            {
-                                updateOrder.TrailerId = trailerOrderUpdate.Id;
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.Trailer != null)
-                        {
-                            updateOrder.TrailerId = null;
-                            IsModified = true;
-                        }
-                        //4/////////////////////////////////////////////
-                        if (transporterOrderUpdate != null)
-                        {
-                            if (updateOrder.TransporterId != transporterOrderUpdate.Id)
-                            {
-                                updateOrder.TransporterId = transporterOrderUpdate.Id;
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.Transporter != null)
-                        {
-                            updateOrder.TransporterId = null;
-                            IsModified = true;
-                        }
-                        //4/////////////////////////////////////////////
-
-                        if ((OrderUpdateYOrUComboBox.SelectedIndex != -1 && OrderUpdateYOrUComboBox.Text == OrderUpdateYOrUComboBox.SelectedItem.ToString()))
-                        {
-                            if (updateOrder.YorU != "У")
-                            {
-                                if(OrderAddYOrUComboBox.SelectedIndex == 0)
-                                {
-                                    updateOrder.YorU = "У";
-                                    IsModified = true;
-                                }                                
-                            }
-                            else if (updateOrder.YorU != "I") 
-                            {
-                                if (OrderAddYOrUComboBox.SelectedIndex == 1)
-                                {
-                                    updateOrder.YorU = "І";
-                                    IsModified = true;
-                                }
-                            }
-                        }
-                        else if (updateOrder.YorU != null)
-                        {
-                            updateOrder.YorU = null;
-                            IsModified = true;
-                        }
-                        ///////////////////////////////////////////////
-
-                        if ((OrderUpdateLanguageSelectComboBox.SelectedIndex != -1 && OrderUpdateLanguageSelectComboBox.Text == OrderUpdateLanguageSelectComboBox.SelectedItem.ToString()))
-                        {
-                            if (updateOrder.Language != 0)
-                            {
-                                if (OrderAddYOrUComboBox.SelectedIndex == 0)
-                                {
-                                    updateOrder.Language = 0;
-                                    IsModified = true;
-                                }
-                            }
-                            else if (updateOrder.Language != 1)
-                            {
-                                if (OrderAddYOrUComboBox.SelectedIndex == 1)
-                                {
-                                    updateOrder.Language = 1;
-                                    IsModified = true;
-                                }
-                            }
-                            else if (updateOrder.Language !=2)
-                            {
-                                if (OrderAddYOrUComboBox.SelectedIndex == 2)
-                                {
-                                    updateOrder.Language = 2;
-                                    IsModified = true;
-                                }
-                            }
-                        }
-                        else if (updateOrder.Language != null)
-                        {
-                            updateOrder.Language = null;
-                            IsModified = true;
-                        }
-                        ///////////////////////////////////////////////
-
-                        if (OrderUpdateWeightTextBox.Text != "") 
-                        {
-                            if (updateOrder.CargoWeight != Double.Parse(OrderUpdateWeightTextBox.Text, CultureInfo.InvariantCulture)) 
-                            {
-                                updateOrder.CargoWeight = Double.Parse(OrderUpdateWeightTextBox.Text, CultureInfo.InvariantCulture);
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.CargoWeight != null) 
-                        {
-                            updateOrder.CargoWeight = null;
-                            IsModified = true;
-                        }
-                        /////////////////////////////////////////////////
-                        if (OrderUpdateFreightTextBox.Text != "")
-                        {
-                            if (updateOrder.Freight != OrderUpdateFreightTextBox.Text)
-                            {
-                                updateOrder.Freight = OrderUpdateFreightTextBox.Text;
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.Freight != null)
-                        {
-                            updateOrder.Freight = null;
-                            IsModified = true;
-                        }
-
-                        if (updateOrder.Date != OrderUpdateDateDateTimePicker.Value)
-                        {
-                            updateOrder.Date = OrderUpdateDateDateTimePicker.Value;
-                            IsModified = true;
-                        }
-
-                        if (OrderUpdateDownloadDateTimePicker.Checked)
-                        {
-                            if (updateOrder.DownloadDate != OrderUpdateDownloadDateTimePicker.Value)
-                            {
-                                updateOrder.DownloadDate = OrderUpdateDownloadDateTimePicker.Value;
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.DownloadDate != null)
-                        {
-                            updateOrder.DownloadDate = null;
-                            IsModified = true;
-                        }
-
-                        if (OrderUpdateUploadDateTimePicker.Checked)
-                        {
-                            if (updateOrder.UploadDate != OrderUpdateUploadDateTimePicker.Value)
-                            {
-                                updateOrder.UploadDate = OrderUpdateUploadDateTimePicker.Value;
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.UploadDate != null)
-                        {
-                            updateOrder.UploadDate = null;
-                            IsModified = true;
-                        }
-                        
-                        try
-                        {
-                            if (loadingForm1OrderUpdate != null)
-                            {
-                                if (updateOrder.OrderLoadingForms.Where(lf1 => lf1.IsFirst == true).Count() != 0) // якшо вже є
-                                {
-                                    OrderLoadingForm UpdateLoadingForm1 = db.Orders.Find(updateOrder.Id).OrderLoadingForms.Where(lf1 => lf1.IsFirst == true).FirstOrDefault();
-
-                                    if (UpdateLoadingForm1.Id != loadingForm1OrderUpdate.Id) //якшо не то саме
-                                    {
-                                        UpdateLoadingForm1.Id = loadingForm1OrderUpdate.Id;
-                                        db.Entry(UpdateLoadingForm1).State = EntityState.Modified;
-                                        db.SaveChanges();
-                                        MessageBox.Show("Успішно вибрано першу форму завантаження");
-                                    }
-                                }
-                                else 
-                                {
-                                    OrderLoadingForm New_OrderLoadingForm1 = new OrderLoadingForm
-                                    {
-                                        LoadingFormId = loadingForm1OrderUpdate.Id,
-                                        IsFirst = true
-                                    };
-                                    db.Orders.Find(updateOrder.Id).OrderLoadingForms.Add(New_OrderLoadingForm1);
-                                    db.Entry(New_OrderLoadingForm1).State = EntityState.Added;
-                                    db.SaveChanges();
-                                    MessageBox.Show("Успішно вибрано першу форму завантаження");
-                                }
-                            }
-                            else if (updateOrder.OrderLoadingForms.Where(lf1 => lf1.IsFirst == true).Count() != 0)
-                            {
-                                db.Orders.Find(updateOrder.Id).OrderLoadingForms.Remove(db.Orders.Find(updateOrder.Id).OrderLoadingForms.Where(lf1 => lf1.IsFirst == true).FirstOrDefault());
-                            }
-                        }
-                        catch (Exception e)
-                        {
-                            MessageBox.Show("Помилка (1 форма завантаження)\n" + e.Message);
-                        }
-
-                        try
-                        {
-                            if (loadingForm2OrderUpdate != null)
-                            {
-                                if (updateOrder.OrderLoadingForms.Where(lf2 => lf2.IsFirst == false).Count() != 0) // якшо вже є
-                                {
-                                    OrderLoadingForm UpdateLoadingForm2 = db.Orders.Find(updateOrder.Id).OrderLoadingForms.Where(lf1 => lf1.IsFirst == false).FirstOrDefault();
-
-                                    if (UpdateLoadingForm2.Id != loadingForm2OrderUpdate.Id) //якшо не то саме
-                                    {
-                                        UpdateLoadingForm2.Id = loadingForm2OrderUpdate.Id;
-                                        db.Entry(UpdateLoadingForm2).State = EntityState.Modified;
-                                        db.SaveChanges();
-                                        MessageBox.Show("Успішно змінено другу форму завантаження");
-                                    }
-                                }
-                                else
-                                {
-                                    OrderLoadingForm New_OrderLoadingForm2 = new OrderLoadingForm
-                                    {
-                                        LoadingFormId = loadingForm2OrderUpdate.Id,
-                                        IsFirst = false
-                                    };
-                                    db.Orders.Find(updateOrder.Id).OrderLoadingForms.Add(New_OrderLoadingForm2);
-                                    db.Entry(New_OrderLoadingForm2).State = EntityState.Added;
-                                    db.SaveChanges();
-                                    MessageBox.Show("Успішно вибрано другу форму завантаження");
-                                }
-                            }
-                            else if (updateOrder.OrderLoadingForms.Where(lf1 => lf1.IsFirst == false).Count() != 0)
-                            {
-                                db.Orders.Find(updateOrder.Id).OrderLoadingForms.Remove(db.Orders.Find(updateOrder.Id).OrderLoadingForms.Where(lf1 => lf1.IsFirst == false).FirstOrDefault());
-                            }
-                        }
-                        catch (Exception e)
-                        {
-                            MessageBox.Show("Помилка (2 форма завантаження)\n" + e.Message);
-                        }
-                        
-                        try
-                        {
-                            if (forwarder1OrderUpdate != null)
-                            {
-                                if (updateOrder.ForwarderOrders.Where(fo1 => fo1.IsFirst == true).Count() != 0) // якшо вже є
-                                {
-                                    ForwarderOrder UpdateForwarder1Order = db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(fo1 => fo1.IsFirst == true).FirstOrDefault();
-
-                                    if (UpdateForwarder1Order.Id != forwarder1OrderUpdate.Id) //якшо не то саме
-                                    {
-                                        UpdateForwarder1Order.Id = forwarder1OrderUpdate.Id;
-                                        db.Entry(UpdateForwarder1Order).State = EntityState.Modified;
-                                        db.SaveChanges();
-                                        MessageBox.Show("Успішно вибрано першого експедитора");
-                                    }
-                                }
-                                else
-                                {
-                                    ForwarderOrder New_Forwarder1Order = new ForwarderOrder
-                                    {
-                                        ForwarderId = forwarder1OrderAdd.Id,
-                                        IsFirst = true
-                                    };
-                                    db.Orders.Find(updateOrder.Id).ForwarderOrders.Add(New_Forwarder1Order);
-                                    db.Entry(New_Forwarder1Order).State = EntityState.Added;
-                                    db.SaveChanges();
-                                    MessageBox.Show("Успішно додано першого форму експедитора");
-                                }
-                            }
-                            else if (updateOrder.ForwarderOrders.Where(fo1 => fo1.IsFirst == true).Count() != 0)
-                            {
-                                db.Orders.Find(updateOrder.Id).ForwarderOrders.Remove(db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(f1 => f1.IsFirst == true).FirstOrDefault());
-                            }
-                        }
-                        catch (Exception e)
-                        {
-                            MessageBox.Show("Помилка (1 експедитор)\n" + e.Message);
-                        }
-
-                        try
-                        {
-                            if (forwarder2OrderUpdate != null)
-                            {
-                                if (updateOrder.ForwarderOrders.Where(fo2 => fo2.IsFirst == false).Count() != 0) // якшо вже є
-                                {
-                                    ForwarderOrder UpdateForwarder2Order = db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(fo2 => fo2.IsFirst == false).FirstOrDefault();
-
-                                    if (UpdateForwarder2Order.Id != forwarder2OrderUpdate.Id) //якшо не то саме
-                                    {
-                                        UpdateForwarder2Order.Id = forwarder2OrderUpdate.Id;
-                                        db.Entry(UpdateForwarder2Order).State = EntityState.Modified;
-                                        db.SaveChanges();
-                                        MessageBox.Show("Успішно вибрано другого експедитора");
-                                    }
-                                }
-                                else
-                                {
-                                    ForwarderOrder New_Forwarder2Order = new ForwarderOrder
-                                    {
-                                        ForwarderId = forwarder2OrderAdd.Id,
-                                        IsFirst = false
-                                    };
-                                    db.Orders.Find(updateOrder.Id).ForwarderOrders.Add(New_Forwarder2Order);
-                                    db.Entry(New_Forwarder2Order).State = EntityState.Added;
-                                    db.SaveChanges();
-                                    MessageBox.Show("Успішно додано другого експедитора");
-                                }
-                            }
-                            else if (updateOrder.ForwarderOrders.Where(fo2 => fo2.IsFirst == false).Count() != 0)
-                            {
-                                db.Orders.Find(updateOrder.Id).ForwarderOrders.Remove(db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(f2 => f2.IsFirst == false).FirstOrDefault());
-                            }
-                        }
-                        catch (Exception e)
-                        {
-                            MessageBox.Show("Помилка (2 експедитор)\n" + e.Message);
-                        }
-                        if (IsModified)
-                        {
-                            db.Entry(updateOrder).State = EntityState.Modified;
-                            db.SaveChanges();
-                            MessageBox.Show("Зміни збереженно");
-                        }
-                        else 
-                        {
-                            MessageBox.Show("Змін не знайдено");
-                        }                        
-                        ClearAllBoxesOrderUpdate();
-                    }
-                    catch (DbEntityValidationException e)
-                    {
-                        MessageBox.Show("Помилка при зміні заявки\n" + e);
+                            LoadingFormId = loadingForm1OrderUpdate.Id,
+                            IsFirst = true
+                        };
+                        db.Orders.Find(updateOrder.Id).OrderLoadingForms.Add(New_OrderLoadingForm1);
+                        db.Entry(New_OrderLoadingForm1).State = EntityState.Added;
+                        db.SaveChanges();
+                        MessageBox.Show("Успішно вибрано першу форму завантаження");
                     }
                     catch (Exception e)
                     {
-                        MessageBox.Show("Помилка при зміні заявки\n" + e.Message);
+                        MessageBox.Show("Помилка (1 форма завантаження)\n" + e.Message);
+                    }
+                } 
+                db.Orders.Find(updateOrder.Id).OrderLoadingForms.Remove(db.Orders.Find(updateOrder.Id).OrderLoadingForms.Where(lf1 => lf1.IsFirst == false).FirstOrDefault());
+                if (loadingForm2OrderUpdate != null)
+                {
+                    try
+                    {
+                        OrderLoadingForm New_OrderLoadingForm2 = new OrderLoadingForm
+                        {
+                            LoadingFormId = loadingForm2OrderUpdate.Id,
+                            IsFirst = false
+                        };
+                        db.Orders.Find(updateOrder.Id).OrderLoadingForms.Add(New_OrderLoadingForm2);
+                        db.Entry(New_OrderLoadingForm2).State = EntityState.Added;
+                        db.SaveChanges();
+                        MessageBox.Show("Успішно вибрано другу форму завантаження");
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Помилка (2 форма завантаження)\n" + e.Message);
+                    }
+                }   
+                //експедитори
+                db.Orders.Find(updateOrder.Id).ForwarderOrders.Remove(db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(f1 => f1.IsFirst == true).FirstOrDefault());
+                if (forwarder1OrderUpdate!= null)
+                {
+                    try
+                    {
+                        ForwarderOrder New_Forwarder1Order = new ForwarderOrder
+                        {
+                            ForwarderId = forwarder1OrderAdd.Id,
+                            IsFirst = true
+                        };
+                        db.Orders.Find(updateOrder.Id).ForwarderOrders.Add(New_Forwarder1Order);
+                        db.Entry(New_Forwarder1Order).State = EntityState.Added;
+                        db.SaveChanges();
+
+                        MessageBox.Show("Успішно вибрано першого експедитора");
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Помилка (1 експедитор)\n" + e.Message);
                     }
                 }
-                else
+                db.Orders.Find(updateOrder.Id).ForwarderOrders.Remove(db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(f1 => f1.IsFirst == false).FirstOrDefault());
+                if (forwarder2OrderUpdate != null)
                 {
-                    MessageBox.Show("Спочатку виберіть заявку");
+                    try
+                    {
+                        ForwarderOrder New_Forwarder2Order = new ForwarderOrder
+                        {
+                            ForwarderId = forwarder2OrderAdd.Id,
+                            IsFirst = false
+                        };
+                        db.Orders.Find(updateOrder.Id).ForwarderOrders.Add(New_Forwarder2Order);
+                        db.Entry(New_Forwarder2Order).State = EntityState.Added;
+                        db.SaveChanges();
+                        MessageBox.Show("Успішно вибрано другого експедитора");
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Помилка (2 експедитор)\n" + e.Message);
+                    }
                 }
+
             }
         }
     }

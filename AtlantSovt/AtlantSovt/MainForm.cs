@@ -23,7 +23,7 @@ namespace AtlantSovt
             yearLabel.Text = DateTime.Now.ToShortDateString();
         }
             //Client Forms
-        Image forwarderAddImage = null;
+
             //Contact
         ClientContactAddForm addClientContactAddForm, updateClientContactAddForm;
         ClientContactUpdateForm updateClientContactUpdateForm;
@@ -705,16 +705,6 @@ namespace AtlantSovt
             addForwarderBankDetailsAddForm = new ForwarderBankDetailsAddForm();
             addForwarderBankDetailsAddForm.Show();
         }
-        private void forwarderAddImageButton_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ForwarderImageAdd = new OpenFileDialog();
-            ForwarderImageAdd.Multiselect = false;
-            ForwarderImageAdd.Filter = "Файлы Png|*.Png";
-            if (ForwarderImageAdd.ShowDialog() == DialogResult.OK)
-            {
-                forwarderAddImage = Image.FromFile(ForwarderImageAdd.FileName);
-            }
-        }
 
         private void addForwarderButton_Click(object sender, EventArgs e)
         {
@@ -731,7 +721,6 @@ namespace AtlantSovt
             commentForwarderTextBox.Text = "";
             forwarderWorkDocument = null;
             forwarderTaxPayerStatus = null;
-            forwarderAddImage = null;
         }
         #endregion
 
@@ -1872,6 +1861,36 @@ namespace AtlantSovt
             SplitTransporterOrderAdd();
         }
 
+        private void OrderAddUploadDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            SetOrderUploadDate();
+        }
+
+        private void OrderAddUploadDateTimePicker_CloseUp(object sender, EventArgs e)
+        {
+            SetOrderUploadDate();
+        }
+
+        private void OrderAddDateSelectDateTimePicker_CloseUp(object sender, EventArgs e)
+        {
+            SetOrderDate();
+        }
+
+        private void OrderAddDateSelectDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            SetOrderDate();
+        }
+
+        private void OrderAddDeliveryDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            SetOrderDeliveryDate();
+        }
+
+        private void OrderAddDeliveryDateTimePicker_CloseUp(object sender, EventArgs e)
+        {
+            SetOrderDeliveryDate();
+        }
+
         private void OrderAddCargoAddButton_Click(object sender, EventArgs e)
         {
             AddCargoForm addCargoForm = new AddCargoForm();
@@ -2544,12 +2563,5 @@ namespace AtlantSovt
             OrderCounter();
             CreateOrderDocument();
         }
-
-        private void OrderUpdateWeightTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }

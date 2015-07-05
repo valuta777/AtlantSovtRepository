@@ -74,6 +74,7 @@ R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Debug\
 R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Debug\EntityFramework.xml
 R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Debug\EntityFramework.SqlServer.xml
 R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Debug\ru\EntityFramework.resources.dll
+R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csprojResolveAssemblyReference.cache
 R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddTaxPayerStatusForm.resources
 R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddWorkDocumentForm.resources
 R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.ConnectionForm.resources
@@ -207,6 +208,3 @@ E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.SelectDownloa
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.SelectUncustomsAddressesForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddCountryForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddLoadingFormForm.resources
-R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddCountryForm.resources
-R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddLoadingFormForm.resources
-R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csprojResolveAssemblyReference.cache
