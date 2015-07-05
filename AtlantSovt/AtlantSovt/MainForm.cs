@@ -2563,8 +2563,6 @@ namespace AtlantSovt
         private void OrderUpdateYOrUComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateYOrUComboBox.DroppedDown = true;
-        }
-
-     
+        }    
     }
 }
