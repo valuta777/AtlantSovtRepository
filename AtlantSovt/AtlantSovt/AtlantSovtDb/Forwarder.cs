@@ -36,6 +36,9 @@ namespace AtlantSovt.AtlantSovtDb
 
         public string Comment { get; set; }
 
+        [Column(TypeName = "image")]
+        public byte[] image { get; set; }
+
         public virtual TaxPayerStatu TaxPayerStatu { get; set; }
 
         public virtual WorkDocument WorkDocument { get; set; }

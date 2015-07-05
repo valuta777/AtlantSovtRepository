@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -131,6 +132,20 @@ namespace AtlantSovt
         }
 
         //add
+
+        public byte[] imageToByteArray(System.Drawing.Image imageIn)
+        {
+            MemoryStream ms = new MemoryStream();
+            imageIn.Save(ms,System.Drawing.Imaging.ImageFormat.Gif);
+            return  ms.ToArray();
+        }
+
+        public Image byteArrayToImage(byte[] byteArrayIn)
+        {
+             MemoryStream ms = new MemoryStream(byteArrayIn);
+             Image returnImage = Image.FromStream(ms);
+             return returnImage;
+        }
         void LoadWorkDocumentForwarderAddInfoComboBox()
         {
             using (var db = new AtlantSovtContext())
@@ -240,7 +255,8 @@ namespace AtlantSovt
                             Director = new_Director,
                             PhysicalAddress = new_PhysicalAddress,
                             GeographyAddress = new_GeographyAddress,
-                            Comment = new_Comment   
+                            Comment = new_Comment,
+                            image =forwarderAddImage != null ? imageToByteArray(forwarderAddImage) : null
                         };
                     }
 
@@ -254,7 +270,8 @@ namespace AtlantSovt
                             GeographyAddress = new_GeographyAddress,
                             WorkDocumentId = new_WorkDocumentId,
                             TaxPayerStatusId = new_TaxPayerStatusId,
-                            Comment = new_Comment
+                            Comment = new_Comment,                            
+                            image =forwarderAddImage != null ? imageToByteArray(forwarderAddImage) : null
                         };
                     }
 
@@ -267,7 +284,8 @@ namespace AtlantSovt
                             PhysicalAddress = new_PhysicalAddress,
                             GeographyAddress = new_GeographyAddress,
                             WorkDocumentId = new_WorkDocumentId,
-                            Comment = new_Comment
+                            Comment = new_Comment,                            
+                            image =forwarderAddImage != null ? imageToByteArray(forwarderAddImage) : null
                         };
                     }
 
@@ -280,7 +298,8 @@ namespace AtlantSovt
                             PhysicalAddress = new_PhysicalAddress,
                             GeographyAddress = new_GeographyAddress,
                             TaxPayerStatusId = new_TaxPayerStatusId,
-                            Comment = new_Comment
+                            Comment = new_Comment,
+                            image = forwarderAddImage != null ? imageToByteArray(forwarderAddImage) : null
                         };
                     }
 

@@ -39,7 +39,6 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<OrderUploadAdress> OrderUploadAdresses { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
         public virtual DbSet<RegularyDelay> RegularyDelays { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaxPayerStatu> TaxPayerStatus { get; set; }
         public virtual DbSet<TirCmr> TirCmrs { get; set; }
         public virtual DbSet<TrackingComment> TrackingComments { get; set; }

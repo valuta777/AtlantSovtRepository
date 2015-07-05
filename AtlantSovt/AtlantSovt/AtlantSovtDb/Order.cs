@@ -66,6 +66,8 @@ namespace AtlantSovt.AtlantSovtDb
 
         public byte? Language { get; set; }
 
+        public string Note { get; set; }
+
         public virtual AdditionalTerm AdditionalTerm { get; set; }
 
         public virtual Cargo Cargo { get; set; }
