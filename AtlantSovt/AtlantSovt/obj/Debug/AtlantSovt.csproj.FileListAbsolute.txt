@@ -208,3 +208,4 @@ E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.SelectDownloa
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.SelectUncustomsAddressesForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddCountryForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddLoadingFormForm.resources
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csprojResolveAssemblyReference.cache

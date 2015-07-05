@@ -1779,6 +1779,18 @@ namespace AtlantSovt
             comment.Dispose();
         }
 
+        private void showTrackingCreateOrderDoc_Click(object sender, EventArgs e)
+        {
+            IsOrderFull();
+            if (!isOrderFull || !isOrderLanguageSelected)
+            {
+                return;
+            }
+            OrderCounter();
+            CreateOrderDocument();
+            ShowTrackingSearch();
+        }
+
         #endregion
         
         // Order
@@ -2553,15 +2565,6 @@ namespace AtlantSovt
             OrderUpdateYOrUComboBox.DroppedDown = true;
         }
 
-        private void showTrackingCreateOrderDoc_Click(object sender, EventArgs e)
-        {
-            IsOrderFull();
-            if (!isOrderFull)
-            {
-                return;
-            }
-            OrderCounter();
-            CreateOrderDocument();
-        }
+     
     }
 }
