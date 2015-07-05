@@ -24,8 +24,11 @@ namespace AtlantSovt
             {
                 if (addRegularyDelayTextBox.Text != "")
                 {
-                    var new_Type = addRegularyDelayTextBox.Text;
-
+                    string new_Type ="";
+                    new_Type = addRegularyDelayTextBox.Text != "" ? new_Type + addRegularyDelayTextBox.Text : "__";
+                    new_Type = addRegularyDelayTextBox2.Text != "" ? new_Type +" - "+ addRegularyDelayTextBox2.Text : "__";
+                    new_Type = addRegularyDelayTextBox3.Text != "" ? new_Type +" - " + addRegularyDelayTextBox3.Text : "__";
+                    new_Type = addRegularyDelayTextBox4.Text != "" ? new_Type +" - " + addRegularyDelayTextBox4.Text : "__";
                     var New_RegularyDelay = new RegularyDelay
                     {
                         Type = new_Type,
@@ -48,6 +51,43 @@ namespace AtlantSovt
         {
             AddRegularyDelay();
             this.Dispose();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addRegularyDelayTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) &&  e.KeyChar != Convert.ToChar(8))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void addRegularyDelayTextBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) &&  e.KeyChar != Convert.ToChar(8))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void addRegularyDelayTextBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(8))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void addRegularyDelayTextBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(8))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
