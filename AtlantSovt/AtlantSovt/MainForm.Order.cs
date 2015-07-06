@@ -1164,7 +1164,14 @@ namespace AtlantSovt
                     {
                         OrderUpdateADRSelectComboBox.SelectedIndex = -1;
                     }
-
+                    if (updateOrder.Language != null)
+                    {
+                       OrderUpdateLanguageSelectComboBox.SelectedIndex = updateOrder.Language.Value;
+                    }
+                    else
+                    {
+                        OrderUpdateLanguageSelectComboBox.SelectedIndex = -1;
+                    }
                     if (updateOrder.Client != null)
                     {
                         int from, to = 0;
@@ -2118,7 +2125,7 @@ namespace AtlantSovt
                         {
                             if (updateOrder.Language != 0)
                             {
-                                if (OrderAddYOrUComboBox.SelectedIndex == 0)
+                                if (OrderUpdateLanguageSelectComboBox.SelectedIndex == 0)
                                 {
                                     updateOrder.Language = 0;
                                     IsModified = true;
@@ -2126,7 +2133,7 @@ namespace AtlantSovt
                             }
                             else if (updateOrder.Language != 1)
                             {
-                                if (OrderAddYOrUComboBox.SelectedIndex == 1)
+                                if (OrderUpdateLanguageSelectComboBox.SelectedIndex == 1)
                                 {
                                     updateOrder.Language = 1;
                                     IsModified = true;
@@ -2134,7 +2141,7 @@ namespace AtlantSovt
                             }
                             else if (updateOrder.Language !=2)
                             {
-                                if (OrderAddYOrUComboBox.SelectedIndex == 2)
+                                if (OrderUpdateLanguageSelectComboBox.SelectedIndex == 2)
                                 {
                                     updateOrder.Language = 2;
                                     IsModified = true;
