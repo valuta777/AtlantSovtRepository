@@ -65,7 +65,7 @@ namespace AtlantSovt
                     UploadDate = OrderAddUploadDateTimePicker.Checked ? (DateTime?)OrderUpdateDownloadDateTimePicker.Value : null,
                     State = null,
                     YorU = ((OrderAddYOrUComboBox.SelectedIndex != -1 && OrderAddYOrUComboBox.Text == OrderAddYOrUComboBox.SelectedItem.ToString())) ? ((OrderAddYOrUComboBox.SelectedIndex == 0) ? "У" : "І") : null,
-                    Language = (OrderAddLanduageSelectComboBox.SelectedIndex != -1 && OrderAddLanduageSelectComboBox.Text == OrderAddLanduageSelectComboBox.SelectedItem.ToString()) ? null : (OrderAddLanduageSelectComboBox.SelectedIndex == 0) ? (byte?)0 : (OrderAddLanduageSelectComboBox.SelectedIndex == 1) ? (byte?)1 : (byte?)2
+                    Language = (OrderAddLanduageSelectComboBox.SelectedIndex != -1 && OrderAddLanduageSelectComboBox.Text == OrderAddLanduageSelectComboBox.SelectedItem.ToString()) ? (OrderAddLanduageSelectComboBox.SelectedIndex == 0) ? (byte?)0 : (OrderAddLanduageSelectComboBox.SelectedIndex == 1) ? (byte?)1 : (byte?)2 : null
                 };
                 try
                 {
