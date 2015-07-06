@@ -58,7 +58,7 @@ namespace AtlantSovt
             trackingShowDataGridView.ClearSelection();
         }
 
-        void ShowTrackingInfo()
+        public void ShowTrackingInfo()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -134,13 +134,22 @@ namespace AtlantSovt
                 {
                     MessageBox.Show("Немає жодної заявки");
                 }
+
+                var query5 = 
+                        from o in db.Orders
+                        where o.Id == TrackingClikedId
+                        select o.Note;
+                trackingShowAddNoteRichTextBox.Text = query5.FirstOrDefault();
             }
             trackingShowTransporterContactsDataGridView.Update();
+
+
 
             trackingShowTransporterContactsDataGridView.Visible = true;
             trackingShowCommentDataGridView.Visible = true;
             trackingShowUploadAddressDataGridView.Visible = true;
             trackingShowDownloadAddressDataGridView.Visible = true;
+            trackingShowAddNoteRichTextBox.Visible = true;
         }
 
         void ShowTrackingCloseOrder()
@@ -192,6 +201,8 @@ namespace AtlantSovt
             trackingShowCommentDataGridView.Visible = false;
             trackingShowUploadAddressDataGridView.Visible = false;
             trackingShowDownloadAddressDataGridView.Visible = false;
+            trackingShowAddNoteRichTextBox.Visible = false;
+
 
             var text = trackingShowSearchTextBox.Text;
 
@@ -461,42 +472,182 @@ namespace AtlantSovt
 
         }
 
+        void IsOrderFull()
+        {
+            isOrderFull = true;
+            isOrderLanguageSelected = true;
+
+            using (var db = new AtlantSovtContext())
+            {
+                var ClikedId = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+
+                orderDocument = db.Orders.Find(ClikedId);
+
+                if (orderDocument != null)
+                {
+                    if (orderDocument.Language != null)
+                    {
+                        string forwarderName1 = "";
+                        string forwarderName2 = "";
+                        string loadingForm1 = "";
+                        string loadingForm2 = "";
+                        string[] regularyDelay;
+
+                        if (orderDocument.DownloadDate == null) isOrderFull = false;
+                        if (orderDocument.UploadDate == null) isOrderFull = false;
+
+                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).Count() == 1)
+                        {
+                            forwarderName1 = orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder.Name;
+                        }
+                        else
+                        {
+                            isOrderFull = false;
+                        }
+                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).Count() == 1)
+                        {
+                            forwarderName2 = orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder.Name;
+                        }
+                        else
+                        {
+                            isOrderFull = false;
+                        }
+
+
+                        if (orderDocument.OrderLoadingForms.Where(l => l.IsFirst == true).Count() == 1)
+                        {
+                            loadingForm1 = orderDocument.OrderLoadingForms.Where(l => l.IsFirst == true).FirstOrDefault().LoadingForm.Type;
+                        }
+                        else
+                        {
+                            isOrderFull = false;
+                        }
+                        if (orderDocument.OrderLoadingForms.Where(l => l.IsFirst == false).Count() == 1)
+                        {
+                            loadingForm2 = orderDocument.OrderLoadingForms.Where(l => l.IsFirst == false).FirstOrDefault().LoadingForm.Type;
+                        }
+                        else
+                        {
+                            isOrderFull = false;
+                        }
+
+                        if (orderDocument.Transporter == null || orderDocument.Transporter.FullName == "") isOrderFull = false;
+                        if (orderDocument.Cargo == null || orderDocument.Cargo.Type == "") isOrderFull = false;
+                        if (orderDocument.Cube == null || orderDocument.Cube.Type == "") isOrderFull = false;
+                        if (orderDocument.AdditionalTerm == null || orderDocument.AdditionalTerm.Type == "") isOrderFull = false;
+                        if (orderDocument.Trailer == null || orderDocument.Trailer.Type == "") isOrderFull = false;
+                        if (orderDocument.Payment == null || orderDocument.Payment.Type == "") isOrderFull = false;
+                        if (orderDocument.Freight == null || orderDocument.Freight == "") isOrderFull = false;
+                        if (orderDocument.FineForDelay == null || orderDocument.FineForDelay.Type == "") isOrderFull = false;
+                        if (Convert.ToString(orderDocument.CargoWeight) == null) isOrderFull = false;
+                        if (orderDocument.OrderDeny == null || orderDocument.OrderDeny.Type == "") isOrderFull = false;
+
+                        if (orderDocument.RegularyDelay == null || orderDocument.RegularyDelay.Type == "")
+                        {
+                            isOrderFull = false;
+                        }
+                        else
+                        {
+                            regularyDelay = orderDocument.RegularyDelay.Type.Split(new char[] { '-' });
+                        }
+                        var DownloadAddressQuery =
+                            from da in db.OrderDownloadAddresses
+                            where da.OrderId == ClikedId
+                            select da;
+
+                        var UploaddAddressQuery =
+                           from ua in db.OrderUploadAdresses
+                           where ua.OrderId == ClikedId
+                           select ua;
+
+                        var CustomAddressQuery =
+                           from ca in db.OrderCustomsAddresses
+                           where ca.OrderId == ClikedId
+                           select ca;
+
+                        var UncustomAddressQuery =
+                           from uca in db.OrderUnCustomsAddresses
+                           where uca.OrderId == ClikedId
+                           select uca;
+
+                        if(DownloadAddressQuery == null)
+                        {
+                            isOrderFull = false;
+                        }
+                        if (UploaddAddressQuery == null)
+                        {
+                            isOrderFull = false;
+                        }
+                        if (CustomAddressQuery == null)
+                        {
+                            isOrderFull = false;
+                        }
+                        if (UncustomAddressQuery == null)
+                        {
+                            isOrderFull = false;
+                        }
+                    }
+                    else
+                    {
+                        isOrderLanguageSelected = false;
+                        isOrderFull = false;
+                        MessageBox.Show("Виберіть мову у меню редагування");
+                    }
+                }
+                else
+                {
+                    isOrderFull = false;
+                }
+                if (!isOrderFull && isOrderLanguageSelected)
+                {
+                    if (MessageBox.Show("Продовжити без повного заповнення даних?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        isOrderFull = true;
+                    }
+                }
+            }
+        }
+
         void CreateOrderDocument()
         {
             var wordApp = new Microsoft.Office.Interop.Word.Application();
             Document wordDocument = null;
+
             try
             {
                 var ClikedId = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
 
                 using (var db = new AtlantSovtContext())
                 {
-
-                    orderDocument = db.Orders.Find(ClikedId);
                     wordApp.Visible = false;
                     wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((orderDocument.Language == 0) ? @"Resources\ukrOrder.docx" : (orderDocument.Language == 1) ? @"Resources\polOrder.docx" : @"Resources\gerOrder.docx")).Replace("\\bin\\Debug", ""));
+                    orderDocument = db.Orders.Find(ClikedId);
 
                     if (orderDocument != null)
                     {
-                        string createDate = orderDocument.Date.Value.ToShortDateString();
-                        string orderNumber = orderDocument.IndexNumber + @"\" + orderDocument.Date.Value.Year;
-
-                        string downloadDate = ((orderDocument.DownloadDate.Value.ToShortDateString() == null || orderDocument.DownloadDate.Value.ToShortDateString() == "") ? "" : orderDocument.DownloadDate.Value.ToShortDateString()) +" на ";
-                            downloadDate += (orderDocument.DownloadDate.Value.ToShortTimeString() == null || orderDocument.DownloadDate.Value.ToShortTimeString() == "") ? "" : orderDocument.DownloadDate.Value.ToShortTimeString();
-                      
-                        string dateTerms = (orderDocument.DownloadDate.Value.ToString("dd.mm") == null || orderDocument.DownloadDate.Value.ToString("dd.mm") == "") ? "" : orderDocument.DownloadDate.Value.ToString("dd.mm") + " - ";
-                            dateTerms += (orderDocument.UploadDate.Value.ToShortDateString() == null || orderDocument.UploadDate.Value.ToShortDateString() == "") ? "" : orderDocument.UploadDate.Value.ToShortDateString() + " до ";
-                            dateTerms +=(orderDocument.UploadDate.Value.ToShortTimeString() == null || orderDocument.UploadDate.Value.ToShortTimeString() == "") ? "" : orderDocument.UploadDate.Value.ToShortTimeString();
-
-                        string downloadAddress = "";
-                        string uploadAddress = "";
-                        string customAddress = "";
-                        string uncustomAddress = "";
+                        string orderNumber = "";
+                        string createDate = "";
                         string forwarderName1 = "";
                         string forwarderName2 = "";
                         string loadingForm1 = "";
                         string loadingForm2 = "";
+                        string downloadDate = "";
+                        string dateTerms = "";
+                        string downloadAddress = "";
+                        string uploadAddress = "";
+                        string customAddress = "";
+                        string uncustomAddress = "";
+                        string downloadAddressContactPerson = "";
                         string[] regularyDelay;
+
+                        orderNumber = orderDocument.IndexNumber + @"\" + orderDocument.Date.Value.Year;
+                        createDate = orderDocument.Date.Value.ToShortDateString();
+
+                        downloadDate = ((orderDocument.DownloadDate == null || orderDocument.DownloadDate.Value.ToShortDateString() == "") ? "" : orderDocument.DownloadDate.Value.ToShortDateString()) +" на ";
+                        downloadDate += (orderDocument.DownloadDate == null || orderDocument.DownloadDate.Value.ToShortTimeString() == "") ? "" : orderDocument.DownloadDate.Value.ToShortTimeString();
+                      
+                        dateTerms = (orderDocument.DownloadDate == null || orderDocument.DownloadDate.Value.ToString("dd.mm") == "") ? "" : orderDocument.DownloadDate.Value.ToString("dd.mm") + " - ";
+                        dateTerms += (orderDocument.UploadDate == null || orderDocument.UploadDate.Value.ToShortDateString() == "") ? "" : orderDocument.UploadDate.Value.ToShortDateString() + " до " + orderDocument.UploadDate.Value.ToShortTimeString();
 
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).Count() == 1)
                         {
@@ -519,26 +670,26 @@ namespace AtlantSovt
                         }
 
 
-                        string transporterName = (orderDocument.Transporter.FullName == null || orderDocument.Transporter.FullName == "") ? "" : orderDocument.Transporter.FullName;
-                        string cargoType = (orderDocument.Cargo.Type == null || orderDocument.Cargo.Type == "") ? "" : orderDocument.Cargo.Type + ", ";
-                        string cube = (orderDocument.Cube.Type == null || orderDocument.Cube.Type == "") ? "" : orderDocument.Cube.Type;
-                        string additionalTerms = (orderDocument.AdditionalTerm.Type == null || orderDocument.AdditionalTerm.Type == "") ? "" : orderDocument.AdditionalTerm.Type;
-                        string trailer = (orderDocument.Trailer.Type == null || orderDocument.Trailer.Type == "") ? "" : orderDocument.Trailer.Type + ", ";
-                        string paymentTerms = (orderDocument.Payment.Type == null || orderDocument.Payment.Type == "") ? "" : orderDocument.Payment.Type;
+                        string transporterName = (orderDocument.Transporter == null || orderDocument.Transporter.FullName == "") ? "" : orderDocument.Transporter.FullName;
+                        string cargoType = (orderDocument.Cargo == null || orderDocument.Cargo.Type == "") ? "" : orderDocument.Cargo.Type + ", ";
+                        string cube = (orderDocument.Cube == null || orderDocument.Cube.Type == "") ? "" : orderDocument.Cube.Type + ", ";
+                        string additionalTerms = (orderDocument.AdditionalTerm == null || orderDocument.AdditionalTerm.Type == "") ? "" : orderDocument.AdditionalTerm.Type;
+                        string trailer = (orderDocument.Trailer == null || orderDocument.Trailer.Type == "") ? "" : orderDocument.Trailer.Type + ", ";
+                        string paymentTerms = (orderDocument.Payment == null || orderDocument.Payment.Type == "") ? "" : orderDocument.Payment.Type;
                         string freight = (orderDocument.Freight == null || orderDocument.Freight == "") ? "" : orderDocument.Freight;
-                        string fineForDelay = (orderDocument.FineForDelay.Type == null || orderDocument.FineForDelay.Type == "") ? "_____________________" : orderDocument.FineForDelay.Type;
+                        string fineForDelay = (orderDocument.FineForDelay == null || orderDocument.FineForDelay.Type == "") ? "_____________________" : orderDocument.FineForDelay.Type;
                         string weight = (Convert.ToString(orderDocument.CargoWeight) == null) ? "" : Convert.ToString(orderDocument.CargoWeight) + " т";
-                        string orderDeny = (orderDocument.OrderDeny.Type == null || orderDocument.OrderDeny.Type == "") ? "____________________" : orderDocument.OrderDeny.Type;
+                        string orderDeny = (orderDocument.OrderDeny == null || orderDocument.OrderDeny.Type == "") ? "____________________" : orderDocument.OrderDeny.Type;
 
-                        if (orderDocument.RegularyDelay.Type == null || orderDocument.RegularyDelay.Type == "")
+                        if (orderDocument.RegularyDelay == null || orderDocument.RegularyDelay.Type == "")
                         {
-                            regularyDelay = new string[4] { "___", "___", "___", "___" };
+                            regularyDelay = new string[] { "___", "___", "___", "___" };
                         }
                         else
                         {
                             regularyDelay = orderDocument.RegularyDelay.Type.Split(new char[] { '-' });
                         }
-                        var DownloaddAddressQuery =
+                        var DownloadAddressQuery =
                             from da in db.OrderDownloadAddresses
                             where da.OrderId == ClikedId
                             select da;
@@ -558,38 +709,41 @@ namespace AtlantSovt
                            where uca.OrderId == ClikedId
                            select uca;
 
-                        string downloadAddressContactPerson = DownloaddAddressQuery.FirstOrDefault().DownloadAddress.ContactPerson;
-
-                        foreach(var address in DownloaddAddressQuery)
+                        if (DownloadAddressQuery.ToList().Count != 0)
                         {
-                            downloadAddress += ((address.DownloadAddress.StreetName != "" && address.DownloadAddress.StreetName != null) ? address.DownloadAddress.StreetName + " " : "");
-                            downloadAddress += ((address.DownloadAddress.HouseNumber != "" && address.DownloadAddress.HouseNumber != null) ? address.DownloadAddress.HouseNumber + ", " : "");
-                            downloadAddress += ((address.DownloadAddress.CityName != "" && address.DownloadAddress.CityName != null) ? address.DownloadAddress.CityName + ", " : "");
-                            downloadAddress += address.DownloadAddress.Country.Name + "\n";
+                            downloadAddressContactPerson = (DownloadAddressQuery.FirstOrDefault().DownloadAddress.ContactPerson == null || DownloadAddressQuery.FirstOrDefault().DownloadAddress.ContactPerson == "") ? "" : DownloadAddressQuery.FirstOrDefault().DownloadAddress.ContactPerson;
+                        }
+
+                        foreach(var address in DownloadAddressQuery)
+                        {
+                            downloadAddress += ((address.DownloadAddress.StreetName != "" && address.DownloadAddress != null) ? address.DownloadAddress.StreetName + " " : "");
+                            downloadAddress += ((address.DownloadAddress.HouseNumber != "" && address.DownloadAddress != null) ? address.DownloadAddress.HouseNumber + ", " : "");
+                            downloadAddress += ((address.DownloadAddress.CityName != "" && address.DownloadAddress != null) ? address.DownloadAddress.CityName + ", " : "");
+                            downloadAddress += address.DownloadAddress.Country.Name + Environment.NewLine;
                         }
 
                         foreach (var address in UploaddAddressQuery)
                         {
-                            uploadAddress += ((address.UploadAddress.StreetName != "" && address.UploadAddress.StreetName != null) ? address.UploadAddress.StreetName + " " : "");
-                            uploadAddress += ((address.UploadAddress.HouseNumber != "" && address.UploadAddress.HouseNumber != null) ? address.UploadAddress.HouseNumber + ", " : "");
-                            uploadAddress += ((address.UploadAddress.CityName != "" && address.UploadAddress.CityName != null) ? address.UploadAddress.CityName + ", " : "");
-                            uploadAddress += address.UploadAddress.Country.Name + "\n";
+                            uploadAddress += ((address.UploadAddress.StreetName != "" && address.UploadAddress != null) ? address.UploadAddress.StreetName + " " : "");
+                            uploadAddress += ((address.UploadAddress.HouseNumber != "" && address.UploadAddress != null) ? address.UploadAddress.HouseNumber + ", " : "");
+                            uploadAddress += ((address.UploadAddress.CityName != "" && address.UploadAddress != null) ? address.UploadAddress.CityName + ", " : "");
+                            uploadAddress += address.UploadAddress.Country.Name + Environment.NewLine;
                         }
 
                         foreach (var address in CustomAddressQuery)
                         {
-                            customAddress += ((address.CustomsAddress.StreetName != "" && address.CustomsAddress.StreetName != null) ? address.CustomsAddress.StreetName + " " : "");
-                            customAddress += ((address.CustomsAddress.HouseNumber != "" && address.CustomsAddress.HouseNumber != null) ? address.CustomsAddress.HouseNumber + ", " : "");
-                            customAddress += ((address.CustomsAddress.CityName != "" && address.CustomsAddress.CityName != null) ? address.CustomsAddress.CityName + ", " : "");
-                            customAddress += address.CustomsAddress.Country.Name + "\n";
+                            customAddress += ((address.CustomsAddress.StreetName != "" && address.CustomsAddress != null) ? address.CustomsAddress.StreetName + " " : "");
+                            customAddress += ((address.CustomsAddress.HouseNumber != "" && address.CustomsAddress != null) ? address.CustomsAddress.HouseNumber + ", " : "");
+                            customAddress += ((address.CustomsAddress.CityName != "" && address.CustomsAddress != null) ? address.CustomsAddress.CityName + ", " : "");
+                            customAddress += address.CustomsAddress.Country.Name + Environment.NewLine;
                         }
 
                         foreach (var address in UncustomAddressQuery)
                         {
-                            uncustomAddress += ((address.UnCustomsAddress.StreetName != "" && address.UnCustomsAddress.StreetName != null) ? address.UnCustomsAddress.StreetName + " " : "");
-                            uncustomAddress += ((address.UnCustomsAddress.HouseNumber != "" && address.UnCustomsAddress.HouseNumber != null) ? address.UnCustomsAddress.HouseNumber + ", " : "");
-                            uncustomAddress += ((address.UnCustomsAddress.CityName != "" && address.UnCustomsAddress.CityName != null) ? address.UnCustomsAddress.CityName + ", " : "");
-                            uncustomAddress += address.UnCustomsAddress.Country.Name + "\n";
+                            uncustomAddress += ((address.UnCustomsAddress.StreetName != "" && address.UnCustomsAddress != null) ? address.UnCustomsAddress.StreetName + " " : "");
+                            uncustomAddress += ((address.UnCustomsAddress.HouseNumber != "" && address.UnCustomsAddress != null) ? address.UnCustomsAddress.HouseNumber + ", " : "");
+                            uncustomAddress += ((address.UnCustomsAddress.CityName != "" && address.UnCustomsAddress != null) ? address.UnCustomsAddress.CityName + ", " : "");
+                            uncustomAddress += address.UnCustomsAddress.Country.Name + Environment.NewLine;
                         }
 
                         ReplaseWordStub("{ForwarderName1}", forwarderName1, wordDocument);
@@ -631,6 +785,11 @@ namespace AtlantSovt
                             wordDocument.Close(Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges);
                         }
                     }
+                    else
+                    {
+                        wordDocument.Close(Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges);
+                        MessageBox.Show("Помилка!");
+                    }
                 }
             }
             catch (NullReferenceException nullClickedId)
@@ -644,164 +803,6 @@ namespace AtlantSovt
             {
                 wordDocument.Close(Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges);
                 MessageBox.Show("Помилка, спробуйте ще раз");
-            }
-        }
-
-        void IsOrderFull()
-        {
-            isOrderFull = true;
-            isOrderLanguageSelected = true;
-
-            var ClikedId = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
-
-            using (var db = new AtlantSovtContext())
-            {
-                orderDocument = db.Orders.Find(ClikedId);
-                if (orderDocument != null)
-                {
-                    if (orderDocument.Language != null)
-                    {
-
-                        if (orderDocument.DownloadDate == null) isOrderFull = false;
-                        if (orderDocument.UploadDate == null) isOrderFull = false;
-
-                        string downloadAddress = "";
-                        string uploadAddress = "";
-                        string customAddress = "";
-                        string uncustomAddress = "";
-                        string forwarderName1 = "";
-                        string forwarderName2 = "";
-                        string loadingForm1 = "";
-                        string loadingForm2 = "";
-                        string[] regularyDelay;
-
-                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).Count() == 1)
-                        {
-                            forwarderName1 = orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder.Name;
-                        }
-                        else
-                        {
-                            isOrderFull = false;
-                        }
-                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).Count() == 1)
-                        {
-                            forwarderName2 = orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder.Name;
-                        }
-                        else
-                        {
-                            isOrderFull = false;
-                        }
-
-
-                        if (orderDocument.OrderLoadingForms.Where(l => l.IsFirst == true).Count() == 1)
-                        {
-                            loadingForm1 = orderDocument.OrderLoadingForms.Where(l => l.IsFirst == true).FirstOrDefault().LoadingForm.Type;
-                        }
-                        else
-                        {
-                            isOrderFull = false;
-                        }
-                        if (orderDocument.OrderLoadingForms.Where(l => l.IsFirst == false).Count() == 1)
-                        {
-                            loadingForm2 = orderDocument.OrderLoadingForms.Where(l => l.IsFirst == false).FirstOrDefault().LoadingForm.Type;
-                        }
-                        else
-                        {
-                            isOrderFull = false;
-                        }
-
-                        if(orderDocument.Transporter.FullName == null || orderDocument.Transporter.FullName == "") isOrderFull = false;
-                        if(orderDocument.Cargo.Type == null || orderDocument.Cargo.Type == "") isOrderFull = false;
-                        if(orderDocument.Cube.Type == null || orderDocument.Cube.Type == "") isOrderFull = false;
-                        if(orderDocument.AdditionalTerm.Type == null || orderDocument.AdditionalTerm.Type == "")isOrderFull = false;
-                        if(orderDocument.Trailer.Type == null || orderDocument.Trailer.Type == "") isOrderFull = false;
-                        if(orderDocument.Payment.Type == null || orderDocument.Payment.Type == "")isOrderFull = false;
-                        if(orderDocument.Freight == null || orderDocument.Freight == "") isOrderFull = false;
-                        if(orderDocument.FineForDelay.Type == null || orderDocument.FineForDelay.Type == "")isOrderFull = false;
-                        if(Convert.ToString(orderDocument.CargoWeight) == null) isOrderFull = false;
-                        if (orderDocument.OrderDeny.Type == null || orderDocument.OrderDeny.Type == "") isOrderFull = false;
-
-                        if (orderDocument.RegularyDelay.Type == null || orderDocument.RegularyDelay.Type == "")
-                        {
-                            regularyDelay = new string[4] { "___", "___", "___", "___" };
-                            isOrderFull = false;
-                        }
-                        else
-                        {
-                            regularyDelay = orderDocument.RegularyDelay.Type.Split(new char[] { '-' });
-                        }
-                        var DownloaddAddressQuery =
-                            from da in db.OrderDownloadAddresses
-                            where da.OrderId == ClikedId
-                            select da;
-
-                        var UploaddAddressQuery =
-                           from ua in db.OrderUploadAdresses
-                           where ua.OrderId == ClikedId
-                           select ua;
-
-                        var CustomAddressQuery =
-                           from ca in db.OrderCustomsAddresses
-                           where ca.OrderId == ClikedId
-                           select ca;
-
-                        var UncustomAddressQuery =
-                           from uca in db.OrderUnCustomsAddresses
-                           where uca.OrderId == ClikedId
-                           select uca;
-
-                        string downloadAddressContactPerson = DownloaddAddressQuery.FirstOrDefault().DownloadAddress.ContactPerson;
-
-                        foreach (var address in DownloaddAddressQuery)
-                        {
-                            downloadAddress += ((address.DownloadAddress.StreetName != "" && address.DownloadAddress.StreetName != null) ? address.DownloadAddress.StreetName + " " : "");
-                            downloadAddress += ((address.DownloadAddress.HouseNumber != "" && address.DownloadAddress.HouseNumber != null) ? address.DownloadAddress.HouseNumber + ", " : "");
-                            downloadAddress += ((address.DownloadAddress.CityName != "" && address.DownloadAddress.CityName != null) ? address.DownloadAddress.CityName + ", " : "");
-                            downloadAddress += address.DownloadAddress.Country.Name + "\n";
-                        }
-
-                        foreach (var address in UploaddAddressQuery)
-                        {
-                            uploadAddress += ((address.UploadAddress.StreetName != "" && address.UploadAddress.StreetName != null) ? address.UploadAddress.StreetName + " " : "");
-                            uploadAddress += ((address.UploadAddress.HouseNumber != "" && address.UploadAddress.HouseNumber != null) ? address.UploadAddress.HouseNumber + ", " : "");
-                            uploadAddress += ((address.UploadAddress.CityName != "" && address.UploadAddress.CityName != null) ? address.UploadAddress.CityName + ", " : "");
-                            uploadAddress += address.UploadAddress.Country.Name + "\n";
-                        }
-
-                        foreach (var address in CustomAddressQuery)
-                        {
-                            customAddress += ((address.CustomsAddress.StreetName != "" && address.CustomsAddress.StreetName != null) ? address.CustomsAddress.StreetName + " " : "");
-                            customAddress += ((address.CustomsAddress.HouseNumber != "" && address.CustomsAddress.HouseNumber != null) ? address.CustomsAddress.HouseNumber + ", " : "");
-                            customAddress += ((address.CustomsAddress.CityName != "" && address.CustomsAddress.CityName != null) ? address.CustomsAddress.CityName + ", " : "");
-                            customAddress += address.CustomsAddress.Country.Name + "\n";
-                        }
-
-                        foreach (var address in UncustomAddressQuery)
-                        {
-                            uncustomAddress += ((address.UnCustomsAddress.StreetName != "" && address.UnCustomsAddress.StreetName != null) ? address.UnCustomsAddress.StreetName + " " : "");
-                            uncustomAddress += ((address.UnCustomsAddress.HouseNumber != "" && address.UnCustomsAddress.HouseNumber != null) ? address.UnCustomsAddress.HouseNumber + ", " : "");
-                            uncustomAddress += ((address.UnCustomsAddress.CityName != "" && address.UnCustomsAddress.CityName != null) ? address.UnCustomsAddress.CityName + ", " : "");
-                            uncustomAddress += address.UnCustomsAddress.Country.Name + "\n";
-                        }
-
-                    }
-                    else
-                    {
-                        isOrderLanguageSelected = false;
-                        MessageBox.Show("Виберіть мову у меню редагування");
-                    }
-                }
-                else
-                {
-                    isOrderFull = false;
-                }
-                if (!isOrderFull)
-                {
-                    if (MessageBox.Show("Продовжити без повного заповнення даних?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        isOrderFull = true;
-                    }
-                }
             }
         }
 
@@ -837,23 +838,25 @@ namespace AtlantSovt
 
                 orderCount = new OrderCounter();
                 orderDocument = db.Orders.Find(ClikedId);
-
                 try
                 {
-                    if (orderDocument.Language == 0)
+                    if (orderDocument.State == null)
                     {
-                        orderCount = db.OrderCounters.Find(1);
-                        orderCount.LocalOrder += 1;
-                        db.Entry(orderCount).State = EntityState.Modified;
-                        db.SaveChanges();
-                    }
-                    else
-                    {
-                        orderCount = db.OrderCounters.Find(1);
-                        orderCount.ForeignOrder += 1;
-                        db.Entry(orderCount).State = EntityState.Modified;
-                        db.SaveChanges();
-                    }
+                        if (orderDocument.Language == 0)
+                        {
+                            orderCount = db.OrderCounters.Find(1);
+                            orderCount.LocalOrder += 1;
+                            db.Entry(orderCount).State = EntityState.Modified;
+                            db.SaveChanges();
+                        }
+                        else
+                        {
+                            orderCount = db.OrderCounters.Find(1);
+                            orderCount.ForeignOrder += 1;
+                            db.Entry(orderCount).State = EntityState.Modified;
+                            db.SaveChanges();
+                        }
+                    }     
                 }
                 catch (Exception e)
                 {
@@ -862,20 +865,19 @@ namespace AtlantSovt
 
                 try
                 {
-                    orderDocument = new Order();
-                    orderDocument = db.Orders.Find(ClikedId);
-                    if (orderDocument.Language == 0)
-                    {
-                        orderDocument.IndexNumber = orderCount.LocalOrder;
-                    }
-                    else if (contractLanguage == 1)
-                    {
-                        orderDocument.IndexNumber = orderCount.ForeignOrder;
-                    }
 
-                    orderDocument.Date = DateTime.Now;
-                    if(orderDocument.State == null)
+                    if (orderDocument.State == null)
                     {
+                        if (orderDocument.Language == 0)
+                        {
+                            orderDocument.IndexNumber = orderCount.LocalOrder;
+                        }
+                        else if (orderDocument.Language == 1 || orderDocument.Language == 2)
+                        {
+                            orderDocument.IndexNumber = orderCount.ForeignOrder;
+                        }
+                        orderDocument.Date = DateTime.Now;
+
                         orderDocument.State = true;
                     }
                     db.Entry(orderDocument).State = EntityState.Modified;

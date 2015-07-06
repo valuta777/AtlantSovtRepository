@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showClientsStrip = new System.Windows.Forms.ToolStripMenuItem();
@@ -393,9 +394,12 @@
             this.OrderAddForwarder2SelectComboBox = new System.Windows.Forms.ComboBox();
             this.OrderAddForwarder1SelectComboBox = new System.Windows.Forms.ComboBox();
             this.showTrackingPage = new System.Windows.Forms.TabPage();
-            this.showTrackingCreateOrderDoc = new System.Windows.Forms.Button();
-            this.trackingShowUploadAddressDataGridView = new System.Windows.Forms.DataGridView();
+            this.showTrackingSplitContainer1 = new System.Windows.Forms.SplitContainer();
             this.trackingShowDownloadAddressDataGridView = new System.Windows.Forms.DataGridView();
+            this.trackingShowUploadAddressDataGridView = new System.Windows.Forms.DataGridView();
+            this.trackingShowAddNoteRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.label38ShowTracking = new System.Windows.Forms.Label();
+            this.showTrackingCreateOrderDoc = new System.Windows.Forms.Button();
             this.trackingShowCommentDataGridView = new System.Windows.Forms.DataGridView();
             this.trackingLabel16 = new System.Windows.Forms.Label();
             this.trackingLabel17 = new System.Windows.Forms.Label();
@@ -575,8 +579,12 @@
             this.addOrderSplitContainer1.Panel2.SuspendLayout();
             this.addOrderSplitContainer1.SuspendLayout();
             this.showTrackingPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackingShowUploadAddressDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showTrackingSplitContainer1)).BeginInit();
+            this.showTrackingSplitContainer1.Panel1.SuspendLayout();
+            this.showTrackingSplitContainer1.Panel2.SuspendLayout();
+            this.showTrackingSplitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackingShowDownloadAddressDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowUploadAddressDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingShowCommentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingShowTransporterContactsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingShowDataGridView)).BeginInit();
@@ -1991,13 +1999,13 @@
             this.forwarderDataGridView.Location = new System.Drawing.Point(0, 27);
             this.forwarderDataGridView.MultiSelect = false;
             this.forwarderDataGridView.Name = "forwarderDataGridView";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.forwarderDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.forwarderDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.forwarderDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.forwarderDataGridView.Size = new System.Drawing.Size(776, 226);
             this.forwarderDataGridView.TabIndex = 9;
@@ -5367,9 +5375,10 @@
             // showTrackingPage
             // 
             this.showTrackingPage.BackColor = System.Drawing.Color.AliceBlue;
+            this.showTrackingPage.Controls.Add(this.showTrackingSplitContainer1);
+            this.showTrackingPage.Controls.Add(this.trackingShowAddNoteRichTextBox);
+            this.showTrackingPage.Controls.Add(this.label38ShowTracking);
             this.showTrackingPage.Controls.Add(this.showTrackingCreateOrderDoc);
-            this.showTrackingPage.Controls.Add(this.trackingShowUploadAddressDataGridView);
-            this.showTrackingPage.Controls.Add(this.trackingShowDownloadAddressDataGridView);
             this.showTrackingPage.Controls.Add(this.trackingShowCommentDataGridView);
             this.showTrackingPage.Controls.Add(this.trackingLabel16);
             this.showTrackingPage.Controls.Add(this.trackingLabel17);
@@ -5391,63 +5400,107 @@
             this.showTrackingPage.TabIndex = 16;
             this.showTrackingPage.Text = "showTrackingPage";
             // 
+            // showTrackingSplitContainer1
+            // 
+            this.showTrackingSplitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.showTrackingSplitContainer1.Location = new System.Drawing.Point(0, 195);
+            this.showTrackingSplitContainer1.Name = "showTrackingSplitContainer1";
+            // 
+            // showTrackingSplitContainer1.Panel1
+            // 
+            this.showTrackingSplitContainer1.Panel1.Controls.Add(this.trackingShowDownloadAddressDataGridView);
+            // 
+            // showTrackingSplitContainer1.Panel2
+            // 
+            this.showTrackingSplitContainer1.Panel2.Controls.Add(this.trackingShowUploadAddressDataGridView);
+            this.showTrackingSplitContainer1.Size = new System.Drawing.Size(492, 80);
+            this.showTrackingSplitContainer1.SplitterDistance = 244;
+            this.showTrackingSplitContainer1.TabIndex = 67;
+            // 
+            // trackingShowDownloadAddressDataGridView
+            // 
+            this.trackingShowDownloadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.trackingShowDownloadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.trackingShowDownloadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.trackingShowDownloadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.trackingShowDownloadAddressDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trackingShowDownloadAddressDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.trackingShowDownloadAddressDataGridView.MultiSelect = false;
+            this.trackingShowDownloadAddressDataGridView.Name = "trackingShowDownloadAddressDataGridView";
+            this.trackingShowDownloadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.trackingShowDownloadAddressDataGridView.Size = new System.Drawing.Size(244, 80);
+            this.trackingShowDownloadAddressDataGridView.TabIndex = 61;
+            this.trackingShowDownloadAddressDataGridView.TabStop = false;
+            // 
+            // trackingShowUploadAddressDataGridView
+            // 
+            this.trackingShowUploadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.trackingShowUploadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.trackingShowUploadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.trackingShowUploadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.trackingShowUploadAddressDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trackingShowUploadAddressDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.trackingShowUploadAddressDataGridView.MultiSelect = false;
+            this.trackingShowUploadAddressDataGridView.Name = "trackingShowUploadAddressDataGridView";
+            this.trackingShowUploadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.trackingShowUploadAddressDataGridView.Size = new System.Drawing.Size(244, 80);
+            this.trackingShowUploadAddressDataGridView.TabIndex = 62;
+            this.trackingShowUploadAddressDataGridView.TabStop = false;
+            // 
+            // trackingShowAddNoteRichTextBox
+            // 
+            this.trackingShowAddNoteRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackingShowAddNoteRichTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.trackingShowAddNoteRichTextBox.Location = new System.Drawing.Point(498, 81);
+            this.trackingShowAddNoteRichTextBox.Name = "trackingShowAddNoteRichTextBox";
+            this.trackingShowAddNoteRichTextBox.ReadOnly = true;
+            this.trackingShowAddNoteRichTextBox.Size = new System.Drawing.Size(274, 264);
+            this.trackingShowAddNoteRichTextBox.TabIndex = 66;
+            this.trackingShowAddNoteRichTextBox.TabStop = false;
+            this.trackingShowAddNoteRichTextBox.Text = "";
+            this.trackingShowAddNoteRichTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.trackingShowAddNoteRichTextBox_MouseClick);
+            // 
+            // label38ShowTracking
+            // 
+            this.label38ShowTracking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label38ShowTracking.AutoSize = true;
+            this.label38ShowTracking.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38ShowTracking.Location = new System.Drawing.Point(497, 57);
+            this.label38ShowTracking.Name = "label38ShowTracking";
+            this.label38ShowTracking.Size = new System.Drawing.Size(77, 21);
+            this.label38ShowTracking.TabIndex = 65;
+            this.label38ShowTracking.Text = "Примітка";
+            // 
             // showTrackingCreateOrderDoc
             // 
             this.showTrackingCreateOrderDoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.showTrackingCreateOrderDoc.Enabled = false;
             this.showTrackingCreateOrderDoc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showTrackingCreateOrderDoc.Location = new System.Drawing.Point(537, 198);
+            this.showTrackingCreateOrderDoc.Location = new System.Drawing.Point(498, 351);
             this.showTrackingCreateOrderDoc.Name = "showTrackingCreateOrderDoc";
-            this.showTrackingCreateOrderDoc.Size = new System.Drawing.Size(235, 81);
-            this.showTrackingCreateOrderDoc.TabIndex = 63;
-            this.showTrackingCreateOrderDoc.TabStop = false;
+            this.showTrackingCreateOrderDoc.Size = new System.Drawing.Size(278, 54);
+            this.showTrackingCreateOrderDoc.TabIndex = 1;
             this.showTrackingCreateOrderDoc.Text = "Відкрити у Word";
             this.showTrackingCreateOrderDoc.UseVisualStyleBackColor = true;
             this.showTrackingCreateOrderDoc.Click += new System.EventHandler(this.showTrackingCreateOrderDoc_Click);
-            // 
-            // trackingShowUploadAddressDataGridView
-            // 
-            this.trackingShowUploadAddressDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.trackingShowUploadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.trackingShowUploadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.trackingShowUploadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.trackingShowUploadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.trackingShowUploadAddressDataGridView.Location = new System.Drawing.Point(387, 457);
-            this.trackingShowUploadAddressDataGridView.MultiSelect = false;
-            this.trackingShowUploadAddressDataGridView.Name = "trackingShowUploadAddressDataGridView";
-            this.trackingShowUploadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.trackingShowUploadAddressDataGridView.Size = new System.Drawing.Size(385, 65);
-            this.trackingShowUploadAddressDataGridView.TabIndex = 62;
-            this.trackingShowUploadAddressDataGridView.TabStop = false;
-            // 
-            // trackingShowDownloadAddressDataGridView
-            // 
-            this.trackingShowDownloadAddressDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.trackingShowDownloadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.trackingShowDownloadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.trackingShowDownloadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.trackingShowDownloadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.trackingShowDownloadAddressDataGridView.Location = new System.Drawing.Point(0, 457);
-            this.trackingShowDownloadAddressDataGridView.MultiSelect = false;
-            this.trackingShowDownloadAddressDataGridView.Name = "trackingShowDownloadAddressDataGridView";
-            this.trackingShowDownloadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.trackingShowDownloadAddressDataGridView.Size = new System.Drawing.Size(385, 65);
-            this.trackingShowDownloadAddressDataGridView.TabIndex = 61;
-            this.trackingShowDownloadAddressDataGridView.TabStop = false;
             // 
             // trackingShowCommentDataGridView
             // 
             this.trackingShowCommentDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackingShowCommentDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.trackingShowCommentDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.trackingShowCommentDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.trackingShowCommentDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.trackingShowCommentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.trackingShowCommentDataGridView.Location = new System.Drawing.Point(0, 305);
+            this.trackingShowCommentDataGridView.Location = new System.Drawing.Point(-4, 410);
             this.trackingShowCommentDataGridView.MultiSelect = false;
             this.trackingShowCommentDataGridView.Name = "trackingShowCommentDataGridView";
+            this.trackingShowCommentDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.trackingShowCommentDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.trackingShowCommentDataGridView.Size = new System.Drawing.Size(535, 125);
+            this.trackingShowCommentDataGridView.Size = new System.Drawing.Size(496, 119);
             this.trackingShowCommentDataGridView.TabIndex = 60;
             this.trackingShowCommentDataGridView.TabStop = false;
             this.trackingShowCommentDataGridView.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.trackingShowCommentDataGridView_CellMouseDown);
@@ -5459,7 +5512,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackingLabel16.AutoSize = true;
             this.trackingLabel16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trackingLabel16.Location = new System.Drawing.Point(4, 433);
+            this.trackingLabel16.Location = new System.Drawing.Point(-4, 172);
             this.trackingLabel16.Name = "trackingLabel16";
             this.trackingLabel16.Size = new System.Drawing.Size(83, 21);
             this.trackingLabel16.TabIndex = 59;
@@ -5471,7 +5524,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackingLabel17.AutoSize = true;
             this.trackingLabel17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trackingLabel17.Location = new System.Drawing.Point(3, 281);
+            this.trackingLabel17.Location = new System.Drawing.Point(-1, 386);
             this.trackingLabel17.Name = "trackingLabel17";
             this.trackingLabel17.Size = new System.Drawing.Size(80, 21);
             this.trackingLabel17.TabIndex = 58;
@@ -5482,11 +5535,10 @@
             this.trackingShowAddCommentButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.trackingShowAddCommentButton.Enabled = false;
             this.trackingShowAddCommentButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.trackingShowAddCommentButton.Location = new System.Drawing.Point(537, 283);
+            this.trackingShowAddCommentButton.Location = new System.Drawing.Point(498, 411);
             this.trackingShowAddCommentButton.Name = "trackingShowAddCommentButton";
-            this.trackingShowAddCommentButton.Size = new System.Drawing.Size(235, 81);
-            this.trackingShowAddCommentButton.TabIndex = 57;
-            this.trackingShowAddCommentButton.TabStop = false;
+            this.trackingShowAddCommentButton.Size = new System.Drawing.Size(278, 54);
+            this.trackingShowAddCommentButton.TabIndex = 2;
             this.trackingShowAddCommentButton.Text = "Додати коментар";
             this.trackingShowAddCommentButton.UseVisualStyleBackColor = true;
             this.trackingShowAddCommentButton.Click += new System.EventHandler(this.trackingShowAddCommentButton_Click);
@@ -5496,11 +5548,10 @@
             this.trackingShowCloseOrderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.trackingShowCloseOrderButton.Enabled = false;
             this.trackingShowCloseOrderButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.trackingShowCloseOrderButton.Location = new System.Drawing.Point(537, 368);
+            this.trackingShowCloseOrderButton.Location = new System.Drawing.Point(498, 471);
             this.trackingShowCloseOrderButton.Name = "trackingShowCloseOrderButton";
-            this.trackingShowCloseOrderButton.Size = new System.Drawing.Size(235, 81);
-            this.trackingShowCloseOrderButton.TabIndex = 55;
-            this.trackingShowCloseOrderButton.TabStop = false;
+            this.trackingShowCloseOrderButton.Size = new System.Drawing.Size(278, 54);
+            this.trackingShowCloseOrderButton.TabIndex = 3;
             this.trackingShowCloseOrderButton.Text = "Закрити заявку";
             this.trackingShowCloseOrderButton.UseVisualStyleBackColor = true;
             this.trackingShowCloseOrderButton.Click += new System.EventHandler(this.trackingShowCloseOrder_Click);
@@ -5557,7 +5608,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackingLabel1.AutoSize = true;
             this.trackingLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trackingLabel1.Location = new System.Drawing.Point(3, 176);
+            this.trackingLabel1.Location = new System.Drawing.Point(-1, 278);
             this.trackingLabel1.Name = "trackingLabel1";
             this.trackingLabel1.Size = new System.Drawing.Size(205, 21);
             this.trackingLabel1.TabIndex = 50;
@@ -5571,11 +5622,11 @@
             this.trackingShowTransporterContactsDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.trackingShowTransporterContactsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.trackingShowTransporterContactsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.trackingShowTransporterContactsDataGridView.Location = new System.Drawing.Point(0, 197);
+            this.trackingShowTransporterContactsDataGridView.Location = new System.Drawing.Point(0, 302);
             this.trackingShowTransporterContactsDataGridView.MultiSelect = false;
             this.trackingShowTransporterContactsDataGridView.Name = "trackingShowTransporterContactsDataGridView";
             this.trackingShowTransporterContactsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.trackingShowTransporterContactsDataGridView.Size = new System.Drawing.Size(535, 81);
+            this.trackingShowTransporterContactsDataGridView.Size = new System.Drawing.Size(492, 81);
             this.trackingShowTransporterContactsDataGridView.TabIndex = 49;
             this.trackingShowTransporterContactsDataGridView.TabStop = false;
             // 
@@ -5620,14 +5671,24 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackingShowDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.trackingShowDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.trackingShowDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.trackingShowDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.trackingShowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.trackingShowDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.trackingShowDataGridView.Location = new System.Drawing.Point(0, 62);
             this.trackingShowDataGridView.MultiSelect = false;
             this.trackingShowDataGridView.Name = "trackingShowDataGridView";
+            this.trackingShowDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.trackingShowDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.trackingShowDataGridView.Size = new System.Drawing.Size(776, 107);
+            this.trackingShowDataGridView.Size = new System.Drawing.Size(492, 107);
             this.trackingShowDataGridView.TabIndex = 18;
             this.trackingShowDataGridView.TabStop = false;
             this.trackingShowDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.trackingShowDataGridView_CellMouseClick);
@@ -6060,7 +6121,7 @@
             this.OrderUpdateLoadingForm2SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateLoadingForm2SelectComboBox.Location = new System.Drawing.Point(6, 83);
             this.OrderUpdateLoadingForm2SelectComboBox.Name = "OrderUpdateLoadingForm2SelectComboBox";
-            this.OrderUpdateLoadingForm2SelectComboBox.Size = new System.Drawing.Size(146, 29);
+            this.OrderUpdateLoadingForm2SelectComboBox.Size = new System.Drawing.Size(164, 29);
             this.OrderUpdateLoadingForm2SelectComboBox.Sorted = true;
             this.OrderUpdateLoadingForm2SelectComboBox.TabIndex = 22;
             this.OrderUpdateLoadingForm2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateLoadingForm2SelectComboBox_SelectedIndexChanged);
@@ -6087,7 +6148,7 @@
             this.OrderUpdateLoadingForm1SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateLoadingForm1SelectComboBox.Location = new System.Drawing.Point(6, 28);
             this.OrderUpdateLoadingForm1SelectComboBox.Name = "OrderUpdateLoadingForm1SelectComboBox";
-            this.OrderUpdateLoadingForm1SelectComboBox.Size = new System.Drawing.Size(146, 29);
+            this.OrderUpdateLoadingForm1SelectComboBox.Size = new System.Drawing.Size(164, 29);
             this.OrderUpdateLoadingForm1SelectComboBox.Sorted = true;
             this.OrderUpdateLoadingForm1SelectComboBox.TabIndex = 18;
             this.OrderUpdateLoadingForm1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateLoadingForm1SelectComboBox_SelectedIndexChanged);
@@ -7095,8 +7156,12 @@
             this.addOrderSplitContainer1.ResumeLayout(false);
             this.showTrackingPage.ResumeLayout(false);
             this.showTrackingPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackingShowUploadAddressDataGridView)).EndInit();
+            this.showTrackingSplitContainer1.Panel1.ResumeLayout(false);
+            this.showTrackingSplitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.showTrackingSplitContainer1)).EndInit();
+            this.showTrackingSplitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.trackingShowDownloadAddressDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowUploadAddressDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingShowCommentDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingShowTransporterContactsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingShowDataGridView)).EndInit();
@@ -7692,6 +7757,9 @@
         private System.Windows.Forms.Button contractShowDeleteContractButton;
         private System.Windows.Forms.Button contractShowOpenDocButton;
         private System.Windows.Forms.Button showTrackingCreateOrderDoc;
+        private System.Windows.Forms.Label label38ShowTracking;
+        private System.Windows.Forms.SplitContainer showTrackingSplitContainer1;
+        private System.Windows.Forms.RichTextBox trackingShowAddNoteRichTextBox;
         private System.Windows.Forms.ComboBox OrderAddLanduageSelectComboBox;
         private System.Windows.Forms.ComboBox OrderUpdateLanguageSelectComboBox;
         private System.Windows.Forms.Button forwarderAddImageButton;

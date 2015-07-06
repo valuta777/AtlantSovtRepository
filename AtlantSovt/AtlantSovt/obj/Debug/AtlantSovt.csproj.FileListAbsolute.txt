@@ -207,6 +207,8 @@ E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.SelectDownloa
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.SelectUncustomsAddressesForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddCountryForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddLoadingFormForm.resources
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csprojResolveAssemblyReference.cache
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddOrderNoteForm.resources
 R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddCountryForm.resources
 R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddLoadingFormForm.resources
 R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csprojResolveAssemblyReference.cache

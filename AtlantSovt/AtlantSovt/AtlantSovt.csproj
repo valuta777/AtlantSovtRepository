@@ -77,6 +77,12 @@
     <Compile Include="AddAdditionalTermsForm.Designer.cs">
       <DependentUpon>AddAdditionalTermsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddOrderNoteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrderNoteForm.Designer.cs">
+      <DependentUpon>AddOrderNoteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddPaymentTermsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,7 +165,6 @@
     <Compile Include="AtlantSovtDb\OrderUploadAdress.cs" />
     <Compile Include="AtlantSovtDb\Payment.cs" />
     <Compile Include="AtlantSovtDb\RegularyDelay.cs" />
-    <Compile Include="AtlantSovtDb\sysdiagram.cs" />
     <Compile Include="AtlantSovtDb\TaxPayerStatu.cs" />
     <Compile Include="AtlantSovtDb\TirCmr.cs" />
     <Compile Include="AtlantSovtDb\TrackingComment.cs" />
@@ -372,6 +377,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddAdditionalTermsForm.resx">
       <DependentUpon>AddAdditionalTermsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrderNoteForm.resx">
+      <DependentUpon>AddOrderNoteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddPaymentTermsForm.resx">
       <DependentUpon>AddPaymentTermsForm.cs</DependentUpon>

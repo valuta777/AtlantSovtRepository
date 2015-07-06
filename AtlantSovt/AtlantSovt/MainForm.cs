@@ -1755,17 +1755,18 @@ namespace AtlantSovt
 
         private void trackingShowAddCommentButton_Click(object sender, EventArgs e)
         {
-            AddTrackingCommentForm trackingShowAddComment = new AddTrackingCommentForm();
-            trackingShowAddComment.Show();
+            AddTrackingCommentForm trackingShowAddComment = new AddTrackingCommentForm(this);
             try
             {
                 trackingShowAddComment.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+                trackingShowAddComment.Show();
             }
             catch (Exception ex)
             {
                 trackingShowAddComment.Dispose();
                 MessageBox.Show("Немає жодної заявки");
             }
+
         }
 
         private void trackingShowCommentDataGridView_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
@@ -1789,6 +1790,33 @@ namespace AtlantSovt
             comment.comment = "";
             comment.Dispose();
         }
+
+        private void showTrackingCreateOrderDoc_Click(object sender, EventArgs e)
+        {
+            IsOrderFull();
+            if (!isOrderFull || !isOrderLanguageSelected)
+            {
+                return;
+            }
+            OrderCounter();
+            CreateOrderDocument();
+            ShowTrackingSearch();
+        }
+
+        private void trackingShowAddNoteRichTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            AddOrderNoteForm orderNoteForm = new AddOrderNoteForm(this);
+            try
+            {
+                orderNoteForm.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+                orderNoteForm.Show();
+            }
+            catch (Exception ex)
+            {
+                orderNoteForm.Dispose();
+                MessageBox.Show("Немає жодної заявки");
+            }
+        }    
 
         #endregion
         
@@ -2533,23 +2561,5 @@ namespace AtlantSovt
         {
             OrderUpdateYOrUComboBox.DroppedDown = true;
         }
-
-        private void showTrackingCreateOrderDoc_Click(object sender, EventArgs e)
-        {
-            IsOrderFull();
-            if (!isOrderFull)
-            {
-                return;
-            }
-            OrderCounter();
-            CreateOrderDocument();
-        }
-
-        private void OrderUpdateWeightTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }
