@@ -6036,7 +6036,6 @@
             this.OrderUpdateWeightTextBox.Name = "OrderUpdateWeightTextBox";
             this.OrderUpdateWeightTextBox.Size = new System.Drawing.Size(179, 29);
             this.OrderUpdateWeightTextBox.TabIndex = 21;
-            this.OrderUpdateWeightTextBox.TextChanged += new System.EventHandler(this.OrderUpdateWeightTextBox_TextChanged);
             this.OrderUpdateWeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OrderUpdateWeightTextBox_KeyPress);
             // 
             // OrderUpdateLabel4

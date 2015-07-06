@@ -1947,20 +1947,6 @@ namespace AtlantSovt
                         //3/////////////////////////////////////////////
                         if (tirCmrOrderUpdate != null)
                         {
-                            if (updateOrder.AdditionalTermsId != tirCmrOrderUpdate.Id)
-                            {
-                                updateOrder.AdditionalTermsId = tirCmrOrderUpdate.Id;
-                                IsModified = true;
-                            }
-                        }
-                        else if (updateOrder.TirCmr != null)
-                        {
-                            updateOrder.TirCmrId = null;
-                            IsModified = true;
-                        }
-                        //4///////////////////////////////////////////////
-                        if (tirCmrOrderUpdate != null)
-                        {
                             if (updateOrder.TirCmrId != tirCmrOrderUpdate.Id)
                             {
                                 updateOrder.TirCmrId = tirCmrOrderUpdate.Id;
@@ -1972,7 +1958,8 @@ namespace AtlantSovt
                             updateOrder.TirCmrId = null;
                             IsModified = true;
                         }
-                        //4/////////////////////////////////////////////
+                        //4///////////////////////////////////////////////
+                        
                         if (cargoOrderUpdate != null)
                         {
                             if (updateOrder.CargoId != cargoOrderUpdate.Id)
@@ -2231,9 +2218,9 @@ namespace AtlantSovt
                                 {
                                     OrderLoadingForm UpdateLoadingForm1 = db.Orders.Find(updateOrder.Id).OrderLoadingForms.Where(lf1 => lf1.IsFirst == true).FirstOrDefault();
 
-                                    if (UpdateLoadingForm1.Id != loadingForm1OrderUpdate.Id) //якшо не то саме
+                                    if (UpdateLoadingForm1.LoadingForm.Id != loadingForm1OrderUpdate.Id) //якшо не то саме
                                     {
-                                        UpdateLoadingForm1.Id = loadingForm1OrderUpdate.Id;
+                                        UpdateLoadingForm1.LoadingFormId = loadingForm1OrderUpdate.Id;
                                         db.Entry(UpdateLoadingForm1).State = EntityState.Modified;
                                         db.SaveChanges();
                                         MessageBox.Show("Успішно вибрано першу форму завантаження");
@@ -2270,9 +2257,9 @@ namespace AtlantSovt
                                 {
                                     OrderLoadingForm UpdateLoadingForm2 = db.Orders.Find(updateOrder.Id).OrderLoadingForms.Where(lf1 => lf1.IsFirst == false).FirstOrDefault();
 
-                                    if (UpdateLoadingForm2.Id != loadingForm2OrderUpdate.Id) //якшо не то саме
+                                    if (UpdateLoadingForm2.LoadingForm.Id != loadingForm2OrderUpdate.Id) //якшо не то саме
                                     {
-                                        UpdateLoadingForm2.Id = loadingForm2OrderUpdate.Id;
+                                        UpdateLoadingForm2.LoadingFormId = loadingForm2OrderUpdate.Id;
                                         db.Entry(UpdateLoadingForm2).State = EntityState.Modified;
                                         db.SaveChanges();
                                         MessageBox.Show("Успішно змінено другу форму завантаження");
@@ -2309,9 +2296,9 @@ namespace AtlantSovt
                                 {
                                     ForwarderOrder UpdateForwarder1Order = db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(fo1 => fo1.IsFirst == true).FirstOrDefault();
 
-                                    if (UpdateForwarder1Order.Id != forwarder1OrderUpdate.Id) //якшо не то саме
+                                    if (UpdateForwarder1Order.Forwarder.Id != forwarder1OrderUpdate.Id) //якшо не то саме
                                     {
-                                        UpdateForwarder1Order.Id = forwarder1OrderUpdate.Id;
+                                        UpdateForwarder1Order.ForwarderId = forwarder1OrderUpdate.Id;
                                         db.Entry(UpdateForwarder1Order).State = EntityState.Modified;
                                         db.SaveChanges();
                                         MessageBox.Show("Успішно вибрано першого експедитора");
@@ -2348,9 +2335,9 @@ namespace AtlantSovt
                                 {
                                     ForwarderOrder UpdateForwarder2Order = db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(fo2 => fo2.IsFirst == false).FirstOrDefault();
 
-                                    if (UpdateForwarder2Order.Id != forwarder2OrderUpdate.Id) //якшо не то саме
+                                    if (UpdateForwarder2Order.Forwarder.Id != forwarder2OrderUpdate.Id) //якшо не то саме
                                     {
-                                        UpdateForwarder2Order.Id = forwarder2OrderUpdate.Id;
+                                        UpdateForwarder2Order.ForwarderId = forwarder2OrderUpdate.Id;
                                         db.Entry(UpdateForwarder2Order).State = EntityState.Modified;
                                         db.SaveChanges();
                                         MessageBox.Show("Успішно вибрано другого експедитора");
@@ -2388,7 +2375,6 @@ namespace AtlantSovt
                         {
                             MessageBox.Show("Змін не знайдено");
                         }                        
-                        ClearAllBoxesOrderUpdate();
                     }
                     catch (DbEntityValidationException e)
                     {
