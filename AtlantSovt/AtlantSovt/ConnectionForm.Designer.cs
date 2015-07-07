@@ -39,14 +39,14 @@
             this.connectionAnimation.Image = global::AtlantSovt.Properties.Resources.con_anim;
             this.connectionAnimation.Location = new System.Drawing.Point(0, 0);
             this.connectionAnimation.Name = "connectionAnimation";
-            this.connectionAnimation.Size = new System.Drawing.Size(250, 250);
+            this.connectionAnimation.Size = new System.Drawing.Size(400, 427);
             this.connectionAnimation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.connectionAnimation.TabIndex = 0;
             this.connectionAnimation.TabStop = false;
             // 
             // ConnectionForm
             // 
-            this.ClientSize = new System.Drawing.Size(250, 250);
+            this.ClientSize = new System.Drawing.Size(400, 427);
             this.Controls.Add(this.connectionAnimation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConnectionForm";

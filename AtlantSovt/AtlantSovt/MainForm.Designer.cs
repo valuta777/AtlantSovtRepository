@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showClientsStrip = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +54,6 @@
             this.showTrackingMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addOrderMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateOrderMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteOrderMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataControl = new System.Windows.Forms.TabControl();
             this.helloPage = new System.Windows.Forms.TabPage();
             this.yearLabel = new System.Windows.Forms.Label();
@@ -146,7 +145,11 @@
             this.forwarderDataGridView = new System.Windows.Forms.DataGridView();
             this.label32 = new System.Windows.Forms.Label();
             this.addForwarderPage = new System.Windows.Forms.TabPage();
-            this.forwarderAddImageButton = new System.Windows.Forms.Button();
+            this.addForwarderSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.addForwarderStampPictureBox = new System.Windows.Forms.PictureBox();
+            this.forwarderAddStampButton = new System.Windows.Forms.Button();
+            this.commentForwarderTextBox = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.workDocumentForwarderComboBox = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
@@ -158,12 +161,10 @@
             this.addBankDetailsForwarderButton = new System.Windows.Forms.Button();
             this.addContactForwarderButton = new System.Windows.Forms.Button();
             this.taxPayerStatusForwarderComboBox = new System.Windows.Forms.ComboBox();
-            this.commentForwarderTextBox = new System.Windows.Forms.TextBox();
             this.physicalAddressForwarderTextBox = new System.Windows.Forms.TextBox();
             this.geographyAddressForwarderTextBox = new System.Windows.Forms.TextBox();
             this.directorForwarderTextBox = new System.Windows.Forms.TextBox();
             this.nameForwarderTextBox = new System.Windows.Forms.TextBox();
-            this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
@@ -171,6 +172,11 @@
             this.addTaxPayerStatusForwarderButton = new System.Windows.Forms.Button();
             this.addWorkDocumentForwarderButton = new System.Windows.Forms.Button();
             this.updateForwarderPage = new System.Windows.Forms.TabPage();
+            this.updateOrderSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.label36 = new System.Windows.Forms.Label();
+            this.updateForwarderStampPictureBox = new System.Windows.Forms.PictureBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.commentForwarderUpdateTextBox = new System.Windows.Forms.TextBox();
             this.forwarderUpdateContactDeleteButton = new System.Windows.Forms.Button();
             this.forwarderUpdateBankDetailsDeleteButton = new System.Windows.Forms.Button();
             this.forwarderUpdateBankDetailsUpdateButton = new System.Windows.Forms.Button();
@@ -184,12 +190,10 @@
             this.label60 = new System.Windows.Forms.Label();
             this.taxPayerStatusForwarderUpdateComboBox = new System.Windows.Forms.ComboBox();
             this.workDocumentForwarderUpdateComboBox = new System.Windows.Forms.ComboBox();
-            this.commentForwarderUpdateTextBox = new System.Windows.Forms.TextBox();
             this.physicalAddressForwarderUpdateTextBox = new System.Windows.Forms.TextBox();
             this.geographyAddressForwarderUpdateTextBox = new System.Windows.Forms.TextBox();
             this.directorForwarderUpdateTextBox = new System.Windows.Forms.TextBox();
             this.nameForwarderUpdateTextBox = new System.Windows.Forms.TextBox();
-            this.label61 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
@@ -320,6 +324,7 @@
             this.personNameLabel = new System.Windows.Forms.Label();
             this.firstPersonNameComboBox = new System.Windows.Forms.ComboBox();
             this.addOrderPage = new System.Windows.Forms.TabPage();
+            this.label37 = new System.Windows.Forms.Label();
             this.OrderAddLanduageSelectComboBox = new System.Windows.Forms.ComboBox();
             this.OrderAddFreightTextBox = new System.Windows.Forms.TextBox();
             this.label101 = new System.Windows.Forms.Label();
@@ -516,6 +521,7 @@
             this.updateOrderIntStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteOrderIntStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.trackingOrderIntStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.label38 = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.dataControl.SuspendLayout();
             this.helloPage.SuspendLayout();
@@ -532,7 +538,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.forwarderContactsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.forwarderDataGridView)).BeginInit();
             this.addForwarderPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addForwarderSplitContainer)).BeginInit();
+            this.addForwarderSplitContainer.Panel1.SuspendLayout();
+            this.addForwarderSplitContainer.Panel2.SuspendLayout();
+            this.addForwarderSplitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addForwarderStampPictureBox)).BeginInit();
             this.updateForwarderPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updateOrderSplitContainer)).BeginInit();
+            this.updateOrderSplitContainer.Panel1.SuspendLayout();
+            this.updateOrderSplitContainer.Panel2.SuspendLayout();
+            this.updateOrderSplitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updateForwarderStampPictureBox)).BeginInit();
             this.deleteForwarderPage.SuspendLayout();
             this.showTransporterPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.transporterShowCountryDataGridView)).BeginInit();
@@ -807,8 +823,7 @@
             this.orderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showTrackingMenuItem,
             this.addOrderMenuItem,
-            this.updateOrderMenuItem,
-            this.deleteOrderMenuItem});
+            this.updateOrderMenuItem});
             this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
             this.orderToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
             this.orderToolStripMenuItem.Text = "Заявка";
@@ -836,13 +851,6 @@
             this.updateOrderMenuItem.Size = new System.Drawing.Size(148, 24);
             this.updateOrderMenuItem.Text = "Редагувати";
             this.updateOrderMenuItem.Click += new System.EventHandler(this.updateOrderMenuItem_DoubleClick);
-            // 
-            // deleteOrderMenuItem
-            // 
-            this.deleteOrderMenuItem.BackColor = System.Drawing.Color.AliceBlue;
-            this.deleteOrderMenuItem.Name = "deleteOrderMenuItem";
-            this.deleteOrderMenuItem.Size = new System.Drawing.Size(148, 24);
-            this.deleteOrderMenuItem.Text = "Видалити";
             // 
             // dataControl
             // 
@@ -1999,13 +2007,13 @@
             this.forwarderDataGridView.Location = new System.Drawing.Point(0, 27);
             this.forwarderDataGridView.MultiSelect = false;
             this.forwarderDataGridView.Name = "forwarderDataGridView";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.forwarderDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.forwarderDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.forwarderDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.forwarderDataGridView.Size = new System.Drawing.Size(776, 226);
             this.forwarderDataGridView.TabIndex = 9;
@@ -2026,7 +2034,7 @@
             // addForwarderPage
             // 
             this.addForwarderPage.BackColor = System.Drawing.Color.AliceBlue;
-            this.addForwarderPage.Controls.Add(this.forwarderAddImageButton);
+            this.addForwarderPage.Controls.Add(this.addForwarderSplitContainer);
             this.addForwarderPage.Controls.Add(this.label5);
             this.addForwarderPage.Controls.Add(this.workDocumentForwarderComboBox);
             this.addForwarderPage.Controls.Add(this.label35);
@@ -2038,12 +2046,10 @@
             this.addForwarderPage.Controls.Add(this.addBankDetailsForwarderButton);
             this.addForwarderPage.Controls.Add(this.addContactForwarderButton);
             this.addForwarderPage.Controls.Add(this.taxPayerStatusForwarderComboBox);
-            this.addForwarderPage.Controls.Add(this.commentForwarderTextBox);
             this.addForwarderPage.Controls.Add(this.physicalAddressForwarderTextBox);
             this.addForwarderPage.Controls.Add(this.geographyAddressForwarderTextBox);
             this.addForwarderPage.Controls.Add(this.directorForwarderTextBox);
             this.addForwarderPage.Controls.Add(this.nameForwarderTextBox);
-            this.addForwarderPage.Controls.Add(this.label46);
             this.addForwarderPage.Controls.Add(this.label47);
             this.addForwarderPage.Controls.Add(this.label48);
             this.addForwarderPage.Controls.Add(this.label49);
@@ -2056,16 +2062,74 @@
             this.addForwarderPage.TabIndex = 6;
             this.addForwarderPage.Text = "addForwarderPage";
             // 
-            // forwarderAddImageButton
+            // addForwarderSplitContainer
             // 
-            this.forwarderAddImageButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.forwarderAddImageButton.Location = new System.Drawing.Point(8, 130);
-            this.forwarderAddImageButton.Name = "forwarderAddImageButton";
-            this.forwarderAddImageButton.Size = new System.Drawing.Size(166, 34);
-            this.forwarderAddImageButton.TabIndex = 63;
-            this.forwarderAddImageButton.Text = "Додати печатку\r\n";
-            this.forwarderAddImageButton.UseVisualStyleBackColor = true;
-            this.forwarderAddImageButton.Click += new System.EventHandler(this.forwarderAddImageButton_Click);
+            this.addForwarderSplitContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.addForwarderSplitContainer.IsSplitterFixed = true;
+            this.addForwarderSplitContainer.Location = new System.Drawing.Point(8, 130);
+            this.addForwarderSplitContainer.Name = "addForwarderSplitContainer";
+            // 
+            // addForwarderSplitContainer.Panel1
+            // 
+            this.addForwarderSplitContainer.Panel1.Controls.Add(this.addForwarderStampPictureBox);
+            this.addForwarderSplitContainer.Panel1.Controls.Add(this.forwarderAddStampButton);
+            // 
+            // addForwarderSplitContainer.Panel2
+            // 
+            this.addForwarderSplitContainer.Panel2.Controls.Add(this.commentForwarderTextBox);
+            this.addForwarderSplitContainer.Panel2.Controls.Add(this.label46);
+            this.addForwarderSplitContainer.Size = new System.Drawing.Size(768, 294);
+            this.addForwarderSplitContainer.SplitterDistance = 382;
+            this.addForwarderSplitContainer.TabIndex = 64;
+            // 
+            // addForwarderStampPictureBox
+            // 
+            this.addForwarderStampPictureBox.BackColor = System.Drawing.SystemColors.Window;
+            this.addForwarderStampPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addForwarderStampPictureBox.Location = new System.Drawing.Point(0, 40);
+            this.addForwarderStampPictureBox.Name = "addForwarderStampPictureBox";
+            this.addForwarderStampPictureBox.Size = new System.Drawing.Size(382, 254);
+            this.addForwarderStampPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.addForwarderStampPictureBox.TabIndex = 64;
+            this.addForwarderStampPictureBox.TabStop = false;
+            // 
+            // forwarderAddStampButton
+            // 
+            this.forwarderAddStampButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.forwarderAddStampButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forwarderAddStampButton.Location = new System.Drawing.Point(0, 0);
+            this.forwarderAddStampButton.Name = "forwarderAddStampButton";
+            this.forwarderAddStampButton.Size = new System.Drawing.Size(382, 40);
+            this.forwarderAddStampButton.TabIndex = 63;
+            this.forwarderAddStampButton.TabStop = false;
+            this.forwarderAddStampButton.Text = "Додати печатку\r\n";
+            this.forwarderAddStampButton.UseVisualStyleBackColor = true;
+            this.forwarderAddStampButton.Click += new System.EventHandler(this.forwarderAddImageButton_Click);
+            // 
+            // commentForwarderTextBox
+            // 
+            this.commentForwarderTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.commentForwarderTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentForwarderTextBox.Location = new System.Drawing.Point(0, 40);
+            this.commentForwarderTextBox.Multiline = true;
+            this.commentForwarderTextBox.Name = "commentForwarderTextBox";
+            this.commentForwarderTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.commentForwarderTextBox.Size = new System.Drawing.Size(382, 254);
+            this.commentForwarderTextBox.TabIndex = 7;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label46.Location = new System.Drawing.Point(3, 10);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(77, 21);
+            this.label46.TabIndex = 36;
+            this.label46.Text = "Примітка";
             // 
             // label5
             // 
@@ -2205,19 +2269,6 @@
             this.taxPayerStatusForwarderComboBox.SelectedIndexChanged += new System.EventHandler(this.taxPayerStatusForwarderComboBox_SelectedIndexChanged);
             this.taxPayerStatusForwarderComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.taxPayerStatusForwarderComboBox_MouseClick);
             // 
-            // commentForwarderTextBox
-            // 
-            this.commentForwarderTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.commentForwarderTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.commentForwarderTextBox.Location = new System.Drawing.Point(8, 191);
-            this.commentForwarderTextBox.Multiline = true;
-            this.commentForwarderTextBox.Name = "commentForwarderTextBox";
-            this.commentForwarderTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.commentForwarderTextBox.Size = new System.Drawing.Size(756, 226);
-            this.commentForwarderTextBox.TabIndex = 7;
-            // 
             // physicalAddressForwarderTextBox
             // 
             this.physicalAddressForwarderTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -2253,16 +2304,6 @@
             this.nameForwarderTextBox.Name = "nameForwarderTextBox";
             this.nameForwarderTextBox.Size = new System.Drawing.Size(235, 29);
             this.nameForwarderTextBox.TabIndex = 1;
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label46.Location = new System.Drawing.Point(10, 167);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(77, 21);
-            this.label46.TabIndex = 36;
-            this.label46.Text = "Примітка";
             // 
             // label47
             // 
@@ -2335,6 +2376,7 @@
             // updateForwarderPage
             // 
             this.updateForwarderPage.BackColor = System.Drawing.Color.AliceBlue;
+            this.updateForwarderPage.Controls.Add(this.updateOrderSplitContainer);
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateContactDeleteButton);
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateBankDetailsDeleteButton);
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateBankDetailsUpdateButton);
@@ -2348,12 +2390,10 @@
             this.updateForwarderPage.Controls.Add(this.label60);
             this.updateForwarderPage.Controls.Add(this.taxPayerStatusForwarderUpdateComboBox);
             this.updateForwarderPage.Controls.Add(this.workDocumentForwarderUpdateComboBox);
-            this.updateForwarderPage.Controls.Add(this.commentForwarderUpdateTextBox);
             this.updateForwarderPage.Controls.Add(this.physicalAddressForwarderUpdateTextBox);
             this.updateForwarderPage.Controls.Add(this.geographyAddressForwarderUpdateTextBox);
             this.updateForwarderPage.Controls.Add(this.directorForwarderUpdateTextBox);
             this.updateForwarderPage.Controls.Add(this.nameForwarderUpdateTextBox);
-            this.updateForwarderPage.Controls.Add(this.label61);
             this.updateForwarderPage.Controls.Add(this.label62);
             this.updateForwarderPage.Controls.Add(this.label63);
             this.updateForwarderPage.Controls.Add(this.label64);
@@ -2365,6 +2405,78 @@
             this.updateForwarderPage.Size = new System.Drawing.Size(776, 525);
             this.updateForwarderPage.TabIndex = 7;
             this.updateForwarderPage.Text = "updateForwarderPage";
+            // 
+            // updateOrderSplitContainer
+            // 
+            this.updateOrderSplitContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.updateOrderSplitContainer.IsSplitterFixed = true;
+            this.updateOrderSplitContainer.Location = new System.Drawing.Point(8, 174);
+            this.updateOrderSplitContainer.Name = "updateOrderSplitContainer";
+            // 
+            // updateOrderSplitContainer.Panel1
+            // 
+            this.updateOrderSplitContainer.Panel1.Controls.Add(this.label36);
+            this.updateOrderSplitContainer.Panel1.Controls.Add(this.updateForwarderStampPictureBox);
+            // 
+            // updateOrderSplitContainer.Panel2
+            // 
+            this.updateOrderSplitContainer.Panel2.Controls.Add(this.label61);
+            this.updateOrderSplitContainer.Panel2.Controls.Add(this.commentForwarderUpdateTextBox);
+            this.updateOrderSplitContainer.Size = new System.Drawing.Size(760, 241);
+            this.updateOrderSplitContainer.SplitterDistance = 378;
+            this.updateOrderSplitContainer.TabIndex = 104;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label36.Location = new System.Drawing.Point(2, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(69, 21);
+            this.label36.TabIndex = 71;
+            this.label36.Text = "Печатка";
+            // 
+            // updateForwarderStampPictureBox
+            // 
+            this.updateForwarderStampPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.updateForwarderStampPictureBox.BackColor = System.Drawing.SystemColors.Window;
+            this.updateForwarderStampPictureBox.Location = new System.Drawing.Point(0, 24);
+            this.updateForwarderStampPictureBox.Name = "updateForwarderStampPictureBox";
+            this.updateForwarderStampPictureBox.Size = new System.Drawing.Size(378, 217);
+            this.updateForwarderStampPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.updateForwarderStampPictureBox.TabIndex = 0;
+            this.updateForwarderStampPictureBox.TabStop = false;
+            this.updateForwarderStampPictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.updateForwarderStampPictureBox_Paint);
+            this.updateForwarderStampPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.updateForwarderStampPictureBox_MouseClick);
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label61.Location = new System.Drawing.Point(0, 0);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(77, 21);
+            this.label61.TabIndex = 70;
+            this.label61.Text = "Примітка";
+            // 
+            // commentForwarderUpdateTextBox
+            // 
+            this.commentForwarderUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.commentForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentForwarderUpdateTextBox.Location = new System.Drawing.Point(0, 24);
+            this.commentForwarderUpdateTextBox.Multiline = true;
+            this.commentForwarderUpdateTextBox.Name = "commentForwarderUpdateTextBox";
+            this.commentForwarderUpdateTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.commentForwarderUpdateTextBox.Size = new System.Drawing.Size(378, 217);
+            this.commentForwarderUpdateTextBox.TabIndex = 8;
+            this.commentForwarderUpdateTextBox.TabStop = false;
+            this.commentForwarderUpdateTextBox.TextChanged += new System.EventHandler(this.commentForwarderUpdateTextBox_TextChanged);
             // 
             // forwarderUpdateContactDeleteButton
             // 
@@ -2533,21 +2645,6 @@
             this.workDocumentForwarderUpdateComboBox.TextChanged += new System.EventHandler(this.workDocumentForwarderUpdateComboBox_TextChanged);
             this.workDocumentForwarderUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.workDocumentForwarderUpdateComboBox_MouseClick);
             // 
-            // commentForwarderUpdateTextBox
-            // 
-            this.commentForwarderUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.commentForwarderUpdateTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.commentForwarderUpdateTextBox.Location = new System.Drawing.Point(8, 192);
-            this.commentForwarderUpdateTextBox.Multiline = true;
-            this.commentForwarderUpdateTextBox.Name = "commentForwarderUpdateTextBox";
-            this.commentForwarderUpdateTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.commentForwarderUpdateTextBox.Size = new System.Drawing.Size(758, 222);
-            this.commentForwarderUpdateTextBox.TabIndex = 8;
-            this.commentForwarderUpdateTextBox.TabStop = false;
-            this.commentForwarderUpdateTextBox.TextChanged += new System.EventHandler(this.commentForwarderUpdateTextBox_TextChanged);
-            // 
             // physicalAddressForwarderUpdateTextBox
             // 
             this.physicalAddressForwarderUpdateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -2587,16 +2684,6 @@
             this.nameForwarderUpdateTextBox.Size = new System.Drawing.Size(235, 29);
             this.nameForwarderUpdateTextBox.TabIndex = 2;
             this.nameForwarderUpdateTextBox.TextChanged += new System.EventHandler(this.nameForwarderUpdateTextBox_TextChanged);
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label61.Location = new System.Drawing.Point(10, 171);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(77, 21);
-            this.label61.TabIndex = 70;
-            this.label61.Text = "Примітка";
             // 
             // label62
             // 
@@ -4286,6 +4373,7 @@
             // addOrderPage
             // 
             this.addOrderPage.BackColor = System.Drawing.Color.AliceBlue;
+            this.addOrderPage.Controls.Add(this.label37);
             this.addOrderPage.Controls.Add(this.OrderAddLanduageSelectComboBox);
             this.addOrderPage.Controls.Add(this.OrderAddFreightTextBox);
             this.addOrderPage.Controls.Add(this.label101);
@@ -4301,6 +4389,16 @@
             this.addOrderPage.TabIndex = 15;
             this.addOrderPage.Text = "addOrderPage";
             // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label37.Location = new System.Drawing.Point(195, 145);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(52, 21);
+            this.label37.TabIndex = 139;
+            this.label37.Text = "Мова:";
+            // 
             // OrderAddLanduageSelectComboBox
             // 
             this.OrderAddLanduageSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -4311,10 +4409,11 @@
             "Українська",
             "Польська",
             "Німецька"});
-            this.OrderAddLanduageSelectComboBox.Location = new System.Drawing.Point(200, 139);
+            this.OrderAddLanduageSelectComboBox.Location = new System.Drawing.Point(247, 139);
             this.OrderAddLanduageSelectComboBox.Name = "OrderAddLanduageSelectComboBox";
             this.OrderAddLanduageSelectComboBox.Size = new System.Drawing.Size(181, 29);
             this.OrderAddLanduageSelectComboBox.TabIndex = 138;
+            this.OrderAddLanduageSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddLanduageSelectComboBox_MouseClick);
             // 
             // OrderAddFreightTextBox
             // 
@@ -4322,16 +4421,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddFreightTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.OrderAddFreightTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrderAddFreightTextBox.Location = new System.Drawing.Point(512, 139);
+            this.OrderAddFreightTextBox.Location = new System.Drawing.Point(543, 139);
             this.OrderAddFreightTextBox.Name = "OrderAddFreightTextBox";
-            this.OrderAddFreightTextBox.Size = new System.Drawing.Size(255, 29);
+            this.OrderAddFreightTextBox.Size = new System.Drawing.Size(224, 29);
             this.OrderAddFreightTextBox.TabIndex = 8;
             // 
             // label101
             // 
             this.label101.AutoSize = true;
             this.label101.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label101.Location = new System.Drawing.Point(390, 142);
+            this.label101.Location = new System.Drawing.Point(431, 145);
             this.label101.Name = "label101";
             this.label101.Size = new System.Drawing.Size(116, 21);
             this.label101.TabIndex = 130;
@@ -4504,7 +4603,7 @@
             this.OrderAddDenyFineSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddDenyFineSelectComboBox.Location = new System.Drawing.Point(6, 24);
             this.OrderAddDenyFineSelectComboBox.Name = "OrderAddDenyFineSelectComboBox";
-            this.OrderAddDenyFineSelectComboBox.Size = new System.Drawing.Size(341, 29);
+            this.OrderAddDenyFineSelectComboBox.Size = new System.Drawing.Size(342, 29);
             this.OrderAddDenyFineSelectComboBox.Sorted = true;
             this.OrderAddDenyFineSelectComboBox.TabIndex = 27;
             this.OrderAddDenyFineSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddDenyFineSelectComboBox_SelectedIndexChanged);
@@ -4628,7 +4727,7 @@
             // 
             this.OrderAddLoadingForm2AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddLoadingForm2AddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddLoadingForm2AddButton.Image")));
-            this.OrderAddLoadingForm2AddButton.Location = new System.Drawing.Point(158, 82);
+            this.OrderAddLoadingForm2AddButton.Location = new System.Drawing.Point(158, 83);
             this.OrderAddLoadingForm2AddButton.Name = "OrderAddLoadingForm2AddButton";
             this.OrderAddLoadingForm2AddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddLoadingForm2AddButton.TabIndex = 141;
@@ -4820,7 +4919,7 @@
             this.OrderAddTrailerSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddTrailerSelectComboBox.Location = new System.Drawing.Point(9, 83);
             this.OrderAddTrailerSelectComboBox.Name = "OrderAddTrailerSelectComboBox";
-            this.OrderAddTrailerSelectComboBox.Size = new System.Drawing.Size(145, 29);
+            this.OrderAddTrailerSelectComboBox.Size = new System.Drawing.Size(146, 29);
             this.OrderAddTrailerSelectComboBox.Sorted = true;
             this.OrderAddTrailerSelectComboBox.TabIndex = 24;
             this.OrderAddTrailerSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddTrailerSelectComboBox_SelectedIndexChanged);
@@ -4860,7 +4959,7 @@
             this.OrderAddCubeSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddCubeSelectComboBox.Location = new System.Drawing.Point(9, 21);
             this.OrderAddCubeSelectComboBox.Name = "OrderAddCubeSelectComboBox";
-            this.OrderAddCubeSelectComboBox.Size = new System.Drawing.Size(145, 29);
+            this.OrderAddCubeSelectComboBox.Size = new System.Drawing.Size(146, 29);
             this.OrderAddCubeSelectComboBox.Sorted = true;
             this.OrderAddCubeSelectComboBox.TabIndex = 20;
             this.OrderAddCubeSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddCubeSelectComboBox_SelectedIndexChanged);
@@ -5003,7 +5102,7 @@
             this.OrderAddUploadAddressAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddUploadAddressAddButton.Location = new System.Drawing.Point(6, 8);
             this.OrderAddUploadAddressAddButton.Name = "OrderAddUploadAddressAddButton";
-            this.OrderAddUploadAddressAddButton.Size = new System.Drawing.Size(185, 30);
+            this.OrderAddUploadAddressAddButton.Size = new System.Drawing.Size(209, 30);
             this.OrderAddUploadAddressAddButton.TabIndex = 10;
             this.OrderAddUploadAddressAddButton.Text = "Розвантаження";
             this.OrderAddUploadAddressAddButton.UseVisualStyleBackColor = true;
@@ -5021,7 +5120,7 @@
             this.OrderAddUploadDateTimePicker.Location = new System.Drawing.Point(6, 64);
             this.OrderAddUploadDateTimePicker.Name = "OrderAddUploadDateTimePicker";
             this.OrderAddUploadDateTimePicker.ShowCheckBox = true;
-            this.OrderAddUploadDateTimePicker.Size = new System.Drawing.Size(184, 29);
+            this.OrderAddUploadDateTimePicker.Size = new System.Drawing.Size(182, 29);
             this.OrderAddUploadDateTimePicker.TabIndex = 13;
             this.OrderAddUploadDateTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
             // 
@@ -5129,7 +5228,7 @@
             "І"});
             this.OrderAddYOrUComboBox.Location = new System.Drawing.Point(98, 66);
             this.OrderAddYOrUComboBox.Name = "OrderAddYOrUComboBox";
-            this.OrderAddYOrUComboBox.Size = new System.Drawing.Size(93, 29);
+            this.OrderAddYOrUComboBox.Size = new System.Drawing.Size(90, 29);
             this.OrderAddYOrUComboBox.TabIndex = 16;
             this.OrderAddYOrUComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddYOrUComboBox_MouseClick);
             // 
@@ -5141,7 +5240,7 @@
             this.OrderAddUncustomsAddressAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddUncustomsAddressAddButton.Location = new System.Drawing.Point(6, 8);
             this.OrderAddUncustomsAddressAddButton.Name = "OrderAddUncustomsAddressAddButton";
-            this.OrderAddUncustomsAddressAddButton.Size = new System.Drawing.Size(185, 30);
+            this.OrderAddUncustomsAddressAddButton.Size = new System.Drawing.Size(182, 30);
             this.OrderAddUncustomsAddressAddButton.TabIndex = 11;
             this.OrderAddUncustomsAddressAddButton.Text = "Розмитнення";
             this.OrderAddUncustomsAddressAddButton.UseVisualStyleBackColor = true;
@@ -5675,14 +5774,14 @@
             this.trackingShowDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.trackingShowDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.trackingShowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.trackingShowDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.trackingShowDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.trackingShowDataGridView.Location = new System.Drawing.Point(0, 62);
             this.trackingShowDataGridView.MultiSelect = false;
             this.trackingShowDataGridView.Name = "trackingShowDataGridView";
@@ -5696,6 +5795,7 @@
             // updateOrderPage
             // 
             this.updateOrderPage.BackColor = System.Drawing.Color.AliceBlue;
+            this.updateOrderPage.Controls.Add(this.label38);
             this.updateOrderPage.Controls.Add(this.OrderUpdateLanguageSelectComboBox);
             this.updateOrderPage.Controls.Add(this.OrderUpdateShowNoActiveCheckBox);
             this.updateOrderPage.Controls.Add(this.OrderUpdateDiapasoneDateTimePicker);
@@ -5726,10 +5826,11 @@
             "Українська",
             "Польська",
             "Німецька"});
-            this.OrderUpdateLanguageSelectComboBox.Location = new System.Drawing.Point(199, 172);
+            this.OrderUpdateLanguageSelectComboBox.Location = new System.Drawing.Point(245, 172);
             this.OrderUpdateLanguageSelectComboBox.Name = "OrderUpdateLanguageSelectComboBox";
             this.OrderUpdateLanguageSelectComboBox.Size = new System.Drawing.Size(181, 29);
             this.OrderUpdateLanguageSelectComboBox.TabIndex = 144;
+            this.OrderUpdateLanguageSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateLanguageSelectComboBox_MouseClick);
             // 
             // OrderUpdateShowNoActiveCheckBox
             // 
@@ -5801,16 +5902,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateFreightTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.OrderUpdateFreightTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrderUpdateFreightTextBox.Location = new System.Drawing.Point(516, 173);
+            this.OrderUpdateFreightTextBox.Location = new System.Drawing.Point(549, 173);
             this.OrderUpdateFreightTextBox.Name = "OrderUpdateFreightTextBox";
-            this.OrderUpdateFreightTextBox.Size = new System.Drawing.Size(252, 29);
+            this.OrderUpdateFreightTextBox.Size = new System.Drawing.Size(219, 29);
             this.OrderUpdateFreightTextBox.TabIndex = 8;
             // 
             // OrderUpdateLabel25
             // 
             this.OrderUpdateLabel25.AutoSize = true;
             this.OrderUpdateLabel25.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrderUpdateLabel25.Location = new System.Drawing.Point(394, 176);
+            this.OrderUpdateLabel25.Location = new System.Drawing.Point(432, 176);
             this.OrderUpdateLabel25.Name = "OrderUpdateLabel25";
             this.OrderUpdateLabel25.Size = new System.Drawing.Size(116, 21);
             this.OrderUpdateLabel25.TabIndex = 130;
@@ -5848,6 +5949,7 @@
             // OrderUpdateAdditionalTermsAddButton
             // 
             this.OrderUpdateAdditionalTermsAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderUpdateAdditionalTermsAddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OrderUpdateAdditionalTermsAddButton.BackgroundImage")));
             this.OrderUpdateAdditionalTermsAddButton.Location = new System.Drawing.Point(348, 75);
             this.OrderUpdateAdditionalTermsAddButton.Name = "OrderUpdateAdditionalTermsAddButton";
             this.OrderUpdateAdditionalTermsAddButton.Size = new System.Drawing.Size(30, 30);
@@ -5859,6 +5961,7 @@
             // OrderUpdatePaymentTermsAddButton
             // 
             this.OrderUpdatePaymentTermsAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderUpdatePaymentTermsAddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OrderUpdatePaymentTermsAddButton.BackgroundImage")));
             this.OrderUpdatePaymentTermsAddButton.Location = new System.Drawing.Point(348, 23);
             this.OrderUpdatePaymentTermsAddButton.Name = "OrderUpdatePaymentTermsAddButton";
             this.OrderUpdatePaymentTermsAddButton.Size = new System.Drawing.Size(30, 30);
@@ -5932,7 +6035,7 @@
             this.OrderUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderUpdateButton.Location = new System.Drawing.Point(6, 66);
             this.OrderUpdateButton.Name = "OrderUpdateButton";
-            this.OrderUpdateButton.Size = new System.Drawing.Size(376, 45);
+            this.OrderUpdateButton.Size = new System.Drawing.Size(374, 45);
             this.OrderUpdateButton.TabIndex = 28;
             this.OrderUpdateButton.Text = "Змінити";
             this.OrderUpdateButton.UseVisualStyleBackColor = true;
@@ -5941,6 +6044,7 @@
             // OrderUpdateOrderDenyAddButton
             // 
             this.OrderUpdateOrderDenyAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderUpdateOrderDenyAddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OrderUpdateOrderDenyAddButton.BackgroundImage")));
             this.OrderUpdateOrderDenyAddButton.Location = new System.Drawing.Point(352, 23);
             this.OrderUpdateOrderDenyAddButton.Name = "OrderUpdateOrderDenyAddButton";
             this.OrderUpdateOrderDenyAddButton.Size = new System.Drawing.Size(30, 30);
@@ -6008,10 +6112,10 @@
             // OrderUpdateSplitContainer3.Panel1
             // 
             this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateWeightTextBox);
-            this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateLabel4);
             this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateCargoSelectComboBox);
             this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateLabel5);
             this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateCargoAddButton);
+            this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateLabel4);
             // 
             // OrderUpdateSplitContainer3.Panel2
             // 
@@ -6042,7 +6146,7 @@
             // 
             this.OrderUpdateLabel4.AutoSize = true;
             this.OrderUpdateLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrderUpdateLabel4.Location = new System.Drawing.Point(6, 56);
+            this.OrderUpdateLabel4.Location = new System.Drawing.Point(6, 57);
             this.OrderUpdateLabel4.Name = "OrderUpdateLabel4";
             this.OrderUpdateLabel4.Size = new System.Drawing.Size(41, 21);
             this.OrderUpdateLabel4.TabIndex = 125;
@@ -6080,6 +6184,7 @@
             // OrderUpdateCargoAddButton
             // 
             this.OrderUpdateCargoAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderUpdateCargoAddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OrderUpdateCargoAddButton.BackgroundImage")));
             this.OrderUpdateCargoAddButton.Location = new System.Drawing.Point(155, 27);
             this.OrderUpdateCargoAddButton.Name = "OrderUpdateCargoAddButton";
             this.OrderUpdateCargoAddButton.Size = new System.Drawing.Size(30, 30);
@@ -6091,7 +6196,8 @@
             // OrderUpdateLoadingForm2AddButton
             // 
             this.OrderUpdateLoadingForm2AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderUpdateLoadingForm2AddButton.Location = new System.Drawing.Point(158, 80);
+            this.OrderUpdateLoadingForm2AddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OrderUpdateLoadingForm2AddButton.BackgroundImage")));
+            this.OrderUpdateLoadingForm2AddButton.Location = new System.Drawing.Point(155, 81);
             this.OrderUpdateLoadingForm2AddButton.Name = "OrderUpdateLoadingForm2AddButton";
             this.OrderUpdateLoadingForm2AddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateLoadingForm2AddButton.TabIndex = 141;
@@ -6102,7 +6208,8 @@
             // OrderUpdateLoadingForm1AddButton
             // 
             this.OrderUpdateLoadingForm1AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderUpdateLoadingForm1AddButton.Location = new System.Drawing.Point(158, 27);
+            this.OrderUpdateLoadingForm1AddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OrderUpdateLoadingForm1AddButton.BackgroundImage")));
+            this.OrderUpdateLoadingForm1AddButton.Location = new System.Drawing.Point(155, 27);
             this.OrderUpdateLoadingForm1AddButton.Name = "OrderUpdateLoadingForm1AddButton";
             this.OrderUpdateLoadingForm1AddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateLoadingForm1AddButton.TabIndex = 140;
@@ -6120,7 +6227,7 @@
             this.OrderUpdateLoadingForm2SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateLoadingForm2SelectComboBox.Location = new System.Drawing.Point(6, 83);
             this.OrderUpdateLoadingForm2SelectComboBox.Name = "OrderUpdateLoadingForm2SelectComboBox";
-            this.OrderUpdateLoadingForm2SelectComboBox.Size = new System.Drawing.Size(164, 29);
+            this.OrderUpdateLoadingForm2SelectComboBox.Size = new System.Drawing.Size(143, 29);
             this.OrderUpdateLoadingForm2SelectComboBox.Sorted = true;
             this.OrderUpdateLoadingForm2SelectComboBox.TabIndex = 22;
             this.OrderUpdateLoadingForm2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateLoadingForm2SelectComboBox_SelectedIndexChanged);
@@ -6147,7 +6254,7 @@
             this.OrderUpdateLoadingForm1SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateLoadingForm1SelectComboBox.Location = new System.Drawing.Point(6, 28);
             this.OrderUpdateLoadingForm1SelectComboBox.Name = "OrderUpdateLoadingForm1SelectComboBox";
-            this.OrderUpdateLoadingForm1SelectComboBox.Size = new System.Drawing.Size(164, 29);
+            this.OrderUpdateLoadingForm1SelectComboBox.Size = new System.Drawing.Size(143, 29);
             this.OrderUpdateLoadingForm1SelectComboBox.Sorted = true;
             this.OrderUpdateLoadingForm1SelectComboBox.TabIndex = 18;
             this.OrderUpdateLoadingForm1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateLoadingForm1SelectComboBox_SelectedIndexChanged);
@@ -6197,6 +6304,7 @@
             // OrderUpdateFineForDelayAddButton
             // 
             this.OrderUpdateFineForDelayAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderUpdateFineForDelayAddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OrderUpdateFineForDelayAddButton.BackgroundImage")));
             this.OrderUpdateFineForDelayAddButton.Location = new System.Drawing.Point(155, 82);
             this.OrderUpdateFineForDelayAddButton.Name = "OrderUpdateFineForDelayAddButton";
             this.OrderUpdateFineForDelayAddButton.Size = new System.Drawing.Size(30, 30);
@@ -6225,6 +6333,7 @@
             // OrderUpdateRegularyDelayAddButton
             // 
             this.OrderUpdateRegularyDelayAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderUpdateRegularyDelayAddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OrderUpdateRegularyDelayAddButton.BackgroundImage")));
             this.OrderUpdateRegularyDelayAddButton.Location = new System.Drawing.Point(155, 27);
             this.OrderUpdateRegularyDelayAddButton.Name = "OrderUpdateRegularyDelayAddButton";
             this.OrderUpdateRegularyDelayAddButton.Size = new System.Drawing.Size(30, 30);
@@ -6280,7 +6389,7 @@
             this.OrderUpdateTrailerSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateTrailerSelectComboBox.Location = new System.Drawing.Point(9, 83);
             this.OrderUpdateTrailerSelectComboBox.Name = "OrderUpdateTrailerSelectComboBox";
-            this.OrderUpdateTrailerSelectComboBox.Size = new System.Drawing.Size(144, 29);
+            this.OrderUpdateTrailerSelectComboBox.Size = new System.Drawing.Size(143, 29);
             this.OrderUpdateTrailerSelectComboBox.Sorted = true;
             this.OrderUpdateTrailerSelectComboBox.TabIndex = 24;
             this.OrderUpdateTrailerSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateTrailerSelectComboBox_SelectedIndexChanged);
@@ -6302,7 +6411,8 @@
             // OrderUpdateTrailerAddButton
             // 
             this.OrderUpdateTrailerAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderUpdateTrailerAddButton.Location = new System.Drawing.Point(159, 80);
+            this.OrderUpdateTrailerAddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OrderUpdateTrailerAddButton.BackgroundImage")));
+            this.OrderUpdateTrailerAddButton.Location = new System.Drawing.Point(158, 80);
             this.OrderUpdateTrailerAddButton.Name = "OrderUpdateTrailerAddButton";
             this.OrderUpdateTrailerAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateTrailerAddButton.TabIndex = 134;
@@ -6319,7 +6429,7 @@
             this.OrderUpdateCubeSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateCubeSelectComboBox.Location = new System.Drawing.Point(9, 28);
             this.OrderUpdateCubeSelectComboBox.Name = "OrderUpdateCubeSelectComboBox";
-            this.OrderUpdateCubeSelectComboBox.Size = new System.Drawing.Size(144, 29);
+            this.OrderUpdateCubeSelectComboBox.Size = new System.Drawing.Size(143, 29);
             this.OrderUpdateCubeSelectComboBox.Sorted = true;
             this.OrderUpdateCubeSelectComboBox.TabIndex = 20;
             this.OrderUpdateCubeSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateCubeSelectComboBox_SelectedIndexChanged);
@@ -6341,7 +6451,8 @@
             // OrderUpdateCubeAddButton
             // 
             this.OrderUpdateCubeAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderUpdateCubeAddButton.Location = new System.Drawing.Point(159, 27);
+            this.OrderUpdateCubeAddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OrderUpdateCubeAddButton.BackgroundImage")));
+            this.OrderUpdateCubeAddButton.Location = new System.Drawing.Point(158, 27);
             this.OrderUpdateCubeAddButton.Name = "OrderUpdateCubeAddButton";
             this.OrderUpdateCubeAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateCubeAddButton.TabIndex = 131;
@@ -6459,7 +6570,7 @@
             this.OrderUpdateUploadAddressesButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderUpdateUploadAddressesButton.Location = new System.Drawing.Point(6, 8);
             this.OrderUpdateUploadAddressesButton.Name = "OrderUpdateUploadAddressesButton";
-            this.OrderUpdateUploadAddressesButton.Size = new System.Drawing.Size(188, 30);
+            this.OrderUpdateUploadAddressesButton.Size = new System.Drawing.Size(181, 30);
             this.OrderUpdateUploadAddressesButton.TabIndex = 10;
             this.OrderUpdateUploadAddressesButton.Text = "Розвантаження";
             this.OrderUpdateUploadAddressesButton.UseVisualStyleBackColor = true;
@@ -6477,7 +6588,7 @@
             this.OrderUpdateUploadDateTimePicker.Location = new System.Drawing.Point(6, 65);
             this.OrderUpdateUploadDateTimePicker.Name = "OrderUpdateUploadDateTimePicker";
             this.OrderUpdateUploadDateTimePicker.ShowCheckBox = true;
-            this.OrderUpdateUploadDateTimePicker.Size = new System.Drawing.Size(188, 29);
+            this.OrderUpdateUploadDateTimePicker.Size = new System.Drawing.Size(181, 29);
             this.OrderUpdateUploadDateTimePicker.TabIndex = 13;
             this.OrderUpdateUploadDateTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
             // 
@@ -6528,6 +6639,7 @@
             // OrderUpdateTirCmrAddButton
             // 
             this.OrderUpdateTirCmrAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderUpdateTirCmrAddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OrderUpdateTirCmrAddButton.BackgroundImage")));
             this.OrderUpdateTirCmrAddButton.Location = new System.Drawing.Point(155, 64);
             this.OrderUpdateTirCmrAddButton.Name = "OrderUpdateTirCmrAddButton";
             this.OrderUpdateTirCmrAddButton.Size = new System.Drawing.Size(30, 30);
@@ -6581,9 +6693,9 @@
             this.OrderUpdateYOrUComboBox.Items.AddRange(new object[] {
             "У",
             "І"});
-            this.OrderUpdateYOrUComboBox.Location = new System.Drawing.Point(99, 64);
+            this.OrderUpdateYOrUComboBox.Location = new System.Drawing.Point(95, 64);
             this.OrderUpdateYOrUComboBox.Name = "OrderUpdateYOrUComboBox";
-            this.OrderUpdateYOrUComboBox.Size = new System.Drawing.Size(90, 29);
+            this.OrderUpdateYOrUComboBox.Size = new System.Drawing.Size(91, 29);
             this.OrderUpdateYOrUComboBox.TabIndex = 16;
             this.OrderUpdateYOrUComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateYOrUComboBox_MouseClick);
             // 
@@ -6594,7 +6706,7 @@
             this.OrderUpdateUncustumsAddressesButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderUpdateUncustumsAddressesButton.Location = new System.Drawing.Point(6, 8);
             this.OrderUpdateUncustumsAddressesButton.Name = "OrderUpdateUncustumsAddressesButton";
-            this.OrderUpdateUncustumsAddressesButton.Size = new System.Drawing.Size(183, 30);
+            this.OrderUpdateUncustumsAddressesButton.Size = new System.Drawing.Size(182, 30);
             this.OrderUpdateUncustumsAddressesButton.TabIndex = 11;
             this.OrderUpdateUncustumsAddressesButton.Text = "Розмитнення";
             this.OrderUpdateUncustumsAddressesButton.UseVisualStyleBackColor = true;
@@ -6799,7 +6911,7 @@
             this.OrderUpdateForwarder2SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateForwarder2SelectComboBox.Location = new System.Drawing.Point(6, 77);
             this.OrderUpdateForwarder2SelectComboBox.Name = "OrderUpdateForwarder2SelectComboBox";
-            this.OrderUpdateForwarder2SelectComboBox.Size = new System.Drawing.Size(376, 29);
+            this.OrderUpdateForwarder2SelectComboBox.Size = new System.Drawing.Size(374, 29);
             this.OrderUpdateForwarder2SelectComboBox.Sorted = true;
             this.OrderUpdateForwarder2SelectComboBox.TabIndex = 6;
             this.OrderUpdateForwarder2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateForwarder2SelectComboBox_SelectedIndexChanged);
@@ -7046,6 +7158,16 @@
             this.trackingOrderIntStrip.Name = "trackingOrderIntStrip";
             this.trackingOrderIntStrip.Size = new System.Drawing.Size(32, 19);
             // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label38.Location = new System.Drawing.Point(192, 176);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(52, 21);
+            this.label38.TabIndex = 145;
+            this.label38.Text = "Мова:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7085,8 +7207,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.forwarderDataGridView)).EndInit();
             this.addForwarderPage.ResumeLayout(false);
             this.addForwarderPage.PerformLayout();
+            this.addForwarderSplitContainer.Panel1.ResumeLayout(false);
+            this.addForwarderSplitContainer.Panel2.ResumeLayout(false);
+            this.addForwarderSplitContainer.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addForwarderSplitContainer)).EndInit();
+            this.addForwarderSplitContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.addForwarderStampPictureBox)).EndInit();
             this.updateForwarderPage.ResumeLayout(false);
             this.updateForwarderPage.PerformLayout();
+            this.updateOrderSplitContainer.Panel1.ResumeLayout(false);
+            this.updateOrderSplitContainer.Panel1.PerformLayout();
+            this.updateOrderSplitContainer.Panel2.ResumeLayout(false);
+            this.updateOrderSplitContainer.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updateOrderSplitContainer)).EndInit();
+            this.updateOrderSplitContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.updateForwarderStampPictureBox)).EndInit();
             this.deleteForwarderPage.ResumeLayout(false);
             this.deleteForwarderPage.PerformLayout();
             this.showTransporterPage.ResumeLayout(false);
@@ -7342,7 +7477,6 @@
         private System.Windows.Forms.Button addBankDetailsForwarderButton;
         private System.Windows.Forms.Button addContactForwarderButton;
         private System.Windows.Forms.ComboBox taxPayerStatusForwarderComboBox;
-        private System.Windows.Forms.TextBox commentForwarderTextBox;
         private System.Windows.Forms.TextBox physicalAddressForwarderTextBox;
         private System.Windows.Forms.TextBox geographyAddressForwarderTextBox;
         private System.Windows.Forms.TextBox directorForwarderTextBox;
@@ -7646,7 +7780,6 @@
         private System.Windows.Forms.ToolStripMenuItem showTrackingMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addOrderMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateOrderMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteOrderMenuItem;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.ComboBox OrderAddClientSelectComboBox;
         private System.Windows.Forms.Label label53;
@@ -7761,7 +7894,15 @@
         private System.Windows.Forms.RichTextBox trackingShowAddNoteRichTextBox;
         private System.Windows.Forms.ComboBox OrderAddLanduageSelectComboBox;
         private System.Windows.Forms.ComboBox OrderUpdateLanguageSelectComboBox;
-        private System.Windows.Forms.Button forwarderAddImageButton;
+        private System.Windows.Forms.Button forwarderAddStampButton;
+        private System.Windows.Forms.SplitContainer addForwarderSplitContainer;
+        private System.Windows.Forms.PictureBox addForwarderStampPictureBox;
+        private System.Windows.Forms.TextBox commentForwarderTextBox;
+        private System.Windows.Forms.SplitContainer updateOrderSplitContainer;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.PictureBox updateForwarderStampPictureBox;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
         }
 }
 

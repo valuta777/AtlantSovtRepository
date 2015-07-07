@@ -23,7 +23,7 @@ namespace AtlantSovt
             yearLabel.Text = DateTime.Now.ToShortDateString();
         }
             //Client Forms
-        Image forwarderAddImage = null;
+        Image forwarderAddStamp = null;
             //Contact
         ClientContactAddForm addClientContactAddForm, updateClientContactAddForm;
         ClientContactUpdateForm updateClientContactUpdateForm;
@@ -705,14 +705,16 @@ namespace AtlantSovt
             addForwarderBankDetailsAddForm = new ForwarderBankDetailsAddForm();
             addForwarderBankDetailsAddForm.Show();
         }
+
         private void forwarderAddImageButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog ForwarderImageAdd = new OpenFileDialog();
             ForwarderImageAdd.Multiselect = false;
-            ForwarderImageAdd.Filter = "Файлы Png|*.Png";
+            ForwarderImageAdd.Filter = "Файлы png|*.png";
             if (ForwarderImageAdd.ShowDialog() == DialogResult.OK)
             {
-                forwarderAddImage = Image.FromFile(ForwarderImageAdd.FileName);
+                forwarderAddStamp = Image.FromFile(ForwarderImageAdd.FileName);
+                addForwarderStampPictureBox.Image = Image.FromFile(ForwarderImageAdd.FileName);
             }
         }
 
@@ -731,7 +733,8 @@ namespace AtlantSovt
             commentForwarderTextBox.Text = "";
             forwarderWorkDocument = null;
             forwarderTaxPayerStatus = null;
-            forwarderAddImage = null;
+            forwarderAddStamp = null;
+            addForwarderStampPictureBox.Image = null;
         }
         #endregion
 
@@ -826,10 +829,26 @@ namespace AtlantSovt
             forwarderCommentChanged = true;
         }
 
+        private void updateForwarderStampPictureBox_Paint(object sender, PaintEventArgs e)
+        {
+            forwarderStampChanged = true;
+        }
+
+        private void updateForwarderStampPictureBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OpenFileDialog ForwarderImageAdd = new OpenFileDialog();
+            ForwarderImageAdd.Multiselect = false;
+            ForwarderImageAdd.Filter = "Файлы png|*.png";
+            if (ForwarderImageAdd.ShowDialog() == DialogResult.OK)
+            {
+                updateForwarderStampPictureBox.Image = Image.FromFile(ForwarderImageAdd.FileName);
+            }
+        }
+
         private void updateForwarderButton_Click(object sender, EventArgs e)
         {
             UpdateForwarder();
-            forwarderNameChanged = forwarderDirectorChanged = forwarderPhysicalAddressChanged = forwarderGeographyAddressChanged = forwarderCommentChanged = forwarderWorkDocumentChanged = forwarderTaxPayerStatusChanged = false;
+            forwarderNameChanged = forwarderDirectorChanged = forwarderPhysicalAddressChanged = forwarderGeographyAddressChanged = forwarderCommentChanged = forwarderWorkDocumentChanged = forwarderTaxPayerStatusChanged  = forwarderStampChanged = false;
             
         }
         //Contact
@@ -993,7 +1012,6 @@ namespace AtlantSovt
         #endregion 
 
                 #endregion
-
 
             //Delete
                 #region Delete
@@ -1819,9 +1837,9 @@ namespace AtlantSovt
         }    
 
         #endregion
-        
+
         // Order
-       
+        #region Order
         private void OrderAddClientDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             LoadOrderAddClientDiapasonCombobox();
@@ -2561,5 +2579,17 @@ namespace AtlantSovt
         {
             OrderUpdateYOrUComboBox.DroppedDown = true;
         }
+
+        private void OrderAddLanduageSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAddLanduageSelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderUpdateLanguageSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderUpdateLanguageSelectComboBox.DroppedDown = true;
+        }
+        #endregion
+
     }
 }

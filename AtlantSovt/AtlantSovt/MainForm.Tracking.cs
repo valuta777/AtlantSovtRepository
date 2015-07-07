@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Core.Objects;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -487,8 +488,6 @@ namespace AtlantSovt
                 {
                     if (orderDocument.Language != null)
                     {
-                        string forwarderName1 = "";
-                        string forwarderName2 = "";
                         string loadingForm1 = "";
                         string loadingForm2 = "";
                         string[] regularyDelay;
@@ -498,7 +497,10 @@ namespace AtlantSovt
 
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).Count() == 1)
                         {
-                            forwarderName1 = orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder.Name;
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder.image == null)
+                            {
+                                isOrderFull = false;
+                            }
                         }
                         else
                         {
@@ -506,13 +508,15 @@ namespace AtlantSovt
                         }
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).Count() == 1)
                         {
-                            forwarderName2 = orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder.Name;
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder.image == null)
+                            {
+                                isOrderFull = false;
+                            }
                         }
                         else
                         {
                             isOrderFull = false;
                         }
-
 
                         if (orderDocument.OrderLoadingForms.Where(l => l.IsFirst == true).Count() == 1)
                         {
@@ -522,6 +526,7 @@ namespace AtlantSovt
                         {
                             isOrderFull = false;
                         }
+
                         if (orderDocument.OrderLoadingForms.Where(l => l.IsFirst == false).Count() == 1)
                         {
                             loadingForm2 = orderDocument.OrderLoadingForms.Where(l => l.IsFirst == false).FirstOrDefault().LoadingForm.Type;
@@ -658,7 +663,6 @@ namespace AtlantSovt
                             forwarderName2 = orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder.Name;
                         }
 
-
                         if (orderDocument.OrderLoadingForms.Where(l => l.IsFirst == true).Count() == 1)
                         {
                             loadingForm1 = orderDocument.OrderLoadingForms.Where(l => l.IsFirst == true).FirstOrDefault().LoadingForm.Type;
@@ -773,6 +777,26 @@ namespace AtlantSovt
                         ReplaseWordStub("{Freight}", freight, wordDocument);
                         ReplaseWordStub("{FineForDelay}", fineForDelay, wordDocument);
                         ReplaseWordStub("{TransporterName}", transporterName, wordDocument);
+
+
+                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).Count() == 1)
+                        {
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder.image != null)
+                            {
+                                AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder), "{Stamp1}");
+                                Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Debug", ""), true);
+                                Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Debug", ""));
+                            }
+                        }
+                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).Count() == 1)
+                        {
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder.image != null && orderDocument.Language == 0)
+                            {
+                                AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder), "{Stamp2}");
+                                Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Debug", ""), true);
+                                Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Debug", ""));
+                            }
+                        }
 
                         if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                         {

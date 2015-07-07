@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace AtlantSovt
     {
         bool forwarderWorkDocumentAdded;
         bool forwarderTaxPayerStatusAdded;
-        bool forwarderNameChanged, forwarderDirectorChanged, forwarderPhysicalAddressChanged, forwarderGeographyAddressChanged, forwarderCommentChanged, forwarderWorkDocumentChanged, forwarderTaxPayerStatusChanged, forwarderIsWorkDocumentExist, forwarderIsTaxPayerStatusExist;
+        bool forwarderNameChanged, forwarderDirectorChanged, forwarderPhysicalAddressChanged, forwarderGeographyAddressChanged, forwarderCommentChanged, forwarderWorkDocumentChanged, forwarderTaxPayerStatusChanged, forwarderStampChanged ,forwarderIsWorkDocumentExist, forwarderIsTaxPayerStatusExist;
 
 
         Forwarder forwarder, deleteForwarder;
@@ -133,11 +134,11 @@ namespace AtlantSovt
 
         //add
 
-        public byte[] imageToByteArray(System.Drawing.Image imageIn)
+        public byte[] imageToByteArray(Image stamp)
         {
-            MemoryStream ms = new MemoryStream();
-            imageIn.Save(ms,System.Drawing.Imaging.ImageFormat.Gif);
-            return  ms.ToArray();
+            MemoryStream mStream = new MemoryStream();
+            stamp.Save(mStream, ImageFormat.Png);
+            return  mStream.ToArray();
         }
 
         public Image byteArrayToImage(byte[] byteArrayIn)
@@ -146,6 +147,7 @@ namespace AtlantSovt
              Image returnImage = Image.FromStream(ms);
              return returnImage;
         }
+
         void LoadWorkDocumentForwarderAddInfoComboBox()
         {
             using (var db = new AtlantSovtContext())
@@ -256,7 +258,7 @@ namespace AtlantSovt
                             PhysicalAddress = new_PhysicalAddress,
                             GeographyAddress = new_GeographyAddress,
                             Comment = new_Comment,
-                            image =forwarderAddImage != null ? imageToByteArray(forwarderAddImage) : null
+                            image = forwarderAddStamp != null ? imageToByteArray(forwarderAddStamp) : null
                         };
                     }
 
@@ -271,7 +273,7 @@ namespace AtlantSovt
                             WorkDocumentId = new_WorkDocumentId,
                             TaxPayerStatusId = new_TaxPayerStatusId,
                             Comment = new_Comment,                            
-                            image =forwarderAddImage != null ? imageToByteArray(forwarderAddImage) : null
+                            image = forwarderAddStamp != null ? imageToByteArray(forwarderAddStamp) : null
                         };
                     }
 
@@ -285,7 +287,7 @@ namespace AtlantSovt
                             GeographyAddress = new_GeographyAddress,
                             WorkDocumentId = new_WorkDocumentId,
                             Comment = new_Comment,                            
-                            image =forwarderAddImage != null ? imageToByteArray(forwarderAddImage) : null
+                            image = forwarderAddStamp != null ? imageToByteArray(forwarderAddStamp) : null
                         };
                     }
 
@@ -299,7 +301,7 @@ namespace AtlantSovt
                             GeographyAddress = new_GeographyAddress,
                             TaxPayerStatusId = new_TaxPayerStatusId,
                             Comment = new_Comment,
-                            image = forwarderAddImage != null ? imageToByteArray(forwarderAddImage) : null
+                            image = forwarderAddStamp != null ? imageToByteArray(forwarderAddStamp) : null
                         };
                     }
 
@@ -362,6 +364,14 @@ namespace AtlantSovt
                     physicalAddressForwarderUpdateTextBox.Text = Convert.ToString(forwarder.PhysicalAddress);
                     geographyAddressForwarderUpdateTextBox.Text = Convert.ToString(forwarder.GeographyAddress);
                     commentForwarderUpdateTextBox.Text = Convert.ToString(forwarder.Comment);
+                    if (forwarder.image != null)
+                    {
+                        updateForwarderStampPictureBox.Image = Image.FromStream(new MemoryStream(forwarder.image));
+                    }
+                    else
+                    {
+                        updateForwarderStampPictureBox.Image = null;
+                    }
                     if (forwarder.WorkDocument != null)
                     {
                        workDocumentForwarderUpdateComboBox.SelectedIndex = workDocumentForwarderUpdateComboBox.FindString(forwarder.WorkDocument.Status + " [" + forwarder.WorkDocument.Id + ']');
@@ -381,7 +391,7 @@ namespace AtlantSovt
                         taxPayerStatusForwarderUpdateComboBox.SelectedIndex = -1;
                     }
                 }
-                forwarderNameChanged = forwarderDirectorChanged = forwarderPhysicalAddressChanged = forwarderGeographyAddressChanged = forwarderCommentChanged = forwarderWorkDocumentChanged = forwarderTaxPayerStatusChanged = false;
+                forwarderNameChanged = forwarderDirectorChanged = forwarderPhysicalAddressChanged = forwarderGeographyAddressChanged = forwarderCommentChanged = forwarderWorkDocumentChanged = forwarderTaxPayerStatusChanged = forwarderStampChanged = false;
             }
         }
 
@@ -470,7 +480,7 @@ namespace AtlantSovt
             using (var db = new AtlantSovtContext())
             {
                 //якщо хоча б один з флагів = true
-                if (forwarderNameChanged || forwarderDirectorChanged || forwarderPhysicalAddressChanged || forwarderGeographyAddressChanged || forwarderCommentChanged || forwarderWorkDocumentChanged || forwarderTaxPayerStatusChanged )
+                if (forwarderNameChanged || forwarderDirectorChanged || forwarderPhysicalAddressChanged || forwarderGeographyAddressChanged || forwarderCommentChanged || forwarderWorkDocumentChanged || forwarderTaxPayerStatusChanged || forwarderStampChanged)
                 {
                     if (forwarderNameChanged)
                     {
@@ -518,6 +528,10 @@ namespace AtlantSovt
                             forwarder.TaxPayerStatu = null;
                         }
                     }
+                    if (forwarderStampChanged)
+                    {
+                        forwarder.image = (updateForwarderStampPictureBox.Image != null) ? imageToByteArray(updateForwarderStampPictureBox.Image) : null;
+                    }
 
                     db.Entry(forwarder).State = EntityState.Modified;
                     db.SaveChanges();
@@ -529,9 +543,11 @@ namespace AtlantSovt
                 }
             }
         }
+
         //Forwarder Contact
 
         //Add
+
         void AddNewForwarderContact()
         {
             if (forwarder != null)

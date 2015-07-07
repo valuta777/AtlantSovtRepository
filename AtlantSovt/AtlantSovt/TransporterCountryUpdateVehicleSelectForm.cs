@@ -14,6 +14,7 @@ namespace AtlantSovt
     public partial class TransporterCountryUpdateVehicleSelectForm : Form
     {
         Transporter transporter;
+
         public TransporterCountryUpdateVehicleSelectForm()
         {
             InitializeComponent();
@@ -21,8 +22,9 @@ namespace AtlantSovt
             LoadVehicleToChechedBoxList();
         }
 
-        private void LoadCoutriesToChechedBoxList() 
+        private void LoadCoutriesToChechedBoxList()
         {
+            transporterUpdateFilterSelectCountryCheckedListBox.Items.Clear();
             using (var db = new AtlantSovtContext())
             {
                 var query = from country in db.Countries
@@ -34,8 +36,10 @@ namespace AtlantSovt
                 }
             }        
         }
+
         private void LoadVehicleToChechedBoxList()
         {
+            transporterUpdateFilterSelectVehicleCheckedListBox.Items.Clear();
             using (var db = new AtlantSovtContext())
             {
                 var query = from vehicle in db.Vehicles
@@ -79,6 +83,7 @@ namespace AtlantSovt
                 }
             }
         }
+
         private void LoadTransporterVehicleToChechedBoxList()
         {
             using (var db = new AtlantSovtContext())
@@ -107,6 +112,7 @@ namespace AtlantSovt
                 }
             }
         }
+
         internal void CoutriesAndVehiclesSelect(Transporter add_transporter) 
         {
             transporter = add_transporter;
@@ -243,6 +249,30 @@ namespace AtlantSovt
             SaveCountries();
             SaveVehicles();
             this.Dispose();
+        }
+
+        private void transporterUpdateFilterSelectCountryCheckedListBox_DoubleClick(object sender, EventArgs e)
+        {
+            LoadCoutriesToChechedBoxList();
+            LoadTransporterCoutriesToChechedBoxList();
+        }
+
+        private void transporterUpdateFilterSelectVehicleCheckedListBox_DoubleClick(object sender, EventArgs e)
+        {
+            LoadVehicleToChechedBoxList();
+            LoadTransporterVehicleToChechedBoxList();
+        }
+
+        private void transporterAddCountryButton_Click(object sender, EventArgs e)
+        {
+            AddCountryForm country = new AddCountryForm();
+            country.Show();
+        }
+
+        private void transporterAddVehicleButton_Click(object sender, EventArgs e)
+        {
+            AddTransporterVehicleForm vehicle = new AddTransporterVehicleForm();
+            vehicle.Show();
         }
     }
 }

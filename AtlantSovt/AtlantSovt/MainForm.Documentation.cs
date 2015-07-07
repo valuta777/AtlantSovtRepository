@@ -9,6 +9,9 @@ using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
 using System.Data.Entity;
 using Microsoft.Office.Interop.Word;
+using System.Drawing;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace AtlantSovt
 {
@@ -216,7 +219,7 @@ namespace AtlantSovt
                         secondForwarderWorkDocument == "" || secondForwarderTaxPayerStatus == "" ||
                         secondForwarderBankDetailsBankName == "" || secondForwarderBankDetailsAccountNumber == "" || secondForwarderBankDetailsCertificateNumber == "" || secondForwarderBankDetailsCertificateSerial == "" ||
                         secondForwarderBankDetailsEDRPOU == "" || secondForwarderBankDetailsIBAN == "" ||
-                        secondForwarderBankDetailsIPN == "" || secondForwarderBankDetailsMFO == "" || secondForwarderBankDetailsSWIFT == "")
+                        secondForwarderBankDetailsIPN == "" || secondForwarderBankDetailsMFO == "" || secondForwarderBankDetailsSWIFT == "" || forwarderDocument.image == null)
                     {
                         check = true;
                         MessageBox.Show("Заповніть спочатку всі дані експедитора");
@@ -457,6 +460,43 @@ namespace AtlantSovt
             }
         }
 
+        void DeleteContract()
+        {
+            try
+            {
+                var ClikedId = Convert.ToInt32(contractShowDataGridView.CurrentRow.Cells[0].Value);
+
+                using (var db = new AtlantSovtContext())
+                {
+                    contract = db.TransporterForwarderContracts.Find(ClikedId);
+
+                    if (contract != null)
+                    {
+                        if (MessageBox.Show("Видалити договір " + contract.ContractNumber + @"\" + contract.ContractDataBegin.Value.Year + @"\" + ((contract.Language == 1) ? ((contract.PorZ == true) ? "З" : "П") : "P") + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            try
+                            {
+                                db.TransporterForwarderContracts.Attach(contract);
+                                db.TransporterForwarderContracts.Remove(contract);
+                                db.SaveChanges();
+                                MessageBox.Show("Договір успішно видалений");
+                            }
+                            catch (Exception e)
+                            {
+                                MessageBox.Show("Помилка!" + Environment.NewLine + e);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                contractShowOpenDocButton.Enabled = false;
+                contractShowDeleteContractButton.Enabled = false;
+                MessageBox.Show("Немає жодного договору");
+            }
+        }
+
         void CreateTransporterForwarderContract()
         {
             var wordApp = new Word.Application();
@@ -571,6 +611,7 @@ namespace AtlantSovt
                         ReplaseWordStub("{ContractDateBegin}", contractDateBegin.ToString("D", new System.Globalization.CultureInfo("ru-RU")), wordDocument);
                         ReplaseWordStub("{gerContractDateBegin}", contractDateBegin.ToString("D", new System.Globalization.CultureInfo("de-DE")), wordDocument);
                     }
+
                     ReplaseWordStub("{ContractNumber}", title, wordDocument);
 
                     ReplaseWordStub("{ForwarderName}", secondForwarderName, wordDocument);
@@ -598,7 +639,18 @@ namespace AtlantSovt
                     ReplaseWordStub("{TransporterAccountNumber}", transporterBankDetailsAccountNumber, wordDocument);
                     ReplaseWordStub("{TransporterBankName}", transporterBankDetailsBankName, wordDocument);
                     ReplaseWordStub("{TransporterMFO}", transporterBankDetailsMFO, wordDocument);
-                   
+
+                    if (forwarderDocument.image != null)
+                    {
+                        AddStamp(wordDocument, UploadForwarderStapm(forwarderDocument), "{Stamp1}");
+                        if (contract.Language == 2 || contract.Language == 3)
+                        {
+                            AddStamp(wordDocument, UploadForwarderStapm(forwarderDocument), "{Stamp2}");
+                        }
+                        Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Debug", ""), true);
+                        Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Debug", ""));
+                    }
+
                     if (isForwarderFull && isTransporterFull)
                     {
                         if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
@@ -622,43 +674,6 @@ namespace AtlantSovt
             {
                 MessageBox.Show("Помилка: " + e.Message);
                 wordDocument.Close(Word.WdSaveOptions.wdDoNotSaveChanges);
-            }
-        }
-
-        void DeleteContract()
-        {
-            try
-            {
-                var ClikedId = Convert.ToInt32(contractShowDataGridView.CurrentRow.Cells[0].Value);
-
-            using (var db = new AtlantSovtContext())
-            {
-                contract = db.TransporterForwarderContracts.Find(ClikedId);
-
-                if (contract != null)
-                {
-                    if (MessageBox.Show("Видалити договір " + contract.ContractNumber + @"\" + contract.ContractDataBegin.Value.Year + @"\" + ((contract.Language == 1) ? ((contract.PorZ == true) ? "З" : "П") : "P") + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        try
-                        {
-                            db.TransporterForwarderContracts.Attach(contract);
-                            db.TransporterForwarderContracts.Remove(contract);
-                            db.SaveChanges();
-                            MessageBox.Show("Договір успішно видалений");
-                        }
-                        catch (Exception e)
-                        {
-                            MessageBox.Show("Помилка!" + Environment.NewLine + e);
-                        }
-                    }
-                }
-            }
-            }
-            catch (Exception e)
-            {
-                contractShowOpenDocButton.Enabled = false;
-                contractShowDeleteContractButton.Enabled = false;
-                MessageBox.Show("Немає жодного договору");
             }
         }
 
@@ -814,6 +829,16 @@ namespace AtlantSovt
                         ReplaseWordStub("{TransporterBankName}", transporterBankDetailsBankName, wordDocument);
                         ReplaseWordStub("{TransporterMFO}", transporterBankDetailsMFO, wordDocument);
 
+                        if (contract.Forwarder.image != null)
+                        {
+                            AddStamp(wordDocument, UploadForwarderStapm(contract.Forwarder), "{Stamp1}");
+                            if (contract.Language == 2 || contract.Language == 3)
+                            {
+                                AddStamp(wordDocument, UploadForwarderStapm(contract.Forwarder), "{Stamp2}");
+                            }
+                            Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Debug", ""), true);
+                            Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Debug", ""));
+                        }
 
                         if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                         {
@@ -840,6 +865,29 @@ namespace AtlantSovt
                 wordDocument.Close(Word.WdSaveOptions.wdDoNotSaveChanges);
                 MessageBox.Show("Помилка, спробуйте ще раз");
             }
+        }
+
+        string UploadForwarderStapm(Forwarder forwarder)
+        {
+            MemoryStream mStream = new MemoryStream(forwarder.image);
+            Image stamp = Image.FromStream(mStream);
+            string path = (System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\" + forwarder.Id + ".png").Replace("\\bin\\Debug", "");
+            stamp.Save(path, ImageFormat.Png);
+            return path;
+        }
+
+        void AddStamp(Document wordDocument, string path, string bookmark)
+        {
+            //Word.Range range = wordDocument.Bookmarks.get_Item(bookmark).Range;
+            var range = wordDocument.Content;
+            range.Find.ClearFormatting();
+            range.Find.Execute(FindText: bookmark, Replace: Word.WdReplace.wdReplaceNone);
+            Word.InlineShape inLineShape = range.InlineShapes.AddPicture(path);
+            Word.Shape shape = inLineShape.ConvertToShape();
+            shape.WrapFormat.Type = WdWrapType.wdWrapBehind;
+            shape.Left = (float)Word.WdShapePosition.wdShapeLeft;
+            shape.Top = (float)Word.WdShapePosition.wdShapeTop;
+            ReplaseWordStub(bookmark, "", wordDocument);
         }
 
         void ReplaseWordStub(string stubToReplace, string text, Word.Document wordDocument)

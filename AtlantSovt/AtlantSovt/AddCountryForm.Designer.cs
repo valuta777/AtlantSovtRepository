@@ -64,6 +64,7 @@
             this.MinimizeBox = false;
             this.Name = "AddCountryForm";
             this.Text = "Додавання країни";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -14,6 +14,7 @@ namespace AtlantSovt
     public partial class TransporterCountryAndVehicleSelectForm : Form
     {
         Transporter transporter;
+
         public TransporterCountryAndVehicleSelectForm()
         {
             InitializeComponent();
@@ -21,8 +22,9 @@ namespace AtlantSovt
             LoadVehicleToChechedBoxList();
         }
 
-        private void LoadCoutriesToChechedBoxList() 
+        public void LoadCoutriesToChechedBoxList()
         {
+            transporterFilterSelectCountryCheckedListBox.Items.Clear();
             using (var db = new AtlantSovtContext())
             {
                 var query = from country in db.Countries
@@ -34,8 +36,10 @@ namespace AtlantSovt
                 }
             }        
         }
-        private void LoadVehicleToChechedBoxList()
+
+        public void LoadVehicleToChechedBoxList()
         {
+            transporterFilterSelectVehicleCheckedListBox.Items.Clear();
             using (var db = new AtlantSovtContext())
             {
                 var query = from vehicle in db.Vehicles
@@ -118,6 +122,28 @@ namespace AtlantSovt
         private void transporterFilterSelectButton_Click(object sender, EventArgs e)
         {   
             this.Hide();
+        }
+
+        private void transporterAddCountryButton_Click(object sender, EventArgs e)
+        {
+            AddCountryForm country = new AddCountryForm();
+            country.Show();
+        }
+
+        private void transporterAddVehicleButton_Click(object sender, EventArgs e)
+        {
+            AddTransporterVehicleForm vehicle = new AddTransporterVehicleForm();
+            vehicle.Show();
+        }
+
+        private void transporterFilterSelectCountryCheckedListBox_MouseClick(object sender, EventArgs e)
+        {
+            LoadCoutriesToChechedBoxList();
+        }
+
+        private void transporterFilterSelectVehicleCheckedListBox_MouseClick(object sender, EventArgs e)
+        {
+            LoadVehicleToChechedBoxList();
         }
     }
 }
