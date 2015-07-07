@@ -2655,5 +2655,10 @@ namespace AtlantSovt
         }
         #endregion
 
+        private void AtlantSovtlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(AtlantSovtlinkLabel.Text);
+        }
+
     }
 }
