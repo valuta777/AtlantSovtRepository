@@ -2315,7 +2315,7 @@ namespace AtlantSovt
                                 {
                                     ForwarderOrder New_Forwarder1Order = new ForwarderOrder
                                     {
-                                        ForwarderId = forwarder1OrderAdd.Id,
+                                        ForwarderId = forwarder1OrderUpdate.Id,
                                         IsFirst = true
                                     };
                                     db.Orders.Find(updateOrder.Id).ForwarderOrders.Add(New_Forwarder1Order);
@@ -2354,7 +2354,7 @@ namespace AtlantSovt
                                 {
                                     ForwarderOrder New_Forwarder2Order = new ForwarderOrder
                                     {
-                                        ForwarderId = forwarder2OrderAdd.Id,
+                                        ForwarderId = forwarder2OrderUpdate.Id,
                                         IsFirst = false
                                     };
                                     db.Orders.Find(updateOrder.Id).ForwarderOrders.Add(New_Forwarder2Order);

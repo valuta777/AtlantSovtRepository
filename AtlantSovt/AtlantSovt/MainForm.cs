@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.Entity.Core.EntityClient;
+using System.Data.Entity.Infrastructure;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -60,34 +62,82 @@ namespace AtlantSovt
 
         //Load / Animaton / Test connection
         #region Load
-        void Connecting()
+
+        bool Connecting()
         {
             Thread animationThread = new Thread(new ThreadStart(PlayAnimation));
             animationThread.Start();
             using (var db = new AtlantSovtContext())
-            {
-                var query =
-                from testConnection in db.WorkDocuments
-                select testConnection;
-                db.SaveChanges();
+            {                
+                try
+                {
+                    db.Database.Connection.Open();  // check the database connection
+                    try
+                    {
+                        if (animationThread.IsAlive)
+                        {
+                            animationThread.Join(500);
+                            animationThread.Abort();
+                        }
+                    }
+                    catch
+                    {
+                    }
+                    return true;
+                }
+                catch
+                {
+                    MessageBox.Show("Помилка з'єднання з сервером!", "Немає з'єднання", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
+                    try
+                    {
+                        if (animationThread.IsAlive)
+                        {
+
+                            animationThread.Join(500);
+                            animationThread.Abort();
+                        }
+                    }
+                    catch
+                    {
+
+                    }
+                    return false;
+                }
             }
-            Thread.Sleep(3000);
-            if(animationThread.IsAlive) 
-            animationThread.Abort();
-            animationThread.Join(500);
         }
 
         void PlayAnimation()
         {
             ConnectionForm connectionForm = new ConnectionForm();
-            connectionForm.ShowDialog();
+            try
+            {
+                connectionForm.ShowDialog();
+            }
+            catch
+            {
+
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Connecting();
-            this.WindowState = FormWindowState.Maximized;
+            if (Connecting())
+            {
+                using(var db = new AtlantSovtContext())
+                {
+                    var query =
+                        from testConnection in db.WorkDocuments
+                        select testConnection;
+                    db.SaveChanges();
+                }
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
+
         #endregion
 
         //MenuStrips
@@ -2059,6 +2109,7 @@ namespace AtlantSovt
         {
             SplitOrderDenyOrderAdd();
         }
+
         private void OrderAddDenyFineSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitOrderDenyOrderAdd();
@@ -2075,6 +2126,7 @@ namespace AtlantSovt
         {
             SplitPaymentOrderAdd();
         }
+
         private void OrderAddPaymentTermsSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitPaymentOrderAdd();
@@ -2091,10 +2143,12 @@ namespace AtlantSovt
         {
             SplitRegularyDelayOrderAdd();
         }
+
         private void OrderAddRegularyDelaySelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitRegularyDelayOrderAdd();
         }
+
         private void OrderAddRegularyDelaySelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
 
@@ -2102,14 +2156,17 @@ namespace AtlantSovt
             LoadOrderAddRegularyDelaySelectComboBox();
             OrderAddRegularyDelaySelectComboBox.DroppedDown = true;
         }
+
         private void OrderAddCubeSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitCubeOrderAdd();
         }
+
         private void OrderAddCubeSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitCubeOrderAdd();
         }
+
         private void OrderAddCubeSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddCubeSelectComboBox.Items.Clear();
@@ -2121,6 +2178,7 @@ namespace AtlantSovt
         {
             SplitTrailerOrderAdd();
         }
+
         private void OrderAddTrailerSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitTrailerOrderAdd();
@@ -2137,30 +2195,36 @@ namespace AtlantSovt
         {
             SplitLoadingForm1OrderAdd();
         }
+
         private void OrderAddLoadingForm1SelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitLoadingForm1OrderAdd();
         }
+
         private void OrderAddLoadingForm1SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddLoadingForm1SelectComboBox.Items.Clear();
             LoadOrderAddLoadingForm1SelectComboBox();
             OrderAddLoadingForm1SelectComboBox.DroppedDown = true;
         }
+
         private void OrderAddLoadingForm2SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitLoadingForm2OrderAdd();
         }
+
         private void OrderAddLoadingForm2SelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitLoadingForm2OrderAdd();
         }
+
         private void OrderAddLoadingForm2SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddLoadingForm2SelectComboBox.Items.Clear();
             LoadOrderAddLoadingForm2SelectComboBox();
             OrderAddLoadingForm2SelectComboBox.DroppedDown = true;
         }
+
         private void OrderAddButton_Click(object sender, EventArgs e)
         {
             OrderAdd();
