@@ -123,17 +123,19 @@ namespace AtlantSovt
         {
             if (Connecting())
             {
-                using(var db = new AtlantSovtContext())
+
+                this.WindowState = FormWindowState.Maximized;
+                using (var db = new AtlantSovtContext())
                 {
                     var query =
                         from testConnection in db.WorkDocuments
                         select testConnection;
                     db.SaveChanges();
                 }
-                this.WindowState = FormWindowState.Maximized;
             }
             else
             {
+                this.Close();
                 Application.Exit();
             }
         }
