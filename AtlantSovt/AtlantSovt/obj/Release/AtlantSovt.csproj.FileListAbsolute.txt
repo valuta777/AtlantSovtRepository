@@ -50,3 +50,7 @@ R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Releas
 R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\ru\EntityFramework.resources.dll
 R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.exe
 R:\Робота\Repositiry\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.pdb
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\AtlantSovt.exe.config
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.csproj.ResolveComReference.cache
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.exe
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.pdb

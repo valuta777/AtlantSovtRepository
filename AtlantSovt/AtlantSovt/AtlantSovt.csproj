@@ -524,7 +524,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\ConnectionString" />
+    <None Include="Resources\engDocumentationTransporterForwarder.docx" />
+    <None Include="Resources\gerDocumentationTransporterForwarder.docx" />
+    <None Include="Resources\gerOrder.docx" />
+    <None Include="Resources\polOrder.docx" />
     <None Include="Resources\ukrDocumentationTransporterForwarder.docx" />
+    <None Include="Resources\ukrOrder.docx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -569,7 +575,11 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\ConnectionStringList.txt" />
+    <Content Include="Resources\Logo.ico" />
+    <Content Include="Resources\Logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
