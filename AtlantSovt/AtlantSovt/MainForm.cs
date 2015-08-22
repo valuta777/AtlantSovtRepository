@@ -217,6 +217,11 @@ namespace AtlantSovt
                     dataControl.SelectedIndex = 17;
                     ShowContract();
                 }
+
+                private void AtlantSovtlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+                {
+                    System.Diagnostics.Process.Start(AtlantSovtlinkLabel.Text);
+                }
                 #endregion
 
         //Client
@@ -2653,11 +2658,6 @@ namespace AtlantSovt
             OrderUpdateLanguageSelectComboBox.DroppedDown = true;
         }
         #endregion
-
-        private void AtlantSovtlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start(AtlantSovtlinkLabel.Text);
-        }
 
     }
 }
