@@ -50,7 +50,9 @@
             this.Controls.Add(this.connectionAnimation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConnectionForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.TopMost = true;
             this.TransparencyKey = this.BackColor;
             ((System.ComponentModel.ISupportInitialize)(this.connectionAnimation)).EndInit();
             this.ResumeLayout(false);

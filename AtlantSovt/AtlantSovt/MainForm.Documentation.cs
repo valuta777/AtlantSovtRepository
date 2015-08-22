@@ -501,7 +501,7 @@ namespace AtlantSovt
         {
             var wordApp = new Word.Application();
             wordApp.Visible = false;
-            var wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((contractLanguage == 1) ? @"Resources\ukrDocumentationTransporterForwarder.docx" : (contractLanguage == 2) ? @"Resources\engDocumentationTransporterForwarder.docx" : @"Resources\gerDocumentationTransporterForwarder.docx")).Replace("\\bin\\Debug", ""));
+            var wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((contractLanguage == 1) ? @"Resources\ukrDocumentationTransporterForwarder.docx" : (contractLanguage == 2) ? @"Resources\engDocumentationTransporterForwarder.docx" : @"Resources\gerDocumentationTransporterForwarder.docx")).Replace("\\bin\\Release", ""));
             try
             {
                 using (var db = new AtlantSovtContext())
@@ -647,8 +647,8 @@ namespace AtlantSovt
                         {
                             AddStamp(wordDocument, UploadForwarderStapm(forwarderDocument), "{Stamp2}");
                         }
-                        Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Debug", ""), true);
-                        Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Debug", ""));
+                        Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", ""), true);
+                        Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Release", ""));
                     }
 
                     if (isForwarderFull && isTransporterFull)
@@ -690,7 +690,7 @@ namespace AtlantSovt
 
                     contract = db.TransporterForwarderContracts.Find(ClikedId);
                     wordApp.Visible = false;
-                    wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((contract.Language == 1) ? @"Resources\ukrDocumentationTransporterForwarder.docx" : (contract.Language == 2) ? @"Resources\engDocumentationTransporterForwarder.docx" : @"Resources\gerDocumentationTransporterForwarder.docx")).Replace("\\bin\\Debug", ""));
+                    wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((contract.Language == 1) ? @"Resources\ukrDocumentationTransporterForwarder.docx" : (contract.Language == 2) ? @"Resources\engDocumentationTransporterForwarder.docx" : @"Resources\gerDocumentationTransporterForwarder.docx")).Replace("\\bin\\Release", ""));
 
 
                     if (contract != null)
@@ -836,8 +836,8 @@ namespace AtlantSovt
                             {
                                 AddStamp(wordDocument, UploadForwarderStapm(contract.Forwarder), "{Stamp2}");
                             }
-                            Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Debug", ""), true);
-                            Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Debug", ""));
+                            Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", ""), true);
+                            Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Release", ""));
                         }
 
                         if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
@@ -871,7 +871,7 @@ namespace AtlantSovt
         {
             MemoryStream mStream = new MemoryStream(forwarder.image);
             Image stamp = Image.FromStream(mStream);
-            string path = (System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\" + forwarder.Id + ".png").Replace("\\bin\\Debug", "");
+            string path = (System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\" + forwarder.Id + ".png").Replace("\\bin\\Release", "");
             stamp.Save(path, ImageFormat.Png);
             return path;
         }
