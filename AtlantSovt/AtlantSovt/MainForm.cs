@@ -72,6 +72,10 @@ namespace AtlantSovt
                 try
                 {
                     db.Database.Connection.Open();  // check the database connection
+                    var query =
+                        from testConnection in db.WorkDocuments
+                        select testConnection;
+                    db.SaveChanges();
                     try
                     {
                         if (animationThread.IsAlive)
@@ -83,6 +87,7 @@ namespace AtlantSovt
                     catch
                     {
                     }
+
                     return true;
                 }
                 catch
@@ -123,15 +128,7 @@ namespace AtlantSovt
         {
             if (Connecting())
             {
-
                 this.WindowState = FormWindowState.Maximized;
-                using (var db = new AtlantSovtContext())
-                {
-                    var query =
-                        from testConnection in db.WorkDocuments
-                        select testConnection;
-                    db.SaveChanges();
-                }
             }
             else
             {

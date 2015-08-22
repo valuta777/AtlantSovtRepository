@@ -4,13 +4,46 @@ namespace AtlantSovt.AtlantSovtDb
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using System.IO;
+    using System.Windows.Forms;
+
 
     public partial class AtlantSovtContext : DbContext
     {
-        public AtlantSovtContext()
-            : base("name=AtlantSovtContext2")
+        static string GetConnectionString()
         {
+            string str = "";
+            try
+            {
+                StreamReader streamReader = new StreamReader((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\ConnectionString").Replace("\\bin\\Release", ""));
+
+                while (!streamReader.EndOfStream)
+                {
+                    str = streamReader.ReadLine();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Помилка: " + e.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
+            }
+
+            if (str == "")
+            {
+                str = "it`s not empty string";
+                Application.Exit();
+                return str;
+            }
+            else
+            {
+                return str;
+            }
         }
+
+        public AtlantSovtContext()
+          //  : base("name=AtlantSovtContext2") // read from App.config
+            : base(GetConnectionString())
+        {
+        } // read from ConnectionString file in Resources
 
         public virtual DbSet<AdditionalTerm> AdditionalTerms { get; set; }
         public virtual DbSet<Cargo> Cargoes { get; set; }

@@ -1,0 +1,1 @@
+data source=185.46.221.133,1903;initial catalog=AtlantSovt;persist security info=True;user id=YuriyKurko;password=yuriykurko;MultipleActiveResultSets=True;App=EntityFramework; Connection Timeout = 30
