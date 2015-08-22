@@ -61,7 +61,6 @@ E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\EntityFramework.SqlSer
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\EntityFramework.xml
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\EntityFramework.SqlServer.xml
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\ru\EntityFramework.resources.dll
-E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.csprojResolveAssemblyReference.cache
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.AddTransporterVehicleForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.AddCountryForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.AddLoadingFormForm.resources

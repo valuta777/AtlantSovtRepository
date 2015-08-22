@@ -869,10 +869,13 @@ namespace AtlantSovt
 
         string UploadForwarderStapm(Forwarder forwarder)
         {
+            string path = "";
             MemoryStream mStream = new MemoryStream(forwarder.image);
+            
             Image stamp = Image.FromStream(mStream);
-            string path = (System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\" + forwarder.Id + ".png").Replace("\\bin\\Release", "");
-            stamp.Save(path, ImageFormat.Png);
+            path = (System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\" + forwarder.Id + ".png").Replace("\\bin\\Release", "");
+            stamp.Save(path);
+            
             return path;
         }
 
