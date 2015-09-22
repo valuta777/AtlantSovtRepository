@@ -106,3 +106,4 @@ E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.Transporter
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.TransporterShowAdditionalDetailsForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.TransporterShowFiltrationForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.csproj.GenerateResource.Cache
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.csprojResolveAssemblyReference.cache
