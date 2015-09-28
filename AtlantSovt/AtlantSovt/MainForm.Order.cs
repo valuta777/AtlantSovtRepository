@@ -417,7 +417,7 @@ namespace AtlantSovt
         {
             if (clientOrderAdd != null)
             {
-                if (selectUploadAddressesForm == null)
+                if (selectUploadAddressesForm == null || selectUploadAddressesForm.IsDisposed)
                 {
                     selectUploadAddressesForm = new SelectUploadAddressesForm(clientOrderAdd);
                     selectUploadAddressesForm.Show();
@@ -436,7 +436,7 @@ namespace AtlantSovt
         {
             if (clientOrderAdd != null)
             {
-                if (selectDownloadAddressesForm == null)
+                if (selectDownloadAddressesForm == null || selectDownloadAddressesForm.IsDisposed)
                 {
                     selectDownloadAddressesForm = new SelectDownloadAddressesForm(clientOrderAdd);
                     selectDownloadAddressesForm.Show();
@@ -455,7 +455,7 @@ namespace AtlantSovt
         {
             if (clientOrderAdd != null)
             {
-                if (selectCustomsAddressesForm == null)
+                if (selectCustomsAddressesForm == null || selectCustomsAddressesForm.IsDisposed)
                 {
                     selectCustomsAddressesForm = new SelectCustomsAddressesForm(clientOrderAdd);
                     selectCustomsAddressesForm.Show();
@@ -474,7 +474,7 @@ namespace AtlantSovt
         {
             if (clientOrderAdd != null)
             {
-                if (selectCustomsAddressesForm == null)
+                if (selectUncustomsAddressesForm == null || selectUncustomsAddressesForm.IsDisposed)
                 {
                     selectUncustomsAddressesForm = new SelectUncustomsAddressesForm(clientOrderAdd);
                     selectUncustomsAddressesForm.Show();
@@ -1204,7 +1204,7 @@ namespace AtlantSovt
                             string[] diapasoneText = s.Split('-');
                             from = Convert.ToInt32(diapasoneText[0]);
                             to = Convert.ToInt32(diapasoneText[1]);
-                            if (Enumerable.Range(from, to).Contains(Convert.ToInt32(updateOrder.Client.Id)))
+                            if (Enumerable.Range(from, to).Contains(Convert.ToInt32(updateOrder.Transporter.Id))) ///FIX
                             {
                                 OrderUpdateTransporterDiapasoneComboBox.SelectedIndex = OrderUpdateTransporterDiapasoneComboBox.FindString(s);
                                 LoadOrderUpdateTransporterSelectComboBox();
