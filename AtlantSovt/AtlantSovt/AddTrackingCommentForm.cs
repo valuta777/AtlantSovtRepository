@@ -54,9 +54,7 @@ namespace AtlantSovt
                 catch (Exception ec)
                 {
                     MessageBox.Show(ec.Message);
-                }
-
-                
+                }  
             }
         }
 

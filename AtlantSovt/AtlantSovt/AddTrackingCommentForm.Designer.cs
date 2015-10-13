@@ -28,22 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.addTrackingCommentTextBox = new System.Windows.Forms.TextBox();
             this.addCommentButton = new System.Windows.Forms.Button();
+            this.addTrackingCommentTextBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
-            // 
-            // addTrackingCommentTextBox
-            // 
-            this.addTrackingCommentTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.addTrackingCommentTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addTrackingCommentTextBox.Location = new System.Drawing.Point(1, -1);
-            this.addTrackingCommentTextBox.Multiline = true;
-            this.addTrackingCommentTextBox.Name = "addTrackingCommentTextBox";
-            this.addTrackingCommentTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.addTrackingCommentTextBox.Size = new System.Drawing.Size(515, 275);
-            this.addTrackingCommentTextBox.TabIndex = 76;
             // 
             // addCommentButton
             // 
@@ -57,24 +44,34 @@
             this.addCommentButton.UseVisualStyleBackColor = true;
             this.addCommentButton.Click += new System.EventHandler(this.addCommentButton_Click);
             // 
+            // addTrackingCommentTextBox
+            // 
+            this.addTrackingCommentTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addTrackingCommentTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addTrackingCommentTextBox.Location = new System.Drawing.Point(0, 0);
+            this.addTrackingCommentTextBox.Name = "addTrackingCommentTextBox";
+            this.addTrackingCommentTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.addTrackingCommentTextBox.Size = new System.Drawing.Size(517, 273);
+            this.addTrackingCommentTextBox.TabIndex = 91;
+            this.addTrackingCommentTextBox.Text = "";
+            // 
             // AddTrackingCommentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(517, 332);
-            this.Controls.Add(this.addCommentButton);
             this.Controls.Add(this.addTrackingCommentTextBox);
+            this.Controls.Add(this.addCommentButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddTrackingCommentForm";
             this.Text = "Додавання коментарів";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox addTrackingCommentTextBox;
         private System.Windows.Forms.Button addCommentButton;
+        private System.Windows.Forms.RichTextBox addTrackingCommentTextBox;
     }
 }
