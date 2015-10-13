@@ -541,9 +541,6 @@
     <None Include="Resources\add.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\con_anim.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\demologo.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -577,6 +574,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\ConnectionStringList.txt" />
+    <None Include="Resources\con_anim.gif" />
     <Content Include="Resources\Logo.ico" />
     <Content Include="Resources\Logo.png" />
   </ItemGroup>

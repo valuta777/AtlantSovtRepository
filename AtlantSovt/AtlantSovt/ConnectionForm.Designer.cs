@@ -40,7 +40,7 @@
             this.connectionAnimation.Location = new System.Drawing.Point(0, 0);
             this.connectionAnimation.Name = "connectionAnimation";
             this.connectionAnimation.Size = new System.Drawing.Size(400, 427);
-            this.connectionAnimation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.connectionAnimation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.connectionAnimation.TabIndex = 0;
             this.connectionAnimation.TabStop = false;
             // 
@@ -56,6 +56,7 @@
             this.TransparencyKey = this.BackColor;
             ((System.ComponentModel.ISupportInitialize)(this.connectionAnimation)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -21,9 +21,11 @@ namespace AtlantSovt
         }
 
         Order orderNote;
+
         private MainForm MainForm { get; set; }
 
         private long id;
+
         public long Id
         {
             get

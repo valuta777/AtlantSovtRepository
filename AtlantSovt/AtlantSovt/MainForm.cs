@@ -118,7 +118,7 @@ namespace AtlantSovt
             {
                 connectionForm.ShowDialog();
             }
-            catch
+            catch(Exception ex)
             {
 
             }
@@ -144,62 +144,74 @@ namespace AtlantSovt
 
                 private void addClientsStrip_Click(object sender, EventArgs e)
                 {
+                    helloPictureBox.Image = null;
                     dataControl.SelectedIndex = 2;
                 }
 
                 private void updateClientsStrip_Click(object sender, EventArgs e)
                 {
+                    helloPictureBox.Image = null;
                     dataControl.SelectedIndex = 3;
                 }
 
                 private void deleteClientsStrip_Click(object sender, EventArgs e)
                 {
+                    helloPictureBox.Image = null;
                     dataControl.SelectedIndex = 4;
                 }               
 
                 private void addForwarderStrip_Click(object sender, EventArgs e)
                 {
+                    helloPictureBox.Image = null;
                     dataControl.SelectedIndex = 6;
                 }
 
                 private void updateForwarderStrip_Click(object sender, EventArgs e)
                 {
                     dataControl.SelectedIndex = 7;
+                    helloPictureBox.Image = null;
                 }
 
                 private void deleteForwarderStrip_Click(object sender, EventArgs e)
                 {
                     dataControl.SelectedIndex = 8;
+                    helloPictureBox.Image = null;
                 }
 
                 private void addTransporterStrip_Click(object sender, EventArgs e)
                 {
-                     dataControl.SelectedIndex = 10;
+                    helloPictureBox.Image = null; 
+                    dataControl.SelectedIndex = 10;
                 }
 
                 private void updateTransporterStrip_Click(object sender, EventArgs e)
                 {
+                    helloPictureBox.Image = null;
                     dataControl.SelectedIndex = 11;
                 }
 
                 private void deleteTransporterStrip_Click(object sender, EventArgs e)
                 {
+                    helloPictureBox.Image = null;
                     dataControl.SelectedIndex = 12;
                 }
 
                 private void createContractMenuItem_Click(object sender, EventArgs e)
                 {
                     dataControl.SelectedIndex = 13;
+                    helloPictureBox.Image = null;
                 }
 
                 private void addOrderMenuItem_Click(object sender, EventArgs e)
                 {
                     dataControl.SelectedIndex = 14;
+                    helloPictureBox.Image = null;
 
                 }
                 private void showTrackingMenuItem_Click(object sender, EventArgs e)
                 {
                     dataControl.SelectedIndex = 15;
+                    helloPictureBox.Image = null;
                     ShowTracking();
                     trackingShowTransporterContactsDataGridView.Visible = false;
                     trackingShowCommentDataGridView.Visible = false;
@@ -210,11 +222,13 @@ namespace AtlantSovt
                 private void updateOrderMenuItem_DoubleClick(object sender, EventArgs e)
                 {
                     dataControl.SelectedIndex = 16;
+                    helloPictureBox.Image = null;
                 }
 
                 private void showContractMenuItem_Click(object sender, EventArgs e)
                 {
                     dataControl.SelectedIndex = 17;
+                    helloPictureBox.Image = null;
                     ShowContract();
                 }
 
@@ -232,6 +246,7 @@ namespace AtlantSovt
         private void showClientsStrip_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 1;
+            helloPictureBox.Image = null;
             ShowClient();
         }
 
@@ -702,6 +717,7 @@ namespace AtlantSovt
         private void showForwarderStrip_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 5;
+            helloPictureBox.Image = null;
             ShowForwarder();
         }
         private void forwarderDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -1112,6 +1128,7 @@ namespace AtlantSovt
             private void showTransporterStrip_Click(object sender, EventArgs e)
             {
                 dataControl.SelectedIndex = 9;
+                helloPictureBox.Image = null;
                 ShowTransporter();
             }
 
@@ -1773,8 +1790,6 @@ namespace AtlantSovt
         //Tracking
         #region Tracking
 
-        ShowTrackingCommentForm comment;
-
         private void trackingShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowTrackingInfo();
@@ -1838,29 +1853,22 @@ namespace AtlantSovt
                 trackingShowAddComment.Dispose();
                 MessageBox.Show("Немає жодної заявки");
             }
-
         }
 
-        private void trackingShowCommentDataGridView_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        private void trackingShowCommentDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            ShowTrackingCommentForm ShowTrackingComment = new ShowTrackingCommentForm(this);
             try
             {
-                comment = new ShowTrackingCommentForm();
-                comment.Location = new Point(Cursor.Position.X, Cursor.Position.Y - 200);
                 trackingShowCommentDataGridView.ClearSelection();
-                comment.comment = trackingShowCommentDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
-                comment.Show();
+                ShowTrackingComment.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+                ShowTrackingComment.Date = Convert.ToDateTime(trackingShowCommentDataGridView.CurrentRow.Cells[1].Value);
+                ShowTrackingComment.Show();
             }
             catch
-        {
+            {
                 MessageBox.Show("Натисніть на коментар");
             }
-        }
-
-        private void trackingShowCommentDataGridView_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            comment.comment = "";
-            comment.Dispose();
         }
 
         private void showTrackingCreateOrderDoc_Click(object sender, EventArgs e)
@@ -2658,6 +2666,5 @@ namespace AtlantSovt
             OrderUpdateLanguageSelectComboBox.DroppedDown = true;
         }
         #endregion
-
     }
 }
