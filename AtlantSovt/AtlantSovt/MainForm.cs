@@ -80,8 +80,9 @@ namespace AtlantSovt
                     {
                         if (animationThread.IsAlive)
                         {
-                            animationThread.Join(500);
+                            Thread.Sleep(200);
                             animationThread.Abort();
+                            //animationThread.Join(500);
                         }
                     }
                     catch
@@ -97,9 +98,9 @@ namespace AtlantSovt
                     {
                         if (animationThread.IsAlive)
                         {
-
-                            animationThread.Join(500);
+                            Thread.Sleep(200);
                             animationThread.Abort();
+                           //animationThread.Join(500);
                         }
                     }
                     catch
@@ -116,6 +117,7 @@ namespace AtlantSovt
             ConnectionForm connectionForm = new ConnectionForm();
             try
             {
+
                 connectionForm.ShowDialog();
             }
             catch(ThreadAbortException e)
@@ -1768,6 +1770,14 @@ namespace AtlantSovt
         private void contractShowSearchButton_Click(object sender, EventArgs e)
         {
             ShowContractSearch();
+        }
+
+        private void contractShowSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                ShowContractSearch();
+            }
         }
 
         private void contractShowSearchTextBox_TextChanged(object sender, EventArgs e)
