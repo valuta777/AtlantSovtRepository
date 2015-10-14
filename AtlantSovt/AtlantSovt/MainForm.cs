@@ -118,9 +118,9 @@ namespace AtlantSovt
             {
                 connectionForm.ShowDialog();
             }
-            catch(Exception ex)
+            catch(ThreadAbortException e)
             {
-
+                return;
             }
         }
 
