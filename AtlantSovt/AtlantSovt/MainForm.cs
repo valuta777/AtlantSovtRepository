@@ -261,6 +261,14 @@ namespace AtlantSovt
 
         }
 
+        private void clientShowSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                ShowClientSearch();
+            }
+        }
+
         private void clientShowSearchTextBox_TextChanged(object sender, EventArgs e)
         {
             if (clientShowSearchTextBox.Text == "")
@@ -1170,6 +1178,14 @@ namespace AtlantSovt
 
             }
 
+            private void transporterShowSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+            {
+                if(e.KeyChar == (char)Keys.Enter)
+                {
+                    ShowTransporterSearch();
+                }
+            }    
+
             private void transporterShowSearchTextBox_TextChanged(object sender, EventArgs e)
             {
                 if (transporterShowSearchTextBox.Text == "")
@@ -1799,9 +1815,17 @@ namespace AtlantSovt
         }
 
         private void trackingShowSearchButton_Click(object sender, EventArgs e)
-            {
+        {
             ShowTrackingSearch();
+        }
+
+        private void trackingShowSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                ShowTrackingSearch();
             }
+        }
 
         private void trackingShowSearchTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -2666,5 +2690,6 @@ namespace AtlantSovt
             OrderUpdateLanguageSelectComboBox.DroppedDown = true;
         }
         #endregion
+
     }
 }
