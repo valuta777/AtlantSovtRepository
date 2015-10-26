@@ -185,10 +185,10 @@
     <Compile Include="AtlantSovtDb\UploadAddress.cs" />
     <Compile Include="AtlantSovtDb\Vehicle.cs" />
     <Compile Include="AtlantSovtDb\WorkDocument.cs" />
-    <Compile Include="ClientBankDetailsAddForm.cs">
+    <Compile Include="Client\ClientBankDetailsAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientBankDetailsAddForm.Designer.cs">
+    <Compile Include="Client\ClientBankDetailsAddForm.Designer.cs">
       <DependentUpon>ClientBankDetailsAddForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.Documentation.cs">
@@ -197,7 +197,7 @@
     <Compile Include="MainForm.Order.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="menuStripRenderer.cs" />
+    <Compile Include="Additions\menuStripRenderer.cs" />
     <Compile Include="SelectCustomsAddressesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,79 +228,79 @@
     <Compile Include="ShowTrackingCommentForm.designer.cs">
       <DependentUpon>ShowTrackingCommentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransporterBankDetailsUpdateForm.cs">
+    <Compile Include="Transporter\TransporterBankDetailsUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TransporterBankDetailsUpdateForm.designer.cs">
+    <Compile Include="Transporter\TransporterBankDetailsUpdateForm.designer.cs">
       <DependentUpon>TransporterBankDetailsUpdateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForwarderBankDetailsUpdateForm.cs">
+    <Compile Include="Forwarder\ForwarderBankDetailsUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForwarderBankDetailsUpdateForm.designer.cs">
+    <Compile Include="Forwarder\ForwarderBankDetailsUpdateForm.designer.cs">
       <DependentUpon>ForwarderBankDetailsUpdateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransporterContactDeleteForm.cs">
+    <Compile Include="Transporter\TransporterContactDeleteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TransporterContactDeleteForm.designer.cs">
+    <Compile Include="Transporter\TransporterContactDeleteForm.designer.cs">
       <DependentUpon>TransporterContactDeleteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForwarderContactDeleteForm.cs">
+    <Compile Include="Forwarder\ForwarderContactDeleteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForwarderContactDeleteForm.designer.cs">
+    <Compile Include="Forwarder\ForwarderContactDeleteForm.designer.cs">
       <DependentUpon>ForwarderContactDeleteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForwarderContactAddForm.cs">
+    <Compile Include="Forwarder\ForwarderContactAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForwarderContactAddForm.Designer.cs">
+    <Compile Include="Forwarder\ForwarderContactAddForm.Designer.cs">
       <DependentUpon>ForwarderContactAddForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForwarderBankDetailsAddForm.cs">
+    <Compile Include="Forwarder\ForwarderBankDetailsAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForwarderBankDetailsAddForm.Designer.cs">
+    <Compile Include="Forwarder\ForwarderBankDetailsAddForm.Designer.cs">
       <DependentUpon>ForwarderBankDetailsAddForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientContactDeleteForm.cs">
+    <Compile Include="Client\ClientContactDeleteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientContactDeleteForm.designer.cs">
+    <Compile Include="Client\ClientContactDeleteForm.designer.cs">
       <DependentUpon>ClientContactDeleteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransporterContactUpdateForm.cs">
+    <Compile Include="Transporter\TransporterContactUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TransporterContactUpdateForm.Designer.cs">
+    <Compile Include="Transporter\TransporterContactUpdateForm.Designer.cs">
       <DependentUpon>TransporterContactUpdateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.Forwarder.cs">
+    <Compile Include="Forwarder\MainForm.Forwarder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientBankDetailsUpdateForm.cs">
+    <Compile Include="Client\ClientBankDetailsUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientBankDetailsUpdateForm.designer.cs">
+    <Compile Include="Client\ClientBankDetailsUpdateForm.designer.cs">
       <DependentUpon>ClientBankDetailsUpdateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForwarderContactUpdateForm.cs">
+    <Compile Include="Forwarder\ForwarderContactUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForwarderContactUpdateForm.Designer.cs">
+    <Compile Include="Forwarder\ForwarderContactUpdateForm.Designer.cs">
       <DependentUpon>ForwarderContactUpdateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientContactUpdateForm.cs">
+    <Compile Include="Client\ClientContactUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientContactUpdateForm.Designer.cs">
+    <Compile Include="Client\ClientContactUpdateForm.Designer.cs">
       <DependentUpon>ClientContactUpdateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientContactAddForm.cs">
+    <Compile Include="Client\ClientContactAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientContactAddForm.Designer.cs">
+    <Compile Include="Client\ClientContactAddForm.Designer.cs">
       <DependentUpon>ClientContactAddForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AddTaxPayerStatusForm.cs">
@@ -315,10 +315,10 @@
     <Compile Include="AddWorkDocumentForm.Designer.cs">
       <DependentUpon>AddWorkDocumentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConnectionForm.cs">
+    <Compile Include="Additions\ConnectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConnectionForm.Designer.cs">
+    <Compile Include="Additions\ConnectionForm.Designer.cs">
       <DependentUpon>ConnectionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -327,48 +327,48 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.Client.cs">
+    <Compile Include="Client\MainForm.Client.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Transporter.cs">
+    <Compile Include="Transporter\MainForm.Transporter.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TransporterBankDetailsAddForm.cs">
+    <Compile Include="Transporter\TransporterBankDetailsAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TransporterBankDetailsAddForm.Designer.cs">
+    <Compile Include="Transporter\TransporterBankDetailsAddForm.Designer.cs">
       <DependentUpon>TransporterBankDetailsAddForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransporterContactAddForm.cs">
+    <Compile Include="Transporter\TransporterContactAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TransporterContactAddForm.Designer.cs">
+    <Compile Include="Transporter\TransporterContactAddForm.Designer.cs">
       <DependentUpon>TransporterContactAddForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransporterCountryUpdateVehicleSelectForm.cs">
+    <Compile Include="Transporter\TransporterCountryUpdateVehicleSelectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TransporterCountryUpdateVehicleSelectForm.Designer.cs">
+    <Compile Include="Transporter\TransporterCountryUpdateVehicleSelectForm.Designer.cs">
       <DependentUpon>TransporterCountryUpdateVehicleSelectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransporterCountryAndVehicleSelectForm.cs">
+    <Compile Include="Transporter\TransporterCountryAndVehicleSelectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TransporterCountryAndVehicleSelectForm.Designer.cs">
+    <Compile Include="Transporter\TransporterCountryAndVehicleSelectForm.Designer.cs">
       <DependentUpon>TransporterCountryAndVehicleSelectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransporterShowAdditionalDetailsForm.cs">
+    <Compile Include="Transporter\TransporterShowAdditionalDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TransporterShowAdditionalDetailsForm.Designer.cs">
+    <Compile Include="Transporter\TransporterShowAdditionalDetailsForm.Designer.cs">
       <DependentUpon>TransporterShowAdditionalDetailsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransporterShowFiltrationForm.cs">
+    <Compile Include="Transporter\TransporterShowFiltrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TransporterShowFiltrationForm.Designer.cs">
+    <Compile Include="Transporter\TransporterShowFiltrationForm.Designer.cs">
       <DependentUpon>TransporterShowFiltrationForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddTransporterVehicleForm.resx">
@@ -416,7 +416,7 @@
     <EmbeddedResource Include="AddAddressForm.resx">
       <DependentUpon>AddAddressForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientBankDetailsAddForm.resx">
+    <EmbeddedResource Include="Client\ClientBankDetailsAddForm.resx">
       <DependentUpon>ClientBankDetailsAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectCustomsAddressesForm.resx">
@@ -434,25 +434,25 @@
     <EmbeddedResource Include="ShowTrackingCommentForm.resx">
       <DependentUpon>ShowTrackingCommentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransporterBankDetailsUpdateForm.resx">
+    <EmbeddedResource Include="Transporter\TransporterBankDetailsUpdateForm.resx">
       <DependentUpon>TransporterBankDetailsUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForwarderBankDetailsUpdateForm.resx">
+    <EmbeddedResource Include="Forwarder\ForwarderBankDetailsUpdateForm.resx">
       <DependentUpon>ForwarderBankDetailsUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientContactAddForm.resx">
+    <EmbeddedResource Include="Client\ClientContactAddForm.resx">
       <DependentUpon>ClientContactAddForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransporterContactDeleteForm.resx">
+    <EmbeddedResource Include="Transporter\TransporterContactDeleteForm.resx">
       <DependentUpon>TransporterContactDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForwarderContactDeleteForm.resx">
+    <EmbeddedResource Include="Forwarder\ForwarderContactDeleteForm.resx">
       <DependentUpon>ForwarderContactDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForwarderContactAddForm.resx">
+    <EmbeddedResource Include="Forwarder\ForwarderContactAddForm.resx">
       <DependentUpon>ForwarderContactAddForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForwarderBankDetailsAddForm.resx">
+    <EmbeddedResource Include="Forwarder\ForwarderBankDetailsAddForm.resx">
       <DependentUpon>ForwarderBankDetailsAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddTaxPayerStatusForm.resx">
@@ -461,13 +461,13 @@
     <EmbeddedResource Include="AddWorkDocumentForm.resx">
       <DependentUpon>AddWorkDocumentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConnectionForm.resx">
+    <EmbeddedResource Include="Additions\ConnectionForm.resx">
       <DependentUpon>ConnectionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientContactDeleteForm.resx">
+    <EmbeddedResource Include="Client\ClientContactDeleteForm.resx">
       <DependentUpon>ClientContactDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransporterContactUpdateForm.resx">
+    <EmbeddedResource Include="Transporter\TransporterContactUpdateForm.resx">
       <DependentUpon>TransporterContactUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -484,31 +484,31 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ClientBankDetailsUpdateForm.resx">
+    <EmbeddedResource Include="Client\ClientBankDetailsUpdateForm.resx">
       <DependentUpon>ClientBankDetailsUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForwarderContactUpdateForm.resx">
+    <EmbeddedResource Include="Forwarder\ForwarderContactUpdateForm.resx">
       <DependentUpon>ForwarderContactUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientContactUpdateForm.resx">
+    <EmbeddedResource Include="Client\ClientContactUpdateForm.resx">
       <DependentUpon>ClientContactUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransporterBankDetailsAddForm.resx">
+    <EmbeddedResource Include="Transporter\TransporterBankDetailsAddForm.resx">
       <DependentUpon>TransporterBankDetailsAddForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransporterContactAddForm.resx">
+    <EmbeddedResource Include="Transporter\TransporterContactAddForm.resx">
       <DependentUpon>TransporterContactAddForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransporterCountryUpdateVehicleSelectForm.resx">
+    <EmbeddedResource Include="Transporter\TransporterCountryUpdateVehicleSelectForm.resx">
       <DependentUpon>TransporterCountryUpdateVehicleSelectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransporterCountryAndVehicleSelectForm.resx">
+    <EmbeddedResource Include="Transporter\TransporterCountryAndVehicleSelectForm.resx">
       <DependentUpon>TransporterCountryAndVehicleSelectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransporterShowAdditionalDetailsForm.resx">
+    <EmbeddedResource Include="Transporter\TransporterShowAdditionalDetailsForm.resx">
       <DependentUpon>TransporterShowAdditionalDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransporterShowFiltrationForm.resx">
+    <EmbeddedResource Include="Transporter\TransporterShowFiltrationForm.resx">
       <DependentUpon>TransporterShowFiltrationForm.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="MainForm.Tracking.cs">
