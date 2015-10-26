@@ -19,7 +19,7 @@ namespace AtlantSovt
         Client client, deleteClient;
         WorkDocument clientWorkDocument = null;
         TaxPayerStatu clientTaxPayerStatus = null;
-
+        
         //Show
         #region Show
 
