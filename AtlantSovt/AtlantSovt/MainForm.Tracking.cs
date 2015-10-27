@@ -500,7 +500,7 @@ namespace AtlantSovt
 
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).Count() == 1)
                         {
-                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder.image == null)
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder.ForwarderStamp.Stamp == null)
                             {
                                 isOrderFull = false;
                             }
@@ -511,7 +511,7 @@ namespace AtlantSovt
                         }
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).Count() == 1)
                         {
-                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder.image == null)
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder.ForwarderStamp.Stamp == null)
                             {
                                 isOrderFull = false;
                             }
@@ -784,7 +784,7 @@ namespace AtlantSovt
 
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).Count() == 1)
                         {
-                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder.image != null)
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder.ForwarderStamp.Stamp != null)
                             {
                                 AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder), "{Stamp1}");
                                 Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", ""), true);
@@ -793,7 +793,7 @@ namespace AtlantSovt
                         }
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).Count() == 1)
                         {
-                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder.image != null && orderDocument.Language == 0)
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder.ForwarderStamp.Stamp != null && orderDocument.Language == 0)
                             {
                                 AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder), "{Stamp2}");
                                 Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", ""), true);

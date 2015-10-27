@@ -216,6 +216,30 @@ namespace AtlantSovt
             }
         }
 
+        void AddForwarderStamp(long id)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                ForwarderStamp New_ForwarderStamp = new ForwarderStamp
+                {
+                    Id = id,
+                    Stamp = forwarderAddStamp != null ? imageToByteArray(forwarderAddStamp) : null
+
+                };
+                try
+                {
+                    db.ForwarderStamps.Add(New_ForwarderStamp);
+                    db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    Log.Write(ex);
+                    MessageBox.Show(ex.Message);
+
+                }
+            }
+        }
+
         void AddForwarder()
         {
             using (var db = new AtlantSovtContext())
@@ -260,7 +284,6 @@ namespace AtlantSovt
                             PhysicalAddress = new_PhysicalAddress,
                             GeographyAddress = new_GeographyAddress,
                             Comment = new_Comment,
-                            image = forwarderAddStamp != null ? imageToByteArray(forwarderAddStamp) : null
                         };
                     }
 
@@ -275,7 +298,6 @@ namespace AtlantSovt
                             WorkDocumentId = new_WorkDocumentId,
                             TaxPayerStatusId = new_TaxPayerStatusId,
                             Comment = new_Comment,                            
-                            image = forwarderAddStamp != null ? imageToByteArray(forwarderAddStamp) : null
                         };
                     }
 
@@ -289,7 +311,6 @@ namespace AtlantSovt
                             GeographyAddress = new_GeographyAddress,
                             WorkDocumentId = new_WorkDocumentId,
                             Comment = new_Comment,                            
-                            image = forwarderAddStamp != null ? imageToByteArray(forwarderAddStamp) : null
                         };
                     }
 
@@ -303,7 +324,6 @@ namespace AtlantSovt
                             GeographyAddress = new_GeographyAddress,
                             TaxPayerStatusId = new_TaxPayerStatusId,
                             Comment = new_Comment,
-                            image = forwarderAddStamp != null ? imageToByteArray(forwarderAddStamp) : null
                         };
                     }
 
@@ -323,6 +343,7 @@ namespace AtlantSovt
                             addForwarderContactAddForm.AddForwarderContact(New_Forwarder.Id);
                             addForwarderContactAddForm = null;
                         }
+                        AddForwarderStamp(New_Forwarder.Id);
                     }
                     catch (Exception ex)
                     {
@@ -367,9 +388,9 @@ namespace AtlantSovt
                     physicalAddressForwarderUpdateTextBox.Text = Convert.ToString(forwarder.PhysicalAddress);
                     geographyAddressForwarderUpdateTextBox.Text = Convert.ToString(forwarder.GeographyAddress);
                     commentForwarderUpdateTextBox.Text = Convert.ToString(forwarder.Comment);
-                    if (forwarder.image != null)
+                    if (forwarder.ForwarderStamp.Stamp != null)
                     {
-                        updateForwarderStampPictureBox.Image = Image.FromStream(new MemoryStream(forwarder.image));
+                        updateForwarderStampPictureBox.Image = Image.FromStream(new MemoryStream(forwarder.ForwarderStamp.Stamp));
                     }
                     else
                     {
@@ -533,7 +554,7 @@ namespace AtlantSovt
                     }
                     if (forwarderStampChanged)
                     {
-                        forwarder.image = (updateForwarderStampPictureBox.Image != null) ? imageToByteArray(updateForwarderStampPictureBox.Image) : null;
+                        forwarder.ForwarderStamp.Stamp = (updateForwarderStampPictureBox.Image != null) ? imageToByteArray(updateForwarderStampPictureBox.Image) : null;
                     }
 
                     db.Entry(forwarder).State = EntityState.Modified;
