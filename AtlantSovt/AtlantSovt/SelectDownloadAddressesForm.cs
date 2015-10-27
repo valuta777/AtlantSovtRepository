@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -136,9 +137,10 @@ namespace AtlantSovt
                         }
                     }
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка!!", e.ToString());
+                    Log.Write(ex);
+                    MessageBox.Show("Помилка:", ex.ToString());
                 }
             }
         }
@@ -200,9 +202,10 @@ namespace AtlantSovt
                         MessageBox.Show("Успішно вибрано " + downloadAddresssListBox.CheckedItems.Count + " Адрес розвантаження");
                     }
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка!!", e.ToString());
+                    Log.Write(ex);
+                    MessageBox.Show("Помилка!!", ex.ToString());
                 }
             }
         }

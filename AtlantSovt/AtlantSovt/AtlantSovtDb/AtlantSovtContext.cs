@@ -6,6 +6,7 @@ namespace AtlantSovt.AtlantSovtDb
     using System.Linq;
     using System.IO;
     using System.Windows.Forms;
+    using AtlantSovt.Additions;
 
 
     public partial class AtlantSovtContext : DbContext
@@ -22,9 +23,10 @@ namespace AtlantSovt.AtlantSovtDb
                     str = streamReader.ReadLine();
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                MessageBox.Show("Помилка: " + e.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
+                Log.Write(ex);
+                MessageBox.Show("Помилка: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
             }
 
             if (str == "")

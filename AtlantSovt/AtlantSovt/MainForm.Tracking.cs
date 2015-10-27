@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using Microsoft.Office.Interop.Word;
 using System;
 using System.Collections.Generic;
@@ -133,6 +134,7 @@ namespace AtlantSovt
                 }
                 catch (Exception ex)
                 {
+                    Log.Write(ex);
                     MessageBox.Show("Немає жодної заявки");
                 }
 
@@ -187,6 +189,7 @@ namespace AtlantSovt
                 }
                 catch (Exception ex)
                 {
+                    Log.Write(ex);
                     MessageBox.Show("Немає жодної заявки");
                 }
             }
@@ -818,6 +821,7 @@ namespace AtlantSovt
             }
             catch (NullReferenceException nullClickedId)
             {
+                Log.Write(nullClickedId);
                 contractShowOpenDocButton.Enabled = false;
                 contractShowDeleteContractButton.Enabled = false;
                 contractShowTransporterContactDataGridView.Visible = false;
@@ -825,6 +829,7 @@ namespace AtlantSovt
             }
             catch (System.Runtime.InteropServices.COMException wordException)
             {
+                Log.Write(wordException);
                 wordDocument.Close(Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges);
                 MessageBox.Show("Помилка, спробуйте ще раз");
             }
@@ -855,9 +860,10 @@ namespace AtlantSovt
                         documentCount = null;
                     }
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка: " + e.Message);
+                    Log.Write(ex);
+                    MessageBox.Show("Помилка: " + ex.Message);
                 }
 
                 orderCount = new OrderCounter();
@@ -882,9 +888,10 @@ namespace AtlantSovt
                         }
                     }     
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка: " + e.Message);
+                    Log.Write(ex);
+                    MessageBox.Show("Помилка: " + ex.Message);
                 }
 
                 try
@@ -907,9 +914,10 @@ namespace AtlantSovt
                     db.Entry(orderDocument).State = EntityState.Modified;
                     db.SaveChanges();
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка: " + e.Message);
+                    Log.Write(ex);
+                    MessageBox.Show("Помилка: " + ex.Message);
                 }
             }
         }

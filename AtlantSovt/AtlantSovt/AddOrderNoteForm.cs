@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -61,9 +62,10 @@ namespace AtlantSovt
                     db.Entry(orderNote).State = EntityState.Modified;
                     db.SaveChanges();
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка: " + e.Message);
+                    Log.Write(ex);
+                    MessageBox.Show("Помилка: " + ex.Message);
                 }
             }
         }

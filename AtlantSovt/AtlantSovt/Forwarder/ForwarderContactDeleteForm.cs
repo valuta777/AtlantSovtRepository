@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -72,9 +73,10 @@ namespace AtlantSovt
                         MessageBox.Show("Контакт успішно видалено");
                         forwarderUpdateSelectDeleteContactComboBox.Items.Remove(forwarderUpdateSelectDeleteContactComboBox.SelectedItem);
                     }
-                    catch (Exception e)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Помилка!" + Environment.NewLine + e);
+                        Log.Write(ex);
+                        MessageBox.Show("Помилка!" + Environment.NewLine + ex);
                     }
                 }
             }

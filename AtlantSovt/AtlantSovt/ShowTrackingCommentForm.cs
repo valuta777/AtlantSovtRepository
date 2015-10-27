@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -74,9 +75,10 @@ namespace AtlantSovt
                     return commentId;
                 }
             }
-            catch(Exception e)
+            catch(Exception ex)
             {
-                MessageBox.Show(e.Message);
+                Log.Write(ex);
+                MessageBox.Show(ex.Message);
                 return null;
             }
         }
@@ -93,9 +95,10 @@ namespace AtlantSovt
                     db.Entry(trackingComment).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                 }
-                catch(Exception e)
+                catch(Exception ex)
                 {
-                    MessageBox.Show(e.Message);
+                    Log.Write(ex);
+                    MessageBox.Show(ex.Message);
                 }
             }
         }

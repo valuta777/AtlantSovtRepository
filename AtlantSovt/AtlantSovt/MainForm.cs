@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -82,17 +83,18 @@ namespace AtlantSovt
                         {
                             Thread.Sleep(200);
                             animationThread.Abort();
-                            //animationThread.Join(500);
                         }
                     }
-                    catch
+                    catch(Exception ex)
                     {
+                        Log.Write(ex);
                     }
 
                     return true;
                 }
-                catch
+                catch(Exception ex)
                 {
+                    Log.Write(ex);
                     MessageBox.Show("Помилка з'єднання з сервером!", "Немає з'єднання", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
                     try
                     {
@@ -100,12 +102,11 @@ namespace AtlantSovt
                         {
                             Thread.Sleep(200);
                             animationThread.Abort();
-                           //animationThread.Join(500);
                         }
                     }
-                    catch
+                    catch(Exception ex1)
                     {
-
+                        Log.Write(ex1);
                     }
                     return false;
                 }
@@ -117,11 +118,11 @@ namespace AtlantSovt
             ConnectionForm connectionForm = new ConnectionForm();
             try
             {
-
                 connectionForm.ShowDialog();
             }
-            catch(ThreadAbortException e)
+            catch(ThreadAbortException ex)
             {
+                Log.Write(ex);
                 return;
             }
         }
@@ -656,9 +657,10 @@ namespace AtlantSovt
                                 db.SaveChanges();
                                 MessageBox.Show("Банківські данні успішно видалено");
                             }
-                            catch (Exception ee)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Помилка!" + Environment.NewLine + ee);
+                                Log.Write(ex);
+                                MessageBox.Show("Помилка!" + Environment.NewLine + ex);
                             }
                         }
                     }
@@ -1072,9 +1074,10 @@ namespace AtlantSovt
                                 db.SaveChanges();
                                 MessageBox.Show("Банківські данні успішно видалено");
                             }
-                            catch (Exception ee)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Помилка!" + Environment.NewLine + ee);
+                                Log.Write(ex);
+                                MessageBox.Show("Помилка!" + Environment.NewLine + ex);
                             }
                         }
                     }
@@ -1610,9 +1613,10 @@ namespace AtlantSovt
                                 db.SaveChanges();
                                 MessageBox.Show("Банківські данні успішно видалено");
                             }
-                            catch (Exception ee)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Помилка!" + Environment.NewLine + ee);
+                                Log.Write(ex);
+                                MessageBox.Show("Помилка!" + Environment.NewLine + ex);
                             }
                         }
                     }
@@ -1884,6 +1888,7 @@ namespace AtlantSovt
             }
             catch (Exception ex)
             {
+                Log.Write(ex);
                 trackingShowAddComment.Dispose();
                 MessageBox.Show("Немає жодної заявки");
             }
@@ -1899,8 +1904,9 @@ namespace AtlantSovt
                 ShowTrackingComment.Date = Convert.ToDateTime(trackingShowCommentDataGridView.CurrentRow.Cells[1].Value);
                 ShowTrackingComment.Show();
             }
-            catch
+            catch(Exception ex)
             {
+                Log.Write(ex);
                 MessageBox.Show("Натисніть на коментар");
             }
         }
@@ -1927,6 +1933,7 @@ namespace AtlantSovt
             }
             catch (Exception ex)
             {
+                Log.Write(ex);
                 orderNoteForm.Dispose();
                 MessageBox.Show("Немає жодної заявки");
             }

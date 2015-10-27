@@ -12,6 +12,7 @@ using Microsoft.Office.Interop.Word;
 using System.Drawing;
 using System.IO;
 using System.Drawing.Imaging;
+using AtlantSovt.Additions;
 
 namespace AtlantSovt
 {
@@ -365,6 +366,7 @@ namespace AtlantSovt
                 }
                 catch (Exception ex)
                 {
+                    Log.Write(ex);
                     contractShowOpenDocButton.Enabled = false;
                     contractShowDeleteContractButton.Enabled = false;
                     MessageBox.Show("Немає жодного договору");
@@ -397,9 +399,10 @@ namespace AtlantSovt
                         documentCount = null;
                     }
                 }
-                catch(Exception e)
+                catch(Exception ex)
                 {
-                    MessageBox.Show("Помилка: " + e.Message);
+                    Log.Write(ex);
+                    MessageBox.Show("Помилка: " + ex.Message);
                 }
                 documentCount = new DocumentCounter();
                 try
@@ -421,9 +424,10 @@ namespace AtlantSovt
 
                     }
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка: " + e.Message);
+                    Log.Write(ex);
+                    MessageBox.Show("Помилка: " + ex.Message);
                 }
 
                 try
@@ -453,9 +457,10 @@ namespace AtlantSovt
                     db.TransporterForwarderContracts.Add(contract);
                     db.SaveChanges();
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка: " + e.Message);
+                    Log.Write(ex);
+                    MessageBox.Show("Помилка: " + ex.Message);
                 }
             }
         }
@@ -481,9 +486,10 @@ namespace AtlantSovt
                                 db.SaveChanges();
                                 MessageBox.Show("Договір успішно видалений");
                             }
-                            catch (Exception e)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Помилка!" + Environment.NewLine + e);
+                                Log.Write(ex);
+                                MessageBox.Show("Помилка!" + Environment.NewLine + ex);
                             }
                         }
                     }
@@ -670,9 +676,10 @@ namespace AtlantSovt
                     }
                 }
             }
-            catch(Exception e)
+            catch(Exception ex)
             {
-                MessageBox.Show("Помилка: " + e.Message);
+                Log.Write(ex);
+                MessageBox.Show("Помилка: " + ex.Message);
                 wordDocument.Close(Word.WdSaveOptions.wdDoNotSaveChanges);
             }
         }
@@ -855,6 +862,7 @@ namespace AtlantSovt
             }
             catch (NullReferenceException nullClickedId)
             {
+                Log.Write(nullClickedId);
                 contractShowOpenDocButton.Enabled = false;
                 contractShowDeleteContractButton.Enabled = false;
                 contractShowTransporterContactDataGridView.Visible = false;
@@ -862,6 +870,7 @@ namespace AtlantSovt
             }
             catch (System.Runtime.InteropServices.COMException wordException)
             {
+                Log.Write(wordException);
                 wordDocument.Close(Word.WdSaveOptions.wdDoNotSaveChanges);
                 MessageBox.Show("Помилка, спробуйте ще раз");
             }
