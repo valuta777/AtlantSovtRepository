@@ -558,6 +558,8 @@ namespace AtlantSovt
                     }
 
                     db.Entry(forwarder).State = EntityState.Modified;
+                    db.Entry(forwarder.ForwarderStamp).State = EntityState.Modified;
+
                     db.SaveChanges();
                     MessageBox.Show("Успішно змінено");
                 }
