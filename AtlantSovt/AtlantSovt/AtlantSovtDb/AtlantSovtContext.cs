@@ -4,48 +4,13 @@ namespace AtlantSovt.AtlantSovtDb
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
-    using System.IO;
-    using System.Windows.Forms;
-    using AtlantSovt.Additions;
-
 
     public partial class AtlantSovtContext : DbContext
     {
-        static string GetConnectionString()
-        {
-            string str = "";
-            try
-            {
-                StreamReader streamReader = new StreamReader((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\ConnectionString").Replace("\\bin\\Release", ""));
-
-                while (!streamReader.EndOfStream)
-                {
-                    str = streamReader.ReadLine();
-                }
-            }
-            catch (Exception ex)
-            {
-                Log.Write(ex);
-                MessageBox.Show("Помилка: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
-            }
-
-            if (str == "")
-            {
-                str = "it`s not empty string";
-                Application.Exit();
-                return str;
-            }
-            else
-            {
-                return str;
-            }
-        }
-
         public AtlantSovtContext()
-          //  : base("name=AtlantSovtContext2") // read from App.config
-            : base(GetConnectionString())
+            : base(ConnectionForm.GetConnectionString())
         {
-        } // read from ConnectionString file in Resources
+        }
 
         public virtual DbSet<AdditionalTerm> AdditionalTerms { get; set; }
         public virtual DbSet<Cargo> Cargoes { get; set; }
@@ -63,6 +28,7 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<ForwarderBankDetail> ForwarderBankDetails { get; set; }
         public virtual DbSet<ForwarderContact> ForwarderContacts { get; set; }
         public virtual DbSet<ForwarderOrder> ForwarderOrders { get; set; }
+        public virtual DbSet<ForwarderStamp> ForwarderStamps { get; set; }
         public virtual DbSet<LoadingForm> LoadingForms { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderCounter> OrderCounters { get; set; }
@@ -148,6 +114,11 @@ namespace AtlantSovt.AtlantSovtDb
 
             modelBuilder.Entity<Forwarder>()
                 .HasOptional(e => e.ForwarderBankDetail)
+                .WithRequired(e => e.Forwarder)
+                .WillCascadeOnDelete();
+
+            modelBuilder.Entity<Forwarder>()
+                .HasOptional(e => e.ForwarderStamp)
                 .WithRequired(e => e.Forwarder)
                 .WillCascadeOnDelete();
 

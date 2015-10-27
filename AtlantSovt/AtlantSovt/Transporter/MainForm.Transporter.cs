@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Data.Entity.SqlServer;
 
 using System.Linq.Expressions;
+using AtlantSovt.Additions;
 
 namespace AtlantSovt
 {
@@ -149,6 +150,7 @@ namespace AtlantSovt
                 }
                 catch (Exception ex)
                 {
+                    Log.Write(ex);
                     MessageBox.Show("Немає жодного перевізника");
                 }
             }
@@ -7286,9 +7288,10 @@ namespace AtlantSovt
                             transporterCountryAndVehicleSelectForm = null;
                         }
                     }
-                    catch (Exception ec)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show(ec.Message);         
+                        Log.Write(ex);
+                        MessageBox.Show(ex.Message);         
                     }
 
                 }
@@ -7805,9 +7808,10 @@ namespace AtlantSovt
                             MessageBox.Show("Перевізник успішно видалений");
                             transporterDeleteComboBox.Items.Remove(transporterDeleteComboBox.SelectedItem);
                         }
-                        catch (Exception e)
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Помилка!" + Environment.NewLine + e);
+                            Log.Write(ex);
+                            MessageBox.Show("Помилка!" + Environment.NewLine + ex);
                         }
                     }
                 }

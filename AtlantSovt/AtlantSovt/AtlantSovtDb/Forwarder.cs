@@ -36,9 +36,6 @@ namespace AtlantSovt.AtlantSovtDb
 
         public string Comment { get; set; }
 
-        [Column(TypeName = "image")]
-        public byte[] image { get; set; }
-
         public virtual TaxPayerStatu TaxPayerStatu { get; set; }
 
         public virtual WorkDocument WorkDocument { get; set; }
@@ -48,6 +45,8 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual ICollection<ForwarderContact> ForwarderContacts { get; set; }
 
         public virtual ICollection<ForwarderOrder> ForwarderOrders { get; set; }
+
+        public virtual ForwarderStamp ForwarderStamp { get; set; }
 
         public virtual ICollection<TransporterForwarderContract> TransporterForwarderContracts { get; set; }
     }

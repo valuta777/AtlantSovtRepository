@@ -220,7 +220,7 @@ namespace AtlantSovt
                         secondForwarderWorkDocument == "" || secondForwarderTaxPayerStatus == "" ||
                         secondForwarderBankDetailsBankName == "" || secondForwarderBankDetailsAccountNumber == "" || secondForwarderBankDetailsCertificateNumber == "" || secondForwarderBankDetailsCertificateSerial == "" ||
                         secondForwarderBankDetailsEDRPOU == "" || secondForwarderBankDetailsIBAN == "" ||
-                        secondForwarderBankDetailsIPN == "" || secondForwarderBankDetailsMFO == "" || secondForwarderBankDetailsSWIFT == "" || forwarderDocument.image == null)
+                        secondForwarderBankDetailsIPN == "" || secondForwarderBankDetailsMFO == "" || secondForwarderBankDetailsSWIFT == "" || forwarderDocument.ForwarderStamp.Stamp == null)
                     {
                         check = true;
                         MessageBox.Show("Заповніть спочатку всі дані експедитора");
@@ -495,8 +495,9 @@ namespace AtlantSovt
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
+                Log.Write(ex);
                 contractShowOpenDocButton.Enabled = false;
                 contractShowDeleteContractButton.Enabled = false;
                 MessageBox.Show("Немає жодного договору");
@@ -646,7 +647,7 @@ namespace AtlantSovt
                     ReplaseWordStub("{TransporterBankName}", transporterBankDetailsBankName, wordDocument);
                     ReplaseWordStub("{TransporterMFO}", transporterBankDetailsMFO, wordDocument);
 
-                    if (forwarderDocument.image != null)
+                    if (forwarderDocument.ForwarderStamp.Stamp != null)
                     {
                         AddStamp(wordDocument, UploadForwarderStapm(forwarderDocument), "{Stamp1}");
                         if (contract.Language == 2 || contract.Language == 3)
@@ -836,7 +837,7 @@ namespace AtlantSovt
                         ReplaseWordStub("{TransporterBankName}", transporterBankDetailsBankName, wordDocument);
                         ReplaseWordStub("{TransporterMFO}", transporterBankDetailsMFO, wordDocument);
 
-                        if (contract.Forwarder.image != null)
+                        if (contract.Forwarder.ForwarderStamp.Stamp != null)
                         {
                             AddStamp(wordDocument, UploadForwarderStapm(contract.Forwarder), "{Stamp1}");
                             if (contract.Language == 2 || contract.Language == 3)
@@ -879,7 +880,7 @@ namespace AtlantSovt
         string UploadForwarderStapm(Forwarder forwarder)
         {
             string path = "";
-            MemoryStream mStream = new MemoryStream(forwarder.image);
+            MemoryStream mStream = new MemoryStream(forwarder.ForwarderStamp.Stamp);
             
             Image stamp = Image.FromStream(mStream);
             path = (System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\" + forwarder.Id + ".png").Replace("\\bin\\Release", "");
