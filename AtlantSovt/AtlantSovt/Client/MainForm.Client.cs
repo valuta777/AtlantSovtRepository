@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -121,6 +122,7 @@ namespace AtlantSovt
                 }
                 catch (Exception ex)
                 {
+                    Log.Write(ex);
                     MessageBox.Show("Немає жодного клієнта");
                 }
             }
@@ -293,9 +295,10 @@ namespace AtlantSovt
                             addClientContactAddForm = null;
                         }
                     }
-                    catch (Exception ec)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show(ec.Message);         
+                        Log.Write(ex);
+                        MessageBox.Show(ex.Message);         
                     }
 
                 }
@@ -683,9 +686,10 @@ namespace AtlantSovt
                             MessageBox.Show("Клієнт успішно видалений");
                             deleteClientComboBox.Items.Remove(deleteClientComboBox.SelectedItem);
                         }
-                        catch(Exception e)
+                        catch(Exception ex)
                         {
-                            MessageBox.Show("Помилка!" + Environment.NewLine + e);
+                            Log.Write(ex);
+                            MessageBox.Show("Помилка!" + Environment.NewLine + ex.Message);
                         }
                     }
                 }

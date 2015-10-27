@@ -53,6 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Additions\Log.cs" />
+    <Compile Include="Additions\Mail.cs" />
     <Compile Include="AddTransporterVehicleForm.cs">
       <SubType>Form</SubType>
     </Compile>

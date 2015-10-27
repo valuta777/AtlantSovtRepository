@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -75,9 +76,10 @@ namespace AtlantSovt
                     MessageBox.Show("Заявку успішно створено");
                     BridgeAddes(New_Order);
                 }
-                catch (DbEntityValidationException e)
+                catch (DbEntityValidationException ex)
                 {
-                    MessageBox.Show("Помилка при створенні заявки\n" + e);
+                    Log.Write(ex);
+                    MessageBox.Show("Помилка при створенні заявки\n" + ex);
                 }
             }
         }
@@ -99,9 +101,10 @@ namespace AtlantSovt
                         db.SaveChanges();
                         MessageBox.Show("Успішно вибрано першу форму завантаження");
                     }
-                    catch (Exception e)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Помилка (1 форма завантаження)\n" + e.Message);
+                        Log.Write(ex);
+                        MessageBox.Show("Помилка (1 форма завантаження)\n" + ex.Message);
                     }
                 }
                 if (loadingForm2OrderAdd != null)
@@ -118,9 +121,10 @@ namespace AtlantSovt
                         db.SaveChanges();
                         MessageBox.Show("Успішно вибрано другу форму завантаження");
                     }
-                    catch (Exception e)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Помилка (2 форма завантаження)\n" + e.Message);
+                        Log.Write(ex);
+                        MessageBox.Show("Помилка (2 форма завантаження)\n" + ex.Message);
                     }
                 }
 
@@ -162,9 +166,10 @@ namespace AtlantSovt
 
                         MessageBox.Show("Успішно вибрано першого експедитора");
                     }
-                    catch (Exception e)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Помилка (1 експедитор)\n" + e.Message);
+                        Log.Write(ex);
+                        MessageBox.Show("Помилка (1 експедитор)\n" + ex.Message);
                     }
 
                 }
@@ -182,9 +187,10 @@ namespace AtlantSovt
                         db.SaveChanges();
                         MessageBox.Show("Успішно вибрано другого експедитора");
                     }
-                    catch (Exception e)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Помилка (2 експедитор)\n" + e.Message);
+                        Log.Write(ex);
+                        MessageBox.Show("Помилка (2 експедитор)\n" + ex.Message);
                     }
                 }
 
@@ -2251,9 +2257,10 @@ namespace AtlantSovt
                                 db.Orders.Find(updateOrder.Id).OrderLoadingForms.Remove(db.Orders.Find(updateOrder.Id).OrderLoadingForms.Where(lf1 => lf1.IsFirst == true).FirstOrDefault());
                             }
                         }
-                        catch (Exception e)
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Помилка (1 форма завантаження)\n" + e.Message);
+                            Log.Write(ex);
+                            MessageBox.Show("Помилка (1 форма завантаження)\n" + ex.Message);
                         }
 
                         try
@@ -2290,9 +2297,10 @@ namespace AtlantSovt
                                 db.Orders.Find(updateOrder.Id).OrderLoadingForms.Remove(db.Orders.Find(updateOrder.Id).OrderLoadingForms.Where(lf1 => lf1.IsFirst == false).FirstOrDefault());
                             }
                         }
-                        catch (Exception e)
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Помилка (2 форма завантаження)\n" + e.Message);
+                            Log.Write(ex);
+                            MessageBox.Show("Помилка (2 форма завантаження)\n" + ex.Message);
                         }
                         
                         try
@@ -2329,9 +2337,10 @@ namespace AtlantSovt
                                 db.Orders.Find(updateOrder.Id).ForwarderOrders.Remove(db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(f1 => f1.IsFirst == true).FirstOrDefault());
                             }
                         }
-                        catch (Exception e)
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Помилка (1 експедитор)\n" + e.Message);
+                            Log.Write(ex);
+                            MessageBox.Show("Помилка (1 експедитор)\n" + ex.Message);
                         }
 
                         try
@@ -2368,9 +2377,10 @@ namespace AtlantSovt
                                 db.Orders.Find(updateOrder.Id).ForwarderOrders.Remove(db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(f2 => f2.IsFirst == false).FirstOrDefault());
                             }
                         }
-                        catch (Exception e)
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Помилка (2 експедитор)\n" + e.Message);
+                            Log.Write(ex);
+                            MessageBox.Show("Помилка (2 експедитор)\n" + ex.Message);
                         }
                         if (IsModified)
                         {
@@ -2385,11 +2395,13 @@ namespace AtlantSovt
                     }
                     catch (DbEntityValidationException e)
                     {
+                        Log.Write(e);
                         MessageBox.Show("Помилка при зміні заявки\n" + e);
                     }
-                    catch (Exception e)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Помилка при зміні заявки\n" + e.Message);
+                        Log.Write(ex);
+                        MessageBox.Show("Помилка при зміні заявки\n" + ex.Message);
                     }
                 }
                 else

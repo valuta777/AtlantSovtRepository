@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,9 +45,10 @@ namespace AtlantSovt
                     db.SaveChanges();
                     MessageBox.Show("Контакт успішно доданий клієнту " + New_ClientContact.ClientId);
                 }
-                catch (Exception ec)
+                catch (Exception ex)
                 {
-                    MessageBox.Show(ec.Message);
+                    Log.Write(ex);
+                    MessageBox.Show(ex.Message);
                 }
 
             }

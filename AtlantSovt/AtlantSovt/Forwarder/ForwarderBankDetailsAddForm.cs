@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -80,9 +81,10 @@ namespace AtlantSovt
                     db.SaveChanges();
                     MessageBox.Show("Банківські данні успішно додані експедитору");
                 }
-                catch (Exception ec)
+                catch (Exception ex)
                 {
-                    MessageBox.Show(ec.Message);
+                    Log.Write(ex);
+                    MessageBox.Show(ex.Message);
 
                 }
             }

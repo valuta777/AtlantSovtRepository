@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -122,6 +123,7 @@ namespace AtlantSovt
                 }
                 catch (Exception ex)
                 {
+                    Log.Write(ex);
                     MessageBox.Show("Немає жодного експедитора");
                 }
             }
@@ -322,9 +324,10 @@ namespace AtlantSovt
                             addForwarderContactAddForm = null;
                         }
                     }
-                    catch (Exception fe)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show(fe.Message);
+                        Log.Write(ex);
+                        MessageBox.Show(ex.Message);
                     }
 
                 }
@@ -592,9 +595,10 @@ namespace AtlantSovt
                             MessageBox.Show("Експедитор успішно видалений");
                             forwarderDeleteComboBox.Items.Remove(forwarderDeleteComboBox.SelectedItem);
                         }
-                        catch (Exception e)
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Помилка!" + Environment.NewLine + e);
+                            Log.Write(ex);
+                            MessageBox.Show("Помилка!" + Environment.NewLine + ex);
                         }
                     }
                 }
