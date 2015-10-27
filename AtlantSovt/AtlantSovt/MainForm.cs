@@ -122,7 +122,6 @@ namespace AtlantSovt
             }
             catch(ThreadAbortException ex)
             {
-                Log.Write(ex);
                 return;
             }
         }

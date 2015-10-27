@@ -9,6 +9,7 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("ForwarderStamp")]
     public partial class ForwarderStamp
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
 
         [Column(TypeName = "image")]

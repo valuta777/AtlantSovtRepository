@@ -119,7 +119,8 @@ namespace AtlantSovt.AtlantSovtDb
 
             modelBuilder.Entity<Forwarder>()
                 .HasOptional(e => e.ForwarderStamp)
-                .WithRequired(e => e.Forwarder);
+                .WithRequired(e => e.Forwarder)
+                .WillCascadeOnDelete();
 
             modelBuilder.Entity<LoadingForm>()
                 .HasMany(e => e.OrderLoadingForms)
