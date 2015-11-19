@@ -20,6 +20,7 @@ namespace AtlantSovt
     {
         Transporter transporterDocument;
         Forwarder forwarderDocument;
+        ForwarderStamp forwarderStamp;
         DocumentCounter documentCount;
         TransporterForwarderContract contract;
 
@@ -48,6 +49,7 @@ namespace AtlantSovt
                 string comboBoxSelectedId = selectedNameAndDirector[1];
                 long id = Convert.ToInt64(comboBoxSelectedId);
                 forwarderDocument = db.Forwarders.Find(id);
+                forwarderStamp = forwarderDocument.ForwarderStamp;
             }
         }
 
@@ -647,7 +649,8 @@ namespace AtlantSovt
                     ReplaseWordStub("{TransporterBankName}", transporterBankDetailsBankName, wordDocument);
                     ReplaseWordStub("{TransporterMFO}", transporterBankDetailsMFO, wordDocument);
 
-                    if (forwarderDocument.ForwarderStamp.Stamp != null)
+
+                    if (forwarderStamp.Stamp != null)
                     {
                         AddStamp(wordDocument, UploadForwarderStapm(forwarderDocument), "{Stamp1}");
                         if (contract.Language == 2 || contract.Language == 3)

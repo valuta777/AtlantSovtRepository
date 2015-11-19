@@ -130,7 +130,7 @@ namespace AtlantSovt
                     transporterShowBankDetailsDataGridView.Columns[1].HeaderText = "МФО";
                     transporterShowBankDetailsDataGridView.Columns[2].HeaderText = "Номер рахунку";
                     transporterShowBankDetailsDataGridView.Columns[3].HeaderText = "ЕДРПОУ";
-                    transporterShowBankDetailsDataGridView.Columns[4].HeaderText = "IPN";
+                    transporterShowBankDetailsDataGridView.Columns[4].HeaderText = "IПН";
                     transporterShowBankDetailsDataGridView.Columns[5].HeaderText = "Серія свідоцтва";
                     transporterShowBankDetailsDataGridView.Columns[6].HeaderText = "Номер свідоцтва";
                     transporterShowBankDetailsDataGridView.Columns[7].HeaderText = "SWIFT";

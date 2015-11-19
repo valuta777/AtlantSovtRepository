@@ -83,9 +83,9 @@
             this.transporterShowFiltersSelectADCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transporterShowFiltersSelectADCheckBox.Location = new System.Drawing.Point(725, 13);
             this.transporterShowFiltersSelectADCheckBox.Name = "transporterShowFiltersSelectADCheckBox";
-            this.transporterShowFiltersSelectADCheckBox.Size = new System.Drawing.Size(50, 25);
+            this.transporterShowFiltersSelectADCheckBox.Size = new System.Drawing.Size(60, 25);
             this.transporterShowFiltersSelectADCheckBox.TabIndex = 4;
-            this.transporterShowFiltersSelectADCheckBox.Text = "АД";
+            this.transporterShowFiltersSelectADCheckBox.Text = "ADR";
             this.transporterShowFiltersSelectADCheckBox.ThreeState = true;
             this.transporterShowFiltersSelectADCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -125,9 +125,9 @@
             this.transporterShowFiltersSelectCMRCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transporterShowFiltersSelectCMRCheckBox.Location = new System.Drawing.Point(310, 13);
             this.transporterShowFiltersSelectCMRCheckBox.Name = "transporterShowFiltersSelectCMRCheckBox";
-            this.transporterShowFiltersSelectCMRCheckBox.Size = new System.Drawing.Size(62, 25);
+            this.transporterShowFiltersSelectCMRCheckBox.Size = new System.Drawing.Size(63, 25);
             this.transporterShowFiltersSelectCMRCheckBox.TabIndex = 7;
-            this.transporterShowFiltersSelectCMRCheckBox.Text = "СМР";
+            this.transporterShowFiltersSelectCMRCheckBox.Text = "CMR";
             this.transporterShowFiltersSelectCMRCheckBox.ThreeState = true;
             this.transporterShowFiltersSelectCMRCheckBox.UseVisualStyleBackColor = true;
             // 

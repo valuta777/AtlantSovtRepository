@@ -1390,7 +1390,7 @@
             this.geographyAddressClientLabel.Name = "geographyAddressClientLabel";
             this.geographyAddressClientLabel.Size = new System.Drawing.Size(128, 21);
             this.geographyAddressClientLabel.TabIndex = 4;
-            this.geographyAddressClientLabel.Text = "Поштова адреса";
+            this.geographyAddressClientLabel.Text = "Юридична адреса";
             // 
             // physicalAddressClientLabel
             // 
@@ -1790,7 +1790,7 @@
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(128, 21);
             this.label23.TabIndex = 35;
-            this.label23.Text = "Поштова адреса";
+            this.label23.Text = "Юридична адреса";
             // 
             // label24
             // 
@@ -2344,7 +2344,7 @@
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(128, 21);
             this.label47.TabIndex = 35;
-            this.label47.Text = "Поштова адреса";
+            this.label47.Text = "Юридична адреса";
             // 
             // label48
             // 
@@ -2724,7 +2724,7 @@
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(128, 21);
             this.label62.TabIndex = 69;
-            this.label62.Text = "Поштова адреса";
+            this.label62.Text = "Юридична адреса";
             // 
             // label63
             // 
@@ -3120,7 +3120,7 @@
             this.transporterAddFiltersSelectADCheckBox.Name = "transporterAddFiltersSelectADCheckBox";
             this.transporterAddFiltersSelectADCheckBox.Size = new System.Drawing.Size(50, 25);
             this.transporterAddFiltersSelectADCheckBox.TabIndex = 6;
-            this.transporterAddFiltersSelectADCheckBox.Text = "АД";
+            this.transporterAddFiltersSelectADCheckBox.Text = "ADR";
             this.transporterAddFiltersSelectADCheckBox.ThreeState = true;
             this.transporterAddFiltersSelectADCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -3162,7 +3162,7 @@
             this.transporterAddFiltersSelectCMRCheckBox.Name = "transporterAddFiltersSelectCMRCheckBox";
             this.transporterAddFiltersSelectCMRCheckBox.Size = new System.Drawing.Size(62, 25);
             this.transporterAddFiltersSelectCMRCheckBox.TabIndex = 3;
-            this.transporterAddFiltersSelectCMRCheckBox.Text = "СМР";
+            this.transporterAddFiltersSelectCMRCheckBox.Text = "CMR";
             this.transporterAddFiltersSelectCMRCheckBox.ThreeState = true;
             this.transporterAddFiltersSelectCMRCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -3462,7 +3462,7 @@
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(128, 21);
             this.label75.TabIndex = 65;
-            this.label75.Text = "Поштова адреса";
+            this.label75.Text = "Юридична адреса";
             // 
             // label76
             // 
@@ -3607,7 +3607,7 @@
             this.transporterUpdateFiltersSelectADCheckBox.Name = "transporterUpdateFiltersSelectADCheckBox";
             this.transporterUpdateFiltersSelectADCheckBox.Size = new System.Drawing.Size(50, 25);
             this.transporterUpdateFiltersSelectADCheckBox.TabIndex = 6;
-            this.transporterUpdateFiltersSelectADCheckBox.Text = "АД";
+            this.transporterUpdateFiltersSelectADCheckBox.Text = "ADR";
             this.transporterUpdateFiltersSelectADCheckBox.ThreeState = true;
             this.transporterUpdateFiltersSelectADCheckBox.UseVisualStyleBackColor = true;
             this.transporterUpdateFiltersSelectADCheckBox.CheckStateChanged += new System.EventHandler(this.transporterUpdateFiltersSelectADCheckBox_CheckStateChanged);
@@ -3652,7 +3652,7 @@
             this.transporterUpdateFiltersSelectCMRCheckBox.Name = "transporterUpdateFiltersSelectCMRCheckBox";
             this.transporterUpdateFiltersSelectCMRCheckBox.Size = new System.Drawing.Size(62, 25);
             this.transporterUpdateFiltersSelectCMRCheckBox.TabIndex = 3;
-            this.transporterUpdateFiltersSelectCMRCheckBox.Text = "СМР";
+            this.transporterUpdateFiltersSelectCMRCheckBox.Text = "CMR";
             this.transporterUpdateFiltersSelectCMRCheckBox.ThreeState = true;
             this.transporterUpdateFiltersSelectCMRCheckBox.UseVisualStyleBackColor = true;
             this.transporterUpdateFiltersSelectCMRCheckBox.CheckStateChanged += new System.EventHandler(this.transporterUpdateFiltersSelectCMRCheckBox_CheckStateChanged);
@@ -4010,7 +4010,7 @@
             this.label95.Name = "label95";
             this.label95.Size = new System.Drawing.Size(128, 21);
             this.label95.TabIndex = 108;
-            this.label95.Text = "Поштова адреса";
+            this.label95.Text = "Юридична адреса";
             // 
             // label96
             // 
@@ -5234,7 +5234,7 @@
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(79, 21);
             this.label79.TabIndex = 131;
-            this.label79.Text = "ТIR/ CMP ";
+            this.label79.Text = "TIR/ CMR ";
             // 
             // label28
             // 
@@ -5246,7 +5246,7 @@
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(79, 21);
             this.label28.TabIndex = 139;
-            this.label28.Text = "Уляна/Іра";
+            this.label28.Text = "Працівник";
             // 
             // OrderAddYOrUComboBox
             // 
@@ -6710,7 +6710,7 @@
             this.OrderUpdateLabel14.Name = "OrderUpdateLabel14";
             this.OrderUpdateLabel14.Size = new System.Drawing.Size(79, 21);
             this.OrderUpdateLabel14.TabIndex = 131;
-            this.OrderUpdateLabel14.Text = "ТIR/ CMP ";
+            this.OrderUpdateLabel14.Text = "TIR/ CMR ";
             // 
             // OrderUpdateLabel15
             // 
@@ -6722,7 +6722,7 @@
             this.OrderUpdateLabel15.Name = "OrderUpdateLabel15";
             this.OrderUpdateLabel15.Size = new System.Drawing.Size(79, 21);
             this.OrderUpdateLabel15.TabIndex = 139;
-            this.OrderUpdateLabel15.Text = "Уляна/Іра";
+            this.OrderUpdateLabel15.Text = "Працівник";
             // 
             // OrderUpdateYOrUComboBox
             // 

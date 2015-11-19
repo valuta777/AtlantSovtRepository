@@ -106,15 +106,13 @@ R:\Робота\29.09.15\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\
 R:\Робота\29.09.15\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.TransporterShowAdditionalDetailsForm.resources
 R:\Робота\29.09.15\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.TransporterShowFiltrationForm.resources
 R:\Робота\29.09.15\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.csproj.GenerateResource.Cache
-E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\AtlantSovt.exe.config
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\AtlantSovt.exe
-E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\AtlantSovt.pdb
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\EntityFramework.dll
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\EntityFramework.SqlServer.dll
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\AtlantSovt.exe.config
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\EntityFramework.xml
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\EntityFramework.SqlServer.xml
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\ru\EntityFramework.resources.dll
-E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.csprojResolveAssemblyReference.cache
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.csproj.ResolveComReference.cache
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.AddTransporterVehicleForm.resources
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.AddCountryForm.resources
@@ -163,3 +161,5 @@ E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.Transporter
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.csproj.GenerateResource.Cache
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.exe
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.pdb
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\AtlantSovt.pdb
+E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.csprojResolveAssemblyReference.cache
