@@ -355,6 +355,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ClientBankDetailsAddForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додавання банківських реквізитів";
             this.ResumeLayout(false);
             this.PerformLayout();

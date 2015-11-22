@@ -23,48 +23,10 @@ namespace AtlantSovt
 
         int TrackingClikedId = 0;
 
-        void ShowTracking()
-        {
-            using (var db = new AtlantSovtContext())
-            {
-                var query =
-                from o in db.Orders
-                orderby o.Id
-                select
-                new
-                {
-                    Id = o.Id,
-                    OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
-                    YorU = o.YorU,
-                    ClientName = o.Client.Name,
-                    TransporterName = o.Transporter.FullName,
-                    DownloadDate = o.DownloadDate,
-                    State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
-                    Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
-
-                };
-
-                trackingShowDataGridView.DataSource = query.ToList();
-                trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
-                trackingShowDataGridView.Columns[2].HeaderText = "У / І";
-                trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
-                trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
-                trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
-                trackingShowDataGridView.Columns[6].HeaderText = "Стан";
-                trackingShowDataGridView.Columns[7].HeaderText = "Мова";
-
-
-            }
-            trackingShowDataGridView.Update();
-            trackingShowDataGridView.ClearSelection();
-        }
-
         public void ShowTrackingInfo()
         {
             using (var db = new AtlantSovtContext())
             {
-
                 try
                 {
                     TrackingClikedId = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
@@ -108,9 +70,9 @@ namespace AtlantSovt
                     trackingShowCommentDataGridView.Columns[1].Width = 150;
                     trackingShowCommentDataGridView.Columns[2].Width = 150;
 
-                    var query3 =
-                  from add in db.OrderDownloadAddresses
-                  where add.OrderId == TrackingClikedId
+                  var query3 =
+                    from add in db.OrderDownloadAddresses
+                    where add.OrderId == TrackingClikedId
                   select new
                   {
                       country = add.DownloadAddress.Country.Name,
@@ -155,57 +117,15 @@ namespace AtlantSovt
             trackingShowAddNoteRichTextBox.Visible = true;
         }
 
-        void ShowTrackingCloseOrder()
-        {
-            using (var db = new AtlantSovtContext())
-            {
-                try
-                {
-                    Order order;
-                    TrackingClikedId = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
-                    order = db.Orders.Find(TrackingClikedId);
-
-                    if (order.State == true)
-                    {
-                        order.State = false;
-                        db.Entry(order).State = EntityState.Modified;
-                        db.SaveChanges();
-                        ShowTrackingSearch();
-                    }
-                    else if (order.State == false)
-                    {
-                        MessageBox.Show("Заявка вже закрита");
-                    }
-                    else if (!order.State.HasValue)
-                    {
-                        if (MessageBox.Show("Заявка ще не створена, все рівно закрити?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                        {
-                            order.State = false;
-                            db.Entry(order).State = EntityState.Modified;
-                            db.SaveChanges();
-                            ShowTrackingSearch();
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Log.Write(ex);
-                    MessageBox.Show("Немає жодної заявки");
-                }
-            }
-            trackingShowDataGridView.Update();
-
-        }
-
-        void ShowTrackingSearch()
+        public void ShowTrackingSearch()
         {
             trackingShowTransporterContactsDataGridView.Update();
 
-            trackingShowTransporterContactsDataGridView.Visible = false;
-            trackingShowCommentDataGridView.Visible = false;
-            trackingShowUploadAddressDataGridView.Visible = false;
-            trackingShowDownloadAddressDataGridView.Visible = false;
-            trackingShowAddNoteRichTextBox.Visible = false;
+            trackingShowTransporterContactsDataGridView.DataSource = null;
+            trackingShowCommentDataGridView.DataSource = null;
+            trackingShowUploadAddressDataGridView.DataSource = null;
+            trackingShowDownloadAddressDataGridView.DataSource = null;
+            trackingShowAddNoteRichTextBox.Clear();
 
 
             var text = trackingShowSearchTextBox.Text;
@@ -216,32 +136,32 @@ namespace AtlantSovt
                 if (showTrackingOnlyActive.Checked != true && isDatePickerEnabled != true && trackingShowSearchTextBox.Text == "")// 0 0 0
                 {
                     var queryTextAndDate =
-                   from o in db.Orders
-                   orderby o.Id
-                   select
-                   new
-                   {
-                       Id = o.Id,
-                       OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
-                       YorU = o.YorU,
-                       ClientName = o.Client.Name,
-                       TransporterName = o.Transporter.FullName,
-                       DownloadDate = o.DownloadDate,
-                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
-                       Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
+                    from o in db.Orders
+                    orderby o.Id
+                    select
+                    new
+                    {
+                        Id = o.Id,
+                        OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
+                        YorU = o.YorU,
+                        ClientName = o.Client.Name,
+                        TransporterName = o.Transporter.FullName,
+                        DownloadDate = o.DownloadDate,
+                        State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
+                        CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
+                        Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
 
-                   };
-
+                    };
                     trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
                     trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
                     trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
-                    trackingShowDataGridView.Columns[2].HeaderText = "У / І";
+                    trackingShowDataGridView.Columns[2].HeaderText = "Працівник";
                     trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
                     trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
                     trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
                     trackingShowDataGridView.Columns[6].HeaderText = "Стан";
-                    trackingShowDataGridView.Columns[7].HeaderText = "Мова";
-
+                    trackingShowDataGridView.Columns[7].HeaderText = "Дата закриття";
+                    trackingShowDataGridView.Columns[8].HeaderText = "Мова";
                 }
                 else if (showTrackingOnlyActive.Checked != true && isDatePickerEnabled != true && trackingShowSearchTextBox.Text != "") // 0 0 1
                 {
@@ -251,29 +171,29 @@ namespace AtlantSovt
                          o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text)))
                    orderby o.Id
                    select
-                   new
-                   {
-                       Id = o.Id,
-                       OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
-                       YorU = o.YorU,
-                       ClientName = o.Client.Name,
-                       TransporterName = o.Transporter.FullName,
-                       DownloadDate = o.DownloadDate,
-                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
-                       Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
+                    new
+                    {
+                        Id = o.Id,
+                        OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
+                        YorU = o.YorU,
+                        ClientName = o.Client.Name,
+                        TransporterName = o.Transporter.FullName,
+                        DownloadDate = o.DownloadDate,
+                        State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
+                        CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
+                        Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
 
-
-                   };
-
+                    };
                     trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
                     trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
                     trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
-                    trackingShowDataGridView.Columns[2].HeaderText = "У / І";
+                    trackingShowDataGridView.Columns[2].HeaderText = "Працівник";
                     trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
                     trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
                     trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
                     trackingShowDataGridView.Columns[6].HeaderText = "Стан";
-                    trackingShowDataGridView.Columns[7].HeaderText = "Мова";
+                    trackingShowDataGridView.Columns[7].HeaderText = "Дата закриття";
+                    trackingShowDataGridView.Columns[8].HeaderText = "Мова";
 
                 }
                 else if (showTrackingOnlyActive.Checked != true && isDatePickerEnabled == true && trackingShowSearchTextBox.Text == "") // 0 1 0
@@ -292,20 +212,20 @@ namespace AtlantSovt
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = o.DownloadDate,
                        State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
+                       CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                        Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
 
-
                    };
-
                     trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
                     trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
                     trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
-                    trackingShowDataGridView.Columns[2].HeaderText = "У / І";
+                    trackingShowDataGridView.Columns[2].HeaderText = "Працівник";
                     trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
                     trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
                     trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
                     trackingShowDataGridView.Columns[6].HeaderText = "Стан";
-                    trackingShowDataGridView.Columns[7].HeaderText = "Мова";
+                    trackingShowDataGridView.Columns[7].HeaderText = "Дата закриття";
+                    trackingShowDataGridView.Columns[8].HeaderText = "Мова";
 
                 }
                 else if (showTrackingOnlyActive.Checked != true && isDatePickerEnabled == true && trackingShowSearchTextBox.Text != "")// 0 1 1
@@ -325,20 +245,20 @@ namespace AtlantSovt
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = o.DownloadDate,
                        State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
+                       CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                        Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
 
-
                    };
-
                     trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
                     trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
                     trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
-                    trackingShowDataGridView.Columns[2].HeaderText = "У / І";
+                    trackingShowDataGridView.Columns[2].HeaderText = "Працівник";
                     trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
                     trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
                     trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
                     trackingShowDataGridView.Columns[6].HeaderText = "Стан";
-                    trackingShowDataGridView.Columns[7].HeaderText = "Мова";
+                    trackingShowDataGridView.Columns[7].HeaderText = "Дата закриття";
+                    trackingShowDataGridView.Columns[8].HeaderText = "Мова";
 
                 }
                 else if (showTrackingOnlyActive.Checked == true && isDatePickerEnabled != true && trackingShowSearchTextBox.Text == "") // 1 0 0
@@ -357,20 +277,20 @@ namespace AtlantSovt
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = o.DownloadDate,
                        State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
+                       CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                        Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
 
-
                    };
-
                     trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
                     trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
                     trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
-                    trackingShowDataGridView.Columns[2].HeaderText = "У / І";
+                    trackingShowDataGridView.Columns[2].HeaderText = "Працівник";
                     trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
                     trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
                     trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
                     trackingShowDataGridView.Columns[6].HeaderText = "Стан";
-                    trackingShowDataGridView.Columns[7].HeaderText = "Мова";
+                    trackingShowDataGridView.Columns[7].HeaderText = "Дата закриття";
+                    trackingShowDataGridView.Columns[8].HeaderText = "Мова";
 
                 }
                 else if (showTrackingOnlyActive.Checked == true && isDatePickerEnabled != true && trackingShowSearchTextBox.Text != "") // 1 0 1
@@ -390,21 +310,20 @@ namespace AtlantSovt
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = o.DownloadDate,
                        State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
+                       CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                        Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
 
-
                    };
-
                     trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
                     trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
                     trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
-                    trackingShowDataGridView.Columns[2].HeaderText = "У / І";
+                    trackingShowDataGridView.Columns[2].HeaderText = "Працівник";
                     trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
                     trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
                     trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
                     trackingShowDataGridView.Columns[6].HeaderText = "Стан";
-                    trackingShowDataGridView.Columns[7].HeaderText = "Мова";
-
+                    trackingShowDataGridView.Columns[7].HeaderText = "Дата закриття";
+                    trackingShowDataGridView.Columns[8].HeaderText = "Мова";
                 }
                 else if (showTrackingOnlyActive.Checked == true && isDatePickerEnabled == true && trackingShowSearchTextBox.Text == "")// 1 1 0
                 {
@@ -422,20 +341,20 @@ namespace AtlantSovt
                       TransporterName = o.Transporter.FullName,
                       DownloadDate = o.DownloadDate,
                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
+                      CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                       Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
 
-
                   };
-
                     trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
                     trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
                     trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
-                    trackingShowDataGridView.Columns[2].HeaderText = "У / І";
+                    trackingShowDataGridView.Columns[2].HeaderText = "Працівник";
                     trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
                     trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
                     trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
                     trackingShowDataGridView.Columns[6].HeaderText = "Стан";
-                    trackingShowDataGridView.Columns[7].HeaderText = "Мова";
+                    trackingShowDataGridView.Columns[7].HeaderText = "Дата закриття";
+                    trackingShowDataGridView.Columns[8].HeaderText = "Мова";
 
                 }
                 else if (showTrackingOnlyActive.Checked == true && isDatePickerEnabled == true && trackingShowSearchTextBox.Text != "")// 1 1 1
@@ -455,24 +374,104 @@ namespace AtlantSovt
                       TransporterName = o.Transporter.FullName,
                       DownloadDate = o.DownloadDate,
                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
+                      CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                       Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
 
-
                   };
-
                     trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
                     trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
                     trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
-                    trackingShowDataGridView.Columns[2].HeaderText = "У / І";
+                    trackingShowDataGridView.Columns[2].HeaderText = "Працівник";
                     trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
                     trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
                     trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
                     trackingShowDataGridView.Columns[6].HeaderText = "Стан";
-                    trackingShowDataGridView.Columns[7].HeaderText = "Мова";
+                    trackingShowDataGridView.Columns[7].HeaderText = "Дата закриття";
+                    trackingShowDataGridView.Columns[8].HeaderText = "Мова";
 
+                } trackingShowDataGridView.Update();
+            }
+        }
+
+        void ShowTracking()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query =
+                from o in db.Orders
+                orderby o.Id
+                select
+                new
+                {
+                    Id = o.Id,
+                    OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
+                    YorU = o.YorU,
+                    ClientName = o.Client.Name,
+                    TransporterName = o.Transporter.FullName,
+                    DownloadDate = o.DownloadDate,
+                    State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
+                    CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
+                    Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
+
+                };
+                trackingShowDataGridView.DataSource = query.ToList();
+                trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
+                trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
+                trackingShowDataGridView.Columns[2].HeaderText = "Працівник";
+                trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
+                trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
+                trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
+                trackingShowDataGridView.Columns[6].HeaderText = "Стан";
+                trackingShowDataGridView.Columns[7].HeaderText = "Дата закриття";
+                trackingShowDataGridView.Columns[8].HeaderText = "Мова";
+
+            }
+            trackingShowDataGridView.Update();
+            trackingShowDataGridView.ClearSelection();
+        }
+
+        void ShowTrackingCloseOrder()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                try
+                {
+                    Order order;
+                    TrackingClikedId = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+                    order = db.Orders.Find(TrackingClikedId);
+
+                    if (order.State == true)
+                    {
+                        AddTrackingCloseDateForm closeDateForm = new AddTrackingCloseDateForm(this);
+                        closeDateForm.Id = TrackingClikedId;
+                        closeDateForm.Show();
+                    }
+                    else if (order.State == false)
+                    {
+                        if (MessageBox.Show("Заявка вже закрита, змінити дату закриття?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            AddTrackingCloseDateForm closeDateForm = new AddTrackingCloseDateForm(this);
+                            closeDateForm.Id = TrackingClikedId;
+                            closeDateForm.Show();
+                        }
+                    }
+                    else if (!order.State.HasValue)
+                    {
+                        if (MessageBox.Show("Заявка ще не створена, все рівно закрити?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            AddTrackingCloseDateForm closeDateForm = new AddTrackingCloseDateForm(this);
+                            closeDateForm.Id = TrackingClikedId;
+                            closeDateForm.Show();
+                        }
+                    }
                 }
-
-            } trackingShowDataGridView.Update();
+                catch (Exception ex)
+                {
+                    Log.Write(ex);
+                    MessageBox.Show("Немає жодної заявки");
+                }
+            }
+            trackingShowDataGridView.Update();
 
         }
 

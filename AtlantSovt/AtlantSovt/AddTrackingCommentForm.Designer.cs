@@ -63,7 +63,12 @@
             this.Controls.Add(this.addTrackingCommentTextBox);
             this.Controls.Add(this.addCommentButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddTrackingCommentForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додавання коментарів";
             this.ResumeLayout(false);
 

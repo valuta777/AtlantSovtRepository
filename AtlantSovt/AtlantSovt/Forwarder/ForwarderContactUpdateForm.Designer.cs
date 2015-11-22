@@ -172,6 +172,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ForwarderContactUpdateForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Зміна контакту";
             this.ResumeLayout(false);
             this.PerformLayout();

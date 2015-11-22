@@ -62,7 +62,10 @@
             this.Controls.Add(this.addOrderNoteTextBox);
             this.Controls.Add(this.addOrderNoteButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddOrderNoteForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додавання примітки";
             this.Shown += new System.EventHandler(this.AddOrderNoteForm_Shown);
             this.ResumeLayout(false);

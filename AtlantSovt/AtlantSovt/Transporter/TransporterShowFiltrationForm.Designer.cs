@@ -188,6 +188,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TransporterShowFiltrationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Фільтрація";
             this.transporterShowFilterPanel.ResumeLayout(false);
             this.transporterShowFilterPanel.PerformLayout();

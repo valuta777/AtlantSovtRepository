@@ -55,6 +55,12 @@
   <ItemGroup>
     <Compile Include="Additions\Log.cs" />
     <Compile Include="Additions\Mail.cs" />
+    <Compile Include="AddTrackingCloseDateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTrackingCloseDateForm.Designer.cs">
+      <DependentUpon>AddTrackingCloseDateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddTransporterVehicleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,6 +380,9 @@
     <Compile Include="Transporter\TransporterShowFiltrationForm.Designer.cs">
       <DependentUpon>TransporterShowFiltrationForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddTrackingCloseDateForm.resx">
+      <DependentUpon>AddTrackingCloseDateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddTransporterVehicleForm.resx">
       <DependentUpon>AddTransporterVehicleForm.cs</DependentUpon>
     </EmbeddedResource>
