@@ -1801,6 +1801,11 @@ namespace AtlantSovt
             OpenWordDoc();
         }
 
+        private void contractStateRadioButton_Click(object sender, EventArgs e)
+        {
+            ContractChangeState(sender as RadioButton);
+        }
+
         #endregion
 
         //Delete

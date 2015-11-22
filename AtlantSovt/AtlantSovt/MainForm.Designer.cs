@@ -502,6 +502,10 @@
             this.OrderUpdateForwarder2SelectComboBox = new System.Windows.Forms.ComboBox();
             this.OrderUpdateForwarder1SelectComboBox = new System.Windows.Forms.ComboBox();
             this.showContractsPage = new System.Windows.Forms.TabPage();
+            this.originalContractStateRadioButton = new System.Windows.Forms.RadioButton();
+            this.faxContractStateRadioButton = new System.Windows.Forms.RadioButton();
+            this.notSelectedContractStateRadioButton = new System.Windows.Forms.RadioButton();
+            this.showContractStateLabel = new System.Windows.Forms.Label();
             this.contractShowDeleteContractButton = new System.Windows.Forms.Button();
             this.contractShowOpenDocButton = new System.Windows.Forms.Button();
             this.label37ShowContract = new System.Windows.Forms.Label();
@@ -1388,9 +1392,9 @@
             this.geographyAddressClientLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.geographyAddressClientLabel.Location = new System.Drawing.Point(10, 65);
             this.geographyAddressClientLabel.Name = "geographyAddressClientLabel";
-            this.geographyAddressClientLabel.Size = new System.Drawing.Size(128, 21);
+            this.geographyAddressClientLabel.Size = new System.Drawing.Size(141, 21);
             this.geographyAddressClientLabel.TabIndex = 4;
-            this.geographyAddressClientLabel.Text = "Поштова адреса";
+            this.geographyAddressClientLabel.Text = "Юридична адреса";
             // 
             // physicalAddressClientLabel
             // 
@@ -1788,9 +1792,9 @@
             this.label23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label23.Location = new System.Drawing.Point(10, 115);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(128, 21);
+            this.label23.Size = new System.Drawing.Size(141, 21);
             this.label23.TabIndex = 35;
-            this.label23.Text = "Поштова адреса";
+            this.label23.Text = "Юридична адреса";
             // 
             // label24
             // 
@@ -2342,9 +2346,9 @@
             this.label47.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label47.Location = new System.Drawing.Point(10, 70);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(128, 21);
+            this.label47.Size = new System.Drawing.Size(141, 21);
             this.label47.TabIndex = 35;
-            this.label47.Text = "Поштова адреса";
+            this.label47.Text = "Юридична адреса";
             // 
             // label48
             // 
@@ -2722,9 +2726,9 @@
             this.label62.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label62.Location = new System.Drawing.Point(10, 115);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(128, 21);
+            this.label62.Size = new System.Drawing.Size(141, 21);
             this.label62.TabIndex = 69;
-            this.label62.Text = "Поштова адреса";
+            this.label62.Text = "Юридична адреса";
             // 
             // label63
             // 
@@ -3118,9 +3122,9 @@
             this.transporterAddFiltersSelectADCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transporterAddFiltersSelectADCheckBox.Location = new System.Drawing.Point(670, 3);
             this.transporterAddFiltersSelectADCheckBox.Name = "transporterAddFiltersSelectADCheckBox";
-            this.transporterAddFiltersSelectADCheckBox.Size = new System.Drawing.Size(50, 25);
+            this.transporterAddFiltersSelectADCheckBox.Size = new System.Drawing.Size(60, 25);
             this.transporterAddFiltersSelectADCheckBox.TabIndex = 6;
-            this.transporterAddFiltersSelectADCheckBox.Text = "АД";
+            this.transporterAddFiltersSelectADCheckBox.Text = "ADR";
             this.transporterAddFiltersSelectADCheckBox.ThreeState = true;
             this.transporterAddFiltersSelectADCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -3160,9 +3164,9 @@
             this.transporterAddFiltersSelectCMRCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transporterAddFiltersSelectCMRCheckBox.Location = new System.Drawing.Point(288, 3);
             this.transporterAddFiltersSelectCMRCheckBox.Name = "transporterAddFiltersSelectCMRCheckBox";
-            this.transporterAddFiltersSelectCMRCheckBox.Size = new System.Drawing.Size(62, 25);
+            this.transporterAddFiltersSelectCMRCheckBox.Size = new System.Drawing.Size(63, 25);
             this.transporterAddFiltersSelectCMRCheckBox.TabIndex = 3;
-            this.transporterAddFiltersSelectCMRCheckBox.Text = "СМР";
+            this.transporterAddFiltersSelectCMRCheckBox.Text = "CMR";
             this.transporterAddFiltersSelectCMRCheckBox.ThreeState = true;
             this.transporterAddFiltersSelectCMRCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -3460,9 +3464,9 @@
             this.label75.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label75.Location = new System.Drawing.Point(10, 65);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(128, 21);
+            this.label75.Size = new System.Drawing.Size(141, 21);
             this.label75.TabIndex = 65;
-            this.label75.Text = "Поштова адреса";
+            this.label75.Text = "Юридична адреса";
             // 
             // label76
             // 
@@ -3605,9 +3609,9 @@
             this.transporterUpdateFiltersSelectADCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transporterUpdateFiltersSelectADCheckBox.Location = new System.Drawing.Point(670, 3);
             this.transporterUpdateFiltersSelectADCheckBox.Name = "transporterUpdateFiltersSelectADCheckBox";
-            this.transporterUpdateFiltersSelectADCheckBox.Size = new System.Drawing.Size(50, 25);
+            this.transporterUpdateFiltersSelectADCheckBox.Size = new System.Drawing.Size(60, 25);
             this.transporterUpdateFiltersSelectADCheckBox.TabIndex = 6;
-            this.transporterUpdateFiltersSelectADCheckBox.Text = "АД";
+            this.transporterUpdateFiltersSelectADCheckBox.Text = "ADR";
             this.transporterUpdateFiltersSelectADCheckBox.ThreeState = true;
             this.transporterUpdateFiltersSelectADCheckBox.UseVisualStyleBackColor = true;
             this.transporterUpdateFiltersSelectADCheckBox.CheckStateChanged += new System.EventHandler(this.transporterUpdateFiltersSelectADCheckBox_CheckStateChanged);
@@ -3650,9 +3654,9 @@
             this.transporterUpdateFiltersSelectCMRCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transporterUpdateFiltersSelectCMRCheckBox.Location = new System.Drawing.Point(288, 3);
             this.transporterUpdateFiltersSelectCMRCheckBox.Name = "transporterUpdateFiltersSelectCMRCheckBox";
-            this.transporterUpdateFiltersSelectCMRCheckBox.Size = new System.Drawing.Size(62, 25);
+            this.transporterUpdateFiltersSelectCMRCheckBox.Size = new System.Drawing.Size(63, 25);
             this.transporterUpdateFiltersSelectCMRCheckBox.TabIndex = 3;
-            this.transporterUpdateFiltersSelectCMRCheckBox.Text = "СМР";
+            this.transporterUpdateFiltersSelectCMRCheckBox.Text = "CMR";
             this.transporterUpdateFiltersSelectCMRCheckBox.ThreeState = true;
             this.transporterUpdateFiltersSelectCMRCheckBox.UseVisualStyleBackColor = true;
             this.transporterUpdateFiltersSelectCMRCheckBox.CheckStateChanged += new System.EventHandler(this.transporterUpdateFiltersSelectCMRCheckBox_CheckStateChanged);
@@ -4008,9 +4012,9 @@
             this.label95.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label95.Location = new System.Drawing.Point(12, 113);
             this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(128, 21);
+            this.label95.Size = new System.Drawing.Size(141, 21);
             this.label95.TabIndex = 108;
-            this.label95.Text = "Поштова адреса";
+            this.label95.Text = "Юридична адреса";
             // 
             // label96
             // 
@@ -4594,7 +4598,7 @@
             // 
             this.OrderAddOrderDenyAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddOrderDenyAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddOrderDenyAddButton.Image")));
-            this.OrderAddOrderDenyAddButton.Location = new System.Drawing.Point(363, 24);
+            this.OrderAddOrderDenyAddButton.Location = new System.Drawing.Point(381, 24);
             this.OrderAddOrderDenyAddButton.Name = "OrderAddOrderDenyAddButton";
             this.OrderAddOrderDenyAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddOrderDenyAddButton.TabIndex = 140;
@@ -4609,7 +4613,7 @@
             this.OrderAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddButton.Location = new System.Drawing.Point(6, 66);
             this.OrderAddButton.Name = "OrderAddButton";
-            this.OrderAddButton.Size = new System.Drawing.Size(387, 45);
+            this.OrderAddButton.Size = new System.Drawing.Size(405, 45);
             this.OrderAddButton.TabIndex = 28;
             this.OrderAddButton.Text = "Сформувати";
             this.OrderAddButton.UseVisualStyleBackColor = true;
@@ -4635,7 +4639,7 @@
             this.OrderAddDenyFineSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddDenyFineSelectComboBox.Location = new System.Drawing.Point(6, 24);
             this.OrderAddDenyFineSelectComboBox.Name = "OrderAddDenyFineSelectComboBox";
-            this.OrderAddDenyFineSelectComboBox.Size = new System.Drawing.Size(351, 29);
+            this.OrderAddDenyFineSelectComboBox.Size = new System.Drawing.Size(369, 29);
             this.OrderAddDenyFineSelectComboBox.Sorted = true;
             this.OrderAddDenyFineSelectComboBox.TabIndex = 27;
             this.OrderAddDenyFineSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddDenyFineSelectComboBox_SelectedIndexChanged);
@@ -4759,7 +4763,7 @@
             // 
             this.OrderAddLoadingForm2AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddLoadingForm2AddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddLoadingForm2AddButton.Image")));
-            this.OrderAddLoadingForm2AddButton.Location = new System.Drawing.Point(176, 83);
+            this.OrderAddLoadingForm2AddButton.Location = new System.Drawing.Point(203, 83);
             this.OrderAddLoadingForm2AddButton.Name = "OrderAddLoadingForm2AddButton";
             this.OrderAddLoadingForm2AddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddLoadingForm2AddButton.TabIndex = 141;
@@ -4771,7 +4775,7 @@
             // 
             this.OrderAddLoadingForm1AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddLoadingForm1AddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddLoadingForm1AddButton.Image")));
-            this.OrderAddLoadingForm1AddButton.Location = new System.Drawing.Point(176, 21);
+            this.OrderAddLoadingForm1AddButton.Location = new System.Drawing.Point(203, 21);
             this.OrderAddLoadingForm1AddButton.Name = "OrderAddLoadingForm1AddButton";
             this.OrderAddLoadingForm1AddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddLoadingForm1AddButton.TabIndex = 140;
@@ -4789,7 +4793,7 @@
             this.OrderAddLoadingForm2SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddLoadingForm2SelectComboBox.Location = new System.Drawing.Point(6, 83);
             this.OrderAddLoadingForm2SelectComboBox.Name = "OrderAddLoadingForm2SelectComboBox";
-            this.OrderAddLoadingForm2SelectComboBox.Size = new System.Drawing.Size(164, 29);
+            this.OrderAddLoadingForm2SelectComboBox.Size = new System.Drawing.Size(191, 29);
             this.OrderAddLoadingForm2SelectComboBox.Sorted = true;
             this.OrderAddLoadingForm2SelectComboBox.TabIndex = 22;
             this.OrderAddLoadingForm2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddLoadingForm2SelectComboBox_SelectedIndexChanged);
@@ -4816,7 +4820,7 @@
             this.OrderAddLoadingForm1SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddLoadingForm1SelectComboBox.Location = new System.Drawing.Point(6, 21);
             this.OrderAddLoadingForm1SelectComboBox.Name = "OrderAddLoadingForm1SelectComboBox";
-            this.OrderAddLoadingForm1SelectComboBox.Size = new System.Drawing.Size(164, 29);
+            this.OrderAddLoadingForm1SelectComboBox.Size = new System.Drawing.Size(191, 29);
             this.OrderAddLoadingForm1SelectComboBox.Sorted = true;
             this.OrderAddLoadingForm1SelectComboBox.TabIndex = 18;
             this.OrderAddLoadingForm1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddLoadingForm1SelectComboBox_SelectedIndexChanged);
@@ -4951,7 +4955,7 @@
             this.OrderAddTrailerSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddTrailerSelectComboBox.Location = new System.Drawing.Point(9, 83);
             this.OrderAddTrailerSelectComboBox.Name = "OrderAddTrailerSelectComboBox";
-            this.OrderAddTrailerSelectComboBox.Size = new System.Drawing.Size(161, 29);
+            this.OrderAddTrailerSelectComboBox.Size = new System.Drawing.Size(188, 29);
             this.OrderAddTrailerSelectComboBox.Sorted = true;
             this.OrderAddTrailerSelectComboBox.TabIndex = 24;
             this.OrderAddTrailerSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddTrailerSelectComboBox_SelectedIndexChanged);
@@ -4974,7 +4978,7 @@
             // 
             this.OrderAddTrailerAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddTrailerAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddTrailerAddButton.Image")));
-            this.OrderAddTrailerAddButton.Location = new System.Drawing.Point(176, 83);
+            this.OrderAddTrailerAddButton.Location = new System.Drawing.Point(203, 83);
             this.OrderAddTrailerAddButton.Name = "OrderAddTrailerAddButton";
             this.OrderAddTrailerAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddTrailerAddButton.TabIndex = 134;
@@ -4991,7 +4995,7 @@
             this.OrderAddCubeSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddCubeSelectComboBox.Location = new System.Drawing.Point(9, 21);
             this.OrderAddCubeSelectComboBox.Name = "OrderAddCubeSelectComboBox";
-            this.OrderAddCubeSelectComboBox.Size = new System.Drawing.Size(161, 29);
+            this.OrderAddCubeSelectComboBox.Size = new System.Drawing.Size(188, 29);
             this.OrderAddCubeSelectComboBox.Sorted = true;
             this.OrderAddCubeSelectComboBox.TabIndex = 20;
             this.OrderAddCubeSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddCubeSelectComboBox_SelectedIndexChanged);
@@ -5014,7 +5018,7 @@
             // 
             this.OrderAddCubeAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddCubeAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddCubeAddButton.Image")));
-            this.OrderAddCubeAddButton.Location = new System.Drawing.Point(176, 21);
+            this.OrderAddCubeAddButton.Location = new System.Drawing.Point(203, 21);
             this.OrderAddCubeAddButton.Name = "OrderAddCubeAddButton";
             this.OrderAddCubeAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddCubeAddButton.TabIndex = 131;
@@ -5134,7 +5138,7 @@
             this.OrderAddUploadAddressAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddUploadAddressAddButton.Location = new System.Drawing.Point(6, 8);
             this.OrderAddUploadAddressAddButton.Name = "OrderAddUploadAddressAddButton";
-            this.OrderAddUploadAddressAddButton.Size = new System.Drawing.Size(200, 30);
+            this.OrderAddUploadAddressAddButton.Size = new System.Drawing.Size(227, 30);
             this.OrderAddUploadAddressAddButton.TabIndex = 10;
             this.OrderAddUploadAddressAddButton.Text = "Розвантаження";
             this.OrderAddUploadAddressAddButton.UseVisualStyleBackColor = true;
@@ -5152,7 +5156,7 @@
             this.OrderAddUploadDateTimePicker.Location = new System.Drawing.Point(6, 64);
             this.OrderAddUploadDateTimePicker.Name = "OrderAddUploadDateTimePicker";
             this.OrderAddUploadDateTimePicker.ShowCheckBox = true;
-            this.OrderAddUploadDateTimePicker.Size = new System.Drawing.Size(200, 29);
+            this.OrderAddUploadDateTimePicker.Size = new System.Drawing.Size(227, 29);
             this.OrderAddUploadDateTimePicker.TabIndex = 13;
             this.OrderAddUploadDateTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
             // 
@@ -5232,9 +5236,9 @@
             this.label79.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label79.Location = new System.Drawing.Point(6, 41);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(79, 21);
+            this.label79.Size = new System.Drawing.Size(80, 21);
             this.label79.TabIndex = 131;
-            this.label79.Text = "ТIR/ CMP ";
+            this.label79.Text = "TIR/ CMR ";
             // 
             // label28
             // 
@@ -5244,9 +5248,9 @@
             this.label28.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label28.Location = new System.Drawing.Point(94, 42);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(79, 21);
+            this.label28.Size = new System.Drawing.Size(86, 21);
             this.label28.TabIndex = 139;
-            this.label28.Text = "Уляна/Іра";
+            this.label28.Text = "Працівник";
             // 
             // OrderAddYOrUComboBox
             // 
@@ -5260,7 +5264,7 @@
             "І"});
             this.OrderAddYOrUComboBox.Location = new System.Drawing.Point(98, 66);
             this.OrderAddYOrUComboBox.Name = "OrderAddYOrUComboBox";
-            this.OrderAddYOrUComboBox.Size = new System.Drawing.Size(108, 29);
+            this.OrderAddYOrUComboBox.Size = new System.Drawing.Size(135, 29);
             this.OrderAddYOrUComboBox.TabIndex = 16;
             this.OrderAddYOrUComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddYOrUComboBox_MouseClick);
             // 
@@ -5272,7 +5276,7 @@
             this.OrderAddUncustomsAddressAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddUncustomsAddressAddButton.Location = new System.Drawing.Point(6, 8);
             this.OrderAddUncustomsAddressAddButton.Name = "OrderAddUncustomsAddressAddButton";
-            this.OrderAddUncustomsAddressAddButton.Size = new System.Drawing.Size(200, 30);
+            this.OrderAddUncustomsAddressAddButton.Size = new System.Drawing.Size(227, 30);
             this.OrderAddUncustomsAddressAddButton.TabIndex = 11;
             this.OrderAddUncustomsAddressAddButton.Text = "Розмитнення";
             this.OrderAddUncustomsAddressAddButton.UseVisualStyleBackColor = true;
@@ -5479,7 +5483,7 @@
             this.OrderAddForwarder2SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddForwarder2SelectComboBox.Location = new System.Drawing.Point(6, 93);
             this.OrderAddForwarder2SelectComboBox.Name = "OrderAddForwarder2SelectComboBox";
-            this.OrderAddForwarder2SelectComboBox.Size = new System.Drawing.Size(387, 29);
+            this.OrderAddForwarder2SelectComboBox.Size = new System.Drawing.Size(405, 29);
             this.OrderAddForwarder2SelectComboBox.Sorted = true;
             this.OrderAddForwarder2SelectComboBox.TabIndex = 6;
             this.OrderAddForwarder2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddForwarder2SelectComboBox_SelectedIndexChanged);
@@ -5496,7 +5500,7 @@
             this.OrderAddForwarder1SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddForwarder1SelectComboBox.Location = new System.Drawing.Point(6, 36);
             this.OrderAddForwarder1SelectComboBox.Name = "OrderAddForwarder1SelectComboBox";
-            this.OrderAddForwarder1SelectComboBox.Size = new System.Drawing.Size(387, 29);
+            this.OrderAddForwarder1SelectComboBox.Size = new System.Drawing.Size(405, 29);
             this.OrderAddForwarder1SelectComboBox.Sorted = true;
             this.OrderAddForwarder1SelectComboBox.TabIndex = 5;
             this.OrderAddForwarder1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddForwarder1SelectComboBox_SelectedIndexChanged);
@@ -5690,7 +5694,7 @@
             // 
             this.showTrackingOnlyActive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.showTrackingOnlyActive.AutoSize = true;
-            this.showTrackingOnlyActive.Location = new System.Drawing.Point(694, 36);
+            this.showTrackingOnlyActive.Location = new System.Drawing.Point(725, 36);
             this.showTrackingOnlyActive.Name = "showTrackingOnlyActive";
             this.showTrackingOnlyActive.Size = new System.Drawing.Size(15, 14);
             this.showTrackingOnlyActive.TabIndex = 4;
@@ -5702,7 +5706,7 @@
             this.onlyActiveLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.onlyActiveLabel.AutoSize = true;
             this.onlyActiveLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.onlyActiveLabel.Location = new System.Drawing.Point(579, 30);
+            this.onlyActiveLabel.Location = new System.Drawing.Point(610, 30);
             this.onlyActiveLabel.Name = "onlyActiveLabel";
             this.onlyActiveLabel.Size = new System.Drawing.Size(115, 21);
             this.onlyActiveLabel.TabIndex = 53;
@@ -6076,7 +6080,7 @@
             this.OrderUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderUpdateButton.Location = new System.Drawing.Point(6, 66);
             this.OrderUpdateButton.Name = "OrderUpdateButton";
-            this.OrderUpdateButton.Size = new System.Drawing.Size(388, 45);
+            this.OrderUpdateButton.Size = new System.Drawing.Size(406, 45);
             this.OrderUpdateButton.TabIndex = 28;
             this.OrderUpdateButton.Text = "Змінити";
             this.OrderUpdateButton.UseVisualStyleBackColor = true;
@@ -6086,7 +6090,7 @@
             // 
             this.OrderUpdateOrderDenyAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateOrderDenyAddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OrderUpdateOrderDenyAddButton.BackgroundImage")));
-            this.OrderUpdateOrderDenyAddButton.Location = new System.Drawing.Point(366, 23);
+            this.OrderUpdateOrderDenyAddButton.Location = new System.Drawing.Point(384, 23);
             this.OrderUpdateOrderDenyAddButton.Name = "OrderUpdateOrderDenyAddButton";
             this.OrderUpdateOrderDenyAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateOrderDenyAddButton.TabIndex = 137;
@@ -6114,7 +6118,7 @@
             this.OrderUpdateDenyFineSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateDenyFineSelectComboBox.Location = new System.Drawing.Point(6, 24);
             this.OrderUpdateDenyFineSelectComboBox.Name = "OrderUpdateDenyFineSelectComboBox";
-            this.OrderUpdateDenyFineSelectComboBox.Size = new System.Drawing.Size(354, 29);
+            this.OrderUpdateDenyFineSelectComboBox.Size = new System.Drawing.Size(372, 29);
             this.OrderUpdateDenyFineSelectComboBox.Sorted = true;
             this.OrderUpdateDenyFineSelectComboBox.TabIndex = 27;
             this.OrderUpdateDenyFineSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateDenyFineSelectComboBox_SelectedIndexChanged);
@@ -6238,7 +6242,7 @@
             // 
             this.OrderUpdateLoadingForm2AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateLoadingForm2AddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OrderUpdateLoadingForm2AddButton.BackgroundImage")));
-            this.OrderUpdateLoadingForm2AddButton.Location = new System.Drawing.Point(176, 80);
+            this.OrderUpdateLoadingForm2AddButton.Location = new System.Drawing.Point(203, 80);
             this.OrderUpdateLoadingForm2AddButton.Name = "OrderUpdateLoadingForm2AddButton";
             this.OrderUpdateLoadingForm2AddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateLoadingForm2AddButton.TabIndex = 141;
@@ -6250,7 +6254,7 @@
             // 
             this.OrderUpdateLoadingForm1AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateLoadingForm1AddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OrderUpdateLoadingForm1AddButton.BackgroundImage")));
-            this.OrderUpdateLoadingForm1AddButton.Location = new System.Drawing.Point(176, 28);
+            this.OrderUpdateLoadingForm1AddButton.Location = new System.Drawing.Point(203, 28);
             this.OrderUpdateLoadingForm1AddButton.Name = "OrderUpdateLoadingForm1AddButton";
             this.OrderUpdateLoadingForm1AddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateLoadingForm1AddButton.TabIndex = 140;
@@ -6268,7 +6272,7 @@
             this.OrderUpdateLoadingForm2SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateLoadingForm2SelectComboBox.Location = new System.Drawing.Point(3, 80);
             this.OrderUpdateLoadingForm2SelectComboBox.Name = "OrderUpdateLoadingForm2SelectComboBox";
-            this.OrderUpdateLoadingForm2SelectComboBox.Size = new System.Drawing.Size(167, 29);
+            this.OrderUpdateLoadingForm2SelectComboBox.Size = new System.Drawing.Size(194, 29);
             this.OrderUpdateLoadingForm2SelectComboBox.Sorted = true;
             this.OrderUpdateLoadingForm2SelectComboBox.TabIndex = 22;
             this.OrderUpdateLoadingForm2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateLoadingForm2SelectComboBox_SelectedIndexChanged);
@@ -6295,7 +6299,7 @@
             this.OrderUpdateLoadingForm1SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateLoadingForm1SelectComboBox.Location = new System.Drawing.Point(6, 28);
             this.OrderUpdateLoadingForm1SelectComboBox.Name = "OrderUpdateLoadingForm1SelectComboBox";
-            this.OrderUpdateLoadingForm1SelectComboBox.Size = new System.Drawing.Size(164, 29);
+            this.OrderUpdateLoadingForm1SelectComboBox.Size = new System.Drawing.Size(191, 29);
             this.OrderUpdateLoadingForm1SelectComboBox.Sorted = true;
             this.OrderUpdateLoadingForm1SelectComboBox.TabIndex = 18;
             this.OrderUpdateLoadingForm1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateLoadingForm1SelectComboBox_SelectedIndexChanged);
@@ -6430,7 +6434,7 @@
             this.OrderUpdateTrailerSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateTrailerSelectComboBox.Location = new System.Drawing.Point(10, 80);
             this.OrderUpdateTrailerSelectComboBox.Name = "OrderUpdateTrailerSelectComboBox";
-            this.OrderUpdateTrailerSelectComboBox.Size = new System.Drawing.Size(163, 29);
+            this.OrderUpdateTrailerSelectComboBox.Size = new System.Drawing.Size(190, 29);
             this.OrderUpdateTrailerSelectComboBox.Sorted = true;
             this.OrderUpdateTrailerSelectComboBox.TabIndex = 24;
             this.OrderUpdateTrailerSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateTrailerSelectComboBox_SelectedIndexChanged);
@@ -6453,7 +6457,7 @@
             // 
             this.OrderUpdateTrailerAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateTrailerAddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OrderUpdateTrailerAddButton.BackgroundImage")));
-            this.OrderUpdateTrailerAddButton.Location = new System.Drawing.Point(179, 79);
+            this.OrderUpdateTrailerAddButton.Location = new System.Drawing.Point(206, 79);
             this.OrderUpdateTrailerAddButton.Name = "OrderUpdateTrailerAddButton";
             this.OrderUpdateTrailerAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateTrailerAddButton.TabIndex = 134;
@@ -6470,7 +6474,7 @@
             this.OrderUpdateCubeSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateCubeSelectComboBox.Location = new System.Drawing.Point(9, 28);
             this.OrderUpdateCubeSelectComboBox.Name = "OrderUpdateCubeSelectComboBox";
-            this.OrderUpdateCubeSelectComboBox.Size = new System.Drawing.Size(164, 29);
+            this.OrderUpdateCubeSelectComboBox.Size = new System.Drawing.Size(191, 29);
             this.OrderUpdateCubeSelectComboBox.Sorted = true;
             this.OrderUpdateCubeSelectComboBox.TabIndex = 20;
             this.OrderUpdateCubeSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateCubeSelectComboBox_SelectedIndexChanged);
@@ -6493,7 +6497,7 @@
             // 
             this.OrderUpdateCubeAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateCubeAddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OrderUpdateCubeAddButton.BackgroundImage")));
-            this.OrderUpdateCubeAddButton.Location = new System.Drawing.Point(179, 27);
+            this.OrderUpdateCubeAddButton.Location = new System.Drawing.Point(206, 27);
             this.OrderUpdateCubeAddButton.Name = "OrderUpdateCubeAddButton";
             this.OrderUpdateCubeAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateCubeAddButton.TabIndex = 131;
@@ -6611,7 +6615,7 @@
             this.OrderUpdateUploadAddressesButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderUpdateUploadAddressesButton.Location = new System.Drawing.Point(6, 8);
             this.OrderUpdateUploadAddressesButton.Name = "OrderUpdateUploadAddressesButton";
-            this.OrderUpdateUploadAddressesButton.Size = new System.Drawing.Size(200, 30);
+            this.OrderUpdateUploadAddressesButton.Size = new System.Drawing.Size(227, 30);
             this.OrderUpdateUploadAddressesButton.TabIndex = 10;
             this.OrderUpdateUploadAddressesButton.Text = "Розвантаження";
             this.OrderUpdateUploadAddressesButton.UseVisualStyleBackColor = true;
@@ -6629,7 +6633,7 @@
             this.OrderUpdateUploadDateTimePicker.Location = new System.Drawing.Point(6, 65);
             this.OrderUpdateUploadDateTimePicker.Name = "OrderUpdateUploadDateTimePicker";
             this.OrderUpdateUploadDateTimePicker.ShowCheckBox = true;
-            this.OrderUpdateUploadDateTimePicker.Size = new System.Drawing.Size(200, 29);
+            this.OrderUpdateUploadDateTimePicker.Size = new System.Drawing.Size(227, 29);
             this.OrderUpdateUploadDateTimePicker.TabIndex = 13;
             this.OrderUpdateUploadDateTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
             // 
@@ -6708,9 +6712,9 @@
             this.OrderUpdateLabel14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.OrderUpdateLabel14.Location = new System.Drawing.Point(6, 41);
             this.OrderUpdateLabel14.Name = "OrderUpdateLabel14";
-            this.OrderUpdateLabel14.Size = new System.Drawing.Size(79, 21);
+            this.OrderUpdateLabel14.Size = new System.Drawing.Size(80, 21);
             this.OrderUpdateLabel14.TabIndex = 131;
-            this.OrderUpdateLabel14.Text = "ТIR/ CMP ";
+            this.OrderUpdateLabel14.Text = "TIR/ CMR ";
             // 
             // OrderUpdateLabel15
             // 
@@ -6720,9 +6724,9 @@
             this.OrderUpdateLabel15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.OrderUpdateLabel15.Location = new System.Drawing.Point(94, 42);
             this.OrderUpdateLabel15.Name = "OrderUpdateLabel15";
-            this.OrderUpdateLabel15.Size = new System.Drawing.Size(79, 21);
+            this.OrderUpdateLabel15.Size = new System.Drawing.Size(86, 21);
             this.OrderUpdateLabel15.TabIndex = 139;
-            this.OrderUpdateLabel15.Text = "Уляна/Іра";
+            this.OrderUpdateLabel15.Text = "Працівник";
             // 
             // OrderUpdateYOrUComboBox
             // 
@@ -6736,7 +6740,7 @@
             "І"});
             this.OrderUpdateYOrUComboBox.Location = new System.Drawing.Point(95, 64);
             this.OrderUpdateYOrUComboBox.Name = "OrderUpdateYOrUComboBox";
-            this.OrderUpdateYOrUComboBox.Size = new System.Drawing.Size(112, 29);
+            this.OrderUpdateYOrUComboBox.Size = new System.Drawing.Size(139, 29);
             this.OrderUpdateYOrUComboBox.TabIndex = 16;
             this.OrderUpdateYOrUComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateYOrUComboBox_MouseClick);
             // 
@@ -6747,7 +6751,7 @@
             this.OrderUpdateUncustumsAddressesButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderUpdateUncustumsAddressesButton.Location = new System.Drawing.Point(6, 8);
             this.OrderUpdateUncustumsAddressesButton.Name = "OrderUpdateUncustumsAddressesButton";
-            this.OrderUpdateUncustumsAddressesButton.Size = new System.Drawing.Size(201, 30);
+            this.OrderUpdateUncustumsAddressesButton.Size = new System.Drawing.Size(228, 30);
             this.OrderUpdateUncustumsAddressesButton.TabIndex = 11;
             this.OrderUpdateUncustumsAddressesButton.Text = "Розмитнення";
             this.OrderUpdateUncustumsAddressesButton.UseVisualStyleBackColor = true;
@@ -6952,7 +6956,7 @@
             this.OrderUpdateForwarder2SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateForwarder2SelectComboBox.Location = new System.Drawing.Point(6, 77);
             this.OrderUpdateForwarder2SelectComboBox.Name = "OrderUpdateForwarder2SelectComboBox";
-            this.OrderUpdateForwarder2SelectComboBox.Size = new System.Drawing.Size(388, 29);
+            this.OrderUpdateForwarder2SelectComboBox.Size = new System.Drawing.Size(406, 29);
             this.OrderUpdateForwarder2SelectComboBox.Sorted = true;
             this.OrderUpdateForwarder2SelectComboBox.TabIndex = 6;
             this.OrderUpdateForwarder2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateForwarder2SelectComboBox_SelectedIndexChanged);
@@ -6969,7 +6973,7 @@
             this.OrderUpdateForwarder1SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateForwarder1SelectComboBox.Location = new System.Drawing.Point(6, 23);
             this.OrderUpdateForwarder1SelectComboBox.Name = "OrderUpdateForwarder1SelectComboBox";
-            this.OrderUpdateForwarder1SelectComboBox.Size = new System.Drawing.Size(388, 29);
+            this.OrderUpdateForwarder1SelectComboBox.Size = new System.Drawing.Size(406, 29);
             this.OrderUpdateForwarder1SelectComboBox.Sorted = true;
             this.OrderUpdateForwarder1SelectComboBox.TabIndex = 5;
             this.OrderUpdateForwarder1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateForwarder1SelectComboBox_SelectedIndexChanged);
@@ -6979,6 +6983,10 @@
             // showContractsPage
             // 
             this.showContractsPage.BackColor = System.Drawing.Color.AliceBlue;
+            this.showContractsPage.Controls.Add(this.originalContractStateRadioButton);
+            this.showContractsPage.Controls.Add(this.faxContractStateRadioButton);
+            this.showContractsPage.Controls.Add(this.notSelectedContractStateRadioButton);
+            this.showContractsPage.Controls.Add(this.showContractStateLabel);
             this.showContractsPage.Controls.Add(this.contractShowDeleteContractButton);
             this.showContractsPage.Controls.Add(this.contractShowOpenDocButton);
             this.showContractsPage.Controls.Add(this.label37ShowContract);
@@ -6992,6 +7000,62 @@
             this.showContractsPage.Size = new System.Drawing.Size(776, 525);
             this.showContractsPage.TabIndex = 18;
             this.showContractsPage.Text = "showContractsPage";
+            // 
+            // originalContractStateRadioButton
+            // 
+            this.originalContractStateRadioButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.originalContractStateRadioButton.AutoSize = true;
+            this.originalContractStateRadioButton.Enabled = false;
+            this.originalContractStateRadioButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.originalContractStateRadioButton.Location = new System.Drawing.Point(641, 93);
+            this.originalContractStateRadioButton.Name = "originalContractStateRadioButton";
+            this.originalContractStateRadioButton.Size = new System.Drawing.Size(93, 25);
+            this.originalContractStateRadioButton.TabIndex = 63;
+            this.originalContractStateRadioButton.Tag = "2";
+            this.originalContractStateRadioButton.Text = "Оригінал";
+            this.originalContractStateRadioButton.UseVisualStyleBackColor = true;
+            this.originalContractStateRadioButton.Click += new System.EventHandler(this.contractStateRadioButton_Click);
+            // 
+            // faxContractStateRadioButton
+            // 
+            this.faxContractStateRadioButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.faxContractStateRadioButton.AutoSize = true;
+            this.faxContractStateRadioButton.Enabled = false;
+            this.faxContractStateRadioButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.faxContractStateRadioButton.Location = new System.Drawing.Point(641, 124);
+            this.faxContractStateRadioButton.Name = "faxContractStateRadioButton";
+            this.faxContractStateRadioButton.Size = new System.Drawing.Size(63, 25);
+            this.faxContractStateRadioButton.TabIndex = 62;
+            this.faxContractStateRadioButton.Tag = "3";
+            this.faxContractStateRadioButton.Text = "Факс";
+            this.faxContractStateRadioButton.UseVisualStyleBackColor = true;
+            this.faxContractStateRadioButton.Click += new System.EventHandler(this.contractStateRadioButton_Click);
+            // 
+            // notSelectedContractStateRadioButton
+            // 
+            this.notSelectedContractStateRadioButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.notSelectedContractStateRadioButton.AutoSize = true;
+            this.notSelectedContractStateRadioButton.Enabled = false;
+            this.notSelectedContractStateRadioButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.notSelectedContractStateRadioButton.Location = new System.Drawing.Point(641, 62);
+            this.notSelectedContractStateRadioButton.Name = "notSelectedContractStateRadioButton";
+            this.notSelectedContractStateRadioButton.Size = new System.Drawing.Size(127, 25);
+            this.notSelectedContractStateRadioButton.TabIndex = 61;
+            this.notSelectedContractStateRadioButton.Tag = "1";
+            this.notSelectedContractStateRadioButton.Text = "Не визначено";
+            this.notSelectedContractStateRadioButton.UseVisualStyleBackColor = true;
+            this.notSelectedContractStateRadioButton.Click += new System.EventHandler(this.contractStateRadioButton_Click);
+            // 
+            // showContractStateLabel
+            // 
+            this.showContractStateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.showContractStateLabel.AutoSize = true;
+            this.showContractStateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.showContractStateLabel.Location = new System.Drawing.Point(637, 38);
+            this.showContractStateLabel.Name = "showContractStateLabel";
+            this.showContractStateLabel.Size = new System.Drawing.Size(115, 21);
+            this.showContractStateLabel.TabIndex = 60;
+            this.showContractStateLabel.Text = "Стан договору";
             // 
             // contractShowDeleteContractButton
             // 
@@ -7097,7 +7161,7 @@
             this.contractShowDataGridView.Name = "contractShowDataGridView";
             this.contractShowDataGridView.ReadOnly = true;
             this.contractShowDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.contractShowDataGridView.Size = new System.Drawing.Size(776, 281);
+            this.contractShowDataGridView.Size = new System.Drawing.Size(629, 281);
             this.contractShowDataGridView.TabIndex = 1;
             this.contractShowDataGridView.TabStop = false;
             this.contractShowDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.contractShowDataGridView_CellMouseClick);
@@ -7208,6 +7272,7 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.dataControl);
             this.Controls.Add(this.menuStrip);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -7938,6 +8003,10 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.LinkLabel AtlantSovtlinkLabel;
         private System.Windows.Forms.Label CreatorsLabel;
+        private System.Windows.Forms.RadioButton originalContractStateRadioButton;
+        private System.Windows.Forms.RadioButton faxContractStateRadioButton;
+        private System.Windows.Forms.RadioButton notSelectedContractStateRadioButton;
+        private System.Windows.Forms.Label showContractStateLabel;
         }
 }
 

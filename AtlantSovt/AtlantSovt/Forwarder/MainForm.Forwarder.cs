@@ -115,7 +115,7 @@ namespace AtlantSovt
                     forwarderBankDetailsDataGridView.Columns[1].HeaderText = "МФО";
                     forwarderBankDetailsDataGridView.Columns[2].HeaderText = "Номер рахунку";
                     forwarderBankDetailsDataGridView.Columns[3].HeaderText = "ЕДРПОУ";
-                    forwarderBankDetailsDataGridView.Columns[4].HeaderText = "IPN";
+                    forwarderBankDetailsDataGridView.Columns[4].HeaderText = "ІПН";
                     forwarderBankDetailsDataGridView.Columns[5].HeaderText = "Серія свідоцтва";
                     forwarderBankDetailsDataGridView.Columns[6].HeaderText = "Номер свідоцтва";
                     forwarderBankDetailsDataGridView.Columns[7].HeaderText = "SWIFT";

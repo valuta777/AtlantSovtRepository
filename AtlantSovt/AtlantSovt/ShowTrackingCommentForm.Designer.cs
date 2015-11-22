@@ -66,6 +66,8 @@
             this.Controls.Add(this.updateTrackingCommentButton);
             this.Controls.Add(this.trackingCommentRichTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ShowTrackingCommentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Коментар";

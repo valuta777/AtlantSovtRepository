@@ -248,7 +248,10 @@
             this.Controls.Add(this.addressAddCountryCodeTextBox);
             this.Controls.Add(this.label50);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddAddressForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додавання адреси розвантаження";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.AddAddressForm_Load);
