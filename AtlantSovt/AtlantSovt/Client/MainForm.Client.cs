@@ -190,14 +190,7 @@ namespace AtlantSovt
                     var new_PhysicalAddress = physicalAddressClientTextBox.Text;
                     var new_GeografphyAddress = geographyAddressClientTextBox.Text;
                     bool new_ContractType;
-                    if (faxClientCheckBox.Checked)
-                    {
-                         new_ContractType = false;
-                    }
-                    else
-                    {
-                         new_ContractType = true;
-                    }
+                    
                     var new_Comment = commentClientTextBox.Text;
 
                     long new_WorkDocumentId = 0;
@@ -231,7 +224,6 @@ namespace AtlantSovt
                             Director = new_Director,
                             PhysicalAddress = new_PhysicalAddress,
                             GeografphyAddress = new_GeografphyAddress,
-                            ContractType = new_ContractType,
                             Comment = new_Comment,
                         };
                     }
@@ -246,7 +238,6 @@ namespace AtlantSovt
                             GeografphyAddress = new_GeografphyAddress,
                             WorkDocumentId = new_WorkDocumentId,
                             TaxPayerStatusId = new_TaxPayerStatusId,
-                            ContractType = new_ContractType,
                             Comment = new_Comment,
                         };
                     }
@@ -260,7 +251,6 @@ namespace AtlantSovt
                             PhysicalAddress = new_PhysicalAddress,
                             GeografphyAddress = new_GeografphyAddress,
                             WorkDocumentId = new_WorkDocumentId,
-                            ContractType = new_ContractType,
                             Comment = new_Comment,
                         };
                     }
@@ -274,7 +264,6 @@ namespace AtlantSovt
                             PhysicalAddress = new_PhysicalAddress,
                             GeografphyAddress = new_GeografphyAddress,
                             TaxPayerStatusId = new_TaxPayerStatusId,
-                            ContractType = new_ContractType,
                             Comment = new_Comment,
                         };
                     }
@@ -426,8 +415,7 @@ namespace AtlantSovt
                         taxPayerStatusClientUpdateComboBox.Text = "";
                         taxPayerStatusClientUpdateComboBox.SelectedIndex = -1;
                     }
-                    originalClientUpdateCheckBox.Checked = client.ContractType.Value;
-                    faxClientUpdateCheckBox.Checked = !client.ContractType.Value;
+                    
                 }
                 clientNameChanged =  clientDirectorChanged = clientPhysicalAddressChanged =  clientGeographyAddressChanged =  clientCommentChanged = clientWorkDocumentChanged =  clientTaxPayerStatusChanged =  clientOriginalChanged =  clientFaxChanged = false;
             }

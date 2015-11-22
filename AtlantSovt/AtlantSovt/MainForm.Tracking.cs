@@ -498,9 +498,9 @@ namespace AtlantSovt
                         if (orderDocument.DownloadDate == null) isOrderFull = false;
                         if (orderDocument.UploadDate == null) isOrderFull = false;
 
-                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).Count() == 1)
+                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).Count() == 1)
                         {
-                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder.ForwarderStamp.Stamp == null)
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.ForwarderStamp.Stamp == null)
                             {
                                 isOrderFull = false;
                             }
@@ -509,9 +509,9 @@ namespace AtlantSovt
                         {
                             isOrderFull = false;
                         }
-                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).Count() == 1)
+                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).Count() == 1)
                         {
-                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder.ForwarderStamp.Stamp == null)
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder.ForwarderStamp.Stamp == null)
                             {
                                 isOrderFull = false;
                             }
@@ -520,6 +520,8 @@ namespace AtlantSovt
                         {
                             isOrderFull = false;
                         }
+
+                        //TODO 3 forwarder
 
                         if (orderDocument.OrderLoadingForms.Where(l => l.IsFirst == true).Count() == 1)
                         {
@@ -657,15 +659,15 @@ namespace AtlantSovt
                         dateTerms = (orderDocument.DownloadDate == null || orderDocument.DownloadDate.Value.ToString("dd.mm") == "") ? "" : orderDocument.DownloadDate.Value.ToString("dd.mm") + " - ";
                         dateTerms += (orderDocument.UploadDate == null || orderDocument.UploadDate.Value.ToShortDateString() == "") ? "" : orderDocument.UploadDate.Value.ToShortDateString() + " до " + orderDocument.UploadDate.Value.ToShortTimeString();
 
-                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).Count() == 1)
+                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).Count() == 1)
                         {
-                            forwarderName1 = orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder.Name;
+                            forwarderName1 = orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.Name;
                         }
-                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).Count() == 1)
+                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).Count() == 1)
                         {
-                            forwarderName2 = orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder.Name;
+                            forwarderName2 = orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder.Name;
                         }
-
+                        //TODO 3 forwarder
                         if (orderDocument.OrderLoadingForms.Where(l => l.IsFirst == true).Count() == 1)
                         {
                             loadingForm1 = orderDocument.OrderLoadingForms.Where(l => l.IsFirst == true).FirstOrDefault().LoadingForm.Type;
@@ -782,24 +784,25 @@ namespace AtlantSovt
                         ReplaseWordStub("{TransporterName}", transporterName, wordDocument);
 
 
-                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).Count() == 1)
+                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).Count() == 1)
                         {
-                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder.ForwarderStamp.Stamp != null)
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.ForwarderStamp.Stamp != null)
                             {
-                                AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder), "{Stamp1}");
+                                AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder), "{Stamp1}");
                                 Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", ""), true);
                                 Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Release", ""));
                             }
                         }
-                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).Count() == 1)
+                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).Count() == 1)
                         {
-                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder.ForwarderStamp.Stamp != null && orderDocument.Language == 0)
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder.ForwarderStamp.Stamp != null && orderDocument.Language == 0)
                             {
-                                AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder), "{Stamp2}");
+                                AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder), "{Stamp2}");
                                 Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", ""), true);
                                 Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Release", ""));
                             }
                         }
+                        //TODO 3 forwarder
 
                         if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                         {

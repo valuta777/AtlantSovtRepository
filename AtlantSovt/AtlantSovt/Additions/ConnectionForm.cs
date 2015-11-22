@@ -24,7 +24,7 @@ namespace AtlantSovt
             string str = "";
             try
             {
-                StreamReader streamReader = new StreamReader((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\ConnectionString").Replace("\\bin\\Release", ""));
+                StreamReader streamReader = new StreamReader((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\ConnectionString").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""));
 
                 while (!streamReader.EndOfStream)
                 {

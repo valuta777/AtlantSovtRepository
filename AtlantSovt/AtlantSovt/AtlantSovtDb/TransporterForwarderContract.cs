@@ -27,6 +27,8 @@ namespace AtlantSovt.AtlantSovtDb
 
         public byte? Language { get; set; }
 
+        public bool? State { get; set; }
+
         public virtual Forwarder Forwarder { get; set; }
 
         public virtual Transporter Transporter { get; set; }
