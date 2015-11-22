@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,9 +84,10 @@ namespace AtlantSovt
                     MessageBox.Show("Успішно вибрано " + transporterFilterSelectCountryCheckedListBox.CheckedItems.Count + " країн");                        
                     }
                 }
-                catch(Exception e)
+                catch(Exception ex)
                 {
-                    MessageBox.Show("Помилка!!",e.ToString());             
+                    Log.Write(ex);
+                    MessageBox.Show("Виникла помикла, спробуйте ще раз");             
                 }
             }
         }
@@ -126,24 +128,14 @@ namespace AtlantSovt
 
         private void transporterAddCountryButton_Click(object sender, EventArgs e)
         {
-            AddCountryForm country = new AddCountryForm();
+            AddCountryForm country = new AddCountryForm(this);
             country.Show();
         }
 
         private void transporterAddVehicleButton_Click(object sender, EventArgs e)
         {
-            AddTransporterVehicleForm vehicle = new AddTransporterVehicleForm();
+            AddTransporterVehicleForm vehicle = new AddTransporterVehicleForm(this);
             vehicle.Show();
-        }
-
-        private void transporterFilterSelectCountryCheckedListBox_MouseClick(object sender, EventArgs e)
-        {
-            LoadCoutriesToChechedBoxList();
-        }
-
-        private void transporterFilterSelectVehicleCheckedListBox_MouseClick(object sender, EventArgs e)
-        {
-            LoadVehicleToChechedBoxList();
         }
     }
 }

@@ -22,7 +22,7 @@ namespace AtlantSovt
             LoadVehicleToChechedBoxList();
         }
 
-        private void LoadCoutriesToChechedBoxList()
+        public void LoadCoutriesToChechedBoxList()
         {
             transporterUpdateFilterSelectCountryCheckedListBox.Items.Clear();
             using (var db = new AtlantSovtContext())
@@ -37,7 +37,7 @@ namespace AtlantSovt
             }        
         }
 
-        private void LoadVehicleToChechedBoxList()
+        public void LoadVehicleToChechedBoxList()
         {
             transporterUpdateFilterSelectVehicleCheckedListBox.Items.Clear();
             using (var db = new AtlantSovtContext())
@@ -53,7 +53,7 @@ namespace AtlantSovt
             }
         }
 
-        private void LoadTransporterCoutriesToChechedBoxList()
+        public void LoadTransporterCoutriesToChechedBoxList()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -84,7 +84,7 @@ namespace AtlantSovt
             }
         }
 
-        private void LoadTransporterVehicleToChechedBoxList()
+        public void LoadTransporterVehicleToChechedBoxList()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -251,27 +251,15 @@ namespace AtlantSovt
             this.Dispose();
         }
 
-        private void transporterUpdateFilterSelectCountryCheckedListBox_DoubleClick(object sender, EventArgs e)
-        {
-            LoadCoutriesToChechedBoxList();
-            LoadTransporterCoutriesToChechedBoxList();
-        }
-
-        private void transporterUpdateFilterSelectVehicleCheckedListBox_DoubleClick(object sender, EventArgs e)
-        {
-            LoadVehicleToChechedBoxList();
-            LoadTransporterVehicleToChechedBoxList();
-        }
-
         private void transporterAddCountryButton_Click(object sender, EventArgs e)
         {
-            AddCountryForm country = new AddCountryForm();
+            AddCountryForm country = new AddCountryForm(this);
             country.Show();
         }
 
         private void transporterAddVehicleButton_Click(object sender, EventArgs e)
         {
-            AddTransporterVehicleForm vehicle = new AddTransporterVehicleForm();
+            AddTransporterVehicleForm vehicle = new AddTransporterVehicleForm(this);
             vehicle.Show();
         }
     }
