@@ -63,6 +63,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddCountryForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додавання країни";
             this.TopMost = true;
             this.ResumeLayout(false);

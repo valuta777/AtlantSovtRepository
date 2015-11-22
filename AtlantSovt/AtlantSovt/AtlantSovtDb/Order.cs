@@ -31,6 +31,9 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long? TransporterId { get; set; }
 
+        [Column(TypeName = "date")]
+        public DateTime? CloseDate { get; set; }
+
         public DateTime? Date { get; set; }
 
         public long? TrailerId { get; set; }

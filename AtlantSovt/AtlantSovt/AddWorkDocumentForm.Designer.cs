@@ -63,6 +63,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddWorkDocumentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додавання документу";
             this.ResumeLayout(false);
             this.PerformLayout();

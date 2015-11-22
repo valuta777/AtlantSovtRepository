@@ -63,6 +63,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddTaxPayerStatusForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додавання статусу платника податку";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -20,6 +20,7 @@ namespace AtlantSovt
     {
         Transporter transporterDocument;
         Forwarder forwarderDocument;
+        ForwarderStamp forwarderStamp;
         DocumentCounter documentCount;
         TransporterForwarderContract contract;
 
@@ -48,6 +49,7 @@ namespace AtlantSovt
                 string comboBoxSelectedId = selectedNameAndDirector[1];
                 long id = Convert.ToInt64(comboBoxSelectedId);
                 forwarderDocument = db.Forwarders.Find(id);
+                forwarderStamp = forwarderDocument.ForwarderStamp;
             }
         }
 
@@ -132,6 +134,7 @@ namespace AtlantSovt
             isForwarderFull = false;
             isTransporterFull = false;
             bool check = false;
+            string isFull = "Деякі дані не заповнені в: ";
             try
             {
                 using (var db = new AtlantSovtContext())
@@ -223,7 +226,7 @@ namespace AtlantSovt
                         secondForwarderBankDetailsIPN == "" || secondForwarderBankDetailsMFO == "" || secondForwarderBankDetailsSWIFT == "" || forwarderDocument.ForwarderStamp.Stamp == null)
                     {
                         check = true;
-                        MessageBox.Show("Заповніть спочатку всі дані експедитора");
+                        isFull += "\r\n- <Експедитор> ";
                     }
                     else
                     {
@@ -236,7 +239,7 @@ namespace AtlantSovt
                         transporterBankDetailsIPN == "" || transporterBankDetailsMFO == "" || transporterBankDetailsSWIFT == "")
                     {
                         check = true;
-                        MessageBox.Show("Заповніть спочатку всі дані перевізника");
+                        isFull += "\r\n- <Перевізник> ";
                     }
                     else
                     {
@@ -245,7 +248,7 @@ namespace AtlantSovt
 
                     if(check)
                     {
-                        if (MessageBox.Show("Продовжити без повного заповнення даних?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (MessageBox.Show(isFull + "\r\nПродовжити без повного заповнення даних?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             isForwarderFull = true;
                             isTransporterFull = true;
@@ -279,7 +282,7 @@ namespace AtlantSovt
                     ContractDateBegin = c.ContractDataBegin,
                     ContractDateEnd = c.ContractDataEnd,
                     Language = (c.Language == 1) ? "Українська" : (c.Language == 2) ? "Англійська/Російська" : "Німецька/Російська",
-                    PorZ = (c.PorZ == true) ? "Замовника" : "Перевізника"
+                    PorZ = (c.PorZ == true) ? "Замовника" : "Перевізника",
                 };
 
                 contractShowDataGridView.DataSource = query.ToList();
@@ -293,7 +296,6 @@ namespace AtlantSovt
                 contractShowDataGridView.Columns[7].HeaderText = "Виступає у якості";
 
             } contractShowDataGridView.Update();
-
         }
 
         void ShowContractSearch()
@@ -333,6 +335,44 @@ namespace AtlantSovt
 
         }
 
+        void ContractChangeState(RadioButton radioButton)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                try
+                {
+                    TransporterForwarderContract contract;
+                    int ClikedId = Convert.ToInt32(contractShowDataGridView.CurrentRow.Cells[0].Value);
+                    contract = db.TransporterForwarderContracts.Find(ClikedId);
+
+                    if (radioButton.Name == "notSelectedContractStateRadioButton")
+                    {
+                        contract.State = null;
+                        db.Entry(contract).State = EntityState.Modified;
+                        db.SaveChanges();
+                       
+                    }
+                    else if (radioButton.Name == "originalContractStateRadioButton")
+                    {
+                        contract.State = true;
+                        db.Entry(contract).State = EntityState.Modified;
+                        db.SaveChanges();
+                    }
+                    else if (radioButton.Name == "faxContractStateRadioButton")
+                    {
+                        contract.State = false;
+                        db.Entry(contract).State = EntityState.Modified;
+                        db.SaveChanges();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Log.Write(ex);
+                    MessageBox.Show("Немає жодного документу");
+                }
+            }
+        }
+
         void ShowContractInfo()
         {
              using (var db = new AtlantSovtContext())
@@ -340,6 +380,25 @@ namespace AtlantSovt
                 try
                 {
                     var ClikedId = Convert.ToInt32(contractShowDataGridView.CurrentRow.Cells[0].Value);
+
+                    var getContractState =
+                        from contract in db.TransporterForwarderContracts
+                        where contract.Id == ClikedId
+                        select contract;
+
+                    if (getContractState.FirstOrDefault().State == true)
+                    {
+                        originalContractStateRadioButton.Checked = true;
+                    }
+                    else if (getContractState.FirstOrDefault().State == false)
+                    {
+                        faxContractStateRadioButton.Checked = true;
+                    }
+                    else
+                    {
+                        notSelectedContractStateRadioButton.Checked = true;
+                    }
+
                     var query =
                     from con in db.TransporterContacts
                     where con.TransporterId ==
@@ -363,6 +422,9 @@ namespace AtlantSovt
 
                     contractShowOpenDocButton.Enabled = true;
                     contractShowDeleteContractButton.Enabled = true;
+                    notSelectedContractStateRadioButton.Enabled = true;
+                    originalContractStateRadioButton.Enabled = true;
+                    faxContractStateRadioButton.Enabled = true;
                 }
                 catch (Exception ex)
                 {
@@ -647,7 +709,8 @@ namespace AtlantSovt
                     ReplaseWordStub("{TransporterBankName}", transporterBankDetailsBankName, wordDocument);
                     ReplaseWordStub("{TransporterMFO}", transporterBankDetailsMFO, wordDocument);
 
-                    if (forwarderDocument.ForwarderStamp.Stamp != null)
+
+                    if (forwarderStamp.Stamp != null)
                     {
                         AddStamp(wordDocument, UploadForwarderStapm(forwarderDocument), "{Stamp1}");
                         if (contract.Language == 2 || contract.Language == 3)

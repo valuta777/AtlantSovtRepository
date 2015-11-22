@@ -22,6 +22,7 @@ namespace AtlantSovt
         Transporter transporterOrderAdd;
         Forwarder forwarder1OrderAdd;
         Forwarder forwarder2OrderAdd;
+        Forwarder forwarder3OrderAdd;
 
         AdditionalTerm additionalTermOrderAdd;
         Cargo cargoOrderAdd;        
@@ -65,7 +66,7 @@ namespace AtlantSovt
                     DownloadDate =  OrderAddDownloadDateTimePicker.Checked ? (DateTime?)OrderAddDownloadDateTimePicker.Value : null,
                     UploadDate = OrderAddUploadDateTimePicker.Checked ? (DateTime?)OrderUpdateDownloadDateTimePicker.Value : null,
                     State = null,
-                    YorU = ((OrderAddYOrUComboBox.SelectedIndex != -1 && OrderAddYOrUComboBox.Text == OrderAddYOrUComboBox.SelectedItem.ToString())) ? ((OrderAddYOrUComboBox.SelectedIndex == 0) ? "У" : "І") : null,
+                    YorU = ((OrderAddPersonalComboBox.SelectedIndex != -1 && OrderAddPersonalComboBox.Text == OrderAddPersonalComboBox.SelectedItem.ToString())) ? ((OrderAddPersonalComboBox.SelectedIndex == 0) ? "У" : "І") : null,
                     Language = (OrderAddLanduageSelectComboBox.SelectedIndex != -1 && OrderAddLanduageSelectComboBox.Text == OrderAddLanduageSelectComboBox.SelectedItem.ToString()) ? (OrderAddLanduageSelectComboBox.SelectedIndex == 0) ? (byte?)0 : (OrderAddLanduageSelectComboBox.SelectedIndex == 1) ? (byte?)1 : (byte?)2 : null
                 };
                 try
@@ -158,7 +159,7 @@ namespace AtlantSovt
                         ForwarderOrder New_Forwarder1Order = new ForwarderOrder
                         {
                             ForwarderId = forwarder1OrderAdd.Id,
-                            IsFirst = true
+                            IsFirst = 1
                         };
                         db.Orders.Find(New_Order.Id).ForwarderOrders.Add(New_Forwarder1Order);
                         db.Entry(New_Forwarder1Order).State = EntityState.Added;
@@ -180,7 +181,7 @@ namespace AtlantSovt
                         ForwarderOrder New_Forwarder2Order = new ForwarderOrder
                         {
                             ForwarderId = forwarder2OrderAdd.Id,
-                            IsFirst = false
+                            IsFirst = 2
                         };
                         db.Orders.Find(New_Order.Id).ForwarderOrders.Add(New_Forwarder2Order);
                         db.Entry(New_Forwarder2Order).State = EntityState.Added;
@@ -191,6 +192,26 @@ namespace AtlantSovt
                     {
                         Log.Write(ex);
                         MessageBox.Show("Помилка (2 експедитор)\n" + ex.Message);
+                    }
+                }
+                if (forwarder3OrderAdd != null)
+                {
+                    try
+                    {
+                        ForwarderOrder New_Forwarder3Order = new ForwarderOrder
+                        {
+                            ForwarderId = forwarder3OrderAdd.Id,
+                            IsFirst = 3
+                        };
+                        db.Orders.Find(New_Order.Id).ForwarderOrders.Add(New_Forwarder3Order);
+                        db.Entry(New_Forwarder3Order).State = EntityState.Added;
+                        db.SaveChanges();
+                        MessageBox.Show("Успішно вибрано третього експедитора");
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Write(ex);
+                        MessageBox.Show("Помилка (3 експедитор)\n" + ex.Message);
                     }
                 }
 
@@ -381,7 +402,21 @@ namespace AtlantSovt
                     OrderAddForwarder2SelectComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
                 }
             }
-        }    
+        }
+
+        void LoadOrderAddForwarder3SelectComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from f in db.Forwarders
+                            orderby f.Id
+                            select f;
+                foreach (var item in query)
+                {
+                    OrderAddForwarder3SelectComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                }
+            }
+        }
         void SplitForwarder1OrderAdd()
         {
             using (var db = new AtlantSovtContext())
@@ -418,7 +453,26 @@ namespace AtlantSovt
                 }
             }
         }
-       // Adresses
+
+        void SplitForwarder3OrderAdd()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (OrderAddForwarder3SelectComboBox.SelectedIndex != -1 && OrderAddForwarder3SelectComboBox.Text == OrderAddForwarder3SelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddForwarder3SelectComboBox.SelectedItem.ToString();
+                    string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedNameAndDirector[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    forwarder3OrderAdd = db.Forwarders.Find(id);
+                }
+                else
+                {
+                    forwarder3OrderAdd = null;
+                }
+            }
+        }
+        // Adresses
         void UploadAddressForm()
         {
             if (clientOrderAdd != null)
@@ -847,6 +901,7 @@ namespace AtlantSovt
         Transporter transporterOrderUpdate;
         Forwarder forwarder1OrderUpdate;
         Forwarder forwarder2OrderUpdate;
+        Forwarder forwarder3OrderUpdate;
 
         AdditionalTerm additionalTermOrderUpdate;
         Cargo cargoOrderUpdate;
@@ -881,11 +936,12 @@ namespace AtlantSovt
             OrderUpdateTrailerSelectComboBox.SelectedIndex = -1;
             OrderUpdateCubeSelectComboBox.SelectedIndex = -1;
             OrderUpdateTirCmrSelectComboBox.SelectedIndex = -1;
-            OrderUpdateYOrUComboBox.SelectedIndex = -1;
+            OrderUpdatePersonalComboBox.SelectedIndex = -1;
             OrderUpdateADRSelectComboBox.SelectedIndex = -1;
             OrderUpdateClientSelectComboBox.SelectedIndex = -1;
             OrderUpdateTransporterSelectComboBox.SelectedIndex = -1;
             OrderUpdateTransporterDiapasoneComboBox.SelectedIndex = -1;
+            OrderUpdateForwarder3SelectComboBox.SelectedIndex = -1;
             OrderUpdateForwarder2SelectComboBox.SelectedIndex = -1;
             OrderUpdateForwarder1SelectComboBox.SelectedIndex = -1;
             OrderUpdateFineForDelaySelectComboBox.SelectedIndex = -1;
@@ -904,6 +960,7 @@ namespace AtlantSovt
             OrderUpdateClientSelectComboBox.Items.Clear();
             OrderUpdateTransporterSelectComboBox.Items.Clear();
             OrderUpdateTransporterDiapasoneComboBox.Items.Clear();
+            OrderUpdateForwarder3SelectComboBox.Items.Clear();
             OrderUpdateForwarder2SelectComboBox.Items.Clear();
             OrderUpdateForwarder1SelectComboBox.Items.Clear();
             OrderUpdateClientDiapasoneComboBox.Items.Clear();
@@ -988,7 +1045,8 @@ namespace AtlantSovt
             }
         }
         void LoadAllFieldsOrderUpdate()
-        {            
+        {
+            LoadOrderUpdateForwarder3SelectComboBox();
             LoadOrderUpdateForwarder2SelectComboBox();
             LoadOrderUpdateForwarder1SelectComboBox();
             LoadOrderUpdateAdditionalTermsSelectComboBox();
@@ -1002,9 +1060,17 @@ namespace AtlantSovt
             LoadOrderUpdateTrailerSelectComboBox();
             LoadOrderUpdateLoadingForm1SelectComboBox();
             LoadOrderUpdateLoadingForm2SelectComboBox();
-
-            LoadOrderUpdateClientDiapasonCombobox();
-            LoadOrderUpdateTransporterDiapasonCombobox();
+            if (updateOrder != null)
+            {
+                if (updateOrder.ClientId.HasValue)
+                {
+                    LoadOrderUpdateClientDiapasonCombobox();
+                }
+                if (updateOrder.TransporterId.HasValue)
+                {
+                    LoadOrderUpdateTransporterDiapasonCombobox();
+                }
+            }
 
          
         }
@@ -1107,29 +1173,42 @@ namespace AtlantSovt
                     {
                         OrderUpdateTirCmrSelectComboBox.SelectedIndex = -1;
                     }
-                    if (updateOrder.ForwarderOrders.Where(f1 => f1.IsFirst == true).Count() != 0)
+                    if (updateOrder.ForwarderOrders.Where(f1 => f1.IsFirst == 1).Count() != 0)
                     {
                         OrderUpdateForwarder1SelectComboBox.SelectedIndex =
-                            OrderUpdateForwarder1SelectComboBox.FindString(updateOrder.ForwarderOrders.Where(f1 => f1.IsFirst == true).FirstOrDefault().Forwarder.Name
-                            + " , " + (updateOrder.ForwarderOrders.Where(f1 => f1.IsFirst == true).FirstOrDefault().Forwarder.Director)
-                            + " [" + (updateOrder.ForwarderOrders.Where(f1 => f1.IsFirst == true).FirstOrDefault().Forwarder.Id + "]"));
+                            OrderUpdateForwarder1SelectComboBox.FindString(updateOrder.ForwarderOrders.Where(f1 => f1.IsFirst == 1).FirstOrDefault().Forwarder.Name
+                            + " , " + (updateOrder.ForwarderOrders.Where(f1 => f1.IsFirst == 1).FirstOrDefault().Forwarder.Director)
+                            + " [" + (updateOrder.ForwarderOrders.Where(f1 => f1.IsFirst == 1).FirstOrDefault().Forwarder.Id + "]"));
                         SplitForwarder1OrderUpdate();
                     }
                     else
                     {
                         OrderUpdateForwarder1SelectComboBox.SelectedIndex = -1;
                     }
-                    if (updateOrder.ForwarderOrders.Where(f2 => f2.IsFirst == false).Count() != 0)
+                    if (updateOrder.ForwarderOrders.Where(f2 => f2.IsFirst == 2).Count() != 0)
                     {
                         OrderUpdateForwarder2SelectComboBox.SelectedIndex =
-                            OrderUpdateForwarder2SelectComboBox.FindString(updateOrder.ForwarderOrders.Where(f2 => f2.IsFirst == false).FirstOrDefault().Forwarder.Name
-                            + " , " + (updateOrder.ForwarderOrders.Where(f2 => f2.IsFirst == false).FirstOrDefault().Forwarder.Director)
-                            + " [" + (updateOrder.ForwarderOrders.Where(f2 => f2.IsFirst == false).FirstOrDefault().Forwarder.Id + "]"));
+                            OrderUpdateForwarder2SelectComboBox.FindString(updateOrder.ForwarderOrders.Where(f2 => f2.IsFirst == 2).FirstOrDefault().Forwarder.Name
+                            + " , " + (updateOrder.ForwarderOrders.Where(f2 => f2.IsFirst == 2).FirstOrDefault().Forwarder.Director)
+                            + " [" + (updateOrder.ForwarderOrders.Where(f2 => f2.IsFirst == 2).FirstOrDefault().Forwarder.Id + "]"));
                         SplitForwarder2OrderUpdate();
                     }
                     else
                     {
                         OrderUpdateForwarder2SelectComboBox.SelectedIndex = -1;
+                    }
+
+                    if (updateOrder.ForwarderOrders.Where(f3 => f3.IsFirst == 3).Count() != 0)
+                    {
+                        OrderUpdateForwarder3SelectComboBox.SelectedIndex =
+                            OrderUpdateForwarder3SelectComboBox.FindString(updateOrder.ForwarderOrders.Where(f3 => f3.IsFirst == 3).FirstOrDefault().Forwarder.Name
+                            + " , " + (updateOrder.ForwarderOrders.Where(f3 => f3.IsFirst == 3).FirstOrDefault().Forwarder.Director)
+                            + " [" + (updateOrder.ForwarderOrders.Where(f3 => f3.IsFirst == 3).FirstOrDefault().Forwarder.Id + "]"));
+                        SplitForwarder3OrderUpdate();
+                    }
+                    else
+                    {
+                        OrderUpdateForwarder3SelectComboBox.SelectedIndex = -1;
                     }
 
                     if (updateOrder.OrderLoadingForms.Where(lf1 => lf1.IsFirst == true).Count() != 0)
@@ -1163,8 +1242,8 @@ namespace AtlantSovt
                     }
                     if (updateOrder.YorU != null)
                     {
-                        OrderUpdateYOrUComboBox.SelectedIndex =
-                            OrderUpdateYOrUComboBox.FindString(updateOrder.YorU.ToString());
+                        OrderUpdatePersonalComboBox.SelectedIndex =
+                            OrderUpdatePersonalComboBox.FindString(updateOrder.YorU.ToString());
                     }
                     else
                     {
@@ -1712,6 +1791,7 @@ namespace AtlantSovt
             {
                 int part = 1000;
                 double clientPart = 0;
+                
                 if ((from c in db.Clients select c.Id).Count() != 0)
                 {
                     long clientCount = (from c in db.Clients select c.Id).Max();
@@ -1883,6 +1963,20 @@ namespace AtlantSovt
                 }
             }
         }
+
+        void LoadOrderUpdateForwarder3SelectComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from f in db.Forwarders
+                            orderby f.Id
+                            select f;
+                foreach (var item in query)
+                {
+                    OrderUpdateForwarder3SelectComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                }
+            }
+        }
         void SplitForwarder1OrderUpdate()
         {
             using (var db = new AtlantSovtContext())
@@ -1916,6 +2010,25 @@ namespace AtlantSovt
                 else
                 {
                     forwarder2OrderUpdate = null;
+                }
+            }
+        }
+
+        void SplitForwarder3OrderUpdate()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (OrderUpdateForwarder3SelectComboBox.SelectedIndex != -1 && OrderUpdateForwarder3SelectComboBox.Text == OrderUpdateForwarder3SelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderUpdateForwarder3SelectComboBox.SelectedItem.ToString();
+                    string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedNameAndDirector[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    forwarder3OrderUpdate = db.Forwarders.Find(id);
+                }
+                else
+                {
+                    forwarder3OrderUpdate = null;
                 }
             }
         }
@@ -2101,11 +2214,11 @@ namespace AtlantSovt
                         }
                         //4/////////////////////////////////////////////
 
-                        if ((OrderUpdateYOrUComboBox.SelectedIndex != -1 && OrderUpdateYOrUComboBox.Text == OrderUpdateYOrUComboBox.SelectedItem.ToString()))
+                        if ((OrderUpdatePersonalComboBox.SelectedIndex != -1 && OrderUpdatePersonalComboBox.Text == OrderUpdatePersonalComboBox.SelectedItem.ToString()))
                         {
                             if (updateOrder.YorU != "У")
                             {
-                                if(OrderAddYOrUComboBox.SelectedIndex == 0)
+                                if(OrderAddPersonalComboBox.SelectedIndex == 0)
                                 {
                                     updateOrder.YorU = "У";
                                     IsModified = true;
@@ -2113,7 +2226,7 @@ namespace AtlantSovt
                             }
                             else if (updateOrder.YorU != "I") 
                             {
-                                if (OrderAddYOrUComboBox.SelectedIndex == 1)
+                                if (OrderAddPersonalComboBox.SelectedIndex == 1)
                                 {
                                     updateOrder.YorU = "І";
                                     IsModified = true;
@@ -2307,9 +2420,9 @@ namespace AtlantSovt
                         {
                             if (forwarder1OrderUpdate != null)
                             {
-                                if (updateOrder.ForwarderOrders.Where(fo1 => fo1.IsFirst == true).Count() != 0) // якшо вже є
+                                if (updateOrder.ForwarderOrders.Where(fo1 => fo1.IsFirst == 1).Count() != 0) // якшо вже є
                                 {
-                                    ForwarderOrder UpdateForwarder1Order = db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(fo1 => fo1.IsFirst == true).FirstOrDefault();
+                                    ForwarderOrder UpdateForwarder1Order = db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(fo1 => fo1.IsFirst == 1).FirstOrDefault();
 
                                     if (UpdateForwarder1Order.Forwarder.Id != forwarder1OrderUpdate.Id) //якшо не то саме
                                     {
@@ -2324,7 +2437,7 @@ namespace AtlantSovt
                                     ForwarderOrder New_Forwarder1Order = new ForwarderOrder
                                     {
                                         ForwarderId = forwarder1OrderUpdate.Id,
-                                        IsFirst = true
+                                        IsFirst = 1
                                     };
                                     db.Orders.Find(updateOrder.Id).ForwarderOrders.Add(New_Forwarder1Order);
                                     db.Entry(New_Forwarder1Order).State = EntityState.Added;
@@ -2332,9 +2445,9 @@ namespace AtlantSovt
                                     MessageBox.Show("Успішно додано першого форму експедитора");
                                 }
                             }
-                            else if (updateOrder.ForwarderOrders.Where(fo1 => fo1.IsFirst == true).Count() != 0)
+                            else if (updateOrder.ForwarderOrders.Where(fo1 => fo1.IsFirst == 1).Count() != 0)
                             {
-                                db.Orders.Find(updateOrder.Id).ForwarderOrders.Remove(db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(f1 => f1.IsFirst == true).FirstOrDefault());
+                                db.Orders.Find(updateOrder.Id).ForwarderOrders.Remove(db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(fo1 => fo1.IsFirst == 1).FirstOrDefault());
                             }
                         }
                         catch (Exception ex)
@@ -2347,9 +2460,9 @@ namespace AtlantSovt
                         {
                             if (forwarder2OrderUpdate != null)
                             {
-                                if (updateOrder.ForwarderOrders.Where(fo2 => fo2.IsFirst == false).Count() != 0) // якшо вже є
+                                if (updateOrder.ForwarderOrders.Where(fo2 => fo2.IsFirst == 2).Count() != 0) // якшо вже є
                                 {
-                                    ForwarderOrder UpdateForwarder2Order = db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(fo2 => fo2.IsFirst == false).FirstOrDefault();
+                                    ForwarderOrder UpdateForwarder2Order = db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(fo2 => fo2.IsFirst == 2).FirstOrDefault();
 
                                     if (UpdateForwarder2Order.Forwarder.Id != forwarder2OrderUpdate.Id) //якшо не то саме
                                     {
@@ -2364,7 +2477,7 @@ namespace AtlantSovt
                                     ForwarderOrder New_Forwarder2Order = new ForwarderOrder
                                     {
                                         ForwarderId = forwarder2OrderUpdate.Id,
-                                        IsFirst = false
+                                        IsFirst = 2
                                     };
                                     db.Orders.Find(updateOrder.Id).ForwarderOrders.Add(New_Forwarder2Order);
                                     db.Entry(New_Forwarder2Order).State = EntityState.Added;
@@ -2372,9 +2485,9 @@ namespace AtlantSovt
                                     MessageBox.Show("Успішно додано другого експедитора");
                                 }
                             }
-                            else if (updateOrder.ForwarderOrders.Where(fo2 => fo2.IsFirst == false).Count() != 0)
+                            else if (updateOrder.ForwarderOrders.Where(fo2 => fo2.IsFirst == 2).Count() != 0)
                             {
-                                db.Orders.Find(updateOrder.Id).ForwarderOrders.Remove(db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(f2 => f2.IsFirst == false).FirstOrDefault());
+                                db.Orders.Find(updateOrder.Id).ForwarderOrders.Remove(db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(fo2 => fo2.IsFirst == 2).FirstOrDefault());
                             }
                         }
                         catch (Exception ex)
@@ -2382,6 +2495,47 @@ namespace AtlantSovt
                             Log.Write(ex);
                             MessageBox.Show("Помилка (2 експедитор)\n" + ex.Message);
                         }
+
+                        try
+                        {
+                            if (forwarder3OrderUpdate != null)
+                            {
+                                if (updateOrder.ForwarderOrders.Where(fo3 => fo3.IsFirst == 3).Count() != 0) // якшо вже є
+                                {
+                                    ForwarderOrder UpdateForwarder3Order = db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(fo3 => fo3.IsFirst == 3).FirstOrDefault();//TODO bool to int
+
+                                    if (UpdateForwarder3Order.Forwarder.Id != forwarder3OrderUpdate.Id) //якшо не то саме
+                                    {
+                                        UpdateForwarder3Order.ForwarderId = forwarder3OrderUpdate.Id;
+                                        db.Entry(UpdateForwarder3Order).State = EntityState.Modified;
+                                        db.SaveChanges();
+                                        MessageBox.Show("Успішно вибрано третього експедитора");
+                                    }
+                                }
+                                else
+                                {
+                                    ForwarderOrder New_Forwarder3Order = new ForwarderOrder
+                                    {
+                                        ForwarderId = forwarder3OrderUpdate.Id,
+                                        IsFirst = 3
+                                    };
+                                    db.Orders.Find(updateOrder.Id).ForwarderOrders.Add(New_Forwarder3Order);
+                                    db.Entry(New_Forwarder3Order).State = EntityState.Added;
+                                    db.SaveChanges();
+                                    MessageBox.Show("Успішно додано третього експедитора");
+                                }
+                            }
+                            else if (updateOrder.ForwarderOrders.Where(fo3 => fo3.IsFirst == 3).Count() != 0)
+                            {
+                                db.Orders.Find(updateOrder.Id).ForwarderOrders.Remove(db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(f3 => f3.IsFirst == 3).FirstOrDefault());
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Log.Write(ex);
+                            MessageBox.Show("Помилка (3 експедитор)\n" + ex.Message);
+                        }
+
                         if (IsModified)
                         {
                             db.Entry(updateOrder).State = EntityState.Modified;

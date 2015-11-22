@@ -114,6 +114,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TransporterCountryAndVehicleSelectForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вибір країн і типів транспорту";
             this.TopMost = true;
             this.ResumeLayout(false);

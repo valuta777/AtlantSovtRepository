@@ -69,6 +69,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TransporterShowAdditionalDetailsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додаткові параметри";
             ((System.ComponentModel.ISupportInitialize)(this.transporterShowAdditionalDetailsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transporterShowVehicleAdditionalDetailsGridView)).EndInit();

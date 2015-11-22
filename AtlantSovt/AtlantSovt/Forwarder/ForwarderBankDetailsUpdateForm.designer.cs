@@ -279,6 +279,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ForwarderBankDetailsUpdateForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Зміна банківських реквізитів";
             this.ResumeLayout(false);
             this.PerformLayout();

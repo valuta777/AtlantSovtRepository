@@ -83,6 +83,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ForwarderContactDeleteForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Видалення контакту";
             this.ResumeLayout(false);
             this.PerformLayout();
