@@ -70,9 +70,9 @@ namespace AtlantSovt
                     trackingShowCommentDataGridView.Columns[1].Width = 150;
                     trackingShowCommentDataGridView.Columns[2].Width = 150;
 
-                  var query3 =
-                    from add in db.OrderDownloadAddresses
-                    where add.OrderId == TrackingClikedId
+                    var query3 =
+                  from add in db.OrderDownloadAddresses
+                  where add.OrderId == TrackingClikedId
                   select new
                   {
                       country = add.DownloadAddress.Country.Name,
@@ -136,22 +136,22 @@ namespace AtlantSovt
                 if (showTrackingOnlyActive.Checked != true && isDatePickerEnabled != true && trackingShowSearchTextBox.Text == "")// 0 0 0
                 {
                     var queryTextAndDate =
-                    from o in db.Orders
-                    orderby o.Id
-                    select
-                    new
-                    {
-                        Id = o.Id,
-                        OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
-                        YorU = o.YorU,
-                        ClientName = o.Client.Name,
-                        TransporterName = o.Transporter.FullName,
-                        DownloadDate = o.DownloadDate,
-                        State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
+                   from o in db.Orders
+                   orderby o.Id
+                   select
+                   new
+                   {
+                       Id = o.Id,
+                       OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
+                       YorU = o.YorU,
+                       ClientName = o.Client.Name,
+                       TransporterName = o.Transporter.FullName,
+                       DownloadDate = o.DownloadDate,
+                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
                         CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
-                        Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
+                       Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
 
-                    };
+                   };
                     trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
                     trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
                     trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
@@ -171,19 +171,19 @@ namespace AtlantSovt
                          o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text)))
                    orderby o.Id
                    select
-                    new
-                    {
-                        Id = o.Id,
-                        OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
-                        YorU = o.YorU,
-                        ClientName = o.Client.Name,
-                        TransporterName = o.Transporter.FullName,
-                        DownloadDate = o.DownloadDate,
-                        State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
+                   new
+                   {
+                       Id = o.Id,
+                       OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
+                       YorU = o.YorU,
+                       ClientName = o.Client.Name,
+                       TransporterName = o.Transporter.FullName,
+                       DownloadDate = o.DownloadDate,
+                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
                         CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
-                        Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
+                       Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
 
-                    };
+                   };
                     trackingShowDataGridView.DataSource = queryTextAndDate.ToList();
                     trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
                     trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
@@ -413,19 +413,19 @@ namespace AtlantSovt
                     CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                     Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
 
-                };
+                  };
                 trackingShowDataGridView.DataSource = query.ToList();
-                trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
+                    trackingShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
+                    trackingShowDataGridView.Columns[1].HeaderText = "Номер заявки";
                 trackingShowDataGridView.Columns[2].HeaderText = "Працівник";
-                trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
-                trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
-                trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
-                trackingShowDataGridView.Columns[6].HeaderText = "Стан";
+                    trackingShowDataGridView.Columns[3].HeaderText = "Клієнт";
+                    trackingShowDataGridView.Columns[4].HeaderText = "Перевізник";
+                    trackingShowDataGridView.Columns[5].HeaderText = "Дата завантаження";
+                    trackingShowDataGridView.Columns[6].HeaderText = "Стан";
                 trackingShowDataGridView.Columns[7].HeaderText = "Дата закриття";
                 trackingShowDataGridView.Columns[8].HeaderText = "Мова";
 
-            }
+                }
             trackingShowDataGridView.Update();
             trackingShowDataGridView.ClearSelection();
         }
@@ -497,9 +497,9 @@ namespace AtlantSovt
                         if (orderDocument.DownloadDate == null) isOrderFull = false;
                         if (orderDocument.UploadDate == null) isOrderFull = false;
 
-                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).Count() == 1)
+                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).Count() == 1)
                         {
-                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder.ForwarderStamp.Stamp == null)
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.ForwarderStamp.Stamp == null)
                             {
                                 isOrderFull = false;
                             }
@@ -508,9 +508,9 @@ namespace AtlantSovt
                         {
                             isOrderFull = false;
                         }
-                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).Count() == 1)
+                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).Count() == 1)
                         {
-                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder.ForwarderStamp.Stamp == null)
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder.ForwarderStamp.Stamp == null)
                             {
                                 isOrderFull = false;
                             }
@@ -519,6 +519,8 @@ namespace AtlantSovt
                         {
                             isOrderFull = false;
                         }
+
+                        //TODO 3 forwarder
 
                         if (orderDocument.OrderLoadingForms.Where(l => l.IsFirst == true).Count() == 1)
                         {
@@ -656,15 +658,15 @@ namespace AtlantSovt
                         dateTerms = (orderDocument.DownloadDate == null || orderDocument.DownloadDate.Value.ToString("dd.mm") == "") ? "" : orderDocument.DownloadDate.Value.ToString("dd.mm") + " - ";
                         dateTerms += (orderDocument.UploadDate == null || orderDocument.UploadDate.Value.ToShortDateString() == "") ? "" : orderDocument.UploadDate.Value.ToShortDateString() + " до " + orderDocument.UploadDate.Value.ToShortTimeString();
 
-                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).Count() == 1)
+                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).Count() == 1)
                         {
-                            forwarderName1 = orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder.Name;
+                            forwarderName1 = orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.Name;
                         }
-                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).Count() == 1)
+                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).Count() == 1)
                         {
-                            forwarderName2 = orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder.Name;
+                            forwarderName2 = orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder.Name;
                         }
-
+                        //TODO 3 forwarder
                         if (orderDocument.OrderLoadingForms.Where(l => l.IsFirst == true).Count() == 1)
                         {
                             loadingForm1 = orderDocument.OrderLoadingForms.Where(l => l.IsFirst == true).FirstOrDefault().LoadingForm.Type;
@@ -781,24 +783,25 @@ namespace AtlantSovt
                         ReplaseWordStub("{TransporterName}", transporterName, wordDocument);
 
 
-                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).Count() == 1)
+                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).Count() == 1)
                         {
-                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder.ForwarderStamp.Stamp != null)
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.ForwarderStamp.Stamp != null)
                             {
-                                AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == true).FirstOrDefault().Forwarder), "{Stamp1}");
+                                AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder), "{Stamp1}");
                                 Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", ""), true);
                                 Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Release", ""));
                             }
                         }
-                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).Count() == 1)
+                        if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).Count() == 1)
                         {
-                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder.ForwarderStamp.Stamp != null && orderDocument.Language == 0)
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder.ForwarderStamp.Stamp != null && orderDocument.Language == 0)
                             {
-                                AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == false).FirstOrDefault().Forwarder), "{Stamp2}");
+                                AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder), "{Stamp2}");
                                 Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", ""), true);
                                 Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Release", ""));
                             }
                         }
+                        //TODO 3 forwarder
 
                         if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                         {

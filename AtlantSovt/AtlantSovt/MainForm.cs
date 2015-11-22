@@ -318,7 +318,6 @@ namespace AtlantSovt
             geographyAddressClientTextBox.Text = "";
             workDocumentClientComboBox.Text = "";
             taxPayerStatusClientComboBox.Text = "";
-            originalClientCheckBox.Checked = false;
             geographyAddressClientTextBox.Text = "";
             commentClientTextBox.Text = "";
             clientTaxPayerStatus = null;
@@ -353,29 +352,6 @@ namespace AtlantSovt
             //SplitLoadTaxPayerStatusClientAddInfo();
         }
 
-        private void originalCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (originalClientCheckBox.Checked)
-            {
-                faxClientCheckBox.CheckState = CheckState.Unchecked;
-            }
-            else
-            {
-                faxClientCheckBox.CheckState = CheckState.Checked;
-            }
-        }
-
-        private void faxCheckBox_CheckStateChanged(object sender, EventArgs e)
-        {
-            if (faxClientCheckBox.Checked)
-            {
-                originalClientCheckBox.CheckState = CheckState.Unchecked;
-            }
-            else
-            {
-                originalClientCheckBox.CheckState = CheckState.Checked;
-            }
-        }
         #endregion
 
                 //Update 
@@ -415,37 +391,6 @@ namespace AtlantSovt
             LoadTaxPayerStatusClientUpdateInfoComboBox();
             taxPayerStatusClientUpdateComboBox.DroppedDown = true;
 
-        }
-
-        private void originalClientUpdateCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            
-            if (originalClientUpdateCheckBox.Checked)
-            {
-                faxClientUpdateCheckBox.CheckState = CheckState.Unchecked;
-                clientOriginalChanged = true;
-                clientFaxChanged = false;
-            }
-            else
-            {
-                faxClientUpdateCheckBox.CheckState = CheckState.Checked;
-            }
-        }
-
-        private void faxClientUpdateCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            
-            if (faxClientUpdateCheckBox.Checked)
-            {
-                originalClientUpdateCheckBox.CheckState = CheckState.Unchecked;
-                clientOriginalChanged = false;
-                clientFaxChanged = true;
-            }
-            else
-            {
-                originalClientUpdateCheckBox.CheckState = CheckState.Checked;
-
-            }
         }
 
         private void workDocumentClientUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -1257,29 +1202,9 @@ namespace AtlantSovt
             transporterAddTaxPayerStatusFlag = true;
         }
 
-        private void originalTransporterAddCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (originalTransporterAddCheckBox.Checked)
-            {
-                faxTransporterAddCheckBox.CheckState = CheckState.Unchecked;
-            }
-            else
-            {
-                faxTransporterAddCheckBox.CheckState = CheckState.Checked;
-            }
-        }
 
-        private void faxTransporterAddCheckBox_CheckStateChanged(object sender, EventArgs e)
-        {
-            if (faxTransporterAddCheckBox.Checked)
-            {
-                originalTransporterAddCheckBox.CheckState = CheckState.Unchecked;
-            }
-            else
-            {
-                originalTransporterAddCheckBox.CheckState = CheckState.Checked;
-            }
-        }
+
+
 
         private void transporterAddButton_Click(object sender, EventArgs e)
         {
@@ -1293,7 +1218,6 @@ namespace AtlantSovt
             geographyAddressTransporterAddTextBox.Text = "";
             workDocumentTransporterAddComboBox.Text = "";
             taxPayerStatusTransporterAddComboBox.Text = "";
-            originalTransporterAddCheckBox.Checked = true;
             transporterWorkDocument = null;
             transporterTaxPayerStatus = null;
 
@@ -1345,34 +1269,9 @@ namespace AtlantSovt
             taxPayerStatusTransporterUpdateComboBox.DroppedDown = true;
         }
 
-        private void originalTransporterUpdateCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (originalTransporterUpdateCheckBox.Checked)
-            {
-                faxTransporterUpdateCheckBox.CheckState = CheckState.Unchecked;
-                transporterOriginalChanged = true;
-                transporterFaxChanged = false;
-            }
-            else
-            {
-                faxTransporterUpdateCheckBox.CheckState = CheckState.Checked;
-            }
-        }
 
-        private void faxTransporterUpdateCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
 
-            if (faxTransporterUpdateCheckBox.Checked)
-            {
-                originalTransporterUpdateCheckBox.CheckState = CheckState.Unchecked;
-                transporterOriginalChanged = false;
-                transporterFaxChanged = true;
-            }
-            else
-            {
-                originalTransporterUpdateCheckBox.CheckState = CheckState.Checked;
-            }
-        }
+
 
         private void workDocumentTransporterUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1970,7 +1869,6 @@ namespace AtlantSovt
             OrderAddTransporterSelectComboBox.Items.Clear();
             LoadOrderAddTransporterSelectComboBox();
             OrderAddTransporterSelectComboBox.DroppedDown = true;
-            OrderAddForwarder2SelectComboBox.Enabled = true;
         }
 
         private void OrderAddForwarder1SelectComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -1985,6 +1883,13 @@ namespace AtlantSovt
             OrderAddForwarder2SelectComboBox.Items.Clear();
             LoadOrderAddForwarder2SelectComboBox();
             OrderAddForwarder2SelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderAddForwarder3SelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAddForwarder3SelectComboBox.Items.Clear();
+            LoadOrderAddForwarder3SelectComboBox();
+            OrderAddForwarder3SelectComboBox.DroppedDown = true;
         }
 
         private void OrderAddClientSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -2015,7 +1920,14 @@ namespace AtlantSovt
         {
             SplitForwarder2OrderAdd();
         }
-
+        private void OrderAddForwarder3SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitForwarder3OrderAdd();
+        }
+        private void OrderAddForwarder3SelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitForwarder3OrderAdd();
+        }
         private void OrderAddTransporterSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitTransporterOrderAdd();
@@ -2308,7 +2220,7 @@ namespace AtlantSovt
 
         private void OrderAddYOrUComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            OrderAddYOrUComboBox.DroppedDown = true;
+            OrderAddPersonalComboBox.DroppedDown = true;
         }
 
         //ORDER UPDATE
@@ -2331,8 +2243,8 @@ namespace AtlantSovt
         private void OrderUpdateOrderSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {   
             ClearAllBoxesOrderUpdate();
-            LoadAllFieldsOrderUpdate();
             SplitOrderOrderUpdate();
+            LoadAllFieldsOrderUpdate();
             SelectAllFieldsOrderUpdate();
         }
 
@@ -2375,8 +2287,9 @@ namespace AtlantSovt
             OrderUpdateTransporterSelectComboBox.Items.Clear();
             LoadOrderUpdateTransporterSelectComboBox();
             OrderUpdateTransporterSelectComboBox.DroppedDown = true;
-            OrderUpdateForwarder2SelectComboBox.Enabled = true;
         }
+
+
 
         private void OrderUpdateForwarder1SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
@@ -2390,6 +2303,13 @@ namespace AtlantSovt
             OrderUpdateForwarder2SelectComboBox.Items.Clear();
             LoadOrderUpdateForwarder2SelectComboBox();
             OrderUpdateForwarder2SelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderUpdateForwarder3SelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderUpdateForwarder3SelectComboBox.Items.Clear();
+            LoadOrderUpdateForwarder3SelectComboBox();
+            OrderUpdateForwarder3SelectComboBox.DroppedDown = true;
         }
 
         private void OrderUpdateClientSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -2415,6 +2335,14 @@ namespace AtlantSovt
         private void OrderUpdateForwarder2SelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitForwarder2OrderUpdate();
+        }
+        private void OrderUpdateForwarder3SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitForwarder3OrderUpdate();
+        }
+        private void OrderUpdateForwarder3SelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitForwarder3OrderUpdate();
         }
 
         private void OrderUpdateTransporterSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -2698,7 +2626,7 @@ namespace AtlantSovt
 
         private void OrderUpdateYOrUComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            OrderUpdateYOrUComboBox.DroppedDown = true;
+            OrderUpdatePersonalComboBox.DroppedDown = true;
         }
 
         private void OrderAddLanduageSelectComboBox_MouseClick(object sender, MouseEventArgs e)

@@ -15,7 +15,7 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long? OrderId { get; set; }
 
-        public bool IsFirst { get; set; }
+        public int IsFirst { get; set; }
 
         public virtual Forwarder Forwarder { get; set; }
 
