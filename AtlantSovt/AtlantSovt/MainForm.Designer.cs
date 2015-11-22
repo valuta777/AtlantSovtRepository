@@ -4955,7 +4955,6 @@
             this.label66.Size = new System.Drawing.Size(145, 21);
             this.label66.TabIndex = 129;
             this.label66.Text = "Дата доставки | До";
-            this.label66.Click += new System.EventHandler(this.label66_Click);
             // 
             // OrderAddUpload2DateTimePicker
             // 

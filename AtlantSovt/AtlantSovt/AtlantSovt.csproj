@@ -380,9 +380,6 @@
     <Compile Include="Transporter\TransporterShowFiltrationForm.Designer.cs">
       <DependentUpon>TransporterShowFiltrationForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddTrackingCloseDateForm.resx">
-      <DependentUpon>AddTrackingCloseDateForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddTransporterVehicleForm.resx">
       <DependentUpon>AddTransporterVehicleForm.cs</DependentUpon>
     </EmbeddedResource>
