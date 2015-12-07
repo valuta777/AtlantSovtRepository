@@ -7862,6 +7862,7 @@ namespace AtlantSovt
                 else
                 {
                     MessageBox.Show("Немає жодних записів");
+                    transporterDeleteComboBox.Enabled = false;
                 }
             }
         }

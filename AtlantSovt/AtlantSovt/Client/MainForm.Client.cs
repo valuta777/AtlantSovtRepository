@@ -741,6 +741,7 @@ namespace AtlantSovt
                 else
                 {
                     MessageBox.Show("Немає жодних записів");
+                    deleteClientComboBox.Enabled = false;
                 }
             }
         }
