@@ -63,9 +63,9 @@ namespace AtlantSovt.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap add {
+        internal static System.Drawing.Bitmap addButton {
             get {
-                object obj = ResourceManager.GetObject("add", resourceCulture);
+                object obj = ResourceManager.GetObject("addButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

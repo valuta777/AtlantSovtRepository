@@ -19,6 +19,21 @@ namespace AtlantSovt
             InitializeComponent();
         }
 
+        public AddTransporterVehicleForm(TransporterCountryAndVehicleSelectForm form)
+        {
+            InitializeComponent();
+            this.addForm = form;
+        }
+
+        public AddTransporterVehicleForm(TransporterCountryUpdateVehicleSelectForm form)
+        {
+            InitializeComponent();
+            this.updateForm = form;
+        }
+
+        private TransporterCountryAndVehicleSelectForm addForm { get; set; }
+        private TransporterCountryUpdateVehicleSelectForm updateForm { get; set; }
+
         public void AddVehicle()
         {
             using (var db = new AtlantSovtContext())
@@ -49,6 +64,15 @@ namespace AtlantSovt
         private void addVehicleButton_Click(object sender, EventArgs e)
         {
             AddVehicle();
+            if (this.addForm != null)
+            {
+                this.addForm.LoadVehicleToChechedBoxList();
+            }
+            if (this.updateForm != null)
+            {
+                this.updateForm.LoadVehicleToChechedBoxList();
+                this.updateForm.LoadTransporterVehicleToChechedBoxList();
+            }
             this.Dispose();
         }
     }

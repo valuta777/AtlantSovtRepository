@@ -47,7 +47,6 @@
             this.transporterUpdateFilterSelectCountryCheckedListBox.Name = "transporterUpdateFilterSelectCountryCheckedListBox";
             this.transporterUpdateFilterSelectCountryCheckedListBox.Size = new System.Drawing.Size(701, 148);
             this.transporterUpdateFilterSelectCountryCheckedListBox.TabIndex = 103;
-            this.transporterUpdateFilterSelectCountryCheckedListBox.DoubleClick += new System.EventHandler(this.transporterUpdateFilterSelectCountryCheckedListBox_DoubleClick);
             // 
             // transporterUpdateFilterSelectVehicleCheckedListBox
             // 
@@ -63,7 +62,6 @@
             this.transporterUpdateFilterSelectVehicleCheckedListBox.Name = "transporterUpdateFilterSelectVehicleCheckedListBox";
             this.transporterUpdateFilterSelectVehicleCheckedListBox.Size = new System.Drawing.Size(701, 148);
             this.transporterUpdateFilterSelectVehicleCheckedListBox.TabIndex = 104;
-            this.transporterUpdateFilterSelectVehicleCheckedListBox.DoubleClick += new System.EventHandler(this.transporterUpdateFilterSelectVehicleCheckedListBox_DoubleClick);
             // 
             // transporterUpdateFilterSelectButton
             // 

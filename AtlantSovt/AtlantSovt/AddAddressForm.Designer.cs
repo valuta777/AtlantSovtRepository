@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAddressForm));
             this.addressAddCountryCodeTextBox = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
             this.addressAddCountryNameComboBox = new System.Windows.Forms.ComboBox();
@@ -84,7 +83,7 @@
             // addressAddCountryAddButton
             // 
             this.addressAddCountryAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addressAddCountryAddButton.Image = ((System.Drawing.Image)(resources.GetObject("addressAddCountryAddButton.Image")));
+            this.addressAddCountryAddButton.Image = global::AtlantSovt.Properties.Resources.addButton;
             this.addressAddCountryAddButton.Location = new System.Drawing.Point(382, 32);
             this.addressAddCountryAddButton.Name = "addressAddCountryAddButton";
             this.addressAddCountryAddButton.Size = new System.Drawing.Size(31, 30);

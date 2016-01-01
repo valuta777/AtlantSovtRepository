@@ -148,7 +148,7 @@ namespace AtlantSovt
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = o.DownloadDate,
                        State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
-                        CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
+                       CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                        Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
 
                    };
@@ -440,29 +440,38 @@ namespace AtlantSovt
                     TrackingClikedId = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
                     order = db.Orders.Find(TrackingClikedId);
 
-                    if (order.State == true)
+                    if (order.IndexNumber != null)
                     {
-                        AddTrackingCloseDateForm closeDateForm = new AddTrackingCloseDateForm(this);
-                        closeDateForm.Id = TrackingClikedId;
-                        closeDateForm.Show();
-                    }
-                    else if (order.State == false)
-                    {
-                        if (MessageBox.Show("Заявка вже закрита, змінити дату закриття?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (order.State == true)
                         {
                             AddTrackingCloseDateForm closeDateForm = new AddTrackingCloseDateForm(this);
                             closeDateForm.Id = TrackingClikedId;
                             closeDateForm.Show();
                         }
-                    }
-                    else if (!order.State.HasValue)
-                    {
-                        if (MessageBox.Show("Заявка ще не створена, все рівно закрити?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        else if (order.State == false)
                         {
-                            AddTrackingCloseDateForm closeDateForm = new AddTrackingCloseDateForm(this);
-                            closeDateForm.Id = TrackingClikedId;
-                            closeDateForm.Show();
+                            if (MessageBox.Show("Заявка вже закрита, змінити дату закриття?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                AddTrackingCloseDateForm closeDateForm = new AddTrackingCloseDateForm(this);
+                                closeDateForm.Id = TrackingClikedId;
+                                closeDateForm.Show();
+                            }
                         }
+                        else if (!order.State.HasValue)
+                        {
+                            if (MessageBox.Show("Заявка ще не створена, все рівно закрити?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                AddTrackingCloseDateForm closeDateForm = new AddTrackingCloseDateForm(this);
+                                closeDateForm.Id = TrackingClikedId;
+                                closeDateForm.Show();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Заявці не призначено номер, спочатку створіть документ");
+                        return;
+                        
                     }
                 }
                 catch (Exception ex)
