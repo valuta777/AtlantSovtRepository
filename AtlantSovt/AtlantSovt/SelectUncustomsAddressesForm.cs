@@ -145,7 +145,7 @@ namespace AtlantSovt
             }
         }
 
-        void LoadClientUncustomsAddresses()
+        public void LoadClientUncustomsAddresses()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -167,7 +167,7 @@ namespace AtlantSovt
 
         private void addUncustomsAddressButton_Click(object sender, EventArgs e)
         {
-            AddAddressForm addUncustomsAddressForm = new AddAddressForm(client, 4);
+            AddAddressForm addUncustomsAddressForm = new AddAddressForm(client, 4, this);
             addUncustomsAddressForm.Show();
         }
 

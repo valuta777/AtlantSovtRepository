@@ -118,6 +118,6 @@
         private System.Windows.Forms.Button addCustomsAddressesButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button addCustomsAddressesToOrderButton;
-        private System.Windows.Forms.CheckedListBox customsAddressesListBox;
+        public System.Windows.Forms.CheckedListBox customsAddressesListBox;
     }
 }

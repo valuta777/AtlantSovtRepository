@@ -118,6 +118,6 @@
         private System.Windows.Forms.Button addUploadAddressButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button addUploadAdressesToOrderButton;
-        private System.Windows.Forms.CheckedListBox uploadAddressListBox;
+        public System.Windows.Forms.CheckedListBox uploadAddressListBox;
     }
 }

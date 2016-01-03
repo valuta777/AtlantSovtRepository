@@ -118,6 +118,6 @@
         private System.Windows.Forms.Button addDownloadAddressButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button addDownloadAddressToOrderButton;
-        private System.Windows.Forms.CheckedListBox downloadAddresssListBox;
+        public System.Windows.Forms.CheckedListBox downloadAddresssListBox;
     }
 }

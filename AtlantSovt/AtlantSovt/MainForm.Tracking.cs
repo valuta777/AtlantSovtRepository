@@ -638,7 +638,7 @@ namespace AtlantSovt
                 using (var db = new AtlantSovtContext())
                 {
                     wordApp.Visible = false;
-                    wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((orderDocument.Language == 0) ? @"Resources\ukrOrder.docx" : (orderDocument.Language == 1) ? @"Resources\polOrder.docx" : @"Resources\gerOrder.docx")).Replace("\\bin\\Release", ""));
+                    wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((orderDocument.Language == 0) ? @"Resources\ukrOrder.docx" : (orderDocument.Language == 1) ? @"Resources\polOrder.docx" : @"Resources\gerOrder.docx")).Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""));
                     orderDocument = db.Orders.Find(ClikedId);
 
                     if (orderDocument != null)
@@ -664,7 +664,7 @@ namespace AtlantSovt
                         downloadDate = ((orderDocument.DownloadDate == null || orderDocument.DownloadDate.Value.ToShortDateString() == "") ? "" : orderDocument.DownloadDate.Value.ToShortDateString()) +" на ";
                         downloadDate += (orderDocument.DownloadDate == null || orderDocument.DownloadDate.Value.ToShortTimeString() == "") ? "" : orderDocument.DownloadDate.Value.ToShortTimeString();
                       
-                        dateTerms = (orderDocument.DownloadDate == null || orderDocument.DownloadDate.Value.ToString("dd.mm") == "") ? "" : orderDocument.DownloadDate.Value.ToString("dd.mm") + " - ";
+                        dateTerms = (orderDocument.DownloadDate == null || orderDocument.DownloadDate.Value.ToString("dd.MM") == "") ? "" : orderDocument.DownloadDate.Value.ToString("dd.MM") + " - ";
                         dateTerms += (orderDocument.UploadDate == null || orderDocument.UploadDate.Value.ToShortDateString() == "") ? "" : orderDocument.UploadDate.Value.ToShortDateString() + " до " + orderDocument.UploadDate.Value.ToShortTimeString();
 
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).Count() == 1)
@@ -797,8 +797,8 @@ namespace AtlantSovt
                             if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.ForwarderStamp.Stamp != null)
                             {
                                 AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder), "{Stamp1}");
-                                Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", ""), true);
-                                Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Release", ""));
+                                Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""), true);
+                                Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""));
                             }
                         }
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).Count() == 1)
@@ -806,8 +806,8 @@ namespace AtlantSovt
                             if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder.ForwarderStamp.Stamp != null && orderDocument.Language == 0)
                             {
                                 AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder), "{Stamp2}");
-                                Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", ""), true);
-                                Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Release", ""));
+                                Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""), true);
+                                Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""));
                             }
                         }
                         //TODO 3 forwarder
@@ -841,7 +841,10 @@ namespace AtlantSovt
             catch (System.Runtime.InteropServices.COMException wordException)
             {
                 Log.Write(wordException);
-                wordDocument.Close(Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges);
+                if (wordDocument != null)
+                {
+                    wordDocument.Close(Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges);
+                }
                 MessageBox.Show("Помилка, спробуйте ще раз");
             }
         }

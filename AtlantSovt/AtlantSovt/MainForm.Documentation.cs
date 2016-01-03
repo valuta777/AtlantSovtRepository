@@ -763,7 +763,6 @@ namespace AtlantSovt
                     wordApp.Visible = false;
                     wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((contract.Language == 1) ? @"Resources\ukrDocumentationTransporterForwarder.docx" : (contract.Language == 2) ? @"Resources\engDocumentationTransporterForwarder.docx" : @"Resources\gerDocumentationTransporterForwarder.docx")).Replace("\\bin\\Release", ""));
 
-
                     if (contract != null)
                     {
                         string title;
@@ -946,7 +945,7 @@ namespace AtlantSovt
             MemoryStream mStream = new MemoryStream(forwarder.ForwarderStamp.Stamp);
             
             Image stamp = Image.FromStream(mStream);
-            path = (System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\" + forwarder.Id + ".png").Replace("\\bin\\Release", "");
+            path = (System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\" + forwarder.Id + ".png").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", "");
             stamp.Save(path);
             
             return path;
@@ -972,6 +971,20 @@ namespace AtlantSovt
             range.Find.ClearFormatting();
             range.Find.Execute(FindText: stubToReplace, ReplaceWith: text, Replace: Word.WdReplace.wdReplaceAll);
             
+        }
+
+        void GetDocumentFiles()
+        {
+            contractFilecheckedListBox.Items.Clear();
+
+            string[] files = Directory.GetFiles((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Contracts\").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""), "*.docx");
+            
+            foreach (string file in files)
+            {
+                string fileName = Path.GetFileNameWithoutExtension(file);
+                string filePath = Path.GetFullPath(file);
+                contractFilecheckedListBox.Items.Add(fileName);
+            }
         }
     }
 }
