@@ -2636,6 +2636,34 @@ namespace AtlantSovt
             }
         }
 
+        private void OrderAddDownloadDateFromTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            if (OrderAddDownloadDateToTimePicker.Checked)
+            {
+                OrderAddDownloadDateToTimePicker.MinDate = OrderAddDownloadDateFromTimePicker.Value.AddDays(1);
+            }
+            else
+            {
+                OrderAddDownloadDateToTimePicker.MinDate = OrderAddDownloadDateFromTimePicker.Value.AddDays(1);
+                OrderAddDownloadDateToTimePicker.Value = OrderAddDownloadDateToTimePicker.MinDate;
+                OrderAddDownloadDateToTimePicker.Checked = false;
+            }
+        }
+
+        private void OrderAddUploadDateFromTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            if (OrderAddUploadDateToTimePicker.Checked)
+            {
+                OrderAddUploadDateToTimePicker.MinDate = OrderAddUploadDateFromTimePicker.Value.AddDays(1);
+            }
+            else
+            {
+                OrderAddUploadDateToTimePicker.MinDate = OrderAddUploadDateFromTimePicker.Value.AddDays(1);
+                OrderAddUploadDateToTimePicker.Value = OrderAddUploadDateToTimePicker.MinDate;
+                OrderAddUploadDateToTimePicker.Checked = false;
+            }
+        }
+
         private void OrderUpdateLoadingForm1AddButton_Click(object sender, EventArgs e)
         {
             AddLoadingFormForm updateLoadingFormForm = new AddLoadingFormForm();
