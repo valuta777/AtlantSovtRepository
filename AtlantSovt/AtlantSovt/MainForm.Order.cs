@@ -63,8 +63,13 @@ namespace AtlantSovt
                     TrailerId = (trailerOrderAdd != null) ? (long?)trailerOrderAdd.Id : null,
                     TransporterId = (transporterOrderAdd != null) ? (long?)transporterOrderAdd.Id : null,
                     Date = OrderAddDateSelectDateTimePicker.Value,
-                    DownloadDate =  OrderAddDownloadDateTimePicker.Checked ? (DateTime?)OrderAddDownloadDateTimePicker.Value : null,
-                    UploadDate = OrderAddUploadDateTimePicker.Checked ? (DateTime?)OrderUpdateDownloadDateTimePicker.Value : null,
+
+                    DownloadDateFrom =  OrderAddDownloadDateFromTimePicker.Checked ? (DateTime?)OrderAddDownloadDateFromTimePicker.Value : null,
+                    UploadDateFrom = OrderAddUploadDateFromTimePicker.Checked ? (DateTime?)OrderAddUploadDateFromTimePicker.Value : null,
+
+                    DownloadDateTo = OrderAddDownloadDateToTimePicker.Checked ? (DateTime?)OrderAddDownloadDateToTimePicker.Value : null,
+                    UploadDateTo = OrderAddUploadDateToTimePicker.Checked ? (DateTime?)OrderAddUploadDateToTimePicker.Value : null,
+
                     State = null,
                     YorU = ((OrderAddPersonalComboBox.SelectedIndex != -1 && OrderAddPersonalComboBox.Text == OrderAddPersonalComboBox.SelectedItem.ToString())) ? ((OrderAddPersonalComboBox.SelectedIndex == 0) ? "У" : "І") : null,
                     Language = (OrderAddLanduageSelectComboBox.SelectedIndex != -1 && OrderAddLanduageSelectComboBox.Text == OrderAddLanduageSelectComboBox.SelectedItem.ToString()) ? (OrderAddLanduageSelectComboBox.SelectedIndex == 0) ? (byte?)0 : (OrderAddLanduageSelectComboBox.SelectedIndex == 1) ? (byte?)1 : (byte?)2 : null
@@ -969,8 +974,8 @@ namespace AtlantSovt
             OrderUpdateLoadingForm2SelectComboBox.Items.Clear();
 
             OrderUpdateDateDateTimePicker.Checked = false;                    
-            OrderUpdateDownloadDateTimePicker.Checked = false;
-            OrderUpdateUploadDateTimePicker.Checked = false;
+            OrderUpdateDownloadDateFromTimePicker.Checked = false;
+            OrderUpdateUploadDateFromTimePicker.Checked = false;
             
 
             OrderUpdateWeightTextBox.Text = "";
@@ -1333,24 +1338,47 @@ namespace AtlantSovt
                         OrderUpdateDateDateTimePicker.Checked = false;
                     }
                     
-                    if (updateOrder.DownloadDate != null)
+                    //from
+                    if (updateOrder.DownloadDateFrom != null)
                     {
-                        OrderUpdateDownloadDateTimePicker.Checked = true;
-                        OrderUpdateDownloadDateTimePicker.Value = updateOrder.DownloadDate.Value;
+                        OrderUpdateDownloadDateFromTimePicker.Checked = true;
+                        OrderUpdateDownloadDateFromTimePicker.Value = updateOrder.DownloadDateFrom.Value;
                     }
                     else
                     {
-                        OrderUpdateDownloadDateTimePicker.Checked = false;
+                        OrderUpdateDownloadDateFromTimePicker.Checked = false;
                     }
                     
-                    if (updateOrder.UploadDate != null)
+                    if (updateOrder.UploadDateFrom != null)
                     {
-                        OrderUpdateUploadDateTimePicker.Checked = true;
-                        OrderUpdateUploadDateTimePicker.Value = updateOrder.UploadDate.Value;
+                        OrderUpdateUploadDateFromTimePicker.Checked = true;
+                        OrderUpdateUploadDateFromTimePicker.Value = updateOrder.UploadDateFrom.Value;
                     }
                     else
                     {
-                        OrderUpdateUploadDateTimePicker.Checked = false;
+                        OrderUpdateUploadDateFromTimePicker.Checked = false;
+                    }
+
+
+                    //to
+                    if (updateOrder.DownloadDateTo != null)
+                    {
+                        OrderUpdateDownloadDateToTimePicker.Checked = true;
+                        OrderUpdateDownloadDateToTimePicker.Value = updateOrder.DownloadDateTo.Value;
+                    }
+                    else
+                    {
+                        OrderUpdateDownloadDateToTimePicker.Checked = false;
+                    }
+
+                    if (updateOrder.UploadDateTo != null)
+                    {
+                        OrderUpdateUploadDateToTimePicker.Checked = true;
+                        OrderUpdateUploadDateToTimePicker.Value = updateOrder.UploadDateTo.Value;
+                    }
+                    else
+                    {
+                        OrderUpdateUploadDateToTimePicker.Checked = false;
                     }
                 }
             }
@@ -2307,35 +2335,63 @@ namespace AtlantSovt
                             updateOrder.Date = OrderUpdateDateDateTimePicker.Value;
                             IsModified = true;
                         }
-
-                        if (OrderUpdateDownloadDateTimePicker.Checked)
+                        //from
+                        if (OrderUpdateDownloadDateFromTimePicker.Checked)
                         {
-                            if (updateOrder.DownloadDate != OrderUpdateDownloadDateTimePicker.Value)
+                            if (updateOrder.DownloadDateFrom != OrderUpdateDownloadDateFromTimePicker.Value)
                             {
-                                updateOrder.DownloadDate = OrderUpdateDownloadDateTimePicker.Value;
+                                updateOrder.DownloadDateFrom = OrderUpdateDownloadDateFromTimePicker.Value;
                                 IsModified = true;
                             }
                         }
-                        else if (updateOrder.DownloadDate != null)
+                        else if (updateOrder.DownloadDateFrom != null)
                         {
-                            updateOrder.DownloadDate = null;
+                            updateOrder.DownloadDateFrom = null;
                             IsModified = true;
                         }
-
-                        if (OrderUpdateUploadDateTimePicker.Checked)
+                        //to
+                        if (OrderUpdateDownloadDateToTimePicker.Checked)
                         {
-                            if (updateOrder.UploadDate != OrderUpdateUploadDateTimePicker.Value)
+                            if (updateOrder.DownloadDateTo != OrderUpdateDownloadDateToTimePicker.Value)
                             {
-                                updateOrder.UploadDate = OrderUpdateUploadDateTimePicker.Value;
+                                updateOrder.DownloadDateTo = OrderUpdateDownloadDateToTimePicker.Value;
                                 IsModified = true;
                             }
                         }
-                        else if (updateOrder.UploadDate != null)
+                        else if (updateOrder.DownloadDateTo != null)
                         {
-                            updateOrder.UploadDate = null;
+                            updateOrder.DownloadDateTo = null;
                             IsModified = true;
                         }
-                        
+                        //from
+                        if (OrderUpdateUploadDateFromTimePicker.Checked)
+                        {
+                            if (updateOrder.UploadDateFrom != OrderUpdateUploadDateFromTimePicker.Value)
+                            {
+                                updateOrder.UploadDateFrom = OrderUpdateUploadDateFromTimePicker.Value;
+                                IsModified = true;
+                            }
+                        }
+                        else if (updateOrder.UploadDateFrom != null)
+                        {
+                            updateOrder.UploadDateFrom = null;
+                            IsModified = true;
+                        }
+                        //to
+                        if (OrderUpdateUploadDateFromTimePicker.Checked)
+                        {
+                            if (updateOrder.UploadDateTo != OrderUpdateUploadDateToTimePicker.Value)
+                            {
+                                updateOrder.UploadDateTo = OrderUpdateUploadDateToTimePicker.Value;
+                                IsModified = true;
+                            }
+                        }
+                        else if (updateOrder.UploadDateTo != null)
+                        {
+                            updateOrder.UploadDateTo = null;
+                            IsModified = true;
+                        }
+
                         try
                         {
                             if (loadingForm1OrderUpdate != null)

@@ -146,7 +146,7 @@ namespace AtlantSovt
                        YorU = o.YorU,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
-                       DownloadDate = o.DownloadDate,
+                       DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
                        State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
                        CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                        Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
@@ -178,7 +178,7 @@ namespace AtlantSovt
                        YorU = o.YorU,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
-                       DownloadDate = o.DownloadDate,
+                       DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
                        State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
                         CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                        Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
@@ -200,7 +200,8 @@ namespace AtlantSovt
                 {
                     var queryTextAndDate =
                    from o in db.Orders
-                   where (o.DownloadDate.Value.Month == showTrackingDateTimePicker.Value.Month) && (o.DownloadDate.Value.Year == showTrackingDateTimePicker.Value.Year)
+                   where ((o.DownloadDateFrom.Value.Month == showTrackingDateTimePicker.Value.Month) ||
+                   (o.DownloadDateTo.Value.Month == showTrackingDateTimePicker.Value.Month)) && ((o.DownloadDateFrom.Value.Year == showTrackingDateTimePicker.Value.Year) || o.DownloadDateTo.Value.Year == showTrackingDateTimePicker.Value.Year)
                    orderby o.Id
                    select
                    new
@@ -210,7 +211,7 @@ namespace AtlantSovt
                        YorU = o.YorU,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
-                       DownloadDate = o.DownloadDate,
+                       DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
                        State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
                        CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                        Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
@@ -233,7 +234,8 @@ namespace AtlantSovt
                     var queryTextAndDate =
                    from o in db.Orders
                    where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.YorU.Contains(text) ||
-                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) && (o.DownloadDate.Value.Month == showTrackingDateTimePicker.Value.Month) && (o.DownloadDate.Value.Year == showTrackingDateTimePicker.Value.Year)
+                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) && ((o.DownloadDateFrom.Value.Month == showTrackingDateTimePicker.Value.Month) ||
+                   (o.DownloadDateTo.Value.Month == showTrackingDateTimePicker.Value.Month)) && ((o.DownloadDateFrom.Value.Year == showTrackingDateTimePicker.Value.Year) || o.DownloadDateTo.Value.Year == showTrackingDateTimePicker.Value.Year)
                    orderby o.Id
                    select
                    new
@@ -243,7 +245,7 @@ namespace AtlantSovt
                        YorU = o.YorU,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
-                       DownloadDate = o.DownloadDate,
+                       DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
                        State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
                        CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                        Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
@@ -275,7 +277,7 @@ namespace AtlantSovt
                        YorU = o.YorU,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
-                       DownloadDate = o.DownloadDate,
+                       DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
                        State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
                        CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                        Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
@@ -308,7 +310,7 @@ namespace AtlantSovt
                        YorU = o.YorU,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
-                       DownloadDate = o.DownloadDate,
+                       DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
                        State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
                        CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                        Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
@@ -329,7 +331,8 @@ namespace AtlantSovt
                 {
                     var queryTextAndDate =
                   from o in db.Orders
-                  where (o.State == true && (o.DownloadDate.Value.Month == showTrackingDateTimePicker.Value.Month) && (o.DownloadDate.Value.Year == showTrackingDateTimePicker.Value.Year))
+                  where (o.State == true && ((o.DownloadDateFrom.Value.Month == showTrackingDateTimePicker.Value.Month) ||
+                   (o.DownloadDateTo.Value.Month == showTrackingDateTimePicker.Value.Month)) && ((o.DownloadDateFrom.Value.Year == showTrackingDateTimePicker.Value.Year) || o.DownloadDateTo.Value.Year == showTrackingDateTimePicker.Value.Year))
                   orderby o.Id
                   select
                   new
@@ -339,7 +342,7 @@ namespace AtlantSovt
                       YorU = o.YorU,
                       ClientName = o.Client.Name,
                       TransporterName = o.Transporter.FullName,
-                      DownloadDate = o.DownloadDate,
+                      DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
                       CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                       Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
@@ -362,7 +365,9 @@ namespace AtlantSovt
                     var queryTextAndDate =
                   from o in db.Orders
                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.YorU.Contains(text) ||
-                        o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) && (o.DownloadDate.Value.Month == showTrackingDateTimePicker.Value.Month) && (o.DownloadDate.Value.Year == showTrackingDateTimePicker.Value.Year && o.State == true)
+                        o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) &&
+                        ((o.DownloadDateFrom.Value.Month == showTrackingDateTimePicker.Value.Month) || (o.DownloadDateTo.Value.Month == showTrackingDateTimePicker.Value.Month)) && ((o.DownloadDateFrom.Value.Year == showTrackingDateTimePicker.Value.Year) ||
+                        o.DownloadDateTo.Value.Year == showTrackingDateTimePicker.Value.Year) && o.State == true
                   orderby o.Id
                   select
                   new
@@ -372,7 +377,7 @@ namespace AtlantSovt
                       YorU = o.YorU,
                       ClientName = o.Client.Name,
                       TransporterName = o.Transporter.FullName,
-                      DownloadDate = o.DownloadDate,
+                      DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
                       CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                       Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
@@ -408,9 +413,9 @@ namespace AtlantSovt
                     YorU = o.YorU,
                     ClientName = o.Client.Name,
                     TransporterName = o.Transporter.FullName,
-                    DownloadDate = o.DownloadDate,
+                    DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day +"."+ o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" +o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
                     State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
-                    CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
+                    CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day + "." + o.CloseDate.Value.Month + "." + o.CloseDate.Value.Year,
                     Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
 
                   };
@@ -503,8 +508,8 @@ namespace AtlantSovt
                         string loadingForm2 = "";
                         string[] regularyDelay;
 
-                        if (orderDocument.DownloadDate == null) isOrderFull = false;
-                        if (orderDocument.UploadDate == null) isOrderFull = false;
+                        if (orderDocument.DownloadDateFrom == null) isOrderFull = false;
+                        if (orderDocument.UploadDateFrom == null) isOrderFull = false;
 
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).Count() == 1)
                         {
@@ -661,11 +666,12 @@ namespace AtlantSovt
                         orderNumber = orderDocument.IndexNumber + @"\" + orderDocument.Date.Value.Year;
                         createDate = orderDocument.Date.Value.ToShortDateString();
 
-                        downloadDate = ((orderDocument.DownloadDate == null || orderDocument.DownloadDate.Value.ToShortDateString() == "") ? "" : orderDocument.DownloadDate.Value.ToShortDateString()) +" на ";
-                        downloadDate += (orderDocument.DownloadDate == null || orderDocument.DownloadDate.Value.ToShortTimeString() == "") ? "" : orderDocument.DownloadDate.Value.ToShortTimeString();
+                        
+                        downloadDate = (!orderDocument.DownloadDateFrom.HasValue) ? "" : (!orderDocument.DownloadDateTo.HasValue) ? orderDocument.DownloadDateFrom.Value.ToShortDateString() : (orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month) ? orderDocument.DownloadDateFrom.Value.Day + "." + orderDocument.DownloadDateFrom.Value.Month + "-" + orderDocument.DownloadDateTo.Value : orderDocument.DownloadDateFrom.Value.Day + "-" + orderDocument.DownloadDateTo.Value + " на ";
+                        downloadDate += (!orderDocument.DownloadDateFrom.HasValue) ? "" : orderDocument.DownloadDateFrom.Value.ToShortTimeString();
                       
-                        dateTerms = (orderDocument.DownloadDate == null || orderDocument.DownloadDate.Value.ToString("dd.MM") == "") ? "" : orderDocument.DownloadDate.Value.ToString("dd.MM") + " - ";
-                        dateTerms += (orderDocument.UploadDate == null || orderDocument.UploadDate.Value.ToShortDateString() == "") ? "" : orderDocument.UploadDate.Value.ToShortDateString() + " до " + orderDocument.UploadDate.Value.ToShortTimeString();
+                        dateTerms = (!orderDocument.DownloadDateFrom.HasValue) ? "" : (!orderDocument.DownloadDateTo.HasValue) ? orderDocument.DownloadDateFrom.Value.ToShortDateString() : (orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month) ? orderDocument.DownloadDateFrom.Value.Day + "." + orderDocument.DownloadDateFrom.Value.Month + "-" + orderDocument.DownloadDateTo.Value.ToShortDateString() : orderDocument.DownloadDateFrom.Value.Day + "-" + orderDocument.DownloadDateTo.Value.ToShortDateString() + " - ";
+                        dateTerms +=(!orderDocument.UploadDateFrom.HasValue) ? "" : (!orderDocument.UploadDateTo.HasValue) ? orderDocument.UploadDateFrom.Value.ToShortDateString() : (orderDocument.UploadDateFrom.Value.Month != orderDocument.UploadDateTo.Value.Month) ? orderDocument.UploadDateFrom.Value.Day + "." + orderDocument.UploadDateFrom.Value.Month + "-" + orderDocument.UploadDateTo.Value.ToShortDateString() : orderDocument.UploadDateFrom.Value.Day + "-" + orderDocument.UploadDateTo.Value.ToShortDateString() + " до " + orderDocument.UploadDateTo.Value.ToShortTimeString();
 
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).Count() == 1)
                         {
@@ -843,7 +849,7 @@ namespace AtlantSovt
                 Log.Write(wordException);
                 if (wordDocument != null)
                 {
-                    wordDocument.Close(Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges);
+                wordDocument.Close(Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges);
                 }
                 MessageBox.Show("Помилка, спробуйте ще раз");
             }
