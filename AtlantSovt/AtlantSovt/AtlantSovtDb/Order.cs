@@ -40,7 +40,9 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long? CubeId { get; set; }
 
-        public DateTime? DownloadDate { get; set; }
+        public DateTime? DownloadDateFrom { get; set; }
+
+        public DateTime? DownloadDateTo { get; set; }
 
         public long? CargoId { get; set; }
 
@@ -48,7 +50,9 @@ namespace AtlantSovt.AtlantSovtDb
 
         public int? ADRNumber { get; set; }
 
-        public DateTime? UploadDate { get; set; }
+        public DateTime? UploadDateFrom { get; set; }
+
+        public DateTime? UploadDateTo { get; set; }
 
         [StringLength(50)]
         public string Freight { get; set; }
