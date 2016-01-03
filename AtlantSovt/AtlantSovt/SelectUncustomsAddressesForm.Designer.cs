@@ -118,6 +118,6 @@
         private System.Windows.Forms.Button addUncustomsAddressesButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button addUncustomsAddressesToOrderButton;
-        private System.Windows.Forms.CheckedListBox uncustomsAddressesListBox;
+        public System.Windows.Forms.CheckedListBox uncustomsAddressesListBox;
     }
 }

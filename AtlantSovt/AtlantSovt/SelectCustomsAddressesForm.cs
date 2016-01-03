@@ -144,7 +144,7 @@ namespace AtlantSovt
             }
         }
 
-        void LoadClientCustomsAddresses()
+        public void LoadClientCustomsAddresses()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -166,7 +166,7 @@ namespace AtlantSovt
 
         private void addCustomsAddressButton_Click(object sender, EventArgs e)
         {
-            AddAddressForm addCustomsAddressForm = new AddAddressForm(client, 3);
+            AddAddressForm addCustomsAddressForm = new AddAddressForm(client, 3, this);
             addCustomsAddressForm.Show();
         }        
 

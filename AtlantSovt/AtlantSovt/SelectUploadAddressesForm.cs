@@ -130,7 +130,7 @@ namespace AtlantSovt
             }
         }
 
-        void LoadClientUploadAddresses()
+        public void LoadClientUploadAddresses()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -152,7 +152,7 @@ namespace AtlantSovt
 
         private void addUploadAddressButton_Click(object sender, EventArgs e)
         {
-            AddAddressForm addAddressForm = new AddAddressForm(client,2);
+            AddAddressForm addAddressForm = new AddAddressForm(client,2, this);
             addAddressForm.Show();
         }
 

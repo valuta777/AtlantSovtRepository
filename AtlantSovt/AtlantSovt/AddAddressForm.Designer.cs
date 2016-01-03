@@ -251,7 +251,7 @@
             this.MinimizeBox = false;
             this.Name = "AddAddressForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Додавання адреси розвантаження";
+            this.Text = "Додавання адреси";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.AddAddressForm_Load);
             this.ResumeLayout(false);

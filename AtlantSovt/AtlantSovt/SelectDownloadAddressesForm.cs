@@ -145,7 +145,7 @@ namespace AtlantSovt
             }
         }
 
-        private void LoadClientDownloadAddresses()
+        public void LoadClientDownloadAddresses()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -167,7 +167,7 @@ namespace AtlantSovt
 
         private void addDownloadAddressButton_Click(object sender, EventArgs e)
         {
-            AddAddressForm addDownloadAddressForm = new AddAddressForm(client, 1);
+            AddAddressForm addDownloadAddressForm = new AddAddressForm(client, 1, this);
             addDownloadAddressForm.Show();
         }
 

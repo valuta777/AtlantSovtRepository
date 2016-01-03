@@ -17,11 +17,41 @@ namespace AtlantSovt
         Client client;
         Country country;
         Byte currentCase;
-        public AddAddressForm(Client new_client , Byte new_currentCase)
+        private SelectCustomsAddressesForm selectCustomsAddresses { get; set; }
+        private SelectUncustomsAddressesForm selectUncustomsAddresses { get; set; }
+        private SelectDownloadAddressesForm selectDownloadAddresses { get; set; }
+        private SelectUploadAddressesForm selectUploadAddresses { get; set; }
+
+        public AddAddressForm(Client new_client, Byte new_currentCase, SelectCustomsAddressesForm selectCustomsAddresses)
         {
             InitializeComponent();
             client = new_client;
             currentCase = new_currentCase;
+            this.selectCustomsAddresses = selectCustomsAddresses;
+        }
+
+        public AddAddressForm(Client new_client, Byte new_currentCase, SelectUncustomsAddressesForm selectUncustomsAddresses)
+        {
+            InitializeComponent();
+            client = new_client;
+            currentCase = new_currentCase;
+            this.selectUncustomsAddresses = selectUncustomsAddresses;
+        }
+
+        public AddAddressForm(Client new_client, Byte new_currentCase, SelectDownloadAddressesForm selectDownloadAddresses)
+        {
+            InitializeComponent();
+            client = new_client;
+            currentCase = new_currentCase;
+            this.selectDownloadAddresses = selectDownloadAddresses;
+        }
+
+        public AddAddressForm(Client new_client, Byte new_currentCase, SelectUploadAddressesForm selectUploadAddresses)
+        {
+            InitializeComponent();
+            client = new_client;
+            currentCase = new_currentCase;
+            this.selectUploadAddresses = selectUploadAddresses;
         }
          
         string new_CountryCode;
@@ -163,13 +193,25 @@ namespace AtlantSovt
 
             switch(currentCase)
             {
-                case 1 : AddDownloadAddress();break;
+                case 1 : AddDownloadAddress();
+                     selectDownloadAddresses.downloadAddresssListBox.Items.Clear();
+                     selectDownloadAddresses.LoadClientDownloadAddresses();
+                    break;
 
-                case 2 : AddUploadAddress(); break; 
+                case 2 : AddUploadAddress(); 
+                    selectUploadAddresses.uploadAddressListBox.Items.Clear();
+                    selectUploadAddresses.LoadClientUploadAddresses();
+                    break; 
                     
-                case 3 : AddCustomsAddress();break;
+                case 3 : AddCustomsAddress();
+                    selectCustomsAddresses.customsAddressesListBox.Items.Clear();
+                    selectCustomsAddresses.LoadClientCustomsAddresses();
+                    break;
                     
-                case 4 : AddUnCustomsAddress();break;
+                case 4 : AddUnCustomsAddress();
+                    selectUncustomsAddresses.uncustomsAddressesListBox.Items.Clear();
+                    selectUncustomsAddresses.LoadClientUncustomsAddresses();
+                    break;
 
                 default: MessageBox.Show("Error");break;
             }

@@ -202,6 +202,7 @@ namespace AtlantSovt
                 {
                     dataControl.SelectedIndex = 13;
                     helloPictureBox.Image = null;
+                    GetDocumentFiles();
                 }
 
                 private void addOrderMenuItem_Click(object sender, EventArgs e)
@@ -210,6 +211,7 @@ namespace AtlantSovt
                     helloPictureBox.Image = null;
 
                 }
+
                 private void showTrackingMenuItem_Click(object sender, EventArgs e)
                 {
                     dataControl.SelectedIndex = 15;
@@ -1664,6 +1666,17 @@ namespace AtlantSovt
         {
             contractLanguageComboBox.DroppedDown = true;
         }
+
+        private void contractFilecheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            for (int ix = 0; ix < contractFilecheckedListBox.Items.Count; ++ix)
+                if (ix != e.Index) contractFilecheckedListBox.SetItemChecked(ix, false);
+        }
+
+        private void refreshContactFilesButton_Click(object sender, EventArgs e)
+        {
+            GetDocumentFiles();
+        }
         #endregion
 
         //Show
@@ -1691,6 +1704,16 @@ namespace AtlantSovt
         }
 
         private void contractShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ShowContractInfo();
+        }
+
+        private void contractShowDataGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            ShowContractInfo();
+        }
+
+        private void contractShowDataGridView_KeyUp(object sender, KeyEventArgs e)
         {
             ShowContractInfo();
         }
