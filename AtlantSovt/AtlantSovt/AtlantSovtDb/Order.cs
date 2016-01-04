@@ -9,6 +9,7 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("Order")]
     public partial class Order
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Order()
         {
             ForwarderOrders = new HashSet<ForwarderOrder>();
@@ -31,18 +32,17 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long? TransporterId { get; set; }
 
-        [Column(TypeName = "date")]
         public DateTime? CloseDate { get; set; }
 
         public DateTime? Date { get; set; }
 
         public long? TrailerId { get; set; }
 
+        public long? StaffId { get; set; }
+
         public long? CubeId { get; set; }
 
         public DateTime? DownloadDateFrom { get; set; }
-
-        public DateTime? DownloadDateTo { get; set; }
 
         public long? CargoId { get; set; }
 
@@ -51,8 +51,6 @@ namespace AtlantSovt.AtlantSovtDb
         public int? ADRNumber { get; set; }
 
         public DateTime? UploadDateFrom { get; set; }
-
-        public DateTime? UploadDateTo { get; set; }
 
         [StringLength(50)]
         public string Freight { get; set; }
@@ -75,6 +73,10 @@ namespace AtlantSovt.AtlantSovtDb
 
         public string Note { get; set; }
 
+        public DateTime? DownloadDateTo { get; set; }
+
+        public DateTime? UploadDateTo { get; set; }
+
         public virtual AdditionalTerm AdditionalTerm { get; set; }
 
         public virtual Cargo Cargo { get; set; }
@@ -85,6 +87,7 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual FineForDelay FineForDelay { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ForwarderOrder> ForwarderOrders { get; set; }
 
         public virtual OrderDeny OrderDeny { get; set; }
@@ -93,22 +96,30 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual RegularyDelay RegularyDelay { get; set; }
 
+        public virtual Staff Staff { get; set; }
+
         public virtual TirCmr TirCmr { get; set; }
 
         public virtual Trailer Trailer { get; set; }
 
         public virtual Transporter Transporter { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderCustomsAddress> OrderCustomsAddresses { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDownloadAddress> OrderDownloadAddresses { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderLoadingForm> OrderLoadingForms { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderUnCustomsAddress> OrderUnCustomsAddresses { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderUploadAdress> OrderUploadAdresses { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TrackingComment> TrackingComments { get; set; }
     }
 }

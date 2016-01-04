@@ -8,7 +8,7 @@ namespace AtlantSovt.AtlantSovtDb
     public partial class AtlantSovtContext : DbContext
     {
         public AtlantSovtContext()
-            : base(ConnectionForm.GetConnectionString())
+            : base("name=AtlantSovtContext")
         {
         }
 
@@ -17,6 +17,7 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<ClientBankDetail> ClientBankDetails { get; set; }
         public virtual DbSet<ClientContact> ClientContacts { get; set; }
+        public virtual DbSet<TransporterForwarderContract> TransporterForwarderContracts { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
         public virtual DbSet<Cube> Cubes { get; set; }
         public virtual DbSet<CustomsAddress> CustomsAddresses { get; set; }
@@ -27,6 +28,7 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<Forwarder> Forwarders { get; set; }
         public virtual DbSet<ForwarderBankDetail> ForwarderBankDetails { get; set; }
         public virtual DbSet<ForwarderContact> ForwarderContacts { get; set; }
+        public virtual DbSet<ForwarderContract> ForwarderContracts { get; set; }
         public virtual DbSet<ForwarderOrder> ForwarderOrders { get; set; }
         public virtual DbSet<ForwarderStamp> ForwarderStamps { get; set; }
         public virtual DbSet<LoadingForm> LoadingForms { get; set; }
@@ -40,6 +42,7 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<OrderUploadAdress> OrderUploadAdresses { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
         public virtual DbSet<RegularyDelay> RegularyDelays { get; set; }
+        public virtual DbSet<Staff> Staffs { get; set; }
         public virtual DbSet<TaxPayerStatu> TaxPayerStatus { get; set; }
         public virtual DbSet<TirCmr> TirCmrs { get; set; }
         public virtual DbSet<TrackingComment> TrackingComments { get; set; }
@@ -48,7 +51,6 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<TransporterBankDetail> TransporterBankDetails { get; set; }
         public virtual DbSet<TransporterContact> TransporterContacts { get; set; }
         public virtual DbSet<TransporterCountry> TransporterCountries { get; set; }
-        public virtual DbSet<TransporterForwarderContract> TransporterForwarderContracts { get; set; }
         public virtual DbSet<TransporterVehicle> TransporterVehicles { get; set; }
         public virtual DbSet<UnCustomsAddress> UnCustomsAddresses { get; set; }
         public virtual DbSet<UploadAddress> UploadAddresses { get; set; }

@@ -32,6 +32,7 @@ namespace AtlantSovt
         Payment paymentOrderAdd;
         RegularyDelay regularyDelayOrderAdd;
         Cube cubeOrderAdd;
+        Staff staffOrderAdd;
         Trailer trailerOrderAdd;
 
         LoadingForm loadingForm1OrderAdd;
@@ -55,6 +56,7 @@ namespace AtlantSovt
                     CargoWeight = (OrderAddWeightTextBox.Text != "") ? (double?)Double.Parse(OrderAddWeightTextBox.Text, CultureInfo.InvariantCulture) : null,
                     ClientId = (clientOrderAdd != null) ? (long?)clientOrderAdd.Id : null,
                     CubeId = (cubeOrderAdd != null) ? (long?)cubeOrderAdd.Id : null,
+                    StaffId = (staffOrderAdd != null) ? (long?)staffOrderAdd.Id : null,
                     FineForDelaysId = (fineForDelayOrderAdd != null) ? (long?)fineForDelayOrderAdd.Id : null,
                     Freight = (OrderAddFreightTextBox.Text != "") ? OrderAddFreightTextBox.Text : null,
                     OrderDenyId = (orderDenyOrderAdd != null) ? (long?)orderDenyOrderAdd.Id : null,
@@ -71,7 +73,8 @@ namespace AtlantSovt
                     UploadDateTo = OrderAddUploadDateToTimePicker.Checked ? (DateTime?)OrderAddUploadDateToTimePicker.Value : null,
 
                     State = null,
-                    YorU = ((OrderAddPersonalComboBox.SelectedIndex != -1 && OrderAddPersonalComboBox.Text == OrderAddPersonalComboBox.SelectedItem.ToString())) ? ((OrderAddPersonalComboBox.SelectedIndex == 0) ? "У" : "І") : null,
+
+                   
                     Language = (OrderAddLanduageSelectComboBox.SelectedIndex != -1 && OrderAddLanduageSelectComboBox.Text == OrderAddLanduageSelectComboBox.SelectedItem.ToString()) ? (OrderAddLanduageSelectComboBox.SelectedIndex == 0) ? (byte?)0 : (OrderAddLanduageSelectComboBox.SelectedIndex == 1) ? (byte?)1 : (byte?)2 : null
                 };
                 try
@@ -791,6 +794,24 @@ namespace AtlantSovt
                 }
             }
         }
+        void SplitStaffOrderAdd()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (OrderAddStaffComboBox.SelectedIndex != -1 && OrderAddStaffComboBox.Text == OrderAddStaffComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderAddStaffComboBox.SelectedItem.ToString();
+                    string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedText[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    staffOrderAdd = db.Staffs.Find(id);
+                }
+                else
+                {
+                    staffOrderAdd = null;
+                }
+            }
+        }
         void LoadOrderAddCubeSelectComboBox()
         {
             using (var db = new AtlantSovtContext())
@@ -804,6 +825,20 @@ namespace AtlantSovt
                 }
             }
         }
+        void LoadOrderAddStaffSelectComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from st in db.Staffs
+                            orderby st.Id
+                            select st;
+                foreach (var item in query)
+                {
+                    OrderAddStaffComboBox.Items.Add(item.Type + " [" + item.Id + "]");
+                }
+                
+            }
+        }
         void SplitTrailerOrderAdd()
         {
             using (var db = new AtlantSovtContext())
@@ -815,6 +850,7 @@ namespace AtlantSovt
                     string comboBoxSelectedId = selectedText[1];
                     long id = Convert.ToInt64(comboBoxSelectedId);
                     trailerOrderAdd = db.Trailers.Find(id);
+                    
                 }
                 else
                 {
@@ -918,6 +954,7 @@ namespace AtlantSovt
         RegularyDelay regularyDelayOrderUpdate;
 
         Cube cubeOrderUpdate;
+        Staff staffOrderUpdate;
         Trailer trailerOrderUpdate;
 
         LoadingForm loadingForm1OrderUpdate;
@@ -940,8 +977,8 @@ namespace AtlantSovt
             OrderUpdateRegularyDelaySelectComboBox.SelectedIndex = -1;
             OrderUpdateTrailerSelectComboBox.SelectedIndex = -1;
             OrderUpdateCubeSelectComboBox.SelectedIndex = -1;
+            OrderUpdateStaffSelectComboBox.SelectedIndex = -1;
             OrderUpdateTirCmrSelectComboBox.SelectedIndex = -1;
-            OrderUpdatePersonalComboBox.SelectedIndex = -1;
             OrderUpdateADRSelectComboBox.SelectedIndex = -1;
             OrderUpdateClientSelectComboBox.SelectedIndex = -1;
             OrderUpdateTransporterSelectComboBox.SelectedIndex = -1;
@@ -961,6 +998,7 @@ namespace AtlantSovt
             OrderUpdateRegularyDelaySelectComboBox.Items.Clear();
             OrderUpdateTrailerSelectComboBox.Items.Clear();
             OrderUpdateCubeSelectComboBox.Items.Clear();
+            OrderUpdateStaffSelectComboBox.Items.Clear();
             OrderUpdateTirCmrSelectComboBox.Items.Clear();
             OrderUpdateClientSelectComboBox.Items.Clear();
             OrderUpdateTransporterSelectComboBox.Items.Clear();
@@ -1062,6 +1100,7 @@ namespace AtlantSovt
             LoadOrderUpdatePaymentSelectComboBox();
             LoadOrderUpdateRegularyDelaySelectComboBox();
             LoadOrderUpdateCubeSelectComboBox();
+            LoadOrderUpdateStaffSelectComboBox();
             LoadOrderUpdateTrailerSelectComboBox();
             LoadOrderUpdateLoadingForm1SelectComboBox();
             LoadOrderUpdateLoadingForm2SelectComboBox();
@@ -1245,15 +1284,19 @@ namespace AtlantSovt
                     {
                         OrderUpdateADRSelectComboBox.SelectedIndex = -1;
                     }
-                    if (updateOrder.YorU != null)
+                    //
+                    if (updateOrder.Staff != null)
                     {
-                        OrderUpdatePersonalComboBox.SelectedIndex =
-                            OrderUpdatePersonalComboBox.FindString(updateOrder.YorU.ToString());
+                        OrderUpdateStaffSelectComboBox.SelectedIndex =
+                            OrderUpdateStaffSelectComboBox.FindString(updateOrder.Staff.Type + " [" + updateOrder.Staff.Id + ']');
+                        SplitStaffOrderUpdate();
                     }
                     else
                     {
-                        OrderUpdateADRSelectComboBox.SelectedIndex = -1;
+                        OrderUpdateCubeSelectComboBox.SelectedIndex = -1;
                     }
+
+                    //
                     if (updateOrder.Language != null)
                     {
                        OrderUpdateLanguageSelectComboBox.SelectedIndex = updateOrder.Language.Value;
@@ -1476,6 +1519,20 @@ namespace AtlantSovt
                 }
             }
         }
+
+        void LoadOrderUpdateStaffSelectComboBox()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                var query = from c in db.Staffs
+                            orderby c.Id
+                            select c;
+                foreach (var item in query)
+                {
+                    OrderUpdateStaffSelectComboBox.Items.Add(item.Type + " [" + item.Id + "]");
+                }
+            }
+        }
         void LoadOrderUpdateRegularyDelaySelectComboBox()
         {
             using (var db = new AtlantSovtContext())
@@ -1672,6 +1729,24 @@ namespace AtlantSovt
                 else
                 {
                     cubeOrderUpdate = null;
+                }
+            }
+        }
+        void SplitStaffOrderUpdate()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (OrderUpdateStaffSelectComboBox.SelectedIndex != -1 && OrderUpdateStaffSelectComboBox.Text == OrderUpdateStaffSelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = OrderUpdateStaffSelectComboBox.SelectedItem.ToString();
+                    string[] selectedText = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedText[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    staffOrderUpdate = db.Staffs.Find(id);
+                }
+                else
+                {
+                    staffOrderUpdate = null;
                 }
             }
         }
@@ -2226,6 +2301,21 @@ namespace AtlantSovt
                             updateOrder.TrailerId = null;
                             IsModified = true;
                         }
+
+                        //4/////////////////////////////////////////////
+                        if (staffOrderUpdate != null)
+                        {
+                            if (updateOrder.StaffId != staffOrderUpdate.Id)
+                            {
+                                updateOrder.StaffId = staffOrderUpdate.Id;
+                                IsModified = true;
+                            }
+                        }
+                        else if (updateOrder.Staff != null)
+                        {
+                            updateOrder.StaffId = null;
+                            IsModified = true;
+                        }
                         //4/////////////////////////////////////////////
                         if (transporterOrderUpdate != null)
                         {
@@ -2240,33 +2330,7 @@ namespace AtlantSovt
                             updateOrder.TransporterId = null;
                             IsModified = true;
                         }
-                        //4/////////////////////////////////////////////
-
-                        if ((OrderUpdatePersonalComboBox.SelectedIndex != -1 && OrderUpdatePersonalComboBox.Text == OrderUpdatePersonalComboBox.SelectedItem.ToString()))
-                        {
-                            if (updateOrder.YorU != "У")
-                            {
-                                if(OrderAddPersonalComboBox.SelectedIndex == 0)
-                                {
-                                    updateOrder.YorU = "У";
-                                    IsModified = true;
-                                }                                
-                            }
-                            else if (updateOrder.YorU != "I") 
-                            {
-                                if (OrderAddPersonalComboBox.SelectedIndex == 1)
-                                {
-                                    updateOrder.YorU = "І";
-                                    IsModified = true;
-                                }
-                            }
-                        }
-                        else if (updateOrder.YorU != null)
-                        {
-                            updateOrder.YorU = null;
-                            IsModified = true;
-                        }
-                        ///////////////////////////////////////////////
+                        
 
                         if ((OrderUpdateLanguageSelectComboBox.SelectedIndex != -1 && OrderUpdateLanguageSelectComboBox.Text == OrderUpdateLanguageSelectComboBox.SelectedItem.ToString()))
                         {

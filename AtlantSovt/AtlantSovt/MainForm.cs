@@ -1990,6 +1990,12 @@ namespace AtlantSovt
             addCubeForm.Show();
         }
 
+        private void OrderAddSatffAddButton_Click(object sender, EventArgs e)
+        {
+            AddStaffForm addStaffForm = new AddStaffForm();
+            addStaffForm.Show();
+        }
+
         private void OrderAddTrailerAddButton_Click(object sender, EventArgs e)
         {
             AddTrailerForm addTrailerForm = new AddTrailerForm();
@@ -2153,10 +2159,18 @@ namespace AtlantSovt
         {
             SplitCubeOrderAdd();
         }
+        private void OrderAddStaffSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitStaffOrderAdd();
+        }
 
         private void OrderAddCubeSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitCubeOrderAdd();
+        }
+        private void OrderAddStaffSelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitStaffOrderAdd();
         }
 
         private void OrderAddCubeSelectComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -2165,7 +2179,12 @@ namespace AtlantSovt
             LoadOrderAddCubeSelectComboBox();
             OrderAddCubeSelectComboBox.DroppedDown = true;
         }
-
+        private void OrderAddStaffSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAddStaffComboBox.Items.Clear();
+            LoadOrderAddStaffSelectComboBox();
+            OrderAddStaffComboBox.DroppedDown = true;
+        }
         private void OrderAddTrailerSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitTrailerOrderAdd();
@@ -2241,10 +2260,7 @@ namespace AtlantSovt
             OrderAddADRSelectComboBox.DroppedDown = true;
         }
 
-        private void OrderAddYOrUComboBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            OrderAddPersonalComboBox.DroppedDown = true;
-        }
+
 
         //ORDER UPDATE
 
@@ -2407,6 +2423,11 @@ namespace AtlantSovt
             UpdateCubeForm.Show();
         }
 
+        private void OrderUpdateStaffAddButton_Click(object sender, EventArgs e)
+        {
+            AddStaffForm UpdateStaffForm = new AddStaffForm();
+            UpdateStaffForm.Show();
+        }
         private void OrderUpdateTrailerAddButton_Click(object sender, EventArgs e)
         {
             AddTrailerForm UpdateTrailerForm = new AddTrailerForm();
@@ -2572,15 +2593,37 @@ namespace AtlantSovt
         {
             SplitCubeOrderUpdate();
         }
+
+
         private void OrderUpdateCubeSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitCubeOrderUpdate();
         }
+
+
+        private void OrderUpdateStaffSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitStaffOrderUpdate();
+        }
+
+
+        private void OrderUpdateStaffSelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitStaffOrderUpdate();
+        }
+
         private void OrderUpdateCubeSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateCubeSelectComboBox.Items.Clear();
             LoadOrderUpdateCubeSelectComboBox();
             OrderUpdateCubeSelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderUpdateStaffSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderUpdateStaffSelectComboBox.Items.Clear();
+            LoadOrderUpdateStaffSelectComboBox();
+            OrderUpdateStaffSelectComboBox.DroppedDown = true;
         }
 
         private void OrderUpdateTrailerSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -2621,6 +2664,7 @@ namespace AtlantSovt
         {
             SplitLoadingForm2OrderUpdate();
         }
+
         private void OrderUpdateLoadingForm2SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateLoadingForm2SelectComboBox.Items.Clear();
@@ -2664,6 +2708,8 @@ namespace AtlantSovt
             }
         }
 
+
+
         private void OrderUpdateLoadingForm1AddButton_Click(object sender, EventArgs e)
         {
             AddLoadingFormForm updateLoadingFormForm = new AddLoadingFormForm();
@@ -2673,11 +2719,6 @@ namespace AtlantSovt
         private void OrderUpdateADRSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateADRSelectComboBox.DroppedDown = true;
-        }
-
-        private void OrderUpdateYOrUComboBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            OrderUpdatePersonalComboBox.DroppedDown = true;
         }
 
         private void OrderAddLanduageSelectComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -2690,11 +2731,6 @@ namespace AtlantSovt
             OrderUpdateLanguageSelectComboBox.DroppedDown = true;
         }
         #endregion
-
-        private void OrderUpdatePersonalButton_Click(object sender, EventArgs e)
-        {
-
-        }
 
     }
 }
