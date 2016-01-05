@@ -203,6 +203,7 @@ namespace AtlantSovt
                     dataControl.SelectedIndex = 13;
                     helloPictureBox.Image = null;
                     GetDocumentFiles();
+
                 }
 
                 private void addOrderMenuItem_Click(object sender, EventArgs e)
@@ -1595,82 +1596,134 @@ namespace AtlantSovt
         #region Create
         private void firstPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SplitTransporterFirstPersonComboBoxDocument();
-            secondPersonNameComboBox.Enabled = true;
+            SplitForwarderDocumentComboBox(firstPersonNameDocumentComboBox);
+            secondPersonRoleDocumentСomboBox.Enabled = true;
         }
 
         private void firstPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            firstPersonNameComboBox.Items.Clear();
-            LoadTransporterFirstPersonNameComboBox();
-            firstPersonNameComboBox.DroppedDown = true;
+            firstPersonNameDocumentComboBox.Items.Clear();
+            LoadForwarderDocumentComboBox(firstPersonNameDocumentComboBox);
+            firstPersonNameDocumentComboBox.DroppedDown = true;
         }
 
-        private void firstPersonDiapasonComboBox_MouseClick(object sender, MouseEventArgs e)
+        private void secondPersonRoleDocumentСomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadTransporterFirstPersonDiapasonCombobox();
+            if(secondPersonRoleDocumentСomboBox.SelectedIndex == 2 )
+            {
+                secondPersonDiapasonDocumentComboBox.Enabled = false;
+                secondPersonNameDocumentComboBox.Enabled = true;
+            }
+            else
+            {
+                secondPersonDiapasonDocumentComboBox.Enabled = true;
+                secondPersonNameDocumentComboBox.Enabled = false;
+            }
+        }
+
+        private void secondPersonRoleDocumentСomboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            secondPersonDiapasonDocumentComboBox.Items.Clear();
+            secondPersonNameDocumentComboBox.Items.Clear();
+            secondPersonDiapasonDocumentComboBox.Text = "";
+            secondPersonNameDocumentComboBox.Text = "";
+            secondPersonRoleDocumentСomboBox.DroppedDown = true;
+        }
+
+        private void secondPersonDiapasonDocumentComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (secondPersonRoleDocumentСomboBox.SelectedIndex == 0)
+            {
+                secondPersonDiapasonDocumentComboBox.Items.Clear();
+                secondPersonNameDocumentComboBox.Items.Clear();
+                LoadTransporterDiapasonDocumentCombobox(secondPersonNameDocumentComboBox, secondPersonDiapasonDocumentComboBox);
+                secondPersonDiapasonDocumentComboBox.DroppedDown = true;
+            }
+            else if (secondPersonRoleDocumentСomboBox.SelectedIndex == 1)
+            {
+                secondPersonDiapasonDocumentComboBox.Items.Clear();
+                secondPersonNameDocumentComboBox.Items.Clear();
+                LoadClientDiapasonDocumentCombobox(secondPersonNameDocumentComboBox, secondPersonDiapasonDocumentComboBox);
+                secondPersonDiapasonDocumentComboBox.DroppedDown = true;
+            }
         }
 
         private void secondPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SplitForwarderSecondPersonComboBoxDocument();
-            forwarderAsComboBox.Enabled = true;
+            if (secondPersonRoleDocumentСomboBox.SelectedIndex == 0)
+            {
+                SplitTransporterDocumentComboBox(secondPersonNameDocumentComboBox);
+            }
+            else if (secondPersonRoleDocumentСomboBox.SelectedIndex == 1)
+            {
+                SplitClientDocumentComboBox(secondPersonNameDocumentComboBox);
+
+            }
+            else if (secondPersonRoleDocumentСomboBox.SelectedIndex == 2)
+            {
+                SplitForwarderDocumentComboBox(secondPersonNameDocumentComboBox);
+            }
+            contractFilecheckedListBox.Enabled = true;
+            refreshContactFilesButton.Enabled = true;
         }
 
         private void secondPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            secondPersonNameComboBox.Items.Clear();
-            LoadForwarderSecondPersonNameComboBox();
-            secondPersonNameComboBox.DroppedDown = true;
+            if (secondPersonRoleDocumentСomboBox.SelectedIndex == 0)
+            {
+                secondPersonNameDocumentComboBox.Items.Clear();
+                LoadTransporterDocumentComboBox(secondPersonNameDocumentComboBox, secondPersonDiapasonDocumentComboBox);
+                secondPersonNameDocumentComboBox.DroppedDown = true;
+            }
+            else if (secondPersonRoleDocumentСomboBox.SelectedIndex == 1)
+            {
+                secondPersonNameDocumentComboBox.Items.Clear();
+                LoadClientDocumentComboBox(secondPersonNameDocumentComboBox, secondPersonDiapasonDocumentComboBox);
+                secondPersonNameDocumentComboBox.DroppedDown = true;
+            }
+            else if (secondPersonRoleDocumentСomboBox.SelectedIndex == 2)
+            {
+                secondPersonNameDocumentComboBox.Items.Clear();
+                LoadForwarderDocumentComboBox(secondPersonNameDocumentComboBox);
+                secondPersonNameDocumentComboBox.DroppedDown = true;
+
+            }
         }
 
         private void createContactButton_Click(object sender, EventArgs e)
         {
-            IsForwarderAndTransporterFull();
-            if (!isForwarderFull || !isTransporterFull)
-            {
-                return;
-            }
-            AddContract();
-            CreateTransporterForwarderContract();
-        }
-
-        private void forwarderAsComboBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            forwarderAsComboBox.DroppedDown = true;
-        }
-
-        private void forwarderAsComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            createContactButton.Enabled = true;
+            //IsForwarderAndTransporterFull();
+            //if (!isForwarderFull || !isTransporterFull)
+            //{
+            //    return;
+            //}
+            //AddContract();
+            //CreateTransporterForwarderContract();
         }
 
         private void contractLanguageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (contractLanguageComboBox.SelectedIndex == 0)
+            if (documentTypeComboBox.SelectedIndex == 0)
             {
-                contractLanguage = 1;
+                contractType = 0;
             }
-            else if (contractLanguageComboBox.SelectedIndex == 1)
+            else if (documentTypeComboBox.SelectedIndex == 1)
             {
-                contractLanguage = 2;
+                contractType = 1;
             }
-            else if (contractLanguageComboBox.SelectedIndex == 2)
-            {
-                contractLanguage = 3;
-            }
-            firstPersonDiapasonComboBox.Enabled = true;
+            firstPersonNameDocumentComboBox.Enabled = true;
         }
 
         private void contractLanguageComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            contractLanguageComboBox.DroppedDown = true;
+            documentTypeComboBox.DroppedDown = true;
         }
 
         private void contractFilecheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             for (int ix = 0; ix < contractFilecheckedListBox.Items.Count; ++ix)
                 if (ix != e.Index) contractFilecheckedListBox.SetItemChecked(ix, false);
+            createContactButton.Enabled = true;
         }
 
         private void refreshContactFilesButton_Click(object sender, EventArgs e)
@@ -1720,7 +1773,7 @@ namespace AtlantSovt
 
         private void contractShowOpenDocButton_Click(object sender, EventArgs e)
         {
-            OpenWordDoc();
+            //OpenWordDoc();
         }
 
         private void contractStateRadioButton_Click(object sender, EventArgs e)
@@ -2667,6 +2720,5 @@ namespace AtlantSovt
         {
 
         }
-
     }
 }

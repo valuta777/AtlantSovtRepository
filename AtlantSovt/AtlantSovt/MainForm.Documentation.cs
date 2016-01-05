@@ -20,19 +20,18 @@ namespace AtlantSovt
     {
         Transporter transporterDocument;
         Forwarder forwarderDocument;
+        Client clientDocument;
         ForwarderStamp forwarderStamp;
         DocumentCounter documentCount;
-        TransporterForwarderContract contract;
+        Contract contract;
 
-        int contractLanguage;
-        bool isForwarderFull;
-        bool isTransporterFull;
+        int contractType;
 
-        void SplitTransporterFirstPersonComboBoxDocument()
+        void SplitTransporterDocumentComboBox(ComboBox transporterComboBox)
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = firstPersonNameComboBox.SelectedItem.ToString();
+                string comboboxText = transporterComboBox.SelectedItem.ToString();
                 string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
                 string comboBoxSelectedId = selectedNameAndDirector[1];
                 long id = Convert.ToInt64(comboBoxSelectedId);
@@ -40,11 +39,23 @@ namespace AtlantSovt
             }
         }
 
-        void SplitForwarderSecondPersonComboBoxDocument()
+        void SplitClientDocumentComboBox(ComboBox clientComboBox)
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = secondPersonNameComboBox.SelectedItem.ToString();
+                string comboboxText = clientComboBox.SelectedItem.ToString();
+                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                string comboBoxSelectedId = selectedNameAndDirector[1];
+                long id = Convert.ToInt64(comboBoxSelectedId);
+                clientDocument = db.Clients.Find(id);
+            }
+        }
+
+        void SplitForwarderDocumentComboBox(ComboBox forwarderComboBox)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                string comboboxText = forwarderComboBox.SelectedItem.ToString();
                 string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
                 string comboBoxSelectedId = selectedNameAndDirector[1];
                 long id = Convert.ToInt64(comboBoxSelectedId);
@@ -53,11 +64,11 @@ namespace AtlantSovt
             }
         }
 
-        void LoadTransporterFirstPersonDiapasonCombobox()
+        void LoadTransporterDiapasonDocumentCombobox(ComboBox transporterComboBox, ComboBox transporterDiapason)
         {
-            firstPersonDiapasonComboBox.Items.Clear();
-            firstPersonNameComboBox.Items.Clear();
-            firstPersonNameComboBox.Text = "";
+            transporterDiapason.Items.Clear();
+            transporterComboBox.Items.Clear();
+            transporterComboBox.Text = "";
             using (var db = new AtlantSovtContext())
             {
                 int part = 1000;
@@ -76,10 +87,10 @@ namespace AtlantSovt
 
                     for (int i = 0; i < transporterPart; i++)
                     {
-                        firstPersonDiapasonComboBox.Items.Add(((i * part) + 1) + " - " + ((i + 1) * part));
+                        transporterDiapason.Items.Add(((i * part) + 1) + " - " + ((i + 1) * part));
                     }
-                    firstPersonDiapasonComboBox.DroppedDown = true;
-                    firstPersonNameComboBox.Enabled = true;
+                    transporterDiapason.DroppedDown = true;
+                    transporterComboBox.Enabled = true;
 
                 }
                 else
@@ -89,17 +100,17 @@ namespace AtlantSovt
             }
         }
 
-        void LoadTransporterFirstPersonNameComboBox()
+        void LoadTransporterDocumentComboBox(ComboBox transporterComboBox, ComboBox transporterDiapason)
         {
             using (var db = new AtlantSovtContext())
             {
-                if (firstPersonDiapasonComboBox.Text == "")
+                if (transporterDiapason.Text == "")
                 {
                     MessageBox.Show("Ви не вибрали діапазон");
                 }
                 else
                 {
-                    string text = firstPersonDiapasonComboBox.SelectedItem.ToString();
+                    string text = transporterDiapason.SelectedItem.ToString();
                     string[] diapasone = text.Split(new char[] { ' ' });
                     int diapasoneFrom = Convert.ToInt32(diapasone[0]);
                     int diapasoneTo = Convert.ToInt32(diapasone[2]);
@@ -109,13 +120,74 @@ namespace AtlantSovt
                                 select c;
                     foreach (var item in query)
                     {
-                        firstPersonNameComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
+                        transporterComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
                     }
                 }
             }
         }
 
-        void LoadForwarderSecondPersonNameComboBox()
+        void LoadClientDiapasonDocumentCombobox(ComboBox clientComboBox, ComboBox clientDiapason)
+        {
+            clientDiapason.Items.Clear();
+            clientDiapason.Items.Clear();
+            clientDiapason.Text = "";
+            using (var db = new AtlantSovtContext())
+            {
+                int part = 1000;
+                double clientPart = 0;
+                if ((from c in db.Clients select c.Id).Count() != 0)
+                {
+                    long clientCount = (from c in db.Clients select c.Id).Max();
+                    if (clientCount % part == 0)
+                    {
+                        clientPart = clientCount / part;
+                    }
+                    else
+                    {
+                        clientPart = (clientCount / part) + 1;
+                    }
+
+                    for (int i = 0; i < clientPart; i++)
+                    {
+                        clientDiapason.Items.Add(((i * part) + 1) + " - " + ((i + 1) * part));
+                    }
+                    clientDiapason.DroppedDown = true;
+                    clientComboBox.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Немає жодних записів");
+                }
+            }
+        }
+
+        void LoadClientDocumentComboBox(ComboBox clientComboBox, ComboBox clientDiapason)
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                if (clientDiapason.Text == "")
+                {
+                    MessageBox.Show("Ви не вибрали діапазон");
+                }
+                else
+                {
+                    string text = clientDiapason.SelectedItem.ToString();
+                    string[] diapasone = text.Split(new char[] { ' ' });
+                    int diapasoneFrom = Convert.ToInt32(diapasone[0]);
+                    int diapasoneTo = Convert.ToInt32(diapasone[2]);
+                    var query = from c in db.Clients
+                                orderby c.Id
+                                where c.Id >= diapasoneFrom && c.Id <= diapasoneTo
+                                select c;
+                    foreach (var item in query)
+                    {
+                        clientComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                    }
+                }
+            }
+        }
+
+        void LoadForwarderDocumentComboBox(ComboBox forwarderComboBox)
         {
             using (var db = new AtlantSovtContext())
             {
@@ -124,37 +196,84 @@ namespace AtlantSovt
                             select f;
                 foreach (var item in query)
                 {
-                    secondPersonNameComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                    forwarderComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
                 }
             }
         }
+        /*
 
-        void IsForwarderAndTransporterFull()
+        bool IsForwarderFull()
         {
-            isForwarderFull = false;
-            isTransporterFull = false;
-            bool check = false;
-            string isFull = "Деякі дані не заповнені в: ";
+            bool isForwarderFull = false;
             try
             {
                 using (var db = new AtlantSovtContext())
                 {
-                    var secondForwarderName = forwarderDocument.Name;
-                    var secondForwarderDirector = forwarderDocument.Director;
-                    var secondForwarderPhysicalAddress = forwarderDocument.PhysicalAddress;
-                    var secondForwarderGeographycalAddress = forwarderDocument.GeographyAddress;
+                    var forwarderName = forwarderDocument.Name;
+                    var forwarderDirector = forwarderDocument.Director;
+                    var forwarderPhysicalAddress = forwarderDocument.PhysicalAddress;
+                    var forwarderGeographycalAddress = forwarderDocument.GeographyAddress;
 
-                    string secondForwarderWorkDocument = "";
-                    string secondForwarderTaxPayerStatus = "";
-                    string secondForwarderBankDetailsCertificateSerial = "";
-                    string secondForwarderBankDetailsCertificateNumber = "";
-                    string secondForwarderBankDetailsEDRPOU = "";
-                    string secondForwarderBankDetailsAccountNumber = "";
-                    string secondForwarderBankDetailsBankName = "";
-                    string secondForwarderBankDetailsMFO = "";
-                    string secondForwarderBankDetailsIBAN = "";
-                    string secondForwarderBankDetailsIPN = "";
-                    string secondForwarderBankDetailsSWIFT = "";
+                    string forwarderWorkDocument = "";
+                    string forwarderTaxPayerStatus = "";
+                    string forwarderBankDetailsCertificateSerial = "";
+                    string forwarderBankDetailsCertificateNumber = "";
+                    string forwarderBankDetailsEDRPOU = "";
+                    string forwarderBankDetailsAccountNumber = "";
+                    string forwarderBankDetailsBankName = "";
+                    string forwarderBankDetailsMFO = "";
+                    string forwarderBankDetailsIBAN = "";
+                    string forwarderBankDetailsIPN = "";
+                    string forwarderBankDetailsSWIFT = "";
+
+                    if (forwarderDocument.WorkDocumentId != null)
+                    {
+                        forwarderWorkDocument = db.WorkDocuments.Find(forwarderDocument.WorkDocumentId).Status;
+                    }
+
+                    if (forwarderDocument.TaxPayerStatusId != null)
+                    {
+                        forwarderTaxPayerStatus = db.TaxPayerStatus.Find(forwarderDocument.TaxPayerStatusId).Status;
+                    }
+
+                    if (db.Forwarders.Find(forwarderDocument.Id).ForwarderBankDetail != null)
+                    {
+                        forwarderBankDetailsCertificateSerial = db.ForwarderBankDetails.Find(forwarderDocument.Id).CertificateSerial;
+                        forwarderBankDetailsCertificateNumber = db.ForwarderBankDetails.Find(forwarderDocument.Id).CertificateNamber;
+                        forwarderBankDetailsEDRPOU = db.ForwarderBankDetails.Find(forwarderDocument.Id).EDRPOU;
+                        forwarderBankDetailsAccountNumber = db.ForwarderBankDetails.Find(forwarderDocument.Id).AccountNumber;
+                        forwarderBankDetailsBankName = db.ForwarderBankDetails.Find(forwarderDocument.Id).BankName;
+                        forwarderBankDetailsMFO = db.ForwarderBankDetails.Find(forwarderDocument.Id).MFO;
+                        forwarderBankDetailsIBAN = db.ForwarderBankDetails.Find(forwarderDocument.Id).IBAN;
+                        forwarderBankDetailsIPN = db.ForwarderBankDetails.Find(forwarderDocument.Id).IPN;
+                        forwarderBankDetailsSWIFT = db.ForwarderBankDetails.Find(forwarderDocument.Id).SWIFT;
+                    }
+
+                    if (forwarderName != "" || forwarderDirector != "" ||
+                        forwarderWorkDocument != "" || forwarderTaxPayerStatus != "" ||
+                        forwarderBankDetailsBankName != "" || forwarderBankDetailsAccountNumber != "" || forwarderBankDetailsCertificateNumber != "" || forwarderBankDetailsCertificateSerial != "" ||
+                        forwarderBankDetailsEDRPOU != "" || forwarderBankDetailsIBAN != "" ||
+                        forwarderBankDetailsIPN != "" || forwarderBankDetailsMFO != "" || forwarderBankDetailsSWIFT != "" || forwarderDocument.ForwarderStamp.Stamp != null)
+                    {
+                        isForwarderFull = true;
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                Log.Write(ex);
+                MessageBox.Show("Помилка: " + ex.Message);
+            }
+            return isForwarderFull;
+        }
+
+        bool IsTransporterFull()
+        {
+            bool isTransporterFull = false;
+            try
+            {
+                using (var db = new AtlantSovtContext())
+                {
 
                     var transporterFullName = transporterDocument.FullName;
                     var transporterDirector = transporterDocument.Director;
@@ -173,16 +292,6 @@ namespace AtlantSovt
                     string transporterBankDetailsIPN = "";
                     string transporterBankDetailsSWIFT = "";
 
-                    if (forwarderDocument.WorkDocumentId != null)
-                    {
-                        secondForwarderWorkDocument = db.WorkDocuments.Find(forwarderDocument.WorkDocumentId).Status;
-                    }
-
-                    if (forwarderDocument.TaxPayerStatusId != null)
-                    {
-                        secondForwarderTaxPayerStatus = db.TaxPayerStatus.Find(forwarderDocument.TaxPayerStatusId).Status;
-                    }
-
                     if (transporterDocument.WorkDocumentId != null)
                     {
                         transporterWorkDocument = db.WorkDocuments.Find(transporterDocument.WorkDocumentId).Status;
@@ -191,19 +300,6 @@ namespace AtlantSovt
                     if (transporterDocument.TaxPayerStatusId != null)
                     {
                         transporterTaxPayerStatus = db.TaxPayerStatus.Find(transporterDocument.TaxPayerStatusId).Status;
-                    }
-
-                    if (db.Forwarders.Find(forwarderDocument.Id).ForwarderBankDetail != null)
-                    {
-                        secondForwarderBankDetailsCertificateSerial = db.ForwarderBankDetails.Find(forwarderDocument.Id).CertificateSerial;
-                        secondForwarderBankDetailsCertificateNumber = db.ForwarderBankDetails.Find(forwarderDocument.Id).CertificateNamber;
-                        secondForwarderBankDetailsEDRPOU = db.ForwarderBankDetails.Find(forwarderDocument.Id).EDRPOU;
-                        secondForwarderBankDetailsAccountNumber = db.ForwarderBankDetails.Find(forwarderDocument.Id).AccountNumber;
-                        secondForwarderBankDetailsBankName = db.ForwarderBankDetails.Find(forwarderDocument.Id).BankName;
-                        secondForwarderBankDetailsMFO = db.ForwarderBankDetails.Find(forwarderDocument.Id).MFO;
-                        secondForwarderBankDetailsIBAN = db.ForwarderBankDetails.Find(forwarderDocument.Id).IBAN;
-                        secondForwarderBankDetailsIPN = db.ForwarderBankDetails.Find(forwarderDocument.Id).IPN;
-                        secondForwarderBankDetailsSWIFT = db.ForwarderBankDetails.Find(forwarderDocument.Id).SWIFT;
                     }
 
                     if (db.Transporters.Find(transporterDocument.Id).TransporterBankDetail != null)
@@ -219,32 +315,112 @@ namespace AtlantSovt
                         transporterBankDetailsSWIFT = db.TransporterBankDetails.Find(transporterDocument.Id).SWIFT;
                     }
 
-                    if (secondForwarderName == "" || secondForwarderDirector == "" ||
-                        secondForwarderWorkDocument == "" || secondForwarderTaxPayerStatus == "" ||
-                        secondForwarderBankDetailsBankName == "" || secondForwarderBankDetailsAccountNumber == "" || secondForwarderBankDetailsCertificateNumber == "" || secondForwarderBankDetailsCertificateSerial == "" ||
-                        secondForwarderBankDetailsEDRPOU == "" || secondForwarderBankDetailsIBAN == "" ||
-                        secondForwarderBankDetailsIPN == "" || secondForwarderBankDetailsMFO == "" || secondForwarderBankDetailsSWIFT == "" || forwarderDocument.ForwarderStamp.Stamp == null)
-                    {
-                        check = true;
-                        isFull += "\r\n- <Експедитор> ";
-                    }
-                    else
-                    {
-                        isForwarderFull = true;
-                    }
-
-                    if (transporterFullName == "" || transporterDirector == "" || transporterWorkDocument == "" ||
-                        transporterTaxPayerStatus == "" || transporterBankDetailsBankName == "" || transporterBankDetailsAccountNumber == "" ||
-                        transporterBankDetailsCertificateNumber == "" || transporterBankDetailsCertificateSerial == "" || transporterBankDetailsEDRPOU == "" || transporterBankDetailsIBAN == "" ||
-                        transporterBankDetailsIPN == "" || transporterBankDetailsMFO == "" || transporterBankDetailsSWIFT == "")
-                    {
-                        check = true;
-                        isFull += "\r\n- <Перевізник> ";
-                    }
-                    else
+                    if (transporterFullName != "" || transporterDirector != "" || transporterWorkDocument != "" ||
+                        transporterTaxPayerStatus != "" || transporterBankDetailsBankName != "" || transporterBankDetailsAccountNumber != "" ||
+                        transporterBankDetailsCertificateNumber != "" || transporterBankDetailsCertificateSerial != "" || transporterBankDetailsEDRPOU != "" || transporterBankDetailsIBAN != "" ||
+                        transporterBankDetailsIPN != "" || transporterBankDetailsMFO != "" || transporterBankDetailsSWIFT != "")
                     {
                         isTransporterFull = true;
                     }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
+            return isTransporterFull;
+        }
+
+        bool IsClientFull()
+        {
+            bool isClientFull = false;
+            try
+            {
+                using (var db = new AtlantSovtContext())
+                {
+                    var clientName = clientDocument.Name;
+                    var clientDirector = clientDocument.Director;
+                    var clientPhysicalAddress = clientDocument.PhysicalAddress;
+                    var clientGeographycalAddress = clientDocument.GeografphyAddress;
+
+                    string transporterWorkDocument = "";
+                    string transporterTaxPayerStatus = "";
+                    string transporterBankDetailsCertificateSerial = "";
+                    string transporterBankDetailsCertificateNumber = "";
+                    string transporterBankDetailsEDRPOU = "";
+                    string transporterBankDetailsAccountNumber = "";
+                    string transporterBankDetailsBankName = "";
+                    string transporterBankDetailsMFO = "";
+                    string transporterBankDetailsIBAN = "";
+                    string transporterBankDetailsIPN = "";
+                    string transporterBankDetailsSWIFT = "";
+
+                    if (transporterDocument.WorkDocumentId != null)
+                    {
+                        transporterWorkDocument = db.WorkDocuments.Find(transporterDocument.WorkDocumentId).Status;
+                    }
+
+                    if (transporterDocument.TaxPayerStatusId != null)
+                    {
+                        transporterTaxPayerStatus = db.TaxPayerStatus.Find(transporterDocument.TaxPayerStatusId).Status;
+                    }
+
+                    if (db.Transporters.Find(transporterDocument.Id).TransporterBankDetail != null)
+                    {
+                        transporterBankDetailsCertificateSerial = db.TransporterBankDetails.Find(transporterDocument.Id).CertificateSerial;
+                        transporterBankDetailsCertificateNumber = db.TransporterBankDetails.Find(transporterDocument.Id).CertificateNamber;
+                        transporterBankDetailsEDRPOU = db.TransporterBankDetails.Find(transporterDocument.Id).EDRPOU;
+                        transporterBankDetailsAccountNumber = db.TransporterBankDetails.Find(transporterDocument.Id).AccountNumber;
+                        transporterBankDetailsBankName = db.TransporterBankDetails.Find(transporterDocument.Id).BankName;
+                        transporterBankDetailsMFO = db.TransporterBankDetails.Find(transporterDocument.Id).MFO;
+                        transporterBankDetailsIBAN = db.TransporterBankDetails.Find(transporterDocument.Id).IBAN;
+                        transporterBankDetailsIPN = db.TransporterBankDetails.Find(transporterDocument.Id).IPN;
+                        transporterBankDetailsSWIFT = db.TransporterBankDetails.Find(transporterDocument.Id).SWIFT;
+                    }
+
+                    if (transporterFullName != "" || transporterDirector != "" || transporterWorkDocument != "" ||
+                        transporterTaxPayerStatus != "" || transporterBankDetailsBankName != "" || transporterBankDetailsAccountNumber != "" ||
+                        transporterBankDetailsCertificateNumber != "" || transporterBankDetailsCertificateSerial != "" || transporterBankDetailsEDRPOU != "" || transporterBankDetailsIBAN != "" ||
+                        transporterBankDetailsIPN != "" || transporterBankDetailsMFO != "" || transporterBankDetailsSWIFT != "")
+                    {
+                        isTransporterFull = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
+            return isClientFull;
+        }
+
+        void IsForwarderAndTransporterFull()
+        {
+            bool check = false;
+            bool isForwarderFull = IsForwarderFull();
+            bool isTransporterFull = IsTransporterFull();
+            bool isClientFull = IsClientFull();
+            string isFull = "Деякі дані не заповнені в: ";
+            try
+            {
+                using (var db = new AtlantSovtContext())
+                {
+                   if(isForwarderFull != true)
+                   {
+                       check = true;
+                       isFull += "\r\n- <Експедитор> ";
+                   }
+                   if (isTransporterFull != true)
+                   {
+                       check = true;
+                       isFull += "\r\n- <Перевізник> ";
+                   }
+                   if (isClientFull != true)
+                   {
+                       check = true;
+                       isFull += "\r\n- <Клієнт> ";
+                   }
+
 
                     if(check)
                     {
@@ -262,7 +438,7 @@ namespace AtlantSovt
                 MessageBox.Show("Помилка: " + e.Message);
             }
         }
-
+        */
         void ShowContract()
         {
             contractShowTransporterContactDataGridView.Visible = false;
@@ -270,34 +446,34 @@ namespace AtlantSovt
             using (var db = new AtlantSovtContext())
             {
                 var query =
-                from c in db.TransporterForwarderContracts
+                from c in db.Contracts
                 orderby c.Id
                 select
                 new
                 {
                     Id = c.Id,
-                    ContractNumber = c.ContractNumber + @"\" + c.ContractDataBegin.Value.Year +  @"\" + ((c.Language == 1) ? ((c.PorZ == true) ? "З" : "П") : "P"),
-                    Forwarder = c.Forwarder.Name,
-                    Transporter = c.Transporter.FullName,
+                    ContractNumber = c.ContractNumber + @"/" + c.ContractDataBegin.Value.Year,
+                    Forwarder = c.ForwarderContracts.Where(f => f.IsFirst == 0).FirstOrDefault().Forwarder.Name,
+                    Person2 = (c.ForwarderContracts.Where(f => f.IsFirst == 1).Count() == 1) ? "<Експедитор> " + c.ForwarderContracts.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.Name : (c.TransporterId != null) ? "<Перевізник> " + c.Transporter.FullName : "<Клієнт> " + c.Client.Name,
                     ContractDateBegin = c.ContractDataBegin,
                     ContractDateEnd = c.ContractDataEnd,
-                    Language = (c.Language == 1) ? "Українська" : (c.Language == 2) ? "Англійська/Російська" : "Німецька/Російська",
-                    PorZ = (c.PorZ == true) ? "Замовника" : "Перевізника",
+                    Type = (c.Type == 0) ? "По Україні" : "За кордон",
+                    Template = c.TemplateName
                 };
 
                 contractShowDataGridView.DataSource = query.ToList();
                 contractShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
                 contractShowDataGridView.Columns[1].HeaderText = "Номер договору";
                 contractShowDataGridView.Columns[2].HeaderText = "Експедитор";
-                contractShowDataGridView.Columns[3].HeaderText = "Перевізник";
+                contractShowDataGridView.Columns[3].HeaderText = "Другий учасник договору";
                 contractShowDataGridView.Columns[4].HeaderText = "Дата початку";
                 contractShowDataGridView.Columns[5].HeaderText = "Дата завершення";
-                contractShowDataGridView.Columns[6].HeaderText = "Мова";
-                contractShowDataGridView.Columns[7].HeaderText = "Виступає у якості";
+                contractShowDataGridView.Columns[6].HeaderText = "Напрямок";
+                contractShowDataGridView.Columns[7].HeaderText = "Використаний шаблон";
 
             } contractShowDataGridView.Update();
         }
-
+        
         void ShowContractSearch()
         {
             contractShowTransporterContactDataGridView.Visible = false;
@@ -306,44 +482,43 @@ namespace AtlantSovt
             using (var db = new AtlantSovtContext())
             {
                 var query =
-                from c in db.TransporterForwarderContracts
-                where (c.Forwarder.Name.Contains(text) || c.Transporter.FullName.Contains(text) || c.Transporter.ShortName.Contains(text) || c.Transporter.TransporterContacts.Any(con => con.ContactPerson.Contains(text)) || c.Transporter.TransporterContacts.Any(con => con.Email.Contains(text)))
+                from c in db.Contracts
+                where (c.ForwarderContracts.Any(f => f.Forwarder.Name.Contains(text)) || c.Client.Name.Contains(text) ||c.Transporter.FullName.Contains(text) || c.Transporter.ShortName.Contains(text) || c.Transporter.TransporterContacts.Any(con => con.ContactPerson.Contains(text)) || c.Transporter.TransporterContacts.Any(con => con.Email.Contains(text)))
                 select
                 new
                 {
                     Id = c.Id,
-                    Name = c.ContractNumber,
-                    Forwarder = c.Forwarder.Name,
-                    Transporter = c.Transporter.FullName,
+                    ContractNumber = c.ContractNumber + @"/" + c.ContractDataBegin.Value.Year,
+                    Forwarder = c.ForwarderContracts.Where(f => f.IsFirst == 0).FirstOrDefault().Forwarder.Name,
+                    Person2 = (c.ForwarderContracts.Where(f => f.IsFirst == 1).Count() == 1) ? "<Експедитор> " + c.ForwarderContracts.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.Name : (c.TransporterId != null) ? "<Перевізник> " + c.Transporter.FullName : "<Клієнт> " + c.Client.Name,
                     ContractDateBegin = c.ContractDataBegin,
                     ContractDateEnd = c.ContractDataEnd,
-                    Language = (c.Language == 1) ? "Українська" : (c.Language == 2) ? "Англійська/Російська" : "Німецька/Російська",
-                    PorZ = (c.PorZ == true) ? "Замовника" : "Перевізника"
+                    Type = (c.Type == 0) ? "По Україні" : "За кордон",
+                    Template = c.TemplateName
                 };
 
                 contractShowDataGridView.DataSource = query.ToList();
                 contractShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
                 contractShowDataGridView.Columns[1].HeaderText = "Номер договору";
                 contractShowDataGridView.Columns[2].HeaderText = "Експедитор";
-                contractShowDataGridView.Columns[3].HeaderText = "Перевізник";
+                contractShowDataGridView.Columns[3].HeaderText = "Другий учасник договору";
                 contractShowDataGridView.Columns[4].HeaderText = "Дата початку";
                 contractShowDataGridView.Columns[5].HeaderText = "Дата завершення";
-                contractShowDataGridView.Columns[6].HeaderText = "Мова";
-                contractShowDataGridView.Columns[7].HeaderText = "Виступає у якості";
+                contractShowDataGridView.Columns[6].HeaderText = "Напрямок";
+                contractShowDataGridView.Columns[7].HeaderText = "Використаний шаблон";
 
             } contractShowDataGridView.Update();
-
         }
-
+        
         void ContractChangeState(RadioButton radioButton)
         {
             using (var db = new AtlantSovtContext())
             {
                 try
                 {
-                    TransporterForwarderContract contract;
+                    Contract contract;
                     int ClikedId = Convert.ToInt32(contractShowDataGridView.CurrentRow.Cells[0].Value);
-                    contract = db.TransporterForwarderContracts.Find(ClikedId);
+                    contract = db.Contracts.Find(ClikedId);
 
                     if (radioButton.Name == "notSelectedContractStateRadioButton")
                     {
@@ -368,11 +543,11 @@ namespace AtlantSovt
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Немає жодного документу");
+                    MessageBox.Show("Немає жодного договору");
                 }
             }
         }
-
+        
         void ShowContractInfo()
         {
              using (var db = new AtlantSovtContext())
@@ -382,7 +557,7 @@ namespace AtlantSovt
                     var ClikedId = Convert.ToInt32(contractShowDataGridView.CurrentRow.Cells[0].Value);
 
                     var getContractState =
-                        from contract in db.TransporterForwarderContracts
+                        from contract in db.Contracts
                         where contract.Id == ClikedId
                         select contract;
 
@@ -403,7 +578,7 @@ namespace AtlantSovt
                     from con in db.TransporterContacts
                     where con.TransporterId ==
                     (
-                        from c in db.TransporterForwarderContracts
+                        from c in db.Contracts
                         where c.Id == ClikedId
                         select c
                     ).FirstOrDefault().TransporterId
@@ -437,7 +612,7 @@ namespace AtlantSovt
             contractShowTransporterContactDataGridView.Update();
             contractShowTransporterContactDataGridView.Visible = true;
         }
-
+        /*
         void AddContract()
         {
             using (var db = new AtlantSovtContext())
@@ -507,11 +682,6 @@ namespace AtlantSovt
                         contract.ContractNumber = documentCount.ForeignDocument;
                         contract.Language = 2;
                     }
-                    else if (contractLanguage == 3)
-                    {
-                        contract.ContractNumber = documentCount.ForeignDocument;
-                        contract.Language = 3;
-                    }
 
                     contract.ContractDataBegin = contractBeginDateTimePicker.Value.Date;
                     contract.ContractDataEnd = contractBeginDateTimePicker.Value.AddYears(1);
@@ -526,7 +696,7 @@ namespace AtlantSovt
                 }
             }
         }
-
+        */
         void DeleteContract()
         {
             try
@@ -535,18 +705,19 @@ namespace AtlantSovt
 
                 using (var db = new AtlantSovtContext())
                 {
-                    contract = db.TransporterForwarderContracts.Find(ClikedId);
+                    contract = db.Contracts.Find(ClikedId);
 
                     if (contract != null)
                     {
-                        if (MessageBox.Show("Видалити договір " + contract.ContractNumber + @"\" + contract.ContractDataBegin.Value.Year + @"\" + ((contract.Language == 1) ? ((contract.PorZ == true) ? "З" : "П") : "P") + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (MessageBox.Show("Видалити договір " + contract.ContractNumber + @"\" + contract.ContractDataBegin.Value.Year + " ?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             try
                             {
-                                db.TransporterForwarderContracts.Attach(contract);
-                                db.TransporterForwarderContracts.Remove(contract);
+                                db.Contracts.Attach(contract);
+                                db.Contracts.Remove(contract);
                                 db.SaveChanges();
                                 MessageBox.Show("Договір успішно видалений");
+                                contractShowDeleteContractButton.Enabled = false;
                             }
                             catch (Exception ex)
                             {
@@ -565,12 +736,17 @@ namespace AtlantSovt
                 MessageBox.Show("Немає жодного договору");
             }
         }
-
+        /*
         void CreateTransporterForwarderContract()
         {
             var wordApp = new Word.Application();
             wordApp.Visible = false;
-            var wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((contractLanguage == 1) ? @"Resources\ukrDocumentationTransporterForwarder.docx" : (contractLanguage == 2) ? @"Resources\engDocumentationTransporterForwarder.docx" : @"Resources\gerDocumentationTransporterForwarder.docx")).Replace("\\bin\\Release", ""));
+            if(GetDocumentPath() == "")
+            {
+                MessageBox.Show("Не вибраний шаблон, спробуйте ще раз");
+                return;
+            }
+            var wordDocument = wordApp.Documents.Open(GetDocumentPath());
             try
             {
                 using (var db = new AtlantSovtContext())
@@ -674,11 +850,6 @@ namespace AtlantSovt
                     {
                         ReplaseWordStub("{ContractDateBegin}", contractDateBegin.ToString("D",new System.Globalization.CultureInfo("ru-RU")), wordDocument);
                         ReplaseWordStub("{engContractDateBegin}", contractDateBegin.ToString("D",new System.Globalization.CultureInfo("en-US")), wordDocument);
-                    }
-                    else if (contractLanguage == 3)
-                    {
-                        ReplaseWordStub("{ContractDateBegin}", contractDateBegin.ToString("D", new System.Globalization.CultureInfo("ru-RU")), wordDocument);
-                        ReplaseWordStub("{gerContractDateBegin}", contractDateBegin.ToString("D", new System.Globalization.CultureInfo("de-DE")), wordDocument);
                     }
 
                     ReplaseWordStub("{ContractNumber}", title, wordDocument);
@@ -938,7 +1109,7 @@ namespace AtlantSovt
                 MessageBox.Show("Помилка, спробуйте ще раз");
             }
         }
-
+        */
         string UploadForwarderStapm(Forwarder forwarder)
         {
             string path = "";
@@ -970,21 +1141,38 @@ namespace AtlantSovt
             var range = wordDocument.Content;
             range.Find.ClearFormatting();
             range.Find.Execute(FindText: stubToReplace, ReplaceWith: text, Replace: Word.WdReplace.wdReplaceAll);
-            
         }
 
         void GetDocumentFiles()
         {
             contractFilecheckedListBox.Items.Clear();
 
-            string[] files = Directory.GetFiles((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Contracts\").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""), "*.docx");
-            
-            foreach (string file in files)
+            var files = Directory.GetFiles((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Contracts\").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", "")).Where(s => s.EndsWith(".docx") || s.EndsWith(".doc") || s.EndsWith(".rtf"));
+
+            foreach (var file in files)
             {
-                string fileName = Path.GetFileNameWithoutExtension(file);
-                string filePath = Path.GetFullPath(file);
+                string fileName = Path.GetFileName(file);
                 contractFilecheckedListBox.Items.Add(fileName);
             }
         }
+
+        string GetDocumentPath()
+        {
+            string filePath = "";
+            try
+            {
+                if (contractFilecheckedListBox.CheckedItems.Count > 0)
+                {
+                    filePath = (System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Contracts\" + contractFilecheckedListBox.SelectedItem.ToString()).Replace("\\bin\\Release", "").Replace("\\bin\\Debug", "");
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+                MessageBox.Show("Помилка: не правильний шлях шаблону");
+            }
+            return filePath;
+        }
+
     }
 }
