@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,7 +49,7 @@ namespace AtlantSovt
                 this.Hide();
                 if (ID != 0)
                 {
-                    AddTransporterBankDetail(ID);
+                    AddTransporterBankDetail(ID, false);
                 }
             }
             else
@@ -57,7 +58,7 @@ namespace AtlantSovt
             }
 
         }
-        internal void AddTransporterBankDetail(long id)
+        internal string AddTransporterBankDetail(long id, bool IsAdding)
         {
             using (var db = new AtlantSovtContext())
             {
@@ -78,12 +79,22 @@ namespace AtlantSovt
                 {
                     db.TransporterBankDetails.Add(New_TransporterBankDetail);                    
                     db.SaveChanges();
-                    MessageBox.Show("Банківські данні успішно додані перевізнику");                   
+                    if (IsAdding)
+                    {
+                        return "Банківські данні успішно додані перевізнику [" + New_TransporterBankDetail.Id + "]\n";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Банківські данні успішно додані перевізнику");
+                        return string.Empty;
+                    }               
                 }
                 catch (Exception ec)
                 {
+                    Log.Write(ec);
                     MessageBox.Show(ec.Message);
-                    
+                    return string.Empty;
+
                 }
 
             }

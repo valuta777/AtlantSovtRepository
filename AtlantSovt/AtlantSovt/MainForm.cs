@@ -124,6 +124,10 @@ namespace AtlantSovt
             {
                 return;
             }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)

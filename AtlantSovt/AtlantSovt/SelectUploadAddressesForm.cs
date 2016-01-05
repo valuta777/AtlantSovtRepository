@@ -169,13 +169,13 @@ namespace AtlantSovt
             }
         }
 
-        internal void UploadAddressesSelect(Order new_order)
+        internal string UploadAddressesSelect(Order new_order)
         {
             order = new_order;
-            SaveUploadAdresses();
+            return SaveUploadAdresses();
         }
 
-        private void SaveUploadAdresses()
+        private string SaveUploadAdresses()
         {
             if (uploadAddressListBox.CheckedItems.Count != 0 && order != null)
             {
@@ -197,14 +197,19 @@ namespace AtlantSovt
                             db.Orders.Find(order.Id).OrderUploadAdresses.Add(new_OrderUploadAdress);
                         }
                         db.SaveChanges();
-                        MessageBox.Show("Успішно вибрано " + uploadAddressListBox.CheckedItems.Count + " Адрес завантаження");
+                        return "Успішно вибрано " + uploadAddressListBox.CheckedItems.Count + " Адрес завантаження\n";
                     }
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
                     MessageBox.Show("Помилка: ", ex.Message);
+                    return string.Empty;
                 }
+            }
+            else
+            {
+                return string.Empty;
             }
         }
     }

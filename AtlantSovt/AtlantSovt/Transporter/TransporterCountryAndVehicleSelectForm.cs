@@ -54,14 +54,13 @@ namespace AtlantSovt
             }
         }
 
-        internal void CoutriesAndVehiclesSelect(Transporter add_transporter) 
+        internal string CoutriesAndVehiclesSelect(Transporter add_transporter) 
         {
             transporter = add_transporter;
-            SaveCountries();
-            SaveVehicles();
+            return  SaveCountries()+ SaveVehicles();
         }
 
-        private void SaveCountries()
+        private string SaveCountries()
         {
             if (transporterFilterSelectCountryCheckedListBox.CheckedItems.Count != 0 && transporter != null)
             {
@@ -81,18 +80,20 @@ namespace AtlantSovt
                         }
 
                     db.SaveChanges();
-                    MessageBox.Show("Успішно вибрано " + transporterFilterSelectCountryCheckedListBox.CheckedItems.Count + " країн");                        
+                    return "Успішно вибрано " + transporterFilterSelectCountryCheckedListBox.CheckedItems.Count + " країн(а) \n";                        
                     }
                 }
                 catch(Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Виникла помикла, спробуйте ще раз");             
+                    MessageBox.Show("Помилка!!", ex.ToString());
+                    return string.Empty;
                 }
             }
+            else { return string.Empty; }
         }
 
-        private void SaveVehicles()
+        private string SaveVehicles()
         {
             if (transporterFilterSelectVehicleCheckedListBox.CheckedItems.Count != 0 && transporter != null)
             {
@@ -111,14 +112,18 @@ namespace AtlantSovt
                         }
 
                         db.SaveChanges();
-                        MessageBox.Show("Успішно вибрано " + transporterFilterSelectVehicleCheckedListBox.CheckedItems.Count + " типів транспорту");
+                        return "Успішно вибрано " + transporterFilterSelectVehicleCheckedListBox.CheckedItems.Count + " тип(ів) транспорту\n";
                     }
                 }
                 catch (Exception e)
                 {
+                    Log.Write(e);
                     MessageBox.Show("Помилка!!", e.ToString());
+                    return string.Empty;
                 }
             }
+            else { return string.Empty; }
+
         }
 
         private void transporterFilterSelectButton_Click(object sender, EventArgs e)

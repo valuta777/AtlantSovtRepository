@@ -27,7 +27,7 @@ namespace AtlantSovt
             long Id = 0;
         }
 
-        internal void AddClientContact(long id)
+        internal string AddClientContact(long id, bool IsAdding)
         {
             using (var db = new AtlantSovtContext())
             {
@@ -43,12 +43,22 @@ namespace AtlantSovt
                 {
                     db.ClientContacts.Add(New_ClientContact);
                     db.SaveChanges();
-                    MessageBox.Show("Контакт успішно доданий клієнту " + New_ClientContact.ClientId);
+                    if (IsAdding)
+                    {
+                        return "Контакт успішно доданий клієнту [" + New_ClientContact.ClientId + "]\n";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Контакт успішно доданий клієнту " + New_ClientContact.ClientId);
+                        return string.Empty;
+                    }                    
+
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
                     MessageBox.Show(ex.Message);
+                    return string.Empty;
                 }
 
             }
@@ -65,7 +75,7 @@ namespace AtlantSovt
             this.Hide();
             if (Id != 0)
             {
-                AddClientContact(Id);
+                AddClientContact(Id,false);
             }
         }
        internal void AddClientContact2(long id) 

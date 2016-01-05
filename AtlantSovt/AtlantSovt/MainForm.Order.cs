@@ -82,8 +82,11 @@ namespace AtlantSovt
                     db.Orders.Add(New_Order);
                     db.Entry(New_Order).State = EntityState.Added;
                     db.SaveChanges();
-                    MessageBox.Show("Заявку успішно створено");
-                    BridgeAddes(New_Order);
+                    string massage = "Заявку успішно створено\n";
+
+                    massage += BridgeAddes(New_Order);
+
+                    MessageBox.Show(massage);
                 }
                 catch (DbEntityValidationException ex)
                 {
@@ -92,8 +95,9 @@ namespace AtlantSovt
                 }
             }
         }
-        void BridgeAddes(Order New_Order)
+        string BridgeAddes(Order New_Order)
         {
+            string returnMessage = string.Empty;
             using (var db = new AtlantSovtContext())
             {
                 if (loadingForm1OrderAdd != null)
@@ -108,7 +112,7 @@ namespace AtlantSovt
                         db.Orders.Find(New_Order.Id).OrderLoadingForms.Add(New_OrderLoadingForm1);
                         db.Entry(New_OrderLoadingForm1).State = EntityState.Added;
                         db.SaveChanges();
-                        MessageBox.Show("Успішно вибрано першу форму завантаження");
+                        returnMessage += "Успішно вибрано першу форму завантаження\n";
                     }
                     catch (Exception ex)
                     {
@@ -128,7 +132,7 @@ namespace AtlantSovt
                         db.Orders.Find(New_Order.Id).OrderLoadingForms.Add(New_OrderLoadingForm2);
                         db.Entry(New_OrderLoadingForm2).State = EntityState.Added;
                         db.SaveChanges();
-                        MessageBox.Show("Успішно вибрано другу форму завантаження");
+                        returnMessage += "Успішно вибрано другу форму завантаження\n";
                     }
                     catch (Exception ex)
                     {
@@ -140,22 +144,22 @@ namespace AtlantSovt
                 //адреси              
                 if (selectDownloadAddressesForm != null)
                 {
-                    selectDownloadAddressesForm.DownloadAddressesSelect(db.Orders.Find(New_Order.Id));
+                    returnMessage += selectDownloadAddressesForm.DownloadAddressesSelect(db.Orders.Find(New_Order.Id));
                     selectDownloadAddressesForm = null;
                 }
                 if (selectUploadAddressesForm != null)
                 {
-                    selectUploadAddressesForm.UploadAddressesSelect(db.Orders.Find(New_Order.Id));
+                    returnMessage += selectUploadAddressesForm.UploadAddressesSelect(db.Orders.Find(New_Order.Id));
                     selectUploadAddressesForm = null;
                 }
                 if (selectCustomsAddressesForm != null)
                 {
-                    selectCustomsAddressesForm.CustomsAddressesSelect(db.Orders.Find(New_Order.Id));
+                    returnMessage += selectCustomsAddressesForm.CustomsAddressesSelect(db.Orders.Find(New_Order.Id));
                     selectCustomsAddressesForm = null;
                 }
                 if (selectUncustomsAddressesForm != null)
                 {
-                    selectUncustomsAddressesForm.UncustomsAddressesSelect(db.Orders.Find(New_Order.Id));
+                    returnMessage += selectUncustomsAddressesForm.UncustomsAddressesSelect(db.Orders.Find(New_Order.Id));
                     selectUncustomsAddressesForm = null;
                 }
 
@@ -173,7 +177,7 @@ namespace AtlantSovt
                         db.Entry(New_Forwarder1Order).State = EntityState.Added;
                         db.SaveChanges();
 
-                        MessageBox.Show("Успішно вибрано першого експедитора");
+                        returnMessage += "Успішно вибрано першого експедитора\n";
                     }
                     catch (Exception ex)
                     {
@@ -194,7 +198,7 @@ namespace AtlantSovt
                         db.Orders.Find(New_Order.Id).ForwarderOrders.Add(New_Forwarder2Order);
                         db.Entry(New_Forwarder2Order).State = EntityState.Added;
                         db.SaveChanges();
-                        MessageBox.Show("Успішно вибрано другого експедитора");
+                        returnMessage += "Успішно вибрано другого експедитора\n";
                     }
                     catch (Exception ex)
                     {
@@ -214,7 +218,7 @@ namespace AtlantSovt
                         db.Orders.Find(New_Order.Id).ForwarderOrders.Add(New_Forwarder3Order);
                         db.Entry(New_Forwarder3Order).State = EntityState.Added;
                         db.SaveChanges();
-                        MessageBox.Show("Успішно вибрано третього експедитора");
+                        returnMessage += "Успішно вибрано третього експедитора\n";
                     }
                     catch (Exception ex)
                     {
@@ -224,6 +228,7 @@ namespace AtlantSovt
                 }
 
             }
+            return returnMessage;
         }
             
     

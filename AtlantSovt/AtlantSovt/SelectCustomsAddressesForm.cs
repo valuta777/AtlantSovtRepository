@@ -170,13 +170,13 @@ namespace AtlantSovt
             addCustomsAddressForm.Show();
         }        
 
-        internal void CustomsAddressesSelect(Order new_order)
+        internal string CustomsAddressesSelect(Order new_order)
         {
             order = new_order;
-            SaveCustomsAddresses();
+            return SaveCustomsAddresses();
         }
 
-        private void SaveCustomsAddresses()
+        private string SaveCustomsAddresses()
         {
             if (customsAddressesListBox.CheckedItems.Count != 0 && order != null)
             {
@@ -199,14 +199,19 @@ namespace AtlantSovt
                         }
 
                         db.SaveChanges();
-                        MessageBox.Show("Успішно вибрано " + customsAddressesListBox.CheckedItems.Count + " Адрес замитнення");
+                        return "Успішно вибрано " + customsAddressesListBox.CheckedItems.Count + " Адрес замитнення\n";
                     }
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
                     MessageBox.Show("Помилка: ", ex.Message);
+                    return string.Empty;
                 }
+            }
+            else
+            {
+                return string.Empty;
             }
         }
 

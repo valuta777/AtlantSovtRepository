@@ -189,7 +189,6 @@ namespace AtlantSovt
                     var new_Director = directorClientTextBox.Text;
                     var new_PhysicalAddress = physicalAddressClientTextBox.Text;
                     var new_GeografphyAddress = geographyAddressClientTextBox.Text;
-                    bool new_ContractType;
                     
                     var new_Comment = commentClientTextBox.Text;
 
@@ -271,18 +270,19 @@ namespace AtlantSovt
                     {
                         db.Clients.Add(New_Client);
                         db.SaveChanges();
-                        MessageBox.Show("Клієнт успішно доданий");
+                        string borodakyrka = "Клієнт успішно доданий ["+ New_Client.Id + "]\n";                        
 
                         if (addClientBankDetailsAddForm != null)
                         {
-                            addClientBankDetailsAddForm.AddClientBankDetail(New_Client.Id);
+                            borodakyrka += addClientBankDetailsAddForm.AddClientBankDetail(New_Client.Id, true);
                             addClientBankDetailsAddForm = null;
                         }
                         if (addClientContactAddForm != null)
                         {
-                            addClientContactAddForm.AddClientContact(New_Client.Id);
+                            borodakyrka += addClientContactAddForm.AddClientContact(New_Client.Id, true);
                             addClientContactAddForm = null;
                         }
+                        MessageBox.Show(borodakyrka);
                     }
                     catch (Exception ex)
                     {
