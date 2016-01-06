@@ -1596,7 +1596,8 @@ namespace AtlantSovt
         #region Create
         private void firstPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SplitForwarderDocumentComboBox(firstPersonNameDocumentComboBox);
+            firstForwarderDocument = SplitForwarderDocumentComboBox(firstPersonNameDocumentComboBox);
+            firstForwarderStamp = firstForwarderDocument.ForwarderStamp;
             secondPersonRoleDocumentСomboBox.Enabled = true;
         }
 
@@ -1661,7 +1662,9 @@ namespace AtlantSovt
             }
             else if (secondPersonRoleDocumentСomboBox.SelectedIndex == 2)
             {
-                SplitForwarderDocumentComboBox(secondPersonNameDocumentComboBox);
+                secondForwarderDocument = SplitForwarderDocumentComboBox(secondPersonNameDocumentComboBox);
+                secondForwarderStamp = SplitForwarderDocumentComboBox(secondPersonNameDocumentComboBox).ForwarderStamp;
+
             }
             contractFilecheckedListBox.Enabled = true;
             refreshContactFilesButton.Enabled = true;
@@ -1692,13 +1695,7 @@ namespace AtlantSovt
 
         private void createContactButton_Click(object sender, EventArgs e)
         {
-            //IsForwarderAndTransporterFull();
-            //if (!isForwarderFull || !isTransporterFull)
-            //{
-            //    return;
-            //}
-            //AddContract();
-            //CreateTransporterForwarderContract();
+            IsDataComplete();
         }
 
         private void contractLanguageComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -1763,17 +1760,24 @@ namespace AtlantSovt
 
         private void contractShowDataGridView_KeyDown(object sender, KeyEventArgs e)
         {
-            ShowContractInfo();
-        }
-
-        private void contractShowDataGridView_KeyUp(object sender, KeyEventArgs e)
-        {
-            ShowContractInfo();
+            if(e.KeyCode == Keys.Delete)
+            {
+                DeleteContract();
+                ShowContract();
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                ShowContractInfo();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                ShowContractInfo();
+            }
         }
 
         private void contractShowOpenDocButton_Click(object sender, EventArgs e)
         {
-            //OpenWordDoc();
+            OpenWordDoc();
         }
 
         private void contractStateRadioButton_Click(object sender, EventArgs e)

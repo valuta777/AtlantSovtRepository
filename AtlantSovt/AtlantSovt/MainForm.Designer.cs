@@ -7203,7 +7203,6 @@
             this.contractShowDataGridView.TabStop = false;
             this.contractShowDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.contractShowDataGridView_CellMouseClick);
             this.contractShowDataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.contractShowDataGridView_KeyDown);
-            this.contractShowDataGridView.KeyUp += new System.Windows.Forms.KeyEventHandler(this.contractShowDataGridView_KeyUp);
             // 
             // labelshow57
             // 

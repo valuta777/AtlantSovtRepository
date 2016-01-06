@@ -877,7 +877,7 @@ namespace AtlantSovt
                         };
                         db.OrderCounters.Add(orderCount);
                         db.SaveChanges();
-                        documentCount = null;
+                        contractCount = null;
                     }
                 }
                 catch (Exception ex)
