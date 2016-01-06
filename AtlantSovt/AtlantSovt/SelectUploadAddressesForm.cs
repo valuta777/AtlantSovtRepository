@@ -21,15 +21,13 @@ namespace AtlantSovt
         {
             InitializeComponent();
             client = new_client;
-            LoadClientUploadAddresses();
+            IsUpdate = false;
         }
         public SelectUploadAddressesForm(Client new_client, Order new_order)
         {
             InitializeComponent();
             client = new_client;
             order = new_order;
-            LoadClientUploadAddresses();
-            CheckSelectedUploadAddresses();
             IsUpdate = true;
         }
 
@@ -116,7 +114,7 @@ namespace AtlantSovt
                                     };
                                     db.Orders.Find(order.Id).OrderUploadAdresses.Add(new_OrderAddress);
                                 }
-                                MessageBox.Show("Успішно додано " + newAddreses.Count + " Адрес завантаження");
+                                MessageBox.Show("Успішно додано " + newAddreses.Count + " Адрес розвантаження");
                             }
                             db.SaveChanges();
                         }
@@ -143,11 +141,31 @@ namespace AtlantSovt
                 }
             }
         }
+        public void LoadClientUploadAddresses(long? id )
+        {
+            if (id.HasValue)
+            {
+                using (var db = new AtlantSovtContext())
+                {
+                    var query = from address in db.UploadAddresses
+                                where address.Id == id.Value
+                                select address;
+                    foreach (var item in query)
+                    {
+                        uploadAddressListBox.Items.Add(item.Country.Name + "," + item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                    }
+                }
+            }
+        }
 
         private void uploadAddressListBox_DoubleClick(object sender, EventArgs e)
         {
             uploadAddressListBox.Items.Clear();
             LoadClientUploadAddresses();
+            if (order != null)
+            {
+                CheckSelectedUploadAddresses();
+            }            
         }
 
         private void addUploadAddressButton_Click(object sender, EventArgs e)
@@ -197,7 +215,7 @@ namespace AtlantSovt
                             db.Orders.Find(order.Id).OrderUploadAdresses.Add(new_OrderUploadAdress);
                         }
                         db.SaveChanges();
-                        return "Успішно вибрано " + uploadAddressListBox.CheckedItems.Count + " Адрес завантаження\n";
+                        return "Успішно вибрано " + uploadAddressListBox.CheckedItems.Count + " Адрес розвантаження\n";
                     }
                 }
                 catch (Exception ex)
@@ -210,6 +228,16 @@ namespace AtlantSovt
             else
             {
                 return string.Empty;
+            }
+        }
+
+        private void SelectUploadAddressesForm_Load(object sender, EventArgs e)
+        {
+            LoadClientUploadAddresses();
+
+            if (order != null)
+            {
+                CheckSelectedUploadAddresses();
             }
         }
     }

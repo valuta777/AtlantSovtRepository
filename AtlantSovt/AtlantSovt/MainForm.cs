@@ -2023,7 +2023,7 @@ namespace AtlantSovt
             AddOrderDenyForm addOrderDenyForm = new AddOrderDenyForm();
             addOrderDenyForm.Show();
         }
-
+        //addresses
         private void OrderAddDownloadAddressAddButton_Click(object sender, EventArgs e)
         {
             DownloadAddressForm();
@@ -2042,7 +2042,7 @@ namespace AtlantSovt
         {
             UncustomsAddressForm();
         }
-
+        //===============================
         private void OrderAddAdditionalTermsSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitAdditionalTermOrderAdd();
@@ -2310,6 +2310,7 @@ namespace AtlantSovt
         private void OrderUpdateClientDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             LoadOrderUpdateClientDiapasonCombobox();
+            OrderUpdateClientDiapasoneComboBox.DroppedDown = true;
         }
 
         private void OrderUpdateClientSelectComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -2323,6 +2324,7 @@ namespace AtlantSovt
         private void OrderUpdateTransporterDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             LoadOrderUpdateTransporterDiapasonCombobox();
+            OrderUpdateTransporterDiapasoneComboBox.DroppedDown = true;
         }
 
         private void OrderUpdateTransporterSelectComboBox_MouseClick(object sender, MouseEventArgs e)

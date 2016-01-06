@@ -29,8 +29,6 @@ namespace AtlantSovt
             InitializeComponent();
             client = new_client;
             order = new_order;
-            LoadClientUncustomsAddresses();
-            CheckSelectedUncustomsAddresses();
             IsUpdate = true;
         }
 
@@ -158,11 +156,31 @@ namespace AtlantSovt
                 }
             }
         }
+        public void LoadClientUncustomsAddresses(long? id)
+        {
+            if (id.HasValue)
+            { 
+                using (var db = new AtlantSovtContext())
+                {
+                    var query = from address in db.UnCustomsAddresses
+                                where address.Id == id.Value
+                                select address;
+                    foreach (var item in query)
+                    {
+                        uncustomsAddressesListBox.Items.Add(item.Country.Name + "," + item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                    }
+                }
+            }
+        }
 
         private void unсustomsAddressListBox_DoubleClick(object sender, EventArgs e)
         {
             uncustomsAddressesListBox.Items.Clear();
             LoadClientUncustomsAddresses();
+            if (order != null)
+            {
+                CheckSelectedUncustomsAddresses();
+            }
         }
 
         private void addUncustomsAddressButton_Click(object sender, EventArgs e)
@@ -219,6 +237,10 @@ namespace AtlantSovt
         private void SelectUncustomsAddressesForm_Load(object sender, EventArgs e)
         {
             LoadClientUncustomsAddresses();
+            if (order != null)
+            {
+                CheckSelectedUncustomsAddresses();
+            }
         }
 
     }

@@ -253,6 +253,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додавання адреси";
             this.TopMost = true;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddAddressForm_FormClosed);
             this.Load += new System.EventHandler(this.AddAddressForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

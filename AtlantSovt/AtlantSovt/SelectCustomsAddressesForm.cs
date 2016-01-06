@@ -28,8 +28,6 @@ namespace AtlantSovt
             InitializeComponent();
             client = new_client;
             order = new_order;
-            LoadClientCustomsAddresses();
-            CheckSelectedCustomsAddresses();
             IsUpdate = true;
         }
 
@@ -158,10 +156,31 @@ namespace AtlantSovt
             }
         }
 
+        public void LoadClientCustomsAddresses(long? id)
+        {
+            if (id.HasValue)
+            {
+                using (var db = new AtlantSovtContext())
+                {
+                    var query = from address in db.CustomsAddresses
+                                where address.Id == id.Value
+                                select address;
+                    foreach (var item in query)
+                    {
+                        customsAddressesListBox.Items.Add(item.Country.Name + "," + item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                    }
+                }
+            }
+        }
+
         private void сustomsAddressListBox_DoubleClick(object sender, EventArgs e)
         {
             customsAddressesListBox.Items.Clear();
             LoadClientCustomsAddresses();
+            if (order != null)
+            {
+                CheckSelectedCustomsAddresses();
+            }
         }
 
         private void addCustomsAddressButton_Click(object sender, EventArgs e)
@@ -218,6 +237,10 @@ namespace AtlantSovt
         private void SelectCustomsAddressesForm_Load(object sender, EventArgs e)
         {
             LoadClientCustomsAddresses();
+            if (order != null)
+            {
+                CheckSelectedCustomsAddresses();
+            }
         }
 
     }
