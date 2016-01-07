@@ -144,7 +144,7 @@ namespace AtlantSovt
         }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Закрити програму?\nНезбережена інформація буде втрачена!", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+            if (MessageBox.Show("Завершити роботу?\nНе збережена інформація буде втрачена!", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
             {
                 e.Cancel = true;
             }
@@ -232,6 +232,7 @@ namespace AtlantSovt
                     trackingShowCommentDataGridView.Visible = false;
                     trackingShowUploadAddressDataGridView.Visible = false;
                     trackingShowDownloadAddressDataGridView.Visible = false;
+                    trackingShowForwardersDataGridView.Visible = false;
                 }
 
                 private void updateOrderMenuItem_DoubleClick(object sender, EventArgs e)
