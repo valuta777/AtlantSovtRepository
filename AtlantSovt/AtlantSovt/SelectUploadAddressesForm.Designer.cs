@@ -105,6 +105,7 @@
             this.Name = "SelectUploadAddressesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Виберіть адреси розвантаження";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SelectUploadAddressesForm_FormClosing);
             this.Load += new System.EventHandler(this.SelectUploadAddressesForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

@@ -142,13 +142,19 @@ namespace AtlantSovt
                 Application.Exit();
             }
         }
-
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Закрити програму?\nНезбережена інформація буде втрачена!", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
+        }
         #endregion
 
         //MenuStrips
         #region MenuStrips               
 
-                private void addClientsStrip_Click(object sender, EventArgs e)
+        private void addClientsStrip_Click(object sender, EventArgs e)
                 {
                     helloPictureBox.Image = null;
                     dataControl.SelectedIndex = 2;
@@ -2685,6 +2691,8 @@ namespace AtlantSovt
                 e.Handled = true;
             }
         }
+
+
 
         private void OrderAddDownloadDateFromTimePicker_ValueChanged(object sender, EventArgs e)
         {

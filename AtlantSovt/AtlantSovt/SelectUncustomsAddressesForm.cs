@@ -243,5 +243,18 @@ namespace AtlantSovt
             }
         }
 
+        private void SelectUncustomsAddressesForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (order == null)
+            {
+                if (uncustomsAddressesListBox.CheckedItems.Count != 0)
+                {
+                    if (MessageBox.Show("Закрити форму без збереження?\nВибрані адреси НЕ додадуться.\n Для збереження вибраних адрес натисніть <Отмена> та <Додати до заявки>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                    {
+                        e.Cancel = true;
+                    }
+                }
+            }
+        }
     }
 }
