@@ -31,18 +31,17 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long? TransporterId { get; set; }
 
-        [Column(TypeName = "date")]
         public DateTime? CloseDate { get; set; }
 
         public DateTime? Date { get; set; }
 
         public long? TrailerId { get; set; }
 
+        public long? StaffId { get; set; }
+
         public long? CubeId { get; set; }
 
         public DateTime? DownloadDateFrom { get; set; }
-
-        public DateTime? DownloadDateTo { get; set; }
 
         public long? CargoId { get; set; }
 
@@ -51,8 +50,6 @@ namespace AtlantSovt.AtlantSovtDb
         public int? ADRNumber { get; set; }
 
         public DateTime? UploadDateFrom { get; set; }
-
-        public DateTime? UploadDateTo { get; set; }
 
         [StringLength(50)]
         public string Freight { get; set; }
@@ -75,6 +72,10 @@ namespace AtlantSovt.AtlantSovtDb
 
         public string Note { get; set; }
 
+        public DateTime? DownloadDateTo { get; set; }
+
+        public DateTime? UploadDateTo { get; set; }
+
         public virtual AdditionalTerm AdditionalTerm { get; set; }
 
         public virtual Cargo Cargo { get; set; }
@@ -92,6 +93,8 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual Payment Payment { get; set; }
 
         public virtual RegularyDelay RegularyDelay { get; set; }
+
+        public virtual Staff Staff { get; set; }
 
         public virtual TirCmr TirCmr { get; set; }
 

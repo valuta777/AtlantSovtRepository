@@ -9,13 +9,12 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("Transporter")]
     public partial class Transporter
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Transporter()
         {
+            Contracts = new HashSet<Contract>();
             Orders = new HashSet<Order>();
             TransporterContacts = new HashSet<TransporterContact>();
             TransporterCountries = new HashSet<TransporterCountry>();
-            TransporterForwarderContracts = new HashSet<TransporterForwarderContract>();
             TransporterVehicles = new HashSet<TransporterVehicle>();
         }
 
@@ -44,9 +43,10 @@ namespace AtlantSovt.AtlantSovtDb
 
         public bool? ContractType { get; set; }
 
+        public virtual ICollection<Contract> Contracts { get; set; }
+
         public virtual Filter Filter { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
 
         public virtual TaxPayerStatu TaxPayerStatu { get; set; }
@@ -55,16 +55,10 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual TransporterBankDetail TransporterBankDetail { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TransporterContact> TransporterContacts { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TransporterCountry> TransporterCountries { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TransporterForwarderContract> TransporterForwarderContracts { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TransporterVehicle> TransporterVehicles { get; set; }
     }
 }

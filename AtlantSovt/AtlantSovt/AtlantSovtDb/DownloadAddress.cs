@@ -9,7 +9,6 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("DownloadAddress")]
     public partial class DownloadAddress
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DownloadAddress()
         {
             OrderDownloadAddresses = new HashSet<OrderDownloadAddress>();
@@ -49,7 +48,6 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual Country Country { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDownloadAddress> OrderDownloadAddresses { get; set; }
     }
 }

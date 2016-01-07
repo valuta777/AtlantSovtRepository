@@ -289,26 +289,26 @@
             this.label11 = new System.Windows.Forms.Label();
             this.transporterDeleteComboBox = new System.Windows.Forms.ComboBox();
             this.addContractPage = new System.Windows.Forms.TabPage();
+            this.secondPersonRoleDocumentСomboBox = new System.Windows.Forms.ComboBox();
+            this.label18cont = new System.Windows.Forms.Label();
+            this.secondPersonDiapasonDocumentComboBox = new System.Windows.Forms.ComboBox();
             this.refreshContactFilesButton = new System.Windows.Forms.Button();
             this.contractFilecheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.label69cont = new System.Windows.Forms.Label();
             this.label109cont = new System.Windows.Forms.Label();
-            this.contractLanguageComboBox = new System.Windows.Forms.ComboBox();
+            this.documentTypeComboBox = new System.Windows.Forms.ComboBox();
             this.label66cont = new System.Windows.Forms.Label();
             this.label67cont = new System.Windows.Forms.Label();
-            this.forwarderAsComboBox = new System.Windows.Forms.ComboBox();
             this.label36cont = new System.Windows.Forms.Label();
             this.contractBeginDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.createContactButton = new System.Windows.Forms.Button();
-            this.secondPersonNameComboBox = new System.Windows.Forms.ComboBox();
+            this.secondPersonNameDocumentComboBox = new System.Windows.Forms.ComboBox();
             this.label51cont = new System.Windows.Forms.Label();
             this.label39cont = new System.Windows.Forms.Label();
             this.label38cont = new System.Windows.Forms.Label();
             this.label37cont = new System.Windows.Forms.Label();
-            this.firstPersonDiapasonComboBox = new System.Windows.Forms.ComboBox();
-            this.label28cont = new System.Windows.Forms.Label();
             this.personNameLabel = new System.Windows.Forms.Label();
-            this.firstPersonNameComboBox = new System.Windows.Forms.ComboBox();
+            this.firstPersonNameDocumentComboBox = new System.Windows.Forms.ComboBox();
             this.addOrderPage = new System.Windows.Forms.TabPage();
             this.OrderAddFreightTextBox = new System.Windows.Forms.TextBox();
             this.label101 = new System.Windows.Forms.Label();
@@ -3960,54 +3960,97 @@
             // addContractPage
             // 
             this.addContractPage.BackColor = System.Drawing.Color.AliceBlue;
+            this.addContractPage.Controls.Add(this.secondPersonRoleDocumentСomboBox);
+            this.addContractPage.Controls.Add(this.label18cont);
+            this.addContractPage.Controls.Add(this.secondPersonDiapasonDocumentComboBox);
             this.addContractPage.Controls.Add(this.refreshContactFilesButton);
             this.addContractPage.Controls.Add(this.contractFilecheckedListBox);
             this.addContractPage.Controls.Add(this.label69cont);
             this.addContractPage.Controls.Add(this.label109cont);
-            this.addContractPage.Controls.Add(this.contractLanguageComboBox);
+            this.addContractPage.Controls.Add(this.documentTypeComboBox);
             this.addContractPage.Controls.Add(this.label66cont);
             this.addContractPage.Controls.Add(this.label67cont);
-            this.addContractPage.Controls.Add(this.forwarderAsComboBox);
             this.addContractPage.Controls.Add(this.label36cont);
             this.addContractPage.Controls.Add(this.contractBeginDateTimePicker);
             this.addContractPage.Controls.Add(this.createContactButton);
-            this.addContractPage.Controls.Add(this.secondPersonNameComboBox);
+            this.addContractPage.Controls.Add(this.secondPersonNameDocumentComboBox);
             this.addContractPage.Controls.Add(this.label51cont);
             this.addContractPage.Controls.Add(this.label39cont);
             this.addContractPage.Controls.Add(this.label38cont);
             this.addContractPage.Controls.Add(this.label37cont);
-            this.addContractPage.Controls.Add(this.firstPersonDiapasonComboBox);
-            this.addContractPage.Controls.Add(this.label28cont);
             this.addContractPage.Controls.Add(this.personNameLabel);
-            this.addContractPage.Controls.Add(this.firstPersonNameComboBox);
+            this.addContractPage.Controls.Add(this.firstPersonNameDocumentComboBox);
             this.addContractPage.Location = new System.Drawing.Point(4, 5);
             this.addContractPage.Name = "addContractPage";
             this.addContractPage.Size = new System.Drawing.Size(976, 676);
             this.addContractPage.TabIndex = 13;
             this.addContractPage.Text = "documentationPage";
             // 
+            // secondPersonRoleDocumentСomboBox
+            // 
+            this.secondPersonRoleDocumentСomboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.secondPersonRoleDocumentСomboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.secondPersonRoleDocumentСomboBox.Enabled = false;
+            this.secondPersonRoleDocumentСomboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.secondPersonRoleDocumentСomboBox.Items.AddRange(new object[] {
+            "Перевізник",
+            "Клієнт",
+            "Експедитор"});
+            this.secondPersonRoleDocumentСomboBox.Location = new System.Drawing.Point(42, 192);
+            this.secondPersonRoleDocumentСomboBox.Name = "secondPersonRoleDocumentСomboBox";
+            this.secondPersonRoleDocumentСomboBox.Size = new System.Drawing.Size(338, 29);
+            this.secondPersonRoleDocumentСomboBox.TabIndex = 103;
+            this.secondPersonRoleDocumentСomboBox.SelectedIndexChanged += new System.EventHandler(this.secondPersonRoleDocumentСomboBox_SelectedIndexChanged);
+            this.secondPersonRoleDocumentСomboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.secondPersonRoleDocumentСomboBox_MouseClick);
+            // 
+            // label18cont
+            // 
+            this.label18cont.AutoSize = true;
+            this.label18cont.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18cont.Location = new System.Drawing.Point(40, 234);
+            this.label18cont.Name = "label18cont";
+            this.label18cont.Size = new System.Drawing.Size(143, 21);
+            this.label18cont.TabIndex = 102;
+            this.label18cont.Text = "Виберіть діапазон:";
+            // 
+            // secondPersonDiapasonDocumentComboBox
+            // 
+            this.secondPersonDiapasonDocumentComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.secondPersonDiapasonDocumentComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.secondPersonDiapasonDocumentComboBox.Enabled = false;
+            this.secondPersonDiapasonDocumentComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.secondPersonDiapasonDocumentComboBox.Location = new System.Drawing.Point(42, 258);
+            this.secondPersonDiapasonDocumentComboBox.Name = "secondPersonDiapasonDocumentComboBox";
+            this.secondPersonDiapasonDocumentComboBox.Size = new System.Drawing.Size(157, 29);
+            this.secondPersonDiapasonDocumentComboBox.TabIndex = 101;
+            this.secondPersonDiapasonDocumentComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.secondPersonDiapasonDocumentComboBox_MouseClick);
+            // 
             // refreshContactFilesButton
             // 
-            this.refreshContactFilesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.refreshContactFilesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.refreshContactFilesButton.Enabled = false;
             this.refreshContactFilesButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.refreshContactFilesButton.Location = new System.Drawing.Point(480, 467);
+            this.refreshContactFilesButton.Location = new System.Drawing.Point(42, 481);
             this.refreshContactFilesButton.Name = "refreshContactFilesButton";
-            this.refreshContactFilesButton.Size = new System.Drawing.Size(97, 37);
+            this.refreshContactFilesButton.Size = new System.Drawing.Size(157, 53);
             this.refreshContactFilesButton.TabIndex = 99;
-            this.refreshContactFilesButton.Text = "Оновити";
+            this.refreshContactFilesButton.Text = "Оновити список шаблонів";
             this.refreshContactFilesButton.UseVisualStyleBackColor = true;
             this.refreshContactFilesButton.Click += new System.EventHandler(this.refreshContactFilesButton_Click);
             // 
             // contractFilecheckedListBox
             // 
+            this.contractFilecheckedListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.contractFilecheckedListBox.CheckOnClick = true;
+            this.contractFilecheckedListBox.Enabled = false;
             this.contractFilecheckedListBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.contractFilecheckedListBox.FormattingEnabled = true;
             this.contractFilecheckedListBox.HorizontalScrollbar = true;
-            this.contractFilecheckedListBox.Location = new System.Drawing.Point(500, 290);
+            this.contractFilecheckedListBox.Location = new System.Drawing.Point(42, 327);
             this.contractFilecheckedListBox.Name = "contractFilecheckedListBox";
-            this.contractFilecheckedListBox.Size = new System.Drawing.Size(320, 148);
+            this.contractFilecheckedListBox.Size = new System.Drawing.Size(926, 148);
             this.contractFilecheckedListBox.TabIndex = 98;
             this.contractFilecheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.contractFilecheckedListBox_ItemCheck);
             // 
@@ -4019,9 +4062,9 @@
             this.label69cont.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label69cont.Location = new System.Drawing.Point(38, 39);
             this.label69cont.Name = "label69cont";
-            this.label69cont.Size = new System.Drawing.Size(120, 21);
+            this.label69cont.Size = new System.Drawing.Size(86, 21);
             this.label69cont.TabIndex = 97;
-            this.label69cont.Text = "Мова договору";
+            this.label69cont.Text = "Напрямок:";
             // 
             // label109cont
             // 
@@ -4035,21 +4078,20 @@
             this.label109cont.TabIndex = 96;
             this.label109cont.Text = "1 - ";
             // 
-            // contractLanguageComboBox
+            // documentTypeComboBox
             // 
-            this.contractLanguageComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.contractLanguageComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.contractLanguageComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.contractLanguageComboBox.Items.AddRange(new object[] {
-            "Українська",
-            "Англійська/російська",
-            "Німецька/російська"});
-            this.contractLanguageComboBox.Location = new System.Drawing.Point(42, 63);
-            this.contractLanguageComboBox.Name = "contractLanguageComboBox";
-            this.contractLanguageComboBox.Size = new System.Drawing.Size(338, 29);
-            this.contractLanguageComboBox.TabIndex = 2;
-            this.contractLanguageComboBox.SelectedIndexChanged += new System.EventHandler(this.contractLanguageComboBox_SelectedIndexChanged);
-            this.contractLanguageComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.contractLanguageComboBox_MouseClick);
+            this.documentTypeComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.documentTypeComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.documentTypeComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.documentTypeComboBox.Items.AddRange(new object[] {
+            "По Україні",
+            "За кордон"});
+            this.documentTypeComboBox.Location = new System.Drawing.Point(42, 63);
+            this.documentTypeComboBox.Name = "documentTypeComboBox";
+            this.documentTypeComboBox.Size = new System.Drawing.Size(338, 29);
+            this.documentTypeComboBox.TabIndex = 2;
+            this.documentTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.contractLanguageComboBox_SelectedIndexChanged);
+            this.documentTypeComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.contractLanguageComboBox_MouseClick);
             // 
             // label66cont
             // 
@@ -4057,11 +4099,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label66cont.AutoSize = true;
             this.label66cont.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label66cont.Location = new System.Drawing.Point(38, 266);
+            this.label66cont.Location = new System.Drawing.Point(40, 303);
             this.label66cont.Name = "label66cont";
             this.label66cont.Size = new System.Drawing.Size(136, 21);
             this.label66cont.TabIndex = 94;
-            this.label66cont.Text = "Виступає у якості:";
+            this.label66cont.Text = "Виберіть шаблон:";
             // 
             // label67cont
             // 
@@ -4069,27 +4111,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label67cont.AutoSize = true;
             this.label67cont.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label67cont.Location = new System.Drawing.Point(6, 266);
+            this.label67cont.Location = new System.Drawing.Point(8, 303);
             this.label67cont.Name = "label67cont";
             this.label67cont.Size = new System.Drawing.Size(33, 21);
             this.label67cont.TabIndex = 93;
             this.label67cont.Text = "4 - ";
-            // 
-            // forwarderAsComboBox
-            // 
-            this.forwarderAsComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.forwarderAsComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.forwarderAsComboBox.Enabled = false;
-            this.forwarderAsComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.forwarderAsComboBox.Items.AddRange(new object[] {
-            "Замовника",
-            "Перевізника"});
-            this.forwarderAsComboBox.Location = new System.Drawing.Point(42, 290);
-            this.forwarderAsComboBox.Name = "forwarderAsComboBox";
-            this.forwarderAsComboBox.Size = new System.Drawing.Size(338, 29);
-            this.forwarderAsComboBox.TabIndex = 6;
-            this.forwarderAsComboBox.SelectedIndexChanged += new System.EventHandler(this.forwarderAsComboBox_SelectedIndexChanged);
-            this.forwarderAsComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.forwarderAsComboBox_MouseClick);
             // 
             // label36cont
             // 
@@ -4124,22 +4150,22 @@
             this.createContactButton.UseVisualStyleBackColor = true;
             this.createContactButton.Click += new System.EventHandler(this.createContactButton_Click);
             // 
-            // secondPersonNameComboBox
+            // secondPersonNameDocumentComboBox
             // 
-            this.secondPersonNameComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.secondPersonNameDocumentComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.secondPersonNameComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.secondPersonNameComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.secondPersonNameComboBox.Enabled = false;
-            this.secondPersonNameComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.secondPersonNameComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.secondPersonNameComboBox.Location = new System.Drawing.Point(42, 222);
-            this.secondPersonNameComboBox.Name = "secondPersonNameComboBox";
-            this.secondPersonNameComboBox.Size = new System.Drawing.Size(926, 29);
-            this.secondPersonNameComboBox.Sorted = true;
-            this.secondPersonNameComboBox.TabIndex = 5;
-            this.secondPersonNameComboBox.SelectedIndexChanged += new System.EventHandler(this.secondPersonNameComboBox_SelectedIndexChanged);
-            this.secondPersonNameComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.secondPersonNameComboBox_MouseClick);
+            this.secondPersonNameDocumentComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.secondPersonNameDocumentComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.secondPersonNameDocumentComboBox.Enabled = false;
+            this.secondPersonNameDocumentComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.secondPersonNameDocumentComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.secondPersonNameDocumentComboBox.Location = new System.Drawing.Point(205, 258);
+            this.secondPersonNameDocumentComboBox.Name = "secondPersonNameDocumentComboBox";
+            this.secondPersonNameDocumentComboBox.Size = new System.Drawing.Size(763, 29);
+            this.secondPersonNameDocumentComboBox.Sorted = true;
+            this.secondPersonNameDocumentComboBox.TabIndex = 5;
+            this.secondPersonNameDocumentComboBox.SelectedIndexChanged += new System.EventHandler(this.secondPersonNameComboBox_SelectedIndexChanged);
+            this.secondPersonNameDocumentComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.secondPersonNameComboBox_MouseClick);
             // 
             // label51cont
             // 
@@ -4147,11 +4173,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label51cont.AutoSize = true;
             this.label51cont.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label51cont.Location = new System.Drawing.Point(38, 195);
+            this.label51cont.Location = new System.Drawing.Point(40, 168);
             this.label51cont.Name = "label51cont";
-            this.label51cont.Size = new System.Drawing.Size(96, 21);
+            this.label51cont.Size = new System.Drawing.Size(198, 21);
             this.label51cont.TabIndex = 84;
-            this.label51cont.Text = "Експедитор:";
+            this.label51cont.Text = "Другий учасник договору:";
             // 
             // label39cont
             // 
@@ -4159,7 +4185,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label39cont.AutoSize = true;
             this.label39cont.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label39cont.Location = new System.Drawing.Point(6, 195);
+            this.label39cont.Location = new System.Drawing.Point(8, 168);
             this.label39cont.Name = "label39cont";
             this.label39cont.Size = new System.Drawing.Size(33, 21);
             this.label39cont.TabIndex = 83;
@@ -4185,31 +4211,9 @@
             this.label37cont.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label37cont.Location = new System.Drawing.Point(40, 102);
             this.label37cont.Name = "label37cont";
-            this.label37cont.Size = new System.Drawing.Size(94, 21);
+            this.label37cont.Size = new System.Drawing.Size(96, 21);
             this.label37cont.TabIndex = 79;
-            this.label37cont.Text = "Перевізник:";
-            // 
-            // firstPersonDiapasonComboBox
-            // 
-            this.firstPersonDiapasonComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.firstPersonDiapasonComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.firstPersonDiapasonComboBox.Enabled = false;
-            this.firstPersonDiapasonComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.firstPersonDiapasonComboBox.Location = new System.Drawing.Point(42, 156);
-            this.firstPersonDiapasonComboBox.Name = "firstPersonDiapasonComboBox";
-            this.firstPersonDiapasonComboBox.Size = new System.Drawing.Size(157, 29);
-            this.firstPersonDiapasonComboBox.TabIndex = 3;
-            this.firstPersonDiapasonComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.firstPersonDiapasonComboBox_MouseClick);
-            // 
-            // label28cont
-            // 
-            this.label28cont.AutoSize = true;
-            this.label28cont.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label28cont.Location = new System.Drawing.Point(40, 132);
-            this.label28cont.Name = "label28cont";
-            this.label28cont.Size = new System.Drawing.Size(140, 21);
-            this.label28cont.TabIndex = 77;
-            this.label28cont.Text = "Виберіть діапазон";
+            this.label37cont.Text = "Експедитор:";
             // 
             // personNameLabel
             // 
@@ -4217,27 +4221,27 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.personNameLabel.AutoSize = true;
             this.personNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.personNameLabel.Location = new System.Drawing.Point(199, 132);
+            this.personNameLabel.Location = new System.Drawing.Point(199, 168);
             this.personNameLabel.Name = "personNameLabel";
             this.personNameLabel.Size = new System.Drawing.Size(0, 21);
             this.personNameLabel.TabIndex = 76;
             // 
-            // firstPersonNameComboBox
+            // firstPersonNameDocumentComboBox
             // 
-            this.firstPersonNameComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.firstPersonNameDocumentComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.firstPersonNameComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.firstPersonNameComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.firstPersonNameComboBox.Enabled = false;
-            this.firstPersonNameComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.firstPersonNameComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.firstPersonNameComboBox.Location = new System.Drawing.Point(205, 156);
-            this.firstPersonNameComboBox.Name = "firstPersonNameComboBox";
-            this.firstPersonNameComboBox.Size = new System.Drawing.Size(763, 29);
-            this.firstPersonNameComboBox.Sorted = true;
-            this.firstPersonNameComboBox.TabIndex = 4;
-            this.firstPersonNameComboBox.SelectedIndexChanged += new System.EventHandler(this.firstPersonNameComboBox_SelectedIndexChanged);
-            this.firstPersonNameComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.firstPersonNameComboBox_MouseClick);
+            this.firstPersonNameDocumentComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.firstPersonNameDocumentComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.firstPersonNameDocumentComboBox.Enabled = false;
+            this.firstPersonNameDocumentComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.firstPersonNameDocumentComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.firstPersonNameDocumentComboBox.Location = new System.Drawing.Point(42, 126);
+            this.firstPersonNameDocumentComboBox.Name = "firstPersonNameDocumentComboBox";
+            this.firstPersonNameDocumentComboBox.Size = new System.Drawing.Size(676, 29);
+            this.firstPersonNameDocumentComboBox.Sorted = true;
+            this.firstPersonNameDocumentComboBox.TabIndex = 4;
+            this.firstPersonNameDocumentComboBox.SelectedIndexChanged += new System.EventHandler(this.firstPersonNameComboBox_SelectedIndexChanged);
+            this.firstPersonNameDocumentComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.firstPersonNameComboBox_MouseClick);
             // 
             // addOrderPage
             // 
@@ -4402,7 +4406,7 @@
             // 
             this.OrderAddOrderDenyAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddOrderDenyAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddOrderDenyAddButton.Image")));
-            this.OrderAddOrderDenyAddButton.Location = new System.Drawing.Point(465, 23);
+            this.OrderAddOrderDenyAddButton.Location = new System.Drawing.Point(487, 23);
             this.OrderAddOrderDenyAddButton.Name = "OrderAddOrderDenyAddButton";
             this.OrderAddOrderDenyAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddOrderDenyAddButton.TabIndex = 140;
@@ -4417,7 +4421,7 @@
             this.OrderAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddButton.Location = new System.Drawing.Point(6, 66);
             this.OrderAddButton.Name = "OrderAddButton";
-            this.OrderAddButton.Size = new System.Drawing.Size(489, 45);
+            this.OrderAddButton.Size = new System.Drawing.Size(511, 45);
             this.OrderAddButton.TabIndex = 28;
             this.OrderAddButton.Text = "Сформувати";
             this.OrderAddButton.UseVisualStyleBackColor = true;
@@ -4443,7 +4447,7 @@
             this.OrderAddDenyFineSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddDenyFineSelectComboBox.Location = new System.Drawing.Point(6, 24);
             this.OrderAddDenyFineSelectComboBox.Name = "OrderAddDenyFineSelectComboBox";
-            this.OrderAddDenyFineSelectComboBox.Size = new System.Drawing.Size(453, 29);
+            this.OrderAddDenyFineSelectComboBox.Size = new System.Drawing.Size(475, 29);
             this.OrderAddDenyFineSelectComboBox.Sorted = true;
             this.OrderAddDenyFineSelectComboBox.TabIndex = 27;
             this.OrderAddDenyFineSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddDenyFineSelectComboBox_SelectedIndexChanged);
@@ -4567,7 +4571,7 @@
             // 
             this.OrderAddLoadingForm2AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddLoadingForm2AddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddLoadingForm2AddButton.Image")));
-            this.OrderAddLoadingForm2AddButton.Location = new System.Drawing.Point(223, 82);
+            this.OrderAddLoadingForm2AddButton.Location = new System.Drawing.Point(256, 82);
             this.OrderAddLoadingForm2AddButton.Name = "OrderAddLoadingForm2AddButton";
             this.OrderAddLoadingForm2AddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddLoadingForm2AddButton.TabIndex = 141;
@@ -4579,7 +4583,7 @@
             // 
             this.OrderAddLoadingForm1AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddLoadingForm1AddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddLoadingForm1AddButton.Image")));
-            this.OrderAddLoadingForm1AddButton.Location = new System.Drawing.Point(223, 26);
+            this.OrderAddLoadingForm1AddButton.Location = new System.Drawing.Point(256, 26);
             this.OrderAddLoadingForm1AddButton.Name = "OrderAddLoadingForm1AddButton";
             this.OrderAddLoadingForm1AddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddLoadingForm1AddButton.TabIndex = 140;
@@ -4597,7 +4601,7 @@
             this.OrderAddLoadingForm2SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddLoadingForm2SelectComboBox.Location = new System.Drawing.Point(6, 83);
             this.OrderAddLoadingForm2SelectComboBox.Name = "OrderAddLoadingForm2SelectComboBox";
-            this.OrderAddLoadingForm2SelectComboBox.Size = new System.Drawing.Size(211, 29);
+            this.OrderAddLoadingForm2SelectComboBox.Size = new System.Drawing.Size(244, 29);
             this.OrderAddLoadingForm2SelectComboBox.Sorted = true;
             this.OrderAddLoadingForm2SelectComboBox.TabIndex = 22;
             this.OrderAddLoadingForm2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddLoadingForm2SelectComboBox_SelectedIndexChanged);
@@ -4624,7 +4628,7 @@
             this.OrderAddLoadingForm1SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddLoadingForm1SelectComboBox.Location = new System.Drawing.Point(6, 27);
             this.OrderAddLoadingForm1SelectComboBox.Name = "OrderAddLoadingForm1SelectComboBox";
-            this.OrderAddLoadingForm1SelectComboBox.Size = new System.Drawing.Size(211, 29);
+            this.OrderAddLoadingForm1SelectComboBox.Size = new System.Drawing.Size(244, 29);
             this.OrderAddLoadingForm1SelectComboBox.Sorted = true;
             this.OrderAddLoadingForm1SelectComboBox.TabIndex = 18;
             this.OrderAddLoadingForm1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddLoadingForm1SelectComboBox_SelectedIndexChanged);
@@ -4759,7 +4763,7 @@
             this.OrderAddTrailerSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddTrailerSelectComboBox.Location = new System.Drawing.Point(10, 83);
             this.OrderAddTrailerSelectComboBox.Name = "OrderAddTrailerSelectComboBox";
-            this.OrderAddTrailerSelectComboBox.Size = new System.Drawing.Size(211, 29);
+            this.OrderAddTrailerSelectComboBox.Size = new System.Drawing.Size(244, 29);
             this.OrderAddTrailerSelectComboBox.Sorted = true;
             this.OrderAddTrailerSelectComboBox.TabIndex = 24;
             this.OrderAddTrailerSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddTrailerSelectComboBox_SelectedIndexChanged);
@@ -4782,7 +4786,7 @@
             // 
             this.OrderAddTrailerAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddTrailerAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddTrailerAddButton.Image")));
-            this.OrderAddTrailerAddButton.Location = new System.Drawing.Point(227, 82);
+            this.OrderAddTrailerAddButton.Location = new System.Drawing.Point(260, 82);
             this.OrderAddTrailerAddButton.Name = "OrderAddTrailerAddButton";
             this.OrderAddTrailerAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddTrailerAddButton.TabIndex = 134;
@@ -4799,7 +4803,7 @@
             this.OrderAddCubeSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddCubeSelectComboBox.Location = new System.Drawing.Point(11, 27);
             this.OrderAddCubeSelectComboBox.Name = "OrderAddCubeSelectComboBox";
-            this.OrderAddCubeSelectComboBox.Size = new System.Drawing.Size(210, 29);
+            this.OrderAddCubeSelectComboBox.Size = new System.Drawing.Size(243, 29);
             this.OrderAddCubeSelectComboBox.Sorted = true;
             this.OrderAddCubeSelectComboBox.TabIndex = 20;
             this.OrderAddCubeSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddCubeSelectComboBox_SelectedIndexChanged);
@@ -4810,7 +4814,7 @@
             // 
             this.OrderAddCubeAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddCubeAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddCubeAddButton.Image")));
-            this.OrderAddCubeAddButton.Location = new System.Drawing.Point(227, 27);
+            this.OrderAddCubeAddButton.Location = new System.Drawing.Point(260, 27);
             this.OrderAddCubeAddButton.Name = "OrderAddCubeAddButton";
             this.OrderAddCubeAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddCubeAddButton.TabIndex = 131;
@@ -4965,7 +4969,7 @@
             this.OrderAddUploadDateToTimePicker.Location = new System.Drawing.Point(6, 118);
             this.OrderAddUploadDateToTimePicker.Name = "OrderAddUploadDateToTimePicker";
             this.OrderAddUploadDateToTimePicker.ShowCheckBox = true;
-            this.OrderAddUploadDateToTimePicker.Size = new System.Drawing.Size(235, 29);
+            this.OrderAddUploadDateToTimePicker.Size = new System.Drawing.Size(268, 29);
             this.OrderAddUploadDateToTimePicker.TabIndex = 128;
             this.OrderAddUploadDateToTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
             // 
@@ -4977,7 +4981,7 @@
             this.OrderAddUploadAddressAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddUploadAddressAddButton.Location = new System.Drawing.Point(6, 5);
             this.OrderAddUploadAddressAddButton.Name = "OrderAddUploadAddressAddButton";
-            this.OrderAddUploadAddressAddButton.Size = new System.Drawing.Size(235, 30);
+            this.OrderAddUploadAddressAddButton.Size = new System.Drawing.Size(268, 30);
             this.OrderAddUploadAddressAddButton.TabIndex = 10;
             this.OrderAddUploadAddressAddButton.Text = "Розвантаження";
             this.OrderAddUploadAddressAddButton.UseVisualStyleBackColor = true;
@@ -4995,7 +4999,7 @@
             this.OrderAddUploadDateFromTimePicker.Location = new System.Drawing.Point(6, 62);
             this.OrderAddUploadDateFromTimePicker.Name = "OrderAddUploadDateFromTimePicker";
             this.OrderAddUploadDateFromTimePicker.ShowCheckBox = true;
-            this.OrderAddUploadDateFromTimePicker.Size = new System.Drawing.Size(235, 29);
+            this.OrderAddUploadDateFromTimePicker.Size = new System.Drawing.Size(268, 29);
             this.OrderAddUploadDateFromTimePicker.TabIndex = 13;
             this.OrderAddUploadDateFromTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
             // 
@@ -5094,7 +5098,7 @@
             // 
             this.OrderAddPersonalButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddPersonalButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddPersonalButton.Image")));
-            this.OrderAddPersonalButton.Location = new System.Drawing.Point(215, 117);
+            this.OrderAddPersonalButton.Location = new System.Drawing.Point(248, 117);
             this.OrderAddPersonalButton.Name = "OrderAddPersonalButton";
             this.OrderAddPersonalButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddPersonalButton.TabIndex = 135;
@@ -5125,7 +5129,7 @@
             "І"});
             this.OrderAddPersonalComboBox.Location = new System.Drawing.Point(6, 118);
             this.OrderAddPersonalComboBox.Name = "OrderAddPersonalComboBox";
-            this.OrderAddPersonalComboBox.Size = new System.Drawing.Size(203, 29);
+            this.OrderAddPersonalComboBox.Size = new System.Drawing.Size(236, 29);
             this.OrderAddPersonalComboBox.TabIndex = 16;
             this.OrderAddPersonalComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddYOrUComboBox_MouseClick);
             // 
@@ -5161,7 +5165,7 @@
             "9"});
             this.OrderAddADRSelectComboBox.Location = new System.Drawing.Point(6, 62);
             this.OrderAddADRSelectComboBox.Name = "OrderAddADRSelectComboBox";
-            this.OrderAddADRSelectComboBox.Size = new System.Drawing.Size(237, 29);
+            this.OrderAddADRSelectComboBox.Size = new System.Drawing.Size(270, 29);
             this.OrderAddADRSelectComboBox.Sorted = true;
             this.OrderAddADRSelectComboBox.TabIndex = 15;
             this.OrderAddADRSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddADRSelectComboBox_MouseClick);
@@ -5373,7 +5377,7 @@
             this.OrderAddForwarder3SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddForwarder3SelectComboBox.Location = new System.Drawing.Point(6, 149);
             this.OrderAddForwarder3SelectComboBox.Name = "OrderAddForwarder3SelectComboBox";
-            this.OrderAddForwarder3SelectComboBox.Size = new System.Drawing.Size(487, 29);
+            this.OrderAddForwarder3SelectComboBox.Size = new System.Drawing.Size(509, 29);
             this.OrderAddForwarder3SelectComboBox.Sorted = true;
             this.OrderAddForwarder3SelectComboBox.TabIndex = 87;
             this.OrderAddForwarder3SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddForwarder3SelectComboBox_SelectedIndexChanged);
@@ -5414,7 +5418,7 @@
             this.OrderAddForwarder2SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddForwarder2SelectComboBox.Location = new System.Drawing.Point(6, 93);
             this.OrderAddForwarder2SelectComboBox.Name = "OrderAddForwarder2SelectComboBox";
-            this.OrderAddForwarder2SelectComboBox.Size = new System.Drawing.Size(487, 29);
+            this.OrderAddForwarder2SelectComboBox.Size = new System.Drawing.Size(509, 29);
             this.OrderAddForwarder2SelectComboBox.Sorted = true;
             this.OrderAddForwarder2SelectComboBox.TabIndex = 6;
             this.OrderAddForwarder2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddForwarder2SelectComboBox_SelectedIndexChanged);
@@ -5431,7 +5435,7 @@
             this.OrderAddForwarder1SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddForwarder1SelectComboBox.Location = new System.Drawing.Point(6, 36);
             this.OrderAddForwarder1SelectComboBox.Name = "OrderAddForwarder1SelectComboBox";
-            this.OrderAddForwarder1SelectComboBox.Size = new System.Drawing.Size(487, 29);
+            this.OrderAddForwarder1SelectComboBox.Size = new System.Drawing.Size(509, 29);
             this.OrderAddForwarder1SelectComboBox.Sorted = true;
             this.OrderAddForwarder1SelectComboBox.TabIndex = 5;
             this.OrderAddForwarder1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddForwarder1SelectComboBox_SelectedIndexChanged);
@@ -5983,7 +5987,7 @@
             this.OrderUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderUpdateButton.Location = new System.Drawing.Point(6, 59);
             this.OrderUpdateButton.Name = "OrderUpdateButton";
-            this.OrderUpdateButton.Size = new System.Drawing.Size(487, 45);
+            this.OrderUpdateButton.Size = new System.Drawing.Size(509, 45);
             this.OrderUpdateButton.TabIndex = 28;
             this.OrderUpdateButton.Text = "Змінити";
             this.OrderUpdateButton.UseVisualStyleBackColor = true;
@@ -5993,7 +5997,7 @@
             // 
             this.OrderUpdateOrderDenyAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateOrderDenyAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderUpdateOrderDenyAddButton.Image")));
-            this.OrderUpdateOrderDenyAddButton.Location = new System.Drawing.Point(463, 24);
+            this.OrderUpdateOrderDenyAddButton.Location = new System.Drawing.Point(485, 24);
             this.OrderUpdateOrderDenyAddButton.Name = "OrderUpdateOrderDenyAddButton";
             this.OrderUpdateOrderDenyAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateOrderDenyAddButton.TabIndex = 137;
@@ -6021,7 +6025,7 @@
             this.OrderUpdateDenyFineSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateDenyFineSelectComboBox.Location = new System.Drawing.Point(6, 24);
             this.OrderUpdateDenyFineSelectComboBox.Name = "OrderUpdateDenyFineSelectComboBox";
-            this.OrderUpdateDenyFineSelectComboBox.Size = new System.Drawing.Size(451, 29);
+            this.OrderUpdateDenyFineSelectComboBox.Size = new System.Drawing.Size(473, 29);
             this.OrderUpdateDenyFineSelectComboBox.Sorted = true;
             this.OrderUpdateDenyFineSelectComboBox.TabIndex = 27;
             this.OrderUpdateDenyFineSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateDenyFineSelectComboBox_SelectedIndexChanged);
@@ -6145,7 +6149,7 @@
             // 
             this.OrderUpdateLoadingForm2AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateLoadingForm2AddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderUpdateLoadingForm2AddButton.Image")));
-            this.OrderUpdateLoadingForm2AddButton.Location = new System.Drawing.Point(220, 79);
+            this.OrderUpdateLoadingForm2AddButton.Location = new System.Drawing.Point(253, 79);
             this.OrderUpdateLoadingForm2AddButton.Name = "OrderUpdateLoadingForm2AddButton";
             this.OrderUpdateLoadingForm2AddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateLoadingForm2AddButton.TabIndex = 141;
@@ -6157,7 +6161,7 @@
             // 
             this.OrderUpdateLoadingForm1AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateLoadingForm1AddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderUpdateLoadingForm1AddButton.Image")));
-            this.OrderUpdateLoadingForm1AddButton.Location = new System.Drawing.Point(220, 27);
+            this.OrderUpdateLoadingForm1AddButton.Location = new System.Drawing.Point(253, 27);
             this.OrderUpdateLoadingForm1AddButton.Name = "OrderUpdateLoadingForm1AddButton";
             this.OrderUpdateLoadingForm1AddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateLoadingForm1AddButton.TabIndex = 140;
@@ -6175,7 +6179,7 @@
             this.OrderUpdateLoadingForm2SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateLoadingForm2SelectComboBox.Location = new System.Drawing.Point(3, 80);
             this.OrderUpdateLoadingForm2SelectComboBox.Name = "OrderUpdateLoadingForm2SelectComboBox";
-            this.OrderUpdateLoadingForm2SelectComboBox.Size = new System.Drawing.Size(211, 29);
+            this.OrderUpdateLoadingForm2SelectComboBox.Size = new System.Drawing.Size(244, 29);
             this.OrderUpdateLoadingForm2SelectComboBox.Sorted = true;
             this.OrderUpdateLoadingForm2SelectComboBox.TabIndex = 22;
             this.OrderUpdateLoadingForm2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateLoadingForm2SelectComboBox_SelectedIndexChanged);
@@ -6202,7 +6206,7 @@
             this.OrderUpdateLoadingForm1SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateLoadingForm1SelectComboBox.Location = new System.Drawing.Point(6, 28);
             this.OrderUpdateLoadingForm1SelectComboBox.Name = "OrderUpdateLoadingForm1SelectComboBox";
-            this.OrderUpdateLoadingForm1SelectComboBox.Size = new System.Drawing.Size(208, 29);
+            this.OrderUpdateLoadingForm1SelectComboBox.Size = new System.Drawing.Size(241, 29);
             this.OrderUpdateLoadingForm1SelectComboBox.Sorted = true;
             this.OrderUpdateLoadingForm1SelectComboBox.TabIndex = 18;
             this.OrderUpdateLoadingForm1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateLoadingForm1SelectComboBox_SelectedIndexChanged);
@@ -6337,7 +6341,7 @@
             this.OrderUpdateTrailerSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateTrailerSelectComboBox.Location = new System.Drawing.Point(6, 80);
             this.OrderUpdateTrailerSelectComboBox.Name = "OrderUpdateTrailerSelectComboBox";
-            this.OrderUpdateTrailerSelectComboBox.Size = new System.Drawing.Size(213, 29);
+            this.OrderUpdateTrailerSelectComboBox.Size = new System.Drawing.Size(246, 29);
             this.OrderUpdateTrailerSelectComboBox.Sorted = true;
             this.OrderUpdateTrailerSelectComboBox.TabIndex = 24;
             this.OrderUpdateTrailerSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateTrailerSelectComboBox_SelectedIndexChanged);
@@ -6360,7 +6364,7 @@
             // 
             this.OrderUpdateTrailerAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateTrailerAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderUpdateTrailerAddButton.Image")));
-            this.OrderUpdateTrailerAddButton.Location = new System.Drawing.Point(225, 79);
+            this.OrderUpdateTrailerAddButton.Location = new System.Drawing.Point(258, 79);
             this.OrderUpdateTrailerAddButton.Name = "OrderUpdateTrailerAddButton";
             this.OrderUpdateTrailerAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateTrailerAddButton.TabIndex = 134;
@@ -6377,7 +6381,7 @@
             this.OrderUpdateCubeSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateCubeSelectComboBox.Location = new System.Drawing.Point(6, 28);
             this.OrderUpdateCubeSelectComboBox.Name = "OrderUpdateCubeSelectComboBox";
-            this.OrderUpdateCubeSelectComboBox.Size = new System.Drawing.Size(213, 29);
+            this.OrderUpdateCubeSelectComboBox.Size = new System.Drawing.Size(246, 29);
             this.OrderUpdateCubeSelectComboBox.Sorted = true;
             this.OrderUpdateCubeSelectComboBox.TabIndex = 20;
             this.OrderUpdateCubeSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateCubeSelectComboBox_SelectedIndexChanged);
@@ -6400,7 +6404,7 @@
             // 
             this.OrderUpdateCubeAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateCubeAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderUpdateCubeAddButton.Image")));
-            this.OrderUpdateCubeAddButton.Location = new System.Drawing.Point(225, 28);
+            this.OrderUpdateCubeAddButton.Location = new System.Drawing.Point(258, 28);
             this.OrderUpdateCubeAddButton.Name = "OrderUpdateCubeAddButton";
             this.OrderUpdateCubeAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateCubeAddButton.TabIndex = 131;
@@ -6530,7 +6534,7 @@
             this.OrderUpdateUploadDateToTimePicker.Location = new System.Drawing.Point(6, 106);
             this.OrderUpdateUploadDateToTimePicker.Name = "OrderUpdateUploadDateToTimePicker";
             this.OrderUpdateUploadDateToTimePicker.ShowCheckBox = true;
-            this.OrderUpdateUploadDateToTimePicker.Size = new System.Drawing.Size(232, 29);
+            this.OrderUpdateUploadDateToTimePicker.Size = new System.Drawing.Size(265, 29);
             this.OrderUpdateUploadDateToTimePicker.TabIndex = 128;
             this.OrderUpdateUploadDateToTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
             // 
@@ -6551,8 +6555,7 @@
             this.OrderUpdateUploadAddressesButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderUpdateUploadAddressesButton.Location = new System.Drawing.Point(6, 3);
             this.OrderUpdateUploadAddressesButton.Name = "OrderUpdateUploadAddressesButton";
-            this.OrderUpdateUploadAddressesButton.Size = new System.Drawing.Size(232, 30);
-            this.OrderUpdateUploadAddressesButton.Size = new System.Drawing.Size(244, 30);
+            this.OrderUpdateUploadAddressesButton.Size = new System.Drawing.Size(277, 30);
             this.OrderUpdateUploadAddressesButton.TabIndex = 10;
             this.OrderUpdateUploadAddressesButton.Text = "Розвантаження";
             this.OrderUpdateUploadAddressesButton.UseVisualStyleBackColor = true;
@@ -6570,7 +6573,7 @@
             this.OrderUpdateUploadDateFromTimePicker.Location = new System.Drawing.Point(3, 59);
             this.OrderUpdateUploadDateFromTimePicker.Name = "OrderUpdateUploadDateFromTimePicker";
             this.OrderUpdateUploadDateFromTimePicker.ShowCheckBox = true;
-            this.OrderUpdateUploadDateFromTimePicker.Size = new System.Drawing.Size(235, 29);
+            this.OrderUpdateUploadDateFromTimePicker.Size = new System.Drawing.Size(268, 29);
             this.OrderUpdateUploadDateFromTimePicker.TabIndex = 13;
             this.OrderUpdateUploadDateFromTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
             // 
@@ -6668,7 +6671,7 @@
             // 
             this.OrderUpdatePersonalButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdatePersonalButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderUpdatePersonalButton.Image")));
-            this.OrderUpdatePersonalButton.Location = new System.Drawing.Point(225, 105);
+            this.OrderUpdatePersonalButton.Location = new System.Drawing.Point(258, 105);
             this.OrderUpdatePersonalButton.Name = "OrderUpdatePersonalButton";
             this.OrderUpdatePersonalButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdatePersonalButton.TabIndex = 135;
@@ -6688,7 +6691,7 @@
             "І"});
             this.OrderUpdatePersonalComboBox.Location = new System.Drawing.Point(6, 106);
             this.OrderUpdatePersonalComboBox.Name = "OrderUpdatePersonalComboBox";
-            this.OrderUpdatePersonalComboBox.Size = new System.Drawing.Size(213, 29);
+            this.OrderUpdatePersonalComboBox.Size = new System.Drawing.Size(246, 29);
             this.OrderUpdatePersonalComboBox.TabIndex = 16;
             this.OrderUpdatePersonalComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateYOrUComboBox_MouseClick);
             // 
@@ -6699,7 +6702,7 @@
             this.OrderUpdateUncustumsAddressesButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderUpdateUncustumsAddressesButton.Location = new System.Drawing.Point(6, 3);
             this.OrderUpdateUncustumsAddressesButton.Name = "OrderUpdateUncustumsAddressesButton";
-            this.OrderUpdateUncustumsAddressesButton.Size = new System.Drawing.Size(249, 30);
+            this.OrderUpdateUncustumsAddressesButton.Size = new System.Drawing.Size(282, 30);
             this.OrderUpdateUncustumsAddressesButton.TabIndex = 11;
             this.OrderUpdateUncustumsAddressesButton.Text = "Розмитнення";
             this.OrderUpdateUncustumsAddressesButton.UseVisualStyleBackColor = true;
@@ -6725,7 +6728,7 @@
             "9"});
             this.OrderUpdateADRSelectComboBox.Location = new System.Drawing.Point(6, 59);
             this.OrderUpdateADRSelectComboBox.Name = "OrderUpdateADRSelectComboBox";
-            this.OrderUpdateADRSelectComboBox.Size = new System.Drawing.Size(249, 29);
+            this.OrderUpdateADRSelectComboBox.Size = new System.Drawing.Size(282, 29);
             this.OrderUpdateADRSelectComboBox.Sorted = true;
             this.OrderUpdateADRSelectComboBox.TabIndex = 15;
             this.OrderUpdateADRSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateADRSelectComboBox_MouseClick);
@@ -6948,7 +6951,7 @@
             this.OrderUpdateForwarder3SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateForwarder3SelectComboBox.Location = new System.Drawing.Point(6, 131);
             this.OrderUpdateForwarder3SelectComboBox.Name = "OrderUpdateForwarder3SelectComboBox";
-            this.OrderUpdateForwarder3SelectComboBox.Size = new System.Drawing.Size(487, 29);
+            this.OrderUpdateForwarder3SelectComboBox.Size = new System.Drawing.Size(509, 29);
             this.OrderUpdateForwarder3SelectComboBox.Sorted = true;
             this.OrderUpdateForwarder3SelectComboBox.TabIndex = 87;
             this.OrderUpdateForwarder3SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateForwarder3SelectComboBox_SelectedIndexChanged);
@@ -6989,7 +6992,7 @@
             this.OrderUpdateForwarder2SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateForwarder2SelectComboBox.Location = new System.Drawing.Point(6, 77);
             this.OrderUpdateForwarder2SelectComboBox.Name = "OrderUpdateForwarder2SelectComboBox";
-            this.OrderUpdateForwarder2SelectComboBox.Size = new System.Drawing.Size(487, 29);
+            this.OrderUpdateForwarder2SelectComboBox.Size = new System.Drawing.Size(509, 29);
             this.OrderUpdateForwarder2SelectComboBox.Sorted = true;
             this.OrderUpdateForwarder2SelectComboBox.TabIndex = 6;
             this.OrderUpdateForwarder2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateForwarder2SelectComboBox_SelectedIndexChanged);
@@ -7006,7 +7009,7 @@
             this.OrderUpdateForwarder1SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateForwarder1SelectComboBox.Location = new System.Drawing.Point(6, 23);
             this.OrderUpdateForwarder1SelectComboBox.Name = "OrderUpdateForwarder1SelectComboBox";
-            this.OrderUpdateForwarder1SelectComboBox.Size = new System.Drawing.Size(487, 29);
+            this.OrderUpdateForwarder1SelectComboBox.Size = new System.Drawing.Size(509, 29);
             this.OrderUpdateForwarder1SelectComboBox.Sorted = true;
             this.OrderUpdateForwarder1SelectComboBox.TabIndex = 5;
             this.OrderUpdateForwarder1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateForwarder1SelectComboBox_SelectedIndexChanged);
@@ -7200,7 +7203,6 @@
             this.contractShowDataGridView.TabStop = false;
             this.contractShowDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.contractShowDataGridView_CellMouseClick);
             this.contractShowDataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.contractShowDataGridView_KeyDown);
-            this.contractShowDataGridView.KeyUp += new System.Windows.Forms.KeyEventHandler(this.contractShowDataGridView_KeyUp);
             // 
             // labelshow57
             // 
@@ -7777,13 +7779,11 @@
         private System.Windows.Forms.ToolStripMenuItem documentationToolStripMenuItem;
         private System.Windows.Forms.TabPage addContractPage;
         private System.Windows.Forms.Label label37cont;
-        private System.Windows.Forms.ComboBox firstPersonDiapasonComboBox;
-        private System.Windows.Forms.Label label28cont;
         private System.Windows.Forms.Label personNameLabel;
-        private System.Windows.Forms.ComboBox firstPersonNameComboBox;
+        private System.Windows.Forms.ComboBox firstPersonNameDocumentComboBox;
         private System.Windows.Forms.Label label39cont;
         private System.Windows.Forms.Label label38cont;
-        private System.Windows.Forms.ComboBox secondPersonNameComboBox;
+        private System.Windows.Forms.ComboBox secondPersonNameDocumentComboBox;
         private System.Windows.Forms.Label label51cont;
         private System.Windows.Forms.Button createContactButton;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
@@ -7861,7 +7861,6 @@
         private System.Windows.Forms.CheckBox showTrackingDataSwitcher;
         private System.Windows.Forms.Label label66cont;
         private System.Windows.Forms.Label label67cont;
-        private System.Windows.Forms.ComboBox forwarderAsComboBox;
         private System.Windows.Forms.Label yearLabel;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label onlyActiveLabel;
@@ -7875,7 +7874,7 @@
         private System.Windows.Forms.DataGridView trackingShowDownloadAddressDataGridView;
         private System.Windows.Forms.Label label69cont;
         private System.Windows.Forms.Label label109cont;
-        private System.Windows.Forms.ComboBox contractLanguageComboBox;
+        private System.Windows.Forms.ComboBox documentTypeComboBox;
         private System.Windows.Forms.Button OrderAddLoadingForm2AddButton;
         private System.Windows.Forms.Button OrderAddLoadingForm1AddButton;
         private System.Windows.Forms.ToolStripMenuItem showContractMenuItem;
@@ -8038,6 +8037,9 @@
         private System.Windows.Forms.Label showContractStateLabel;
         private System.Windows.Forms.CheckedListBox contractFilecheckedListBox;
         private System.Windows.Forms.Button refreshContactFilesButton;
+        private System.Windows.Forms.ComboBox secondPersonDiapasonDocumentComboBox;
+        private System.Windows.Forms.ComboBox secondPersonRoleDocumentСomboBox;
+        private System.Windows.Forms.Label label18cont;
         }
 }
 

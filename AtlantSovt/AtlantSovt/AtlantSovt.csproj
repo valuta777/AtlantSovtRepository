@@ -180,6 +180,7 @@
     <Compile Include="AtlantSovtDb\Client.cs" />
     <Compile Include="AtlantSovtDb\ClientBankDetail.cs" />
     <Compile Include="AtlantSovtDb\ClientContact.cs" />
+    <Compile Include="AtlantSovtDb\Contract.cs" />
     <Compile Include="AtlantSovtDb\Country.cs" />
     <Compile Include="AtlantSovtDb\Cube.cs" />
     <Compile Include="AtlantSovtDb\CustomsAddress.cs" />
@@ -190,6 +191,7 @@
     <Compile Include="AtlantSovtDb\Forwarder.cs" />
     <Compile Include="AtlantSovtDb\ForwarderBankDetail.cs" />
     <Compile Include="AtlantSovtDb\ForwarderContact.cs" />
+    <Compile Include="AtlantSovtDb\ForwarderContract.cs" />
     <Compile Include="AtlantSovtDb\ForwarderOrder.cs" />
     <Compile Include="AtlantSovtDb\ForwarderStamp.cs" />
     <Compile Include="AtlantSovtDb\LoadingForm.cs" />
@@ -203,6 +205,7 @@
     <Compile Include="AtlantSovtDb\OrderUploadAdress.cs" />
     <Compile Include="AtlantSovtDb\Payment.cs" />
     <Compile Include="AtlantSovtDb\RegularyDelay.cs" />
+    <Compile Include="AtlantSovtDb\Staff.cs" />
     <Compile Include="AtlantSovtDb\TaxPayerStatu.cs" />
     <Compile Include="AtlantSovtDb\TirCmr.cs" />
     <Compile Include="AtlantSovtDb\TrackingComment.cs" />
@@ -211,7 +214,6 @@
     <Compile Include="AtlantSovtDb\TransporterBankDetail.cs" />
     <Compile Include="AtlantSovtDb\TransporterContact.cs" />
     <Compile Include="AtlantSovtDb\TransporterCountry.cs" />
-    <Compile Include="AtlantSovtDb\TransporterForwarderContract.cs" />
     <Compile Include="AtlantSovtDb\TransporterVehicle.cs" />
     <Compile Include="AtlantSovtDb\UnCustomsAddress.cs" />
     <Compile Include="AtlantSovtDb\UploadAddress.cs" />
@@ -613,15 +615,6 @@
       <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>8</VersionMajor>
       <VersionMinor>5</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="VBIDE">
-      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>5</VersionMajor>
-      <VersionMinor>3</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
