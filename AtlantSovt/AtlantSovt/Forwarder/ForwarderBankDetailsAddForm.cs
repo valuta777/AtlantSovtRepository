@@ -49,7 +49,7 @@ namespace AtlantSovt
                 this.Hide();
                 if (ID != 0)
                 {
-                    AddForwarderBankDetail(ID);
+                    AddForwarderBankDetail(ID, false);
                 }
             }
             else
@@ -58,7 +58,7 @@ namespace AtlantSovt
             }
 
         }
-        internal void AddForwarderBankDetail(long id)
+        internal string AddForwarderBankDetail(long id, bool IsAdding)
         {
             using (var db = new AtlantSovtContext())
             {
@@ -79,13 +79,22 @@ namespace AtlantSovt
                 {
                     db.ForwarderBankDetails.Add(New_ForwarderBankDetail);
                     db.SaveChanges();
-                    MessageBox.Show("Банківські данні успішно додані експедитору");
+                    if (IsAdding)
+                    {
+                        return "Банківські данні успішно додані експедитору [" + New_ForwarderBankDetail.Id + "]\n";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Банківські данні успішно додані експедитору");
+                        return string.Empty;
+                    }
+                    
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
                     MessageBox.Show(ex.Message);
-
+                    return string.Empty;
                 }
             }
         }

@@ -143,7 +143,7 @@ namespace AtlantSovt
                    {
                        Id = o.Id,
                        OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
-                       YorU = o.YorU,
+                       Staff = o.Staff.Type,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
@@ -167,7 +167,7 @@ namespace AtlantSovt
                 {
                     var queryTextAndDate =
                    from o in db.Orders
-                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.YorU.Contains(text) ||
+                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Staff.Type.Contains(text) ||
                          o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text)))
                    orderby o.Id
                    select
@@ -175,7 +175,7 @@ namespace AtlantSovt
                    {
                        Id = o.Id,
                        OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
-                       YorU = o.YorU,
+                       Staff = o.Staff.Type,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
@@ -208,7 +208,7 @@ namespace AtlantSovt
                    {
                        Id = o.Id,
                        OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
-                       YorU = o.YorU,
+                       Staff = o.Staff.Type,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
@@ -233,7 +233,7 @@ namespace AtlantSovt
                 {
                     var queryTextAndDate =
                    from o in db.Orders
-                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.YorU.Contains(text) ||
+                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Staff.Type.Contains(text) ||
                          o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) && ((o.DownloadDateFrom.Value.Month == showTrackingDateTimePicker.Value.Month) ||
                    (o.DownloadDateTo.Value.Month == showTrackingDateTimePicker.Value.Month)) && ((o.DownloadDateFrom.Value.Year == showTrackingDateTimePicker.Value.Year) || o.DownloadDateTo.Value.Year == showTrackingDateTimePicker.Value.Year)
                    orderby o.Id
@@ -242,7 +242,7 @@ namespace AtlantSovt
                    {
                        Id = o.Id,
                        OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
-                       YorU = o.YorU,
+                       Staff = o.Staff.Type,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
@@ -274,7 +274,7 @@ namespace AtlantSovt
                    {
                        Id = o.Id,
                        OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
-                       YorU = o.YorU,
+                       Staff = o.Staff.Type,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
@@ -299,7 +299,7 @@ namespace AtlantSovt
                 {
                     var queryTextAndDate =
                    from o in db.Orders
-                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.YorU.Contains(text) ||
+                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Staff.Type.Contains(text) ||
                          o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text)) && (o.State == true))
                    orderby o.Id
                    select
@@ -307,7 +307,7 @@ namespace AtlantSovt
                    {
                        Id = o.Id,
                        OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
-                       YorU = o.YorU,
+                       Staff = o.Staff.Type,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
@@ -339,7 +339,7 @@ namespace AtlantSovt
                   {
                       Id = o.Id,
                       OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
-                      YorU = o.YorU,
+                      Staff = o.Staff.Type,
                       ClientName = o.Client.Name,
                       TransporterName = o.Transporter.FullName,
                       DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
@@ -364,7 +364,7 @@ namespace AtlantSovt
                 {
                     var queryTextAndDate =
                   from o in db.Orders
-                  where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.YorU.Contains(text) ||
+                  where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Staff.Type.Contains(text) ||
                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) &&
                         ((o.DownloadDateFrom.Value.Month == showTrackingDateTimePicker.Value.Month) || (o.DownloadDateTo.Value.Month == showTrackingDateTimePicker.Value.Month)) && ((o.DownloadDateFrom.Value.Year == showTrackingDateTimePicker.Value.Year) ||
                         o.DownloadDateTo.Value.Year == showTrackingDateTimePicker.Value.Year) && o.State == true
@@ -374,7 +374,7 @@ namespace AtlantSovt
                   {
                       Id = o.Id,
                       OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
-                      YorU = o.YorU,
+                      Staff = o.Staff.Type,
                       ClientName = o.Client.Name,
                       TransporterName = o.Transporter.FullName,
                       DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
@@ -410,7 +410,7 @@ namespace AtlantSovt
                 {
                     Id = o.Id,
                     OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
-                    YorU = o.YorU,
+                    Staff = o.Staff.Type,
                     ClientName = o.Client.Name,
                     TransporterName = o.Transporter.FullName,
                     DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day +"."+ o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "-" + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + "-" +o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
@@ -670,8 +670,8 @@ namespace AtlantSovt
                         downloadDate = (!orderDocument.DownloadDateFrom.HasValue) ? "" : (!orderDocument.DownloadDateTo.HasValue) ? orderDocument.DownloadDateFrom.Value.ToShortDateString() : (orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month) ? orderDocument.DownloadDateFrom.Value.Day + "." + orderDocument.DownloadDateFrom.Value.Month + "-" + orderDocument.DownloadDateTo.Value : orderDocument.DownloadDateFrom.Value.Day + "-" + orderDocument.DownloadDateTo.Value + " на ";
                         downloadDate += (!orderDocument.DownloadDateFrom.HasValue) ? "" : orderDocument.DownloadDateFrom.Value.ToShortTimeString();
                       
-                        dateTerms = (!orderDocument.DownloadDateFrom.HasValue) ? "" : (!orderDocument.DownloadDateTo.HasValue) ? orderDocument.DownloadDateFrom.Value.ToShortDateString() : (orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month) ? orderDocument.DownloadDateFrom.Value.Day + "." + orderDocument.DownloadDateFrom.Value.Month + "-" + orderDocument.DownloadDateTo.Value.ToShortDateString() : orderDocument.DownloadDateFrom.Value.Day + "-" + orderDocument.DownloadDateTo.Value.ToShortDateString() + " - ";
-                        dateTerms +=(!orderDocument.UploadDateFrom.HasValue) ? "" : (!orderDocument.UploadDateTo.HasValue) ? orderDocument.UploadDateFrom.Value.ToShortDateString() : (orderDocument.UploadDateFrom.Value.Month != orderDocument.UploadDateTo.Value.Month) ? orderDocument.UploadDateFrom.Value.Day + "." + orderDocument.UploadDateFrom.Value.Month + "-" + orderDocument.UploadDateTo.Value.ToShortDateString() : orderDocument.UploadDateFrom.Value.Day + "-" + orderDocument.UploadDateTo.Value.ToShortDateString() + " до " + orderDocument.UploadDateTo.Value.ToShortTimeString();
+                        dateTerms = (!orderDocument.DownloadDateFrom.HasValue) ? "" : (!orderDocument.DownloadDateTo.HasValue) ? orderDocument.DownloadDateFrom.Value.ToShortDateString() : (orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month) ? orderDocument.DownloadDateFrom.Value.Day.ToString().PadLeft(2,'0') + "." + orderDocument.DownloadDateFrom.Value.Month.ToString().PadLeft(2, '0') + "-" + orderDocument.DownloadDateTo.Value.ToShortDateString() : orderDocument.DownloadDateFrom.Value.Day.ToString().PadLeft(2, '0') + "-" + orderDocument.DownloadDateTo.Value.ToShortDateString() + " — ";
+                        dateTerms +=(!orderDocument.UploadDateFrom.HasValue) ? "" : (!orderDocument.UploadDateTo.HasValue) ? orderDocument.UploadDateFrom.Value.ToShortDateString() : (orderDocument.UploadDateFrom.Value.Month != orderDocument.UploadDateTo.Value.Month) ? orderDocument.UploadDateFrom.Value.Day.ToString().PadLeft(2, '0') + "." + orderDocument.UploadDateFrom.Value.Month.ToString().PadLeft(2, '0') + "-" + orderDocument.UploadDateTo.Value.ToShortDateString() : orderDocument.UploadDateFrom.Value.Day.ToString().PadLeft(2, '0') + "-" + orderDocument.UploadDateTo.Value.ToShortDateString() + "до " + orderDocument.UploadDateTo.Value.ToShortTimeString();
 
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).Count() == 1)
                         {
@@ -704,7 +704,7 @@ namespace AtlantSovt
                         string weight = (Convert.ToString(orderDocument.CargoWeight) == null) ? "" : Convert.ToString(orderDocument.CargoWeight) + " т";
                         string orderDeny = (orderDocument.OrderDeny == null || orderDocument.OrderDeny.Type == "") ? "____________________" : orderDocument.OrderDeny.Type;
 
-                        if (orderDocument.RegularyDelay == null || orderDocument.RegularyDelay.Type == "")
+                        if (orderDocument.RegularyDelay == null || orderDocument.RegularyDelay.Type == "" || orderDocument.RegularyDelay.Type.Split(new char[] { '-' }).Count() < 4 )
                         {
                             regularyDelay = new string[] { "___", "___", "___", "___" };
                         }

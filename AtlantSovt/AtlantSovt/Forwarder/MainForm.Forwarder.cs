@@ -331,19 +331,21 @@ namespace AtlantSovt
                     {
                         db.Forwarders.Add(New_Forwarder);
                         db.SaveChanges();
-                        MessageBox.Show("Експедитор успішно доданий");
+                        string massage = "Експедитор успішно доданий\n";
+
 
                         if (addForwarderBankDetailsAddForm != null)
                         {
-                            addForwarderBankDetailsAddForm.AddForwarderBankDetail(New_Forwarder.Id);
+                            massage += addForwarderBankDetailsAddForm.AddForwarderBankDetail(New_Forwarder.Id, true);
                             addForwarderBankDetailsAddForm = null;
                         }
                         if (addForwarderContactAddForm != null)
                         {
-                            addForwarderContactAddForm.AddForwarderContact(New_Forwarder.Id);
+                            massage += addForwarderContactAddForm.AddForwarderContact(New_Forwarder.Id, true);
                             addForwarderContactAddForm = null;
                         }
                         AddForwarderStamp(New_Forwarder.Id);
+                        MessageBox.Show(massage);
                     }
                     catch (Exception ex)
                     {

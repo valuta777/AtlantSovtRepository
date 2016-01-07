@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +26,7 @@ namespace AtlantSovt
             InitializeComponent();
         }
 
-        internal void AddTransporterContact(long id)
+        internal string AddTransporterContact(long id , bool IsAdding)
         {
             using (var db = new AtlantSovtContext())
             {
@@ -39,13 +40,24 @@ namespace AtlantSovt
                 };
                 try
                 {
+
                     db.TransporterContacts.Add(New_TransporterContact);
                     db.SaveChanges();
-                    MessageBox.Show("Контакт успішно доданий перевізнику " + New_TransporterContact.TransporterId);
+                    if (IsAdding)
+                    {
+                        return "Контакт успішно доданий перевізнику [" + New_TransporterContact.TransporterId + "]\n";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Контакт успішно доданий перевізнику " + New_TransporterContact.TransporterId);
+                        return string.Empty;
+                    }
                 }
                 catch (Exception ec)
                 {
+                    Log.Write(ec);
                     MessageBox.Show(ec.Message);
+                    return string.Empty;
                 }
             }
         }
@@ -61,7 +73,7 @@ namespace AtlantSovt
             this.Hide();
             if (Id != 0)
             {
-                AddTransporterContact(Id);
+                AddTransporterContact(Id, false);
             }
         }
         internal void AddTransporterContact2(long id) 

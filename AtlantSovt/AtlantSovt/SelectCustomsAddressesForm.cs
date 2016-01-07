@@ -28,8 +28,6 @@ namespace AtlantSovt
             InitializeComponent();
             client = new_client;
             order = new_order;
-            LoadClientCustomsAddresses();
-            CheckSelectedCustomsAddresses();
             IsUpdate = true;
         }
 
@@ -158,10 +156,31 @@ namespace AtlantSovt
             }
         }
 
+        public void LoadClientCustomsAddresses(long? id)
+        {
+            if (id.HasValue)
+            {
+                using (var db = new AtlantSovtContext())
+                {
+                    var query = from address in db.CustomsAddresses
+                                where address.Id == id.Value
+                                select address;
+                    foreach (var item in query)
+                    {
+                        customsAddressesListBox.Items.Add(item.Country.Name + "," + item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                    }
+                }
+            }
+        }
+
         private void сustomsAddressListBox_DoubleClick(object sender, EventArgs e)
         {
             customsAddressesListBox.Items.Clear();
             LoadClientCustomsAddresses();
+            if (order != null)
+            {
+                CheckSelectedCustomsAddresses();
+            }
         }
 
         private void addCustomsAddressButton_Click(object sender, EventArgs e)
@@ -170,13 +189,13 @@ namespace AtlantSovt
             addCustomsAddressForm.Show();
         }        
 
-        internal void CustomsAddressesSelect(Order new_order)
+        internal string CustomsAddressesSelect(Order new_order)
         {
             order = new_order;
-            SaveCustomsAddresses();
+            return SaveCustomsAddresses();
         }
 
-        private void SaveCustomsAddresses()
+        private string SaveCustomsAddresses()
         {
             if (customsAddressesListBox.CheckedItems.Count != 0 && order != null)
             {
@@ -199,21 +218,43 @@ namespace AtlantSovt
                         }
 
                         db.SaveChanges();
-                        MessageBox.Show("Успішно вибрано " + customsAddressesListBox.CheckedItems.Count + " Адрес замитнення");
+                        return "Успішно вибрано " + customsAddressesListBox.CheckedItems.Count + " Адрес замитнення\n";
                     }
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
                     MessageBox.Show("Помилка: ", ex.Message);
+                    return string.Empty;
                 }
+            }
+            else
+            {
+                return string.Empty;
             }
         }
 
         private void SelectCustomsAddressesForm_Load(object sender, EventArgs e)
         {
             LoadClientCustomsAddresses();
+            if (order != null)
+            {
+                CheckSelectedCustomsAddresses();
+            }
         }
 
+        private void SelectCustomsAddressesForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (order == null)
+            {
+                if (customsAddressesListBox.CheckedItems.Count != 0)
+                {
+                    if (MessageBox.Show("Закрити форму без збереження?\nВибрані адреси НЕ додадуться.\n Для збереження вибраних адрес натисніть <Отмена> та <Додати до заявки>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                    {
+                        e.Cancel = true;
+                    }
+                }
+            }
+        }
     }
 }

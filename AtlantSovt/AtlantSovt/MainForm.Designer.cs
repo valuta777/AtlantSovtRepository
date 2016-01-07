@@ -369,7 +369,7 @@
             this.label79 = new System.Windows.Forms.Label();
             this.OrderAddPersonalButton = new System.Windows.Forms.Button();
             this.OrderAddPersonalLabel = new System.Windows.Forms.Label();
-            this.OrderAddPersonalComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderAddStaffComboBox = new System.Windows.Forms.ComboBox();
             this.OrderAddUncustomsAddressAddButton = new System.Windows.Forms.Button();
             this.OrderAddADRSelectComboBox = new System.Windows.Forms.ComboBox();
             this.label89 = new System.Windows.Forms.Label();
@@ -475,8 +475,8 @@
             this.OrderUpdateTirCmrAddButton = new System.Windows.Forms.Button();
             this.OrderUpdateCustumsAddressesButton = new System.Windows.Forms.Button();
             this.OrderUpdateLabel14 = new System.Windows.Forms.Label();
-            this.OrderUpdatePersonalButton = new System.Windows.Forms.Button();
-            this.OrderUpdatePersonalComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateStaffButton = new System.Windows.Forms.Button();
+            this.OrderUpdateStaffSelectComboBox = new System.Windows.Forms.ComboBox();
             this.OrderUpdateUncustumsAddressesButton = new System.Windows.Forms.Button();
             this.OrderUpdateADRSelectComboBox = new System.Windows.Forms.ComboBox();
             this.OrderUpdateLabel16 = new System.Windows.Forms.Label();
@@ -4936,6 +4936,7 @@
             this.OrderAddDownloadDateFromTimePicker.ShowCheckBox = true;
             this.OrderAddDownloadDateFromTimePicker.Size = new System.Drawing.Size(228, 29);
             this.OrderAddDownloadDateFromTimePicker.TabIndex = 12;
+            this.OrderAddDownloadDateFromTimePicker.ValueChanged += new System.EventHandler(this.OrderAddDownloadDateFromTimePicker_ValueChanged);
             // 
             // label90
             // 
@@ -5002,6 +5003,7 @@
             this.OrderAddUploadDateFromTimePicker.Size = new System.Drawing.Size(268, 29);
             this.OrderAddUploadDateFromTimePicker.TabIndex = 13;
             this.OrderAddUploadDateFromTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
+            this.OrderAddUploadDateFromTimePicker.ValueChanged += new System.EventHandler(this.OrderAddUploadDateFromTimePicker_ValueChanged);
             // 
             // label92
             // 
@@ -5032,7 +5034,7 @@
             // 
             this.splitContainer7.Panel2.Controls.Add(this.OrderAddPersonalButton);
             this.splitContainer7.Panel2.Controls.Add(this.OrderAddPersonalLabel);
-            this.splitContainer7.Panel2.Controls.Add(this.OrderAddPersonalComboBox);
+            this.splitContainer7.Panel2.Controls.Add(this.OrderAddStaffComboBox);
             this.splitContainer7.Panel2.Controls.Add(this.OrderAddUncustomsAddressAddButton);
             this.splitContainer7.Panel2.Controls.Add(this.OrderAddADRSelectComboBox);
             this.splitContainer7.Panel2.Controls.Add(this.label89);
@@ -5104,6 +5106,7 @@
             this.OrderAddPersonalButton.TabIndex = 135;
             this.OrderAddPersonalButton.TabStop = false;
             this.OrderAddPersonalButton.UseVisualStyleBackColor = true;
+            this.OrderAddPersonalButton.Click += new System.EventHandler(this.OrderAddSatffAddButton_Click);
             // 
             // OrderAddPersonalLabel
             // 
@@ -5117,21 +5120,23 @@
             this.OrderAddPersonalLabel.TabIndex = 139;
             this.OrderAddPersonalLabel.Text = "Працівник";
             // 
-            // OrderAddPersonalComboBox
+            // OrderAddStaffComboBox
             // 
-            this.OrderAddPersonalComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.OrderAddStaffComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderAddPersonalComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddPersonalComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddPersonalComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrderAddPersonalComboBox.Items.AddRange(new object[] {
+            this.OrderAddStaffComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddStaffComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddStaffComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OrderAddStaffComboBox.Items.AddRange(new object[] {
             "У",
             "І"});
-            this.OrderAddPersonalComboBox.Location = new System.Drawing.Point(6, 118);
-            this.OrderAddPersonalComboBox.Name = "OrderAddPersonalComboBox";
-            this.OrderAddPersonalComboBox.Size = new System.Drawing.Size(236, 29);
-            this.OrderAddPersonalComboBox.TabIndex = 16;
-            this.OrderAddPersonalComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddYOrUComboBox_MouseClick);
+            this.OrderAddStaffComboBox.Location = new System.Drawing.Point(6, 118);
+            this.OrderAddStaffComboBox.Name = "OrderAddStaffComboBox";
+            this.OrderAddStaffComboBox.Size = new System.Drawing.Size(208, 29);
+            this.OrderAddStaffComboBox.TabIndex = 16;
+            this.OrderAddStaffComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddStaffSelectComboBox_SelectedIndexChanged);
+            this.OrderAddStaffComboBox.TextUpdate += new System.EventHandler(this.OrderAddStaffSelectComboBox_TextUpdate);
+            this.OrderAddStaffComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddStaffSelectComboBox_MouseClick);
             // 
             // OrderAddUncustomsAddressAddButton
             // 
@@ -6604,8 +6609,8 @@
             // 
             // OrderUpdateSplitContainer7.Panel2
             // 
-            this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdatePersonalButton);
-            this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdatePersonalComboBox);
+            this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateStaffButton);
+            this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateStaffSelectComboBox);
             this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateUncustumsAddressesButton);
             this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateADRSelectComboBox);
             this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateLabel16);
@@ -6667,33 +6672,35 @@
             this.OrderUpdateLabel14.TabIndex = 131;
             this.OrderUpdateLabel14.Text = "TIR/ CMR ";
             // 
-            // OrderUpdatePersonalButton
+            // OrderUpdateStaffButton
             // 
-            this.OrderUpdatePersonalButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderUpdatePersonalButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderUpdatePersonalButton.Image")));
-            this.OrderUpdatePersonalButton.Location = new System.Drawing.Point(258, 105);
-            this.OrderUpdatePersonalButton.Name = "OrderUpdatePersonalButton";
-            this.OrderUpdatePersonalButton.Size = new System.Drawing.Size(30, 30);
-            this.OrderUpdatePersonalButton.TabIndex = 135;
-            this.OrderUpdatePersonalButton.TabStop = false;
-            this.OrderUpdatePersonalButton.UseVisualStyleBackColor = true;
-            this.OrderUpdatePersonalButton.Click += new System.EventHandler(this.OrderUpdatePersonalButton_Click);
+            this.OrderUpdateStaffButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderUpdateStaffButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderUpdateStaffButton.Image")));
+            this.OrderUpdateStaffButton.Location = new System.Drawing.Point(213, 106);
+            this.OrderUpdateStaffButton.Name = "OrderUpdateStaffButton";
+            this.OrderUpdateStaffButton.Size = new System.Drawing.Size(30, 30);
+            this.OrderUpdateStaffButton.TabIndex = 135;
+            this.OrderUpdateStaffButton.TabStop = false;
+            this.OrderUpdateStaffButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateStaffButton.Click += new System.EventHandler(this.OrderUpdateStaffAddButton_Click);
             // 
-            // OrderUpdatePersonalComboBox
+            // OrderUpdateStaffSelectComboBox
             // 
-            this.OrderUpdatePersonalComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.OrderUpdateStaffSelectComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderUpdatePersonalComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdatePersonalComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdatePersonalComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrderUpdatePersonalComboBox.Items.AddRange(new object[] {
+            this.OrderUpdateStaffSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateStaffSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateStaffSelectComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OrderUpdateStaffSelectComboBox.Items.AddRange(new object[] {
             "У",
             "І"});
-            this.OrderUpdatePersonalComboBox.Location = new System.Drawing.Point(6, 106);
-            this.OrderUpdatePersonalComboBox.Name = "OrderUpdatePersonalComboBox";
-            this.OrderUpdatePersonalComboBox.Size = new System.Drawing.Size(246, 29);
-            this.OrderUpdatePersonalComboBox.TabIndex = 16;
-            this.OrderUpdatePersonalComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateYOrUComboBox_MouseClick);
+            this.OrderUpdateStaffSelectComboBox.Location = new System.Drawing.Point(6, 106);
+            this.OrderUpdateStaffSelectComboBox.Name = "OrderUpdateStaffSelectComboBox";
+            this.OrderUpdateStaffSelectComboBox.Size = new System.Drawing.Size(201, 29);
+            this.OrderUpdateStaffSelectComboBox.TabIndex = 16;
+            this.OrderUpdateStaffSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateStaffSelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateStaffSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateStaffSelectComboBox_TextUpdate);
+            this.OrderUpdateStaffSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateStaffSelectComboBox_MouseClick);
             // 
             // OrderUpdateUncustumsAddressesButton
             // 
@@ -7318,6 +7325,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Атлант-Совт";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -7846,7 +7854,7 @@
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.Button OrderAddUncustomsAddressAddButton;
         private System.Windows.Forms.SplitContainer addOrderSplitContainer1;
-        private System.Windows.Forms.ComboBox OrderAddPersonalComboBox;
+        private System.Windows.Forms.ComboBox OrderAddStaffComboBox;
         private System.Windows.Forms.Button OrderAddAdditionalTermsAddButton;
         private System.Windows.Forms.Button OrderAddPaymentTermsAddButton;
         private System.Windows.Forms.Button OrderAddOrderDenyAddButton;
@@ -7979,7 +7987,7 @@
         private System.Windows.Forms.ComboBox OrderUpdateTrailerSelectComboBox;
         private System.Windows.Forms.ComboBox OrderUpdateCubeSelectComboBox;
         private System.Windows.Forms.ComboBox OrderUpdateTirCmrSelectComboBox;
-        private System.Windows.Forms.ComboBox OrderUpdatePersonalComboBox;
+        private System.Windows.Forms.ComboBox OrderUpdateStaffSelectComboBox;
         private System.Windows.Forms.ComboBox OrderUpdateADRSelectComboBox;
         private System.Windows.Forms.ComboBox OrderUpdateClientSelectComboBox;
         private System.Windows.Forms.ComboBox OrderUpdateTransporterSelectComboBox;
@@ -8028,7 +8036,7 @@
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.DateTimePicker OrderUpdateUploadDateToTimePicker;
-        private System.Windows.Forms.Button OrderUpdatePersonalButton;
+        private System.Windows.Forms.Button OrderUpdateStaffButton;
         private System.Windows.Forms.Label OrderUpdatelabel28;
         private System.Windows.Forms.ComboBox OrderUpdateForwarder3SelectComboBox;
         private System.Windows.Forms.RadioButton originalContractStateRadioButton;

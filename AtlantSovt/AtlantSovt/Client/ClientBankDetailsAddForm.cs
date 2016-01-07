@@ -49,7 +49,7 @@ namespace AtlantSovt
                 this.Hide();
                 if (ID != 0)
                 {
-                    AddClientBankDetail(ID);
+                    AddClientBankDetail(ID,false);
                 }
             }
             else
@@ -57,7 +57,7 @@ namespace AtlantSovt
                 MessageBox.Show("Заповніть обов'язкові поля!");
             }
         }
-        internal void AddClientBankDetail(long id)
+        internal string AddClientBankDetail(long id, bool IsAdding)
         {
             using (var db = new AtlantSovtContext())
             {
@@ -78,12 +78,21 @@ namespace AtlantSovt
                 {
                     db.ClientBankDetails.Add(New_ClientBankDetail);                    
                     db.SaveChanges();
-                    MessageBox.Show("Банківські данні успішно додані клієнту");                   
+                    if (IsAdding)
+                    {
+                        return "Банківські данні успішно додані клієнту ["+ New_ClientBankDetail.Id+ "]\n";
+                    }        
+                    else
+                    {
+                        MessageBox.Show("Банківські данні успішно додані клієнту");
+                        return string.Empty;
+                    }         
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show(ex.Message);  
+                    MessageBox.Show(ex.Message);
+                    return string.Empty;
                 }
             }
         }                    

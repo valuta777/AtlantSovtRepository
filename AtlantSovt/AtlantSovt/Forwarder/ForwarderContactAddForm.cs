@@ -26,7 +26,7 @@ namespace AtlantSovt
             long Id = 0;
         }
 
-        internal void AddForwarderContact(long id)
+        internal string AddForwarderContact(long id , bool IsAdding)
         {
             using (var db = new AtlantSovtContext())
             {
@@ -42,12 +42,22 @@ namespace AtlantSovt
                 {
                     db.ForwarderContacts.Add(New_ForwarderContact);
                     db.SaveChanges();
-                    MessageBox.Show("Контакт успішно доданий експедитору " + New_ForwarderContact.ForwarderId);
+                    if (IsAdding)
+                    {
+                        return "Контакт успішно доданий експедитору [" + New_ForwarderContact.Id + "]\n";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Контакт успішно доданий експедитору ");
+                        return string.Empty;
+                    }
+                   
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
                     MessageBox.Show(ex.Message);
+                    return string.Empty;
                 }
 
             }
@@ -64,7 +74,7 @@ namespace AtlantSovt
             this.Hide();
             if (Id != 0)
             {
-                AddForwarderContact(Id);
+                AddForwarderContact(Id, false);
             }
         }
        internal void AddForwarderContact2(long id) 

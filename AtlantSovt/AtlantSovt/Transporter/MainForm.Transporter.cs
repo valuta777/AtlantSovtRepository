@@ -7255,27 +7255,28 @@ namespace AtlantSovt
                     {
                         db.Transporters.Add(New_Transporter);
                         db.SaveChanges();
-                        MessageBox.Show("Перевізник успішно доданий");
+                       
 
                         New_Filters.Id = New_Transporter.Id;
                         db.Filters.Add(New_Filters);
                         db.SaveChanges();
-
+                        string massage = "Перевізник успішно доданий ["+ New_Transporter.Id +"]\n";
                         if (addTransporterBankDetailsAddForm != null)
                         {
-                            addTransporterBankDetailsAddForm.AddTransporterBankDetail(New_Transporter.Id);
+                            massage += addTransporterBankDetailsAddForm.AddTransporterBankDetail(New_Transporter.Id, true);
                             addTransporterBankDetailsAddForm = null;
                         }
                         if (addTransporterContactAddForm != null)
                         {
-                            addTransporterContactAddForm.AddTransporterContact(New_Transporter.Id);
+                            massage += addTransporterContactAddForm.AddTransporterContact(New_Transporter.Id , true);
                             addTransporterContactAddForm = null;
                         }
                         if (transporterCountryAndVehicleSelectForm != null)
                         {
-                            transporterCountryAndVehicleSelectForm.CoutriesAndVehiclesSelect(db.Transporters.Find(New_Transporter.Id));
+                            massage += transporterCountryAndVehicleSelectForm.CoutriesAndVehiclesSelect(db.Transporters.Find(New_Transporter.Id));
                             transporterCountryAndVehicleSelectForm = null;
                         }
+                        MessageBox.Show(massage);
                     }
                     catch (Exception ex)
                     {
