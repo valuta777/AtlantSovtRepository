@@ -147,17 +147,14 @@ namespace AtlantSovt
                        {
                            if (deletedCountries.Count != 0)
                            {
-                               foreach (var deleteItem in deletedCountries)
-                               {
-                                   Country country = db.Countries.Where(c => c.Name == deleteItem).FirstOrDefault();
-                                   TransporterCountry transporterCountry = db.Transporters.Find(transporter.Id).TransporterCountries.Where(tc => tc.CountryId == country.Id).FirstOrDefault();
+                                foreach (var deleteItem in deletedCountries)
+                                {
+                                    Country country = db.Countries.Where(c => c.Name == deleteItem).FirstOrDefault();
+                                    TransporterCountry transporterCountry = db.Transporters.Find(transporter.Id).TransporterCountries.Where(tc => tc.CountryId == country.Id).FirstOrDefault();
 
-                                   db.TransporterCountries.Remove(transporterCountry);
-                           }
-                               
-                               
-                           }
-
+                                    db.TransporterCountries.Remove(transporterCountry);
+                                }
+                            }
                            if (newCountries.Count != 0)
                            {
                                foreach (var newItem in newCountries)
@@ -169,8 +166,7 @@ namespace AtlantSovt
                                        CountryId = country.Id
                                    };
                                    db.Transporters.Find(transporter.Id).TransporterCountries.Add(newTransporterCountry);
-                               }
-                               
+                               }                               
                            }
                             db.SaveChanges();
                             if (newCountries.Count != 0)
@@ -227,8 +223,8 @@ namespace AtlantSovt
 
                                     db.TransporterVehicles.Remove(transporterVehicle);
                                 }
-                               
 
+                            }
                             if (newVehicles.Count != 0)
                             {
                                 foreach (var newItem in newVehicles)
@@ -254,7 +250,7 @@ namespace AtlantSovt
                                 }
                             }
                         }
-                    }
+                    
                 }
                 catch (Exception e)
                 {

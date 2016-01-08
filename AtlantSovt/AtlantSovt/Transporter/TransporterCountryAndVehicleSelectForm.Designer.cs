@@ -115,6 +115,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вибір країн і типів транспорту";
             this.TopMost = true;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TransporterCountryAndVehicleSelectForm_FormClosing);
             this.ResumeLayout(false);
 
         }

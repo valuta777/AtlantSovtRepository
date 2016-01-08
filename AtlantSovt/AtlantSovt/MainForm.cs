@@ -310,14 +310,30 @@ namespace AtlantSovt
         
         private void addContactClientButton_Click(object sender, EventArgs e)
         {
-            addClientContactAddForm = new ClientContactAddForm();
-            addClientContactAddForm.Show();
+            if (addClientContactAddForm == null || addClientContactAddForm.IsDisposed)
+            {
+                addClientContactAddForm = new ClientContactAddForm();
+                addClientContactAddForm.Show();
+            }
+            else
+            {
+                addClientContactAddForm.Show();
+                addClientContactAddForm.Focus();
+            }
         }
         
         private void addBankDetailsClientButton_Click(object sender, EventArgs e)
         {
-            addClientBankDetailsAddForm = new ClientBankDetailsAddForm();
-            addClientBankDetailsAddForm.Show();
+            if (addClientBankDetailsAddForm == null || addClientBankDetailsAddForm.IsDisposed)
+            {
+                addClientBankDetailsAddForm = new ClientBankDetailsAddForm();
+                addClientBankDetailsAddForm.Show();
+            }
+            else
+            {
+                addClientBankDetailsAddForm.Show();
+                addClientBankDetailsAddForm.Focus();
+            }            
         }
         
         private void addClientButton_Click(object sender, EventArgs e)
@@ -735,14 +751,31 @@ namespace AtlantSovt
 
         private void addContactForwarderButton_Click(object sender, EventArgs e)
         {
-            addForwarderContactAddForm = new ForwarderContactAddForm();
-            addForwarderContactAddForm.Show();
+            if (addForwarderContactAddForm == null || addForwarderContactAddForm.IsDisposed)
+            {
+                addForwarderContactAddForm = new ForwarderContactAddForm();
+                addForwarderContactAddForm.Show();
+            }
+            else
+            {
+                addForwarderContactAddForm.Show();
+                addForwarderContactAddForm.Focus();
+            }
+            
         }
 
         private void addBankDetailsForwarderButton_Click(object sender, EventArgs e)
         {
-            addForwarderBankDetailsAddForm = new ForwarderBankDetailsAddForm();
-            addForwarderBankDetailsAddForm.Show();
+            if (addForwarderBankDetailsAddForm == null || addForwarderBankDetailsAddForm.IsDisposed)
+            {
+                addForwarderBankDetailsAddForm = new ForwarderBankDetailsAddForm();
+                addForwarderBankDetailsAddForm.Show();
+            }
+            else
+            {
+                addForwarderBankDetailsAddForm.Show();
+                addForwarderBankDetailsAddForm.Focus();
+            }
         }
 
         private void forwarderAddImageButton_Click(object sender, EventArgs e)
@@ -1174,20 +1207,46 @@ namespace AtlantSovt
 
         private void transporterAddContactAddButton_Click(object sender, EventArgs e)
         {
-            addTransporterContactAddForm = new TransporterContactAddForm();
-            addTransporterContactAddForm.Show();
+            if (addTransporterContactAddForm == null || addTransporterContactAddForm.IsDisposed)
+            {
+                addTransporterContactAddForm = new TransporterContactAddForm();
+                addTransporterContactAddForm.Show();
+            }
+            else
+            {
+                addTransporterContactAddForm.Show();
+                addTransporterContactAddForm.Focus();
+            }
         }
 
         private void transporterAddBankDetailsAddButton_Click(object sender, EventArgs e)
         {
-            addTransporterBankDetailsAddForm = new TransporterBankDetailsAddForm();
-            addTransporterBankDetailsAddForm.Show();
+            
+            if (addTransporterBankDetailsAddForm == null || addTransporterBankDetailsAddForm.IsDisposed)
+            {
+                addTransporterBankDetailsAddForm = new TransporterBankDetailsAddForm();
+                addTransporterBankDetailsAddForm.Show();
+            }
+            else
+            {
+                addTransporterBankDetailsAddForm.Show();
+                addTransporterBankDetailsAddForm.Focus();
+            }
         }
 
         private void transporterAddCountryAndVehicleSelectButton_Click(object sender, EventArgs e)
         {
-            transporterCountryAndVehicleSelectForm = new TransporterCountryAndVehicleSelectForm();
-            transporterCountryAndVehicleSelectForm.Show();
+            
+            if (transporterCountryAndVehicleSelectForm == null || transporterCountryAndVehicleSelectForm.IsDisposed)
+            {
+                transporterCountryAndVehicleSelectForm = new TransporterCountryAndVehicleSelectForm();
+                transporterCountryAndVehicleSelectForm.Show();
+            }
+            else
+            {
+                transporterCountryAndVehicleSelectForm.Show();
+                transporterCountryAndVehicleSelectForm.Focus();
+            }
         }
 
         private void workDocumentTransporterAddComboBox_MouseClick(object sender, MouseEventArgs e)
