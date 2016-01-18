@@ -26,6 +26,7 @@ namespace AtlantSovt
         Contract contract;
 
         int contractType;
+
         string contractOutputFilePath;
 
         void SplitTransporterDocumentComboBox(ComboBox transporterComboBox)

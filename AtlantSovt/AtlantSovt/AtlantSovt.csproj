@@ -231,6 +231,12 @@
     <Compile Include="Client\ClientBankDetailsAddForm.Designer.cs">
       <DependentUpon>ClientBankDetailsAddForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExportTrackingToExcelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportTrackingToExcelForm.Designer.cs">
+      <DependentUpon>ExportTrackingToExcelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.Documentation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -414,6 +420,9 @@
     <EmbeddedResource Include="AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddTrackingCloseDateForm.resx">
+      <DependentUpon>AddTrackingCloseDateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddTransporterVehicleForm.resx">
       <DependentUpon>AddTransporterVehicleForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -461,6 +470,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Client\ClientBankDetailsAddForm.resx">
       <DependentUpon>ClientBankDetailsAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportTrackingToExcelForm.resx">
+      <DependentUpon>ExportTrackingToExcelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectCustomsAddressesForm.resx">
       <DependentUpon>SelectCustomsAddressesForm.cs</DependentUpon>
@@ -620,12 +632,30 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
     <COMReference Include="Microsoft.Office.Interop.Word">
       <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>8</VersionMajor>
       <VersionMinor>5</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
