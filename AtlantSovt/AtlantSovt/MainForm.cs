@@ -154,104 +154,125 @@ namespace AtlantSovt
         //MenuStrips
         #region MenuStrips               
 
-                private void addClientsStrip_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
-                    dataControl.SelectedIndex = 2;
-                }
+        private void addClientsStrip_Click(object sender, EventArgs e)
+        {
+            helloPictureBox.Image = null;
+            dataControl.SelectedIndex = 2;
+        }
 
-                private void updateClientsStrip_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
-                    dataControl.SelectedIndex = 3;
-                }
+        private void updateClientsStrip_Click(object sender, EventArgs e)
+        {
+            helloPictureBox.Image = null;
+            dataControl.SelectedIndex = 3;
+        }
 
-                private void deleteClientsStrip_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
-                    dataControl.SelectedIndex = 4;
-                }               
+        private void deleteClientsStrip_Click(object sender, EventArgs e)
+        {
+            helloPictureBox.Image = null;
+            dataControl.SelectedIndex = 4;
+        }               
 
-                private void addForwarderStrip_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
-                    dataControl.SelectedIndex = 6;
-                }
+        private void addForwarderStrip_Click(object sender, EventArgs e)
+        {
+            helloPictureBox.Image = null;
+            dataControl.SelectedIndex = 6;
+        }
 
-                private void updateForwarderStrip_Click(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 7;
-                    helloPictureBox.Image = null;
-                }
+        private void updateForwarderStrip_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 7;
+            helloPictureBox.Image = null;
+        }
 
-                private void deleteForwarderStrip_Click(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 8;
-                    helloPictureBox.Image = null;
-                }
+        private void deleteForwarderStrip_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 8;
+            helloPictureBox.Image = null;
+        }
 
-                private void addTransporterStrip_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null; 
-                    dataControl.SelectedIndex = 10;
-                }
+        private void addTransporterStrip_Click(object sender, EventArgs e)
+        {
+            helloPictureBox.Image = null; 
+            dataControl.SelectedIndex = 10;
+        }
 
-                private void updateTransporterStrip_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
-                    dataControl.SelectedIndex = 11;
-                }
+        private void updateTransporterStrip_Click(object sender, EventArgs e)
+        {
+            helloPictureBox.Image = null;
+            dataControl.SelectedIndex = 11;
+        }
 
-                private void deleteTransporterStrip_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
-                    dataControl.SelectedIndex = 12;
-                }
+        private void deleteTransporterStrip_Click(object sender, EventArgs e)
+        {
+            helloPictureBox.Image = null;
+            dataControl.SelectedIndex = 12;
+        }
 
-                private void createContractMenuItem_Click(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 13;
-                    helloPictureBox.Image = null;
-                    GetDocumentFiles();
+        private void createContractMenuItem_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 13;
+            helloPictureBox.Image = null;
+            GetDocumentFiles();
 
-                }
+        }
 
-                private void addOrderMenuItem_Click(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 14;
-                    helloPictureBox.Image = null;
+        private void addOrderMenuItem_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 14;
+            helloPictureBox.Image = null;
 
-                }
+        }
 
-                private void showTrackingMenuItem_Click(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 15;
-                    helloPictureBox.Image = null;
-                    ShowTracking();
-                    trackingShowTransporterContactsDataGridView.Visible = false;
-                    trackingShowCommentDataGridView.Visible = false;
-                    trackingShowUploadAddressDataGridView.Visible = false;
-                    trackingShowDownloadAddressDataGridView.Visible = false;
-                }
+        private void showTrackingMenuItem_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 15;
+            helloPictureBox.Image = null;
+            ShowTracking();
+            trackingShowTransporterContactsDataGridView.Visible = false;
+            trackingShowCommentDataGridView.Visible = false;
+            trackingShowUploadAddressDataGridView.Visible = false;
+            trackingShowDownloadAddressDataGridView.Visible = false;
+        }
 
-                private void updateOrderMenuItem_DoubleClick(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 16;
-                    helloPictureBox.Image = null;
-                }
+        private void updateOrderMenuItem_DoubleClick(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 16;
+            helloPictureBox.Image = null;
+        }
 
-                private void showContractMenuItem_Click(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 17;
-                    helloPictureBox.Image = null;
-                    ShowContract();
-                }
+        private void showContractMenuItem_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 17;
+            helloPictureBox.Image = null;
+            ShowContract();
+        }
+        private void showArbeitenMenuItem_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 18;
+            helloPictureBox.Image = null;
+            ShowArbeiten();
+            arbeitenShowUploadAddressDataGridView.Visible = false;
+            arbeitenShowDownloadAddressDataGridView.Visible = false;
+            arbeitenShowNoteTextBox.Visible = false;
+            arbeitenShowForwardersDataGridView.Visible = false;
+        }
 
-                private void AtlantSovtlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-                {
-                    System.Diagnostics.Process.Start(AtlantSovtlinkLabel.Text);
-                }
-                #endregion
+        private void addArbeitenMenuItem_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 19;
+            helloPictureBox.Image = null;
+        }
+
+        private void updateArbeitenMenuItem_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 20;
+            helloPictureBox.Image = null;
+        }
+        private void AtlantSovtlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(AtlantSovtlinkLabel.Text);
+        }
+        #endregion
 
         //Client
         #region Client
@@ -1619,8 +1640,8 @@ namespace AtlantSovt
             #endregion
 
       
-            //Delete
-            #region Delete
+        //Delete
+        #region Delete
         private void transporterDeleteButton_Click(object sender, EventArgs e)
         {
             DeleteTransporter();
@@ -1897,8 +1918,8 @@ namespace AtlantSovt
         {
             if (trackingShowSearchTextBox.Text == "")
             {
-                ShowTracking();
-        }
+                ShowTrackingSearch();
+            }
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -2434,7 +2455,6 @@ namespace AtlantSovt
             LoadOrderUpdateClientDiapasonCombobox();
             OrderUpdateClientDiapasoneComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateClientSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateClientSelectComboBox.Items.Clear();
@@ -2442,43 +2462,35 @@ namespace AtlantSovt
             OrderUpdateClientSelectComboBox.DroppedDown = true;
             OrderUpdateForwarder1SelectComboBox.Enabled = true;
         }
-
         private void OrderUpdateTransporterDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             LoadOrderUpdateTransporterDiapasonCombobox();
             OrderUpdateTransporterDiapasoneComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateTransporterSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateTransporterSelectComboBox.Items.Clear();
             LoadOrderUpdateTransporterSelectComboBox();
             OrderUpdateTransporterSelectComboBox.DroppedDown = true;
         }
-
-
-
         private void OrderUpdateForwarder1SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateForwarder1SelectComboBox.Items.Clear();
             LoadOrderUpdateForwarder1SelectComboBox();
             OrderUpdateForwarder1SelectComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateForwarder2SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateForwarder2SelectComboBox.Items.Clear();
             LoadOrderUpdateForwarder2SelectComboBox();
             OrderUpdateForwarder2SelectComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateForwarder3SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateForwarder3SelectComboBox.Items.Clear();
             LoadOrderUpdateForwarder3SelectComboBox();
             OrderUpdateForwarder3SelectComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateClientSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitClientOrderUpdate();
@@ -2810,6 +2822,7 @@ namespace AtlantSovt
 
 
 
+
         private void OrderAddDownloadDateFromTimePicker_ValueChanged(object sender, EventArgs e)
         {
             if (OrderAddDownloadDateToTimePicker.Checked)
@@ -2823,6 +2836,7 @@ namespace AtlantSovt
                 OrderAddDownloadDateToTimePicker.Checked = false;
             }
         }
+
 
         private void OrderAddUploadDateFromTimePicker_ValueChanged(object sender, EventArgs e)
         {
@@ -2839,28 +2853,160 @@ namespace AtlantSovt
         }
 
 
-
         private void OrderUpdateLoadingForm1AddButton_Click(object sender, EventArgs e)
         {
             AddLoadingFormForm updateLoadingFormForm = new AddLoadingFormForm();
             updateLoadingFormForm.Show();
         }
 
+       
         private void OrderUpdateADRSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateADRSelectComboBox.DroppedDown = true;
         }
+
+
 
         private void OrderAddLanduageSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddLanduageSelectComboBox.DroppedDown = true;
         }
 
+
+
         private void OrderUpdateLanguageSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateLanguageSelectComboBox.DroppedDown = true;
         }
+
+
         #endregion
 
+        //Arbeiten
+        #region Arbeiten
+        private void arbeitenShowMainDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ShowArbeitenInfo();            
+        }
+
+        private void arbeitenAddButton_Click(object sender, EventArgs e)
+        {
+            AddArbeiten();
+            arbeitenAddOrderSelectComboBox.SelectedIndex = -1;
+        }
+
+        private void arbeitenDeleteButton_Click(object sender, EventArgs e)
+        {
+            DeleteArbeiten();
+        }
+
+        private void arbeitenAddOrderSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            arbeitenAddOrderSelectComboBox.Items.Clear();
+            LoadArbeitenAddOrderSelectComboBox();
+            arbeitenAddOrderSelectComboBox.DroppedDown = true;
+        }
+        private void arbeitenAddOrderSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitOrderArbeitenAdd();
+            LoadArbeitenAddTransporterTextBox();
+            LoadArbeitenAddClientTextBox();
+        }
+        private void arbeitenAddOrderSelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitOrderArbeitenAdd();
+            LoadArbeitenAddTransporterTextBox();
+            LoadArbeitenAddClientTextBox();
+        }
+        private void arbeitenAddOrderFilterDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            arbeitenAddOrderSelectComboBox.SelectedIndex = -1;
+            arbeitenAddOrderSelectComboBox.Items.Clear();
+            LoadArbeitenAddOrderSelectComboBox();
+        }
+
+
+
+        private void arbeitenAddOrderFilterCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            arbeitenAddOrderSelectComboBox.SelectedIndex = -1;
+            arbeitenAddOrderSelectComboBox.Items.Clear();
+            LoadArbeitenAddOrderSelectComboBox();
+        }
+
+
+        private void arbeitenShowSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                ShowArbeitenSearch();
+            }
+        }
+
+        private void arbeitenShowSearchDatePicker_ValueChanged(object sender, EventArgs e)
+        {
+            ShowArbeitenSearch();
+        }
+
+        private void arbeitenShowSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (arbeitenShowSearchTextBox.Text == "")
+            {
+                ShowArbeitenSearch();
+            }
+        }
+
+        private void arbeitenShowSearchButton_Click(object sender, EventArgs e)
+        {
+            ShowArbeitenSearch();
+        }
+
+        private void arbeitenShowOnlyActive_CheckedChanged(object sender, EventArgs e)
+        {
+            ShowArbeitenSearch();
+        }
+
+
+
+        //update
+
+        private void arbeitenUpdateOrderSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            arbeitenUpdateOrderSelectComboBox.Items.Clear();
+            LoadArbeitenUpdateOrderSelectComboBox();
+            arbeitenUpdateOrderSelectComboBox.DroppedDown = true;
+        }
+        private void arbeitenUpdateOrderSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitOrderArbeitenUpdate();
+            LoadArbeitenUpdateTransporterTextBox();
+            LoadArbeitenUpdateClientTextBox();
+            LoadAllFieldsArbeitenUpdate();
+        }
+        private void arbeitenUpdateOrderSelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitOrderArbeitenUpdate();
+            LoadArbeitenUpdateTransporterTextBox();
+            LoadArbeitenUpdateClientTextBox();
+        }
+        private void arbeitenUpdateOrderFilterDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            arbeitenUpdateOrderSelectComboBox.SelectedIndex = -1;
+            arbeitenUpdateOrderSelectComboBox.Items.Clear();
+            LoadArbeitenUpdateOrderSelectComboBox();
+        }
+
+        private void arbeitenUpdateOrderFilterCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            arbeitenUpdateOrderSelectComboBox.SelectedIndex = -1;
+            arbeitenUpdateOrderSelectComboBox.Items.Clear();
+            LoadArbeitenUpdateOrderSelectComboBox();
+        }
+        private void arbeitenUpdateButton_Click(object sender, EventArgs e)
+        {
+            UpdateArbeiten();
+        }
+
+        #endregion
     }
 }

@@ -8,11 +8,12 @@ namespace AtlantSovt.AtlantSovtDb
     public partial class AtlantSovtContext : DbContext
     {
         public AtlantSovtContext()
-            : base(ConnectionForm.GetConnectionString())
+            : base("name=AtlantSovtContext")
         {
         }
 
         public virtual DbSet<AdditionalTerm> AdditionalTerms { get; set; }
+        public virtual DbSet<Arbeiten> Arbeitens { get; set; }
         public virtual DbSet<Cargo> Cargoes { get; set; }
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<ClientBankDetail> ClientBankDetails { get; set; }
@@ -94,6 +95,11 @@ namespace AtlantSovt.AtlantSovtDb
                 .WithOptional(e => e.Client)
                 .WillCascadeOnDelete();
 
+            modelBuilder.Entity<Contract>()
+                .HasMany(e => e.ForwarderContracts)
+                .WithOptional(e => e.Contract)
+                .WillCascadeOnDelete();
+
             modelBuilder.Entity<Country>()
                 .HasMany(e => e.TransporterCountries)
                 .WithRequired(e => e.Country)
@@ -120,6 +126,11 @@ namespace AtlantSovt.AtlantSovtDb
                 .WillCascadeOnDelete();
 
             modelBuilder.Entity<Forwarder>()
+                .HasMany(e => e.ForwarderOrders)
+                .WithOptional(e => e.Forwarder)
+                .WillCascadeOnDelete();
+
+            modelBuilder.Entity<Forwarder>()
                 .HasOptional(e => e.ForwarderStamp)
                 .WithRequired(e => e.Forwarder)
                 .WillCascadeOnDelete();
@@ -137,6 +148,11 @@ namespace AtlantSovt.AtlantSovtDb
             modelBuilder.Entity<Order>()
                 .Property(e => e.Freight)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Order>()
+                .HasOptional(e => e.Arbeiten)
+                .WithRequired(e => e.Order)
+                .WillCascadeOnDelete();
 
             modelBuilder.Entity<Order>()
                 .HasMany(e => e.ForwarderOrders)

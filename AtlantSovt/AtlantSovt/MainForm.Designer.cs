@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showClientsStrip = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +58,10 @@
             this.showTrackingMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addOrderMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateOrderMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.arbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showArbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addArbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateArbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataControl = new System.Windows.Forms.TabControl();
             this.helloPage = new System.Windows.Forms.TabPage();
             this.CreatorsLabel = new System.Windows.Forms.Label();
@@ -315,7 +323,6 @@
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.OrderAddAdditionalTermsAddButton = new System.Windows.Forms.Button();
             this.OrderAddPaymentTermsAddButton = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.OrderAddAdditionalTermsSelectComboBox = new System.Windows.Forms.ComboBox();
             this.OrderAddPaymentTermsSelectComboBox = new System.Windows.Forms.ComboBox();
             this.label102 = new System.Windows.Forms.Label();
@@ -512,6 +519,72 @@
             this.contractShowSearchTextBox = new System.Windows.Forms.TextBox();
             this.label36ShowContract = new System.Windows.Forms.Label();
             this.contractShowDataGridView = new System.Windows.Forms.DataGridView();
+            this.showArbeitenPage = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.arbeitenShowDownloadAddressDataGridView = new System.Windows.Forms.DataGridView();
+            this.arbeitenShowUploadAddressDataGridView = new System.Windows.Forms.DataGridView();
+            this.arbeitenShowForwardersDataGridView = new System.Windows.Forms.DataGridView();
+            this.arbeitenShowNoteTextBox = new System.Windows.Forms.RichTextBox();
+            this.arbeitenShowNoteLabel = new System.Windows.Forms.Label();
+            this.arbeitenDeleteButton = new System.Windows.Forms.Button();
+            this.arbeitenShowOnlyActive = new System.Windows.Forms.CheckBox();
+            this.arbeitenShowSearchDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.arbeitenShowMainLabel = new System.Windows.Forms.Label();
+            this.arbeitenShowSearchButton = new System.Windows.Forms.Button();
+            this.arbeitenShowSearchTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenShowMainDataGridView = new System.Windows.Forms.DataGridView();
+            this.addArbeitenPage = new System.Windows.Forms.TabPage();
+            this.arbeitenAddButton = new System.Windows.Forms.Button();
+            this.arbeitenAddSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.arbeitenAddClientPaymentDateLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddClientPaymentTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenAddClientPaymentLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddClientTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenAddAccountNumberLabelTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenAddClientLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddAccountNumberLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddClientPaymentDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.arbeitenAddDownloadDateLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddDownloadDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.arbeitenAddTransporterPaymentTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenAddTransporterPaymentLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddTransporterVehicleTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenAddTransporterVehicleLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddTransporterTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenAddTransporterLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddOrderFilterCheckBox = new System.Windows.Forms.CheckBox();
+            this.arbeitenAddOrderFilterDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.arbeitenAddOrderSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.arbeitenAddOrderSelectLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddOrderFilterLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddNoteTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenAddNoteLabel = new System.Windows.Forms.Label();
+            this.updateArbeitenPage = new System.Windows.Forms.TabPage();
+            this.arbeitenUpdateButton = new System.Windows.Forms.Button();
+            this.arbeitenUpdateSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.arbeitenUpdateClientPaymentDateLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateClientPaymentTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenUpdateClientPaymentLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateClientTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenUpdateAccountNumberLabelTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenUpdateClientLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateAccountNumberLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateClientPaymentDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.arbeitenUpdateDownloadDateLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateDownloadDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.arbeitenUpdateTransporterPaymentTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenUpdateTransporterPaymentLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateTransporterVehicleTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenUpdateTransporterVehicleLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateTransporterTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenUpdateTransporterLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateOrderFilterCheckBox = new System.Windows.Forms.CheckBox();
+            this.arbeitenUpdateOrderFilterDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.arbeitenUpdateOrderSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.arbeitenUpdateOrderSelectLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateOrderFilterLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateNoteTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenUpdateNoteLabel = new System.Windows.Forms.Label();
             this.labelshow57 = new System.Windows.Forms.Label();
             this.labelshow58 = new System.Windows.Forms.Label();
             this.labelshow67 = new System.Windows.Forms.Label();
@@ -644,6 +717,25 @@
             this.showContractsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contractShowTransporterContactDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractShowDataGridView)).BeginInit();
+            this.showArbeitenPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowDownloadAddressDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowUploadAddressDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowForwardersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowMainDataGridView)).BeginInit();
+            this.addArbeitenPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.arbeitenAddSplitContainer)).BeginInit();
+            this.arbeitenAddSplitContainer.Panel1.SuspendLayout();
+            this.arbeitenAddSplitContainer.Panel2.SuspendLayout();
+            this.arbeitenAddSplitContainer.SuspendLayout();
+            this.updateArbeitenPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.arbeitenUpdateSplitContainer)).BeginInit();
+            this.arbeitenUpdateSplitContainer.Panel1.SuspendLayout();
+            this.arbeitenUpdateSplitContainer.Panel2.SuspendLayout();
+            this.arbeitenUpdateSplitContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -655,7 +747,8 @@
             this.trasporterToolStripMenuItem,
             this.forwarderToolStripMenuItem,
             this.documentationToolStripMenuItem,
-            this.orderToolStripMenuItem});
+            this.orderToolStripMenuItem,
+            this.arbeitenToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -856,6 +949,37 @@
             this.updateOrderMenuItem.Text = "Редагувати";
             this.updateOrderMenuItem.Click += new System.EventHandler(this.updateOrderMenuItem_DoubleClick);
             // 
+            // arbeitenToolStripMenuItem
+            // 
+            this.arbeitenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showArbeitenToolStripMenuItem,
+            this.addArbeitenToolStripMenuItem,
+            this.updateArbeitenToolStripMenuItem});
+            this.arbeitenToolStripMenuItem.Name = "arbeitenToolStripMenuItem";
+            this.arbeitenToolStripMenuItem.Size = new System.Drawing.Size(82, 23);
+            this.arbeitenToolStripMenuItem.Text = "Арбайтен";
+            // 
+            // showArbeitenToolStripMenuItem
+            // 
+            this.showArbeitenToolStripMenuItem.Name = "showArbeitenToolStripMenuItem";
+            this.showArbeitenToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
+            this.showArbeitenToolStripMenuItem.Text = "Переглянути";
+            this.showArbeitenToolStripMenuItem.Click += new System.EventHandler(this.showArbeitenMenuItem_Click);
+            // 
+            // addArbeitenToolStripMenuItem
+            // 
+            this.addArbeitenToolStripMenuItem.Name = "addArbeitenToolStripMenuItem";
+            this.addArbeitenToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
+            this.addArbeitenToolStripMenuItem.Text = "Додати";
+            this.addArbeitenToolStripMenuItem.Click += new System.EventHandler(this.addArbeitenMenuItem_Click);
+            // 
+            // updateArbeitenToolStripMenuItem
+            // 
+            this.updateArbeitenToolStripMenuItem.Name = "updateArbeitenToolStripMenuItem";
+            this.updateArbeitenToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
+            this.updateArbeitenToolStripMenuItem.Text = "Змінити";
+            this.updateArbeitenToolStripMenuItem.Click += new System.EventHandler(this.updateArbeitenMenuItem_Click);
+            // 
             // dataControl
             // 
             this.dataControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
@@ -877,6 +1001,9 @@
             this.dataControl.Controls.Add(this.showTrackingPage);
             this.dataControl.Controls.Add(this.updateOrderPage);
             this.dataControl.Controls.Add(this.showContractsPage);
+            this.dataControl.Controls.Add(this.showArbeitenPage);
+            this.dataControl.Controls.Add(this.addArbeitenPage);
+            this.dataControl.Controls.Add(this.updateArbeitenPage);
             this.dataControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataControl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.dataControl.ItemSize = new System.Drawing.Size(0, 1);
@@ -1952,13 +2079,13 @@
             this.forwarderDataGridView.Location = new System.Drawing.Point(0, 27);
             this.forwarderDataGridView.MultiSelect = false;
             this.forwarderDataGridView.Name = "forwarderDataGridView";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.forwarderDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.forwarderDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.forwarderDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.forwarderDataGridView.Size = new System.Drawing.Size(968, 226);
             this.forwarderDataGridView.TabIndex = 9;
@@ -4294,7 +4421,6 @@
             // 
             this.splitContainer6.Panel1.Controls.Add(this.OrderAddAdditionalTermsAddButton);
             this.splitContainer6.Panel1.Controls.Add(this.OrderAddPaymentTermsAddButton);
-            this.splitContainer6.Panel1.Controls.Add(this.button11);
             this.splitContainer6.Panel1.Controls.Add(this.OrderAddAdditionalTermsSelectComboBox);
             this.splitContainer6.Panel1.Controls.Add(this.OrderAddPaymentTermsSelectComboBox);
             this.splitContainer6.Panel1.Controls.Add(this.label102);
@@ -4334,15 +4460,6 @@
             this.OrderAddPaymentTermsAddButton.TabStop = false;
             this.OrderAddPaymentTermsAddButton.UseVisualStyleBackColor = true;
             this.OrderAddPaymentTermsAddButton.Click += new System.EventHandler(this.OrderAddPaymentTermsAddButton_Click);
-            // 
-            // button11
-            // 
-            this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button11.Location = new System.Drawing.Point(497, 11);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(30, 30);
-            this.button11.TabIndex = 138;
-            this.button11.UseVisualStyleBackColor = true;
             // 
             // OrderAddAdditionalTermsSelectComboBox
             // 
@@ -4406,7 +4523,7 @@
             // 
             this.OrderAddOrderDenyAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddOrderDenyAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddOrderDenyAddButton.Image")));
-            this.OrderAddOrderDenyAddButton.Location = new System.Drawing.Point(487, 23);
+            this.OrderAddOrderDenyAddButton.Location = new System.Drawing.Point(485, 23);
             this.OrderAddOrderDenyAddButton.Name = "OrderAddOrderDenyAddButton";
             this.OrderAddOrderDenyAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddOrderDenyAddButton.TabIndex = 140;
@@ -4421,7 +4538,7 @@
             this.OrderAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddButton.Location = new System.Drawing.Point(6, 66);
             this.OrderAddButton.Name = "OrderAddButton";
-            this.OrderAddButton.Size = new System.Drawing.Size(511, 45);
+            this.OrderAddButton.Size = new System.Drawing.Size(509, 45);
             this.OrderAddButton.TabIndex = 28;
             this.OrderAddButton.Text = "Сформувати";
             this.OrderAddButton.UseVisualStyleBackColor = true;
@@ -4447,7 +4564,7 @@
             this.OrderAddDenyFineSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddDenyFineSelectComboBox.Location = new System.Drawing.Point(6, 24);
             this.OrderAddDenyFineSelectComboBox.Name = "OrderAddDenyFineSelectComboBox";
-            this.OrderAddDenyFineSelectComboBox.Size = new System.Drawing.Size(475, 29);
+            this.OrderAddDenyFineSelectComboBox.Size = new System.Drawing.Size(472, 29);
             this.OrderAddDenyFineSelectComboBox.Sorted = true;
             this.OrderAddDenyFineSelectComboBox.TabIndex = 27;
             this.OrderAddDenyFineSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddDenyFineSelectComboBox_SelectedIndexChanged);
@@ -4571,7 +4688,7 @@
             // 
             this.OrderAddLoadingForm2AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddLoadingForm2AddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddLoadingForm2AddButton.Image")));
-            this.OrderAddLoadingForm2AddButton.Location = new System.Drawing.Point(256, 82);
+            this.OrderAddLoadingForm2AddButton.Location = new System.Drawing.Point(259, 82);
             this.OrderAddLoadingForm2AddButton.Name = "OrderAddLoadingForm2AddButton";
             this.OrderAddLoadingForm2AddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddLoadingForm2AddButton.TabIndex = 141;
@@ -4583,7 +4700,7 @@
             // 
             this.OrderAddLoadingForm1AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddLoadingForm1AddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddLoadingForm1AddButton.Image")));
-            this.OrderAddLoadingForm1AddButton.Location = new System.Drawing.Point(256, 26);
+            this.OrderAddLoadingForm1AddButton.Location = new System.Drawing.Point(259, 26);
             this.OrderAddLoadingForm1AddButton.Name = "OrderAddLoadingForm1AddButton";
             this.OrderAddLoadingForm1AddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddLoadingForm1AddButton.TabIndex = 140;
@@ -4601,7 +4718,7 @@
             this.OrderAddLoadingForm2SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddLoadingForm2SelectComboBox.Location = new System.Drawing.Point(6, 83);
             this.OrderAddLoadingForm2SelectComboBox.Name = "OrderAddLoadingForm2SelectComboBox";
-            this.OrderAddLoadingForm2SelectComboBox.Size = new System.Drawing.Size(244, 29);
+            this.OrderAddLoadingForm2SelectComboBox.Size = new System.Drawing.Size(247, 29);
             this.OrderAddLoadingForm2SelectComboBox.Sorted = true;
             this.OrderAddLoadingForm2SelectComboBox.TabIndex = 22;
             this.OrderAddLoadingForm2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddLoadingForm2SelectComboBox_SelectedIndexChanged);
@@ -4628,7 +4745,7 @@
             this.OrderAddLoadingForm1SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddLoadingForm1SelectComboBox.Location = new System.Drawing.Point(6, 27);
             this.OrderAddLoadingForm1SelectComboBox.Name = "OrderAddLoadingForm1SelectComboBox";
-            this.OrderAddLoadingForm1SelectComboBox.Size = new System.Drawing.Size(244, 29);
+            this.OrderAddLoadingForm1SelectComboBox.Size = new System.Drawing.Size(247, 29);
             this.OrderAddLoadingForm1SelectComboBox.Sorted = true;
             this.OrderAddLoadingForm1SelectComboBox.TabIndex = 18;
             this.OrderAddLoadingForm1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddLoadingForm1SelectComboBox_SelectedIndexChanged);
@@ -4763,7 +4880,7 @@
             this.OrderAddTrailerSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddTrailerSelectComboBox.Location = new System.Drawing.Point(10, 83);
             this.OrderAddTrailerSelectComboBox.Name = "OrderAddTrailerSelectComboBox";
-            this.OrderAddTrailerSelectComboBox.Size = new System.Drawing.Size(244, 29);
+            this.OrderAddTrailerSelectComboBox.Size = new System.Drawing.Size(241, 29);
             this.OrderAddTrailerSelectComboBox.Sorted = true;
             this.OrderAddTrailerSelectComboBox.TabIndex = 24;
             this.OrderAddTrailerSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddTrailerSelectComboBox_SelectedIndexChanged);
@@ -4786,7 +4903,7 @@
             // 
             this.OrderAddTrailerAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddTrailerAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddTrailerAddButton.Image")));
-            this.OrderAddTrailerAddButton.Location = new System.Drawing.Point(260, 82);
+            this.OrderAddTrailerAddButton.Location = new System.Drawing.Point(258, 82);
             this.OrderAddTrailerAddButton.Name = "OrderAddTrailerAddButton";
             this.OrderAddTrailerAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddTrailerAddButton.TabIndex = 134;
@@ -4803,7 +4920,7 @@
             this.OrderAddCubeSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderAddCubeSelectComboBox.Location = new System.Drawing.Point(11, 27);
             this.OrderAddCubeSelectComboBox.Name = "OrderAddCubeSelectComboBox";
-            this.OrderAddCubeSelectComboBox.Size = new System.Drawing.Size(243, 29);
+            this.OrderAddCubeSelectComboBox.Size = new System.Drawing.Size(240, 29);
             this.OrderAddCubeSelectComboBox.Sorted = true;
             this.OrderAddCubeSelectComboBox.TabIndex = 20;
             this.OrderAddCubeSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddCubeSelectComboBox_SelectedIndexChanged);
@@ -4814,7 +4931,7 @@
             // 
             this.OrderAddCubeAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddCubeAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddCubeAddButton.Image")));
-            this.OrderAddCubeAddButton.Location = new System.Drawing.Point(260, 27);
+            this.OrderAddCubeAddButton.Location = new System.Drawing.Point(258, 27);
             this.OrderAddCubeAddButton.Name = "OrderAddCubeAddButton";
             this.OrderAddCubeAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddCubeAddButton.TabIndex = 131;
@@ -4970,7 +5087,7 @@
             this.OrderAddUploadDateToTimePicker.Location = new System.Drawing.Point(6, 118);
             this.OrderAddUploadDateToTimePicker.Name = "OrderAddUploadDateToTimePicker";
             this.OrderAddUploadDateToTimePicker.ShowCheckBox = true;
-            this.OrderAddUploadDateToTimePicker.Size = new System.Drawing.Size(268, 29);
+            this.OrderAddUploadDateToTimePicker.Size = new System.Drawing.Size(280, 29);
             this.OrderAddUploadDateToTimePicker.TabIndex = 128;
             this.OrderAddUploadDateToTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
             // 
@@ -4982,7 +5099,7 @@
             this.OrderAddUploadAddressAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderAddUploadAddressAddButton.Location = new System.Drawing.Point(6, 5);
             this.OrderAddUploadAddressAddButton.Name = "OrderAddUploadAddressAddButton";
-            this.OrderAddUploadAddressAddButton.Size = new System.Drawing.Size(268, 30);
+            this.OrderAddUploadAddressAddButton.Size = new System.Drawing.Size(280, 30);
             this.OrderAddUploadAddressAddButton.TabIndex = 10;
             this.OrderAddUploadAddressAddButton.Text = "Розвантаження";
             this.OrderAddUploadAddressAddButton.UseVisualStyleBackColor = true;
@@ -5000,7 +5117,7 @@
             this.OrderAddUploadDateFromTimePicker.Location = new System.Drawing.Point(6, 62);
             this.OrderAddUploadDateFromTimePicker.Name = "OrderAddUploadDateFromTimePicker";
             this.OrderAddUploadDateFromTimePicker.ShowCheckBox = true;
-            this.OrderAddUploadDateFromTimePicker.Size = new System.Drawing.Size(268, 29);
+            this.OrderAddUploadDateFromTimePicker.Size = new System.Drawing.Size(280, 29);
             this.OrderAddUploadDateFromTimePicker.TabIndex = 13;
             this.OrderAddUploadDateFromTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
             this.OrderAddUploadDateFromTimePicker.ValueChanged += new System.EventHandler(this.OrderAddUploadDateFromTimePicker_ValueChanged);
@@ -5100,7 +5217,7 @@
             // 
             this.OrderAddPersonalButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderAddPersonalButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderAddPersonalButton.Image")));
-            this.OrderAddPersonalButton.Location = new System.Drawing.Point(248, 117);
+            this.OrderAddPersonalButton.Location = new System.Drawing.Point(314, 117);
             this.OrderAddPersonalButton.Name = "OrderAddPersonalButton";
             this.OrderAddPersonalButton.Size = new System.Drawing.Size(30, 30);
             this.OrderAddPersonalButton.TabIndex = 135;
@@ -5132,7 +5249,7 @@
             "І"});
             this.OrderAddStaffComboBox.Location = new System.Drawing.Point(6, 118);
             this.OrderAddStaffComboBox.Name = "OrderAddStaffComboBox";
-            this.OrderAddStaffComboBox.Size = new System.Drawing.Size(208, 29);
+            this.OrderAddStaffComboBox.Size = new System.Drawing.Size(282, 29);
             this.OrderAddStaffComboBox.TabIndex = 16;
             this.OrderAddStaffComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddStaffSelectComboBox_SelectedIndexChanged);
             this.OrderAddStaffComboBox.TextUpdate += new System.EventHandler(this.OrderAddStaffSelectComboBox_TextUpdate);
@@ -5170,7 +5287,7 @@
             "9"});
             this.OrderAddADRSelectComboBox.Location = new System.Drawing.Point(6, 62);
             this.OrderAddADRSelectComboBox.Name = "OrderAddADRSelectComboBox";
-            this.OrderAddADRSelectComboBox.Size = new System.Drawing.Size(270, 29);
+            this.OrderAddADRSelectComboBox.Size = new System.Drawing.Size(282, 29);
             this.OrderAddADRSelectComboBox.Sorted = true;
             this.OrderAddADRSelectComboBox.TabIndex = 15;
             this.OrderAddADRSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddADRSelectComboBox_MouseClick);
@@ -5380,7 +5497,7 @@
             this.OrderAddForwarder3SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.OrderAddForwarder3SelectComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.OrderAddForwarder3SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.OrderAddForwarder3SelectComboBox.Location = new System.Drawing.Point(6, 149);
+            this.OrderAddForwarder3SelectComboBox.Location = new System.Drawing.Point(6, 146);
             this.OrderAddForwarder3SelectComboBox.Name = "OrderAddForwarder3SelectComboBox";
             this.OrderAddForwarder3SelectComboBox.Size = new System.Drawing.Size(509, 29);
             this.OrderAddForwarder3SelectComboBox.Sorted = true;
@@ -5438,7 +5555,7 @@
             this.OrderAddForwarder1SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.OrderAddForwarder1SelectComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.OrderAddForwarder1SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.OrderAddForwarder1SelectComboBox.Location = new System.Drawing.Point(6, 36);
+            this.OrderAddForwarder1SelectComboBox.Location = new System.Drawing.Point(6, 37);
             this.OrderAddForwarder1SelectComboBox.Name = "OrderAddForwarder1SelectComboBox";
             this.OrderAddForwarder1SelectComboBox.Size = new System.Drawing.Size(509, 29);
             this.OrderAddForwarder1SelectComboBox.Sorted = true;
@@ -5750,14 +5867,14 @@
             this.trackingShowDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.trackingShowDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.trackingShowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.trackingShowDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.trackingShowDataGridView.DefaultCellStyle = dataGridViewCellStyle12;
             this.trackingShowDataGridView.Location = new System.Drawing.Point(0, 62);
             this.trackingShowDataGridView.MultiSelect = false;
             this.trackingShowDataGridView.Name = "trackingShowDataGridView";
@@ -5992,7 +6109,7 @@
             this.OrderUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderUpdateButton.Location = new System.Drawing.Point(6, 59);
             this.OrderUpdateButton.Name = "OrderUpdateButton";
-            this.OrderUpdateButton.Size = new System.Drawing.Size(509, 45);
+            this.OrderUpdateButton.Size = new System.Drawing.Size(553, 45);
             this.OrderUpdateButton.TabIndex = 28;
             this.OrderUpdateButton.Text = "Змінити";
             this.OrderUpdateButton.UseVisualStyleBackColor = true;
@@ -6002,7 +6119,7 @@
             // 
             this.OrderUpdateOrderDenyAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateOrderDenyAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderUpdateOrderDenyAddButton.Image")));
-            this.OrderUpdateOrderDenyAddButton.Location = new System.Drawing.Point(485, 24);
+            this.OrderUpdateOrderDenyAddButton.Location = new System.Drawing.Point(529, 24);
             this.OrderUpdateOrderDenyAddButton.Name = "OrderUpdateOrderDenyAddButton";
             this.OrderUpdateOrderDenyAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateOrderDenyAddButton.TabIndex = 137;
@@ -6030,7 +6147,7 @@
             this.OrderUpdateDenyFineSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateDenyFineSelectComboBox.Location = new System.Drawing.Point(6, 24);
             this.OrderUpdateDenyFineSelectComboBox.Name = "OrderUpdateDenyFineSelectComboBox";
-            this.OrderUpdateDenyFineSelectComboBox.Size = new System.Drawing.Size(473, 29);
+            this.OrderUpdateDenyFineSelectComboBox.Size = new System.Drawing.Size(517, 29);
             this.OrderUpdateDenyFineSelectComboBox.Sorted = true;
             this.OrderUpdateDenyFineSelectComboBox.TabIndex = 27;
             this.OrderUpdateDenyFineSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateDenyFineSelectComboBox_SelectedIndexChanged);
@@ -6154,7 +6271,7 @@
             // 
             this.OrderUpdateLoadingForm2AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateLoadingForm2AddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderUpdateLoadingForm2AddButton.Image")));
-            this.OrderUpdateLoadingForm2AddButton.Location = new System.Drawing.Point(253, 79);
+            this.OrderUpdateLoadingForm2AddButton.Location = new System.Drawing.Point(319, 79);
             this.OrderUpdateLoadingForm2AddButton.Name = "OrderUpdateLoadingForm2AddButton";
             this.OrderUpdateLoadingForm2AddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateLoadingForm2AddButton.TabIndex = 141;
@@ -6166,7 +6283,7 @@
             // 
             this.OrderUpdateLoadingForm1AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateLoadingForm1AddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderUpdateLoadingForm1AddButton.Image")));
-            this.OrderUpdateLoadingForm1AddButton.Location = new System.Drawing.Point(253, 27);
+            this.OrderUpdateLoadingForm1AddButton.Location = new System.Drawing.Point(319, 27);
             this.OrderUpdateLoadingForm1AddButton.Name = "OrderUpdateLoadingForm1AddButton";
             this.OrderUpdateLoadingForm1AddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateLoadingForm1AddButton.TabIndex = 140;
@@ -6184,7 +6301,7 @@
             this.OrderUpdateLoadingForm2SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateLoadingForm2SelectComboBox.Location = new System.Drawing.Point(3, 80);
             this.OrderUpdateLoadingForm2SelectComboBox.Name = "OrderUpdateLoadingForm2SelectComboBox";
-            this.OrderUpdateLoadingForm2SelectComboBox.Size = new System.Drawing.Size(244, 29);
+            this.OrderUpdateLoadingForm2SelectComboBox.Size = new System.Drawing.Size(310, 29);
             this.OrderUpdateLoadingForm2SelectComboBox.Sorted = true;
             this.OrderUpdateLoadingForm2SelectComboBox.TabIndex = 22;
             this.OrderUpdateLoadingForm2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateLoadingForm2SelectComboBox_SelectedIndexChanged);
@@ -6211,7 +6328,7 @@
             this.OrderUpdateLoadingForm1SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateLoadingForm1SelectComboBox.Location = new System.Drawing.Point(6, 28);
             this.OrderUpdateLoadingForm1SelectComboBox.Name = "OrderUpdateLoadingForm1SelectComboBox";
-            this.OrderUpdateLoadingForm1SelectComboBox.Size = new System.Drawing.Size(241, 29);
+            this.OrderUpdateLoadingForm1SelectComboBox.Size = new System.Drawing.Size(307, 29);
             this.OrderUpdateLoadingForm1SelectComboBox.Sorted = true;
             this.OrderUpdateLoadingForm1SelectComboBox.TabIndex = 18;
             this.OrderUpdateLoadingForm1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateLoadingForm1SelectComboBox_SelectedIndexChanged);
@@ -6346,7 +6463,7 @@
             this.OrderUpdateTrailerSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateTrailerSelectComboBox.Location = new System.Drawing.Point(6, 80);
             this.OrderUpdateTrailerSelectComboBox.Name = "OrderUpdateTrailerSelectComboBox";
-            this.OrderUpdateTrailerSelectComboBox.Size = new System.Drawing.Size(246, 29);
+            this.OrderUpdateTrailerSelectComboBox.Size = new System.Drawing.Size(312, 29);
             this.OrderUpdateTrailerSelectComboBox.Sorted = true;
             this.OrderUpdateTrailerSelectComboBox.TabIndex = 24;
             this.OrderUpdateTrailerSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateTrailerSelectComboBox_SelectedIndexChanged);
@@ -6369,7 +6486,7 @@
             // 
             this.OrderUpdateTrailerAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateTrailerAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderUpdateTrailerAddButton.Image")));
-            this.OrderUpdateTrailerAddButton.Location = new System.Drawing.Point(258, 79);
+            this.OrderUpdateTrailerAddButton.Location = new System.Drawing.Point(324, 79);
             this.OrderUpdateTrailerAddButton.Name = "OrderUpdateTrailerAddButton";
             this.OrderUpdateTrailerAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateTrailerAddButton.TabIndex = 134;
@@ -6386,7 +6503,7 @@
             this.OrderUpdateCubeSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateCubeSelectComboBox.Location = new System.Drawing.Point(6, 28);
             this.OrderUpdateCubeSelectComboBox.Name = "OrderUpdateCubeSelectComboBox";
-            this.OrderUpdateCubeSelectComboBox.Size = new System.Drawing.Size(246, 29);
+            this.OrderUpdateCubeSelectComboBox.Size = new System.Drawing.Size(312, 29);
             this.OrderUpdateCubeSelectComboBox.Sorted = true;
             this.OrderUpdateCubeSelectComboBox.TabIndex = 20;
             this.OrderUpdateCubeSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateCubeSelectComboBox_SelectedIndexChanged);
@@ -6409,7 +6526,7 @@
             // 
             this.OrderUpdateCubeAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateCubeAddButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderUpdateCubeAddButton.Image")));
-            this.OrderUpdateCubeAddButton.Location = new System.Drawing.Point(258, 28);
+            this.OrderUpdateCubeAddButton.Location = new System.Drawing.Point(324, 28);
             this.OrderUpdateCubeAddButton.Name = "OrderUpdateCubeAddButton";
             this.OrderUpdateCubeAddButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateCubeAddButton.TabIndex = 131;
@@ -6539,7 +6656,7 @@
             this.OrderUpdateUploadDateToTimePicker.Location = new System.Drawing.Point(6, 106);
             this.OrderUpdateUploadDateToTimePicker.Name = "OrderUpdateUploadDateToTimePicker";
             this.OrderUpdateUploadDateToTimePicker.ShowCheckBox = true;
-            this.OrderUpdateUploadDateToTimePicker.Size = new System.Drawing.Size(265, 29);
+            this.OrderUpdateUploadDateToTimePicker.Size = new System.Drawing.Size(331, 29);
             this.OrderUpdateUploadDateToTimePicker.TabIndex = 128;
             this.OrderUpdateUploadDateToTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
             // 
@@ -6560,7 +6677,7 @@
             this.OrderUpdateUploadAddressesButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderUpdateUploadAddressesButton.Location = new System.Drawing.Point(6, 3);
             this.OrderUpdateUploadAddressesButton.Name = "OrderUpdateUploadAddressesButton";
-            this.OrderUpdateUploadAddressesButton.Size = new System.Drawing.Size(277, 30);
+            this.OrderUpdateUploadAddressesButton.Size = new System.Drawing.Size(343, 30);
             this.OrderUpdateUploadAddressesButton.TabIndex = 10;
             this.OrderUpdateUploadAddressesButton.Text = "Розвантаження";
             this.OrderUpdateUploadAddressesButton.UseVisualStyleBackColor = true;
@@ -6578,7 +6695,7 @@
             this.OrderUpdateUploadDateFromTimePicker.Location = new System.Drawing.Point(3, 59);
             this.OrderUpdateUploadDateFromTimePicker.Name = "OrderUpdateUploadDateFromTimePicker";
             this.OrderUpdateUploadDateFromTimePicker.ShowCheckBox = true;
-            this.OrderUpdateUploadDateFromTimePicker.Size = new System.Drawing.Size(268, 29);
+            this.OrderUpdateUploadDateFromTimePicker.Size = new System.Drawing.Size(334, 29);
             this.OrderUpdateUploadDateFromTimePicker.TabIndex = 13;
             this.OrderUpdateUploadDateFromTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
             // 
@@ -6676,7 +6793,7 @@
             // 
             this.OrderUpdateStaffButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderUpdateStaffButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderUpdateStaffButton.Image")));
-            this.OrderUpdateStaffButton.Location = new System.Drawing.Point(213, 106);
+            this.OrderUpdateStaffButton.Location = new System.Drawing.Point(279, 106);
             this.OrderUpdateStaffButton.Name = "OrderUpdateStaffButton";
             this.OrderUpdateStaffButton.Size = new System.Drawing.Size(30, 30);
             this.OrderUpdateStaffButton.TabIndex = 135;
@@ -6696,7 +6813,7 @@
             "І"});
             this.OrderUpdateStaffSelectComboBox.Location = new System.Drawing.Point(6, 106);
             this.OrderUpdateStaffSelectComboBox.Name = "OrderUpdateStaffSelectComboBox";
-            this.OrderUpdateStaffSelectComboBox.Size = new System.Drawing.Size(201, 29);
+            this.OrderUpdateStaffSelectComboBox.Size = new System.Drawing.Size(267, 29);
             this.OrderUpdateStaffSelectComboBox.TabIndex = 16;
             this.OrderUpdateStaffSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateStaffSelectComboBox_SelectedIndexChanged);
             this.OrderUpdateStaffSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateStaffSelectComboBox_TextUpdate);
@@ -6709,7 +6826,7 @@
             this.OrderUpdateUncustumsAddressesButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.OrderUpdateUncustumsAddressesButton.Location = new System.Drawing.Point(6, 3);
             this.OrderUpdateUncustumsAddressesButton.Name = "OrderUpdateUncustumsAddressesButton";
-            this.OrderUpdateUncustumsAddressesButton.Size = new System.Drawing.Size(282, 30);
+            this.OrderUpdateUncustumsAddressesButton.Size = new System.Drawing.Size(348, 30);
             this.OrderUpdateUncustumsAddressesButton.TabIndex = 11;
             this.OrderUpdateUncustumsAddressesButton.Text = "Розмитнення";
             this.OrderUpdateUncustumsAddressesButton.UseVisualStyleBackColor = true;
@@ -6735,7 +6852,7 @@
             "9"});
             this.OrderUpdateADRSelectComboBox.Location = new System.Drawing.Point(6, 59);
             this.OrderUpdateADRSelectComboBox.Name = "OrderUpdateADRSelectComboBox";
-            this.OrderUpdateADRSelectComboBox.Size = new System.Drawing.Size(282, 29);
+            this.OrderUpdateADRSelectComboBox.Size = new System.Drawing.Size(348, 29);
             this.OrderUpdateADRSelectComboBox.Sorted = true;
             this.OrderUpdateADRSelectComboBox.TabIndex = 15;
             this.OrderUpdateADRSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateADRSelectComboBox_MouseClick);
@@ -6958,7 +7075,7 @@
             this.OrderUpdateForwarder3SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateForwarder3SelectComboBox.Location = new System.Drawing.Point(6, 131);
             this.OrderUpdateForwarder3SelectComboBox.Name = "OrderUpdateForwarder3SelectComboBox";
-            this.OrderUpdateForwarder3SelectComboBox.Size = new System.Drawing.Size(509, 29);
+            this.OrderUpdateForwarder3SelectComboBox.Size = new System.Drawing.Size(553, 29);
             this.OrderUpdateForwarder3SelectComboBox.Sorted = true;
             this.OrderUpdateForwarder3SelectComboBox.TabIndex = 87;
             this.OrderUpdateForwarder3SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateForwarder3SelectComboBox_SelectedIndexChanged);
@@ -6999,7 +7116,7 @@
             this.OrderUpdateForwarder2SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateForwarder2SelectComboBox.Location = new System.Drawing.Point(6, 77);
             this.OrderUpdateForwarder2SelectComboBox.Name = "OrderUpdateForwarder2SelectComboBox";
-            this.OrderUpdateForwarder2SelectComboBox.Size = new System.Drawing.Size(509, 29);
+            this.OrderUpdateForwarder2SelectComboBox.Size = new System.Drawing.Size(553, 29);
             this.OrderUpdateForwarder2SelectComboBox.Sorted = true;
             this.OrderUpdateForwarder2SelectComboBox.TabIndex = 6;
             this.OrderUpdateForwarder2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateForwarder2SelectComboBox_SelectedIndexChanged);
@@ -7016,7 +7133,7 @@
             this.OrderUpdateForwarder1SelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.OrderUpdateForwarder1SelectComboBox.Location = new System.Drawing.Point(6, 23);
             this.OrderUpdateForwarder1SelectComboBox.Name = "OrderUpdateForwarder1SelectComboBox";
-            this.OrderUpdateForwarder1SelectComboBox.Size = new System.Drawing.Size(509, 29);
+            this.OrderUpdateForwarder1SelectComboBox.Size = new System.Drawing.Size(553, 29);
             this.OrderUpdateForwarder1SelectComboBox.Sorted = true;
             this.OrderUpdateForwarder1SelectComboBox.TabIndex = 5;
             this.OrderUpdateForwarder1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateForwarder1SelectComboBox_SelectedIndexChanged);
@@ -7210,6 +7327,887 @@
             this.contractShowDataGridView.TabStop = false;
             this.contractShowDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.contractShowDataGridView_CellMouseClick);
             this.contractShowDataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.contractShowDataGridView_KeyDown);
+            // 
+            // showArbeitenPage
+            // 
+            this.showArbeitenPage.Controls.Add(this.splitContainer1);
+            this.showArbeitenPage.Controls.Add(this.arbeitenShowForwardersDataGridView);
+            this.showArbeitenPage.Controls.Add(this.arbeitenShowNoteTextBox);
+            this.showArbeitenPage.Controls.Add(this.arbeitenShowNoteLabel);
+            this.showArbeitenPage.Controls.Add(this.arbeitenDeleteButton);
+            this.showArbeitenPage.Controls.Add(this.arbeitenShowOnlyActive);
+            this.showArbeitenPage.Controls.Add(this.arbeitenShowSearchDatePicker);
+            this.showArbeitenPage.Controls.Add(this.arbeitenShowMainLabel);
+            this.showArbeitenPage.Controls.Add(this.arbeitenShowSearchButton);
+            this.showArbeitenPage.Controls.Add(this.arbeitenShowSearchTextBox);
+            this.showArbeitenPage.Controls.Add(this.arbeitenShowMainDataGridView);
+            this.showArbeitenPage.Location = new System.Drawing.Point(4, 5);
+            this.showArbeitenPage.Name = "showArbeitenPage";
+            this.showArbeitenPage.Size = new System.Drawing.Size(976, 676);
+            this.showArbeitenPage.TabIndex = 19;
+            this.showArbeitenPage.Text = "showArbeitenPage";
+            this.showArbeitenPage.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.Location = new System.Drawing.Point(1, 378);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.arbeitenShowDownloadAddressDataGridView);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.arbeitenShowUploadAddressDataGridView);
+            this.splitContainer1.Size = new System.Drawing.Size(967, 121);
+            this.splitContainer1.SplitterDistance = 477;
+            this.splitContainer1.SplitterWidth = 6;
+            this.splitContainer1.TabIndex = 83;
+            // 
+            // arbeitenShowDownloadAddressDataGridView
+            // 
+            this.arbeitenShowDownloadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.arbeitenShowDownloadAddressDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.arbeitenShowDownloadAddressDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.arbeitenShowDownloadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.arbeitenShowDownloadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.arbeitenShowDownloadAddressDataGridView.DefaultCellStyle = dataGridViewCellStyle7;
+            this.arbeitenShowDownloadAddressDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.arbeitenShowDownloadAddressDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.arbeitenShowDownloadAddressDataGridView.MultiSelect = false;
+            this.arbeitenShowDownloadAddressDataGridView.Name = "arbeitenShowDownloadAddressDataGridView";
+            this.arbeitenShowDownloadAddressDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.arbeitenShowDownloadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.arbeitenShowDownloadAddressDataGridView.Size = new System.Drawing.Size(477, 121);
+            this.arbeitenShowDownloadAddressDataGridView.TabIndex = 80;
+            this.arbeitenShowDownloadAddressDataGridView.TabStop = false;
+            // 
+            // arbeitenShowUploadAddressDataGridView
+            // 
+            this.arbeitenShowUploadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.arbeitenShowUploadAddressDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.arbeitenShowUploadAddressDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.arbeitenShowUploadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.arbeitenShowUploadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.arbeitenShowUploadAddressDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
+            this.arbeitenShowUploadAddressDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.arbeitenShowUploadAddressDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.arbeitenShowUploadAddressDataGridView.MultiSelect = false;
+            this.arbeitenShowUploadAddressDataGridView.Name = "arbeitenShowUploadAddressDataGridView";
+            this.arbeitenShowUploadAddressDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.arbeitenShowUploadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.arbeitenShowUploadAddressDataGridView.Size = new System.Drawing.Size(484, 121);
+            this.arbeitenShowUploadAddressDataGridView.TabIndex = 82;
+            this.arbeitenShowUploadAddressDataGridView.TabStop = false;
+            // 
+            // arbeitenShowForwardersDataGridView
+            // 
+            this.arbeitenShowForwardersDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenShowForwardersDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.arbeitenShowForwardersDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.arbeitenShowForwardersDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.arbeitenShowForwardersDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.arbeitenShowForwardersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.arbeitenShowForwardersDataGridView.DefaultCellStyle = dataGridViewCellStyle9;
+            this.arbeitenShowForwardersDataGridView.Location = new System.Drawing.Point(779, 62);
+            this.arbeitenShowForwardersDataGridView.MultiSelect = false;
+            this.arbeitenShowForwardersDataGridView.Name = "arbeitenShowForwardersDataGridView";
+            this.arbeitenShowForwardersDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.arbeitenShowForwardersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.arbeitenShowForwardersDataGridView.Size = new System.Drawing.Size(189, 310);
+            this.arbeitenShowForwardersDataGridView.TabIndex = 81;
+            this.arbeitenShowForwardersDataGridView.TabStop = false;
+            // 
+            // arbeitenShowNoteTextBox
+            // 
+            this.arbeitenShowNoteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenShowNoteTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenShowNoteTextBox.Location = new System.Drawing.Point(1, 532);
+            this.arbeitenShowNoteTextBox.Name = "arbeitenShowNoteTextBox";
+            this.arbeitenShowNoteTextBox.ReadOnly = true;
+            this.arbeitenShowNoteTextBox.Size = new System.Drawing.Size(967, 77);
+            this.arbeitenShowNoteTextBox.TabIndex = 79;
+            this.arbeitenShowNoteTextBox.TabStop = false;
+            this.arbeitenShowNoteTextBox.Text = "";
+            // 
+            // arbeitenShowNoteLabel
+            // 
+            this.arbeitenShowNoteLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.arbeitenShowNoteLabel.AutoSize = true;
+            this.arbeitenShowNoteLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.arbeitenShowNoteLabel.Location = new System.Drawing.Point(3, 502);
+            this.arbeitenShowNoteLabel.Name = "arbeitenShowNoteLabel";
+            this.arbeitenShowNoteLabel.Size = new System.Drawing.Size(77, 21);
+            this.arbeitenShowNoteLabel.TabIndex = 78;
+            this.arbeitenShowNoteLabel.Text = "Примітка";
+            // 
+            // arbeitenDeleteButton
+            // 
+            this.arbeitenDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenDeleteButton.Enabled = false;
+            this.arbeitenDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenDeleteButton.Location = new System.Drawing.Point(695, 614);
+            this.arbeitenDeleteButton.Name = "arbeitenDeleteButton";
+            this.arbeitenDeleteButton.Size = new System.Drawing.Size(278, 54);
+            this.arbeitenDeleteButton.TabIndex = 69;
+            this.arbeitenDeleteButton.Text = "Закрити заявку";
+            this.arbeitenDeleteButton.UseVisualStyleBackColor = true;
+            this.arbeitenDeleteButton.Click += new System.EventHandler(this.arbeitenDeleteButton_Click);
+            // 
+            // arbeitenShowOnlyActive
+            // 
+            this.arbeitenShowOnlyActive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenShowOnlyActive.AutoSize = true;
+            this.arbeitenShowOnlyActive.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.arbeitenShowOnlyActive.Location = new System.Drawing.Point(839, 29);
+            this.arbeitenShowOnlyActive.Name = "arbeitenShowOnlyActive";
+            this.arbeitenShowOnlyActive.Size = new System.Drawing.Size(134, 25);
+            this.arbeitenShowOnlyActive.TabIndex = 71;
+            this.arbeitenShowOnlyActive.Text = "Тільки активні:";
+            this.arbeitenShowOnlyActive.UseVisualStyleBackColor = true;
+            this.arbeitenShowOnlyActive.CheckedChanged += new System.EventHandler(this.arbeitenShowOnlyActive_CheckedChanged);
+            // 
+            // arbeitenShowSearchDatePicker
+            // 
+            this.arbeitenShowSearchDatePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenShowSearchDatePicker.Checked = false;
+            this.arbeitenShowSearchDatePicker.CustomFormat = "MMMM yyyy";
+            this.arbeitenShowSearchDatePicker.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.arbeitenShowSearchDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.arbeitenShowSearchDatePicker.Location = new System.Drawing.Point(643, 27);
+            this.arbeitenShowSearchDatePicker.Name = "arbeitenShowSearchDatePicker";
+            this.arbeitenShowSearchDatePicker.ShowCheckBox = true;
+            this.arbeitenShowSearchDatePicker.Size = new System.Drawing.Size(185, 29);
+            this.arbeitenShowSearchDatePicker.TabIndex = 70;
+            this.arbeitenShowSearchDatePicker.ValueChanged += new System.EventHandler(this.arbeitenShowSearchDatePicker_ValueChanged);
+            // 
+            // arbeitenShowMainLabel
+            // 
+            this.arbeitenShowMainLabel.AutoSize = true;
+            this.arbeitenShowMainLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.arbeitenShowMainLabel.Location = new System.Drawing.Point(4, 3);
+            this.arbeitenShowMainLabel.Name = "arbeitenShowMainLabel";
+            this.arbeitenShowMainLabel.Size = new System.Drawing.Size(79, 21);
+            this.arbeitenShowMainLabel.TabIndex = 73;
+            this.arbeitenShowMainLabel.Text = "Арбайтен";
+            // 
+            // arbeitenShowSearchButton
+            // 
+            this.arbeitenShowSearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenShowSearchButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenShowSearchButton.Location = new System.Drawing.Point(499, 26);
+            this.arbeitenShowSearchButton.Name = "arbeitenShowSearchButton";
+            this.arbeitenShowSearchButton.Size = new System.Drawing.Size(138, 30);
+            this.arbeitenShowSearchButton.TabIndex = 68;
+            this.arbeitenShowSearchButton.Text = "Знайти";
+            this.arbeitenShowSearchButton.UseVisualStyleBackColor = true;
+            this.arbeitenShowSearchButton.Click += new System.EventHandler(this.arbeitenShowSearchButton_Click);
+            // 
+            // arbeitenShowSearchTextBox
+            // 
+            this.arbeitenShowSearchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenShowSearchTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenShowSearchTextBox.Location = new System.Drawing.Point(4, 27);
+            this.arbeitenShowSearchTextBox.Name = "arbeitenShowSearchTextBox";
+            this.arbeitenShowSearchTextBox.Size = new System.Drawing.Size(489, 29);
+            this.arbeitenShowSearchTextBox.TabIndex = 67;
+            this.arbeitenShowSearchTextBox.TextChanged += new System.EventHandler(this.arbeitenShowSearchTextBox_TextChanged);
+            this.arbeitenShowSearchTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.arbeitenShowSearchTextBox_KeyPress);
+            // 
+            // arbeitenShowMainDataGridView
+            // 
+            this.arbeitenShowMainDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenShowMainDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.arbeitenShowMainDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.arbeitenShowMainDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.arbeitenShowMainDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.arbeitenShowMainDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.arbeitenShowMainDataGridView.DefaultCellStyle = dataGridViewCellStyle10;
+            this.arbeitenShowMainDataGridView.Location = new System.Drawing.Point(3, 62);
+            this.arbeitenShowMainDataGridView.MultiSelect = false;
+            this.arbeitenShowMainDataGridView.Name = "arbeitenShowMainDataGridView";
+            this.arbeitenShowMainDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.arbeitenShowMainDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.arbeitenShowMainDataGridView.Size = new System.Drawing.Size(770, 310);
+            this.arbeitenShowMainDataGridView.TabIndex = 72;
+            this.arbeitenShowMainDataGridView.TabStop = false;
+            this.arbeitenShowMainDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.arbeitenShowMainDataGridView_CellMouseClick);
+            // 
+            // addArbeitenPage
+            // 
+            this.addArbeitenPage.Controls.Add(this.arbeitenAddButton);
+            this.addArbeitenPage.Controls.Add(this.arbeitenAddSplitContainer);
+            this.addArbeitenPage.Controls.Add(this.arbeitenAddOrderFilterCheckBox);
+            this.addArbeitenPage.Controls.Add(this.arbeitenAddOrderFilterDateTimePicker);
+            this.addArbeitenPage.Controls.Add(this.arbeitenAddOrderSelectComboBox);
+            this.addArbeitenPage.Controls.Add(this.arbeitenAddOrderSelectLabel);
+            this.addArbeitenPage.Controls.Add(this.arbeitenAddOrderFilterLabel);
+            this.addArbeitenPage.Controls.Add(this.arbeitenAddNoteTextBox);
+            this.addArbeitenPage.Controls.Add(this.arbeitenAddNoteLabel);
+            this.addArbeitenPage.Location = new System.Drawing.Point(4, 5);
+            this.addArbeitenPage.Name = "addArbeitenPage";
+            this.addArbeitenPage.Size = new System.Drawing.Size(976, 676);
+            this.addArbeitenPage.TabIndex = 20;
+            this.addArbeitenPage.Text = "addArbeitenPage";
+            this.addArbeitenPage.UseVisualStyleBackColor = true;
+            // 
+            // arbeitenAddButton
+            // 
+            this.arbeitenAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenAddButton.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.arbeitenAddButton.Location = new System.Drawing.Point(733, 610);
+            this.arbeitenAddButton.Name = "arbeitenAddButton";
+            this.arbeitenAddButton.Size = new System.Drawing.Size(235, 58);
+            this.arbeitenAddButton.TabIndex = 167;
+            this.arbeitenAddButton.Text = "Додати арбайтен";
+            this.arbeitenAddButton.UseVisualStyleBackColor = true;
+            this.arbeitenAddButton.Click += new System.EventHandler(this.arbeitenAddButton_Click);
+            // 
+            // arbeitenAddSplitContainer
+            // 
+            this.arbeitenAddSplitContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenAddSplitContainer.IsSplitterFixed = true;
+            this.arbeitenAddSplitContainer.Location = new System.Drawing.Point(5, 63);
+            this.arbeitenAddSplitContainer.Name = "arbeitenAddSplitContainer";
+            // 
+            // arbeitenAddSplitContainer.Panel1
+            // 
+            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientPaymentDateLabel);
+            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientPaymentTextBox);
+            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientPaymentLabel);
+            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientTextBox);
+            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddAccountNumberLabelTextBox);
+            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientLabel);
+            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddAccountNumberLabel);
+            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientPaymentDateTimePicker);
+            // 
+            // arbeitenAddSplitContainer.Panel2
+            // 
+            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddDownloadDateLabel);
+            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddDownloadDateTimePicker);
+            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterPaymentTextBox);
+            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterPaymentLabel);
+            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterVehicleTextBox);
+            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterVehicleLabel);
+            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterTextBox);
+            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterLabel);
+            this.arbeitenAddSplitContainer.Size = new System.Drawing.Size(971, 225);
+            this.arbeitenAddSplitContainer.SplitterDistance = 482;
+            this.arbeitenAddSplitContainer.SplitterWidth = 2;
+            this.arbeitenAddSplitContainer.TabIndex = 166;
+            // 
+            // arbeitenAddClientPaymentDateLabel
+            // 
+            this.arbeitenAddClientPaymentDateLabel.AutoSize = true;
+            this.arbeitenAddClientPaymentDateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddClientPaymentDateLabel.Location = new System.Drawing.Point(4, 166);
+            this.arbeitenAddClientPaymentDateLabel.Name = "arbeitenAddClientPaymentDateLabel";
+            this.arbeitenAddClientPaymentDateLabel.Size = new System.Drawing.Size(98, 21);
+            this.arbeitenAddClientPaymentDateLabel.TabIndex = 173;
+            this.arbeitenAddClientPaymentDateLabel.Text = "Дата оплати";
+            // 
+            // arbeitenAddClientPaymentTextBox
+            // 
+            this.arbeitenAddClientPaymentTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenAddClientPaymentTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddClientPaymentTextBox.Location = new System.Drawing.Point(5, 136);
+            this.arbeitenAddClientPaymentTextBox.Name = "arbeitenAddClientPaymentTextBox";
+            this.arbeitenAddClientPaymentTextBox.Size = new System.Drawing.Size(468, 29);
+            this.arbeitenAddClientPaymentTextBox.TabIndex = 171;
+            // 
+            // arbeitenAddClientPaymentLabel
+            // 
+            this.arbeitenAddClientPaymentLabel.AutoSize = true;
+            this.arbeitenAddClientPaymentLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddClientPaymentLabel.Location = new System.Drawing.Point(4, 112);
+            this.arbeitenAddClientPaymentLabel.Name = "arbeitenAddClientPaymentLabel";
+            this.arbeitenAddClientPaymentLabel.Size = new System.Drawing.Size(127, 21);
+            this.arbeitenAddClientPaymentLabel.TabIndex = 172;
+            this.arbeitenAddClientPaymentLabel.Text = "Сума від клієнта";
+            // 
+            // arbeitenAddClientTextBox
+            // 
+            this.arbeitenAddClientTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenAddClientTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddClientTextBox.Location = new System.Drawing.Point(4, 24);
+            this.arbeitenAddClientTextBox.Name = "arbeitenAddClientTextBox";
+            this.arbeitenAddClientTextBox.ReadOnly = true;
+            this.arbeitenAddClientTextBox.Size = new System.Drawing.Size(468, 29);
+            this.arbeitenAddClientTextBox.TabIndex = 170;
+            // 
+            // arbeitenAddAccountNumberLabelTextBox
+            // 
+            this.arbeitenAddAccountNumberLabelTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenAddAccountNumberLabelTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddAccountNumberLabelTextBox.Location = new System.Drawing.Point(4, 80);
+            this.arbeitenAddAccountNumberLabelTextBox.Name = "arbeitenAddAccountNumberLabelTextBox";
+            this.arbeitenAddAccountNumberLabelTextBox.Size = new System.Drawing.Size(468, 29);
+            this.arbeitenAddAccountNumberLabelTextBox.TabIndex = 168;
+            // 
+            // arbeitenAddClientLabel
+            // 
+            this.arbeitenAddClientLabel.AutoSize = true;
+            this.arbeitenAddClientLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddClientLabel.Location = new System.Drawing.Point(3, 0);
+            this.arbeitenAddClientLabel.Name = "arbeitenAddClientLabel";
+            this.arbeitenAddClientLabel.Size = new System.Drawing.Size(54, 21);
+            this.arbeitenAddClientLabel.TabIndex = 167;
+            this.arbeitenAddClientLabel.Text = "Клієнт";
+            // 
+            // arbeitenAddAccountNumberLabel
+            // 
+            this.arbeitenAddAccountNumberLabel.AutoSize = true;
+            this.arbeitenAddAccountNumberLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddAccountNumberLabel.Location = new System.Drawing.Point(4, 56);
+            this.arbeitenAddAccountNumberLabel.Name = "arbeitenAddAccountNumberLabel";
+            this.arbeitenAddAccountNumberLabel.Size = new System.Drawing.Size(174, 21);
+            this.arbeitenAddAccountNumberLabel.TabIndex = 169;
+            this.arbeitenAddAccountNumberLabel.Text = "Номер рахунку клієнта";
+            // 
+            // arbeitenAddClientPaymentDateTimePicker
+            // 
+            this.arbeitenAddClientPaymentDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenAddClientPaymentDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.arbeitenAddClientPaymentDateTimePicker.Checked = false;
+            this.arbeitenAddClientPaymentDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.arbeitenAddClientPaymentDateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.arbeitenAddClientPaymentDateTimePicker.Location = new System.Drawing.Point(4, 190);
+            this.arbeitenAddClientPaymentDateTimePicker.Name = "arbeitenAddClientPaymentDateTimePicker";
+            this.arbeitenAddClientPaymentDateTimePicker.ShowCheckBox = true;
+            this.arbeitenAddClientPaymentDateTimePicker.Size = new System.Drawing.Size(468, 29);
+            this.arbeitenAddClientPaymentDateTimePicker.TabIndex = 166;
+            // 
+            // arbeitenAddDownloadDateLabel
+            // 
+            this.arbeitenAddDownloadDateLabel.AutoSize = true;
+            this.arbeitenAddDownloadDateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddDownloadDateLabel.Location = new System.Drawing.Point(5, 166);
+            this.arbeitenAddDownloadDateLabel.Name = "arbeitenAddDownloadDateLabel";
+            this.arbeitenAddDownloadDateLabel.Size = new System.Drawing.Size(149, 21);
+            this.arbeitenAddDownloadDateLabel.TabIndex = 178;
+            this.arbeitenAddDownloadDateLabel.Text = "Дата завантаження";
+            // 
+            // arbeitenAddDownloadDateTimePicker
+            // 
+            this.arbeitenAddDownloadDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenAddDownloadDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.arbeitenAddDownloadDateTimePicker.Checked = false;
+            this.arbeitenAddDownloadDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.arbeitenAddDownloadDateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.arbeitenAddDownloadDateTimePicker.Location = new System.Drawing.Point(5, 190);
+            this.arbeitenAddDownloadDateTimePicker.Name = "arbeitenAddDownloadDateTimePicker";
+            this.arbeitenAddDownloadDateTimePicker.ShowCheckBox = true;
+            this.arbeitenAddDownloadDateTimePicker.Size = new System.Drawing.Size(496, 29);
+            this.arbeitenAddDownloadDateTimePicker.TabIndex = 177;
+            // 
+            // arbeitenAddTransporterPaymentTextBox
+            // 
+            this.arbeitenAddTransporterPaymentTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenAddTransporterPaymentTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddTransporterPaymentTextBox.Location = new System.Drawing.Point(5, 136);
+            this.arbeitenAddTransporterPaymentTextBox.Name = "arbeitenAddTransporterPaymentTextBox";
+            this.arbeitenAddTransporterPaymentTextBox.Size = new System.Drawing.Size(496, 29);
+            this.arbeitenAddTransporterPaymentTextBox.TabIndex = 175;
+            // 
+            // arbeitenAddTransporterPaymentLabel
+            // 
+            this.arbeitenAddTransporterPaymentLabel.AutoSize = true;
+            this.arbeitenAddTransporterPaymentLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddTransporterPaymentLabel.Location = new System.Drawing.Point(4, 112);
+            this.arbeitenAddTransporterPaymentLabel.Name = "arbeitenAddTransporterPaymentLabel";
+            this.arbeitenAddTransporterPaymentLabel.Size = new System.Drawing.Size(138, 21);
+            this.arbeitenAddTransporterPaymentLabel.TabIndex = 176;
+            this.arbeitenAddTransporterPaymentLabel.Text = "Сума перевізнику";
+            // 
+            // arbeitenAddTransporterVehicleTextBox
+            // 
+            this.arbeitenAddTransporterVehicleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenAddTransporterVehicleTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddTransporterVehicleTextBox.Location = new System.Drawing.Point(4, 80);
+            this.arbeitenAddTransporterVehicleTextBox.Name = "arbeitenAddTransporterVehicleTextBox";
+            this.arbeitenAddTransporterVehicleTextBox.Size = new System.Drawing.Size(496, 29);
+            this.arbeitenAddTransporterVehicleTextBox.TabIndex = 173;
+            // 
+            // arbeitenAddTransporterVehicleLabel
+            // 
+            this.arbeitenAddTransporterVehicleLabel.AutoSize = true;
+            this.arbeitenAddTransporterVehicleLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddTransporterVehicleLabel.Location = new System.Drawing.Point(4, 56);
+            this.arbeitenAddTransporterVehicleLabel.Name = "arbeitenAddTransporterVehicleLabel";
+            this.arbeitenAddTransporterVehicleLabel.Size = new System.Drawing.Size(96, 21);
+            this.arbeitenAddTransporterVehicleLabel.TabIndex = 174;
+            this.arbeitenAddTransporterVehicleLabel.Text = "Номер Авто";
+            // 
+            // arbeitenAddTransporterTextBox
+            // 
+            this.arbeitenAddTransporterTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenAddTransporterTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddTransporterTextBox.Location = new System.Drawing.Point(5, 24);
+            this.arbeitenAddTransporterTextBox.Name = "arbeitenAddTransporterTextBox";
+            this.arbeitenAddTransporterTextBox.ReadOnly = true;
+            this.arbeitenAddTransporterTextBox.Size = new System.Drawing.Size(496, 29);
+            this.arbeitenAddTransporterTextBox.TabIndex = 172;
+            // 
+            // arbeitenAddTransporterLabel
+            // 
+            this.arbeitenAddTransporterLabel.AutoSize = true;
+            this.arbeitenAddTransporterLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddTransporterLabel.Location = new System.Drawing.Point(4, 0);
+            this.arbeitenAddTransporterLabel.Name = "arbeitenAddTransporterLabel";
+            this.arbeitenAddTransporterLabel.Size = new System.Drawing.Size(91, 21);
+            this.arbeitenAddTransporterLabel.TabIndex = 171;
+            this.arbeitenAddTransporterLabel.Text = "Перевізник";
+            // 
+            // arbeitenAddOrderFilterCheckBox
+            // 
+            this.arbeitenAddOrderFilterCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenAddOrderFilterCheckBox.AutoSize = true;
+            this.arbeitenAddOrderFilterCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.arbeitenAddOrderFilterCheckBox.Location = new System.Drawing.Point(799, 30);
+            this.arbeitenAddOrderFilterCheckBox.Name = "arbeitenAddOrderFilterCheckBox";
+            this.arbeitenAddOrderFilterCheckBox.Size = new System.Drawing.Size(168, 25);
+            this.arbeitenAddOrderFilterCheckBox.TabIndex = 150;
+            this.arbeitenAddOrderFilterCheckBox.Text = "Показувати закриті";
+            this.arbeitenAddOrderFilterCheckBox.UseVisualStyleBackColor = true;
+            this.arbeitenAddOrderFilterCheckBox.CheckedChanged += new System.EventHandler(this.arbeitenAddOrderFilterCheckBox_CheckedChanged);
+            // 
+            // arbeitenAddOrderFilterDateTimePicker
+            // 
+            this.arbeitenAddOrderFilterDateTimePicker.CustomFormat = "MMMM yy";
+            this.arbeitenAddOrderFilterDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.arbeitenAddOrderFilterDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.arbeitenAddOrderFilterDateTimePicker.Location = new System.Drawing.Point(5, 28);
+            this.arbeitenAddOrderFilterDateTimePicker.Name = "arbeitenAddOrderFilterDateTimePicker";
+            this.arbeitenAddOrderFilterDateTimePicker.Size = new System.Drawing.Size(140, 29);
+            this.arbeitenAddOrderFilterDateTimePicker.TabIndex = 149;
+            this.arbeitenAddOrderFilterDateTimePicker.ValueChanged += new System.EventHandler(this.arbeitenAddOrderFilterDateTimePicker_ValueChanged);
+            // 
+            // arbeitenAddOrderSelectComboBox
+            // 
+            this.arbeitenAddOrderSelectComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenAddOrderSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.arbeitenAddOrderSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.arbeitenAddOrderSelectComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddOrderSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.arbeitenAddOrderSelectComboBox.Location = new System.Drawing.Point(155, 28);
+            this.arbeitenAddOrderSelectComboBox.Name = "arbeitenAddOrderSelectComboBox";
+            this.arbeitenAddOrderSelectComboBox.Size = new System.Drawing.Size(638, 29);
+            this.arbeitenAddOrderSelectComboBox.Sorted = true;
+            this.arbeitenAddOrderSelectComboBox.TabIndex = 147;
+            this.arbeitenAddOrderSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.arbeitenAddOrderSelectComboBox_SelectedIndexChanged);
+            this.arbeitenAddOrderSelectComboBox.TextUpdate += new System.EventHandler(this.arbeitenAddOrderSelectComboBox_TextUpdate);
+            this.arbeitenAddOrderSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.arbeitenAddOrderSelectComboBox_MouseClick);
+            // 
+            // arbeitenAddOrderSelectLabel
+            // 
+            this.arbeitenAddOrderSelectLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenAddOrderSelectLabel.AutoSize = true;
+            this.arbeitenAddOrderSelectLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddOrderSelectLabel.Location = new System.Drawing.Point(151, 4);
+            this.arbeitenAddOrderSelectLabel.Name = "arbeitenAddOrderSelectLabel";
+            this.arbeitenAddOrderSelectLabel.Size = new System.Drawing.Size(124, 21);
+            this.arbeitenAddOrderSelectLabel.TabIndex = 148;
+            this.arbeitenAddOrderSelectLabel.Text = "Виберіть заявку";
+            // 
+            // arbeitenAddOrderFilterLabel
+            // 
+            this.arbeitenAddOrderFilterLabel.AutoSize = true;
+            this.arbeitenAddOrderFilterLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddOrderFilterLabel.Location = new System.Drawing.Point(5, 6);
+            this.arbeitenAddOrderFilterLabel.Name = "arbeitenAddOrderFilterLabel";
+            this.arbeitenAddOrderFilterLabel.Size = new System.Drawing.Size(140, 21);
+            this.arbeitenAddOrderFilterLabel.TabIndex = 146;
+            this.arbeitenAddOrderFilterLabel.Text = "Виберіть діапазон";
+            // 
+            // arbeitenAddNoteTextBox
+            // 
+            this.arbeitenAddNoteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenAddNoteTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.arbeitenAddNoteTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddNoteTextBox.Location = new System.Drawing.Point(9, 315);
+            this.arbeitenAddNoteTextBox.Multiline = true;
+            this.arbeitenAddNoteTextBox.Name = "arbeitenAddNoteTextBox";
+            this.arbeitenAddNoteTextBox.Size = new System.Drawing.Size(958, 289);
+            this.arbeitenAddNoteTextBox.TabIndex = 144;
+            // 
+            // arbeitenAddNoteLabel
+            // 
+            this.arbeitenAddNoteLabel.AutoSize = true;
+            this.arbeitenAddNoteLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenAddNoteLabel.Location = new System.Drawing.Point(9, 291);
+            this.arbeitenAddNoteLabel.Name = "arbeitenAddNoteLabel";
+            this.arbeitenAddNoteLabel.Size = new System.Drawing.Size(80, 21);
+            this.arbeitenAddNoteLabel.TabIndex = 145;
+            this.arbeitenAddNoteLabel.Text = "Примітка:";
+            // 
+            // updateArbeitenPage
+            // 
+            this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateButton);
+            this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateSplitContainer);
+            this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateOrderFilterCheckBox);
+            this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateOrderFilterDateTimePicker);
+            this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateOrderSelectComboBox);
+            this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateOrderSelectLabel);
+            this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateOrderFilterLabel);
+            this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateNoteTextBox);
+            this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateNoteLabel);
+            this.updateArbeitenPage.Location = new System.Drawing.Point(4, 5);
+            this.updateArbeitenPage.Name = "updateArbeitenPage";
+            this.updateArbeitenPage.Size = new System.Drawing.Size(976, 676);
+            this.updateArbeitenPage.TabIndex = 21;
+            this.updateArbeitenPage.Text = "updateArbeitenPage";
+            this.updateArbeitenPage.UseVisualStyleBackColor = true;
+            // 
+            // arbeitenUpdateButton
+            // 
+            this.arbeitenUpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenUpdateButton.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.arbeitenUpdateButton.Location = new System.Drawing.Point(731, 612);
+            this.arbeitenUpdateButton.Name = "arbeitenUpdateButton";
+            this.arbeitenUpdateButton.Size = new System.Drawing.Size(235, 58);
+            this.arbeitenUpdateButton.TabIndex = 176;
+            this.arbeitenUpdateButton.Text = "Додати арбайтен";
+            this.arbeitenUpdateButton.UseVisualStyleBackColor = true;
+            this.arbeitenUpdateButton.Click += new System.EventHandler(this.arbeitenUpdateButton_Click);
+            // 
+            // arbeitenUpdateSplitContainer
+            // 
+            this.arbeitenUpdateSplitContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenUpdateSplitContainer.IsSplitterFixed = true;
+            this.arbeitenUpdateSplitContainer.Location = new System.Drawing.Point(3, 65);
+            this.arbeitenUpdateSplitContainer.Name = "arbeitenUpdateSplitContainer";
+            // 
+            // arbeitenUpdateSplitContainer.Panel1
+            // 
+            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientPaymentDateLabel);
+            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientPaymentTextBox);
+            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientPaymentLabel);
+            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientTextBox);
+            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateAccountNumberLabelTextBox);
+            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientLabel);
+            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateAccountNumberLabel);
+            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientPaymentDateTimePicker);
+            // 
+            // arbeitenUpdateSplitContainer.Panel2
+            // 
+            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateDownloadDateLabel);
+            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateDownloadDateTimePicker);
+            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterPaymentTextBox);
+            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterPaymentLabel);
+            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterVehicleTextBox);
+            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterVehicleLabel);
+            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterTextBox);
+            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterLabel);
+            this.arbeitenUpdateSplitContainer.Size = new System.Drawing.Size(971, 225);
+            this.arbeitenUpdateSplitContainer.SplitterDistance = 482;
+            this.arbeitenUpdateSplitContainer.SplitterWidth = 2;
+            this.arbeitenUpdateSplitContainer.TabIndex = 175;
+            // 
+            // arbeitenUpdateClientPaymentDateLabel
+            // 
+            this.arbeitenUpdateClientPaymentDateLabel.AutoSize = true;
+            this.arbeitenUpdateClientPaymentDateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateClientPaymentDateLabel.Location = new System.Drawing.Point(4, 166);
+            this.arbeitenUpdateClientPaymentDateLabel.Name = "arbeitenUpdateClientPaymentDateLabel";
+            this.arbeitenUpdateClientPaymentDateLabel.Size = new System.Drawing.Size(98, 21);
+            this.arbeitenUpdateClientPaymentDateLabel.TabIndex = 173;
+            this.arbeitenUpdateClientPaymentDateLabel.Text = "Дата оплати";
+            // 
+            // arbeitenUpdateClientPaymentTextBox
+            // 
+            this.arbeitenUpdateClientPaymentTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenUpdateClientPaymentTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateClientPaymentTextBox.Location = new System.Drawing.Point(5, 136);
+            this.arbeitenUpdateClientPaymentTextBox.Name = "arbeitenUpdateClientPaymentTextBox";
+            this.arbeitenUpdateClientPaymentTextBox.Size = new System.Drawing.Size(468, 29);
+            this.arbeitenUpdateClientPaymentTextBox.TabIndex = 171;
+            // 
+            // arbeitenUpdateClientPaymentLabel
+            // 
+            this.arbeitenUpdateClientPaymentLabel.AutoSize = true;
+            this.arbeitenUpdateClientPaymentLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateClientPaymentLabel.Location = new System.Drawing.Point(4, 112);
+            this.arbeitenUpdateClientPaymentLabel.Name = "arbeitenUpdateClientPaymentLabel";
+            this.arbeitenUpdateClientPaymentLabel.Size = new System.Drawing.Size(127, 21);
+            this.arbeitenUpdateClientPaymentLabel.TabIndex = 172;
+            this.arbeitenUpdateClientPaymentLabel.Text = "Сума від клієнта";
+            // 
+            // arbeitenUpdateClientTextBox
+            // 
+            this.arbeitenUpdateClientTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenUpdateClientTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateClientTextBox.Location = new System.Drawing.Point(4, 24);
+            this.arbeitenUpdateClientTextBox.Name = "arbeitenUpdateClientTextBox";
+            this.arbeitenUpdateClientTextBox.ReadOnly = true;
+            this.arbeitenUpdateClientTextBox.Size = new System.Drawing.Size(468, 29);
+            this.arbeitenUpdateClientTextBox.TabIndex = 170;
+            // 
+            // arbeitenUpdateAccountNumberLabelTextBox
+            // 
+            this.arbeitenUpdateAccountNumberLabelTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenUpdateAccountNumberLabelTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateAccountNumberLabelTextBox.Location = new System.Drawing.Point(4, 80);
+            this.arbeitenUpdateAccountNumberLabelTextBox.Name = "arbeitenUpdateAccountNumberLabelTextBox";
+            this.arbeitenUpdateAccountNumberLabelTextBox.Size = new System.Drawing.Size(468, 29);
+            this.arbeitenUpdateAccountNumberLabelTextBox.TabIndex = 168;
+            // 
+            // arbeitenUpdateClientLabel
+            // 
+            this.arbeitenUpdateClientLabel.AutoSize = true;
+            this.arbeitenUpdateClientLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateClientLabel.Location = new System.Drawing.Point(3, 0);
+            this.arbeitenUpdateClientLabel.Name = "arbeitenUpdateClientLabel";
+            this.arbeitenUpdateClientLabel.Size = new System.Drawing.Size(54, 21);
+            this.arbeitenUpdateClientLabel.TabIndex = 167;
+            this.arbeitenUpdateClientLabel.Text = "Клієнт";
+            // 
+            // arbeitenUpdateAccountNumberLabel
+            // 
+            this.arbeitenUpdateAccountNumberLabel.AutoSize = true;
+            this.arbeitenUpdateAccountNumberLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateAccountNumberLabel.Location = new System.Drawing.Point(4, 56);
+            this.arbeitenUpdateAccountNumberLabel.Name = "arbeitenUpdateAccountNumberLabel";
+            this.arbeitenUpdateAccountNumberLabel.Size = new System.Drawing.Size(174, 21);
+            this.arbeitenUpdateAccountNumberLabel.TabIndex = 169;
+            this.arbeitenUpdateAccountNumberLabel.Text = "Номер рахунку клієнта";
+            // 
+            // arbeitenUpdateClientPaymentDateTimePicker
+            // 
+            this.arbeitenUpdateClientPaymentDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenUpdateClientPaymentDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.arbeitenUpdateClientPaymentDateTimePicker.Checked = false;
+            this.arbeitenUpdateClientPaymentDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.arbeitenUpdateClientPaymentDateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.arbeitenUpdateClientPaymentDateTimePicker.Location = new System.Drawing.Point(4, 190);
+            this.arbeitenUpdateClientPaymentDateTimePicker.Name = "arbeitenUpdateClientPaymentDateTimePicker";
+            this.arbeitenUpdateClientPaymentDateTimePicker.ShowCheckBox = true;
+            this.arbeitenUpdateClientPaymentDateTimePicker.Size = new System.Drawing.Size(468, 29);
+            this.arbeitenUpdateClientPaymentDateTimePicker.TabIndex = 166;
+            // 
+            // arbeitenUpdateDownloadDateLabel
+            // 
+            this.arbeitenUpdateDownloadDateLabel.AutoSize = true;
+            this.arbeitenUpdateDownloadDateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateDownloadDateLabel.Location = new System.Drawing.Point(5, 166);
+            this.arbeitenUpdateDownloadDateLabel.Name = "arbeitenUpdateDownloadDateLabel";
+            this.arbeitenUpdateDownloadDateLabel.Size = new System.Drawing.Size(149, 21);
+            this.arbeitenUpdateDownloadDateLabel.TabIndex = 178;
+            this.arbeitenUpdateDownloadDateLabel.Text = "Дата завантаження";
+            // 
+            // arbeitenUpdateDownloadDateTimePicker
+            // 
+            this.arbeitenUpdateDownloadDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenUpdateDownloadDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.arbeitenUpdateDownloadDateTimePicker.Checked = false;
+            this.arbeitenUpdateDownloadDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.arbeitenUpdateDownloadDateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.arbeitenUpdateDownloadDateTimePicker.Location = new System.Drawing.Point(5, 190);
+            this.arbeitenUpdateDownloadDateTimePicker.Name = "arbeitenUpdateDownloadDateTimePicker";
+            this.arbeitenUpdateDownloadDateTimePicker.ShowCheckBox = true;
+            this.arbeitenUpdateDownloadDateTimePicker.Size = new System.Drawing.Size(498, 29);
+            this.arbeitenUpdateDownloadDateTimePicker.TabIndex = 177;
+            // 
+            // arbeitenUpdateTransporterPaymentTextBox
+            // 
+            this.arbeitenUpdateTransporterPaymentTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenUpdateTransporterPaymentTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateTransporterPaymentTextBox.Location = new System.Drawing.Point(5, 136);
+            this.arbeitenUpdateTransporterPaymentTextBox.Name = "arbeitenUpdateTransporterPaymentTextBox";
+            this.arbeitenUpdateTransporterPaymentTextBox.Size = new System.Drawing.Size(498, 29);
+            this.arbeitenUpdateTransporterPaymentTextBox.TabIndex = 175;
+            // 
+            // arbeitenUpdateTransporterPaymentLabel
+            // 
+            this.arbeitenUpdateTransporterPaymentLabel.AutoSize = true;
+            this.arbeitenUpdateTransporterPaymentLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateTransporterPaymentLabel.Location = new System.Drawing.Point(4, 112);
+            this.arbeitenUpdateTransporterPaymentLabel.Name = "arbeitenUpdateTransporterPaymentLabel";
+            this.arbeitenUpdateTransporterPaymentLabel.Size = new System.Drawing.Size(138, 21);
+            this.arbeitenUpdateTransporterPaymentLabel.TabIndex = 176;
+            this.arbeitenUpdateTransporterPaymentLabel.Text = "Сума перевізнику";
+            // 
+            // arbeitenUpdateTransporterVehicleTextBox
+            // 
+            this.arbeitenUpdateTransporterVehicleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenUpdateTransporterVehicleTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateTransporterVehicleTextBox.Location = new System.Drawing.Point(4, 80);
+            this.arbeitenUpdateTransporterVehicleTextBox.Name = "arbeitenUpdateTransporterVehicleTextBox";
+            this.arbeitenUpdateTransporterVehicleTextBox.Size = new System.Drawing.Size(498, 29);
+            this.arbeitenUpdateTransporterVehicleTextBox.TabIndex = 173;
+            // 
+            // arbeitenUpdateTransporterVehicleLabel
+            // 
+            this.arbeitenUpdateTransporterVehicleLabel.AutoSize = true;
+            this.arbeitenUpdateTransporterVehicleLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateTransporterVehicleLabel.Location = new System.Drawing.Point(4, 56);
+            this.arbeitenUpdateTransporterVehicleLabel.Name = "arbeitenUpdateTransporterVehicleLabel";
+            this.arbeitenUpdateTransporterVehicleLabel.Size = new System.Drawing.Size(96, 21);
+            this.arbeitenUpdateTransporterVehicleLabel.TabIndex = 174;
+            this.arbeitenUpdateTransporterVehicleLabel.Text = "Номер Авто";
+            // 
+            // arbeitenUpdateTransporterTextBox
+            // 
+            this.arbeitenUpdateTransporterTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenUpdateTransporterTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateTransporterTextBox.Location = new System.Drawing.Point(5, 24);
+            this.arbeitenUpdateTransporterTextBox.Name = "arbeitenUpdateTransporterTextBox";
+            this.arbeitenUpdateTransporterTextBox.ReadOnly = true;
+            this.arbeitenUpdateTransporterTextBox.Size = new System.Drawing.Size(498, 29);
+            this.arbeitenUpdateTransporterTextBox.TabIndex = 172;
+            // 
+            // arbeitenUpdateTransporterLabel
+            // 
+            this.arbeitenUpdateTransporterLabel.AutoSize = true;
+            this.arbeitenUpdateTransporterLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateTransporterLabel.Location = new System.Drawing.Point(4, 0);
+            this.arbeitenUpdateTransporterLabel.Name = "arbeitenUpdateTransporterLabel";
+            this.arbeitenUpdateTransporterLabel.Size = new System.Drawing.Size(91, 21);
+            this.arbeitenUpdateTransporterLabel.TabIndex = 171;
+            this.arbeitenUpdateTransporterLabel.Text = "Перевізник";
+            // 
+            // arbeitenUpdateOrderFilterCheckBox
+            // 
+            this.arbeitenUpdateOrderFilterCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenUpdateOrderFilterCheckBox.AutoSize = true;
+            this.arbeitenUpdateOrderFilterCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.arbeitenUpdateOrderFilterCheckBox.Location = new System.Drawing.Point(797, 32);
+            this.arbeitenUpdateOrderFilterCheckBox.Name = "arbeitenUpdateOrderFilterCheckBox";
+            this.arbeitenUpdateOrderFilterCheckBox.Size = new System.Drawing.Size(168, 25);
+            this.arbeitenUpdateOrderFilterCheckBox.TabIndex = 174;
+            this.arbeitenUpdateOrderFilterCheckBox.Text = "Показувати закриті";
+            this.arbeitenUpdateOrderFilterCheckBox.UseVisualStyleBackColor = true;
+            this.arbeitenUpdateOrderFilterCheckBox.CheckedChanged += new System.EventHandler(this.arbeitenUpdateOrderFilterCheckBox_CheckedChanged);
+            // 
+            // arbeitenUpdateOrderFilterDateTimePicker
+            // 
+            this.arbeitenUpdateOrderFilterDateTimePicker.CustomFormat = "MMMM yy";
+            this.arbeitenUpdateOrderFilterDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.arbeitenUpdateOrderFilterDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.arbeitenUpdateOrderFilterDateTimePicker.Location = new System.Drawing.Point(3, 30);
+            this.arbeitenUpdateOrderFilterDateTimePicker.Name = "arbeitenUpdateOrderFilterDateTimePicker";
+            this.arbeitenUpdateOrderFilterDateTimePicker.Size = new System.Drawing.Size(140, 29);
+            this.arbeitenUpdateOrderFilterDateTimePicker.TabIndex = 173;
+            this.arbeitenUpdateOrderFilterDateTimePicker.ValueChanged += new System.EventHandler(this.arbeitenUpdateOrderFilterDateTimePicker_ValueChanged);
+            // 
+            // arbeitenUpdateOrderSelectComboBox
+            // 
+            this.arbeitenUpdateOrderSelectComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenUpdateOrderSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.arbeitenUpdateOrderSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.arbeitenUpdateOrderSelectComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateOrderSelectComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.arbeitenUpdateOrderSelectComboBox.Location = new System.Drawing.Point(153, 30);
+            this.arbeitenUpdateOrderSelectComboBox.Name = "arbeitenUpdateOrderSelectComboBox";
+            this.arbeitenUpdateOrderSelectComboBox.Size = new System.Drawing.Size(638, 29);
+            this.arbeitenUpdateOrderSelectComboBox.Sorted = true;
+            this.arbeitenUpdateOrderSelectComboBox.TabIndex = 171;
+            this.arbeitenUpdateOrderSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.arbeitenUpdateOrderSelectComboBox_SelectedIndexChanged);
+            this.arbeitenUpdateOrderSelectComboBox.TextUpdate += new System.EventHandler(this.arbeitenUpdateOrderSelectComboBox_TextUpdate);
+            this.arbeitenUpdateOrderSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.arbeitenUpdateOrderSelectComboBox_MouseClick);
+            // 
+            // arbeitenUpdateOrderSelectLabel
+            // 
+            this.arbeitenUpdateOrderSelectLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenUpdateOrderSelectLabel.AutoSize = true;
+            this.arbeitenUpdateOrderSelectLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateOrderSelectLabel.Location = new System.Drawing.Point(149, 6);
+            this.arbeitenUpdateOrderSelectLabel.Name = "arbeitenUpdateOrderSelectLabel";
+            this.arbeitenUpdateOrderSelectLabel.Size = new System.Drawing.Size(124, 21);
+            this.arbeitenUpdateOrderSelectLabel.TabIndex = 172;
+            this.arbeitenUpdateOrderSelectLabel.Text = "Виберіть заявку";
+            // 
+            // arbeitenUpdateOrderFilterLabel
+            // 
+            this.arbeitenUpdateOrderFilterLabel.AutoSize = true;
+            this.arbeitenUpdateOrderFilterLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateOrderFilterLabel.Location = new System.Drawing.Point(3, 8);
+            this.arbeitenUpdateOrderFilterLabel.Name = "arbeitenUpdateOrderFilterLabel";
+            this.arbeitenUpdateOrderFilterLabel.Size = new System.Drawing.Size(140, 21);
+            this.arbeitenUpdateOrderFilterLabel.TabIndex = 170;
+            this.arbeitenUpdateOrderFilterLabel.Text = "Виберіть діапазон";
+            // 
+            // arbeitenUpdateNoteTextBox
+            // 
+            this.arbeitenUpdateNoteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.arbeitenUpdateNoteTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.arbeitenUpdateNoteTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateNoteTextBox.Location = new System.Drawing.Point(7, 317);
+            this.arbeitenUpdateNoteTextBox.Multiline = true;
+            this.arbeitenUpdateNoteTextBox.Name = "arbeitenUpdateNoteTextBox";
+            this.arbeitenUpdateNoteTextBox.Size = new System.Drawing.Size(958, 289);
+            this.arbeitenUpdateNoteTextBox.TabIndex = 168;
+            // 
+            // arbeitenUpdateNoteLabel
+            // 
+            this.arbeitenUpdateNoteLabel.AutoSize = true;
+            this.arbeitenUpdateNoteLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arbeitenUpdateNoteLabel.Location = new System.Drawing.Point(7, 293);
+            this.arbeitenUpdateNoteLabel.Name = "arbeitenUpdateNoteLabel";
+            this.arbeitenUpdateNoteLabel.Size = new System.Drawing.Size(80, 21);
+            this.arbeitenUpdateNoteLabel.TabIndex = 169;
+            this.arbeitenUpdateNoteLabel.Text = "Примітка:";
             // 
             // labelshow57
             // 
@@ -7493,6 +8491,32 @@
             this.showContractsPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contractShowTransporterContactDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractShowDataGridView)).EndInit();
+            this.showArbeitenPage.ResumeLayout(false);
+            this.showArbeitenPage.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowDownloadAddressDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowUploadAddressDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowForwardersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowMainDataGridView)).EndInit();
+            this.addArbeitenPage.ResumeLayout(false);
+            this.addArbeitenPage.PerformLayout();
+            this.arbeitenAddSplitContainer.Panel1.ResumeLayout(false);
+            this.arbeitenAddSplitContainer.Panel1.PerformLayout();
+            this.arbeitenAddSplitContainer.Panel2.ResumeLayout(false);
+            this.arbeitenAddSplitContainer.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.arbeitenAddSplitContainer)).EndInit();
+            this.arbeitenAddSplitContainer.ResumeLayout(false);
+            this.updateArbeitenPage.ResumeLayout(false);
+            this.updateArbeitenPage.PerformLayout();
+            this.arbeitenUpdateSplitContainer.Panel1.ResumeLayout(false);
+            this.arbeitenUpdateSplitContainer.Panel1.PerformLayout();
+            this.arbeitenUpdateSplitContainer.Panel2.ResumeLayout(false);
+            this.arbeitenUpdateSplitContainer.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.arbeitenUpdateSplitContainer)).EndInit();
+            this.arbeitenUpdateSplitContainer.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7802,7 +8826,6 @@
         private System.Windows.Forms.ToolStripMenuItem orderToolStripMenuItem;
         private System.Windows.Forms.TabPage addOrderPage;
         private System.Windows.Forms.SplitContainer splitContainer6;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.ComboBox OrderAddAdditionalTermsSelectComboBox;
         private System.Windows.Forms.Label label103;
         private System.Windows.Forms.ComboBox OrderAddPaymentTermsSelectComboBox;
@@ -8048,7 +9071,77 @@
         private System.Windows.Forms.ComboBox secondPersonDiapasonDocumentComboBox;
         private System.Windows.Forms.ComboBox secondPersonRoleDocumentСomboBox;
         private System.Windows.Forms.Label label18cont;
-        }
+        private System.Windows.Forms.ToolStripMenuItem arbeitenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showArbeitenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addArbeitenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateArbeitenToolStripMenuItem;
+        private System.Windows.Forms.TabPage showArbeitenPage;
+        private System.Windows.Forms.TabPage addArbeitenPage;
+        private System.Windows.Forms.TabPage updateArbeitenPage;
+        private System.Windows.Forms.RichTextBox arbeitenShowNoteTextBox;
+        private System.Windows.Forms.Label arbeitenShowNoteLabel;
+        private System.Windows.Forms.Button arbeitenDeleteButton;
+        private System.Windows.Forms.CheckBox arbeitenShowOnlyActive;
+        private System.Windows.Forms.DateTimePicker arbeitenShowSearchDatePicker;
+        private System.Windows.Forms.Label arbeitenShowMainLabel;
+        private System.Windows.Forms.Button arbeitenShowSearchButton;
+        private System.Windows.Forms.TextBox arbeitenShowSearchTextBox;
+        private System.Windows.Forms.DataGridView arbeitenShowMainDataGridView;
+        private System.Windows.Forms.DataGridView arbeitenShowForwardersDataGridView;
+        private System.Windows.Forms.CheckBox arbeitenAddOrderFilterCheckBox;
+        private System.Windows.Forms.DateTimePicker arbeitenAddOrderFilterDateTimePicker;
+        private System.Windows.Forms.ComboBox arbeitenAddOrderSelectComboBox;
+        private System.Windows.Forms.Label arbeitenAddOrderSelectLabel;
+        private System.Windows.Forms.Label arbeitenAddOrderFilterLabel;
+        private System.Windows.Forms.TextBox arbeitenAddNoteTextBox;
+        private System.Windows.Forms.Label arbeitenAddNoteLabel;
+        private System.Windows.Forms.SplitContainer arbeitenAddSplitContainer;
+        private System.Windows.Forms.Label arbeitenAddClientPaymentDateLabel;
+        private System.Windows.Forms.TextBox arbeitenAddClientPaymentTextBox;
+        private System.Windows.Forms.Label arbeitenAddClientPaymentLabel;
+        private System.Windows.Forms.TextBox arbeitenAddClientTextBox;
+        private System.Windows.Forms.TextBox arbeitenAddAccountNumberLabelTextBox;
+        private System.Windows.Forms.Label arbeitenAddClientLabel;
+        private System.Windows.Forms.Label arbeitenAddAccountNumberLabel;
+        private System.Windows.Forms.DateTimePicker arbeitenAddClientPaymentDateTimePicker;
+        private System.Windows.Forms.TextBox arbeitenAddTransporterTextBox;
+        private System.Windows.Forms.Label arbeitenAddTransporterLabel;
+        private System.Windows.Forms.Label arbeitenAddDownloadDateLabel;
+        private System.Windows.Forms.DateTimePicker arbeitenAddDownloadDateTimePicker;
+        private System.Windows.Forms.TextBox arbeitenAddTransporterPaymentTextBox;
+        private System.Windows.Forms.Label arbeitenAddTransporterPaymentLabel;
+        private System.Windows.Forms.TextBox arbeitenAddTransporterVehicleTextBox;
+        private System.Windows.Forms.Label arbeitenAddTransporterVehicleLabel;
+        private System.Windows.Forms.Button arbeitenAddButton;
+        private System.Windows.Forms.Button arbeitenUpdateButton;
+        private System.Windows.Forms.SplitContainer arbeitenUpdateSplitContainer;
+        private System.Windows.Forms.Label arbeitenUpdateClientPaymentDateLabel;
+        private System.Windows.Forms.TextBox arbeitenUpdateClientPaymentTextBox;
+        private System.Windows.Forms.Label arbeitenUpdateClientPaymentLabel;
+        private System.Windows.Forms.TextBox arbeitenUpdateClientTextBox;
+        private System.Windows.Forms.TextBox arbeitenUpdateAccountNumberLabelTextBox;
+        private System.Windows.Forms.Label arbeitenUpdateClientLabel;
+        private System.Windows.Forms.Label arbeitenUpdateAccountNumberLabel;
+        private System.Windows.Forms.DateTimePicker arbeitenUpdateClientPaymentDateTimePicker;
+        private System.Windows.Forms.Label arbeitenUpdateDownloadDateLabel;
+        private System.Windows.Forms.DateTimePicker arbeitenUpdateDownloadDateTimePicker;
+        private System.Windows.Forms.TextBox arbeitenUpdateTransporterPaymentTextBox;
+        private System.Windows.Forms.Label arbeitenUpdateTransporterPaymentLabel;
+        private System.Windows.Forms.TextBox arbeitenUpdateTransporterVehicleTextBox;
+        private System.Windows.Forms.Label arbeitenUpdateTransporterVehicleLabel;
+        private System.Windows.Forms.TextBox arbeitenUpdateTransporterTextBox;
+        private System.Windows.Forms.Label arbeitenUpdateTransporterLabel;
+        private System.Windows.Forms.CheckBox arbeitenUpdateOrderFilterCheckBox;
+        private System.Windows.Forms.DateTimePicker arbeitenUpdateOrderFilterDateTimePicker;
+        private System.Windows.Forms.ComboBox arbeitenUpdateOrderSelectComboBox;
+        private System.Windows.Forms.Label arbeitenUpdateOrderSelectLabel;
+        private System.Windows.Forms.Label arbeitenUpdateOrderFilterLabel;
+        private System.Windows.Forms.TextBox arbeitenUpdateNoteTextBox;
+        private System.Windows.Forms.Label arbeitenUpdateNoteLabel;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.DataGridView arbeitenShowDownloadAddressDataGridView;
+        private System.Windows.Forms.DataGridView arbeitenShowUploadAddressDataGridView;
+    }
 }
 
 

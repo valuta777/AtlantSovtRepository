@@ -122,9 +122,11 @@ namespace AtlantSovt
             trackingShowTransporterContactsDataGridView.Update();
 
             trackingShowTransporterContactsDataGridView.DataSource = null;
+
             trackingShowCommentDataGridView.DataSource = null;
             trackingShowUploadAddressDataGridView.DataSource = null;
             trackingShowDownloadAddressDataGridView.DataSource = null;
+
             trackingShowAddNoteRichTextBox.Clear();
 
 

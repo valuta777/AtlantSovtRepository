@@ -77,7 +77,11 @@ namespace AtlantSovt.AtlantSovtDb
 
         public DateTime? UploadDateTo { get; set; }
 
+        public bool? IsDeleted { get; set; }
+
         public virtual AdditionalTerm AdditionalTerm { get; set; }
+
+        public virtual Arbeiten Arbeiten { get; set; }
 
         public virtual Cargo Cargo { get; set; }
 
