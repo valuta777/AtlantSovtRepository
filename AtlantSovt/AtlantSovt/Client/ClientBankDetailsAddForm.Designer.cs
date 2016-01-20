@@ -45,12 +45,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.addClientBankDetailsButton = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.clientCertificateSerialTextBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -227,79 +221,6 @@
             this.addClientBankDetailsButton.UseVisualStyleBackColor = true;
             this.addClientBankDetailsButton.Click += new System.EventHandler(this.addClientBankDetailsButton_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label9.Location = new System.Drawing.Point(103, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(17, 21);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "*";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label10.Location = new System.Drawing.Point(53, 57);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(17, 21);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "*";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label11.Location = new System.Drawing.Point(125, 103);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(17, 21);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "*";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label12.Location = new System.Drawing.Point(75, 150);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(17, 21);
-            this.label12.TabIndex = 29;
-            this.label12.Text = "*";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label13.Location = new System.Drawing.Point(41, 197);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(17, 21);
-            this.label13.TabIndex = 30;
-            this.label13.Text = "*";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.Control;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label14.Location = new System.Drawing.Point(4, 474);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(163, 13);
-            this.label14.TabIndex = 32;
-            this.label14.Text = "* - одне з обов\'язкових полів";
-            // 
             // clientCertificateSerialTextBox
             // 
             this.clientCertificateSerialTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -328,8 +249,6 @@
             this.ClientSize = new System.Drawing.Size(560, 491);
             this.Controls.Add(this.clientCertificateSerialTextBox);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.addClientBankDetailsButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.clientIBANTextBox);
@@ -347,16 +266,13 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label13);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ClientBankDetailsAddForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додавання банківських реквізитів";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientBankDetailsAddForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,12 +297,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button addClientBankDetailsButton;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox clientCertificateSerialTextBox;
         private System.Windows.Forms.Label label15;
     }

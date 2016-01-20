@@ -1020,10 +1020,14 @@ namespace AtlantSovt
             OrderUpdateLoadingForm1SelectComboBox.Items.Clear();
             OrderUpdateLoadingForm2SelectComboBox.Items.Clear();
 
-            OrderUpdateDateDateTimePicker.Checked = false;                    
+            OrderUpdateDateDateTimePicker.Checked = false;
+                             
             OrderUpdateDownloadDateFromTimePicker.Checked = false;
             OrderUpdateUploadDateFromTimePicker.Checked = false;
-            
+
+            OrderUpdateDownloadDateToTimePicker.Checked = false;
+            OrderUpdateUploadDateToTimePicker.Checked = false;
+
 
             OrderUpdateWeightTextBox.Text = "";
             OrderUpdateFreightTextBox.Text = "";
@@ -2440,6 +2444,7 @@ namespace AtlantSovt
                             updateOrder.Freight = null;
                             IsModified = true;
                         }
+                        //TODO Is bug?
 
                         if (updateOrder.Date != OrderUpdateDateDateTimePicker.Value)
                         {

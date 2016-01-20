@@ -9,6 +9,7 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("Contract")]
     public partial class Contract
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Contract()
         {
             ForwarderContracts = new HashSet<ForwarderContract>();
@@ -38,6 +39,7 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual Transporter Transporter { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ForwarderContract> ForwarderContracts { get; set; }
     }
 }

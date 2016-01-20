@@ -57,7 +57,7 @@ namespace AtlantSovt
         internal string CoutriesAndVehiclesSelect(Transporter add_transporter) 
         {
             transporter = add_transporter;
-            return  SaveCountries()+ SaveVehicles();
+            return  SaveCountries() + SaveVehicles();
         }
 
         private string SaveCountries()
@@ -122,7 +122,10 @@ namespace AtlantSovt
                     return string.Empty;
                 }
             }
-            else { return string.Empty; }
+            else
+            {
+                return string.Empty;
+            }
 
         }
 
@@ -141,6 +144,17 @@ namespace AtlantSovt
         {
             AddTransporterVehicleForm vehicle = new AddTransporterVehicleForm(this);
             vehicle.Show();
+        }
+
+        private void TransporterCountryAndVehicleSelectForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(transporterFilterSelectVehicleCheckedListBox.CheckedItems.Count != 0 || transporterFilterSelectCountryCheckedListBox.CheckedItems.Count != 0)
+            {
+                if (MessageBox.Show("Закрити форму без збереження?\nАдреси та типи транспорту НЕ збережуться.\nДля збереження натисніть <Отмена> та <Додати>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                {
+                    e.Cancel = true;
+                }
+            }
         }
     }
 }

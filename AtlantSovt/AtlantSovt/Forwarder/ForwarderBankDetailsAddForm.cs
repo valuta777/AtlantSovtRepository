@@ -25,17 +25,20 @@ namespace AtlantSovt
         string new_SWIFT;
         string new_IBAN;
         long ID;
+        bool IsAdding;
 
         public ForwarderBankDetailsAddForm()
         {
             InitializeComponent();
             ID = 0;
+            IsAdding = true;
         }
 
         private void addForwarderBankDetailsButton_Click(object sender, EventArgs e)
         {
-            if (forwarderBankNameTextBox.Text != "" && forwarderMFOTextBox.Text != "" && forwarderAccountNumberTextBox.Text != "" && forwarderEDRPOUTextBox.Text != ""
-                && forwarderIPNTextBox.Text != "")
+            if (forwarderBankNameTextBox.Text != "" || forwarderMFOTextBox.Text != "" || forwarderAccountNumberTextBox.Text != "" || forwarderEDRPOUTextBox.Text != "" ||
+                forwarderIPNTextBox.Text != "" || forwarderCertificateSerialTextBox.Text != "" || forwarderCertificateNumberTextBox.Text != "" || forwarderSWIFTTextBox.Text != ""
+                || forwarderIBANTextBox.Text != "")
             {
                 new_BankName = forwarderBankNameTextBox.Text;
                 new_MFO = forwarderMFOTextBox.Text;
@@ -54,11 +57,11 @@ namespace AtlantSovt
             }
             else
             {
-                MessageBox.Show("Заповніть обов'язкові поля!");
+                MessageBox.Show("Для збереження заповніть хочаб одне поле");
             }
 
         }
-        internal string AddForwarderBankDetail(long id, bool IsAdding)
+        internal string AddForwarderBankDetail(long id, bool newIsAdding)
         {
             using (var db = new AtlantSovtContext())
             {
@@ -79,6 +82,7 @@ namespace AtlantSovt
                 {
                     db.ForwarderBankDetails.Add(New_ForwarderBankDetail);
                     db.SaveChanges();
+                    IsAdding = newIsAdding;
                     if (IsAdding)
                     {
                         return "Банківські данні успішно додані експедитору [" + New_ForwarderBankDetail.Id + "]\n";
@@ -101,6 +105,22 @@ namespace AtlantSovt
         internal void AddForwarderBankDetail2(long id)
         {
             ID = id;
+        }
+
+        private void ForwarderBankDetailsAddForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (IsAdding)
+            {
+                if (forwarderBankNameTextBox.Text != "" || forwarderMFOTextBox.Text != "" || forwarderAccountNumberTextBox.Text != "" || forwarderEDRPOUTextBox.Text != "" ||
+               forwarderIPNTextBox.Text != "" || forwarderCertificateSerialTextBox.Text != "" || forwarderCertificateNumberTextBox.Text != "" || forwarderSWIFTTextBox.Text != ""
+               || forwarderIBANTextBox.Text != "")
+                {
+                    if (MessageBox.Show("Закрити форму без збереження?\nБанківські данні НЕ збережуться.\n Для збереження натисніть <Отмена> та <Додати Банківські данні>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                    {
+                        e.Cancel = true;
+                    }
+                }
+            }
         }
     }
 }

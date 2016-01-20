@@ -20,13 +20,17 @@ namespace AtlantSovt
         string new_FaxNumber;
         string new_Email;
         long Id;
+        bool IsAdding;
+
 
         public TransporterContactAddForm()
         {
             InitializeComponent();
+            long Id = 0;
+            IsAdding = true;
         }
 
-        internal string AddTransporterContact(long id , bool IsAdding)
+        internal string AddTransporterContact(long id , bool IsAddingnew)
         {
             using (var db = new AtlantSovtContext())
             {
@@ -43,6 +47,7 @@ namespace AtlantSovt
 
                     db.TransporterContacts.Add(New_TransporterContact);
                     db.SaveChanges();
+                    IsAdding = IsAddingnew;
                     if (IsAdding)
                     {
                         return "Контакт успішно доданий перевізнику [" + New_TransporterContact.TransporterId + "]\n";
@@ -64,21 +69,41 @@ namespace AtlantSovt
 
         private void addContactTransporterButton_Click(object sender, EventArgs e)
         {
-
-            new_ContactPerson = contactPersonTransporterContactTextBox.Text;
-            new_TelephoneNumber = telephoneNumberTransporterContactTextBox.Text;
-            new_FaxNumber = faxNumberTransporterContactTextBox.Text;
-            new_Email = emailTransporterContactTextBox.Text;
-            
-            this.Hide();
-            if (Id != 0)
+            if (contactPersonTransporterContactTextBox.Text != "" || telephoneNumberTransporterContactTextBox.Text != "" || faxNumberTransporterContactTextBox.Text != "" || emailTransporterContactTextBox.Text != "")
             {
-                AddTransporterContact(Id, false);
+                new_ContactPerson = contactPersonTransporterContactTextBox.Text;
+                new_TelephoneNumber = telephoneNumberTransporterContactTextBox.Text;
+                new_FaxNumber = faxNumberTransporterContactTextBox.Text;
+                new_Email = emailTransporterContactTextBox.Text;
+
+                this.Hide();
+                if (Id != 0)
+                {
+                    AddTransporterContact(Id, false);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Для збереження заповніть хочаб одне поле");
             }
         }
         internal void AddTransporterContact2(long id) 
         {
             Id = id;
+        }
+
+        private void TransporterContactAddForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (IsAdding)
+            {
+                if (contactPersonTransporterContactTextBox.Text != "" || telephoneNumberTransporterContactTextBox.Text != "" || faxNumberTransporterContactTextBox.Text != "" || emailTransporterContactTextBox.Text != "")
+                {
+                    if (MessageBox.Show("Закрити форму без збереження?\nКонтакт НЕ збережеться.\n Для збереження натисніть <Отмена> та <Додати контакт>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                    {
+                        e.Cancel = true;
+                    }
+                }
+            }
         }
     }
 }

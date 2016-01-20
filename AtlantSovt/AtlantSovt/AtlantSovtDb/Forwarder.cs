@@ -9,6 +9,7 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("Forwarder")]
     public partial class Forwarder
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Forwarder()
         {
             ForwarderContacts = new HashSet<ForwarderContact>();
@@ -42,10 +43,13 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual ForwarderBankDetail ForwarderBankDetail { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ForwarderContact> ForwarderContacts { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ForwarderContract> ForwarderContracts { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ForwarderOrder> ForwarderOrders { get; set; }
 
         public virtual ForwarderStamp ForwarderStamp { get; set; }

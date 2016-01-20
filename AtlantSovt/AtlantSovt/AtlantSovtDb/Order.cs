@@ -80,6 +80,8 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual AdditionalTerm AdditionalTerm { get; set; }
 
+        public virtual Arbeiten Arbeiten { get; set; }
+
         public virtual Cargo Cargo { get; set; }
 
         public virtual Client Client { get; set; }

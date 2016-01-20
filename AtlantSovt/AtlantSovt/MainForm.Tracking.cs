@@ -227,7 +227,7 @@ namespace AtlantSovt
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
                        State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
-                       CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
+                        CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                        Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
 
                    };
@@ -442,7 +442,7 @@ namespace AtlantSovt
                     dataGridView.Columns[8].HeaderText = "Мова";
 
                 } dataGridView.Update();
-            }
+                }
         }
 
         void ShowTrackingCloseOrder()
