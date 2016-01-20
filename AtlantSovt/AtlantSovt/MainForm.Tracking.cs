@@ -140,6 +140,7 @@ namespace AtlantSovt
                     trackingShowCloseOrderButton.Enabled = false;
                     showTrackingCreateOrderDoc.Enabled = false;
                     trackingShowDeleteOrderButton.Enabled = false;
+                    trackingShowAddNoteRichTextBox.Enabled = false;
                     return;
                 }
 

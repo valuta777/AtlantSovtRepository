@@ -43,6 +43,8 @@ namespace AtlantSovt
             transporterShowBankDetailsDataGridView.Visible = false;
             transporterShowCountryDataGridView.Visible = false;
             transporterShowCountryDataGridView.Visible = false;
+            showTransporterDeleteButton.Enabled = false;
+            transporterShowAdditionalDetailsButton.Enabled = false;
             transporterShowCommentRichTextBox.Text = "";
 
             using (var db = new AtlantSovtContext())
@@ -161,6 +163,8 @@ namespace AtlantSovt
             transporterShowContactsDataGridView.Visible = true;
             transporterShowBankDetailsDataGridView.Visible = true;
             transporterShowCountryDataGridView.Visible = true;
+            showTransporterDeleteButton.Enabled = true;
+            transporterShowAdditionalDetailsButton.Enabled = true;
         }
 
         public void ShowTransporterFilter()
@@ -7780,10 +7784,11 @@ namespace AtlantSovt
         //Delete
         #region Delete
 
-        void DeleteTransporter()
+        void DeleteTransporter(int id)
         {
             using (var db = new AtlantSovtContext())
             {
+                deleteTransporter = db.Transporters.Find(id);
                 if (deleteTransporter != null)
                 {
                     if (MessageBox.Show("Видалити перевізника " + deleteTransporter.FullName + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

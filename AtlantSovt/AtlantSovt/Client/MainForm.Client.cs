@@ -28,6 +28,7 @@ namespace AtlantSovt
         {
             clientContactsDataGridView.Visible = false;
             clientBankDetailsDataGridView.Visible = false;
+            showClientDeleteButton.Enabled = false;
             clientCommentRichTextBox.Text = "";
 
             using (var db = new AtlantSovtContext())
@@ -130,6 +131,7 @@ namespace AtlantSovt
             clientBankDetailsDataGridView.Update();
             clientContactsDataGridView.Visible = true;
             clientBankDetailsDataGridView.Visible = true;
+            showClientDeleteButton.Enabled = true;
         }
 
         void ShowClientSearch()
@@ -658,10 +660,11 @@ namespace AtlantSovt
         //Delete
         #region Delete
 
-        void DeleteClient()
+        void DeleteClient(int id)
         {
             using (var db = new AtlantSovtContext())
             {
+                deleteClient = db.Clients.Find(id);
                 if (deleteClient != null)
                 {
                     if (MessageBox.Show("Видалити клієнта " + deleteClient.Name + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -680,6 +683,10 @@ namespace AtlantSovt
                             MessageBox.Show("Помилка!" + Environment.NewLine + ex.Message);
                         }
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Виберіть клієнта");
                 }
             }
         }

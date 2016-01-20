@@ -9,7 +9,6 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("Order")]
     public partial class Order
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Order()
         {
             ForwarderOrders = new HashSet<ForwarderOrder>();
@@ -77,6 +76,8 @@ namespace AtlantSovt.AtlantSovtDb
 
         public DateTime? UploadDateTo { get; set; }
 
+        public bool? IsDeleted { get; set; }
+
         public virtual AdditionalTerm AdditionalTerm { get; set; }
 
         public virtual Cargo Cargo { get; set; }
@@ -87,7 +88,6 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual FineForDelay FineForDelay { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ForwarderOrder> ForwarderOrders { get; set; }
 
         public virtual OrderDeny OrderDeny { get; set; }
@@ -104,22 +104,16 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual Transporter Transporter { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderCustomsAddress> OrderCustomsAddresses { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDownloadAddress> OrderDownloadAddresses { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderLoadingForm> OrderLoadingForms { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderUnCustomsAddress> OrderUnCustomsAddresses { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderUploadAdress> OrderUploadAdresses { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TrackingComment> TrackingComments { get; set; }
     }
 }

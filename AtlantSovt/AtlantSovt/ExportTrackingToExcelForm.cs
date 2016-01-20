@@ -246,19 +246,46 @@ namespace AtlantSovt
                                 resultCounter++;
                                 foreach (TrackingComment tc in orderTracking.TrackingComments.ToList())
                                 {
-                                    string comment = (tc.Comment != "") ? tc.Comment.Replace("\n", "") : "";
-                                    for (int i = 1; i < comment.Length + 1; i++)
+                                    string comment = (tc.Comment != "") ? tc.Comment : "";
+
+                                    string temp = "";
+                                    int newLineLength = 60;
+                                    int commentLineCounter = 0;
+                                    foreach (string c in comment.Split('\n'))
                                     {
-                                        if (i % 100 == 0)
+                                        if (c.Length > newLineLength)
                                         {
-                                            comment = comment.Insert(i, "\n");
+                                            for (int i = 1; i < c.Length + 1; i++)
+                                            {
+                                                if (i % newLineLength == 0)
+                                                {
+                                                    if (c.Length - i + newLineLength > newLineLength)
+                                                    {
+                                                        temp += c.Substring(i - newLineLength, newLineLength).Insert(newLineLength, "\n");
+                                                        commentLineCounter++;
+                                                    }
+                                                }
+                                            }
+                                            int remainder = 0;
+                                            remainder = c.Length % newLineLength;
+                                            if (remainder != 0)
+                                            {
+                                                temp += c.Substring(c.Length - remainder, remainder).Insert(remainder, "\n");
+                                                commentLineCounter++;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            temp += c + "\n";
+                                            commentLineCounter++;
                                         }
                                     }
-                                    ObjWorkSheet.Range[ObjWorkSheet.Cells[resultCounter + tcCounter, 1], ObjWorkSheet.Cells[resultCounter + tcCounter + (int)(comment.Length / 100), 5]].Merge();
-                                    ObjWorkSheet.Cells[resultCounter + tcCounter, 1] = comment;
+
+                                    ObjWorkSheet.Range[ObjWorkSheet.Cells[resultCounter + tcCounter, 1], ObjWorkSheet.Cells[resultCounter + tcCounter + commentLineCounter, 5]].Merge();
+                                    ObjWorkSheet.Cells[resultCounter + tcCounter, 1] = temp;
                                     ObjWorkSheet.Range[ObjWorkSheet.Cells[resultCounter + tcCounter, 6], ObjWorkSheet.Cells[resultCounter + tcCounter, 7]].Merge();
                                     ObjWorkSheet.Cells[resultCounter + tcCounter, 6] = (tc.CreateDate != null) ? tc.CreateDate.ToString() : "";
-                                    tcCounter += (int)(comment.Length / 100) + 2;
+                                    tcCounter += commentLineCounter + 2;
                                 }
                             }
 
@@ -270,18 +297,45 @@ namespace AtlantSovt
                             resultCounter++;
                             if (orderTracking.Note != null && orderTracking.Note != "")
                             {
-                                note = orderTracking.Note.Replace("\n","");
-
-                                for (int i = 1; i < note.Length + 1; i++)
+                                note = orderTracking.Note;
+                                string temp = "";
+                                int newLineLength = 80;
+                                int noteLineCounter = 0;
+                                foreach(string n in note.Split('\n'))
                                 {
-                                    if (i % 100 == 0)
+                                    if (n.Length > newLineLength)
                                     {
-                                        note = note.Insert(i, "\n");
+                                        for (int i = 1; i < n.Length + 1; i++)
+                                        {
+                                            if (i % newLineLength == 0)
+                                            {
+                                                if (n.Length - i + newLineLength > newLineLength )
+                                                {
+                                                    temp += n.Substring(i - newLineLength, newLineLength).Insert(newLineLength, "\n");
+                                                    noteLineCounter++;
+                                                }
+                                            }
+                                        }
+                                        int remainder = 0;
+                                        remainder = n.Length % newLineLength;
+                                        if(remainder != 0)
+                                        {
+                                            temp += n.Substring(n.Length - remainder, remainder).Insert(remainder, "\n");
+                                            noteLineCounter++;
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        temp += n + "\n";
+                                        noteLineCounter++;
                                     }
                                 }
-                                ObjWorkSheet.Range[ObjWorkSheet.Cells[resultCounter + (int)(note.Length / 100), 1], ObjWorkSheet.Cells[resultCounter, 7]].Merge();
-                                ObjWorkSheet.Cells[resultCounter, 1] = note;
-                                resultCounter += (note.Length / 100) + 2;
+
+                                ObjWorkSheet.Range[ObjWorkSheet.Cells[resultCounter + noteLineCounter, 1], ObjWorkSheet.Cells[resultCounter, 7]].Merge();
+                                ObjWorkSheet.Cells[resultCounter, 1] = temp;
+                                resultCounter += noteLineCounter + 2;
+                                noteLineCounter = 0;
                             }
                             else
                             {

@@ -31,6 +31,7 @@ namespace AtlantSovt
         {
             forwarderContactsDataGridView.Visible = false;
             forwarderBankDetailsDataGridView.Visible = false;
+            showForwarderDeleteButton.Enabled = false;
             forwarderCommentRichTextBox.Text = "";
 
             using (var db = new AtlantSovtContext())
@@ -132,6 +133,7 @@ namespace AtlantSovt
             forwarderBankDetailsDataGridView.Update();
             forwarderContactsDataGridView.Visible = true;
             forwarderBankDetailsDataGridView.Visible = true;
+            showForwarderDeleteButton.Enabled = true;
         }
 
         //add
@@ -604,10 +606,11 @@ namespace AtlantSovt
         }
 
         //Delete
-        void DeleteForwarder()
+        void DeleteForwarder(int id)
         {
             using (var db = new AtlantSovtContext())
             {
+                deleteForwarder = db.Forwarders.Find(id);
                 if (deleteForwarder != null)
                 {
                     if (MessageBox.Show("Видалити експедитора " + deleteForwarder.Name + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
