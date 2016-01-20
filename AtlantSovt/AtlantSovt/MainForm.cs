@@ -1930,7 +1930,7 @@ namespace AtlantSovt
         {
             if (trackingShowSearchTextBox.Text == "")
             {
-                ShowTracking(trackingShowDataGridView);
+                ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
             }
         }
 
