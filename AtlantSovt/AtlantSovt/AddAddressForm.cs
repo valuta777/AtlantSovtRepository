@@ -17,11 +17,41 @@ namespace AtlantSovt
         Client client;
         Country country;
         Byte currentCase;
-        public AddAddressForm(Client new_client , Byte new_currentCase)
+        private SelectCustomsAddressesForm selectCustomsAddresses { get; set; }
+        private SelectUncustomsAddressesForm selectUncustomsAddresses { get; set; }
+        private SelectDownloadAddressesForm selectDownloadAddresses { get; set; }
+        private SelectUploadAddressesForm selectUploadAddresses { get; set; }
+
+        public AddAddressForm(Client new_client, Byte new_currentCase, SelectCustomsAddressesForm selectCustomsAddresses)
         {
             InitializeComponent();
             client = new_client;
             currentCase = new_currentCase;
+            this.selectCustomsAddresses = selectCustomsAddresses;
+        }
+
+        public AddAddressForm(Client new_client, Byte new_currentCase, SelectUncustomsAddressesForm selectUncustomsAddresses)
+        {
+            InitializeComponent();
+            client = new_client;
+            currentCase = new_currentCase;
+            this.selectUncustomsAddresses = selectUncustomsAddresses;
+        }
+
+        public AddAddressForm(Client new_client, Byte new_currentCase, SelectDownloadAddressesForm selectDownloadAddresses)
+        {
+            InitializeComponent();
+            client = new_client;
+            currentCase = new_currentCase;
+            this.selectDownloadAddresses = selectDownloadAddresses;
+        }
+
+        public AddAddressForm(Client new_client, Byte new_currentCase, SelectUploadAddressesForm selectUploadAddresses)
+        {
+            InitializeComponent();
+            client = new_client;
+            currentCase = new_currentCase;
+            this.selectUploadAddresses = selectUploadAddresses;
         }
          
         string new_CountryCode;
@@ -32,7 +62,7 @@ namespace AtlantSovt
         string new_CompanyName;
         string new_ContactPerson;
        
-        private void AddUploadAddress()
+        private long? AddUploadAddress()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -53,15 +83,17 @@ namespace AtlantSovt
                     db.UploadAddresses.Add(New_UploadAddress);
                     db.SaveChanges();
                     MessageBox.Show("Адреса успішно додана ");
+                    return New_UploadAddress.Id;
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
                     MessageBox.Show(ex.Message);
+                    return null;
                 }
             }
         }
-        private void AddDownloadAddress()
+        private long? AddDownloadAddress()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -82,16 +114,18 @@ namespace AtlantSovt
                     db.DownloadAddresses.Add(New_DownloadAddress);
                     db.SaveChanges();
                     MessageBox.Show("Адреса успішно додана ");
+                    return New_DownloadAddress.Id;
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
                     MessageBox.Show(ex.Message);
+                    return null;
                 }
 
             }
         }
-        private void AddCustomsAddress()
+        private long? AddCustomsAddress()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -112,16 +146,18 @@ namespace AtlantSovt
                     db.CustomsAddresses.Add(New_CustomsAddress);
                     db.SaveChanges();
                     MessageBox.Show("Адреса успішно додана ");
+                    return New_CustomsAddress.Id;
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
                     MessageBox.Show(ex.Message);
+                    return null;
                 }
 
             }
         }
-        private void AddUnCustomsAddress()
+        private long? AddUnCustomsAddress()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -140,13 +176,15 @@ namespace AtlantSovt
                 try
                 {
                     db.UnCustomsAddresses.Add(New_UnCustomsAddress);
-                    db.SaveChanges();
+                    db.SaveChanges();                   
                     MessageBox.Show("Адреса успішно додана ");
+                    return New_UnCustomsAddress.Id;
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
                     MessageBox.Show(ex.Message);
+                    return null;
                 }
 
             }
@@ -163,13 +201,28 @@ namespace AtlantSovt
 
             switch(currentCase)
             {
-                case 1 : AddDownloadAddress();break;
+                case 1 : //AddDownloadAddress();
+                     //selectDownloadAddresses.downloadAddresssListBox.Items.Clear();
+                     selectDownloadAddresses.LoadClientDownloadAddresses(AddDownloadAddress());                    
+                     break;
 
-                case 2 : AddUploadAddress(); break; 
+                case 2 : //AddUploadAddress(); 
+                //    selectUploadAddresses.uploadAddressListBox.Items.Clear();
+                     selectUploadAddresses.LoadClientUploadAddresses(AddUploadAddress());
+
+                    break; 
                     
-                case 3 : AddCustomsAddress();break;
+                case 3 : /*AddCustomsAddress();*/
+                //    selectCustomsAddresses.customsAddressesListBox.Items.Clear();
+                    selectCustomsAddresses.LoadClientCustomsAddresses(AddCustomsAddress());
+
+                    break;
                     
-                case 4 : AddUnCustomsAddress();break;
+                case 4 : /*AddUnCustomsAddress();*/
+                    //selectUncustomsAddresses.uncustomsAddressesListBox.Items.Clear();
+                    selectUncustomsAddresses.LoadClientUncustomsAddresses(AddUnCustomsAddress());
+
+                    break;
 
                 default: MessageBox.Show("Error");break;
             }
@@ -222,6 +275,27 @@ namespace AtlantSovt
         {
             AddCountryForm addCountryForm = new AddCountryForm();
             addCountryForm.Show();
+        }
+
+        private void AddAddressForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (currentCase == 1)
+            {
+               this.selectDownloadAddresses.Focus();                
+            }
+            else if (currentCase == 2)
+            {
+                this.selectUploadAddresses.Focus();
+            }
+            else if (currentCase == 3)
+            {
+                this.selectCustomsAddresses.Focus();
+            }
+            else
+            {
+                this.selectUncustomsAddresses.Focus();
+            }
+
         }
     }    
 }

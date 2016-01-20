@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -146,17 +147,14 @@ namespace AtlantSovt
                        {
                            if (deletedCountries.Count != 0)
                            {
-                               foreach (var deleteItem in deletedCountries)
-                               {
-                                   Country country = db.Countries.Where(c => c.Name == deleteItem).FirstOrDefault();
-                                   TransporterCountry transporterCountry = db.Transporters.Find(transporter.Id).TransporterCountries.Where(tc => tc.CountryId == country.Id).FirstOrDefault();
+                                foreach (var deleteItem in deletedCountries)
+                                {
+                                    Country country = db.Countries.Where(c => c.Name == deleteItem).FirstOrDefault();
+                                    TransporterCountry transporterCountry = db.Transporters.Find(transporter.Id).TransporterCountries.Where(tc => tc.CountryId == country.Id).FirstOrDefault();
 
-                                   db.TransporterCountries.Remove(transporterCountry);
-                           }
-                               
-                               MessageBox.Show("Успішно видалено " + deletedCountries.Count + " країн");  
-                           }
-
+                                    db.TransporterCountries.Remove(transporterCountry);
+                                }
+                            }
                            if (newCountries.Count != 0)
                            {
                                foreach (var newItem in newCountries)
@@ -168,16 +166,25 @@ namespace AtlantSovt
                                        CountryId = country.Id
                                    };
                                    db.Transporters.Find(transporter.Id).TransporterCountries.Add(newTransporterCountry);
-                               }
-                               MessageBox.Show("Успішно додано " + newCountries.Count + " країн");  
+                               }                               
                            }
-                           db.SaveChanges();                        
+                            db.SaveChanges();
+                            if (newCountries.Count != 0)
+                            {
+                               MessageBox.Show("Успішно додано " + newCountries.Count + " країн"); 
+                            }
+                            if (deletedCountries.Count != 0)
+                            {
+                                MessageBox.Show("Успішно видалено " + deletedCountries.Count + " країн");
+                            }
+                                                    
                        }           
                     }
                 }
                 catch(Exception e)
                 {
-                    MessageBox.Show("Помилка!!",e.ToString());             
+                    MessageBox.Show("Помилка!!",e.ToString());
+                    Log.Write(e);
                 }
             }
         }
@@ -216,9 +223,8 @@ namespace AtlantSovt
 
                                     db.TransporterVehicles.Remove(transporterVehicle);
                                 }
-                                MessageBox.Show("Успішно видалено " + deletedVehicles.Count + " типів транспорту");
-                            }
 
+                            }
                             if (newVehicles.Count != 0)
                             {
                                 foreach (var newItem in newVehicles)
@@ -231,14 +237,24 @@ namespace AtlantSovt
                                      };
                                      db.Transporters.Find(transporter.Id).TransporterVehicles.Add(newTransporterVehicle);
                                 }
-                                MessageBox.Show("Успішно додано " + newVehicles.Count + " типів транспорту");
+                                
                             }
                             db.SaveChanges();
+                                if (newVehicles.Count != 0)
+                                {
+                                    MessageBox.Show("Успішно додано " + newVehicles.Count + " типів транспорту");
+                                }
+                                if (deletedVehicles.Count != 0)
+                                {
+                                    MessageBox.Show("Успішно видалено " + deletedVehicles.Count + " типів транспорту");
+                                }
+                            }
                         }
-                    }
+                    
                 }
                 catch (Exception e)
                 {
+                    Log.Write(e);
                     MessageBox.Show("Помилка!!", e.ToString());
                 }
             }

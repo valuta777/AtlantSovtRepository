@@ -105,6 +105,8 @@
             this.Name = "SelectDownloadAddressesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Виберіть адреси завантаження";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SelectDownloadAddressesForm_FormClosing);
+            this.Load += new System.EventHandler(this.SelectDownloadAddressesForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -118,6 +120,6 @@
         private System.Windows.Forms.Button addDownloadAddressButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button addDownloadAddressToOrderButton;
-        private System.Windows.Forms.CheckedListBox downloadAddresssListBox;
+        public System.Windows.Forms.CheckedListBox downloadAddresssListBox;
     }
 }

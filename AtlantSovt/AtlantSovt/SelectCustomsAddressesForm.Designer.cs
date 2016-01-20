@@ -105,6 +105,8 @@
             this.Name = "SelectCustomsAddressesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Виберіть адреси замитнення";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SelectCustomsAddressesForm_FormClosing);
+            this.Load += new System.EventHandler(this.SelectCustomsAddressesForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -118,6 +120,6 @@
         private System.Windows.Forms.Button addCustomsAddressesButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button addCustomsAddressesToOrderButton;
-        private System.Windows.Forms.CheckedListBox customsAddressesListBox;
+        public System.Windows.Forms.CheckedListBox customsAddressesListBox;
     }
 }

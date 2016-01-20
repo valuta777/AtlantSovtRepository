@@ -61,6 +61,9 @@ namespace AtlantSovt
         TransporterBankDetailsAddForm addTransporterBankDetailsAddForm, updateTransporterBankDetailsAddForm;
         TransporterBankDetailsUpdateForm updateTransporterBankDetailsUpdateForm;
 
+            //Tracking
+        AddOrderNoteForm orderNoteForm;
+        ShowTrackingCommentForm ShowTrackingComment;
         //Load / Animaton / Test connection
         #region Load
 
@@ -124,6 +127,10 @@ namespace AtlantSovt
             {
                 return;
             }
+            catch (Exception ex)
+            {
+                return;
+        }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -138,7 +145,13 @@ namespace AtlantSovt
                 Application.Exit();
             }
         }
-
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Завершити роботу?\nНе збережена інформація буде втрачена!", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
+        }
         #endregion
 
         //MenuStrips
@@ -202,6 +215,8 @@ namespace AtlantSovt
                 {
                     dataControl.SelectedIndex = 13;
                     helloPictureBox.Image = null;
+                    GetDocumentFiles();
+
                 }
 
                 private void addOrderMenuItem_Click(object sender, EventArgs e)
@@ -210,15 +225,17 @@ namespace AtlantSovt
                     helloPictureBox.Image = null;
 
                 }
+
                 private void showTrackingMenuItem_Click(object sender, EventArgs e)
                 {
                     dataControl.SelectedIndex = 15;
                     helloPictureBox.Image = null;
-                    ShowTracking();
+                    ShowTracking(trackingShowDataGridView);
                     trackingShowTransporterContactsDataGridView.Visible = false;
                     trackingShowCommentDataGridView.Visible = false;
                     trackingShowUploadAddressDataGridView.Visible = false;
                     trackingShowDownloadAddressDataGridView.Visible = false;
+                    trackingShowForwardersDataGridView.Visible = false;
                 }
 
                 private void updateOrderMenuItem_DoubleClick(object sender, EventArgs e)
@@ -233,7 +250,28 @@ namespace AtlantSovt
                     helloPictureBox.Image = null;
                     ShowContract();
                 }
+        private void showArbeitenMenuItem_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 18;
+            helloPictureBox.Image = null;
+            ShowArbeiten();
+            arbeitenShowUploadAddressDataGridView.Visible = false;
+            arbeitenShowDownloadAddressDataGridView.Visible = false;
+            arbeitenShowNoteTextBox.Visible = false;
+            arbeitenShowForwardersDataGridView.Visible = false;
+        }
 
+        private void addArbeitenMenuItem_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 19;
+            helloPictureBox.Image = null;
+        }
+
+        private void updateArbeitenMenuItem_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 20;
+            helloPictureBox.Image = null;
+        }
                 private void AtlantSovtlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
                 {
                     System.Diagnostics.Process.Start(AtlantSovtlinkLabel.Text);
@@ -278,6 +316,30 @@ namespace AtlantSovt
                 ShowClient();
             }
         }
+
+        private void clientDataGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                DeleteClient(Convert.ToInt32(clientDataGridView.CurrentRow.Cells[0].Value));
+                ShowClient();
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                ShowClientInfo();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                ShowClientInfo();
+            }
+        }
+
+        private void showClientDeleteButton_Click(object sender, EventArgs e)
+        {
+            DeleteClient(Convert.ToInt32(clientDataGridView.CurrentRow.Cells[0].Value));
+            ShowClient();
+        }
+
                 #endregion
 
                 //Add
@@ -297,14 +359,30 @@ namespace AtlantSovt
         
         private void addContactClientButton_Click(object sender, EventArgs e)
         {
+            if (addClientContactAddForm == null || addClientContactAddForm.IsDisposed)
+            {
             addClientContactAddForm = new ClientContactAddForm();
             addClientContactAddForm.Show();
+        }
+            else
+            {
+                addClientContactAddForm.Show();
+                addClientContactAddForm.Focus();
+            }
         }
         
         private void addBankDetailsClientButton_Click(object sender, EventArgs e)
         {
+            if (addClientBankDetailsAddForm == null || addClientBankDetailsAddForm.IsDisposed)
+            {
             addClientBankDetailsAddForm = new ClientBankDetailsAddForm();
             addClientBankDetailsAddForm.Show();
+        }
+            else
+            {
+                addClientBankDetailsAddForm.Show();
+                addClientBankDetailsAddForm.Focus();
+            }            
         }
         
         private void addClientButton_Click(object sender, EventArgs e)
@@ -631,7 +709,7 @@ namespace AtlantSovt
             deleteClientComboBox.Text = "";
             deleteClientComboBox.Items.Clear();
             deleteClientButton.Enabled = false;
-            DeleteClient();
+          //  DeleteClient();
         }
 
         private void deleteClientComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -676,9 +754,33 @@ namespace AtlantSovt
             helloPictureBox.Image = null;
             ShowForwarder();
         }
+
+        private void forwarderDataGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                DeleteForwarder(Convert.ToInt32(forwarderDataGridView.CurrentRow.Cells[0].Value));
+                ShowForwarder();
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                ShowForwarderInfo();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                ShowForwarderInfo();
+            }
+        }
+        
         private void forwarderDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowForwarderInfo();
+        }
+
+        private void showForwarderDeleteButton_Click(object sender, EventArgs e)
+        {
+            DeleteForwarder(Convert.ToInt32(forwarderDataGridView.CurrentRow.Cells[0].Value));
+            ShowForwarder();
         }
         #endregion
 
@@ -722,14 +824,31 @@ namespace AtlantSovt
 
         private void addContactForwarderButton_Click(object sender, EventArgs e)
         {
+            if (addForwarderContactAddForm == null || addForwarderContactAddForm.IsDisposed)
+            {
             addForwarderContactAddForm = new ForwarderContactAddForm();
             addForwarderContactAddForm.Show();
+            }
+            else
+            {
+                addForwarderContactAddForm.Show();
+                addForwarderContactAddForm.Focus();
+            }
+            
         }
 
         private void addBankDetailsForwarderButton_Click(object sender, EventArgs e)
         {
+            if (addForwarderBankDetailsAddForm == null || addForwarderBankDetailsAddForm.IsDisposed)
+            {
             addForwarderBankDetailsAddForm = new ForwarderBankDetailsAddForm();
             addForwarderBankDetailsAddForm.Show();
+            }
+            else
+            {
+                addForwarderBankDetailsAddForm.Show();
+                addForwarderBankDetailsAddForm.Focus();
+            }
         }
 
         private void forwarderAddImageButton_Click(object sender, EventArgs e)
@@ -1045,11 +1164,10 @@ namespace AtlantSovt
 
         private void forwarderDeleteButton_Click(object sender, EventArgs e)
         {
-            DeleteForwarder();
             forwarderDeleteComboBox.Text = "";
             forwarderDeleteComboBox.Items.Clear();
             forwarderDeleteButton.Enabled = false;
-
+            //DeleteForwarder();
         }
 
         private void forwarderDeleteComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -1142,6 +1260,30 @@ namespace AtlantSovt
                     ShowTransporter();
                 }
             }
+
+            private void transporterShowDataGridView_KeyDown(object sender, KeyEventArgs e)
+            {
+                if (e.KeyCode == Keys.Delete)
+                {
+                    DeleteTransporter(Convert.ToInt32(transporterShowDataGridView.CurrentRow.Cells[0].Value));
+                    ShowTransporter();
+                }
+                if (e.KeyCode == Keys.Up)
+                {
+                    ShowTransporterInfo();
+                }
+                if (e.KeyCode == Keys.Down)
+                {
+                    ShowTransporterInfo();
+                }
+            }
+
+            private void showTransporterDeleteButton_Click(object sender, EventArgs e)
+            {
+                DeleteTransporter(Convert.ToInt32(transporterShowDataGridView.CurrentRow.Cells[0].Value));
+                ShowTransporter();
+            }
+
             #endregion
 
             //Add
@@ -1161,20 +1303,46 @@ namespace AtlantSovt
 
         private void transporterAddContactAddButton_Click(object sender, EventArgs e)
         {
+            if (addTransporterContactAddForm == null || addTransporterContactAddForm.IsDisposed)
+            {
             addTransporterContactAddForm = new TransporterContactAddForm();
             addTransporterContactAddForm.Show();
+            }
+            else
+            {
+                addTransporterContactAddForm.Show();
+                addTransporterContactAddForm.Focus();
+        }
         }
 
         private void transporterAddBankDetailsAddButton_Click(object sender, EventArgs e)
         {
+            
+            if (addTransporterBankDetailsAddForm == null || addTransporterBankDetailsAddForm.IsDisposed)
+            {
             addTransporterBankDetailsAddForm = new TransporterBankDetailsAddForm();
             addTransporterBankDetailsAddForm.Show();
+        }
+            else
+            {
+                addTransporterBankDetailsAddForm.Show();
+                addTransporterBankDetailsAddForm.Focus();
+            }
         }
 
         private void transporterAddCountryAndVehicleSelectButton_Click(object sender, EventArgs e)
         {
+            
+            if (transporterCountryAndVehicleSelectForm == null || transporterCountryAndVehicleSelectForm.IsDisposed)
+            {
             transporterCountryAndVehicleSelectForm = new TransporterCountryAndVehicleSelectForm();
             transporterCountryAndVehicleSelectForm.Show();
+        }
+            else
+            {
+                transporterCountryAndVehicleSelectForm.Show();
+                transporterCountryAndVehicleSelectForm.Focus();
+            }
         }
 
         private void workDocumentTransporterAddComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -1551,10 +1719,10 @@ namespace AtlantSovt
             #region Delete
         private void transporterDeleteButton_Click(object sender, EventArgs e)
         {
-            DeleteTransporter();
             transporterDeleteComboBox.Text = "";
             transporterDeleteComboBox.Items.Clear();
             transporterDeleteButton.Enabled = false;
+            //DeleteTransporter();
         }
 
         private void transporterDeleteComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -1593,76 +1761,136 @@ namespace AtlantSovt
         #region Create
         private void firstPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SplitTransporterFirstPersonComboBoxDocument();
-            secondPersonNameComboBox.Enabled = true;
+            firstForwarderDocument = SplitForwarderDocumentComboBox(firstPersonNameDocumentComboBox);
+            firstForwarderStamp = firstForwarderDocument.ForwarderStamp;
+            secondPersonRoleDocumentСomboBox.Enabled = true;
         }
 
         private void firstPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            firstPersonNameComboBox.Items.Clear();
-            LoadTransporterFirstPersonNameComboBox();
-            firstPersonNameComboBox.DroppedDown = true;
+            firstPersonNameDocumentComboBox.Items.Clear();
+            LoadForwarderDocumentComboBox(firstPersonNameDocumentComboBox);
+            firstPersonNameDocumentComboBox.DroppedDown = true;
         }
 
-        private void firstPersonDiapasonComboBox_MouseClick(object sender, MouseEventArgs e)
+        private void secondPersonRoleDocumentСomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadTransporterFirstPersonDiapasonCombobox();
+            if(secondPersonRoleDocumentСomboBox.SelectedIndex == 2 )
+            {
+                secondPersonDiapasonDocumentComboBox.Enabled = false;
+                secondPersonNameDocumentComboBox.Enabled = true;
+        }
+            else
+            {
+                secondPersonDiapasonDocumentComboBox.Enabled = true;
+                secondPersonNameDocumentComboBox.Enabled = false;
+            }
+        }
+
+        private void secondPersonRoleDocumentСomboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            secondPersonDiapasonDocumentComboBox.Items.Clear();
+            secondPersonNameDocumentComboBox.Items.Clear();
+            secondPersonDiapasonDocumentComboBox.Text = "";
+            secondPersonNameDocumentComboBox.Text = "";
+            secondPersonRoleDocumentСomboBox.DroppedDown = true;
+        }
+
+        private void secondPersonDiapasonDocumentComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (secondPersonRoleDocumentСomboBox.SelectedIndex == 0)
+            {
+                secondPersonDiapasonDocumentComboBox.Items.Clear();
+                secondPersonNameDocumentComboBox.Items.Clear();
+                LoadTransporterDiapasonDocumentCombobox(secondPersonNameDocumentComboBox, secondPersonDiapasonDocumentComboBox);
+                secondPersonDiapasonDocumentComboBox.DroppedDown = true;
+            }
+            else if (secondPersonRoleDocumentСomboBox.SelectedIndex == 1)
+            {
+                secondPersonDiapasonDocumentComboBox.Items.Clear();
+                secondPersonNameDocumentComboBox.Items.Clear();
+                LoadClientDiapasonDocumentCombobox(secondPersonNameDocumentComboBox, secondPersonDiapasonDocumentComboBox);
+                secondPersonDiapasonDocumentComboBox.DroppedDown = true;
+            }
         }
 
         private void secondPersonNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SplitForwarderSecondPersonComboBoxDocument();
-            forwarderAsComboBox.Enabled = true;
+            if (secondPersonRoleDocumentСomboBox.SelectedIndex == 0)
+            {
+                SplitTransporterDocumentComboBox(secondPersonNameDocumentComboBox);
+        }
+            else if (secondPersonRoleDocumentСomboBox.SelectedIndex == 1)
+            {
+                SplitClientDocumentComboBox(secondPersonNameDocumentComboBox);
+
+            }
+            else if (secondPersonRoleDocumentСomboBox.SelectedIndex == 2)
+        {
+                secondForwarderDocument = SplitForwarderDocumentComboBox(secondPersonNameDocumentComboBox);
+                secondForwarderStamp = SplitForwarderDocumentComboBox(secondPersonNameDocumentComboBox).ForwarderStamp;
+
+            }
+            contractFilecheckedListBox.Enabled = true;
+            refreshContactFilesButton.Enabled = true;
         }
 
         private void secondPersonNameComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            secondPersonNameComboBox.Items.Clear();
-            LoadForwarderSecondPersonNameComboBox();
-            secondPersonNameComboBox.DroppedDown = true;
+            if (secondPersonRoleDocumentСomboBox.SelectedIndex == 0)
+            {
+                secondPersonNameDocumentComboBox.Items.Clear();
+                LoadTransporterDocumentComboBox(secondPersonNameDocumentComboBox, secondPersonDiapasonDocumentComboBox);
+                secondPersonNameDocumentComboBox.DroppedDown = true;
+            }
+            else if (secondPersonRoleDocumentСomboBox.SelectedIndex == 1)
+            {
+                secondPersonNameDocumentComboBox.Items.Clear();
+                LoadClientDocumentComboBox(secondPersonNameDocumentComboBox, secondPersonDiapasonDocumentComboBox);
+                secondPersonNameDocumentComboBox.DroppedDown = true;
+        }
+            else if (secondPersonRoleDocumentСomboBox.SelectedIndex == 2)
+            {
+                secondPersonNameDocumentComboBox.Items.Clear();
+                LoadForwarderDocumentComboBox(secondPersonNameDocumentComboBox);
+                secondPersonNameDocumentComboBox.DroppedDown = true;
+
+            }
         }
 
         private void createContactButton_Click(object sender, EventArgs e)
         {
-            IsForwarderAndTransporterFull();
-            if (!isForwarderFull || !isTransporterFull)
-            {
-                return;
-            }
-            AddContract();
-            CreateTransporterForwarderContract();
-        }
-
-        private void forwarderAsComboBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            forwarderAsComboBox.DroppedDown = true;
-        }
-
-        private void forwarderAsComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            createContactButton.Enabled = true;
+            IsDataComplete();
         }
 
         private void contractLanguageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (contractLanguageComboBox.SelectedIndex == 0)
+            if (documentTypeComboBox.SelectedIndex == 0)
             {
-                contractLanguage = 1;
+                contractType = 0;
             }
-            else if (contractLanguageComboBox.SelectedIndex == 1)
+            else if (documentTypeComboBox.SelectedIndex == 1)
             {
-                contractLanguage = 2;
+                contractType = 1;
             }
-            else if (contractLanguageComboBox.SelectedIndex == 2)
-            {
-                contractLanguage = 3;
-            }
-            firstPersonDiapasonComboBox.Enabled = true;
+            firstPersonNameDocumentComboBox.Enabled = true;
         }
 
         private void contractLanguageComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            contractLanguageComboBox.DroppedDown = true;
+            documentTypeComboBox.DroppedDown = true;
+        }
+
+        private void contractFilecheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            for (int ix = 0; ix < contractFilecheckedListBox.Items.Count; ++ix)
+                if (ix != e.Index) contractFilecheckedListBox.SetItemChecked(ix, false);
+            createContactButton.Enabled = true;
+        }
+
+        private void refreshContactFilesButton_Click(object sender, EventArgs e)
+        {
+            GetDocumentFiles();
         }
         #endregion
 
@@ -1693,6 +1921,23 @@ namespace AtlantSovt
         private void contractShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowContractInfo();
+        }
+
+        private void contractShowDataGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Delete)
+            {
+                DeleteContract();
+                ShowContract();
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+            ShowContractInfo();
+        }
+            if (e.KeyCode == Keys.Down)
+        {
+            ShowContractInfo();
+        }
         }
 
         private void contractShowOpenDocButton_Click(object sender, EventArgs e)
@@ -1726,21 +1971,38 @@ namespace AtlantSovt
         private void trackingShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowTrackingInfo();
+            trackingShowAddNoteRichTextBox.Enabled = true;
             trackingShowAddCommentButton.Enabled = true;
             trackingShowCloseOrderButton.Enabled = true;
             showTrackingCreateOrderDoc.Enabled = true;
+            exportTrackingToExcelButton.Enabled = true;
+            trackingShowDeleteOrderButton.Enabled = true;
         }
 
         private void trackingShowSearchButton_Click(object sender, EventArgs e)
         {
-            ShowTrackingSearch();
+            trackingShowTransporterContactsDataGridView.Update();
+            trackingShowForwardersDataGridView.DataSource = null;
+            trackingShowTransporterContactsDataGridView.DataSource = null;
+            trackingShowCommentDataGridView.DataSource = null;
+            trackingShowUploadAddressDataGridView.DataSource = null;
+            trackingShowDownloadAddressDataGridView.DataSource = null;
+            trackingShowAddNoteRichTextBox.Clear();
+            ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
         }
 
         private void trackingShowSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                ShowTrackingSearch();
+                trackingShowTransporterContactsDataGridView.Update();
+                trackingShowForwardersDataGridView.DataSource = null;
+                trackingShowTransporterContactsDataGridView.DataSource = null;
+                trackingShowCommentDataGridView.DataSource = null;
+                trackingShowUploadAddressDataGridView.DataSource = null;
+                trackingShowDownloadAddressDataGridView.DataSource = null;
+                trackingShowAddNoteRichTextBox.Clear();
+                ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
             }
         }
 
@@ -1748,37 +2010,44 @@ namespace AtlantSovt
         {
             if (trackingShowSearchTextBox.Text == "")
             {
-                ShowTracking();
+                ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
         }
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            ShowTrackingSearch();
-        }
-
-        private void showTrackingDataSwitcher_CheckedChanged(object sender, EventArgs e)
-        {
-            if (showTrackingDataSwitcher.Checked == true)
+        private void showTrackingDateTimePicker_ValueChanged(object sender, EventArgs e)
             {
-                showTrackingDateTimePicker.Enabled = true;
-                isDatePickerEnabled = true;
-            }
-            else
-            {
-                showTrackingDateTimePicker.Enabled = false;
-                isDatePickerEnabled = false;
-            }
+            trackingShowTransporterContactsDataGridView.Update();
+            trackingShowForwardersDataGridView.DataSource = null;
+            trackingShowTransporterContactsDataGridView.DataSource = null;
+            trackingShowCommentDataGridView.DataSource = null;
+            trackingShowUploadAddressDataGridView.DataSource = null;
+            trackingShowDownloadAddressDataGridView.DataSource = null;
+            trackingShowAddNoteRichTextBox.Clear();
+            ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
         }
 
         private void showTrackingOnlyActive_CheckedChanged(object sender, EventArgs e)
         {
-            ShowTrackingSearch();
+            trackingShowTransporterContactsDataGridView.Update();
+            trackingShowForwardersDataGridView.DataSource = null;
+            trackingShowTransporterContactsDataGridView.DataSource = null;
+            trackingShowCommentDataGridView.DataSource = null;
+            trackingShowUploadAddressDataGridView.DataSource = null;
+            trackingShowDownloadAddressDataGridView.DataSource = null;
+            trackingShowAddNoteRichTextBox.Clear();
+            ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
         }
 
         private void trackingShowCloseOrder_Click(object sender, EventArgs e)
         {
+            if(closeDateForm == null)
+            {
             ShowTrackingCloseOrder();
+        }
+            else
+            {
+                closeDateForm.Focus();
+            }
         }
 
         private void trackingShowAddCommentButton_Click(object sender, EventArgs e)
@@ -1799,18 +2068,26 @@ namespace AtlantSovt
 
         private void trackingShowCommentDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            ShowTrackingCommentForm ShowTrackingComment = new ShowTrackingCommentForm(this);
+            if (ShowTrackingComment == null || ShowTrackingComment.IsDisposed == true)
+            {
+                ShowTrackingComment = new ShowTrackingCommentForm(this);
             try
             {
                 trackingShowCommentDataGridView.ClearSelection();
                 ShowTrackingComment.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
                 ShowTrackingComment.Date = Convert.ToDateTime(trackingShowCommentDataGridView.CurrentRow.Cells[1].Value);
                 ShowTrackingComment.Show();
+                    ShowTrackingComment.Focus();
             }
-            catch(Exception ex)
+                catch (Exception ex)
             {
                 Log.Write(ex);
                 MessageBox.Show("Натисніть на коментар");
+            }
+        }
+            else
+            {
+                ShowTrackingComment.Focus();
             }
         }
 
@@ -1823,24 +2100,62 @@ namespace AtlantSovt
             }
             OrderCounter();
             CreateOrderDocument();
-            ShowTrackingSearch();
+            trackingShowTransporterContactsDataGridView.Update();
+            trackingShowForwardersDataGridView.DataSource = null;
+            trackingShowTransporterContactsDataGridView.DataSource = null;
+            trackingShowCommentDataGridView.DataSource = null;
+            trackingShowUploadAddressDataGridView.DataSource = null;
+            trackingShowDownloadAddressDataGridView.DataSource = null;
+            trackingShowAddNoteRichTextBox.Clear();
+            ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
         }
 
         private void trackingShowAddNoteRichTextBox_MouseClick(object sender, MouseEventArgs e)
         {
-            AddOrderNoteForm orderNoteForm = new AddOrderNoteForm(this);
+            if (orderNoteForm == null || orderNoteForm.IsDisposed == true)
+            {
+                orderNoteForm = new AddOrderNoteForm(this);
             try
             {
                 orderNoteForm.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
                 orderNoteForm.Show();
+                    orderNoteForm.Focus();
             }
             catch (Exception ex)
             {
                 Log.Write(ex);
+                    orderNoteForm = null;
                 orderNoteForm.Dispose();
                 MessageBox.Show("Немає жодної заявки");
             }
         }    
+            else
+            {
+                orderNoteForm.Focus();
+            }
+        
+        }
+
+        private void exportTrackingToExcelButton_Click(object sender, EventArgs e)
+        {
+            ExportTrackingToExcel();
+        }
+
+        private void trackingShowDataGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                ShowTrackingInfo();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                ShowTrackingInfo();
+            }
+        }
 
         #endregion
 
@@ -1967,6 +2282,12 @@ namespace AtlantSovt
             addCubeForm.Show();
         }
 
+        private void OrderAddSatffAddButton_Click(object sender, EventArgs e)
+        {
+            AddStaffForm addStaffForm = new AddStaffForm();
+            addStaffForm.Show();
+        }
+
         private void OrderAddTrailerAddButton_Click(object sender, EventArgs e)
         {
             AddTrailerForm addTrailerForm = new AddTrailerForm();
@@ -1990,7 +2311,7 @@ namespace AtlantSovt
             AddOrderDenyForm addOrderDenyForm = new AddOrderDenyForm();
             addOrderDenyForm.Show();
         }
-
+        //addresses
         private void OrderAddDownloadAddressAddButton_Click(object sender, EventArgs e)
         {
             DownloadAddressForm();
@@ -2009,7 +2330,7 @@ namespace AtlantSovt
         {
             UncustomsAddressForm();
         }
-
+        //===============================
         private void OrderAddAdditionalTermsSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitAdditionalTermOrderAdd();
@@ -2130,10 +2451,18 @@ namespace AtlantSovt
         {
             SplitCubeOrderAdd();
         }
+        private void OrderAddStaffSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitStaffOrderAdd();
+        }
 
         private void OrderAddCubeSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitCubeOrderAdd();
+        }
+        private void OrderAddStaffSelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitStaffOrderAdd();
         }
 
         private void OrderAddCubeSelectComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -2142,7 +2471,12 @@ namespace AtlantSovt
             LoadOrderAddCubeSelectComboBox();
             OrderAddCubeSelectComboBox.DroppedDown = true;
         }
-
+        private void OrderAddStaffSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderAddStaffComboBox.Items.Clear();
+            LoadOrderAddStaffSelectComboBox();
+            OrderAddStaffComboBox.DroppedDown = true;
+        }
         private void OrderAddTrailerSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitTrailerOrderAdd();
@@ -2218,10 +2552,7 @@ namespace AtlantSovt
             OrderAddADRSelectComboBox.DroppedDown = true;
         }
 
-        private void OrderAddYOrUComboBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            OrderAddPersonalComboBox.DroppedDown = true;
-        }
+
 
         //ORDER UPDATE
 
@@ -2267,8 +2598,8 @@ namespace AtlantSovt
         private void OrderUpdateClientDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             LoadOrderUpdateClientDiapasonCombobox();
+            OrderUpdateClientDiapasoneComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateClientSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateClientSelectComboBox.Items.Clear();
@@ -2276,42 +2607,35 @@ namespace AtlantSovt
             OrderUpdateClientSelectComboBox.DroppedDown = true;
             OrderUpdateForwarder1SelectComboBox.Enabled = true;
         }
-
         private void OrderUpdateTransporterDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             LoadOrderUpdateTransporterDiapasonCombobox();
+            OrderUpdateTransporterDiapasoneComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateTransporterSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateTransporterSelectComboBox.Items.Clear();
             LoadOrderUpdateTransporterSelectComboBox();
             OrderUpdateTransporterSelectComboBox.DroppedDown = true;
         }
-
-
-
         private void OrderUpdateForwarder1SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateForwarder1SelectComboBox.Items.Clear();
             LoadOrderUpdateForwarder1SelectComboBox();
             OrderUpdateForwarder1SelectComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateForwarder2SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateForwarder2SelectComboBox.Items.Clear();
             LoadOrderUpdateForwarder2SelectComboBox();
             OrderUpdateForwarder2SelectComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateForwarder3SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateForwarder3SelectComboBox.Items.Clear();
             LoadOrderUpdateForwarder3SelectComboBox();
             OrderUpdateForwarder3SelectComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateClientSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitClientOrderUpdate();
@@ -2384,6 +2708,11 @@ namespace AtlantSovt
             UpdateCubeForm.Show();
         }
 
+        private void OrderUpdateStaffAddButton_Click(object sender, EventArgs e)
+        {
+            AddStaffForm UpdateStaffForm = new AddStaffForm();
+            UpdateStaffForm.Show();
+        }
         private void OrderUpdateTrailerAddButton_Click(object sender, EventArgs e)
         {
             AddTrailerForm UpdateTrailerForm = new AddTrailerForm();
@@ -2549,15 +2878,37 @@ namespace AtlantSovt
         {
             SplitCubeOrderUpdate();
         }
+
+
         private void OrderUpdateCubeSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitCubeOrderUpdate();
         }
+
+
+        private void OrderUpdateStaffSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitStaffOrderUpdate();
+        }
+
+
+        private void OrderUpdateStaffSelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitStaffOrderUpdate();
+        }
+
         private void OrderUpdateCubeSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateCubeSelectComboBox.Items.Clear();
             LoadOrderUpdateCubeSelectComboBox();
             OrderUpdateCubeSelectComboBox.DroppedDown = true;
+        }
+
+        private void OrderUpdateStaffSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            OrderUpdateStaffSelectComboBox.Items.Clear();
+            LoadOrderUpdateStaffSelectComboBox();
+            OrderUpdateStaffSelectComboBox.DroppedDown = true;
         }
 
         private void OrderUpdateTrailerSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -2598,6 +2949,7 @@ namespace AtlantSovt
         {
             SplitLoadingForm2OrderUpdate();
         }
+
         private void OrderUpdateLoadingForm2SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateLoadingForm2SelectComboBox.Items.Clear();
@@ -2613,37 +2965,193 @@ namespace AtlantSovt
             }
         }
 
+
+
+
+        private void OrderAddDownloadDateFromTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            if (OrderAddDownloadDateToTimePicker.Checked)
+            {
+                OrderAddDownloadDateToTimePicker.MinDate = OrderAddDownloadDateFromTimePicker.Value.AddDays(1);
+            }
+            else
+            {
+                OrderAddDownloadDateToTimePicker.MinDate = OrderAddDownloadDateFromTimePicker.Value.AddDays(1);
+                OrderAddDownloadDateToTimePicker.Value = OrderAddDownloadDateToTimePicker.MinDate;
+                OrderAddDownloadDateToTimePicker.Checked = false;
+            }
+        }
+
+
+        private void OrderAddUploadDateFromTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            if (OrderAddUploadDateToTimePicker.Checked)
+            {
+                OrderAddUploadDateToTimePicker.MinDate = OrderAddUploadDateFromTimePicker.Value.AddDays(1);
+            }
+            else
+            {
+                OrderAddUploadDateToTimePicker.MinDate = OrderAddUploadDateFromTimePicker.Value.AddDays(1);
+                OrderAddUploadDateToTimePicker.Value = OrderAddUploadDateToTimePicker.MinDate;
+                OrderAddUploadDateToTimePicker.Checked = false;
+            }
+        }
+
+
         private void OrderUpdateLoadingForm1AddButton_Click(object sender, EventArgs e)
         {
             AddLoadingFormForm updateLoadingFormForm = new AddLoadingFormForm();
             updateLoadingFormForm.Show();
         }
 
+       
         private void OrderUpdateADRSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateADRSelectComboBox.DroppedDown = true;
         }
 
-        private void OrderUpdateYOrUComboBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            OrderUpdatePersonalComboBox.DroppedDown = true;
-        }
+
 
         private void OrderAddLanduageSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddLanduageSelectComboBox.DroppedDown = true;
         }
 
+
+
         private void OrderUpdateLanguageSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateLanguageSelectComboBox.DroppedDown = true;
         }
+
+
         #endregion
 
-        private void OrderUpdatePersonalButton_Click(object sender, EventArgs e)
+        //Arbeiten
+        #region Arbeiten
+        private void arbeitenShowMainDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-
+            ShowArbeitenInfo();            
         }
 
+        private void arbeitenAddButton_Click(object sender, EventArgs e)
+        {
+            AddArbeiten();
+            arbeitenAddOrderSelectComboBox.SelectedIndex = -1;
+        }
+
+        private void arbeitenDeleteButton_Click(object sender, EventArgs e)
+        {
+            DeleteArbeiten();
+        }
+
+        private void arbeitenAddOrderSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            arbeitenAddOrderSelectComboBox.Items.Clear();
+            LoadArbeitenAddOrderSelectComboBox();
+            arbeitenAddOrderSelectComboBox.DroppedDown = true;
+        }
+        private void arbeitenAddOrderSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitOrderArbeitenAdd();
+            LoadArbeitenAddTransporterTextBox();
+            LoadArbeitenAddClientTextBox();
+        }
+        private void arbeitenAddOrderSelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitOrderArbeitenAdd();
+            LoadArbeitenAddTransporterTextBox();
+            LoadArbeitenAddClientTextBox();
+        }
+        private void arbeitenAddOrderFilterDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            arbeitenAddOrderSelectComboBox.SelectedIndex = -1;
+            arbeitenAddOrderSelectComboBox.Items.Clear();
+            LoadArbeitenAddOrderSelectComboBox();
+        }
+
+
+
+        private void arbeitenAddOrderFilterCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            arbeitenAddOrderSelectComboBox.SelectedIndex = -1;
+            arbeitenAddOrderSelectComboBox.Items.Clear();
+            LoadArbeitenAddOrderSelectComboBox();
+        }
+
+
+        private void arbeitenShowSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                ShowArbeitenSearch();
+            }
+        }
+
+        private void arbeitenShowSearchDatePicker_ValueChanged(object sender, EventArgs e)
+        {
+            ShowArbeitenSearch();
+        }
+
+        private void arbeitenShowSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (arbeitenShowSearchTextBox.Text == "")
+            {
+                ShowArbeitenSearch();
+            }
+        }
+
+        private void arbeitenShowSearchButton_Click(object sender, EventArgs e)
+        {
+            ShowArbeitenSearch();
+        }
+
+        private void arbeitenShowOnlyActive_CheckedChanged(object sender, EventArgs e)
+        {
+            ShowArbeitenSearch();
+        }
+
+
+
+        //update
+
+        private void arbeitenUpdateOrderSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            arbeitenUpdateOrderSelectComboBox.Items.Clear();
+            LoadArbeitenUpdateOrderSelectComboBox();
+            arbeitenUpdateOrderSelectComboBox.DroppedDown = true;
+        }
+        private void arbeitenUpdateOrderSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitOrderArbeitenUpdate();
+            LoadArbeitenUpdateTransporterTextBox();
+            LoadArbeitenUpdateClientTextBox();
+            LoadAllFieldsArbeitenUpdate();
+        }
+        private void arbeitenUpdateOrderSelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitOrderArbeitenUpdate();
+            LoadArbeitenUpdateTransporterTextBox();
+            LoadArbeitenUpdateClientTextBox();
+        }
+        private void arbeitenUpdateOrderFilterDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            arbeitenUpdateOrderSelectComboBox.SelectedIndex = -1;
+            arbeitenUpdateOrderSelectComboBox.Items.Clear();
+            LoadArbeitenUpdateOrderSelectComboBox();
+        }
+
+        private void arbeitenUpdateOrderFilterCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            arbeitenUpdateOrderSelectComboBox.SelectedIndex = -1;
+            arbeitenUpdateOrderSelectComboBox.Items.Clear();
+            LoadArbeitenUpdateOrderSelectComboBox();
+        }
+        private void arbeitenUpdateButton_Click(object sender, EventArgs e)
+        {
+            UpdateArbeiten();
+        }
+
+        #endregion
     }
 }

@@ -143,6 +143,7 @@
             this.Name = "ForwarderContactAddForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додавання контакту";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ForwarderContactAddForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

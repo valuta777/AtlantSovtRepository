@@ -143,6 +143,7 @@
             this.Name = "TransporterContactAddForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додавання контакту";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TransporterContactAddForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

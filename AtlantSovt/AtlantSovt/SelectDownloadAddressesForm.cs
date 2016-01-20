@@ -20,8 +20,7 @@ namespace AtlantSovt
         public SelectDownloadAddressesForm(Client new_client)
         {
             InitializeComponent();
-            client = new_client;            
-            LoadClientDownloadAddresses();
+            client = new_client;           
             IsUpdate = false;
         }
         public SelectDownloadAddressesForm(Client new_client, Order new_order)
@@ -29,8 +28,6 @@ namespace AtlantSovt
             InitializeComponent();
             client = new_client;
             order = new_order;
-            LoadClientDownloadAddresses();
-            CheckSelectedDownloadAddresses();
             IsUpdate = true;
         }
 
@@ -145,7 +142,7 @@ namespace AtlantSovt
             }
         }
 
-        private void LoadClientDownloadAddresses()
+        public void LoadClientDownloadAddresses()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -157,27 +154,47 @@ namespace AtlantSovt
                     downloadAddresssListBox.Items.Add(item.Country.Name + "," +item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
                 }
             }
-        }        
+        }
+        public void LoadClientDownloadAddresses(long? id)
+        {
+            if (id.HasValue)
+            {
+                using (var db = new AtlantSovtContext())
+                {
+                    var query = from address in db.DownloadAddresses
+                                where address.Id == id.Value
+                                select address;
+                    foreach (var item in query)
+                    {
+                        downloadAddresssListBox.Items.Add(item.Country.Name + "," + item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                    }
+                }
+            }
+        }
 
         private void downloadAddressListBox_DoubleClick(object sender, EventArgs e)
         {
             downloadAddresssListBox.Items.Clear();
             LoadClientDownloadAddresses();
+            if (order != null)
+            {
+                CheckSelectedDownloadAddresses();
+            }
         }
 
         private void addDownloadAddressButton_Click(object sender, EventArgs e)
         {
-            AddAddressForm addDownloadAddressForm = new AddAddressForm(client, 1);
+            AddAddressForm addDownloadAddressForm = new AddAddressForm(client, 1, this);
             addDownloadAddressForm.Show();
         }
 
-        internal void DownloadAddressesSelect(Order new_order)
+        internal string DownloadAddressesSelect(Order new_order)
         {
             order = new_order;
-            SaveDownloadAddresses();
+            return SaveDownloadAddresses();
         }
 
-        private void SaveDownloadAddresses()
+        private string SaveDownloadAddresses()
         {
             if (downloadAddresssListBox.CheckedItems.Count != 0 && order != null)
             {
@@ -199,13 +216,41 @@ namespace AtlantSovt
                             db.Orders.Find(order.Id).OrderDownloadAddresses.Add(new_OrderDownloadAddress);
                         }
                         db.SaveChanges();
-                        MessageBox.Show("Успішно вибрано " + downloadAddresssListBox.CheckedItems.Count + " Адрес розвантаження");
+                        return  "Успішно вибрано " + downloadAddresssListBox.CheckedItems.Count + " Адрес завантаження\n";
                     }
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
                     MessageBox.Show("Помилка!!", ex.ToString());
+                    return string.Empty;
+                }
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
+
+        private void SelectDownloadAddressesForm_Load(object sender, EventArgs e)
+        {
+            LoadClientDownloadAddresses();
+            if (order != null)
+            {
+                CheckSelectedDownloadAddresses();
+            }
+        }
+
+        private void SelectDownloadAddressesForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (order == null)
+            {
+                if (downloadAddresssListBox.CheckedItems.Count != 0)
+                {
+                    if (MessageBox.Show("Закрити форму без збереження?\nВибрані адреси НЕ додадуться.\n Для збереження вибраних адрес натисніть <Отмена> та <Додати до заявки>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                    {
+                        e.Cancel = true;
+                    }
                 }
             }
         }

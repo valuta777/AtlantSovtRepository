@@ -29,8 +29,6 @@ namespace AtlantSovt
             InitializeComponent();
             client = new_client;
             order = new_order;
-            LoadClientUncustomsAddresses();
-            CheckSelectedUncustomsAddresses();
             IsUpdate = true;
         }
 
@@ -145,7 +143,7 @@ namespace AtlantSovt
             }
         }
 
-        void LoadClientUncustomsAddresses()
+        public void LoadClientUncustomsAddresses()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -158,26 +156,46 @@ namespace AtlantSovt
                 }
             }
         }
+        public void LoadClientUncustomsAddresses(long? id)
+        {
+            if (id.HasValue)
+            { 
+                using (var db = new AtlantSovtContext())
+                {
+                    var query = from address in db.UnCustomsAddresses
+                                where address.Id == id.Value
+                                select address;
+                    foreach (var item in query)
+                    {
+                        uncustomsAddressesListBox.Items.Add(item.Country.Name + "," + item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                    }
+                }
+            }
+        }
 
         private void unсustomsAddressListBox_DoubleClick(object sender, EventArgs e)
         {
             uncustomsAddressesListBox.Items.Clear();
             LoadClientUncustomsAddresses();
+            if (order != null)
+            {
+                CheckSelectedUncustomsAddresses();
+            }
         }
 
         private void addUncustomsAddressButton_Click(object sender, EventArgs e)
         {
-            AddAddressForm addUncustomsAddressForm = new AddAddressForm(client, 4);
+            AddAddressForm addUncustomsAddressForm = new AddAddressForm(client, 4, this);
             addUncustomsAddressForm.Show();
         }
 
-        internal void UncustomsAddressesSelect(Order new_order)
+        internal string UncustomsAddressesSelect(Order new_order)
         {
             order = new_order;
-            SaveUncustomsAddresses();
+            return SaveUncustomsAddresses();
         }
 
-        private void SaveUncustomsAddresses()
+        private string SaveUncustomsAddresses()
         {
             if (uncustomsAddressesListBox.CheckedItems.Count != 0 && order != null)
             {
@@ -200,21 +218,43 @@ namespace AtlantSovt
                         }
 
                         db.SaveChanges();
-                        MessageBox.Show("Успішно вибрано " + uncustomsAddressesListBox.CheckedItems.Count + " Адрес розмитнення");
+                        return "Успішно вибрано " + uncustomsAddressesListBox.CheckedItems.Count + " Адрес розмитнення\n";
                     }
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
                     MessageBox.Show("Помилка:", ex.ToString());
+                    return string.Empty;
                 }
+            }
+            else
+            {
+                return string.Empty;
             }
         }
 
         private void SelectUncustomsAddressesForm_Load(object sender, EventArgs e)
         {
             LoadClientUncustomsAddresses();
+            if (order != null)
+            {
+                CheckSelectedUncustomsAddresses();
+            }
         }
 
+        private void SelectUncustomsAddressesForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (order == null)
+            {
+                if (uncustomsAddressesListBox.CheckedItems.Count != 0)
+                {
+                    if (MessageBox.Show("Закрити форму без збереження?\nВибрані адреси НЕ додадуться.\n Для збереження вибраних адрес натисніть <Отмена> та <Додати до заявки>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                    {
+                        e.Cancel = true;
+                    }
+                }
+            }
+        }
     }
 }

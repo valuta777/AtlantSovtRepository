@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,17 +25,20 @@ namespace AtlantSovt
         string new_SWIFT;
         string new_IBAN;
         long ID;
+        bool IsAdding;
 
         public TransporterBankDetailsAddForm()
         {
             InitializeComponent();
             ID = 0;
+            IsAdding = true;
         }
 
         private void addTransporterBankDetailsButton_Click(object sender, EventArgs e)
         {
-            if (transporterBankNameTextBox.Text != "" && transporterMFOTextBox.Text != "" && transporterAccountNumberTextBox.Text != "" && transporterEDRPOUTextBox.Text != ""
-                && transporterIPNTextBox.Text != "")
+            if (transporterBankNameTextBox.Text != "" || transporterMFOTextBox.Text != "" || transporterAccountNumberTextBox.Text != "" || transporterEDRPOUTextBox.Text != "" ||
+                   transporterIPNTextBox.Text != "" || transporterCertificateNumberTextBox.Text != "" || transporterCertificateSerialTextBox.Text != "" || transporterSWIFTTextBox.Text != ""
+                   || transporterIBANTextBox.Text != "")
             {
                 new_BankName = transporterBankNameTextBox.Text;
                 new_MFO = transporterMFOTextBox.Text;
@@ -48,16 +52,16 @@ namespace AtlantSovt
                 this.Hide();
                 if (ID != 0)
                 {
-                    AddTransporterBankDetail(ID);
+                    AddTransporterBankDetail(ID, false);
                 }
             }
             else
             {
-                MessageBox.Show("Заповніть обов'язкові поля!");
+                MessageBox.Show("Для збереження заповніть хочаб одне поле");
             }
 
         }
-        internal void AddTransporterBankDetail(long id)
+        internal string AddTransporterBankDetail(long id, bool newIsAdding)
         {
             using (var db = new AtlantSovtContext())
             {
@@ -78,12 +82,23 @@ namespace AtlantSovt
                 {
                     db.TransporterBankDetails.Add(New_TransporterBankDetail);                    
                     db.SaveChanges();
-                    MessageBox.Show("Банківські данні успішно додані перевізнику");                   
+                    IsAdding = newIsAdding;
+                    if (IsAdding)
+                    {
+                        return "Банківські данні успішно додані перевізнику [" + New_TransporterBankDetail.Id + "]\n";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Банківські данні успішно додані перевізнику");
+                        return string.Empty;
+                    }               
                 }
                 catch (Exception ec)
                 {
+                    Log.Write(ec);
                     MessageBox.Show(ec.Message);
-                    
+                    return string.Empty;
+
                 }
 
             }
@@ -91,6 +106,23 @@ namespace AtlantSovt
         internal void AddTransporterBankDetail2(long id) 
         {
             ID = id;
+        }
+
+        private void TransporterBankDetailsAddForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (IsAdding)
+            {
+                if (transporterBankNameTextBox.Text != "" || transporterMFOTextBox.Text != "" || transporterAccountNumberTextBox.Text != "" || transporterEDRPOUTextBox.Text != "" ||
+                    transporterIPNTextBox.Text != "" || transporterCertificateNumberTextBox.Text != "" || transporterCertificateSerialTextBox.Text != "" || transporterSWIFTTextBox.Text != "" || transporterIBANTextBox.Text != "")
+                {
+                    {
+                        if (MessageBox.Show("Закрити форму без збереження?\nБанківські данні НЕ збережуться.\n Для збереження натисніть <Отмена> та <Додати Банківські данні>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                        {
+                            e.Cancel = true;
+                        }
+                    }
+                }
+            }           
         }
     }    
 }

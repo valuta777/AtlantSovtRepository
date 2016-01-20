@@ -13,6 +13,7 @@ namespace AtlantSovt.AtlantSovtDb
         public Client()
         {
             ClientContacts = new HashSet<ClientContact>();
+            Contracts = new HashSet<Contract>();
             CustomsAddresses = new HashSet<CustomsAddress>();
             DownloadAddresses = new HashSet<DownloadAddress>();
             Orders = new HashSet<Order>();
@@ -53,6 +54,9 @@ namespace AtlantSovt.AtlantSovtDb
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ClientContact> ClientContacts { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Contract> Contracts { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CustomsAddress> CustomsAddresses { get; set; }

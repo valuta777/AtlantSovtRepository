@@ -13,10 +13,12 @@ namespace AtlantSovt.AtlantSovtDb
         }
 
         public virtual DbSet<AdditionalTerm> AdditionalTerms { get; set; }
+        public virtual DbSet<Arbeiten> Arbeitens { get; set; }
         public virtual DbSet<Cargo> Cargoes { get; set; }
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<ClientBankDetail> ClientBankDetails { get; set; }
         public virtual DbSet<ClientContact> ClientContacts { get; set; }
+        public virtual DbSet<Contract> Contracts { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
         public virtual DbSet<Cube> Cubes { get; set; }
         public virtual DbSet<CustomsAddress> CustomsAddresses { get; set; }
@@ -27,6 +29,7 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<Forwarder> Forwarders { get; set; }
         public virtual DbSet<ForwarderBankDetail> ForwarderBankDetails { get; set; }
         public virtual DbSet<ForwarderContact> ForwarderContacts { get; set; }
+        public virtual DbSet<ForwarderContract> ForwarderContracts { get; set; }
         public virtual DbSet<ForwarderOrder> ForwarderOrders { get; set; }
         public virtual DbSet<ForwarderStamp> ForwarderStamps { get; set; }
         public virtual DbSet<LoadingForm> LoadingForms { get; set; }
@@ -40,6 +43,7 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<OrderUploadAdress> OrderUploadAdresses { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
         public virtual DbSet<RegularyDelay> RegularyDelays { get; set; }
+        public virtual DbSet<Staff> Staffs { get; set; }
         public virtual DbSet<TaxPayerStatu> TaxPayerStatus { get; set; }
         public virtual DbSet<TirCmr> TirCmrs { get; set; }
         public virtual DbSet<TrackingComment> TrackingComments { get; set; }
@@ -48,7 +52,6 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual DbSet<TransporterBankDetail> TransporterBankDetails { get; set; }
         public virtual DbSet<TransporterContact> TransporterContacts { get; set; }
         public virtual DbSet<TransporterCountry> TransporterCountries { get; set; }
-        public virtual DbSet<TransporterForwarderContract> TransporterForwarderContracts { get; set; }
         public virtual DbSet<TransporterVehicle> TransporterVehicles { get; set; }
         public virtual DbSet<UnCustomsAddress> UnCustomsAddresses { get; set; }
         public virtual DbSet<UploadAddress> UploadAddresses { get; set; }
@@ -92,6 +95,11 @@ namespace AtlantSovt.AtlantSovtDb
                 .WithOptional(e => e.Client)
                 .WillCascadeOnDelete();
 
+            modelBuilder.Entity<Contract>()
+                .HasMany(e => e.ForwarderContracts)
+                .WithOptional(e => e.Contract)
+                .WillCascadeOnDelete();
+
             modelBuilder.Entity<Country>()
                 .HasMany(e => e.TransporterCountries)
                 .WithRequired(e => e.Country)
@@ -118,6 +126,11 @@ namespace AtlantSovt.AtlantSovtDb
                 .WillCascadeOnDelete();
 
             modelBuilder.Entity<Forwarder>()
+                .HasMany(e => e.ForwarderOrders)
+                .WithOptional(e => e.Forwarder)
+                .WillCascadeOnDelete();
+
+            modelBuilder.Entity<Forwarder>()
                 .HasOptional(e => e.ForwarderStamp)
                 .WithRequired(e => e.Forwarder)
                 .WillCascadeOnDelete();
@@ -135,6 +148,11 @@ namespace AtlantSovt.AtlantSovtDb
             modelBuilder.Entity<Order>()
                 .Property(e => e.Freight)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Order>()
+                .HasOptional(e => e.Arbeiten)
+                .WithRequired(e => e.Order)
+                .WillCascadeOnDelete();
 
             modelBuilder.Entity<Order>()
                 .HasMany(e => e.ForwarderOrders)

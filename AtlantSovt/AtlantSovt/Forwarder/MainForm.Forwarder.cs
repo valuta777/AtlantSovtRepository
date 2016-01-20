@@ -31,6 +31,7 @@ namespace AtlantSovt
         {
             forwarderContactsDataGridView.Visible = false;
             forwarderBankDetailsDataGridView.Visible = false;
+            showForwarderDeleteButton.Enabled = false;
             forwarderCommentRichTextBox.Text = "";
 
             using (var db = new AtlantSovtContext())
@@ -132,6 +133,7 @@ namespace AtlantSovt
             forwarderBankDetailsDataGridView.Update();
             forwarderContactsDataGridView.Visible = true;
             forwarderBankDetailsDataGridView.Visible = true;
+            showForwarderDeleteButton.Enabled = true;
         }
 
         //add
@@ -331,19 +333,21 @@ namespace AtlantSovt
                     {
                         db.Forwarders.Add(New_Forwarder);
                         db.SaveChanges();
-                        MessageBox.Show("Експедитор успішно доданий");
+                        string massage = "Експедитор успішно доданий\n";
+
 
                         if (addForwarderBankDetailsAddForm != null)
                         {
-                            addForwarderBankDetailsAddForm.AddForwarderBankDetail(New_Forwarder.Id);
+                            massage += addForwarderBankDetailsAddForm.AddForwarderBankDetail(New_Forwarder.Id, true);
                             addForwarderBankDetailsAddForm = null;
                         }
                         if (addForwarderContactAddForm != null)
                         {
-                            addForwarderContactAddForm.AddForwarderContact(New_Forwarder.Id);
+                            massage += addForwarderContactAddForm.AddForwarderContact(New_Forwarder.Id, true);
                             addForwarderContactAddForm = null;
                         }
                         AddForwarderStamp(New_Forwarder.Id);
+                        MessageBox.Show(massage);
                     }
                     catch (Exception ex)
                     {
@@ -602,10 +606,11 @@ namespace AtlantSovt
         }
 
         //Delete
-        void DeleteForwarder()
+        void DeleteForwarder(int id)
         {
             using (var db = new AtlantSovtContext())
             {
+                deleteForwarder = db.Forwarders.Find(id);
                 if (deleteForwarder != null)
                 {
                     if (MessageBox.Show("Видалити експедитора " + deleteForwarder.Name + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

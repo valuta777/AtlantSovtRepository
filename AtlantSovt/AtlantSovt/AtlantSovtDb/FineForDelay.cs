@@ -8,7 +8,7 @@ namespace AtlantSovt.AtlantSovtDb
 
     public partial class FineForDelay
     {
-        
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FineForDelay()
         {
             Orders = new HashSet<Order>();

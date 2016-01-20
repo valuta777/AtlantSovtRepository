@@ -19,14 +19,16 @@ namespace AtlantSovt
         string new_FaxNumber;
         string new_Email;
         long Id;
+        bool IsAdding;
 
         public ForwarderContactAddForm()
         {
             InitializeComponent();
             long Id = 0;
+            IsAdding = true;
         }
 
-        internal void AddForwarderContact(long id)
+        internal string AddForwarderContact(long id , bool IsAddingnew)
         {
             using (var db = new AtlantSovtContext())
             {
@@ -42,12 +44,23 @@ namespace AtlantSovt
                 {
                     db.ForwarderContacts.Add(New_ForwarderContact);
                     db.SaveChanges();
-                    MessageBox.Show("Контакт успішно доданий експедитору " + New_ForwarderContact.ForwarderId);
+                    IsAdding = IsAddingnew;
+                    if (IsAdding)
+                    {
+                        return "Контакт успішно доданий експедитору [" + New_ForwarderContact.Id + "]\n";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Контакт успішно доданий експедитору ");
+                        return string.Empty;
+                    }
+                   
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
                     MessageBox.Show(ex.Message);
+                    return string.Empty;
                 }
 
             }
@@ -55,21 +68,41 @@ namespace AtlantSovt
 
         private void addContactForwarderButton_Click(object sender, EventArgs e)
         {
-
-            new_ContactPerson = contactPersonForwarderContactTextBox.Text;
-            new_TelephoneNumber = telephoneNumberForwarderContactTextBox.Text;
-            new_FaxNumber = faxNumberForwarderContactTextBox.Text;
-            new_Email = emailForwarderContactTextBox.Text;
-            
-            this.Hide();
-            if (Id != 0)
+            if (contactPersonForwarderContactTextBox.Text != "" || telephoneNumberForwarderContactTextBox.Text != "" || faxNumberForwarderContactTextBox.Text != "" || emailForwarderContactTextBox.Text != "")
             {
-                AddForwarderContact(Id);
+                new_ContactPerson = contactPersonForwarderContactTextBox.Text;
+                new_TelephoneNumber = telephoneNumberForwarderContactTextBox.Text;
+                new_FaxNumber = faxNumberForwarderContactTextBox.Text;
+                new_Email = emailForwarderContactTextBox.Text;
+
+                this.Hide();
+                if (Id != 0)
+                {
+                    AddForwarderContact(Id, false);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Для збереження заповніть хочаб одне поле");
             }
         }
        internal void AddForwarderContact2(long id) 
         {
             Id = id;
+        }
+
+        private void ForwarderContactAddForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (IsAdding)
+            {
+                if (contactPersonForwarderContactTextBox.Text != "" || telephoneNumberForwarderContactTextBox.Text != "" || faxNumberForwarderContactTextBox.Text != "" || emailForwarderContactTextBox.Text != "")
+                {
+                    if (MessageBox.Show("Закрити форму без збереження?\nКонтакт НЕ збережеться.\n Для збереження натисніть <Отмена> та <Додати контакт>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                    {
+                        e.Cancel = true;
+                    }
+                }
+            }
         }
     }
 }

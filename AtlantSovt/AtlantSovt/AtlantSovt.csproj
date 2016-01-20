@@ -60,6 +60,7 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -77,6 +78,12 @@
   <ItemGroup>
     <Compile Include="Additions\Log.cs" />
     <Compile Include="Additions\Mail.cs" />
+    <Compile Include="AddStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStaffForm.Designer.cs">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddTrackingCloseDateForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,11 +181,13 @@
       <DependentUpon>AddAddressForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AtlantSovtDb\AdditionalTerm.cs" />
+    <Compile Include="AtlantSovtDb\Arbeiten.cs" />
     <Compile Include="AtlantSovtDb\AtlantSovtContext.cs" />
     <Compile Include="AtlantSovtDb\Cargo.cs" />
     <Compile Include="AtlantSovtDb\Client.cs" />
     <Compile Include="AtlantSovtDb\ClientBankDetail.cs" />
     <Compile Include="AtlantSovtDb\ClientContact.cs" />
+    <Compile Include="AtlantSovtDb\Contract.cs" />
     <Compile Include="AtlantSovtDb\Country.cs" />
     <Compile Include="AtlantSovtDb\Cube.cs" />
     <Compile Include="AtlantSovtDb\CustomsAddress.cs" />
@@ -189,6 +198,7 @@
     <Compile Include="AtlantSovtDb\Forwarder.cs" />
     <Compile Include="AtlantSovtDb\ForwarderBankDetail.cs" />
     <Compile Include="AtlantSovtDb\ForwarderContact.cs" />
+    <Compile Include="AtlantSovtDb\ForwarderContract.cs" />
     <Compile Include="AtlantSovtDb\ForwarderOrder.cs" />
     <Compile Include="AtlantSovtDb\ForwarderStamp.cs" />
     <Compile Include="AtlantSovtDb\LoadingForm.cs" />
@@ -202,6 +212,7 @@
     <Compile Include="AtlantSovtDb\OrderUploadAdress.cs" />
     <Compile Include="AtlantSovtDb\Payment.cs" />
     <Compile Include="AtlantSovtDb\RegularyDelay.cs" />
+    <Compile Include="AtlantSovtDb\Staff.cs" />
     <Compile Include="AtlantSovtDb\TaxPayerStatu.cs" />
     <Compile Include="AtlantSovtDb\TirCmr.cs" />
     <Compile Include="AtlantSovtDb\TrackingComment.cs" />
@@ -210,7 +221,6 @@
     <Compile Include="AtlantSovtDb\TransporterBankDetail.cs" />
     <Compile Include="AtlantSovtDb\TransporterContact.cs" />
     <Compile Include="AtlantSovtDb\TransporterCountry.cs" />
-    <Compile Include="AtlantSovtDb\TransporterForwarderContract.cs" />
     <Compile Include="AtlantSovtDb\TransporterVehicle.cs" />
     <Compile Include="AtlantSovtDb\UnCustomsAddress.cs" />
     <Compile Include="AtlantSovtDb\UploadAddress.cs" />
@@ -221,6 +231,15 @@
     </Compile>
     <Compile Include="Client\ClientBankDetailsAddForm.Designer.cs">
       <DependentUpon>ClientBankDetailsAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportTrackingToExcelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportTrackingToExcelForm.Designer.cs">
+      <DependentUpon>ExportTrackingToExcelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.Arbeiten.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Documentation.cs">
       <SubType>Form</SubType>
@@ -402,6 +421,9 @@
     <Compile Include="Transporter\TransporterShowFiltrationForm.Designer.cs">
       <DependentUpon>TransporterShowFiltrationForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddStaffForm.resx">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddTransporterVehicleForm.resx">
       <DependentUpon>AddTransporterVehicleForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -449,6 +471,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Client\ClientBankDetailsAddForm.resx">
       <DependentUpon>ClientBankDetailsAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportTrackingToExcelForm.resx">
+      <DependentUpon>ExportTrackingToExcelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectCustomsAddressesForm.resx">
       <DependentUpon>SelectCustomsAddressesForm.cs</DependentUpon>
@@ -572,26 +597,6 @@
     <None Include="Resources\demologo.gif" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="Microsoft.Office.Core">
-      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>7</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="Microsoft.Office.Interop.Word">
-      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>8</VersionMajor>
-      <VersionMinor>6</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\addButton.png" />
     <Content Include="Resources\ConnectionStringList.txt" />
     <None Include="Resources\con_anim.gif" />
@@ -617,6 +622,44 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

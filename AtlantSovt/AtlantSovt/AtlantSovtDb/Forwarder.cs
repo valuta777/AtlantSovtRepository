@@ -13,8 +13,8 @@ namespace AtlantSovt.AtlantSovtDb
         public Forwarder()
         {
             ForwarderContacts = new HashSet<ForwarderContact>();
+            ForwarderContracts = new HashSet<ForwarderContract>();
             ForwarderOrders = new HashSet<ForwarderOrder>();
-            TransporterForwarderContracts = new HashSet<TransporterForwarderContract>();
         }
 
         public long Id { get; set; }
@@ -47,11 +47,11 @@ namespace AtlantSovt.AtlantSovtDb
         public virtual ICollection<ForwarderContact> ForwarderContacts { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ForwarderContract> ForwarderContracts { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ForwarderOrder> ForwarderOrders { get; set; }
 
         public virtual ForwarderStamp ForwarderStamp { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TransporterForwarderContract> TransporterForwarderContracts { get; set; }
     }
 }
