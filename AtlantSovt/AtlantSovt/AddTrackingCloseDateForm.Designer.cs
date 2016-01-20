@@ -69,6 +69,7 @@
             this.Name = "AddTrackingCloseDateForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Дата закриття заявки";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddTrackingCloseDateForm_FormClosed);
             this.ResumeLayout(false);
 
         }

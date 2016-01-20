@@ -61,8 +61,21 @@ namespace AtlantSovt
         private void addCloseDateButton_Click(object sender, EventArgs e)
         {
             AddCloseDate(id);
-            MainForm.ShowTrackingSearch();
+            MainForm.trackingShowTransporterContactsDataGridView.Update();
+            MainForm.trackingShowForwardersDataGridView.DataSource = null;
+            MainForm.trackingShowTransporterContactsDataGridView.DataSource = null;
+            MainForm.trackingShowCommentDataGridView.DataSource = null;
+            MainForm.trackingShowUploadAddressDataGridView.DataSource = null;
+            MainForm.trackingShowDownloadAddressDataGridView.DataSource = null;
+            MainForm.trackingShowAddNoteRichTextBox.Clear();
+            MainForm.ShowTrackingSearch(MainForm.trackingShowDataGridView, MainForm.trackingShowSearchTextBox, MainForm.showTrackingDateTimePicker, MainForm.showTrackingOnlyActive);
             this.Close();
+        }
+
+        private void AddTrackingCloseDateForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainForm.closeDateForm = null;
+            this.Dispose();
         }
     }
 }

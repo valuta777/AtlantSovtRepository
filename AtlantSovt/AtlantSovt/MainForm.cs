@@ -61,6 +61,9 @@ namespace AtlantSovt
         TransporterBankDetailsAddForm addTransporterBankDetailsAddForm, updateTransporterBankDetailsAddForm;
         TransporterBankDetailsUpdateForm updateTransporterBankDetailsUpdateForm;
 
+            //Tracking
+        AddOrderNoteForm orderNoteForm;
+        ShowTrackingCommentForm ShowTrackingComment;
         //Load / Animaton / Test connection
         #region Load
 
@@ -144,7 +147,7 @@ namespace AtlantSovt
         }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Закрити програму?\nНезбережена інформація буде втрачена!", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+            if (MessageBox.Show("Завершити роботу?\nНе збережена інформація буде втрачена!", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
             {
                 e.Cancel = true;
             }
@@ -227,11 +230,12 @@ namespace AtlantSovt
                 {
                     dataControl.SelectedIndex = 15;
                     helloPictureBox.Image = null;
-                    ShowTracking();
+                    ShowTracking(trackingShowDataGridView);
                     trackingShowTransporterContactsDataGridView.Visible = false;
                     trackingShowCommentDataGridView.Visible = false;
                     trackingShowUploadAddressDataGridView.Visible = false;
                     trackingShowDownloadAddressDataGridView.Visible = false;
+                    trackingShowForwardersDataGridView.Visible = false;
                 }
 
                 private void updateOrderMenuItem_DoubleClick(object sender, EventArgs e)
@@ -291,6 +295,30 @@ namespace AtlantSovt
                 ShowClient();
             }
         }
+
+        private void clientDataGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                DeleteClient(Convert.ToInt32(clientDataGridView.CurrentRow.Cells[0].Value));
+                ShowClient();
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                ShowClientInfo();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                ShowClientInfo();
+            }
+        }
+
+        private void showClientDeleteButton_Click(object sender, EventArgs e)
+        {
+            DeleteClient(Convert.ToInt32(clientDataGridView.CurrentRow.Cells[0].Value));
+            ShowClient();
+        }
+
                 #endregion
 
                 //Add
@@ -644,7 +672,7 @@ namespace AtlantSovt
             deleteClientComboBox.Text = "";
             deleteClientComboBox.Items.Clear();
             deleteClientButton.Enabled = false;
-            DeleteClient();
+          //  DeleteClient();
         }
 
         private void deleteClientComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -689,11 +717,35 @@ namespace AtlantSovt
             helloPictureBox.Image = null;
             ShowForwarder();
         }
+
+        private void forwarderDataGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                DeleteForwarder(Convert.ToInt32(forwarderDataGridView.CurrentRow.Cells[0].Value));
+                ShowForwarder();
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                ShowForwarderInfo();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                ShowForwarderInfo();
+            }
+        }
+        
         private void forwarderDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowForwarderInfo();
         }
-        #endregion
+
+        private void showForwarderDeleteButton_Click(object sender, EventArgs e)
+        {
+            DeleteForwarder(Convert.ToInt32(forwarderDataGridView.CurrentRow.Cells[0].Value));
+            ShowForwarder();
+        }
+                #endregion
 
             //Add
                 #region Add
@@ -1058,11 +1110,10 @@ namespace AtlantSovt
 
         private void forwarderDeleteButton_Click(object sender, EventArgs e)
         {
-            DeleteForwarder();
             forwarderDeleteComboBox.Text = "";
             forwarderDeleteComboBox.Items.Clear();
             forwarderDeleteButton.Enabled = false;
-
+            //DeleteForwarder();
         }
 
         private void forwarderDeleteComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -1155,6 +1206,30 @@ namespace AtlantSovt
                     ShowTransporter();
                 }
             }
+
+            private void transporterShowDataGridView_KeyDown(object sender, KeyEventArgs e)
+            {
+                if (e.KeyCode == Keys.Delete)
+                {
+                    DeleteTransporter(Convert.ToInt32(transporterShowDataGridView.CurrentRow.Cells[0].Value));
+                    ShowTransporter();
+                }
+                if (e.KeyCode == Keys.Up)
+                {
+                    ShowTransporterInfo();
+                }
+                if (e.KeyCode == Keys.Down)
+                {
+                    ShowTransporterInfo();
+                }
+            }
+
+            private void showTransporterDeleteButton_Click(object sender, EventArgs e)
+            {
+                DeleteTransporter(Convert.ToInt32(transporterShowDataGridView.CurrentRow.Cells[0].Value));
+                ShowTransporter();
+            }
+
             #endregion
 
             //Add
@@ -1564,10 +1639,10 @@ namespace AtlantSovt
             #region Delete
         private void transporterDeleteButton_Click(object sender, EventArgs e)
         {
-            DeleteTransporter();
             transporterDeleteComboBox.Text = "";
             transporterDeleteComboBox.Items.Clear();
             transporterDeleteButton.Enabled = false;
+            //DeleteTransporter();
         }
 
         private void transporterDeleteComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -1777,12 +1852,12 @@ namespace AtlantSovt
             }
             if (e.KeyCode == Keys.Up)
             {
-            ShowContractInfo();
-        }
+                ShowContractInfo();
+            }
             if (e.KeyCode == Keys.Down)
-        {
-            ShowContractInfo();
-        }
+            {
+                ShowContractInfo();
+            }
         }
 
         private void contractShowOpenDocButton_Click(object sender, EventArgs e)
@@ -1816,21 +1891,38 @@ namespace AtlantSovt
         private void trackingShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowTrackingInfo();
+            trackingShowAddNoteRichTextBox.Enabled = true;
             trackingShowAddCommentButton.Enabled = true;
             trackingShowCloseOrderButton.Enabled = true;
             showTrackingCreateOrderDoc.Enabled = true;
+            exportTrackingToExcelButton.Enabled = true;
+            trackingShowDeleteOrderButton.Enabled = true;
         }
 
         private void trackingShowSearchButton_Click(object sender, EventArgs e)
         {
-            ShowTrackingSearch();
+            trackingShowTransporterContactsDataGridView.Update();
+            trackingShowForwardersDataGridView.DataSource = null;
+            trackingShowTransporterContactsDataGridView.DataSource = null;
+            trackingShowCommentDataGridView.DataSource = null;
+            trackingShowUploadAddressDataGridView.DataSource = null;
+            trackingShowDownloadAddressDataGridView.DataSource = null;
+            trackingShowAddNoteRichTextBox.Clear();
+            ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
         }
 
         private void trackingShowSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                ShowTrackingSearch();
+                trackingShowTransporterContactsDataGridView.Update();
+                trackingShowForwardersDataGridView.DataSource = null;
+                trackingShowTransporterContactsDataGridView.DataSource = null;
+                trackingShowCommentDataGridView.DataSource = null;
+                trackingShowUploadAddressDataGridView.DataSource = null;
+                trackingShowDownloadAddressDataGridView.DataSource = null;
+                trackingShowAddNoteRichTextBox.Clear();
+                ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
             }
         }
 
@@ -1838,37 +1930,44 @@ namespace AtlantSovt
         {
             if (trackingShowSearchTextBox.Text == "")
             {
-                ShowTracking();
-        }
+                ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
+            }
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void showTrackingDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
-            ShowTrackingSearch();
-        }
-
-        private void showTrackingDataSwitcher_CheckedChanged(object sender, EventArgs e)
-        {
-            if (showTrackingDataSwitcher.Checked == true)
-            {
-                showTrackingDateTimePicker.Enabled = true;
-                isDatePickerEnabled = true;
-            }
-            else
-            {
-                showTrackingDateTimePicker.Enabled = false;
-                isDatePickerEnabled = false;
-            }
+            trackingShowTransporterContactsDataGridView.Update();
+            trackingShowForwardersDataGridView.DataSource = null;
+            trackingShowTransporterContactsDataGridView.DataSource = null;
+            trackingShowCommentDataGridView.DataSource = null;
+            trackingShowUploadAddressDataGridView.DataSource = null;
+            trackingShowDownloadAddressDataGridView.DataSource = null;
+            trackingShowAddNoteRichTextBox.Clear();
+            ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
         }
 
         private void showTrackingOnlyActive_CheckedChanged(object sender, EventArgs e)
         {
-            ShowTrackingSearch();
+            trackingShowTransporterContactsDataGridView.Update();
+            trackingShowForwardersDataGridView.DataSource = null;
+            trackingShowTransporterContactsDataGridView.DataSource = null;
+            trackingShowCommentDataGridView.DataSource = null;
+            trackingShowUploadAddressDataGridView.DataSource = null;
+            trackingShowDownloadAddressDataGridView.DataSource = null;
+            trackingShowAddNoteRichTextBox.Clear();
+            ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
         }
 
         private void trackingShowCloseOrder_Click(object sender, EventArgs e)
         {
-            ShowTrackingCloseOrder();
+            if(closeDateForm == null)
+            {
+                ShowTrackingCloseOrder();
+            }
+            else
+            {
+                closeDateForm.Focus();
+            }
         }
 
         private void trackingShowAddCommentButton_Click(object sender, EventArgs e)
@@ -1889,18 +1988,26 @@ namespace AtlantSovt
 
         private void trackingShowCommentDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            ShowTrackingCommentForm ShowTrackingComment = new ShowTrackingCommentForm(this);
-            try
+            if (ShowTrackingComment == null || ShowTrackingComment.IsDisposed == true)
             {
-                trackingShowCommentDataGridView.ClearSelection();
-                ShowTrackingComment.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
-                ShowTrackingComment.Date = Convert.ToDateTime(trackingShowCommentDataGridView.CurrentRow.Cells[1].Value);
-                ShowTrackingComment.Show();
+                ShowTrackingComment = new ShowTrackingCommentForm(this);
+                try
+                {
+                    trackingShowCommentDataGridView.ClearSelection();
+                    ShowTrackingComment.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+                    ShowTrackingComment.Date = Convert.ToDateTime(trackingShowCommentDataGridView.CurrentRow.Cells[1].Value);
+                    ShowTrackingComment.Show();
+                    ShowTrackingComment.Focus();
+                }
+                catch (Exception ex)
+                {
+                    Log.Write(ex);
+                    MessageBox.Show("Натисніть на коментар");
+                }
             }
-            catch(Exception ex)
+            else
             {
-                Log.Write(ex);
-                MessageBox.Show("Натисніть на коментар");
+                ShowTrackingComment.Focus();
             }
         }
 
@@ -1913,24 +2020,62 @@ namespace AtlantSovt
             }
             OrderCounter();
             CreateOrderDocument();
-            ShowTrackingSearch();
+            trackingShowTransporterContactsDataGridView.Update();
+            trackingShowForwardersDataGridView.DataSource = null;
+            trackingShowTransporterContactsDataGridView.DataSource = null;
+            trackingShowCommentDataGridView.DataSource = null;
+            trackingShowUploadAddressDataGridView.DataSource = null;
+            trackingShowDownloadAddressDataGridView.DataSource = null;
+            trackingShowAddNoteRichTextBox.Clear();
+            ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
         }
 
         private void trackingShowAddNoteRichTextBox_MouseClick(object sender, MouseEventArgs e)
         {
-            AddOrderNoteForm orderNoteForm = new AddOrderNoteForm(this);
-            try
+            if (orderNoteForm == null || orderNoteForm.IsDisposed == true)
             {
-                orderNoteForm.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
-                orderNoteForm.Show();
+                orderNoteForm = new AddOrderNoteForm(this);
+                try
+                {
+                    orderNoteForm.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+                    orderNoteForm.Show();
+                    orderNoteForm.Focus();
+                }
+                catch (Exception ex)
+                {
+                    Log.Write(ex);
+                    orderNoteForm = null;
+                    orderNoteForm.Dispose();
+                    MessageBox.Show("Немає жодної заявки");
+                }
             }
-            catch (Exception ex)
+            else
             {
-                Log.Write(ex);
-                orderNoteForm.Dispose();
-                MessageBox.Show("Немає жодної заявки");
+                orderNoteForm.Focus();
             }
-        }    
+        
+        }
+
+        private void exportTrackingToExcelButton_Click(object sender, EventArgs e)
+        {
+            ExportTrackingToExcel();
+        }
+
+        private void trackingShowDataGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                ShowTrackingInfo();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                ShowTrackingInfo();
+            }
+        }
 
         #endregion
 
@@ -2802,6 +2947,5 @@ namespace AtlantSovt
             OrderUpdateLanguageSelectComboBox.DroppedDown = true;
         }
         #endregion
-
     }
 }

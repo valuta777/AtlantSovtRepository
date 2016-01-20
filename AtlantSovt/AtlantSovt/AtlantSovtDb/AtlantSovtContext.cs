@@ -94,6 +94,11 @@ namespace AtlantSovt.AtlantSovtDb
                 .WithOptional(e => e.Client)
                 .WillCascadeOnDelete();
 
+            modelBuilder.Entity<Contract>()
+                .HasMany(e => e.ForwarderContracts)
+                .WithOptional(e => e.Contract)
+                .WillCascadeOnDelete();
+
             modelBuilder.Entity<Country>()
                 .HasMany(e => e.TransporterCountries)
                 .WithRequired(e => e.Country)
@@ -117,6 +122,11 @@ namespace AtlantSovt.AtlantSovtDb
             modelBuilder.Entity<Forwarder>()
                 .HasOptional(e => e.ForwarderBankDetail)
                 .WithRequired(e => e.Forwarder)
+                .WillCascadeOnDelete();
+
+            modelBuilder.Entity<Forwarder>()
+                .HasMany(e => e.ForwarderOrders)
+                .WithOptional(e => e.Forwarder)
                 .WillCascadeOnDelete();
 
             modelBuilder.Entity<Forwarder>()
