@@ -123,7 +123,7 @@ namespace AtlantSovt
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Немає жодного арбайтену" + ex.Message);
+                    MessageBox.Show("Немає жодного запису");
                 }
             }
             arbeitenShowForwardersDataGridView.Update();
@@ -149,19 +149,19 @@ namespace AtlantSovt
                         {
                             db.Arbeitens.Remove(db.Arbeitens.Find(deleteArbeiten.Id));
                             db.SaveChanges();
-                            MessageBox.Show("Арбайтен успішно видалено");
+                            MessageBox.Show("Запис успішно видалено");
                             ShowArbeiten();
                         }
                         catch (Exception ex)
                         {
                             Log.Write(ex);
-                            MessageBox.Show("Помилка!" + Environment.NewLine + ex);
+                            MessageBox.Show("Помилка: " + Environment.NewLine + ex);
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку Арбайтен");
+                    MessageBox.Show("Оберіть спочатку запис");
                 }
             }
         }
@@ -497,22 +497,22 @@ namespace AtlantSovt
                         {
                             db.Arbeitens.Add( New_Arbeiten);
                             db.SaveChanges();
-                            MessageBox.Show("Успішно додано арбайтен.");
+                            MessageBox.Show("Запис успішно додано");
                         }
                         catch (Exception ec)
                         {
                             Log.Write(ec);
-                            MessageBox.Show(ec.Message);
+                            MessageBox.Show("Помилка: " + ec.Message);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Заповніть хочаб 1 поле.");
+                        MessageBox.Show("Заповніть хоча б 1 поле");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Спочатку виберіть заявку.");
+                    MessageBox.Show("Спочатку виберіть заявку");
                 }
             }
         }
@@ -758,17 +758,17 @@ namespace AtlantSovt
                     catch (DbEntityValidationException e)
                     {
                         Log.Write(e);
-                        MessageBox.Show("Помилка при зміні арбайтен\n" + e);
+                        MessageBox.Show("Помилка при зміні запису:\n" + e.Message);
                     }
                     catch (Exception ex)
                     {
                         Log.Write(ex);
-                        MessageBox.Show("Помилка при зміні арбайтен\n" + ex.Message);
+                        MessageBox.Show("Помилка при зміні запису:\n" + ex.Message);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Спочатку виберіть арбайтен");
+                    MessageBox.Show("Спочатку виберіть запис");
                 }
             }
         }
