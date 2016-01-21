@@ -6,7 +6,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -69,13 +71,13 @@ namespace AtlantSovt
 
         private void addContactClientButton_Click(object sender, EventArgs e)
         {
-            if (contactPersonClientContactTextBox.Text != "" || telephoneNumberClientContactTextBox.Text != "" || faxNumberClientContactTextBox.Text != "" || emailClientContactTextBox.Text != "")
+            if (clientAddContactPersonTextBox.Text != "" || clientAddContactPhoneTextBox.Text != "" || clientAddContactFaxTextBox.Text != "" || clientAddContactEmailTextBox.Text != "")
             {
 
-                new_ContactPerson = contactPersonClientContactTextBox.Text;
-                new_TelephoneNumber = telephoneNumberClientContactTextBox.Text;
-                new_FaxNumber = faxNumberClientContactTextBox.Text;
-                new_Email = emailClientContactTextBox.Text;
+                new_ContactPerson = clientAddContactPersonTextBox.Text;
+                new_TelephoneNumber = clientAddContactPhoneTextBox.Text;
+                new_FaxNumber = clientAddContactFaxTextBox.Text;
+                new_Email = clientAddContactEmailTextBox.Text;
 
                 this.Hide();
                 if (Id != 0)
@@ -88,7 +90,8 @@ namespace AtlantSovt
                 MessageBox.Show("Для збереження заповніть хочаб одне поле");
             }
         }
-       internal void AddClientContact2(long id) 
+
+        internal void AddClientContact2(long id) 
         {
             Id = id;
         }
@@ -97,7 +100,7 @@ namespace AtlantSovt
         {
             if (IsAdding)
             {
-                if (contactPersonClientContactTextBox.Text != "" || telephoneNumberClientContactTextBox.Text != "" || faxNumberClientContactTextBox.Text != "" || emailClientContactTextBox.Text != "")
+                if (clientAddContactPersonTextBox.Text != "" || clientAddContactPhoneTextBox.Text != "" || clientAddContactFaxTextBox.Text != "" || clientAddContactEmailTextBox.Text != "")
                 {
                     if (MessageBox.Show("Закрити форму без збереження?\nКонтакт НЕ збережеться.\n Для збереження натисніть <Отмена> та <Додати контакт>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
                     {
@@ -106,5 +109,11 @@ namespace AtlantSovt
                 }
             }
         }
+
+        public void changeLanguage(ResourceManager rm, CultureInfo ci)
+        {
+            clientAddContactPersonLabel.Text = rm.GetString("addContactForm", ci);
+        }
+
     }
 }

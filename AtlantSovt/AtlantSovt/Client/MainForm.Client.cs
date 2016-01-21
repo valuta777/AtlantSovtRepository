@@ -26,10 +26,10 @@ namespace AtlantSovt
 
         void ShowClient()
         {
-            clientContactsDataGridView.Visible = false;
-            clientBankDetailsDataGridView.Visible = false;
+            showClientContactsDataGridView.Visible = false;
+            showClientBankDetailsDataGridView.Visible = false;
             showClientDeleteButton.Enabled = false;
-            clientCommentRichTextBox.Text = "";
+            showClientNoteRichTextBox.Text = "";
 
             using (var db = new AtlantSovtContext())
             {
@@ -49,18 +49,18 @@ namespace AtlantSovt
                     WorkDocumentId = c.WorkDocument.Status,
                 };
 
-                clientDataGridView.DataSource = query.ToList();
-                clientDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                clientDataGridView.Columns[1].HeaderText = "Назва";
-                clientDataGridView.Columns[2].HeaderText = "П.І.Б. Директора";
-                clientDataGridView.Columns[3].HeaderText = "Фізична адреса";
-                clientDataGridView.Columns[4].HeaderText = "Юридична адреса";
-                clientDataGridView.Columns[5].HeaderText = "Стан договору";
-                clientDataGridView.Columns[6].HeaderText = "Статус платника податку";
-                clientDataGridView.Columns[7].HeaderText = "На основі";
+                showClientDataGridView.DataSource = query.ToList();
+                showClientDataGridView.Columns[0].HeaderText = "Порядковий номер";
+                showClientDataGridView.Columns[1].HeaderText = "Назва";
+                showClientDataGridView.Columns[2].HeaderText = "П.І.Б. Директора";
+                showClientDataGridView.Columns[3].HeaderText = "Фізична адреса";
+                showClientDataGridView.Columns[4].HeaderText = "Юридична адреса";
+                showClientDataGridView.Columns[5].HeaderText = "Стан договору";
+                showClientDataGridView.Columns[6].HeaderText = "Статус платника податку";
+                showClientDataGridView.Columns[7].HeaderText = "На основі";
 
 
-            } clientDataGridView.Update();
+            } showClientDataGridView.Update();
 
         }
 
@@ -70,7 +70,7 @@ namespace AtlantSovt
             {
                 try
                 {
-                    var ClikedId = Convert.ToInt32(clientDataGridView.CurrentRow.Cells[0].Value);
+                    var ClikedId = Convert.ToInt32(showClientDataGridView.CurrentRow.Cells[0].Value);
                     var query =
                     from con in db.ClientContacts
                     where con.ClientId == ClikedId
@@ -81,18 +81,18 @@ namespace AtlantSovt
                         Факс = con.FaxNumber,
                         Email = con.Email,
                     };
-                    clientContactsDataGridView.DataSource = query.ToList();
-                    clientContactsDataGridView.Columns[0].HeaderText = "Контактна особа";
-                    clientContactsDataGridView.Columns[1].HeaderText = "Телефон";
-                    clientContactsDataGridView.Columns[2].HeaderText = "Факс";
-                    clientContactsDataGridView.Columns[3].HeaderText = "Email";
+                    showClientContactsDataGridView.DataSource = query.ToList();
+                    showClientContactsDataGridView.Columns[0].HeaderText = "Контактна особа";
+                    showClientContactsDataGridView.Columns[1].HeaderText = "Телефон";
+                    showClientContactsDataGridView.Columns[2].HeaderText = "Факс";
+                    showClientContactsDataGridView.Columns[3].HeaderText = "Email";
 
                     var query1 =
                         from c in db.Clients
                         where c.Id == ClikedId
                         select c.Comment;
 
-                    clientCommentRichTextBox.Text = query1.FirstOrDefault();
+                    showClientNoteRichTextBox.Text = query1.FirstOrDefault();
 
                     var query2 =
                     from b in db.ClientBankDetails
@@ -110,16 +110,16 @@ namespace AtlantSovt
                         IBAN = b.IBAN
                     };
 
-                    clientBankDetailsDataGridView.DataSource = query2.ToList();
-                    clientBankDetailsDataGridView.Columns[0].HeaderText = "Назва банку";
-                    clientBankDetailsDataGridView.Columns[1].HeaderText = "МФО";
-                    clientBankDetailsDataGridView.Columns[2].HeaderText = "Номер рахунку";
-                    clientBankDetailsDataGridView.Columns[3].HeaderText = "ЕДРПОУ";
-                    clientBankDetailsDataGridView.Columns[4].HeaderText = "ІПН";
-                    clientBankDetailsDataGridView.Columns[5].HeaderText = "Серія свідоцтва";
-                    clientBankDetailsDataGridView.Columns[6].HeaderText = "Номер свідоцтва";
-                    clientBankDetailsDataGridView.Columns[7].HeaderText = "SWIFT";
-                    clientBankDetailsDataGridView.Columns[8].HeaderText = "IBAN";
+                    showClientBankDetailsDataGridView.DataSource = query2.ToList();
+                    showClientBankDetailsDataGridView.Columns[0].HeaderText = "Назва банку";
+                    showClientBankDetailsDataGridView.Columns[1].HeaderText = "МФО";
+                    showClientBankDetailsDataGridView.Columns[2].HeaderText = "Номер рахунку";
+                    showClientBankDetailsDataGridView.Columns[3].HeaderText = "ЕДРПОУ";
+                    showClientBankDetailsDataGridView.Columns[4].HeaderText = "ІПН";
+                    showClientBankDetailsDataGridView.Columns[5].HeaderText = "Серія свідоцтва";
+                    showClientBankDetailsDataGridView.Columns[6].HeaderText = "Номер свідоцтва";
+                    showClientBankDetailsDataGridView.Columns[7].HeaderText = "SWIFT";
+                    showClientBankDetailsDataGridView.Columns[8].HeaderText = "IBAN";
                 }
                 catch (Exception ex)
                 {
@@ -127,21 +127,21 @@ namespace AtlantSovt
                     MessageBox.Show("Немає жодного клієнта");
                 }
             }
-            clientContactsDataGridView.Update();
-            clientBankDetailsDataGridView.Update();
-            clientContactsDataGridView.Visible = true;
-            clientBankDetailsDataGridView.Visible = true;
+            showClientContactsDataGridView.Update();
+            showClientBankDetailsDataGridView.Update();
+            showClientContactsDataGridView.Visible = true;
+            showClientBankDetailsDataGridView.Visible = true;
             showClientDeleteButton.Enabled = true;
         }
 
         void ShowClientSearch()
         {
 
-            clientContactsDataGridView.Visible = false;
-            clientBankDetailsDataGridView.Visible = false;
-            clientCommentRichTextBox.Text = "";
+            showClientContactsDataGridView.Visible = false;
+            showClientBankDetailsDataGridView.Visible = false;
+            showClientNoteRichTextBox.Text = "";
 
-            var text = clientShowSearchTextBox.Text;
+            var text = showClientSearchTextBox.Text;
             using (var db = new AtlantSovtContext())
             {
                 var query =
@@ -161,18 +161,18 @@ namespace AtlantSovt
                 };
 
 
-                clientDataGridView.DataSource = query.ToList();
-                clientDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                clientDataGridView.Columns[1].HeaderText = "Назва";
-                clientDataGridView.Columns[2].HeaderText = "П.І.Б. Директора";
-                clientDataGridView.Columns[3].HeaderText = "Фізична адреса";
-                clientDataGridView.Columns[4].HeaderText = "Юридична адреса";
-                clientDataGridView.Columns[5].HeaderText = "Оригінал договору";
-                clientDataGridView.Columns[6].HeaderText = "Статус платника податку";
-                clientDataGridView.Columns[7].HeaderText = "На основі";
+                showClientDataGridView.DataSource = query.ToList();
+                showClientDataGridView.Columns[0].HeaderText = "Порядковий номер";
+                showClientDataGridView.Columns[1].HeaderText = "Назва";
+                showClientDataGridView.Columns[2].HeaderText = "П.І.Б. Директора";
+                showClientDataGridView.Columns[3].HeaderText = "Фізична адреса";
+                showClientDataGridView.Columns[4].HeaderText = "Юридична адреса";
+                showClientDataGridView.Columns[5].HeaderText = "Оригінал договору";
+                showClientDataGridView.Columns[6].HeaderText = "Статус платника податку";
+                showClientDataGridView.Columns[7].HeaderText = "На основі";
 
 
-            } clientDataGridView.Update();
+            } showClientDataGridView.Update();
 
         }
 
@@ -185,14 +185,14 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                if (nameClientTextBox.Text != "" || directorClientTextBox.Text != "")
+                if (addClientNameTextBox.Text != "" || addClientDirectorTextBox.Text != "")
                 {
-                    var new_Name = nameClientTextBox.Text;
-                    var new_Director = directorClientTextBox.Text;
-                    var new_PhysicalAddress = physicalAddressClientTextBox.Text;
-                    var new_GeografphyAddress = geographyAddressClientTextBox.Text;
+                    var new_Name = addClientNameTextBox.Text;
+                    var new_Director = addClientDirectorTextBox.Text;
+                    var new_PhysicalAddress = addClientPhysicalAddressTextBox.Text;
+                    var new_GeografphyAddress = addClientGeographyAddressTextBox.Text;
                     
-                    var new_Comment = commentClientTextBox.Text;
+                    var new_Comment = addClientNoteTextBox.Text;
 
                     long new_WorkDocumentId = 0;
                     long new_TaxPayerStatusId = 0;
@@ -310,7 +310,7 @@ namespace AtlantSovt
                             select t;
                 foreach (var item in query)
                 {
-                    taxPayerStatusClientComboBox.Items.Add(item.Status + " [" + item.Id + "]");
+                    addClientTaxPayerStatusComboBox.Items.Add(item.Status + " [" + item.Id + "]");
                 }
             }
         }
@@ -324,7 +324,7 @@ namespace AtlantSovt
                             select w;
                 foreach (var item in query)
                 {
-                    workDocumentClientComboBox.Items.Add(item.Status + " [" + item.Id + "]");
+                    addClientWorkDocumentComboBox.Items.Add(item.Status + " [" + item.Id + "]");
                 }
             }
         }
@@ -333,9 +333,9 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                if (taxPayerStatusClientComboBox.Text != "")
+                if (addClientTaxPayerStatusComboBox.Text != "")
                 {
-                    string comboboxText = taxPayerStatusClientComboBox.SelectedItem.ToString();
+                    string comboboxText = addClientTaxPayerStatusComboBox.SelectedItem.ToString();
                     string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
                     string comboBoxSelectedId = selectedStatus[1];
                     long id = Convert.ToInt64(comboBoxSelectedId);
@@ -352,9 +352,9 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                if (workDocumentClientComboBox.Text != "")
+                if (addClientWorkDocumentComboBox.Text != "")
                 {
-                    string comboboxText = workDocumentClientComboBox.SelectedItem.ToString();
+                    string comboboxText = addClientWorkDocumentComboBox.SelectedItem.ToString();
                     string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
                     string comboBoxSelectedId = selectedStatus[1];
                     long id = Convert.ToInt64(comboBoxSelectedId);
@@ -373,49 +373,49 @@ namespace AtlantSovt
 
         void ClearAllBoxesClientUpdate()
         {
-            workDocumentClientUpdateComboBox.Items.Clear();
-            taxPayerStatusClientUpdateComboBox.Items.Clear();
-            nameClientUpdateTextBox.Clear();
-            directorClientUpdateTextBox.Clear();
-            physicalAddressClientUpdateTextBox.Clear();
-            geographyAddressClientUpdateTextBox.Clear();
-            commentClientUpdateTextBox.Clear();
+            updateClientWorkDocumentComboBox.Items.Clear();
+            updateClientTaxPayerStatusComboBox.Items.Clear();
+            updateClientNameTextBox.Clear();
+            updateClientDirectorTextBox.Clear();
+            updateClientPhysicalAddressTextBox.Clear();
+            updateClientGeorgaphyAddressTextBox.Clear();
+            updateClientNoteTextBox.Clear();
         }
 
         void SplitUpdateClient()
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = selectClientUpdateComboBox.SelectedItem.ToString();                
+                string comboboxText = updateClientSelectClientComboBox.SelectedItem.ToString();                
                 string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
                 string comboBoxSelectedId = selectedNameAndDirector[1];
                 long id = Convert.ToInt64(comboBoxSelectedId);
                 client = db.Clients.Find(id);
                 if (client != null)
                 {
-                    nameClientUpdateTextBox.Text = Convert.ToString(client.Name);
-                    directorClientUpdateTextBox.Text = Convert.ToString(client.Director);
-                    physicalAddressClientUpdateTextBox.Text = Convert.ToString(client.PhysicalAddress);
-                    geographyAddressClientUpdateTextBox.Text = Convert.ToString(client.GeografphyAddress);
-                    commentClientUpdateTextBox.Text = Convert.ToString(client.Comment);
+                    updateClientNameTextBox.Text = Convert.ToString(client.Name);
+                    updateClientDirectorTextBox.Text = Convert.ToString(client.Director);
+                    updateClientPhysicalAddressTextBox.Text = Convert.ToString(client.PhysicalAddress);
+                    updateClientGeorgaphyAddressTextBox.Text = Convert.ToString(client.GeografphyAddress);
+                    updateClientNoteTextBox.Text = Convert.ToString(client.Comment);
 
                     if (client.WorkDocument != null)
                     {
-                        workDocumentClientUpdateComboBox.SelectedIndex = workDocumentClientUpdateComboBox.FindString(client.WorkDocument.Status + " [" + client.WorkDocument.Id+']');      
+                        updateClientWorkDocumentComboBox.SelectedIndex = updateClientWorkDocumentComboBox.FindString(client.WorkDocument.Status + " [" + client.WorkDocument.Id+']');      
                     }
                     else 
                     {
-                        workDocumentClientUpdateComboBox.Text = "";
-                        workDocumentClientUpdateComboBox.SelectedIndex = -1;
+                        updateClientWorkDocumentComboBox.Text = "";
+                        updateClientWorkDocumentComboBox.SelectedIndex = -1;
                     }
                     if (client.TaxPayerStatu != null)
                     {
-                        taxPayerStatusClientUpdateComboBox.SelectedIndex = taxPayerStatusClientUpdateComboBox.FindString(client.TaxPayerStatu.Status+ " [" + client.TaxPayerStatu.Id + ']');
+                        updateClientTaxPayerStatusComboBox.SelectedIndex = updateClientTaxPayerStatusComboBox.FindString(client.TaxPayerStatu.Status+ " [" + client.TaxPayerStatu.Id + ']');
                     }
                     else 
                     {
-                        taxPayerStatusClientUpdateComboBox.Text = "";
-                        taxPayerStatusClientUpdateComboBox.SelectedIndex = -1;
+                        updateClientTaxPayerStatusComboBox.Text = "";
+                        updateClientTaxPayerStatusComboBox.SelectedIndex = -1;
                     }
                     
                 }
@@ -427,13 +427,13 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                if (selectClientDiapasoneUpdateComboBox.Text == "")
+                if (updateClientSelectDiapasonComboBox.Text == "")
                 {
                     MessageBox.Show("Ви не вибрали діапазон");
                 }
                 else
                 {
-                    string text = selectClientDiapasoneUpdateComboBox.SelectedItem.ToString();
+                    string text = updateClientSelectDiapasonComboBox.SelectedItem.ToString();
                     string[] diapasone = text.Split(new char[] { ' ' });
                     int diapasoneFrom = Convert.ToInt32(diapasone[0]);
                     int diapasoneTo = Convert.ToInt32(diapasone[2]);
@@ -443,7 +443,7 @@ namespace AtlantSovt
                                 select c;
                     foreach (var item in query)
                     {
-                        selectClientUpdateComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
+                        updateClientSelectClientComboBox.Items.Add(item.Name + " , " + item.Director + " [" + item.Id + "]");
                     }
                 }
             }
@@ -451,9 +451,9 @@ namespace AtlantSovt
 
         void LoadDiasoneClientUpdateInfoCombobox()
         {
-            selectClientDiapasoneUpdateComboBox.Items.Clear();
-            selectClientUpdateComboBox.Items.Clear();
-            selectClientUpdateComboBox.Text = "";
+            updateClientSelectDiapasonComboBox.Items.Clear();
+            updateClientSelectClientComboBox.Items.Clear();
+            updateClientSelectClientComboBox.Text = "";
             using (var db = new AtlantSovtContext())
             {
                 int part = 1000;
@@ -472,10 +472,10 @@ namespace AtlantSovt
 
                     for (int i = 0; i < clientPart; i++)
                     {
-                        selectClientDiapasoneUpdateComboBox.Items.Add(((i * part) + 1) + " - " + ((i + 1) * part));
+                        updateClientSelectDiapasonComboBox.Items.Add(((i * part) + 1) + " - " + ((i + 1) * part));
                     }
-                    selectClientDiapasoneUpdateComboBox.DroppedDown = true;
-                    selectClientUpdateComboBox.Enabled = true;
+                    updateClientSelectDiapasonComboBox.DroppedDown = true;
+                    updateClientSelectClientComboBox.Enabled = true;
 
                 }
                 else 
@@ -494,7 +494,7 @@ namespace AtlantSovt
                             select w;
                 foreach (var item in query)
                 {
-                    workDocumentClientUpdateComboBox.Items.Add(item.Status + " [" + item.Id + "]");
+                    updateClientWorkDocumentComboBox.Items.Add(item.Status + " [" + item.Id + "]");
                 }
             }
         }
@@ -508,7 +508,7 @@ namespace AtlantSovt
                             select t;
                 foreach (var item in query)
                 {
-                    taxPayerStatusClientUpdateComboBox.Items.Add(item.Status + " [" + item.Id + "]");
+                    updateClientTaxPayerStatusComboBox.Items.Add(item.Status + " [" + item.Id + "]");
                 }
             }
         }
@@ -517,9 +517,9 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                if (workDocumentClientUpdateComboBox.Text != "")
+                if (updateClientWorkDocumentComboBox.Text != "")
                 {
-                    string comboboxText = workDocumentClientUpdateComboBox.SelectedItem.ToString();
+                    string comboboxText = updateClientWorkDocumentComboBox.SelectedItem.ToString();
                     string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
                     string comboBoxSelectedId = selectedStatus[1];
                     long id = Convert.ToInt64(comboBoxSelectedId);
@@ -536,9 +536,9 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                if (taxPayerStatusClientUpdateComboBox.Text != "")
+                if (updateClientTaxPayerStatusComboBox.Text != "")
                 {
-                    string comboboxText = taxPayerStatusClientUpdateComboBox.SelectedItem.ToString();
+                    string comboboxText = updateClientTaxPayerStatusComboBox.SelectedItem.ToString();
                     string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
                     string comboBoxSelectedId = selectedStatus[1];
                     long id = Convert.ToInt64(comboBoxSelectedId);
@@ -560,28 +560,28 @@ namespace AtlantSovt
                 {
                     if (clientNameChanged)
                     {
-                        client.Name = nameClientUpdateTextBox.Text;
+                        client.Name = updateClientNameTextBox.Text;
                     }
                     if (clientDirectorChanged)
                     {
-                        client.Director = directorClientUpdateTextBox.Text;
+                        client.Director = updateClientDirectorTextBox.Text;
                     }
    
                     if (clientPhysicalAddressChanged)
                     {
-                        client.PhysicalAddress = physicalAddressClientUpdateTextBox.Text;
+                        client.PhysicalAddress = updateClientPhysicalAddressTextBox.Text;
                     }
                     if (clientGeographyAddressChanged)
                     {
-                        client.GeografphyAddress = geographyAddressClientUpdateTextBox.Text;
+                        client.GeografphyAddress = updateClientGeorgaphyAddressTextBox.Text;
                     }
                     if (clientCommentChanged)
                     {
-                        client.Comment = commentClientUpdateTextBox.Text;
+                        client.Comment = updateClientNoteTextBox.Text;
                     }
                     if (clientWorkDocumentChanged)
                     {
-                        if (workDocumentClientUpdateComboBox.Text != "")
+                        if (updateClientWorkDocumentComboBox.Text != "")
                         {
                             client.WorkDocument = null;
                             client.WorkDocumentId = clientWorkDocument.Id;
@@ -594,7 +594,7 @@ namespace AtlantSovt
                     }
                     if (clientTaxPayerStatusChanged)
                     {
-                        if (taxPayerStatusClientUpdateComboBox.Text != "")
+                        if (updateClientTaxPayerStatusComboBox.Text != "")
                         {
                             client.TaxPayerStatu = null;
                             client.TaxPayerStatusId = clientTaxPayerStatus.Id;

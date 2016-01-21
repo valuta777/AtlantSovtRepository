@@ -11,6 +11,7 @@
     <AssemblyName>AtlantSovt</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,9 +24,9 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SupportedCultures>qps-ploc;ru-RU;uk-UA</SupportedCultures>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -38,7 +39,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -581,12 +582,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Resources\ConnectionString" />
-    <None Include="Resources\engDocumentationTransporterForwarder.docx" />
-    <None Include="Resources\gerDocumentationTransporterForwarder.docx" />
-    <None Include="Resources\gerOrder.docx" />
-    <None Include="Resources\polOrder.docx" />
-    <None Include="Resources\ukrDocumentationTransporterForwarder.docx" />
-    <None Include="Resources\ukrOrder.docx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -597,6 +592,8 @@
     <None Include="Resources\demologo.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\RU.jpg" />
+    <None Include="Resources\UA.jpg" />
     <None Include="Resources\addButton.png" />
     <Content Include="Resources\ConnectionStringList.txt" />
     <None Include="Resources\con_anim.gif" />

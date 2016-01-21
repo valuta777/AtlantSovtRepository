@@ -8,7 +8,10 @@ using System.Data.Common;
 using System.Data.Entity.Core.EntityClient;
 using System.Data.Entity.Infrastructure;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
+using System.Reflection;
+using System.Resources;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -311,7 +314,7 @@ namespace AtlantSovt
 
         private void clientShowSearchTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (clientShowSearchTextBox.Text == "")
+            if (showClientSearchTextBox.Text == "")
             {
                 ShowClient();
             }
@@ -321,7 +324,7 @@ namespace AtlantSovt
         {
             if (e.KeyCode == Keys.Delete)
             {
-                DeleteClient(Convert.ToInt32(clientDataGridView.CurrentRow.Cells[0].Value));
+                DeleteClient(Convert.ToInt32(showClientDataGridView.CurrentRow.Cells[0].Value));
                 ShowClient();
             }
             if (e.KeyCode == Keys.Up)
@@ -336,7 +339,7 @@ namespace AtlantSovt
 
         private void showClientDeleteButton_Click(object sender, EventArgs e)
         {
-            DeleteClient(Convert.ToInt32(clientDataGridView.CurrentRow.Cells[0].Value));
+            DeleteClient(Convert.ToInt32(showClientDataGridView.CurrentRow.Cells[0].Value));
             ShowClient();
         }
 
@@ -361,9 +364,9 @@ namespace AtlantSovt
         {
             if (addClientContactAddForm == null || addClientContactAddForm.IsDisposed)
             {
-            addClientContactAddForm = new ClientContactAddForm();
-            addClientContactAddForm.Show();
-        }
+                addClientContactAddForm = new ClientContactAddForm();
+                addClientContactAddForm.Show();
+            }
             else
             {
                 addClientContactAddForm.Show();
@@ -390,14 +393,14 @@ namespace AtlantSovt
             SplitLoadWorkDocumentClientAddInfo();
             SplitLoadTaxPayerStatusClientAddInfo();
             AddClient();
-            nameClientTextBox.Text = "";
-            directorClientTextBox.Text = "";
-            physicalAddressClientTextBox.Text = "";
-            geographyAddressClientTextBox.Text = "";
-            workDocumentClientComboBox.Text = "";
-            taxPayerStatusClientComboBox.Text = "";
-            geographyAddressClientTextBox.Text = "";
-            commentClientTextBox.Text = "";
+            addClientNameTextBox.Text = "";
+            addClientDirectorTextBox.Text = "";
+            addClientPhysicalAddressTextBox.Text = "";
+            addClientGeographyAddressTextBox.Text = "";
+            addClientWorkDocumentComboBox.Text = "";
+            addClientTaxPayerStatusComboBox.Text = "";
+            addClientGeographyAddressTextBox.Text = "";
+            addClientNoteTextBox.Text = "";
             clientTaxPayerStatus = null;
             clientWorkDocument = null;
             
@@ -405,16 +408,16 @@ namespace AtlantSovt
         
         private void workDocumentClientComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            workDocumentClientComboBox.Items.Clear();
+            addClientWorkDocumentComboBox.Items.Clear();
             LoadWorkDocumentClientAddInfoComboBox();
-            workDocumentClientComboBox.DroppedDown = true;
+            addClientWorkDocumentComboBox.DroppedDown = true;
         }
         
         private void taxPayerStatusClientComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            taxPayerStatusClientComboBox.Items.Clear();
+            addClientTaxPayerStatusComboBox.Items.Clear();
             LoadTaxPayerStatusClientAddInfoComboBox();
-            taxPayerStatusClientComboBox.DroppedDown = true;
+            addClientTaxPayerStatusComboBox.DroppedDown = true;
         }
         
         private void workDocumentClientAddComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -445,9 +448,9 @@ namespace AtlantSovt
 
         private void selectClientUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            selectClientUpdateComboBox.Items.Clear();
+            updateClientSelectClientComboBox.Items.Clear();
             LoadSelectClientUpdateInfoComboBox();
-            selectClientUpdateComboBox.DroppedDown = true;
+            updateClientSelectClientComboBox.DroppedDown = true;
         }
 
         private void selectClientDiapasonUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -457,17 +460,17 @@ namespace AtlantSovt
 
         private void workDocumentClientUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            workDocumentClientUpdateComboBox.Items.Clear();
+            updateClientWorkDocumentComboBox.Items.Clear();
             LoadWorkDocumentClientUpdateInfoComboBox();
-            workDocumentClientUpdateComboBox.DroppedDown = true;
+            updateClientWorkDocumentComboBox.DroppedDown = true;
 
         }
 
         private void taxPayerStatusClientUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
-            taxPayerStatusClientUpdateComboBox.Items.Clear();
+            updateClientTaxPayerStatusComboBox.Items.Clear();
             LoadTaxPayerStatusClientUpdateInfoComboBox();
-            taxPayerStatusClientUpdateComboBox.DroppedDown = true;
+            updateClientTaxPayerStatusComboBox.DroppedDown = true;
 
         }
 
@@ -3152,6 +3155,64 @@ namespace AtlantSovt
             UpdateArbeiten();
         }
 
+        #endregion
+
+        //Translate
+        #region Translate
+        private void uaLangButton_Click(object sender, EventArgs e)
+        {
+            CultureInfo ci = new CultureInfo("uk-UA");
+            changeLanguage(ci);
+        }
+
+        private void ruLangButton_Click(object sender, EventArgs e)
+        {
+            CultureInfo ci = new CultureInfo("ru-Ru");
+            changeLanguage(ci);
+        }
+
+        void changeLanguage(CultureInfo ci)
+        {
+            Assembly a = Assembly.Load("AtlantSovt");
+            ResourceManager rm = new ResourceManager("AtlantSovt.Languages.langres", a);
+            //show client
+            showClientTitleLabel.Text = rm.GetString("showClientTitleLabel", ci);
+            showClientSearchButton.Text = rm.GetString("searchButton", ci);
+            showClientBankDetailsLabel.Text = rm.GetString("bankDetailsLabel", ci);
+            showClientContactsLabel.Text = rm.GetString("contactsLabel", ci);
+            showClientNoteLabel.Text = rm.GetString("noteLabel", ci);
+            showClientDeleteButton.Text = rm.GetString("deleteButton", ci);
+            //add client
+            addClientNameLabel.Text = rm.GetString("nameLabel", ci);
+            addClientDirectorLabel.Text = rm.GetString("directorLabel", ci);
+            addClientWorkDocumentLabel.Text = rm.GetString("workDocumentLabel", ci);
+            addClientTaxPayerStatusLabel.Text = rm.GetString("taxPayerStatusLabel", ci);
+            addClientGeographyAddressLabel.Text = rm.GetString("geographyAddressLabel", ci);
+            addClientPhysicalAddressLabel.Text = rm.GetString("physicalAddressLabel", ci);
+            addClientNoteLabel.Text = rm.GetString("noteLabel", ci);
+            addClientContactButton.Text = rm.GetString("addContactButton", ci);
+            addClientBankDetailsButton.Text = rm.GetString("addBankDetailsButton", ci);
+            addClientButton.Text = rm.GetString("addButton", ci);
+            addClientIsNecessaryLabel.Text = rm.GetString("isNecessaryLabel", ci);
+            //update client
+            updateClientSelectDiapasonLabel.Text = rm.GetString("selectDiapasonLabel", ci);
+            updateClientSelectClientLabel.Text = rm.GetString("selectClientLabel", ci);
+            updateClientNameLabel.Text = rm.GetString("nameLabel", ci);
+            updateClientDirectorLabel.Text = rm.GetString("directorLabel", ci);
+            updateClientWorkDocumentLabel.Text = rm.GetString("workDocumentLabel", ci);
+            updateClientTaxPayerStatusLabel.Text = rm.GetString("taxPayerStatusLabel", ci);
+            updateClientGeorgaphyAddressLabel.Text = rm.GetString("geographyAddressLabel", ci);
+            updateClientPhysicalAddressLabel.Text = rm.GetString("physicalAddressLabel", ci);
+            updateClientNoteLabel.Text = rm.GetString("noteLabel", ci);
+            updateClientAddContactButton.Text = rm.GetString("addContactButton", ci);
+            updateClientUpdateContactButton.Text = rm.GetString("updateContactButton", ci);
+            updateClientDeleteContactButton.Text = rm.GetString("deleteContactButton", ci);
+            updateClientAddBankDetailsButton.Text = rm.GetString("addBankDetailsButton", ci);
+            updateClientUpdateBankDetailsButton.Text = rm.GetString("updateBankDetailsButton", ci);
+            updateClientDeleteBankDetailsButton.Text = rm.GetString("deleteBankDetailsButton", ci);
+            updateClientButton.Text = rm.GetString("updateButton", ci);
+            //add client contact
+        } 
         #endregion
     }
 }

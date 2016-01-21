@@ -28,99 +28,99 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.nameClientLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.contactPersonClientContactTextBox = new System.Windows.Forms.TextBox();
-            this.telephoneNumberClientContactTextBox = new System.Windows.Forms.TextBox();
-            this.faxNumberClientContactTextBox = new System.Windows.Forms.TextBox();
-            this.emailClientContactTextBox = new System.Windows.Forms.TextBox();
-            this.addContactClientButton = new System.Windows.Forms.Button();
+            this.clientAddContactPersonLabel = new System.Windows.Forms.Label();
+            this.clientAddContactNumberLabel = new System.Windows.Forms.Label();
+            this.clientAddContactFaxLabel = new System.Windows.Forms.Label();
+            this.clientAddContactEmailLabel = new System.Windows.Forms.Label();
+            this.clientAddContactPersonTextBox = new System.Windows.Forms.TextBox();
+            this.clientAddContactPhoneTextBox = new System.Windows.Forms.TextBox();
+            this.clientAddContactFaxTextBox = new System.Windows.Forms.TextBox();
+            this.clientAddContactEmailTextBox = new System.Windows.Forms.TextBox();
+            this.clientAddContactButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // nameClientLabel
+            // clientAddContactPersonLabel
             // 
-            this.nameClientLabel.AutoSize = true;
-            this.nameClientLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameClientLabel.Location = new System.Drawing.Point(12, 9);
-            this.nameClientLabel.Name = "nameClientLabel";
-            this.nameClientLabel.Size = new System.Drawing.Size(130, 21);
-            this.nameClientLabel.TabIndex = 2;
-            this.nameClientLabel.Text = "Контактна особа";
+            this.clientAddContactPersonLabel.AutoSize = true;
+            this.clientAddContactPersonLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientAddContactPersonLabel.Location = new System.Drawing.Point(12, 9);
+            this.clientAddContactPersonLabel.Name = "clientAddContactPersonLabel";
+            this.clientAddContactPersonLabel.Size = new System.Drawing.Size(130, 21);
+            this.clientAddContactPersonLabel.TabIndex = 2;
+            this.clientAddContactPersonLabel.Text = "Контактна особа";
             // 
-            // label1
+            // clientAddContactNumberLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 21);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Номер телефону";
+            this.clientAddContactNumberLabel.AutoSize = true;
+            this.clientAddContactNumberLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientAddContactNumberLabel.Location = new System.Drawing.Point(12, 65);
+            this.clientAddContactNumberLabel.Name = "clientAddContactNumberLabel";
+            this.clientAddContactNumberLabel.Size = new System.Drawing.Size(130, 21);
+            this.clientAddContactNumberLabel.TabIndex = 3;
+            this.clientAddContactNumberLabel.Text = "Номер телефону";
             // 
-            // label2
+            // clientAddContactFaxLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(12, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 21);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Номер факсу";
+            this.clientAddContactFaxLabel.AutoSize = true;
+            this.clientAddContactFaxLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientAddContactFaxLabel.Location = new System.Drawing.Point(12, 121);
+            this.clientAddContactFaxLabel.Name = "clientAddContactFaxLabel";
+            this.clientAddContactFaxLabel.Size = new System.Drawing.Size(104, 21);
+            this.clientAddContactFaxLabel.TabIndex = 4;
+            this.clientAddContactFaxLabel.Text = "Номер факсу";
             // 
-            // label3
+            // clientAddContactEmailLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(12, 177);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 21);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Email";
+            this.clientAddContactEmailLabel.AutoSize = true;
+            this.clientAddContactEmailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientAddContactEmailLabel.Location = new System.Drawing.Point(12, 177);
+            this.clientAddContactEmailLabel.Name = "clientAddContactEmailLabel";
+            this.clientAddContactEmailLabel.Size = new System.Drawing.Size(48, 21);
+            this.clientAddContactEmailLabel.TabIndex = 5;
+            this.clientAddContactEmailLabel.Text = "Email";
             // 
-            // contactPersonClientContactTextBox
+            // clientAddContactPersonTextBox
             // 
-            this.contactPersonClientContactTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.contactPersonClientContactTextBox.Location = new System.Drawing.Point(12, 33);
-            this.contactPersonClientContactTextBox.Name = "contactPersonClientContactTextBox";
-            this.contactPersonClientContactTextBox.Size = new System.Drawing.Size(313, 29);
-            this.contactPersonClientContactTextBox.TabIndex = 8;
+            this.clientAddContactPersonTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientAddContactPersonTextBox.Location = new System.Drawing.Point(12, 33);
+            this.clientAddContactPersonTextBox.Name = "clientAddContactPersonTextBox";
+            this.clientAddContactPersonTextBox.Size = new System.Drawing.Size(313, 29);
+            this.clientAddContactPersonTextBox.TabIndex = 8;
             // 
-            // telephoneNumberClientContactTextBox
+            // clientAddContactPhoneTextBox
             // 
-            this.telephoneNumberClientContactTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.telephoneNumberClientContactTextBox.Location = new System.Drawing.Point(11, 89);
-            this.telephoneNumberClientContactTextBox.Name = "telephoneNumberClientContactTextBox";
-            this.telephoneNumberClientContactTextBox.Size = new System.Drawing.Size(313, 29);
-            this.telephoneNumberClientContactTextBox.TabIndex = 9;
+            this.clientAddContactPhoneTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientAddContactPhoneTextBox.Location = new System.Drawing.Point(11, 89);
+            this.clientAddContactPhoneTextBox.Name = "clientAddContactPhoneTextBox";
+            this.clientAddContactPhoneTextBox.Size = new System.Drawing.Size(313, 29);
+            this.clientAddContactPhoneTextBox.TabIndex = 9;
             // 
-            // faxNumberClientContactTextBox
+            // clientAddContactFaxTextBox
             // 
-            this.faxNumberClientContactTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.faxNumberClientContactTextBox.Location = new System.Drawing.Point(11, 145);
-            this.faxNumberClientContactTextBox.Name = "faxNumberClientContactTextBox";
-            this.faxNumberClientContactTextBox.Size = new System.Drawing.Size(313, 29);
-            this.faxNumberClientContactTextBox.TabIndex = 10;
+            this.clientAddContactFaxTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientAddContactFaxTextBox.Location = new System.Drawing.Point(11, 145);
+            this.clientAddContactFaxTextBox.Name = "clientAddContactFaxTextBox";
+            this.clientAddContactFaxTextBox.Size = new System.Drawing.Size(313, 29);
+            this.clientAddContactFaxTextBox.TabIndex = 10;
             // 
-            // emailClientContactTextBox
+            // clientAddContactEmailTextBox
             // 
-            this.emailClientContactTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.emailClientContactTextBox.Location = new System.Drawing.Point(11, 201);
-            this.emailClientContactTextBox.Name = "emailClientContactTextBox";
-            this.emailClientContactTextBox.Size = new System.Drawing.Size(313, 29);
-            this.emailClientContactTextBox.TabIndex = 11;
+            this.clientAddContactEmailTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientAddContactEmailTextBox.Location = new System.Drawing.Point(11, 201);
+            this.clientAddContactEmailTextBox.Name = "clientAddContactEmailTextBox";
+            this.clientAddContactEmailTextBox.Size = new System.Drawing.Size(313, 29);
+            this.clientAddContactEmailTextBox.TabIndex = 11;
             // 
-            // addContactClientButton
+            // clientAddContactButton
             // 
-            this.addContactClientButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addContactClientButton.Location = new System.Drawing.Point(11, 237);
-            this.addContactClientButton.Name = "addContactClientButton";
-            this.addContactClientButton.Size = new System.Drawing.Size(313, 48);
-            this.addContactClientButton.TabIndex = 12;
-            this.addContactClientButton.Text = "Додати контакт";
-            this.addContactClientButton.UseVisualStyleBackColor = true;
-            this.addContactClientButton.Click += new System.EventHandler(this.addContactClientButton_Click);
+            this.clientAddContactButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clientAddContactButton.Location = new System.Drawing.Point(11, 237);
+            this.clientAddContactButton.Name = "clientAddContactButton";
+            this.clientAddContactButton.Size = new System.Drawing.Size(313, 48);
+            this.clientAddContactButton.TabIndex = 12;
+            this.clientAddContactButton.Text = "Додати контакт";
+            this.clientAddContactButton.UseVisualStyleBackColor = true;
+            this.clientAddContactButton.Click += new System.EventHandler(this.addContactClientButton_Click);
             // 
             // ClientContactAddForm
             // 
@@ -128,15 +128,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(336, 288);
-            this.Controls.Add(this.addContactClientButton);
-            this.Controls.Add(this.emailClientContactTextBox);
-            this.Controls.Add(this.faxNumberClientContactTextBox);
-            this.Controls.Add(this.telephoneNumberClientContactTextBox);
-            this.Controls.Add(this.contactPersonClientContactTextBox);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.nameClientLabel);
+            this.Controls.Add(this.clientAddContactButton);
+            this.Controls.Add(this.clientAddContactEmailTextBox);
+            this.Controls.Add(this.clientAddContactFaxTextBox);
+            this.Controls.Add(this.clientAddContactPhoneTextBox);
+            this.Controls.Add(this.clientAddContactPersonTextBox);
+            this.Controls.Add(this.clientAddContactEmailLabel);
+            this.Controls.Add(this.clientAddContactFaxLabel);
+            this.Controls.Add(this.clientAddContactNumberLabel);
+            this.Controls.Add(this.clientAddContactPersonLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -151,14 +151,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label nameClientLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox contactPersonClientContactTextBox;
-        private System.Windows.Forms.TextBox telephoneNumberClientContactTextBox;
-        private System.Windows.Forms.TextBox faxNumberClientContactTextBox;
-        private System.Windows.Forms.TextBox emailClientContactTextBox;
-        private System.Windows.Forms.Button addContactClientButton;
+        private System.Windows.Forms.Label clientAddContactPersonLabel;
+        private System.Windows.Forms.Label clientAddContactNumberLabel;
+        private System.Windows.Forms.Label clientAddContactFaxLabel;
+        private System.Windows.Forms.Label clientAddContactEmailLabel;
+        private System.Windows.Forms.TextBox clientAddContactPersonTextBox;
+        private System.Windows.Forms.TextBox clientAddContactPhoneTextBox;
+        private System.Windows.Forms.TextBox clientAddContactFaxTextBox;
+        private System.Windows.Forms.TextBox clientAddContactEmailTextBox;
+        private System.Windows.Forms.Button clientAddContactButton;
     }
 }
