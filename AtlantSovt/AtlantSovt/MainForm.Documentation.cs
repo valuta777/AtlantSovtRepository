@@ -827,8 +827,10 @@ namespace AtlantSovt
                     if(contract.ForwarderContracts.Where(f => f.IsFirst == 0).Count() != 0)
                     {
                         firstForwarderDocument = contract.ForwarderContracts.Where(f => f.IsFirst == 0).FirstOrDefault().Forwarder;
-                        db.Forwarders.Include(firstForwarderDocument.ForwarderStamp.ToString());
-                        firstForwarderStamp = firstForwarderDocument.ForwarderStamp;
+                        if (firstForwarderDocument != null)
+                        {
+                            firstForwarderStamp = db.Forwarders.Find(firstForwarderDocument.Id).ForwarderStamp;
+                        }
 
                     }
                     else
@@ -838,8 +840,10 @@ namespace AtlantSovt
                     if (contract.ForwarderContracts.Where(f => f.IsFirst == 1).Count() != 0)
                     {
                         secondForwarderDocument = contract.ForwarderContracts.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder;
-                        db.Forwarders.Include(secondForwarderDocument.ForwarderStamp.ToString());
-                        secondForwarderStamp = secondForwarderDocument.ForwarderStamp;
+                        if (secondForwarderDocument != null)
+                        {
+                            secondForwarderStamp = db.Forwarders.Find(secondForwarderDocument.Id).ForwarderStamp;
+                        }
                     }
                     else
                     {

@@ -17,10 +17,13 @@ namespace MultiLang
 {
     public partial class SelectLanguage : Form
     {
-        public SelectLanguage()
+        public SelectLanguage(CultureInfo ci)
         {
             InitializeComponent();
+            cultuteInfo = ci;
         }
+
+        private CultureInfo cultuteInfo { get; set; }
 
         //----------------------------------------------
         //Enums
@@ -57,6 +60,8 @@ namespace MultiLang
             LoadSettingsAndShow(false);
         }
 
+        
+
         public void LoadSettingsAndShow(Boolean ForceShow)
         {
             LoadSettings();
@@ -72,7 +77,7 @@ namespace MultiLang
 
                 SaveSettings();
             }
-
+        
             if (StartupMode != enumStartupMode.UseDefaultCulture)
             {
                 if (SelectedCulture != null)
@@ -151,7 +156,6 @@ namespace MultiLang
                 // Close the reader
                 xmlReader.Close();
                 stmReader.Close();
-
             }
 
             isoStorage.Close();

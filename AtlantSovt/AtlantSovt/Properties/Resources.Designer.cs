@@ -61,7 +61,8 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to \r\n- &lt;Експедитор 1&gt;.
+        ///   Looks up a localized string similar to 
+        ///- &lt;Експедитор 1&gt;.
         /// </summary>
         internal static string _Експедитор_1_ {
             get {
@@ -70,7 +71,8 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to \r\n- &lt;Експедитор 2&gt;.
+        ///   Looks up a localized string similar to 
+        ///- &lt;Експедитор 2&gt;.
         /// </summary>
         internal static string _Експедитор_2_ {
             get {
@@ -88,7 +90,8 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to \r\n- &lt;Клієнт&gt;.
+        ///   Looks up a localized string similar to 
+        ///- &lt;Клієнт&gt;.
         /// </summary>
         internal static string _Клієнт_ {
             get {
@@ -106,7 +109,8 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to \r\n- &lt;Перевізник&gt;.
+        ///   Looks up a localized string similar to 
+        ///- &lt;Перевізник&gt;.
         /// </summary>
         internal static string _Перевізник_ {
             get {
@@ -778,7 +782,8 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Завершити роботу?\nНе збережена інформація буде втрачена!.
+        ///   Looks up a localized string similar to Завершити роботу?
+        ///Не збережена інформація буде втрачена!.
         /// </summary>
         internal static string Завершити_роботу {
             get {
@@ -796,7 +801,9 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Закрити форму без збереження?\nАдреси та типи транспорту НЕ збережуться.\nДля збереження натисніть &lt;Отмена&gt; та &lt;Додати&gt;.
+        ///   Looks up a localized string similar to Закрити форму без збереження?
+        ///Адреси та типи транспорту НЕ збережуться.
+        ///Для збереження натисніть &lt;Отмена&gt; та &lt;Додати&gt;.
         /// </summary>
         internal static string Закрити_форму_без_збереження_адр_та_транспорта {
             get {
@@ -805,7 +812,9 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Закрити форму без збереження?\nВибрані адреси НЕ додадуться.\n Для збереження вибраних адрес натисніть &lt;Отмена&gt; та &lt;Додати до заявки&gt;.
+        ///   Looks up a localized string similar to Закрити форму без збереження?
+        ///Вибрані адреси НЕ додадуться.
+        ///Для збереження вибраних адрес натисніть &lt;Отмена&gt; та &lt;Додати до заявки&gt;.
         /// </summary>
         internal static string Закрити_форму_без_збереження_адрес {
             get {
@@ -814,7 +823,9 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Закрити форму без збереження?\nБанківські данні НЕ збережуться.\n Для збереження натисніть &lt;Отмена&gt; та &lt;Додати Банківські данні&gt;.
+        ///   Looks up a localized string similar to Закрити форму без збереження?
+        ///Банківські данні НЕ збережуться.
+        ///Для збереження натисніть &lt;Отмена&gt; та &lt;Додати Банківські данні&gt;.
         /// </summary>
         internal static string Закрити_форму_без_збереження_банкінських_даних {
             get {
@@ -823,7 +834,9 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Закрити форму без збереження?\nКонтакт НЕ збережеться.\n Для збереження натисніть &lt;Отмена&gt; та &lt;Додати контакт&gt;.
+        ///   Looks up a localized string similar to Закрити форму без збереження?
+        ///Контакт НЕ збережеться.
+        /// Для збереження натисніть &lt;Отмена&gt; та &lt;Додати контакт&gt;.
         /// </summary>
         internal static string Закрити_форму_без_збереження_контакту {
             get {
@@ -1612,7 +1625,8 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to \r\nПродовжити без повного заповнення даних?.
+        ///   Looks up a localized string similar to 
+        ///Продовжити без повного заповнення даних?.
         /// </summary>
         internal static string Продовжити_без_повного_заповнення_даних {
             get {

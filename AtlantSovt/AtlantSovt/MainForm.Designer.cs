@@ -31,6 +31,212 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.addForwarderSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.addForwarderStampPictureBox = new System.Windows.Forms.PictureBox();
+            this.forwarderAddStampButton = new System.Windows.Forms.Button();
+            this.commentForwarderTextBox = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.updateOrderSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.label36 = new System.Windows.Forms.Label();
+            this.updateForwarderStampPictureBox = new System.Windows.Forms.PictureBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.commentForwarderUpdateTextBox = new System.Windows.Forms.TextBox();
+            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+            this.OrderAddAdditionalTermsAddButton = new System.Windows.Forms.Button();
+            this.OrderAddPaymentTermsAddButton = new System.Windows.Forms.Button();
+            this.OrderAddAdditionalTermsSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderAddPaymentTermsSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.OrderAddOrderDenyAddButton = new System.Windows.Forms.Button();
+            this.OrderAddButton = new System.Windows.Forms.Button();
+            this.label108 = new System.Windows.Forms.Label();
+            this.OrderAddDenyFineSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.addOrderSplitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.addOrderSplitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.OrderAddWeightTextBox = new System.Windows.Forms.TextBox();
+            this.label91 = new System.Windows.Forms.Label();
+            this.OrderAddCargoSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.label87 = new System.Windows.Forms.Label();
+            this.OrderAddCargoAddButton = new System.Windows.Forms.Button();
+            this.OrderAddLoadingForm2AddButton = new System.Windows.Forms.Button();
+            this.OrderAddLoadingForm1AddButton = new System.Windows.Forms.Button();
+            this.OrderAddLoadingForm2SelectComboBox = new System.Windows.Forms.ComboBox();
+            this.label88 = new System.Windows.Forms.Label();
+            this.OrderAddLoadingForm1SelectComboBox = new System.Windows.Forms.ComboBox();
+            this.label85 = new System.Windows.Forms.Label();
+            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.OrderAddFineForDelayAddButton = new System.Windows.Forms.Button();
+            this.OrderAddFineForDelaySelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderAddRegularyDelayAddButton = new System.Windows.Forms.Button();
+            this.OrderAddRegularyDelaySelectComboBox = new System.Windows.Forms.ComboBox();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label107 = new System.Windows.Forms.Label();
+            this.OrderAddTrailerSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.label104 = new System.Windows.Forms.Label();
+            this.OrderAddTrailerAddButton = new System.Windows.Forms.Button();
+            this.OrderAddCubeSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderAddCubeAddButton = new System.Windows.Forms.Button();
+            this.label105 = new System.Windows.Forms.Label();
+            this.addOrderSplitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
+            this.label51 = new System.Windows.Forms.Label();
+            this.OrderAddDownloadDateToTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.OrderAddDownloadAddressAddButton = new System.Windows.Forms.Button();
+            this.OrderAddDownloadDateFromTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label90 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.OrderAddUploadDateToTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.OrderAddUploadAddressAddButton = new System.Windows.Forms.Button();
+            this.OrderAddUploadDateFromTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label92 = new System.Windows.Forms.Label();
+            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.OrderAddTirCmrSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderAddTirCmrAddButton = new System.Windows.Forms.Button();
+            this.OrderAddCustomsAddressAddButton = new System.Windows.Forms.Button();
+            this.label79 = new System.Windows.Forms.Label();
+            this.OrderAddStaffButton = new System.Windows.Forms.Button();
+            this.OrderAddPersonalLabel = new System.Windows.Forms.Label();
+            this.OrderAddStaffComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderAddUncustomsAddressAddButton = new System.Windows.Forms.Button();
+            this.OrderAddADRSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.label89 = new System.Windows.Forms.Label();
+            this.addOrderSplitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label37 = new System.Windows.Forms.Label();
+            this.OrderAddClientSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderAddLanduageSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderAddTransporterSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.OrderAddDateSelectDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.OrderAddClientDiapasoneComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderAddTransporterDiapasoneComboBox = new System.Windows.Forms.ComboBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.OrderAddForwarder3SelectComboBox = new System.Windows.Forms.ComboBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.OrderAddForwarder2SelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderAddForwarder1SelectComboBox = new System.Windows.Forms.ComboBox();
+            this.showTrackingSplitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.trackingShowDownloadAddressDataGridView = new System.Windows.Forms.DataGridView();
+            this.trackingShowUploadAddressDataGridView = new System.Windows.Forms.DataGridView();
+            this.OrderUpdateSplitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.OrderUpdateAdditionalTermsAddButton = new System.Windows.Forms.Button();
+            this.OrderUpdatePaymentTermsAddButton = new System.Windows.Forms.Button();
+            this.OrderUpdateAdditionalTermsSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateLabel1 = new System.Windows.Forms.Label();
+            this.OrderUpdatePaymentTermsSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateLabel2 = new System.Windows.Forms.Label();
+            this.OrderUpdateButton = new System.Windows.Forms.Button();
+            this.OrderUpdateOrderDenyAddButton = new System.Windows.Forms.Button();
+            this.OrderUpdateLabel3 = new System.Windows.Forms.Label();
+            this.OrderUpdateDenyFineSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateSplitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.OrderUpdateSplitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.OrderUpdateWeightTextBox = new System.Windows.Forms.TextBox();
+            this.OrderUpdateCargoSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateLabel5 = new System.Windows.Forms.Label();
+            this.OrderUpdateCargoAddButton = new System.Windows.Forms.Button();
+            this.OrderUpdateLabel4 = new System.Windows.Forms.Label();
+            this.OrderUpdateLoadingForm2AddButton = new System.Windows.Forms.Button();
+            this.OrderUpdateLoadingForm1AddButton = new System.Windows.Forms.Button();
+            this.OrderUpdateLoadingForm2SelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateLabel6 = new System.Windows.Forms.Label();
+            this.OrderUpdateLoadingForm1SelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateLabel7 = new System.Windows.Forms.Label();
+            this.OrderUpdateSplitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.OrderUpdateFineForDelayAddButton = new System.Windows.Forms.Button();
+            this.OrderUpdateFineForDelaySelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateRegularyDelayAddButton = new System.Windows.Forms.Button();
+            this.OrderUpdateLabel8 = new System.Windows.Forms.Label();
+            this.OrderUpdateRegularyDelaySelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateLabel9 = new System.Windows.Forms.Label();
+            this.OrderUpdateTrailerSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateLabel10 = new System.Windows.Forms.Label();
+            this.OrderUpdateTrailerAddButton = new System.Windows.Forms.Button();
+            this.OrderUpdateCubeSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateLabel11 = new System.Windows.Forms.Label();
+            this.OrderUpdateCubeAddButton = new System.Windows.Forms.Button();
+            this.OrderUpdateSplitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.OrderUpdateSplitContainer6 = new System.Windows.Forms.SplitContainer();
+            this.OrderUpdateDownloadDateFromTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.OrderUpdateDownloadDateToTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label67 = new System.Windows.Forms.Label();
+            this.OrderUpdateDownloadAddressesButton = new System.Windows.Forms.Button();
+            this.OrderUpdateLabel12 = new System.Windows.Forms.Label();
+            this.OrderUpdateUploadDateToTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.OrderUpdateLabel13 = new System.Windows.Forms.Label();
+            this.OrderUpdateUploadAddressesButton = new System.Windows.Forms.Button();
+            this.OrderUpdateUploadDateFromTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label69 = new System.Windows.Forms.Label();
+            this.OrderUpdateSplitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.OrderUpdateTirCmrSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateTirCmrAddButton = new System.Windows.Forms.Button();
+            this.OrderUpdateCustumsAddressesButton = new System.Windows.Forms.Button();
+            this.OrderUpdateLabel14 = new System.Windows.Forms.Label();
+            this.OrderUpdateStaffButton = new System.Windows.Forms.Button();
+            this.OrderUpdateStaffSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateUncustumsAddressesButton = new System.Windows.Forms.Button();
+            this.OrderUpdateADRSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateLabel16 = new System.Windows.Forms.Label();
+            this.OrderUpdateLabel15 = new System.Windows.Forms.Label();
+            this.OrderUpdateSplitContainer8 = new System.Windows.Forms.SplitContainer();
+            this.label38 = new System.Windows.Forms.Label();
+            this.OrderUpdateClientSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateLanguageSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateTransporterSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateLabel17 = new System.Windows.Forms.Label();
+            this.OrderUpdateLabel18 = new System.Windows.Forms.Label();
+            this.OrderUpdateLabel19 = new System.Windows.Forms.Label();
+            this.OrderUpdateLabel20 = new System.Windows.Forms.Label();
+            this.OrderUpdateClientDiapasoneComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.OrderUpdateTransporterDiapasoneComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdatelabel28 = new System.Windows.Forms.Label();
+            this.OrderUpdateForwarder3SelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateLabel21 = new System.Windows.Forms.Label();
+            this.OrderUpdateLabel22 = new System.Windows.Forms.Label();
+            this.OrderUpdateForwarder2SelectComboBox = new System.Windows.Forms.ComboBox();
+            this.OrderUpdateForwarder1SelectComboBox = new System.Windows.Forms.ComboBox();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.arbeitenShowDownloadAddressDataGridView = new System.Windows.Forms.DataGridView();
+            this.arbeitenShowUploadAddressDataGridView = new System.Windows.Forms.DataGridView();
+            this.arbeitenAddSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.arbeitenAddClientPaymentDateLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddClientPaymentTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenAddClientPaymentLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddClientTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenAddAccountNumberLabelTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenAddClientLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddAccountNumberLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddClientPaymentDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.arbeitenAddDownloadDateLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddDownloadDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.arbeitenAddTransporterPaymentTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenAddTransporterPaymentLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddTransporterVehicleTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenAddTransporterVehicleLabel = new System.Windows.Forms.Label();
+            this.arbeitenAddTransporterTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenAddTransporterLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.arbeitenUpdateClientPaymentDateLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateClientPaymentTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenUpdateClientPaymentLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateClientTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenUpdateAccountNumberLabelTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenUpdateClientLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateAccountNumberLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateClientPaymentDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.arbeitenUpdateDownloadDateLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateDownloadDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.arbeitenUpdateTransporterPaymentTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenUpdateTransporterPaymentLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateTransporterVehicleTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenUpdateTransporterVehicleLabel = new System.Windows.Forms.Label();
+            this.arbeitenUpdateTransporterTextBox = new System.Windows.Forms.TextBox();
+            this.arbeitenUpdateTransporterLabel = new System.Windows.Forms.Label();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showClientsStrip = new System.Windows.Forms.ToolStripMenuItem();
@@ -145,11 +351,6 @@
             this.forwarderDataGridView = new System.Windows.Forms.DataGridView();
             this.label32 = new System.Windows.Forms.Label();
             this.addForwarderPage = new System.Windows.Forms.TabPage();
-            this.addForwarderSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.addForwarderStampPictureBox = new System.Windows.Forms.PictureBox();
-            this.forwarderAddStampButton = new System.Windows.Forms.Button();
-            this.commentForwarderTextBox = new System.Windows.Forms.TextBox();
-            this.label46 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.workDocumentForwarderComboBox = new System.Windows.Forms.ComboBox();
             this.label40 = new System.Windows.Forms.Label();
@@ -171,11 +372,6 @@
             this.addTaxPayerStatusForwarderButton = new System.Windows.Forms.Button();
             this.addWorkDocumentForwarderButton = new System.Windows.Forms.Button();
             this.updateForwarderPage = new System.Windows.Forms.TabPage();
-            this.updateOrderSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.label36 = new System.Windows.Forms.Label();
-            this.updateForwarderStampPictureBox = new System.Windows.Forms.PictureBox();
-            this.label61 = new System.Windows.Forms.Label();
-            this.commentForwarderUpdateTextBox = new System.Windows.Forms.TextBox();
             this.forwarderUpdateContactDeleteButton = new System.Windows.Forms.Button();
             this.forwarderUpdateBankDetailsDeleteButton = new System.Windows.Forms.Button();
             this.forwarderUpdateBankDetailsUpdateButton = new System.Windows.Forms.Button();
@@ -319,91 +515,10 @@
             this.addOrderPage = new System.Windows.Forms.TabPage();
             this.OrderAddFreightTextBox = new System.Windows.Forms.TextBox();
             this.label101 = new System.Windows.Forms.Label();
-            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.OrderAddAdditionalTermsAddButton = new System.Windows.Forms.Button();
-            this.OrderAddPaymentTermsAddButton = new System.Windows.Forms.Button();
-            this.OrderAddAdditionalTermsSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderAddPaymentTermsSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.label102 = new System.Windows.Forms.Label();
-            this.label103 = new System.Windows.Forms.Label();
-            this.OrderAddOrderDenyAddButton = new System.Windows.Forms.Button();
-            this.OrderAddButton = new System.Windows.Forms.Button();
-            this.label108 = new System.Windows.Forms.Label();
-            this.OrderAddDenyFineSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.addOrderSplitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.addOrderSplitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.OrderAddWeightTextBox = new System.Windows.Forms.TextBox();
-            this.label91 = new System.Windows.Forms.Label();
-            this.OrderAddCargoSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.label87 = new System.Windows.Forms.Label();
-            this.OrderAddCargoAddButton = new System.Windows.Forms.Button();
-            this.OrderAddLoadingForm2AddButton = new System.Windows.Forms.Button();
-            this.OrderAddLoadingForm1AddButton = new System.Windows.Forms.Button();
-            this.OrderAddLoadingForm2SelectComboBox = new System.Windows.Forms.ComboBox();
-            this.label88 = new System.Windows.Forms.Label();
-            this.OrderAddLoadingForm1SelectComboBox = new System.Windows.Forms.ComboBox();
-            this.label85 = new System.Windows.Forms.Label();
-            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.OrderAddFineForDelayAddButton = new System.Windows.Forms.Button();
-            this.OrderAddFineForDelaySelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderAddRegularyDelayAddButton = new System.Windows.Forms.Button();
-            this.OrderAddRegularyDelaySelectComboBox = new System.Windows.Forms.ComboBox();
-            this.label106 = new System.Windows.Forms.Label();
-            this.label107 = new System.Windows.Forms.Label();
-            this.OrderAddTrailerSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.label104 = new System.Windows.Forms.Label();
-            this.OrderAddTrailerAddButton = new System.Windows.Forms.Button();
-            this.OrderAddCubeSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderAddCubeAddButton = new System.Windows.Forms.Button();
-            this.label105 = new System.Windows.Forms.Label();
-            this.addOrderSplitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
-            this.label51 = new System.Windows.Forms.Label();
-            this.OrderAddDownloadDateToTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.OrderAddDownloadAddressAddButton = new System.Windows.Forms.Button();
-            this.OrderAddDownloadDateFromTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label90 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.OrderAddUploadDateToTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.OrderAddUploadAddressAddButton = new System.Windows.Forms.Button();
-            this.OrderAddUploadDateFromTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label92 = new System.Windows.Forms.Label();
-            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
-            this.OrderAddTirCmrSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderAddTirCmrAddButton = new System.Windows.Forms.Button();
-            this.OrderAddCustomsAddressAddButton = new System.Windows.Forms.Button();
-            this.label79 = new System.Windows.Forms.Label();
-            this.OrderAddStaffButton = new System.Windows.Forms.Button();
-            this.OrderAddPersonalLabel = new System.Windows.Forms.Label();
-            this.OrderAddStaffComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderAddUncustomsAddressAddButton = new System.Windows.Forms.Button();
-            this.OrderAddADRSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.label89 = new System.Windows.Forms.Label();
-            this.addOrderSplitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.label37 = new System.Windows.Forms.Label();
-            this.OrderAddClientSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderAddLanduageSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderAddTransporterSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.OrderAddDateSelectDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.OrderAddClientDiapasoneComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderAddTransporterDiapasoneComboBox = new System.Windows.Forms.ComboBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.OrderAddForwarder3SelectComboBox = new System.Windows.Forms.ComboBox();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.OrderAddForwarder2SelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderAddForwarder1SelectComboBox = new System.Windows.Forms.ComboBox();
             this.showTrackingPage = new System.Windows.Forms.TabPage();
             this.trackingShowDeleteOrderButton = new System.Windows.Forms.Button();
             this.exportTrackingToExcelButton = new System.Windows.Forms.Button();
             this.trackingShowForwardersDataGridView = new System.Windows.Forms.DataGridView();
-            this.showTrackingSplitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.trackingShowDownloadAddressDataGridView = new System.Windows.Forms.DataGridView();
-            this.trackingShowUploadAddressDataGridView = new System.Windows.Forms.DataGridView();
             this.trackingShowAddNoteRichTextBox = new System.Windows.Forms.RichTextBox();
             this.label38ShowTracking = new System.Windows.Forms.Label();
             this.showTrackingCreateOrderDoc = new System.Windows.Forms.Button();
@@ -429,84 +544,6 @@
             this.OrderUpdateLabel24 = new System.Windows.Forms.Label();
             this.OrderUpdateFreightTextBox = new System.Windows.Forms.TextBox();
             this.OrderUpdateLabel25 = new System.Windows.Forms.Label();
-            this.OrderUpdateSplitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.OrderUpdateAdditionalTermsAddButton = new System.Windows.Forms.Button();
-            this.OrderUpdatePaymentTermsAddButton = new System.Windows.Forms.Button();
-            this.OrderUpdateAdditionalTermsSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateLabel1 = new System.Windows.Forms.Label();
-            this.OrderUpdatePaymentTermsSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateLabel2 = new System.Windows.Forms.Label();
-            this.OrderUpdateButton = new System.Windows.Forms.Button();
-            this.OrderUpdateOrderDenyAddButton = new System.Windows.Forms.Button();
-            this.OrderUpdateLabel3 = new System.Windows.Forms.Label();
-            this.OrderUpdateDenyFineSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateSplitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.OrderUpdateSplitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.OrderUpdateWeightTextBox = new System.Windows.Forms.TextBox();
-            this.OrderUpdateCargoSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateLabel5 = new System.Windows.Forms.Label();
-            this.OrderUpdateCargoAddButton = new System.Windows.Forms.Button();
-            this.OrderUpdateLabel4 = new System.Windows.Forms.Label();
-            this.OrderUpdateLoadingForm2AddButton = new System.Windows.Forms.Button();
-            this.OrderUpdateLoadingForm1AddButton = new System.Windows.Forms.Button();
-            this.OrderUpdateLoadingForm2SelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateLabel6 = new System.Windows.Forms.Label();
-            this.OrderUpdateLoadingForm1SelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateLabel7 = new System.Windows.Forms.Label();
-            this.OrderUpdateSplitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.OrderUpdateFineForDelayAddButton = new System.Windows.Forms.Button();
-            this.OrderUpdateFineForDelaySelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateRegularyDelayAddButton = new System.Windows.Forms.Button();
-            this.OrderUpdateLabel8 = new System.Windows.Forms.Label();
-            this.OrderUpdateRegularyDelaySelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateLabel9 = new System.Windows.Forms.Label();
-            this.OrderUpdateTrailerSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateLabel10 = new System.Windows.Forms.Label();
-            this.OrderUpdateTrailerAddButton = new System.Windows.Forms.Button();
-            this.OrderUpdateCubeSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateLabel11 = new System.Windows.Forms.Label();
-            this.OrderUpdateCubeAddButton = new System.Windows.Forms.Button();
-            this.OrderUpdateSplitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.OrderUpdateSplitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.OrderUpdateDownloadDateFromTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.OrderUpdateDownloadDateToTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label67 = new System.Windows.Forms.Label();
-            this.OrderUpdateDownloadAddressesButton = new System.Windows.Forms.Button();
-            this.OrderUpdateLabel12 = new System.Windows.Forms.Label();
-            this.OrderUpdateUploadDateToTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.OrderUpdateLabel13 = new System.Windows.Forms.Label();
-            this.OrderUpdateUploadAddressesButton = new System.Windows.Forms.Button();
-            this.OrderUpdateUploadDateFromTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label69 = new System.Windows.Forms.Label();
-            this.OrderUpdateSplitContainer7 = new System.Windows.Forms.SplitContainer();
-            this.OrderUpdateTirCmrSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateTirCmrAddButton = new System.Windows.Forms.Button();
-            this.OrderUpdateCustumsAddressesButton = new System.Windows.Forms.Button();
-            this.OrderUpdateLabel14 = new System.Windows.Forms.Label();
-            this.OrderUpdateStaffButton = new System.Windows.Forms.Button();
-            this.OrderUpdateStaffSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateUncustumsAddressesButton = new System.Windows.Forms.Button();
-            this.OrderUpdateADRSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateLabel16 = new System.Windows.Forms.Label();
-            this.OrderUpdateLabel15 = new System.Windows.Forms.Label();
-            this.OrderUpdateSplitContainer8 = new System.Windows.Forms.SplitContainer();
-            this.label38 = new System.Windows.Forms.Label();
-            this.OrderUpdateClientSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateLanguageSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateTransporterSelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateLabel17 = new System.Windows.Forms.Label();
-            this.OrderUpdateLabel18 = new System.Windows.Forms.Label();
-            this.OrderUpdateLabel19 = new System.Windows.Forms.Label();
-            this.OrderUpdateLabel20 = new System.Windows.Forms.Label();
-            this.OrderUpdateClientDiapasoneComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.OrderUpdateTransporterDiapasoneComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdatelabel28 = new System.Windows.Forms.Label();
-            this.OrderUpdateForwarder3SelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateLabel21 = new System.Windows.Forms.Label();
-            this.OrderUpdateLabel22 = new System.Windows.Forms.Label();
-            this.OrderUpdateForwarder2SelectComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderUpdateForwarder1SelectComboBox = new System.Windows.Forms.ComboBox();
             this.showContractsPage = new System.Windows.Forms.TabPage();
             this.originalContractStateRadioButton = new System.Windows.Forms.RadioButton();
             this.faxContractStateRadioButton = new System.Windows.Forms.RadioButton();
@@ -521,9 +558,6 @@
             this.label36ShowContract = new System.Windows.Forms.Label();
             this.contractShowDataGridView = new System.Windows.Forms.DataGridView();
             this.showArbeitenPage = new System.Windows.Forms.TabPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.arbeitenShowDownloadAddressDataGridView = new System.Windows.Forms.DataGridView();
-            this.arbeitenShowUploadAddressDataGridView = new System.Windows.Forms.DataGridView();
             this.arbeitenShowForwardersDataGridView = new System.Windows.Forms.DataGridView();
             this.arbeitenShowNoteTextBox = new System.Windows.Forms.RichTextBox();
             this.arbeitenShowNoteLabel = new System.Windows.Forms.Label();
@@ -536,23 +570,6 @@
             this.arbeitenShowMainDataGridView = new System.Windows.Forms.DataGridView();
             this.addArbeitenPage = new System.Windows.Forms.TabPage();
             this.arbeitenAddButton = new System.Windows.Forms.Button();
-            this.arbeitenAddSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.arbeitenAddClientPaymentDateLabel = new System.Windows.Forms.Label();
-            this.arbeitenAddClientPaymentTextBox = new System.Windows.Forms.TextBox();
-            this.arbeitenAddClientPaymentLabel = new System.Windows.Forms.Label();
-            this.arbeitenAddClientTextBox = new System.Windows.Forms.TextBox();
-            this.arbeitenAddAccountNumberLabelTextBox = new System.Windows.Forms.TextBox();
-            this.arbeitenAddClientLabel = new System.Windows.Forms.Label();
-            this.arbeitenAddAccountNumberLabel = new System.Windows.Forms.Label();
-            this.arbeitenAddClientPaymentDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.arbeitenAddDownloadDateLabel = new System.Windows.Forms.Label();
-            this.arbeitenAddDownloadDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.arbeitenAddTransporterPaymentTextBox = new System.Windows.Forms.TextBox();
-            this.arbeitenAddTransporterPaymentLabel = new System.Windows.Forms.Label();
-            this.arbeitenAddTransporterVehicleTextBox = new System.Windows.Forms.TextBox();
-            this.arbeitenAddTransporterVehicleLabel = new System.Windows.Forms.Label();
-            this.arbeitenAddTransporterTextBox = new System.Windows.Forms.TextBox();
-            this.arbeitenAddTransporterLabel = new System.Windows.Forms.Label();
             this.arbeitenAddOrderFilterCheckBox = new System.Windows.Forms.CheckBox();
             this.arbeitenAddOrderFilterDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.arbeitenAddOrderSelectComboBox = new System.Windows.Forms.ComboBox();
@@ -562,23 +579,6 @@
             this.arbeitenAddNoteLabel = new System.Windows.Forms.Label();
             this.updateArbeitenPage = new System.Windows.Forms.TabPage();
             this.arbeitenUpdateButton = new System.Windows.Forms.Button();
-            this.arbeitenUpdateSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.arbeitenUpdateClientPaymentDateLabel = new System.Windows.Forms.Label();
-            this.arbeitenUpdateClientPaymentTextBox = new System.Windows.Forms.TextBox();
-            this.arbeitenUpdateClientPaymentLabel = new System.Windows.Forms.Label();
-            this.arbeitenUpdateClientTextBox = new System.Windows.Forms.TextBox();
-            this.arbeitenUpdateAccountNumberLabelTextBox = new System.Windows.Forms.TextBox();
-            this.arbeitenUpdateClientLabel = new System.Windows.Forms.Label();
-            this.arbeitenUpdateAccountNumberLabel = new System.Windows.Forms.Label();
-            this.arbeitenUpdateClientPaymentDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.arbeitenUpdateDownloadDateLabel = new System.Windows.Forms.Label();
-            this.arbeitenUpdateDownloadDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.arbeitenUpdateTransporterPaymentTextBox = new System.Windows.Forms.TextBox();
-            this.arbeitenUpdateTransporterPaymentLabel = new System.Windows.Forms.Label();
-            this.arbeitenUpdateTransporterVehicleTextBox = new System.Windows.Forms.TextBox();
-            this.arbeitenUpdateTransporterVehicleLabel = new System.Windows.Forms.Label();
-            this.arbeitenUpdateTransporterTextBox = new System.Windows.Forms.TextBox();
-            this.arbeitenUpdateTransporterLabel = new System.Windows.Forms.Label();
             this.arbeitenUpdateOrderFilterCheckBox = new System.Windows.Forms.CheckBox();
             this.arbeitenUpdateOrderFilterDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.arbeitenUpdateOrderSelectComboBox = new System.Windows.Forms.ComboBox();
@@ -602,46 +602,16 @@
             this.trackingOrderIntStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.ruLangButton = new System.Windows.Forms.Button();
             this.uaLangButton = new System.Windows.Forms.Button();
-            this.menuStrip.SuspendLayout();
-            this.dataControl.SuspendLayout();
-            this.helloPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.helloPictureBox)).BeginInit();
-            this.showClientPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.showClientBankDetailsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showClientContactsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showClientDataGridView)).BeginInit();
-            this.addClientPage.SuspendLayout();
-            this.updateClientPage.SuspendLayout();
-            this.deleteClientPage.SuspendLayout();
-            this.showForwarderPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.forwarderBankDetailsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.forwarderContactsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.forwarderDataGridView)).BeginInit();
-            this.addForwarderPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addForwarderSplitContainer)).BeginInit();
             this.addForwarderSplitContainer.Panel1.SuspendLayout();
             this.addForwarderSplitContainer.Panel2.SuspendLayout();
             this.addForwarderSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addForwarderStampPictureBox)).BeginInit();
-            this.updateForwarderPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.updateOrderSplitContainer)).BeginInit();
             this.updateOrderSplitContainer.Panel1.SuspendLayout();
             this.updateOrderSplitContainer.Panel2.SuspendLayout();
             this.updateOrderSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.updateForwarderStampPictureBox)).BeginInit();
-            this.deleteForwarderPage.SuspendLayout();
-            this.showTransporterPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.transporterShowCountryDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transporterShowBankDetailsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transporterShowContactsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transporterShowDataGridView)).BeginInit();
-            this.addTransporterPage.SuspendLayout();
-            this.transporterAddFilterPanel.SuspendLayout();
-            this.updateTransporterPage.SuspendLayout();
-            this.transporterUpdateFilterPanel.SuspendLayout();
-            this.deleteTransporterPage.SuspendLayout();
-            this.addContractPage.SuspendLayout();
-            this.addOrderPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.Panel1.SuspendLayout();
             this.splitContainer6.Panel2.SuspendLayout();
@@ -674,18 +644,12 @@
             this.addOrderSplitContainer1.Panel1.SuspendLayout();
             this.addOrderSplitContainer1.Panel2.SuspendLayout();
             this.addOrderSplitContainer1.SuspendLayout();
-            this.showTrackingPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackingShowForwardersDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showTrackingSplitContainer1)).BeginInit();
             this.showTrackingSplitContainer1.Panel1.SuspendLayout();
             this.showTrackingSplitContainer1.Panel2.SuspendLayout();
             this.showTrackingSplitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackingShowDownloadAddressDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingShowUploadAddressDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackingShowCommentDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackingShowTransporterContactsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackingShowDataGridView)).BeginInit();
-            this.updateOrderPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderUpdateSplitContainer1)).BeginInit();
             this.OrderUpdateSplitContainer1.Panel1.SuspendLayout();
             this.OrderUpdateSplitContainer1.Panel2.SuspendLayout();
@@ -718,34 +682,1920 @@
             this.OrderUpdateSplitContainer8.Panel1.SuspendLayout();
             this.OrderUpdateSplitContainer8.Panel2.SuspendLayout();
             this.OrderUpdateSplitContainer8.SuspendLayout();
-            this.showContractsPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.contractShowTransporterContactDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contractShowDataGridView)).BeginInit();
-            this.showArbeitenPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowDownloadAddressDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowUploadAddressDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowForwardersDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowMainDataGridView)).BeginInit();
-            this.addArbeitenPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arbeitenAddSplitContainer)).BeginInit();
             this.arbeitenAddSplitContainer.Panel1.SuspendLayout();
             this.arbeitenAddSplitContainer.Panel2.SuspendLayout();
             this.arbeitenAddSplitContainer.SuspendLayout();
-            this.updateArbeitenPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arbeitenUpdateSplitContainer)).BeginInit();
             this.arbeitenUpdateSplitContainer.Panel1.SuspendLayout();
             this.arbeitenUpdateSplitContainer.Panel2.SuspendLayout();
             this.arbeitenUpdateSplitContainer.SuspendLayout();
+            this.menuStrip.SuspendLayout();
+            this.dataControl.SuspendLayout();
+            this.helloPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.helloPictureBox)).BeginInit();
+            this.showClientPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showClientBankDetailsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showClientContactsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showClientDataGridView)).BeginInit();
+            this.addClientPage.SuspendLayout();
+            this.updateClientPage.SuspendLayout();
+            this.deleteClientPage.SuspendLayout();
+            this.showForwarderPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.forwarderBankDetailsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.forwarderContactsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.forwarderDataGridView)).BeginInit();
+            this.addForwarderPage.SuspendLayout();
+            this.updateForwarderPage.SuspendLayout();
+            this.deleteForwarderPage.SuspendLayout();
+            this.showTransporterPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowCountryDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowBankDetailsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowContactsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowDataGridView)).BeginInit();
+            this.addTransporterPage.SuspendLayout();
+            this.transporterAddFilterPanel.SuspendLayout();
+            this.updateTransporterPage.SuspendLayout();
+            this.transporterUpdateFilterPanel.SuspendLayout();
+            this.deleteTransporterPage.SuspendLayout();
+            this.addContractPage.SuspendLayout();
+            this.addOrderPage.SuspendLayout();
+            this.showTrackingPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowForwardersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowCommentDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowTransporterContactsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowDataGridView)).BeginInit();
+            this.updateOrderPage.SuspendLayout();
+            this.showContractsPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contractShowTransporterContactDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contractShowDataGridView)).BeginInit();
+            this.showArbeitenPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowForwardersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowMainDataGridView)).BeginInit();
+            this.addArbeitenPage.SuspendLayout();
+            this.updateArbeitenPage.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // addForwarderSplitContainer
+            // 
+            resources.ApplyResources(this.addForwarderSplitContainer, "addForwarderSplitContainer");
+            this.addForwarderSplitContainer.Name = "addForwarderSplitContainer";
+            // 
+            // addForwarderSplitContainer.Panel1
+            // 
+            resources.ApplyResources(this.addForwarderSplitContainer.Panel1, "addForwarderSplitContainer.Panel1");
+            this.addForwarderSplitContainer.Panel1.Controls.Add(this.addForwarderStampPictureBox);
+            this.addForwarderSplitContainer.Panel1.Controls.Add(this.forwarderAddStampButton);
+            // 
+            // addForwarderSplitContainer.Panel2
+            // 
+            resources.ApplyResources(this.addForwarderSplitContainer.Panel2, "addForwarderSplitContainer.Panel2");
+            this.addForwarderSplitContainer.Panel2.Controls.Add(this.commentForwarderTextBox);
+            this.addForwarderSplitContainer.Panel2.Controls.Add(this.label46);
+            // 
+            // addForwarderStampPictureBox
+            // 
+            resources.ApplyResources(this.addForwarderStampPictureBox, "addForwarderStampPictureBox");
+            this.addForwarderStampPictureBox.BackColor = System.Drawing.SystemColors.Window;
+            this.addForwarderStampPictureBox.Name = "addForwarderStampPictureBox";
+            this.addForwarderStampPictureBox.TabStop = false;
+            // 
+            // forwarderAddStampButton
+            // 
+            resources.ApplyResources(this.forwarderAddStampButton, "forwarderAddStampButton");
+            this.forwarderAddStampButton.Name = "forwarderAddStampButton";
+            this.forwarderAddStampButton.TabStop = false;
+            this.forwarderAddStampButton.UseVisualStyleBackColor = true;
+            this.forwarderAddStampButton.Click += new System.EventHandler(this.forwarderAddImageButton_Click);
+            // 
+            // commentForwarderTextBox
+            // 
+            resources.ApplyResources(this.commentForwarderTextBox, "commentForwarderTextBox");
+            this.commentForwarderTextBox.Name = "commentForwarderTextBox";
+            // 
+            // label46
+            // 
+            resources.ApplyResources(this.label46, "label46");
+            this.label46.Name = "label46";
+            // 
+            // updateOrderSplitContainer
+            // 
+            resources.ApplyResources(this.updateOrderSplitContainer, "updateOrderSplitContainer");
+            this.updateOrderSplitContainer.Name = "updateOrderSplitContainer";
+            // 
+            // updateOrderSplitContainer.Panel1
+            // 
+            resources.ApplyResources(this.updateOrderSplitContainer.Panel1, "updateOrderSplitContainer.Panel1");
+            this.updateOrderSplitContainer.Panel1.Controls.Add(this.label36);
+            this.updateOrderSplitContainer.Panel1.Controls.Add(this.updateForwarderStampPictureBox);
+            // 
+            // updateOrderSplitContainer.Panel2
+            // 
+            resources.ApplyResources(this.updateOrderSplitContainer.Panel2, "updateOrderSplitContainer.Panel2");
+            this.updateOrderSplitContainer.Panel2.Controls.Add(this.label61);
+            this.updateOrderSplitContainer.Panel2.Controls.Add(this.commentForwarderUpdateTextBox);
+            // 
+            // label36
+            // 
+            resources.ApplyResources(this.label36, "label36");
+            this.label36.Name = "label36";
+            // 
+            // updateForwarderStampPictureBox
+            // 
+            resources.ApplyResources(this.updateForwarderStampPictureBox, "updateForwarderStampPictureBox");
+            this.updateForwarderStampPictureBox.BackColor = System.Drawing.SystemColors.Window;
+            this.updateForwarderStampPictureBox.Name = "updateForwarderStampPictureBox";
+            this.updateForwarderStampPictureBox.TabStop = false;
+            this.updateForwarderStampPictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.updateForwarderStampPictureBox_Paint);
+            this.updateForwarderStampPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.updateForwarderStampPictureBox_MouseClick);
+            // 
+            // label61
+            // 
+            resources.ApplyResources(this.label61, "label61");
+            this.label61.Name = "label61";
+            // 
+            // commentForwarderUpdateTextBox
+            // 
+            resources.ApplyResources(this.commentForwarderUpdateTextBox, "commentForwarderUpdateTextBox");
+            this.commentForwarderUpdateTextBox.Name = "commentForwarderUpdateTextBox";
+            this.commentForwarderUpdateTextBox.TabStop = false;
+            this.commentForwarderUpdateTextBox.TextChanged += new System.EventHandler(this.commentForwarderUpdateTextBox_TextChanged);
+            // 
+            // splitContainer6
+            // 
+            resources.ApplyResources(this.splitContainer6, "splitContainer6");
+            this.splitContainer6.Name = "splitContainer6";
+            // 
+            // splitContainer6.Panel1
+            // 
+            resources.ApplyResources(this.splitContainer6.Panel1, "splitContainer6.Panel1");
+            this.splitContainer6.Panel1.Controls.Add(this.OrderAddAdditionalTermsAddButton);
+            this.splitContainer6.Panel1.Controls.Add(this.OrderAddPaymentTermsAddButton);
+            this.splitContainer6.Panel1.Controls.Add(this.OrderAddAdditionalTermsSelectComboBox);
+            this.splitContainer6.Panel1.Controls.Add(this.OrderAddPaymentTermsSelectComboBox);
+            this.splitContainer6.Panel1.Controls.Add(this.label102);
+            this.splitContainer6.Panel1.Controls.Add(this.label103);
+            // 
+            // splitContainer6.Panel2
+            // 
+            resources.ApplyResources(this.splitContainer6.Panel2, "splitContainer6.Panel2");
+            this.splitContainer6.Panel2.Controls.Add(this.OrderAddOrderDenyAddButton);
+            this.splitContainer6.Panel2.Controls.Add(this.OrderAddButton);
+            this.splitContainer6.Panel2.Controls.Add(this.label108);
+            this.splitContainer6.Panel2.Controls.Add(this.OrderAddDenyFineSelectComboBox);
+            // 
+            // OrderAddAdditionalTermsAddButton
+            // 
+            resources.ApplyResources(this.OrderAddAdditionalTermsAddButton, "OrderAddAdditionalTermsAddButton");
+            this.OrderAddAdditionalTermsAddButton.Name = "OrderAddAdditionalTermsAddButton";
+            this.OrderAddAdditionalTermsAddButton.TabStop = false;
+            this.OrderAddAdditionalTermsAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddAdditionalTermsAddButton.Click += new System.EventHandler(this.OrderAddAdditionalTermsAddButton_Click);
+            // 
+            // OrderAddPaymentTermsAddButton
+            // 
+            resources.ApplyResources(this.OrderAddPaymentTermsAddButton, "OrderAddPaymentTermsAddButton");
+            this.OrderAddPaymentTermsAddButton.Name = "OrderAddPaymentTermsAddButton";
+            this.OrderAddPaymentTermsAddButton.TabStop = false;
+            this.OrderAddPaymentTermsAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddPaymentTermsAddButton.Click += new System.EventHandler(this.OrderAddPaymentTermsAddButton_Click);
+            // 
+            // OrderAddAdditionalTermsSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddAdditionalTermsSelectComboBox, "OrderAddAdditionalTermsSelectComboBox");
+            this.OrderAddAdditionalTermsSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddAdditionalTermsSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddAdditionalTermsSelectComboBox.Name = "OrderAddAdditionalTermsSelectComboBox";
+            this.OrderAddAdditionalTermsSelectComboBox.Sorted = true;
+            this.OrderAddAdditionalTermsSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddAdditionalTermsSelectComboBox_SelectedIndexChanged);
+            this.OrderAddAdditionalTermsSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddAdditionalTermsSelectComboBox_TextUpdate);
+            this.OrderAddAdditionalTermsSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddAdditionalTermsSelectComboBox_MouseClick);
+            // 
+            // OrderAddPaymentTermsSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddPaymentTermsSelectComboBox, "OrderAddPaymentTermsSelectComboBox");
+            this.OrderAddPaymentTermsSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddPaymentTermsSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddPaymentTermsSelectComboBox.Name = "OrderAddPaymentTermsSelectComboBox";
+            this.OrderAddPaymentTermsSelectComboBox.Sorted = true;
+            this.OrderAddPaymentTermsSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddPaymentTermsSelectComboBox_SelectedIndexChanged);
+            this.OrderAddPaymentTermsSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddPaymentTermsSelectComboBox_TextUpdate);
+            this.OrderAddPaymentTermsSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddPaymentTermsSelectComboBox_MouseClick);
+            // 
+            // label102
+            // 
+            resources.ApplyResources(this.label102, "label102");
+            this.label102.Name = "label102";
+            // 
+            // label103
+            // 
+            resources.ApplyResources(this.label103, "label103");
+            this.label103.Name = "label103";
+            // 
+            // OrderAddOrderDenyAddButton
+            // 
+            resources.ApplyResources(this.OrderAddOrderDenyAddButton, "OrderAddOrderDenyAddButton");
+            this.OrderAddOrderDenyAddButton.Name = "OrderAddOrderDenyAddButton";
+            this.OrderAddOrderDenyAddButton.TabStop = false;
+            this.OrderAddOrderDenyAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddOrderDenyAddButton.Click += new System.EventHandler(this.OrderAddOrderDenyAddButton_Click);
+            // 
+            // OrderAddButton
+            // 
+            resources.ApplyResources(this.OrderAddButton, "OrderAddButton");
+            this.OrderAddButton.Name = "OrderAddButton";
+            this.OrderAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddButton.Click += new System.EventHandler(this.OrderAddButton_Click);
+            // 
+            // label108
+            // 
+            resources.ApplyResources(this.label108, "label108");
+            this.label108.Name = "label108";
+            // 
+            // OrderAddDenyFineSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddDenyFineSelectComboBox, "OrderAddDenyFineSelectComboBox");
+            this.OrderAddDenyFineSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddDenyFineSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddDenyFineSelectComboBox.Name = "OrderAddDenyFineSelectComboBox";
+            this.OrderAddDenyFineSelectComboBox.Sorted = true;
+            this.OrderAddDenyFineSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddDenyFineSelectComboBox_SelectedIndexChanged);
+            this.OrderAddDenyFineSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddDenyFineSelectComboBox_TextUpdate);
+            this.OrderAddDenyFineSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddDenyFineSelectComboBox_MouseClick);
+            // 
+            // addOrderSplitContainer3
+            // 
+            resources.ApplyResources(this.addOrderSplitContainer3, "addOrderSplitContainer3");
+            this.addOrderSplitContainer3.Name = "addOrderSplitContainer3";
+            // 
+            // addOrderSplitContainer3.Panel1
+            // 
+            resources.ApplyResources(this.addOrderSplitContainer3.Panel1, "addOrderSplitContainer3.Panel1");
+            this.addOrderSplitContainer3.Panel1.Controls.Add(this.addOrderSplitContainer4);
+            // 
+            // addOrderSplitContainer3.Panel2
+            // 
+            resources.ApplyResources(this.addOrderSplitContainer3.Panel2, "addOrderSplitContainer3.Panel2");
+            this.addOrderSplitContainer3.Panel2.Controls.Add(this.splitContainer5);
+            // 
+            // addOrderSplitContainer4
+            // 
+            resources.ApplyResources(this.addOrderSplitContainer4, "addOrderSplitContainer4");
+            this.addOrderSplitContainer4.Name = "addOrderSplitContainer4";
+            // 
+            // addOrderSplitContainer4.Panel1
+            // 
+            resources.ApplyResources(this.addOrderSplitContainer4.Panel1, "addOrderSplitContainer4.Panel1");
+            this.addOrderSplitContainer4.Panel1.Controls.Add(this.OrderAddWeightTextBox);
+            this.addOrderSplitContainer4.Panel1.Controls.Add(this.label91);
+            this.addOrderSplitContainer4.Panel1.Controls.Add(this.OrderAddCargoSelectComboBox);
+            this.addOrderSplitContainer4.Panel1.Controls.Add(this.label87);
+            this.addOrderSplitContainer4.Panel1.Controls.Add(this.OrderAddCargoAddButton);
+            // 
+            // addOrderSplitContainer4.Panel2
+            // 
+            resources.ApplyResources(this.addOrderSplitContainer4.Panel2, "addOrderSplitContainer4.Panel2");
+            this.addOrderSplitContainer4.Panel2.Controls.Add(this.OrderAddLoadingForm2AddButton);
+            this.addOrderSplitContainer4.Panel2.Controls.Add(this.OrderAddLoadingForm1AddButton);
+            this.addOrderSplitContainer4.Panel2.Controls.Add(this.OrderAddLoadingForm2SelectComboBox);
+            this.addOrderSplitContainer4.Panel2.Controls.Add(this.label88);
+            this.addOrderSplitContainer4.Panel2.Controls.Add(this.OrderAddLoadingForm1SelectComboBox);
+            this.addOrderSplitContainer4.Panel2.Controls.Add(this.label85);
+            // 
+            // OrderAddWeightTextBox
+            // 
+            resources.ApplyResources(this.OrderAddWeightTextBox, "OrderAddWeightTextBox");
+            this.OrderAddWeightTextBox.Name = "OrderAddWeightTextBox";
+            this.OrderAddWeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OrderAddWeightTextBox_KeyPress);
+            // 
+            // label91
+            // 
+            resources.ApplyResources(this.label91, "label91");
+            this.label91.Name = "label91";
+            // 
+            // OrderAddCargoSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddCargoSelectComboBox, "OrderAddCargoSelectComboBox");
+            this.OrderAddCargoSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddCargoSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddCargoSelectComboBox.Name = "OrderAddCargoSelectComboBox";
+            this.OrderAddCargoSelectComboBox.Sorted = true;
+            this.OrderAddCargoSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddCargoSelectComboBox_SelectedIndexChanged);
+            this.OrderAddCargoSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddCargoSelectComboBox_TextUpdate);
+            this.OrderAddCargoSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddCargoSelectComboBox_MouseClick);
+            // 
+            // label87
+            // 
+            resources.ApplyResources(this.label87, "label87");
+            this.label87.Name = "label87";
+            // 
+            // OrderAddCargoAddButton
+            // 
+            resources.ApplyResources(this.OrderAddCargoAddButton, "OrderAddCargoAddButton");
+            this.OrderAddCargoAddButton.Name = "OrderAddCargoAddButton";
+            this.OrderAddCargoAddButton.TabStop = false;
+            this.OrderAddCargoAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddCargoAddButton.Click += new System.EventHandler(this.OrderAddCargoAddButton_Click);
+            // 
+            // OrderAddLoadingForm2AddButton
+            // 
+            resources.ApplyResources(this.OrderAddLoadingForm2AddButton, "OrderAddLoadingForm2AddButton");
+            this.OrderAddLoadingForm2AddButton.Name = "OrderAddLoadingForm2AddButton";
+            this.OrderAddLoadingForm2AddButton.TabStop = false;
+            this.OrderAddLoadingForm2AddButton.UseVisualStyleBackColor = true;
+            this.OrderAddLoadingForm2AddButton.Click += new System.EventHandler(this.OrderAddLoadingForm1AddButton_Click);
+            // 
+            // OrderAddLoadingForm1AddButton
+            // 
+            resources.ApplyResources(this.OrderAddLoadingForm1AddButton, "OrderAddLoadingForm1AddButton");
+            this.OrderAddLoadingForm1AddButton.Name = "OrderAddLoadingForm1AddButton";
+            this.OrderAddLoadingForm1AddButton.TabStop = false;
+            this.OrderAddLoadingForm1AddButton.UseVisualStyleBackColor = true;
+            this.OrderAddLoadingForm1AddButton.Click += new System.EventHandler(this.OrderAddLoadingForm1AddButton_Click);
+            // 
+            // OrderAddLoadingForm2SelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddLoadingForm2SelectComboBox, "OrderAddLoadingForm2SelectComboBox");
+            this.OrderAddLoadingForm2SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddLoadingForm2SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddLoadingForm2SelectComboBox.Name = "OrderAddLoadingForm2SelectComboBox";
+            this.OrderAddLoadingForm2SelectComboBox.Sorted = true;
+            this.OrderAddLoadingForm2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddLoadingForm2SelectComboBox_SelectedIndexChanged);
+            this.OrderAddLoadingForm2SelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddLoadingForm2SelectComboBox_TextUpdate);
+            this.OrderAddLoadingForm2SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddLoadingForm2SelectComboBox_MouseClick);
+            // 
+            // label88
+            // 
+            resources.ApplyResources(this.label88, "label88");
+            this.label88.Name = "label88";
+            // 
+            // OrderAddLoadingForm1SelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddLoadingForm1SelectComboBox, "OrderAddLoadingForm1SelectComboBox");
+            this.OrderAddLoadingForm1SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddLoadingForm1SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddLoadingForm1SelectComboBox.Name = "OrderAddLoadingForm1SelectComboBox";
+            this.OrderAddLoadingForm1SelectComboBox.Sorted = true;
+            this.OrderAddLoadingForm1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddLoadingForm1SelectComboBox_SelectedIndexChanged);
+            this.OrderAddLoadingForm1SelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddLoadingForm1SelectComboBox_TextUpdate);
+            this.OrderAddLoadingForm1SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddLoadingForm1SelectComboBox_MouseClick);
+            // 
+            // label85
+            // 
+            resources.ApplyResources(this.label85, "label85");
+            this.label85.Name = "label85";
+            // 
+            // splitContainer5
+            // 
+            resources.ApplyResources(this.splitContainer5, "splitContainer5");
+            this.splitContainer5.Name = "splitContainer5";
+            // 
+            // splitContainer5.Panel1
+            // 
+            resources.ApplyResources(this.splitContainer5.Panel1, "splitContainer5.Panel1");
+            this.splitContainer5.Panel1.Controls.Add(this.OrderAddFineForDelayAddButton);
+            this.splitContainer5.Panel1.Controls.Add(this.OrderAddFineForDelaySelectComboBox);
+            this.splitContainer5.Panel1.Controls.Add(this.OrderAddRegularyDelayAddButton);
+            this.splitContainer5.Panel1.Controls.Add(this.OrderAddRegularyDelaySelectComboBox);
+            this.splitContainer5.Panel1.Controls.Add(this.label106);
+            this.splitContainer5.Panel1.Controls.Add(this.label107);
+            // 
+            // splitContainer5.Panel2
+            // 
+            resources.ApplyResources(this.splitContainer5.Panel2, "splitContainer5.Panel2");
+            this.splitContainer5.Panel2.Controls.Add(this.OrderAddTrailerSelectComboBox);
+            this.splitContainer5.Panel2.Controls.Add(this.label104);
+            this.splitContainer5.Panel2.Controls.Add(this.OrderAddTrailerAddButton);
+            this.splitContainer5.Panel2.Controls.Add(this.OrderAddCubeSelectComboBox);
+            this.splitContainer5.Panel2.Controls.Add(this.OrderAddCubeAddButton);
+            this.splitContainer5.Panel2.Controls.Add(this.label105);
+            // 
+            // OrderAddFineForDelayAddButton
+            // 
+            resources.ApplyResources(this.OrderAddFineForDelayAddButton, "OrderAddFineForDelayAddButton");
+            this.OrderAddFineForDelayAddButton.Name = "OrderAddFineForDelayAddButton";
+            this.OrderAddFineForDelayAddButton.TabStop = false;
+            this.OrderAddFineForDelayAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddFineForDelayAddButton.Click += new System.EventHandler(this.OrderAddFineForDelayAddButton_Click);
+            // 
+            // OrderAddFineForDelaySelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddFineForDelaySelectComboBox, "OrderAddFineForDelaySelectComboBox");
+            this.OrderAddFineForDelaySelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddFineForDelaySelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddFineForDelaySelectComboBox.Name = "OrderAddFineForDelaySelectComboBox";
+            this.OrderAddFineForDelaySelectComboBox.Sorted = true;
+            this.OrderAddFineForDelaySelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddFineForDelaySelectComboBox_SelectedIndexChanged);
+            this.OrderAddFineForDelaySelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddFineForDelaySelectComboBox_TextUpdate);
+            this.OrderAddFineForDelaySelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddFineForDelaySelectComboBox_MouseClick);
+            // 
+            // OrderAddRegularyDelayAddButton
+            // 
+            resources.ApplyResources(this.OrderAddRegularyDelayAddButton, "OrderAddRegularyDelayAddButton");
+            this.OrderAddRegularyDelayAddButton.Name = "OrderAddRegularyDelayAddButton";
+            this.OrderAddRegularyDelayAddButton.TabStop = false;
+            this.OrderAddRegularyDelayAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddRegularyDelayAddButton.Click += new System.EventHandler(this.OrderAddRegularyDelayAddButton_Click);
+            // 
+            // OrderAddRegularyDelaySelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddRegularyDelaySelectComboBox, "OrderAddRegularyDelaySelectComboBox");
+            this.OrderAddRegularyDelaySelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddRegularyDelaySelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddRegularyDelaySelectComboBox.Name = "OrderAddRegularyDelaySelectComboBox";
+            this.OrderAddRegularyDelaySelectComboBox.Sorted = true;
+            this.OrderAddRegularyDelaySelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddRegularyDelaySelectComboBox_SelectedIndexChanged);
+            this.OrderAddRegularyDelaySelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddRegularyDelaySelectComboBox_TextUpdate);
+            this.OrderAddRegularyDelaySelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddRegularyDelaySelectComboBox_MouseClick);
+            // 
+            // label106
+            // 
+            resources.ApplyResources(this.label106, "label106");
+            this.label106.Name = "label106";
+            // 
+            // label107
+            // 
+            resources.ApplyResources(this.label107, "label107");
+            this.label107.Name = "label107";
+            // 
+            // OrderAddTrailerSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddTrailerSelectComboBox, "OrderAddTrailerSelectComboBox");
+            this.OrderAddTrailerSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddTrailerSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddTrailerSelectComboBox.Name = "OrderAddTrailerSelectComboBox";
+            this.OrderAddTrailerSelectComboBox.Sorted = true;
+            this.OrderAddTrailerSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddTrailerSelectComboBox_SelectedIndexChanged);
+            this.OrderAddTrailerSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddTrailerSelectComboBox_TextUpdate);
+            this.OrderAddTrailerSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddTrailerSelectComboBox_MouseClick);
+            // 
+            // label104
+            // 
+            resources.ApplyResources(this.label104, "label104");
+            this.label104.Name = "label104";
+            // 
+            // OrderAddTrailerAddButton
+            // 
+            resources.ApplyResources(this.OrderAddTrailerAddButton, "OrderAddTrailerAddButton");
+            this.OrderAddTrailerAddButton.Name = "OrderAddTrailerAddButton";
+            this.OrderAddTrailerAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddTrailerAddButton.Click += new System.EventHandler(this.OrderAddTrailerAddButton_Click);
+            // 
+            // OrderAddCubeSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddCubeSelectComboBox, "OrderAddCubeSelectComboBox");
+            this.OrderAddCubeSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddCubeSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddCubeSelectComboBox.Name = "OrderAddCubeSelectComboBox";
+            this.OrderAddCubeSelectComboBox.Sorted = true;
+            this.OrderAddCubeSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddCubeSelectComboBox_SelectedIndexChanged);
+            this.OrderAddCubeSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddCubeSelectComboBox_TextUpdate);
+            this.OrderAddCubeSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddCubeSelectComboBox_MouseClick);
+            // 
+            // OrderAddCubeAddButton
+            // 
+            resources.ApplyResources(this.OrderAddCubeAddButton, "OrderAddCubeAddButton");
+            this.OrderAddCubeAddButton.Name = "OrderAddCubeAddButton";
+            this.OrderAddCubeAddButton.TabStop = false;
+            this.OrderAddCubeAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddCubeAddButton.Click += new System.EventHandler(this.OrderAddCubeAddButton_Click);
+            // 
+            // label105
+            // 
+            resources.ApplyResources(this.label105, "label105");
+            this.label105.Name = "label105";
+            // 
+            // addOrderSplitContainer2
+            // 
+            resources.ApplyResources(this.addOrderSplitContainer2, "addOrderSplitContainer2");
+            this.addOrderSplitContainer2.Name = "addOrderSplitContainer2";
+            // 
+            // addOrderSplitContainer2.Panel1
+            // 
+            resources.ApplyResources(this.addOrderSplitContainer2.Panel1, "addOrderSplitContainer2.Panel1");
+            this.addOrderSplitContainer2.Panel1.Controls.Add(this.splitContainer8);
+            // 
+            // addOrderSplitContainer2.Panel2
+            // 
+            resources.ApplyResources(this.addOrderSplitContainer2.Panel2, "addOrderSplitContainer2.Panel2");
+            this.addOrderSplitContainer2.Panel2.Controls.Add(this.splitContainer7);
+            // 
+            // splitContainer8
+            // 
+            resources.ApplyResources(this.splitContainer8, "splitContainer8");
+            this.splitContainer8.Name = "splitContainer8";
+            // 
+            // splitContainer8.Panel1
+            // 
+            resources.ApplyResources(this.splitContainer8.Panel1, "splitContainer8.Panel1");
+            this.splitContainer8.Panel1.Controls.Add(this.label51);
+            this.splitContainer8.Panel1.Controls.Add(this.OrderAddDownloadDateToTimePicker);
+            this.splitContainer8.Panel1.Controls.Add(this.OrderAddDownloadAddressAddButton);
+            this.splitContainer8.Panel1.Controls.Add(this.OrderAddDownloadDateFromTimePicker);
+            this.splitContainer8.Panel1.Controls.Add(this.label90);
+            // 
+            // splitContainer8.Panel2
+            // 
+            resources.ApplyResources(this.splitContainer8.Panel2, "splitContainer8.Panel2");
+            this.splitContainer8.Panel2.Controls.Add(this.label66);
+            this.splitContainer8.Panel2.Controls.Add(this.OrderAddUploadDateToTimePicker);
+            this.splitContainer8.Panel2.Controls.Add(this.OrderAddUploadAddressAddButton);
+            this.splitContainer8.Panel2.Controls.Add(this.OrderAddUploadDateFromTimePicker);
+            this.splitContainer8.Panel2.Controls.Add(this.label92);
+            // 
+            // label51
+            // 
+            resources.ApplyResources(this.label51, "label51");
+            this.label51.Name = "label51";
+            // 
+            // OrderAddDownloadDateToTimePicker
+            // 
+            resources.ApplyResources(this.OrderAddDownloadDateToTimePicker, "OrderAddDownloadDateToTimePicker");
+            this.OrderAddDownloadDateToTimePicker.Checked = false;
+            this.OrderAddDownloadDateToTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.OrderAddDownloadDateToTimePicker.Name = "OrderAddDownloadDateToTimePicker";
+            this.OrderAddDownloadDateToTimePicker.ShowCheckBox = true;
+            // 
+            // OrderAddDownloadAddressAddButton
+            // 
+            resources.ApplyResources(this.OrderAddDownloadAddressAddButton, "OrderAddDownloadAddressAddButton");
+            this.OrderAddDownloadAddressAddButton.Name = "OrderAddDownloadAddressAddButton";
+            this.OrderAddDownloadAddressAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddDownloadAddressAddButton.Click += new System.EventHandler(this.OrderAddDownloadAddressAddButton_Click);
+            // 
+            // OrderAddDownloadDateFromTimePicker
+            // 
+            resources.ApplyResources(this.OrderAddDownloadDateFromTimePicker, "OrderAddDownloadDateFromTimePicker");
+            this.OrderAddDownloadDateFromTimePicker.Checked = false;
+            this.OrderAddDownloadDateFromTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.OrderAddDownloadDateFromTimePicker.Name = "OrderAddDownloadDateFromTimePicker";
+            this.OrderAddDownloadDateFromTimePicker.ShowCheckBox = true;
+            this.OrderAddDownloadDateFromTimePicker.ValueChanged += new System.EventHandler(this.OrderAddDownloadDateFromTimePicker_ValueChanged);
+            // 
+            // label90
+            // 
+            resources.ApplyResources(this.label90, "label90");
+            this.label90.Name = "label90";
+            // 
+            // label66
+            // 
+            resources.ApplyResources(this.label66, "label66");
+            this.label66.Name = "label66";
+            // 
+            // OrderAddUploadDateToTimePicker
+            // 
+            resources.ApplyResources(this.OrderAddUploadDateToTimePicker, "OrderAddUploadDateToTimePicker");
+            this.OrderAddUploadDateToTimePicker.Checked = false;
+            this.OrderAddUploadDateToTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.OrderAddUploadDateToTimePicker.Name = "OrderAddUploadDateToTimePicker";
+            this.OrderAddUploadDateToTimePicker.ShowCheckBox = true;
+            this.OrderAddUploadDateToTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
+            // 
+            // OrderAddUploadAddressAddButton
+            // 
+            resources.ApplyResources(this.OrderAddUploadAddressAddButton, "OrderAddUploadAddressAddButton");
+            this.OrderAddUploadAddressAddButton.Name = "OrderAddUploadAddressAddButton";
+            this.OrderAddUploadAddressAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddUploadAddressAddButton.Click += new System.EventHandler(this.OrderAddUploadAddressAddButton_Click);
+            // 
+            // OrderAddUploadDateFromTimePicker
+            // 
+            resources.ApplyResources(this.OrderAddUploadDateFromTimePicker, "OrderAddUploadDateFromTimePicker");
+            this.OrderAddUploadDateFromTimePicker.Checked = false;
+            this.OrderAddUploadDateFromTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.OrderAddUploadDateFromTimePicker.Name = "OrderAddUploadDateFromTimePicker";
+            this.OrderAddUploadDateFromTimePicker.ShowCheckBox = true;
+            this.OrderAddUploadDateFromTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
+            this.OrderAddUploadDateFromTimePicker.ValueChanged += new System.EventHandler(this.OrderAddUploadDateFromTimePicker_ValueChanged);
+            // 
+            // label92
+            // 
+            resources.ApplyResources(this.label92, "label92");
+            this.label92.Name = "label92";
+            // 
+            // splitContainer7
+            // 
+            resources.ApplyResources(this.splitContainer7, "splitContainer7");
+            this.splitContainer7.Name = "splitContainer7";
+            // 
+            // splitContainer7.Panel1
+            // 
+            resources.ApplyResources(this.splitContainer7.Panel1, "splitContainer7.Panel1");
+            this.splitContainer7.Panel1.Controls.Add(this.OrderAddTirCmrSelectComboBox);
+            this.splitContainer7.Panel1.Controls.Add(this.OrderAddTirCmrAddButton);
+            this.splitContainer7.Panel1.Controls.Add(this.OrderAddCustomsAddressAddButton);
+            this.splitContainer7.Panel1.Controls.Add(this.label79);
+            // 
+            // splitContainer7.Panel2
+            // 
+            resources.ApplyResources(this.splitContainer7.Panel2, "splitContainer7.Panel2");
+            this.splitContainer7.Panel2.Controls.Add(this.OrderAddStaffButton);
+            this.splitContainer7.Panel2.Controls.Add(this.OrderAddPersonalLabel);
+            this.splitContainer7.Panel2.Controls.Add(this.OrderAddStaffComboBox);
+            this.splitContainer7.Panel2.Controls.Add(this.OrderAddUncustomsAddressAddButton);
+            this.splitContainer7.Panel2.Controls.Add(this.OrderAddADRSelectComboBox);
+            this.splitContainer7.Panel2.Controls.Add(this.label89);
+            // 
+            // OrderAddTirCmrSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddTirCmrSelectComboBox, "OrderAddTirCmrSelectComboBox");
+            this.OrderAddTirCmrSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddTirCmrSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddTirCmrSelectComboBox.Name = "OrderAddTirCmrSelectComboBox";
+            this.OrderAddTirCmrSelectComboBox.Sorted = true;
+            this.OrderAddTirCmrSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddTirCmrSelectComboBox_SelectedIndexChanged);
+            this.OrderAddTirCmrSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddTirCmrSelectComboBox_TextUpdate);
+            this.OrderAddTirCmrSelectComboBox.Click += new System.EventHandler(this.OrderAddTirCmrSelectComboBox_Click);
+            // 
+            // OrderAddTirCmrAddButton
+            // 
+            resources.ApplyResources(this.OrderAddTirCmrAddButton, "OrderAddTirCmrAddButton");
+            this.OrderAddTirCmrAddButton.Name = "OrderAddTirCmrAddButton";
+            this.OrderAddTirCmrAddButton.TabStop = false;
+            this.OrderAddTirCmrAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddTirCmrAddButton.Click += new System.EventHandler(this.OrderAddTirCmrAddButton_Click);
+            // 
+            // OrderAddCustomsAddressAddButton
+            // 
+            resources.ApplyResources(this.OrderAddCustomsAddressAddButton, "OrderAddCustomsAddressAddButton");
+            this.OrderAddCustomsAddressAddButton.Name = "OrderAddCustomsAddressAddButton";
+            this.OrderAddCustomsAddressAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddCustomsAddressAddButton.Click += new System.EventHandler(this.OrderAddCustomsAddressAddButton_Click);
+            // 
+            // label79
+            // 
+            resources.ApplyResources(this.label79, "label79");
+            this.label79.Name = "label79";
+            // 
+            // OrderAddStaffButton
+            // 
+            resources.ApplyResources(this.OrderAddStaffButton, "OrderAddStaffButton");
+            this.OrderAddStaffButton.Name = "OrderAddStaffButton";
+            this.OrderAddStaffButton.TabStop = false;
+            this.OrderAddStaffButton.UseVisualStyleBackColor = true;
+            this.OrderAddStaffButton.Click += new System.EventHandler(this.OrderAddSatffAddButton_Click);
+            // 
+            // OrderAddPersonalLabel
+            // 
+            resources.ApplyResources(this.OrderAddPersonalLabel, "OrderAddPersonalLabel");
+            this.OrderAddPersonalLabel.Name = "OrderAddPersonalLabel";
+            // 
+            // OrderAddStaffComboBox
+            // 
+            resources.ApplyResources(this.OrderAddStaffComboBox, "OrderAddStaffComboBox");
+            this.OrderAddStaffComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddStaffComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddStaffComboBox.Items.AddRange(new object[] {
+            resources.GetString("OrderAddStaffComboBox.Items"),
+            resources.GetString("OrderAddStaffComboBox.Items1")});
+            this.OrderAddStaffComboBox.Name = "OrderAddStaffComboBox";
+            this.OrderAddStaffComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddStaffSelectComboBox_SelectedIndexChanged);
+            this.OrderAddStaffComboBox.TextUpdate += new System.EventHandler(this.OrderAddStaffSelectComboBox_TextUpdate);
+            this.OrderAddStaffComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddStaffSelectComboBox_MouseClick);
+            // 
+            // OrderAddUncustomsAddressAddButton
+            // 
+            resources.ApplyResources(this.OrderAddUncustomsAddressAddButton, "OrderAddUncustomsAddressAddButton");
+            this.OrderAddUncustomsAddressAddButton.Name = "OrderAddUncustomsAddressAddButton";
+            this.OrderAddUncustomsAddressAddButton.UseVisualStyleBackColor = true;
+            this.OrderAddUncustomsAddressAddButton.Click += new System.EventHandler(this.OrderAddUncustomsAddressAddButton_Click);
+            // 
+            // OrderAddADRSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddADRSelectComboBox, "OrderAddADRSelectComboBox");
+            this.OrderAddADRSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddADRSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddADRSelectComboBox.Items.AddRange(new object[] {
+            resources.GetString("OrderAddADRSelectComboBox.Items"),
+            resources.GetString("OrderAddADRSelectComboBox.Items1"),
+            resources.GetString("OrderAddADRSelectComboBox.Items2"),
+            resources.GetString("OrderAddADRSelectComboBox.Items3"),
+            resources.GetString("OrderAddADRSelectComboBox.Items4"),
+            resources.GetString("OrderAddADRSelectComboBox.Items5"),
+            resources.GetString("OrderAddADRSelectComboBox.Items6"),
+            resources.GetString("OrderAddADRSelectComboBox.Items7"),
+            resources.GetString("OrderAddADRSelectComboBox.Items8")});
+            this.OrderAddADRSelectComboBox.Name = "OrderAddADRSelectComboBox";
+            this.OrderAddADRSelectComboBox.Sorted = true;
+            this.OrderAddADRSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddADRSelectComboBox_MouseClick);
+            // 
+            // label89
+            // 
+            resources.ApplyResources(this.label89, "label89");
+            this.label89.Name = "label89";
+            // 
+            // addOrderSplitContainer1
+            // 
+            resources.ApplyResources(this.addOrderSplitContainer1, "addOrderSplitContainer1");
+            this.addOrderSplitContainer1.Name = "addOrderSplitContainer1";
+            // 
+            // addOrderSplitContainer1.Panel1
+            // 
+            resources.ApplyResources(this.addOrderSplitContainer1.Panel1, "addOrderSplitContainer1.Panel1");
+            this.addOrderSplitContainer1.Panel1.Controls.Add(this.label37);
+            this.addOrderSplitContainer1.Panel1.Controls.Add(this.OrderAddClientSelectComboBox);
+            this.addOrderSplitContainer1.Panel1.Controls.Add(this.OrderAddLanduageSelectComboBox);
+            this.addOrderSplitContainer1.Panel1.Controls.Add(this.OrderAddTransporterSelectComboBox);
+            this.addOrderSplitContainer1.Panel1.Controls.Add(this.label53);
+            this.addOrderSplitContainer1.Panel1.Controls.Add(this.label56);
+            this.addOrderSplitContainer1.Panel1.Controls.Add(this.label52);
+            this.addOrderSplitContainer1.Panel1.Controls.Add(this.label58);
+            this.addOrderSplitContainer1.Panel1.Controls.Add(this.OrderAddDateSelectDateTimePicker);
+            this.addOrderSplitContainer1.Panel1.Controls.Add(this.OrderAddClientDiapasoneComboBox);
+            this.addOrderSplitContainer1.Panel1.Controls.Add(this.OrderAddTransporterDiapasoneComboBox);
+            // 
+            // addOrderSplitContainer1.Panel2
+            // 
+            resources.ApplyResources(this.addOrderSplitContainer1.Panel2, "addOrderSplitContainer1.Panel2");
+            this.addOrderSplitContainer1.Panel2.Controls.Add(this.label39);
+            this.addOrderSplitContainer1.Panel2.Controls.Add(this.OrderAddForwarder3SelectComboBox);
+            this.addOrderSplitContainer1.Panel2.Controls.Add(this.label54);
+            this.addOrderSplitContainer1.Panel2.Controls.Add(this.label55);
+            this.addOrderSplitContainer1.Panel2.Controls.Add(this.OrderAddForwarder2SelectComboBox);
+            this.addOrderSplitContainer1.Panel2.Controls.Add(this.OrderAddForwarder1SelectComboBox);
+            // 
+            // label37
+            // 
+            resources.ApplyResources(this.label37, "label37");
+            this.label37.Name = "label37";
+            // 
+            // OrderAddClientSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddClientSelectComboBox, "OrderAddClientSelectComboBox");
+            this.OrderAddClientSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddClientSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddClientSelectComboBox.Name = "OrderAddClientSelectComboBox";
+            this.OrderAddClientSelectComboBox.Sorted = true;
+            this.OrderAddClientSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddClientSelectComboBox_SelectedIndexChanged);
+            this.OrderAddClientSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddClientSelectComboBox_TextUpdate);
+            this.OrderAddClientSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddClientSelectComboBox_MouseClick);
+            // 
+            // OrderAddLanduageSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddLanduageSelectComboBox, "OrderAddLanduageSelectComboBox");
+            this.OrderAddLanduageSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddLanduageSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddLanduageSelectComboBox.Items.AddRange(new object[] {
+            resources.GetString("OrderAddLanduageSelectComboBox.Items"),
+            resources.GetString("OrderAddLanduageSelectComboBox.Items1"),
+            resources.GetString("OrderAddLanduageSelectComboBox.Items2")});
+            this.OrderAddLanduageSelectComboBox.Name = "OrderAddLanduageSelectComboBox";
+            this.OrderAddLanduageSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddLanduageSelectComboBox_MouseClick);
+            // 
+            // OrderAddTransporterSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddTransporterSelectComboBox, "OrderAddTransporterSelectComboBox");
+            this.OrderAddTransporterSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddTransporterSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddTransporterSelectComboBox.Name = "OrderAddTransporterSelectComboBox";
+            this.OrderAddTransporterSelectComboBox.Sorted = true;
+            this.OrderAddTransporterSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddTransporterSelectComboBox_SelectedIndexChanged);
+            this.OrderAddTransporterSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddTransporterSelectComboBox_TextUpdate);
+            this.OrderAddTransporterSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddTransporterSelectComboBox_MouseClick);
+            // 
+            // label53
+            // 
+            resources.ApplyResources(this.label53, "label53");
+            this.label53.Name = "label53";
+            // 
+            // label56
+            // 
+            resources.ApplyResources(this.label56, "label56");
+            this.label56.Name = "label56";
+            // 
+            // label52
+            // 
+            resources.ApplyResources(this.label52, "label52");
+            this.label52.Name = "label52";
+            // 
+            // label58
+            // 
+            resources.ApplyResources(this.label58, "label58");
+            this.label58.Name = "label58";
+            // 
+            // OrderAddDateSelectDateTimePicker
+            // 
+            resources.ApplyResources(this.OrderAddDateSelectDateTimePicker, "OrderAddDateSelectDateTimePicker");
+            this.OrderAddDateSelectDateTimePicker.Checked = false;
+            this.OrderAddDateSelectDateTimePicker.Name = "OrderAddDateSelectDateTimePicker";
+            // 
+            // OrderAddClientDiapasoneComboBox
+            // 
+            resources.ApplyResources(this.OrderAddClientDiapasoneComboBox, "OrderAddClientDiapasoneComboBox");
+            this.OrderAddClientDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddClientDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddClientDiapasoneComboBox.Name = "OrderAddClientDiapasoneComboBox";
+            this.OrderAddClientDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddClientDiapasoneComboBox_MouseClick);
+            // 
+            // OrderAddTransporterDiapasoneComboBox
+            // 
+            resources.ApplyResources(this.OrderAddTransporterDiapasoneComboBox, "OrderAddTransporterDiapasoneComboBox");
+            this.OrderAddTransporterDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddTransporterDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddTransporterDiapasoneComboBox.Name = "OrderAddTransporterDiapasoneComboBox";
+            this.OrderAddTransporterDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddTransporterDiapasoneComboBox_MouseClick);
+            // 
+            // label39
+            // 
+            resources.ApplyResources(this.label39, "label39");
+            this.label39.Name = "label39";
+            // 
+            // OrderAddForwarder3SelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddForwarder3SelectComboBox, "OrderAddForwarder3SelectComboBox");
+            this.OrderAddForwarder3SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddForwarder3SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddForwarder3SelectComboBox.Name = "OrderAddForwarder3SelectComboBox";
+            this.OrderAddForwarder3SelectComboBox.Sorted = true;
+            this.OrderAddForwarder3SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddForwarder3SelectComboBox_SelectedIndexChanged);
+            this.OrderAddForwarder3SelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddForwarder3SelectComboBox_TextUpdate);
+            this.OrderAddForwarder3SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddForwarder3SelectComboBox_MouseClick);
+            // 
+            // label54
+            // 
+            resources.ApplyResources(this.label54, "label54");
+            this.label54.Name = "label54";
+            // 
+            // label55
+            // 
+            resources.ApplyResources(this.label55, "label55");
+            this.label55.Name = "label55";
+            // 
+            // OrderAddForwarder2SelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddForwarder2SelectComboBox, "OrderAddForwarder2SelectComboBox");
+            this.OrderAddForwarder2SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddForwarder2SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddForwarder2SelectComboBox.Name = "OrderAddForwarder2SelectComboBox";
+            this.OrderAddForwarder2SelectComboBox.Sorted = true;
+            this.OrderAddForwarder2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddForwarder2SelectComboBox_SelectedIndexChanged);
+            this.OrderAddForwarder2SelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddForwarder2SelectComboBox_TextUpdate);
+            this.OrderAddForwarder2SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddForwarder2SelectComboBox_MouseClick);
+            // 
+            // OrderAddForwarder1SelectComboBox
+            // 
+            resources.ApplyResources(this.OrderAddForwarder1SelectComboBox, "OrderAddForwarder1SelectComboBox");
+            this.OrderAddForwarder1SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderAddForwarder1SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderAddForwarder1SelectComboBox.Name = "OrderAddForwarder1SelectComboBox";
+            this.OrderAddForwarder1SelectComboBox.Sorted = true;
+            this.OrderAddForwarder1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddForwarder1SelectComboBox_SelectedIndexChanged);
+            this.OrderAddForwarder1SelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddForwarder1SelectComboBox_TextUpdate);
+            this.OrderAddForwarder1SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddForwarder1SelectComboBox_MouseClick);
+            // 
+            // showTrackingSplitContainer1
+            // 
+            resources.ApplyResources(this.showTrackingSplitContainer1, "showTrackingSplitContainer1");
+            this.showTrackingSplitContainer1.Name = "showTrackingSplitContainer1";
+            // 
+            // showTrackingSplitContainer1.Panel1
+            // 
+            resources.ApplyResources(this.showTrackingSplitContainer1.Panel1, "showTrackingSplitContainer1.Panel1");
+            this.showTrackingSplitContainer1.Panel1.Controls.Add(this.trackingShowDownloadAddressDataGridView);
+            // 
+            // showTrackingSplitContainer1.Panel2
+            // 
+            resources.ApplyResources(this.showTrackingSplitContainer1.Panel2, "showTrackingSplitContainer1.Panel2");
+            this.showTrackingSplitContainer1.Panel2.Controls.Add(this.trackingShowUploadAddressDataGridView);
+            // 
+            // trackingShowDownloadAddressDataGridView
+            // 
+            resources.ApplyResources(this.trackingShowDownloadAddressDataGridView, "trackingShowDownloadAddressDataGridView");
+            this.trackingShowDownloadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.trackingShowDownloadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.trackingShowDownloadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.trackingShowDownloadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.trackingShowDownloadAddressDataGridView.MultiSelect = false;
+            this.trackingShowDownloadAddressDataGridView.Name = "trackingShowDownloadAddressDataGridView";
+            this.trackingShowDownloadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.trackingShowDownloadAddressDataGridView.TabStop = false;
+            // 
+            // trackingShowUploadAddressDataGridView
+            // 
+            resources.ApplyResources(this.trackingShowUploadAddressDataGridView, "trackingShowUploadAddressDataGridView");
+            this.trackingShowUploadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.trackingShowUploadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.trackingShowUploadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.trackingShowUploadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.trackingShowUploadAddressDataGridView.MultiSelect = false;
+            this.trackingShowUploadAddressDataGridView.Name = "trackingShowUploadAddressDataGridView";
+            this.trackingShowUploadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.trackingShowUploadAddressDataGridView.TabStop = false;
+            // 
+            // OrderUpdateSplitContainer1
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer1, "OrderUpdateSplitContainer1");
+            this.OrderUpdateSplitContainer1.Name = "OrderUpdateSplitContainer1";
+            // 
+            // OrderUpdateSplitContainer1.Panel1
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer1.Panel1, "OrderUpdateSplitContainer1.Panel1");
+            this.OrderUpdateSplitContainer1.Panel1.Controls.Add(this.OrderUpdateAdditionalTermsAddButton);
+            this.OrderUpdateSplitContainer1.Panel1.Controls.Add(this.OrderUpdatePaymentTermsAddButton);
+            this.OrderUpdateSplitContainer1.Panel1.Controls.Add(this.OrderUpdateAdditionalTermsSelectComboBox);
+            this.OrderUpdateSplitContainer1.Panel1.Controls.Add(this.OrderUpdateLabel1);
+            this.OrderUpdateSplitContainer1.Panel1.Controls.Add(this.OrderUpdatePaymentTermsSelectComboBox);
+            this.OrderUpdateSplitContainer1.Panel1.Controls.Add(this.OrderUpdateLabel2);
+            // 
+            // OrderUpdateSplitContainer1.Panel2
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer1.Panel2, "OrderUpdateSplitContainer1.Panel2");
+            this.OrderUpdateSplitContainer1.Panel2.Controls.Add(this.OrderUpdateButton);
+            this.OrderUpdateSplitContainer1.Panel2.Controls.Add(this.OrderUpdateOrderDenyAddButton);
+            this.OrderUpdateSplitContainer1.Panel2.Controls.Add(this.OrderUpdateLabel3);
+            this.OrderUpdateSplitContainer1.Panel2.Controls.Add(this.OrderUpdateDenyFineSelectComboBox);
+            // 
+            // OrderUpdateAdditionalTermsAddButton
+            // 
+            resources.ApplyResources(this.OrderUpdateAdditionalTermsAddButton, "OrderUpdateAdditionalTermsAddButton");
+            this.OrderUpdateAdditionalTermsAddButton.Name = "OrderUpdateAdditionalTermsAddButton";
+            this.OrderUpdateAdditionalTermsAddButton.TabStop = false;
+            this.OrderUpdateAdditionalTermsAddButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateAdditionalTermsAddButton.Click += new System.EventHandler(this.OrderUpdateAdditionalTermsAddButton_Click);
+            // 
+            // OrderUpdatePaymentTermsAddButton
+            // 
+            resources.ApplyResources(this.OrderUpdatePaymentTermsAddButton, "OrderUpdatePaymentTermsAddButton");
+            this.OrderUpdatePaymentTermsAddButton.Name = "OrderUpdatePaymentTermsAddButton";
+            this.OrderUpdatePaymentTermsAddButton.TabStop = false;
+            this.OrderUpdatePaymentTermsAddButton.UseVisualStyleBackColor = true;
+            this.OrderUpdatePaymentTermsAddButton.Click += new System.EventHandler(this.OrderUpdatePaymentTermsAddButton_Click);
+            // 
+            // OrderUpdateAdditionalTermsSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateAdditionalTermsSelectComboBox, "OrderUpdateAdditionalTermsSelectComboBox");
+            this.OrderUpdateAdditionalTermsSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateAdditionalTermsSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateAdditionalTermsSelectComboBox.Name = "OrderUpdateAdditionalTermsSelectComboBox";
+            this.OrderUpdateAdditionalTermsSelectComboBox.Sorted = true;
+            this.OrderUpdateAdditionalTermsSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateAdditionalTermsSelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateAdditionalTermsSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateAdditionalTermsSelectComboBox_TextUpdate);
+            this.OrderUpdateAdditionalTermsSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateAdditionalTermsSelectComboBox_MouseClick);
+            // 
+            // OrderUpdateLabel1
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel1, "OrderUpdateLabel1");
+            this.OrderUpdateLabel1.Name = "OrderUpdateLabel1";
+            // 
+            // OrderUpdatePaymentTermsSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdatePaymentTermsSelectComboBox, "OrderUpdatePaymentTermsSelectComboBox");
+            this.OrderUpdatePaymentTermsSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdatePaymentTermsSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdatePaymentTermsSelectComboBox.Name = "OrderUpdatePaymentTermsSelectComboBox";
+            this.OrderUpdatePaymentTermsSelectComboBox.Sorted = true;
+            this.OrderUpdatePaymentTermsSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdatePaymentTermsSelectComboBox_SelectedIndexChanged);
+            this.OrderUpdatePaymentTermsSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdatePaymentTermsSelectComboBox_TextUpdate);
+            this.OrderUpdatePaymentTermsSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdatePaymentTermsSelectComboBox_MouseClick);
+            // 
+            // OrderUpdateLabel2
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel2, "OrderUpdateLabel2");
+            this.OrderUpdateLabel2.Name = "OrderUpdateLabel2";
+            // 
+            // OrderUpdateButton
+            // 
+            resources.ApplyResources(this.OrderUpdateButton, "OrderUpdateButton");
+            this.OrderUpdateButton.Name = "OrderUpdateButton";
+            this.OrderUpdateButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateButton.Click += new System.EventHandler(this.OrderUpdateButton_Click);
+            // 
+            // OrderUpdateOrderDenyAddButton
+            // 
+            resources.ApplyResources(this.OrderUpdateOrderDenyAddButton, "OrderUpdateOrderDenyAddButton");
+            this.OrderUpdateOrderDenyAddButton.Name = "OrderUpdateOrderDenyAddButton";
+            this.OrderUpdateOrderDenyAddButton.TabStop = false;
+            this.OrderUpdateOrderDenyAddButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateOrderDenyAddButton.Click += new System.EventHandler(this.OrderUpdateOrderDenyAddButton_Click);
+            // 
+            // OrderUpdateLabel3
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel3, "OrderUpdateLabel3");
+            this.OrderUpdateLabel3.Name = "OrderUpdateLabel3";
+            // 
+            // OrderUpdateDenyFineSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateDenyFineSelectComboBox, "OrderUpdateDenyFineSelectComboBox");
+            this.OrderUpdateDenyFineSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateDenyFineSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateDenyFineSelectComboBox.Name = "OrderUpdateDenyFineSelectComboBox";
+            this.OrderUpdateDenyFineSelectComboBox.Sorted = true;
+            this.OrderUpdateDenyFineSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateDenyFineSelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateDenyFineSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateDenyFineSelectComboBox_TextUpdate);
+            this.OrderUpdateDenyFineSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateDenyFineSelectComboBox_MouseClick);
+            // 
+            // OrderUpdateSplitContainer2
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer2, "OrderUpdateSplitContainer2");
+            this.OrderUpdateSplitContainer2.Name = "OrderUpdateSplitContainer2";
+            // 
+            // OrderUpdateSplitContainer2.Panel1
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer2.Panel1, "OrderUpdateSplitContainer2.Panel1");
+            this.OrderUpdateSplitContainer2.Panel1.Controls.Add(this.OrderUpdateSplitContainer3);
+            // 
+            // OrderUpdateSplitContainer2.Panel2
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer2.Panel2, "OrderUpdateSplitContainer2.Panel2");
+            this.OrderUpdateSplitContainer2.Panel2.Controls.Add(this.OrderUpdateSplitContainer4);
+            // 
+            // OrderUpdateSplitContainer3
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer3, "OrderUpdateSplitContainer3");
+            this.OrderUpdateSplitContainer3.Name = "OrderUpdateSplitContainer3";
+            // 
+            // OrderUpdateSplitContainer3.Panel1
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer3.Panel1, "OrderUpdateSplitContainer3.Panel1");
+            this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateWeightTextBox);
+            this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateCargoSelectComboBox);
+            this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateLabel5);
+            this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateCargoAddButton);
+            this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateLabel4);
+            // 
+            // OrderUpdateSplitContainer3.Panel2
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer3.Panel2, "OrderUpdateSplitContainer3.Panel2");
+            this.OrderUpdateSplitContainer3.Panel2.Controls.Add(this.OrderUpdateLoadingForm2AddButton);
+            this.OrderUpdateSplitContainer3.Panel2.Controls.Add(this.OrderUpdateLoadingForm1AddButton);
+            this.OrderUpdateSplitContainer3.Panel2.Controls.Add(this.OrderUpdateLoadingForm2SelectComboBox);
+            this.OrderUpdateSplitContainer3.Panel2.Controls.Add(this.OrderUpdateLabel6);
+            this.OrderUpdateSplitContainer3.Panel2.Controls.Add(this.OrderUpdateLoadingForm1SelectComboBox);
+            this.OrderUpdateSplitContainer3.Panel2.Controls.Add(this.OrderUpdateLabel7);
+            // 
+            // OrderUpdateWeightTextBox
+            // 
+            resources.ApplyResources(this.OrderUpdateWeightTextBox, "OrderUpdateWeightTextBox");
+            this.OrderUpdateWeightTextBox.Name = "OrderUpdateWeightTextBox";
+            this.OrderUpdateWeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OrderUpdateWeightTextBox_KeyPress);
+            // 
+            // OrderUpdateCargoSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateCargoSelectComboBox, "OrderUpdateCargoSelectComboBox");
+            this.OrderUpdateCargoSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateCargoSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateCargoSelectComboBox.Name = "OrderUpdateCargoSelectComboBox";
+            this.OrderUpdateCargoSelectComboBox.Sorted = true;
+            this.OrderUpdateCargoSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateCargoSelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateCargoSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateCargoSelectComboBox_TextUpdate);
+            this.OrderUpdateCargoSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateCargoSelectComboBox_MouseClick);
+            // 
+            // OrderUpdateLabel5
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel5, "OrderUpdateLabel5");
+            this.OrderUpdateLabel5.Name = "OrderUpdateLabel5";
+            // 
+            // OrderUpdateCargoAddButton
+            // 
+            resources.ApplyResources(this.OrderUpdateCargoAddButton, "OrderUpdateCargoAddButton");
+            this.OrderUpdateCargoAddButton.Name = "OrderUpdateCargoAddButton";
+            this.OrderUpdateCargoAddButton.TabStop = false;
+            this.OrderUpdateCargoAddButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateCargoAddButton.Click += new System.EventHandler(this.OrderUpdateCargoAddButton_Click);
+            // 
+            // OrderUpdateLabel4
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel4, "OrderUpdateLabel4");
+            this.OrderUpdateLabel4.Name = "OrderUpdateLabel4";
+            // 
+            // OrderUpdateLoadingForm2AddButton
+            // 
+            resources.ApplyResources(this.OrderUpdateLoadingForm2AddButton, "OrderUpdateLoadingForm2AddButton");
+            this.OrderUpdateLoadingForm2AddButton.Name = "OrderUpdateLoadingForm2AddButton";
+            this.OrderUpdateLoadingForm2AddButton.TabStop = false;
+            this.OrderUpdateLoadingForm2AddButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateLoadingForm2AddButton.Click += new System.EventHandler(this.OrderUpdateLoadingForm1AddButton_Click);
+            // 
+            // OrderUpdateLoadingForm1AddButton
+            // 
+            resources.ApplyResources(this.OrderUpdateLoadingForm1AddButton, "OrderUpdateLoadingForm1AddButton");
+            this.OrderUpdateLoadingForm1AddButton.Name = "OrderUpdateLoadingForm1AddButton";
+            this.OrderUpdateLoadingForm1AddButton.TabStop = false;
+            this.OrderUpdateLoadingForm1AddButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateLoadingForm1AddButton.Click += new System.EventHandler(this.OrderUpdateLoadingForm1AddButton_Click);
+            // 
+            // OrderUpdateLoadingForm2SelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateLoadingForm2SelectComboBox, "OrderUpdateLoadingForm2SelectComboBox");
+            this.OrderUpdateLoadingForm2SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateLoadingForm2SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateLoadingForm2SelectComboBox.Name = "OrderUpdateLoadingForm2SelectComboBox";
+            this.OrderUpdateLoadingForm2SelectComboBox.Sorted = true;
+            this.OrderUpdateLoadingForm2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateLoadingForm2SelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateLoadingForm2SelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateLoadingForm2SelectComboBox_TextUpdate);
+            this.OrderUpdateLoadingForm2SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateLoadingForm2SelectComboBox_MouseClick);
+            // 
+            // OrderUpdateLabel6
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel6, "OrderUpdateLabel6");
+            this.OrderUpdateLabel6.Name = "OrderUpdateLabel6";
+            // 
+            // OrderUpdateLoadingForm1SelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateLoadingForm1SelectComboBox, "OrderUpdateLoadingForm1SelectComboBox");
+            this.OrderUpdateLoadingForm1SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateLoadingForm1SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateLoadingForm1SelectComboBox.Name = "OrderUpdateLoadingForm1SelectComboBox";
+            this.OrderUpdateLoadingForm1SelectComboBox.Sorted = true;
+            this.OrderUpdateLoadingForm1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateLoadingForm1SelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateLoadingForm1SelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateLoadingForm1SelectComboBox_TextUpdate);
+            this.OrderUpdateLoadingForm1SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateLoadingForm1SelectComboBox_MouseClick);
+            // 
+            // OrderUpdateLabel7
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel7, "OrderUpdateLabel7");
+            this.OrderUpdateLabel7.Name = "OrderUpdateLabel7";
+            // 
+            // OrderUpdateSplitContainer4
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer4, "OrderUpdateSplitContainer4");
+            this.OrderUpdateSplitContainer4.Name = "OrderUpdateSplitContainer4";
+            // 
+            // OrderUpdateSplitContainer4.Panel1
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer4.Panel1, "OrderUpdateSplitContainer4.Panel1");
+            this.OrderUpdateSplitContainer4.Panel1.Controls.Add(this.OrderUpdateFineForDelayAddButton);
+            this.OrderUpdateSplitContainer4.Panel1.Controls.Add(this.OrderUpdateFineForDelaySelectComboBox);
+            this.OrderUpdateSplitContainer4.Panel1.Controls.Add(this.OrderUpdateRegularyDelayAddButton);
+            this.OrderUpdateSplitContainer4.Panel1.Controls.Add(this.OrderUpdateLabel8);
+            this.OrderUpdateSplitContainer4.Panel1.Controls.Add(this.OrderUpdateRegularyDelaySelectComboBox);
+            this.OrderUpdateSplitContainer4.Panel1.Controls.Add(this.OrderUpdateLabel9);
+            // 
+            // OrderUpdateSplitContainer4.Panel2
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer4.Panel2, "OrderUpdateSplitContainer4.Panel2");
+            this.OrderUpdateSplitContainer4.Panel2.Controls.Add(this.OrderUpdateTrailerSelectComboBox);
+            this.OrderUpdateSplitContainer4.Panel2.Controls.Add(this.OrderUpdateLabel10);
+            this.OrderUpdateSplitContainer4.Panel2.Controls.Add(this.OrderUpdateTrailerAddButton);
+            this.OrderUpdateSplitContainer4.Panel2.Controls.Add(this.OrderUpdateCubeSelectComboBox);
+            this.OrderUpdateSplitContainer4.Panel2.Controls.Add(this.OrderUpdateLabel11);
+            this.OrderUpdateSplitContainer4.Panel2.Controls.Add(this.OrderUpdateCubeAddButton);
+            // 
+            // OrderUpdateFineForDelayAddButton
+            // 
+            resources.ApplyResources(this.OrderUpdateFineForDelayAddButton, "OrderUpdateFineForDelayAddButton");
+            this.OrderUpdateFineForDelayAddButton.Name = "OrderUpdateFineForDelayAddButton";
+            this.OrderUpdateFineForDelayAddButton.TabStop = false;
+            this.OrderUpdateFineForDelayAddButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateFineForDelayAddButton.Click += new System.EventHandler(this.OrderUpdateFineForDelayAddButton_Click);
+            // 
+            // OrderUpdateFineForDelaySelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateFineForDelaySelectComboBox, "OrderUpdateFineForDelaySelectComboBox");
+            this.OrderUpdateFineForDelaySelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateFineForDelaySelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateFineForDelaySelectComboBox.Name = "OrderUpdateFineForDelaySelectComboBox";
+            this.OrderUpdateFineForDelaySelectComboBox.Sorted = true;
+            this.OrderUpdateFineForDelaySelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateFineForDelaySelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateFineForDelaySelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateFineForDelaySelectComboBox_TextUpdate);
+            this.OrderUpdateFineForDelaySelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateFineForDelaySelectComboBox_MouseClick);
+            // 
+            // OrderUpdateRegularyDelayAddButton
+            // 
+            resources.ApplyResources(this.OrderUpdateRegularyDelayAddButton, "OrderUpdateRegularyDelayAddButton");
+            this.OrderUpdateRegularyDelayAddButton.Name = "OrderUpdateRegularyDelayAddButton";
+            this.OrderUpdateRegularyDelayAddButton.TabStop = false;
+            this.OrderUpdateRegularyDelayAddButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateRegularyDelayAddButton.Click += new System.EventHandler(this.OrderUpdateRegularyDelayAddButton_Click);
+            // 
+            // OrderUpdateLabel8
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel8, "OrderUpdateLabel8");
+            this.OrderUpdateLabel8.Name = "OrderUpdateLabel8";
+            // 
+            // OrderUpdateRegularyDelaySelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateRegularyDelaySelectComboBox, "OrderUpdateRegularyDelaySelectComboBox");
+            this.OrderUpdateRegularyDelaySelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateRegularyDelaySelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateRegularyDelaySelectComboBox.Name = "OrderUpdateRegularyDelaySelectComboBox";
+            this.OrderUpdateRegularyDelaySelectComboBox.Sorted = true;
+            this.OrderUpdateRegularyDelaySelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateRegularyDelaySelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateRegularyDelaySelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateRegularyDelaySelectComboBox_TextUpdate);
+            this.OrderUpdateRegularyDelaySelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateRegularyDelaySelectComboBox_MouseClick);
+            // 
+            // OrderUpdateLabel9
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel9, "OrderUpdateLabel9");
+            this.OrderUpdateLabel9.Name = "OrderUpdateLabel9";
+            // 
+            // OrderUpdateTrailerSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateTrailerSelectComboBox, "OrderUpdateTrailerSelectComboBox");
+            this.OrderUpdateTrailerSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateTrailerSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateTrailerSelectComboBox.Name = "OrderUpdateTrailerSelectComboBox";
+            this.OrderUpdateTrailerSelectComboBox.Sorted = true;
+            this.OrderUpdateTrailerSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateTrailerSelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateTrailerSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateTrailerSelectComboBox_TextUpdate);
+            this.OrderUpdateTrailerSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateTrailerSelectComboBox_MouseClick);
+            // 
+            // OrderUpdateLabel10
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel10, "OrderUpdateLabel10");
+            this.OrderUpdateLabel10.Name = "OrderUpdateLabel10";
+            // 
+            // OrderUpdateTrailerAddButton
+            // 
+            resources.ApplyResources(this.OrderUpdateTrailerAddButton, "OrderUpdateTrailerAddButton");
+            this.OrderUpdateTrailerAddButton.Name = "OrderUpdateTrailerAddButton";
+            this.OrderUpdateTrailerAddButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateTrailerAddButton.Click += new System.EventHandler(this.OrderUpdateTrailerAddButton_Click);
+            // 
+            // OrderUpdateCubeSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateCubeSelectComboBox, "OrderUpdateCubeSelectComboBox");
+            this.OrderUpdateCubeSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateCubeSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateCubeSelectComboBox.Name = "OrderUpdateCubeSelectComboBox";
+            this.OrderUpdateCubeSelectComboBox.Sorted = true;
+            this.OrderUpdateCubeSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateCubeSelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateCubeSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateCubeSelectComboBox_TextUpdate);
+            this.OrderUpdateCubeSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateCubeSelectComboBox_MouseClick);
+            // 
+            // OrderUpdateLabel11
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel11, "OrderUpdateLabel11");
+            this.OrderUpdateLabel11.Name = "OrderUpdateLabel11";
+            // 
+            // OrderUpdateCubeAddButton
+            // 
+            resources.ApplyResources(this.OrderUpdateCubeAddButton, "OrderUpdateCubeAddButton");
+            this.OrderUpdateCubeAddButton.Name = "OrderUpdateCubeAddButton";
+            this.OrderUpdateCubeAddButton.TabStop = false;
+            this.OrderUpdateCubeAddButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateCubeAddButton.Click += new System.EventHandler(this.OrderUpdateCubeAddButton_Click);
+            // 
+            // OrderUpdateSplitContainer5
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer5, "OrderUpdateSplitContainer5");
+            this.OrderUpdateSplitContainer5.Name = "OrderUpdateSplitContainer5";
+            // 
+            // OrderUpdateSplitContainer5.Panel1
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer5.Panel1, "OrderUpdateSplitContainer5.Panel1");
+            this.OrderUpdateSplitContainer5.Panel1.Controls.Add(this.OrderUpdateSplitContainer6);
+            // 
+            // OrderUpdateSplitContainer5.Panel2
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer5.Panel2, "OrderUpdateSplitContainer5.Panel2");
+            this.OrderUpdateSplitContainer5.Panel2.Controls.Add(this.OrderUpdateSplitContainer7);
+            // 
+            // OrderUpdateSplitContainer6
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer6, "OrderUpdateSplitContainer6");
+            this.OrderUpdateSplitContainer6.Name = "OrderUpdateSplitContainer6";
+            // 
+            // OrderUpdateSplitContainer6.Panel1
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer6.Panel1, "OrderUpdateSplitContainer6.Panel1");
+            this.OrderUpdateSplitContainer6.Panel1.Controls.Add(this.OrderUpdateDownloadDateFromTimePicker);
+            this.OrderUpdateSplitContainer6.Panel1.Controls.Add(this.OrderUpdateDownloadDateToTimePicker);
+            this.OrderUpdateSplitContainer6.Panel1.Controls.Add(this.label67);
+            this.OrderUpdateSplitContainer6.Panel1.Controls.Add(this.OrderUpdateDownloadAddressesButton);
+            this.OrderUpdateSplitContainer6.Panel1.Controls.Add(this.OrderUpdateLabel12);
+            // 
+            // OrderUpdateSplitContainer6.Panel2
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer6.Panel2, "OrderUpdateSplitContainer6.Panel2");
+            this.OrderUpdateSplitContainer6.Panel2.Controls.Add(this.OrderUpdateUploadDateToTimePicker);
+            this.OrderUpdateSplitContainer6.Panel2.Controls.Add(this.OrderUpdateLabel13);
+            this.OrderUpdateSplitContainer6.Panel2.Controls.Add(this.OrderUpdateUploadAddressesButton);
+            this.OrderUpdateSplitContainer6.Panel2.Controls.Add(this.OrderUpdateUploadDateFromTimePicker);
+            this.OrderUpdateSplitContainer6.Panel2.Controls.Add(this.label69);
+            // 
+            // OrderUpdateDownloadDateFromTimePicker
+            // 
+            resources.ApplyResources(this.OrderUpdateDownloadDateFromTimePicker, "OrderUpdateDownloadDateFromTimePicker");
+            this.OrderUpdateDownloadDateFromTimePicker.Checked = false;
+            this.OrderUpdateDownloadDateFromTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.OrderUpdateDownloadDateFromTimePicker.Name = "OrderUpdateDownloadDateFromTimePicker";
+            this.OrderUpdateDownloadDateFromTimePicker.ShowCheckBox = true;
+            // 
+            // OrderUpdateDownloadDateToTimePicker
+            // 
+            resources.ApplyResources(this.OrderUpdateDownloadDateToTimePicker, "OrderUpdateDownloadDateToTimePicker");
+            this.OrderUpdateDownloadDateToTimePicker.Checked = false;
+            this.OrderUpdateDownloadDateToTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.OrderUpdateDownloadDateToTimePicker.Name = "OrderUpdateDownloadDateToTimePicker";
+            this.OrderUpdateDownloadDateToTimePicker.ShowCheckBox = true;
+            // 
+            // label67
+            // 
+            resources.ApplyResources(this.label67, "label67");
+            this.label67.Name = "label67";
+            // 
+            // OrderUpdateDownloadAddressesButton
+            // 
+            resources.ApplyResources(this.OrderUpdateDownloadAddressesButton, "OrderUpdateDownloadAddressesButton");
+            this.OrderUpdateDownloadAddressesButton.Name = "OrderUpdateDownloadAddressesButton";
+            this.OrderUpdateDownloadAddressesButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateDownloadAddressesButton.Click += new System.EventHandler(this.OrderUpdateDownloadAddressesButton_Click);
+            // 
+            // OrderUpdateLabel12
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel12, "OrderUpdateLabel12");
+            this.OrderUpdateLabel12.Name = "OrderUpdateLabel12";
+            // 
+            // OrderUpdateUploadDateToTimePicker
+            // 
+            resources.ApplyResources(this.OrderUpdateUploadDateToTimePicker, "OrderUpdateUploadDateToTimePicker");
+            this.OrderUpdateUploadDateToTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.OrderUpdateUploadDateToTimePicker.Checked = false;
+            this.OrderUpdateUploadDateToTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.OrderUpdateUploadDateToTimePicker.Name = "OrderUpdateUploadDateToTimePicker";
+            this.OrderUpdateUploadDateToTimePicker.ShowCheckBox = true;
+            this.OrderUpdateUploadDateToTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
+            // 
+            // OrderUpdateLabel13
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel13, "OrderUpdateLabel13");
+            this.OrderUpdateLabel13.Name = "OrderUpdateLabel13";
+            // 
+            // OrderUpdateUploadAddressesButton
+            // 
+            resources.ApplyResources(this.OrderUpdateUploadAddressesButton, "OrderUpdateUploadAddressesButton");
+            this.OrderUpdateUploadAddressesButton.Name = "OrderUpdateUploadAddressesButton";
+            this.OrderUpdateUploadAddressesButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateUploadAddressesButton.Click += new System.EventHandler(this.OrderUpdateUploadAddressesButton_Click);
+            // 
+            // OrderUpdateUploadDateFromTimePicker
+            // 
+            resources.ApplyResources(this.OrderUpdateUploadDateFromTimePicker, "OrderUpdateUploadDateFromTimePicker");
+            this.OrderUpdateUploadDateFromTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.OrderUpdateUploadDateFromTimePicker.Checked = false;
+            this.OrderUpdateUploadDateFromTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.OrderUpdateUploadDateFromTimePicker.Name = "OrderUpdateUploadDateFromTimePicker";
+            this.OrderUpdateUploadDateFromTimePicker.ShowCheckBox = true;
+            this.OrderUpdateUploadDateFromTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
+            // 
+            // label69
+            // 
+            resources.ApplyResources(this.label69, "label69");
+            this.label69.Name = "label69";
+            // 
+            // OrderUpdateSplitContainer7
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer7, "OrderUpdateSplitContainer7");
+            this.OrderUpdateSplitContainer7.Name = "OrderUpdateSplitContainer7";
+            // 
+            // OrderUpdateSplitContainer7.Panel1
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer7.Panel1, "OrderUpdateSplitContainer7.Panel1");
+            this.OrderUpdateSplitContainer7.Panel1.Controls.Add(this.OrderUpdateTirCmrSelectComboBox);
+            this.OrderUpdateSplitContainer7.Panel1.Controls.Add(this.OrderUpdateTirCmrAddButton);
+            this.OrderUpdateSplitContainer7.Panel1.Controls.Add(this.OrderUpdateCustumsAddressesButton);
+            this.OrderUpdateSplitContainer7.Panel1.Controls.Add(this.OrderUpdateLabel14);
+            // 
+            // OrderUpdateSplitContainer7.Panel2
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer7.Panel2, "OrderUpdateSplitContainer7.Panel2");
+            this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateStaffButton);
+            this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateStaffSelectComboBox);
+            this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateUncustumsAddressesButton);
+            this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateADRSelectComboBox);
+            this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateLabel16);
+            this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateLabel15);
+            // 
+            // OrderUpdateTirCmrSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateTirCmrSelectComboBox, "OrderUpdateTirCmrSelectComboBox");
+            this.OrderUpdateTirCmrSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateTirCmrSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateTirCmrSelectComboBox.Name = "OrderUpdateTirCmrSelectComboBox";
+            this.OrderUpdateTirCmrSelectComboBox.Sorted = true;
+            this.OrderUpdateTirCmrSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateTirCmrSelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateTirCmrSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateTirCmrSelectComboBox_TextUpdate);
+            this.OrderUpdateTirCmrSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateTirCmrSelectComboBox_MouseClick);
+            // 
+            // OrderUpdateTirCmrAddButton
+            // 
+            resources.ApplyResources(this.OrderUpdateTirCmrAddButton, "OrderUpdateTirCmrAddButton");
+            this.OrderUpdateTirCmrAddButton.Name = "OrderUpdateTirCmrAddButton";
+            this.OrderUpdateTirCmrAddButton.TabStop = false;
+            this.OrderUpdateTirCmrAddButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateTirCmrAddButton.Click += new System.EventHandler(this.OrderUpdateTirCmrAddButton_Click);
+            // 
+            // OrderUpdateCustumsAddressesButton
+            // 
+            resources.ApplyResources(this.OrderUpdateCustumsAddressesButton, "OrderUpdateCustumsAddressesButton");
+            this.OrderUpdateCustumsAddressesButton.Name = "OrderUpdateCustumsAddressesButton";
+            this.OrderUpdateCustumsAddressesButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateCustumsAddressesButton.Click += new System.EventHandler(this.OrderUpdateCustumsAddressesButton_Click);
+            // 
+            // OrderUpdateLabel14
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel14, "OrderUpdateLabel14");
+            this.OrderUpdateLabel14.Name = "OrderUpdateLabel14";
+            // 
+            // OrderUpdateStaffButton
+            // 
+            resources.ApplyResources(this.OrderUpdateStaffButton, "OrderUpdateStaffButton");
+            this.OrderUpdateStaffButton.Name = "OrderUpdateStaffButton";
+            this.OrderUpdateStaffButton.TabStop = false;
+            this.OrderUpdateStaffButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateStaffButton.Click += new System.EventHandler(this.OrderUpdateStaffAddButton_Click);
+            // 
+            // OrderUpdateStaffSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateStaffSelectComboBox, "OrderUpdateStaffSelectComboBox");
+            this.OrderUpdateStaffSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateStaffSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateStaffSelectComboBox.Items.AddRange(new object[] {
+            resources.GetString("OrderUpdateStaffSelectComboBox.Items"),
+            resources.GetString("OrderUpdateStaffSelectComboBox.Items1")});
+            this.OrderUpdateStaffSelectComboBox.Name = "OrderUpdateStaffSelectComboBox";
+            this.OrderUpdateStaffSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateStaffSelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateStaffSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateStaffSelectComboBox_TextUpdate);
+            this.OrderUpdateStaffSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateStaffSelectComboBox_MouseClick);
+            // 
+            // OrderUpdateUncustumsAddressesButton
+            // 
+            resources.ApplyResources(this.OrderUpdateUncustumsAddressesButton, "OrderUpdateUncustumsAddressesButton");
+            this.OrderUpdateUncustumsAddressesButton.Name = "OrderUpdateUncustumsAddressesButton";
+            this.OrderUpdateUncustumsAddressesButton.UseVisualStyleBackColor = true;
+            this.OrderUpdateUncustumsAddressesButton.Click += new System.EventHandler(this.OrderUpdateUncustumsAddressesButton_Click);
+            // 
+            // OrderUpdateADRSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateADRSelectComboBox, "OrderUpdateADRSelectComboBox");
+            this.OrderUpdateADRSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateADRSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateADRSelectComboBox.Items.AddRange(new object[] {
+            resources.GetString("OrderUpdateADRSelectComboBox.Items"),
+            resources.GetString("OrderUpdateADRSelectComboBox.Items1"),
+            resources.GetString("OrderUpdateADRSelectComboBox.Items2"),
+            resources.GetString("OrderUpdateADRSelectComboBox.Items3"),
+            resources.GetString("OrderUpdateADRSelectComboBox.Items4"),
+            resources.GetString("OrderUpdateADRSelectComboBox.Items5"),
+            resources.GetString("OrderUpdateADRSelectComboBox.Items6"),
+            resources.GetString("OrderUpdateADRSelectComboBox.Items7"),
+            resources.GetString("OrderUpdateADRSelectComboBox.Items8")});
+            this.OrderUpdateADRSelectComboBox.Name = "OrderUpdateADRSelectComboBox";
+            this.OrderUpdateADRSelectComboBox.Sorted = true;
+            this.OrderUpdateADRSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateADRSelectComboBox_MouseClick);
+            // 
+            // OrderUpdateLabel16
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel16, "OrderUpdateLabel16");
+            this.OrderUpdateLabel16.Name = "OrderUpdateLabel16";
+            // 
+            // OrderUpdateLabel15
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel15, "OrderUpdateLabel15");
+            this.OrderUpdateLabel15.Name = "OrderUpdateLabel15";
+            // 
+            // OrderUpdateSplitContainer8
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer8, "OrderUpdateSplitContainer8");
+            this.OrderUpdateSplitContainer8.Name = "OrderUpdateSplitContainer8";
+            // 
+            // OrderUpdateSplitContainer8.Panel1
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer8.Panel1, "OrderUpdateSplitContainer8.Panel1");
+            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.label38);
+            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateClientSelectComboBox);
+            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateLanguageSelectComboBox);
+            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateTransporterSelectComboBox);
+            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateLabel17);
+            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateLabel18);
+            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateLabel19);
+            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateLabel20);
+            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateClientDiapasoneComboBox);
+            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateDateDateTimePicker);
+            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateTransporterDiapasoneComboBox);
+            // 
+            // OrderUpdateSplitContainer8.Panel2
+            // 
+            resources.ApplyResources(this.OrderUpdateSplitContainer8.Panel2, "OrderUpdateSplitContainer8.Panel2");
+            this.OrderUpdateSplitContainer8.Panel2.Controls.Add(this.OrderUpdatelabel28);
+            this.OrderUpdateSplitContainer8.Panel2.Controls.Add(this.OrderUpdateForwarder3SelectComboBox);
+            this.OrderUpdateSplitContainer8.Panel2.Controls.Add(this.OrderUpdateLabel21);
+            this.OrderUpdateSplitContainer8.Panel2.Controls.Add(this.OrderUpdateLabel22);
+            this.OrderUpdateSplitContainer8.Panel2.Controls.Add(this.OrderUpdateForwarder2SelectComboBox);
+            this.OrderUpdateSplitContainer8.Panel2.Controls.Add(this.OrderUpdateForwarder1SelectComboBox);
+            // 
+            // label38
+            // 
+            resources.ApplyResources(this.label38, "label38");
+            this.label38.Name = "label38";
+            // 
+            // OrderUpdateClientSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateClientSelectComboBox, "OrderUpdateClientSelectComboBox");
+            this.OrderUpdateClientSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateClientSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateClientSelectComboBox.Name = "OrderUpdateClientSelectComboBox";
+            this.OrderUpdateClientSelectComboBox.Sorted = true;
+            this.OrderUpdateClientSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateClientSelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateClientSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateClientSelectComboBox_TextUpdate);
+            this.OrderUpdateClientSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateClientSelectComboBox_MouseClick);
+            // 
+            // OrderUpdateLanguageSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateLanguageSelectComboBox, "OrderUpdateLanguageSelectComboBox");
+            this.OrderUpdateLanguageSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateLanguageSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateLanguageSelectComboBox.Items.AddRange(new object[] {
+            resources.GetString("OrderUpdateLanguageSelectComboBox.Items"),
+            resources.GetString("OrderUpdateLanguageSelectComboBox.Items1"),
+            resources.GetString("OrderUpdateLanguageSelectComboBox.Items2")});
+            this.OrderUpdateLanguageSelectComboBox.Name = "OrderUpdateLanguageSelectComboBox";
+            this.OrderUpdateLanguageSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateLanguageSelectComboBox_MouseClick);
+            // 
+            // OrderUpdateTransporterSelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateTransporterSelectComboBox, "OrderUpdateTransporterSelectComboBox");
+            this.OrderUpdateTransporterSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateTransporterSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateTransporterSelectComboBox.Name = "OrderUpdateTransporterSelectComboBox";
+            this.OrderUpdateTransporterSelectComboBox.Sorted = true;
+            this.OrderUpdateTransporterSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateTransporterSelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateTransporterSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateTransporterSelectComboBox_TextUpdate);
+            this.OrderUpdateTransporterSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateTransporterSelectComboBox_MouseClick);
+            // 
+            // OrderUpdateLabel17
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel17, "OrderUpdateLabel17");
+            this.OrderUpdateLabel17.Name = "OrderUpdateLabel17";
+            // 
+            // OrderUpdateLabel18
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel18, "OrderUpdateLabel18");
+            this.OrderUpdateLabel18.Name = "OrderUpdateLabel18";
+            // 
+            // OrderUpdateLabel19
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel19, "OrderUpdateLabel19");
+            this.OrderUpdateLabel19.Name = "OrderUpdateLabel19";
+            // 
+            // OrderUpdateLabel20
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel20, "OrderUpdateLabel20");
+            this.OrderUpdateLabel20.Name = "OrderUpdateLabel20";
+            // 
+            // OrderUpdateClientDiapasoneComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateClientDiapasoneComboBox, "OrderUpdateClientDiapasoneComboBox");
+            this.OrderUpdateClientDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateClientDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateClientDiapasoneComboBox.Name = "OrderUpdateClientDiapasoneComboBox";
+            this.OrderUpdateClientDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateClientDiapasoneComboBox_MouseClick);
+            // 
+            // OrderUpdateDateDateTimePicker
+            // 
+            resources.ApplyResources(this.OrderUpdateDateDateTimePicker, "OrderUpdateDateDateTimePicker");
+            this.OrderUpdateDateDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.OrderUpdateDateDateTimePicker.Checked = false;
+            this.OrderUpdateDateDateTimePicker.Name = "OrderUpdateDateDateTimePicker";
+            // 
+            // OrderUpdateTransporterDiapasoneComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateTransporterDiapasoneComboBox, "OrderUpdateTransporterDiapasoneComboBox");
+            this.OrderUpdateTransporterDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateTransporterDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateTransporterDiapasoneComboBox.Name = "OrderUpdateTransporterDiapasoneComboBox";
+            this.OrderUpdateTransporterDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateTransporterDiapasoneComboBox_MouseClick);
+            // 
+            // OrderUpdatelabel28
+            // 
+            resources.ApplyResources(this.OrderUpdatelabel28, "OrderUpdatelabel28");
+            this.OrderUpdatelabel28.Name = "OrderUpdatelabel28";
+            // 
+            // OrderUpdateForwarder3SelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateForwarder3SelectComboBox, "OrderUpdateForwarder3SelectComboBox");
+            this.OrderUpdateForwarder3SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateForwarder3SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateForwarder3SelectComboBox.Name = "OrderUpdateForwarder3SelectComboBox";
+            this.OrderUpdateForwarder3SelectComboBox.Sorted = true;
+            this.OrderUpdateForwarder3SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateForwarder3SelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateForwarder3SelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateForwarder3SelectComboBox_TextUpdate);
+            this.OrderUpdateForwarder3SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateForwarder3SelectComboBox_MouseClick);
+            // 
+            // OrderUpdateLabel21
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel21, "OrderUpdateLabel21");
+            this.OrderUpdateLabel21.Name = "OrderUpdateLabel21";
+            // 
+            // OrderUpdateLabel22
+            // 
+            resources.ApplyResources(this.OrderUpdateLabel22, "OrderUpdateLabel22");
+            this.OrderUpdateLabel22.Name = "OrderUpdateLabel22";
+            // 
+            // OrderUpdateForwarder2SelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateForwarder2SelectComboBox, "OrderUpdateForwarder2SelectComboBox");
+            this.OrderUpdateForwarder2SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateForwarder2SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateForwarder2SelectComboBox.Name = "OrderUpdateForwarder2SelectComboBox";
+            this.OrderUpdateForwarder2SelectComboBox.Sorted = true;
+            this.OrderUpdateForwarder2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateForwarder2SelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateForwarder2SelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateForwarder2SelectComboBox_TextUpdate);
+            this.OrderUpdateForwarder2SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateForwarder2SelectComboBox_MouseClick);
+            // 
+            // OrderUpdateForwarder1SelectComboBox
+            // 
+            resources.ApplyResources(this.OrderUpdateForwarder1SelectComboBox, "OrderUpdateForwarder1SelectComboBox");
+            this.OrderUpdateForwarder1SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.OrderUpdateForwarder1SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.OrderUpdateForwarder1SelectComboBox.Name = "OrderUpdateForwarder1SelectComboBox";
+            this.OrderUpdateForwarder1SelectComboBox.Sorted = true;
+            this.OrderUpdateForwarder1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateForwarder1SelectComboBox_SelectedIndexChanged);
+            this.OrderUpdateForwarder1SelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateForwarder1SelectComboBox_TextUpdate);
+            this.OrderUpdateForwarder1SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateForwarder1SelectComboBox_MouseClick);
+            // 
+            // splitContainer1
+            // 
+            resources.ApplyResources(this.splitContainer1, "splitContainer1");
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            resources.ApplyResources(this.splitContainer1.Panel1, "splitContainer1.Panel1");
+            this.splitContainer1.Panel1.Controls.Add(this.arbeitenShowDownloadAddressDataGridView);
+            // 
+            // splitContainer1.Panel2
+            // 
+            resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
+            this.splitContainer1.Panel2.Controls.Add(this.arbeitenShowUploadAddressDataGridView);
+            // 
+            // arbeitenShowDownloadAddressDataGridView
+            // 
+            resources.ApplyResources(this.arbeitenShowDownloadAddressDataGridView, "arbeitenShowDownloadAddressDataGridView");
+            this.arbeitenShowDownloadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.arbeitenShowDownloadAddressDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.arbeitenShowDownloadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.arbeitenShowDownloadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.arbeitenShowDownloadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.arbeitenShowDownloadAddressDataGridView.MultiSelect = false;
+            this.arbeitenShowDownloadAddressDataGridView.Name = "arbeitenShowDownloadAddressDataGridView";
+            this.arbeitenShowDownloadAddressDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.arbeitenShowDownloadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.arbeitenShowDownloadAddressDataGridView.TabStop = false;
+            // 
+            // arbeitenShowUploadAddressDataGridView
+            // 
+            resources.ApplyResources(this.arbeitenShowUploadAddressDataGridView, "arbeitenShowUploadAddressDataGridView");
+            this.arbeitenShowUploadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.arbeitenShowUploadAddressDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.arbeitenShowUploadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.arbeitenShowUploadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.arbeitenShowUploadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.arbeitenShowUploadAddressDataGridView.MultiSelect = false;
+            this.arbeitenShowUploadAddressDataGridView.Name = "arbeitenShowUploadAddressDataGridView";
+            this.arbeitenShowUploadAddressDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.arbeitenShowUploadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.arbeitenShowUploadAddressDataGridView.TabStop = false;
+            // 
+            // arbeitenAddSplitContainer
+            // 
+            resources.ApplyResources(this.arbeitenAddSplitContainer, "arbeitenAddSplitContainer");
+            this.arbeitenAddSplitContainer.Name = "arbeitenAddSplitContainer";
+            // 
+            // arbeitenAddSplitContainer.Panel1
+            // 
+            resources.ApplyResources(this.arbeitenAddSplitContainer.Panel1, "arbeitenAddSplitContainer.Panel1");
+            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientPaymentDateLabel);
+            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientPaymentTextBox);
+            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientPaymentLabel);
+            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientTextBox);
+            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddAccountNumberLabelTextBox);
+            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientLabel);
+            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddAccountNumberLabel);
+            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientPaymentDateTimePicker);
+            // 
+            // arbeitenAddSplitContainer.Panel2
+            // 
+            resources.ApplyResources(this.arbeitenAddSplitContainer.Panel2, "arbeitenAddSplitContainer.Panel2");
+            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddDownloadDateLabel);
+            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddDownloadDateTimePicker);
+            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterPaymentTextBox);
+            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterPaymentLabel);
+            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterVehicleTextBox);
+            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterVehicleLabel);
+            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterTextBox);
+            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterLabel);
+            // 
+            // arbeitenAddClientPaymentDateLabel
+            // 
+            resources.ApplyResources(this.arbeitenAddClientPaymentDateLabel, "arbeitenAddClientPaymentDateLabel");
+            this.arbeitenAddClientPaymentDateLabel.Name = "arbeitenAddClientPaymentDateLabel";
+            // 
+            // arbeitenAddClientPaymentTextBox
+            // 
+            resources.ApplyResources(this.arbeitenAddClientPaymentTextBox, "arbeitenAddClientPaymentTextBox");
+            this.arbeitenAddClientPaymentTextBox.Name = "arbeitenAddClientPaymentTextBox";
+            // 
+            // arbeitenAddClientPaymentLabel
+            // 
+            resources.ApplyResources(this.arbeitenAddClientPaymentLabel, "arbeitenAddClientPaymentLabel");
+            this.arbeitenAddClientPaymentLabel.Name = "arbeitenAddClientPaymentLabel";
+            // 
+            // arbeitenAddClientTextBox
+            // 
+            resources.ApplyResources(this.arbeitenAddClientTextBox, "arbeitenAddClientTextBox");
+            this.arbeitenAddClientTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.arbeitenAddClientTextBox.Name = "arbeitenAddClientTextBox";
+            this.arbeitenAddClientTextBox.ReadOnly = true;
+            // 
+            // arbeitenAddAccountNumberLabelTextBox
+            // 
+            resources.ApplyResources(this.arbeitenAddAccountNumberLabelTextBox, "arbeitenAddAccountNumberLabelTextBox");
+            this.arbeitenAddAccountNumberLabelTextBox.Name = "arbeitenAddAccountNumberLabelTextBox";
+            // 
+            // arbeitenAddClientLabel
+            // 
+            resources.ApplyResources(this.arbeitenAddClientLabel, "arbeitenAddClientLabel");
+            this.arbeitenAddClientLabel.Name = "arbeitenAddClientLabel";
+            // 
+            // arbeitenAddAccountNumberLabel
+            // 
+            resources.ApplyResources(this.arbeitenAddAccountNumberLabel, "arbeitenAddAccountNumberLabel");
+            this.arbeitenAddAccountNumberLabel.Name = "arbeitenAddAccountNumberLabel";
+            // 
+            // arbeitenAddClientPaymentDateTimePicker
+            // 
+            resources.ApplyResources(this.arbeitenAddClientPaymentDateTimePicker, "arbeitenAddClientPaymentDateTimePicker");
+            this.arbeitenAddClientPaymentDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.arbeitenAddClientPaymentDateTimePicker.Checked = false;
+            this.arbeitenAddClientPaymentDateTimePicker.Name = "arbeitenAddClientPaymentDateTimePicker";
+            this.arbeitenAddClientPaymentDateTimePicker.ShowCheckBox = true;
+            // 
+            // arbeitenAddDownloadDateLabel
+            // 
+            resources.ApplyResources(this.arbeitenAddDownloadDateLabel, "arbeitenAddDownloadDateLabel");
+            this.arbeitenAddDownloadDateLabel.Name = "arbeitenAddDownloadDateLabel";
+            // 
+            // arbeitenAddDownloadDateTimePicker
+            // 
+            resources.ApplyResources(this.arbeitenAddDownloadDateTimePicker, "arbeitenAddDownloadDateTimePicker");
+            this.arbeitenAddDownloadDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.arbeitenAddDownloadDateTimePicker.Checked = false;
+            this.arbeitenAddDownloadDateTimePicker.Name = "arbeitenAddDownloadDateTimePicker";
+            this.arbeitenAddDownloadDateTimePicker.ShowCheckBox = true;
+            // 
+            // arbeitenAddTransporterPaymentTextBox
+            // 
+            resources.ApplyResources(this.arbeitenAddTransporterPaymentTextBox, "arbeitenAddTransporterPaymentTextBox");
+            this.arbeitenAddTransporterPaymentTextBox.Name = "arbeitenAddTransporterPaymentTextBox";
+            // 
+            // arbeitenAddTransporterPaymentLabel
+            // 
+            resources.ApplyResources(this.arbeitenAddTransporterPaymentLabel, "arbeitenAddTransporterPaymentLabel");
+            this.arbeitenAddTransporterPaymentLabel.Name = "arbeitenAddTransporterPaymentLabel";
+            // 
+            // arbeitenAddTransporterVehicleTextBox
+            // 
+            resources.ApplyResources(this.arbeitenAddTransporterVehicleTextBox, "arbeitenAddTransporterVehicleTextBox");
+            this.arbeitenAddTransporterVehicleTextBox.Name = "arbeitenAddTransporterVehicleTextBox";
+            // 
+            // arbeitenAddTransporterVehicleLabel
+            // 
+            resources.ApplyResources(this.arbeitenAddTransporterVehicleLabel, "arbeitenAddTransporterVehicleLabel");
+            this.arbeitenAddTransporterVehicleLabel.Name = "arbeitenAddTransporterVehicleLabel";
+            // 
+            // arbeitenAddTransporterTextBox
+            // 
+            resources.ApplyResources(this.arbeitenAddTransporterTextBox, "arbeitenAddTransporterTextBox");
+            this.arbeitenAddTransporterTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.arbeitenAddTransporterTextBox.Name = "arbeitenAddTransporterTextBox";
+            this.arbeitenAddTransporterTextBox.ReadOnly = true;
+            // 
+            // arbeitenAddTransporterLabel
+            // 
+            resources.ApplyResources(this.arbeitenAddTransporterLabel, "arbeitenAddTransporterLabel");
+            this.arbeitenAddTransporterLabel.Name = "arbeitenAddTransporterLabel";
+            // 
+            // arbeitenUpdateSplitContainer
+            // 
+            resources.ApplyResources(this.arbeitenUpdateSplitContainer, "arbeitenUpdateSplitContainer");
+            this.arbeitenUpdateSplitContainer.Name = "arbeitenUpdateSplitContainer";
+            // 
+            // arbeitenUpdateSplitContainer.Panel1
+            // 
+            resources.ApplyResources(this.arbeitenUpdateSplitContainer.Panel1, "arbeitenUpdateSplitContainer.Panel1");
+            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientPaymentDateLabel);
+            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientPaymentTextBox);
+            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientPaymentLabel);
+            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientTextBox);
+            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateAccountNumberLabelTextBox);
+            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientLabel);
+            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateAccountNumberLabel);
+            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientPaymentDateTimePicker);
+            // 
+            // arbeitenUpdateSplitContainer.Panel2
+            // 
+            resources.ApplyResources(this.arbeitenUpdateSplitContainer.Panel2, "arbeitenUpdateSplitContainer.Panel2");
+            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateDownloadDateLabel);
+            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateDownloadDateTimePicker);
+            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterPaymentTextBox);
+            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterPaymentLabel);
+            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterVehicleTextBox);
+            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterVehicleLabel);
+            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterTextBox);
+            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterLabel);
+            // 
+            // arbeitenUpdateClientPaymentDateLabel
+            // 
+            resources.ApplyResources(this.arbeitenUpdateClientPaymentDateLabel, "arbeitenUpdateClientPaymentDateLabel");
+            this.arbeitenUpdateClientPaymentDateLabel.Name = "arbeitenUpdateClientPaymentDateLabel";
+            // 
+            // arbeitenUpdateClientPaymentTextBox
+            // 
+            resources.ApplyResources(this.arbeitenUpdateClientPaymentTextBox, "arbeitenUpdateClientPaymentTextBox");
+            this.arbeitenUpdateClientPaymentTextBox.Name = "arbeitenUpdateClientPaymentTextBox";
+            // 
+            // arbeitenUpdateClientPaymentLabel
+            // 
+            resources.ApplyResources(this.arbeitenUpdateClientPaymentLabel, "arbeitenUpdateClientPaymentLabel");
+            this.arbeitenUpdateClientPaymentLabel.Name = "arbeitenUpdateClientPaymentLabel";
+            // 
+            // arbeitenUpdateClientTextBox
+            // 
+            resources.ApplyResources(this.arbeitenUpdateClientTextBox, "arbeitenUpdateClientTextBox");
+            this.arbeitenUpdateClientTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.arbeitenUpdateClientTextBox.Name = "arbeitenUpdateClientTextBox";
+            this.arbeitenUpdateClientTextBox.ReadOnly = true;
+            // 
+            // arbeitenUpdateAccountNumberLabelTextBox
+            // 
+            resources.ApplyResources(this.arbeitenUpdateAccountNumberLabelTextBox, "arbeitenUpdateAccountNumberLabelTextBox");
+            this.arbeitenUpdateAccountNumberLabelTextBox.Name = "arbeitenUpdateAccountNumberLabelTextBox";
+            // 
+            // arbeitenUpdateClientLabel
+            // 
+            resources.ApplyResources(this.arbeitenUpdateClientLabel, "arbeitenUpdateClientLabel");
+            this.arbeitenUpdateClientLabel.Name = "arbeitenUpdateClientLabel";
+            // 
+            // arbeitenUpdateAccountNumberLabel
+            // 
+            resources.ApplyResources(this.arbeitenUpdateAccountNumberLabel, "arbeitenUpdateAccountNumberLabel");
+            this.arbeitenUpdateAccountNumberLabel.Name = "arbeitenUpdateAccountNumberLabel";
+            // 
+            // arbeitenUpdateClientPaymentDateTimePicker
+            // 
+            resources.ApplyResources(this.arbeitenUpdateClientPaymentDateTimePicker, "arbeitenUpdateClientPaymentDateTimePicker");
+            this.arbeitenUpdateClientPaymentDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.arbeitenUpdateClientPaymentDateTimePicker.Checked = false;
+            this.arbeitenUpdateClientPaymentDateTimePicker.Name = "arbeitenUpdateClientPaymentDateTimePicker";
+            this.arbeitenUpdateClientPaymentDateTimePicker.ShowCheckBox = true;
+            // 
+            // arbeitenUpdateDownloadDateLabel
+            // 
+            resources.ApplyResources(this.arbeitenUpdateDownloadDateLabel, "arbeitenUpdateDownloadDateLabel");
+            this.arbeitenUpdateDownloadDateLabel.Name = "arbeitenUpdateDownloadDateLabel";
+            // 
+            // arbeitenUpdateDownloadDateTimePicker
+            // 
+            resources.ApplyResources(this.arbeitenUpdateDownloadDateTimePicker, "arbeitenUpdateDownloadDateTimePicker");
+            this.arbeitenUpdateDownloadDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.arbeitenUpdateDownloadDateTimePicker.Checked = false;
+            this.arbeitenUpdateDownloadDateTimePicker.Name = "arbeitenUpdateDownloadDateTimePicker";
+            this.arbeitenUpdateDownloadDateTimePicker.ShowCheckBox = true;
+            // 
+            // arbeitenUpdateTransporterPaymentTextBox
+            // 
+            resources.ApplyResources(this.arbeitenUpdateTransporterPaymentTextBox, "arbeitenUpdateTransporterPaymentTextBox");
+            this.arbeitenUpdateTransporterPaymentTextBox.Name = "arbeitenUpdateTransporterPaymentTextBox";
+            // 
+            // arbeitenUpdateTransporterPaymentLabel
+            // 
+            resources.ApplyResources(this.arbeitenUpdateTransporterPaymentLabel, "arbeitenUpdateTransporterPaymentLabel");
+            this.arbeitenUpdateTransporterPaymentLabel.Name = "arbeitenUpdateTransporterPaymentLabel";
+            // 
+            // arbeitenUpdateTransporterVehicleTextBox
+            // 
+            resources.ApplyResources(this.arbeitenUpdateTransporterVehicleTextBox, "arbeitenUpdateTransporterVehicleTextBox");
+            this.arbeitenUpdateTransporterVehicleTextBox.Name = "arbeitenUpdateTransporterVehicleTextBox";
+            // 
+            // arbeitenUpdateTransporterVehicleLabel
+            // 
+            resources.ApplyResources(this.arbeitenUpdateTransporterVehicleLabel, "arbeitenUpdateTransporterVehicleLabel");
+            this.arbeitenUpdateTransporterVehicleLabel.Name = "arbeitenUpdateTransporterVehicleLabel";
+            // 
+            // arbeitenUpdateTransporterTextBox
+            // 
+            resources.ApplyResources(this.arbeitenUpdateTransporterTextBox, "arbeitenUpdateTransporterTextBox");
+            this.arbeitenUpdateTransporterTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.arbeitenUpdateTransporterTextBox.Name = "arbeitenUpdateTransporterTextBox";
+            this.arbeitenUpdateTransporterTextBox.ReadOnly = true;
+            // 
+            // arbeitenUpdateTransporterLabel
+            // 
+            resources.ApplyResources(this.arbeitenUpdateTransporterLabel, "arbeitenUpdateTransporterLabel");
+            this.arbeitenUpdateTransporterLabel.Name = "arbeitenUpdateTransporterLabel";
             // 
             // menuStrip
             // 
-            this.menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(84)))), ((int)(((byte)(107)))));
             resources.ApplyResources(this.menuStrip, "menuStrip");
+            this.menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(84)))), ((int)(((byte)(107)))));
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientToolStripMenuItem,
             this.trasporterToolStripMenuItem,
@@ -758,6 +2608,7 @@
             // 
             // clientToolStripMenuItem
             // 
+            resources.ApplyResources(this.clientToolStripMenuItem, "clientToolStripMenuItem");
             this.clientToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.clientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showClientsStrip,
@@ -765,38 +2616,38 @@
             this.updateClientsStrip,
             this.deleteClientsStrip});
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            resources.ApplyResources(this.clientToolStripMenuItem, "clientToolStripMenuItem");
             // 
             // showClientsStrip
             // 
+            resources.ApplyResources(this.showClientsStrip, "showClientsStrip");
             this.showClientsStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.showClientsStrip.Name = "showClientsStrip";
-            resources.ApplyResources(this.showClientsStrip, "showClientsStrip");
             this.showClientsStrip.Click += new System.EventHandler(this.showClientsStrip_Click);
             // 
             // addClientsStrip
             // 
+            resources.ApplyResources(this.addClientsStrip, "addClientsStrip");
             this.addClientsStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.addClientsStrip.Name = "addClientsStrip";
-            resources.ApplyResources(this.addClientsStrip, "addClientsStrip");
             this.addClientsStrip.Click += new System.EventHandler(this.addClientsStrip_Click);
             // 
             // updateClientsStrip
             // 
+            resources.ApplyResources(this.updateClientsStrip, "updateClientsStrip");
             this.updateClientsStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.updateClientsStrip.Name = "updateClientsStrip";
-            resources.ApplyResources(this.updateClientsStrip, "updateClientsStrip");
             this.updateClientsStrip.Click += new System.EventHandler(this.updateClientsStrip_Click);
             // 
             // deleteClientsStrip
             // 
+            resources.ApplyResources(this.deleteClientsStrip, "deleteClientsStrip");
             this.deleteClientsStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteClientsStrip.Name = "deleteClientsStrip";
-            resources.ApplyResources(this.deleteClientsStrip, "deleteClientsStrip");
             this.deleteClientsStrip.Click += new System.EventHandler(this.deleteClientsStrip_Click);
             // 
             // trasporterToolStripMenuItem
             // 
+            resources.ApplyResources(this.trasporterToolStripMenuItem, "trasporterToolStripMenuItem");
             this.trasporterToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.trasporterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showTransporterStrip,
@@ -804,38 +2655,38 @@
             this.updateTransporterStrip,
             this.deleteTransporterStrip});
             this.trasporterToolStripMenuItem.Name = "trasporterToolStripMenuItem";
-            resources.ApplyResources(this.trasporterToolStripMenuItem, "trasporterToolStripMenuItem");
             // 
             // showTransporterStrip
             // 
+            resources.ApplyResources(this.showTransporterStrip, "showTransporterStrip");
             this.showTransporterStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.showTransporterStrip.Name = "showTransporterStrip";
-            resources.ApplyResources(this.showTransporterStrip, "showTransporterStrip");
             this.showTransporterStrip.Click += new System.EventHandler(this.showTransporterStrip_Click);
             // 
             // addTransporterStrip
             // 
+            resources.ApplyResources(this.addTransporterStrip, "addTransporterStrip");
             this.addTransporterStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.addTransporterStrip.Name = "addTransporterStrip";
-            resources.ApplyResources(this.addTransporterStrip, "addTransporterStrip");
             this.addTransporterStrip.Click += new System.EventHandler(this.addTransporterStrip_Click);
             // 
             // updateTransporterStrip
             // 
+            resources.ApplyResources(this.updateTransporterStrip, "updateTransporterStrip");
             this.updateTransporterStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.updateTransporterStrip.Name = "updateTransporterStrip";
-            resources.ApplyResources(this.updateTransporterStrip, "updateTransporterStrip");
             this.updateTransporterStrip.Click += new System.EventHandler(this.updateTransporterStrip_Click);
             // 
             // deleteTransporterStrip
             // 
+            resources.ApplyResources(this.deleteTransporterStrip, "deleteTransporterStrip");
             this.deleteTransporterStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteTransporterStrip.Name = "deleteTransporterStrip";
-            resources.ApplyResources(this.deleteTransporterStrip, "deleteTransporterStrip");
             this.deleteTransporterStrip.Click += new System.EventHandler(this.deleteTransporterStrip_Click);
             // 
             // forwarderToolStripMenuItem
             // 
+            resources.ApplyResources(this.forwarderToolStripMenuItem, "forwarderToolStripMenuItem");
             this.forwarderToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.forwarderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showForwarderStrip,
@@ -843,119 +2694,118 @@
             this.updateForwarderStrip,
             this.deleteForwarderStrip});
             this.forwarderToolStripMenuItem.Name = "forwarderToolStripMenuItem";
-            resources.ApplyResources(this.forwarderToolStripMenuItem, "forwarderToolStripMenuItem");
             // 
             // showForwarderStrip
             // 
+            resources.ApplyResources(this.showForwarderStrip, "showForwarderStrip");
             this.showForwarderStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.showForwarderStrip.Name = "showForwarderStrip";
-            resources.ApplyResources(this.showForwarderStrip, "showForwarderStrip");
             this.showForwarderStrip.Click += new System.EventHandler(this.showForwarderStrip_Click);
             // 
             // addForwarderStrip
             // 
+            resources.ApplyResources(this.addForwarderStrip, "addForwarderStrip");
             this.addForwarderStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.addForwarderStrip.Name = "addForwarderStrip";
-            resources.ApplyResources(this.addForwarderStrip, "addForwarderStrip");
             this.addForwarderStrip.Click += new System.EventHandler(this.addForwarderStrip_Click);
             // 
             // updateForwarderStrip
             // 
+            resources.ApplyResources(this.updateForwarderStrip, "updateForwarderStrip");
             this.updateForwarderStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.updateForwarderStrip.Name = "updateForwarderStrip";
-            resources.ApplyResources(this.updateForwarderStrip, "updateForwarderStrip");
             this.updateForwarderStrip.Click += new System.EventHandler(this.updateForwarderStrip_Click);
             // 
             // deleteForwarderStrip
             // 
+            resources.ApplyResources(this.deleteForwarderStrip, "deleteForwarderStrip");
             this.deleteForwarderStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteForwarderStrip.Name = "deleteForwarderStrip";
-            resources.ApplyResources(this.deleteForwarderStrip, "deleteForwarderStrip");
             this.deleteForwarderStrip.Click += new System.EventHandler(this.deleteForwarderStrip_Click);
             // 
             // documentationToolStripMenuItem
             // 
+            resources.ApplyResources(this.documentationToolStripMenuItem, "documentationToolStripMenuItem");
             this.documentationToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.documentationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showContractMenuItemStrip,
             this.addContractMenuItemStrip});
             this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
-            resources.ApplyResources(this.documentationToolStripMenuItem, "documentationToolStripMenuItem");
             // 
             // showContractMenuItemStrip
             // 
+            resources.ApplyResources(this.showContractMenuItemStrip, "showContractMenuItemStrip");
             this.showContractMenuItemStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.showContractMenuItemStrip.Name = "showContractMenuItemStrip";
-            resources.ApplyResources(this.showContractMenuItemStrip, "showContractMenuItemStrip");
             this.showContractMenuItemStrip.Click += new System.EventHandler(this.showContractMenuItem_Click);
             // 
             // addContractMenuItemStrip
             // 
+            resources.ApplyResources(this.addContractMenuItemStrip, "addContractMenuItemStrip");
             this.addContractMenuItemStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.addContractMenuItemStrip.Name = "addContractMenuItemStrip";
-            resources.ApplyResources(this.addContractMenuItemStrip, "addContractMenuItemStrip");
             this.addContractMenuItemStrip.Click += new System.EventHandler(this.createContractMenuItem_Click);
             // 
             // orderToolStripMenuItem
             // 
+            resources.ApplyResources(this.orderToolStripMenuItem, "orderToolStripMenuItem");
             this.orderToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.orderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showTrackingMenuItem,
             this.addOrderMenuItem,
             this.updateOrderMenuItem});
             this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            resources.ApplyResources(this.orderToolStripMenuItem, "orderToolStripMenuItem");
             // 
             // showTrackingMenuItem
             // 
+            resources.ApplyResources(this.showTrackingMenuItem, "showTrackingMenuItem");
             this.showTrackingMenuItem.BackColor = System.Drawing.Color.AliceBlue;
             this.showTrackingMenuItem.Name = "showTrackingMenuItem";
-            resources.ApplyResources(this.showTrackingMenuItem, "showTrackingMenuItem");
             this.showTrackingMenuItem.Click += new System.EventHandler(this.showTrackingMenuItem_Click);
             // 
             // addOrderMenuItem
             // 
+            resources.ApplyResources(this.addOrderMenuItem, "addOrderMenuItem");
             this.addOrderMenuItem.BackColor = System.Drawing.Color.AliceBlue;
             this.addOrderMenuItem.Name = "addOrderMenuItem";
-            resources.ApplyResources(this.addOrderMenuItem, "addOrderMenuItem");
             this.addOrderMenuItem.Click += new System.EventHandler(this.addOrderMenuItem_Click);
             // 
             // updateOrderMenuItem
             // 
+            resources.ApplyResources(this.updateOrderMenuItem, "updateOrderMenuItem");
             this.updateOrderMenuItem.BackColor = System.Drawing.Color.AliceBlue;
             this.updateOrderMenuItem.Name = "updateOrderMenuItem";
-            resources.ApplyResources(this.updateOrderMenuItem, "updateOrderMenuItem");
             this.updateOrderMenuItem.Click += new System.EventHandler(this.updateOrderMenuItem_DoubleClick);
             // 
             // arbeitenToolStripMenuItem
             // 
+            resources.ApplyResources(this.arbeitenToolStripMenuItem, "arbeitenToolStripMenuItem");
             this.arbeitenToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.arbeitenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showArbeitenToolStripMenuItem,
             this.addArbeitenToolStripMenuItem,
             this.updateArbeitenToolStripMenuItem});
             this.arbeitenToolStripMenuItem.Name = "arbeitenToolStripMenuItem";
-            resources.ApplyResources(this.arbeitenToolStripMenuItem, "arbeitenToolStripMenuItem");
             // 
             // showArbeitenToolStripMenuItem
             // 
+            resources.ApplyResources(this.showArbeitenToolStripMenuItem, "showArbeitenToolStripMenuItem");
             this.showArbeitenToolStripMenuItem.BackColor = System.Drawing.Color.AliceBlue;
             this.showArbeitenToolStripMenuItem.Name = "showArbeitenToolStripMenuItem";
-            resources.ApplyResources(this.showArbeitenToolStripMenuItem, "showArbeitenToolStripMenuItem");
             this.showArbeitenToolStripMenuItem.Click += new System.EventHandler(this.showArbeitenMenuItem_Click);
             // 
             // addArbeitenToolStripMenuItem
             // 
+            resources.ApplyResources(this.addArbeitenToolStripMenuItem, "addArbeitenToolStripMenuItem");
             this.addArbeitenToolStripMenuItem.BackColor = System.Drawing.Color.AliceBlue;
             this.addArbeitenToolStripMenuItem.Name = "addArbeitenToolStripMenuItem";
-            resources.ApplyResources(this.addArbeitenToolStripMenuItem, "addArbeitenToolStripMenuItem");
             this.addArbeitenToolStripMenuItem.Click += new System.EventHandler(this.addArbeitenMenuItem_Click);
             // 
             // updateArbeitenToolStripMenuItem
             // 
+            resources.ApplyResources(this.updateArbeitenToolStripMenuItem, "updateArbeitenToolStripMenuItem");
             this.updateArbeitenToolStripMenuItem.BackColor = System.Drawing.Color.AliceBlue;
             this.updateArbeitenToolStripMenuItem.Name = "updateArbeitenToolStripMenuItem";
-            resources.ApplyResources(this.updateArbeitenToolStripMenuItem, "updateArbeitenToolStripMenuItem");
             this.updateArbeitenToolStripMenuItem.Click += new System.EventHandler(this.updateArbeitenMenuItem_Click);
             // 
             // dataControl
@@ -990,13 +2840,13 @@
             // 
             // helloPage
             // 
+            resources.ApplyResources(this.helloPage, "helloPage");
             this.helloPage.BackColor = System.Drawing.Color.Wheat;
             this.helloPage.Controls.Add(this.CreatorsLabel);
             this.helloPage.Controls.Add(this.AtlantSovtlinkLabel);
             this.helloPage.Controls.Add(this.yearLabel);
             this.helloPage.Controls.Add(this.label68);
             this.helloPage.Controls.Add(this.helloPictureBox);
-            resources.ApplyResources(this.helloPage, "helloPage");
             this.helloPage.Name = "helloPage";
             this.helloPage.UseVisualStyleBackColor = true;
             // 
@@ -1030,13 +2880,14 @@
             // 
             // helloPictureBox
             // 
-            this.helloPictureBox.BackColor = System.Drawing.Color.Wheat;
             resources.ApplyResources(this.helloPictureBox, "helloPictureBox");
+            this.helloPictureBox.BackColor = System.Drawing.Color.Wheat;
             this.helloPictureBox.Name = "helloPictureBox";
             this.helloPictureBox.TabStop = false;
             // 
             // showClientPage
             // 
+            resources.ApplyResources(this.showClientPage, "showClientPage");
             this.showClientPage.BackColor = System.Drawing.Color.AliceBlue;
             this.showClientPage.Controls.Add(this.showClientDeleteButton);
             this.showClientPage.Controls.Add(this.showClientSearchButton);
@@ -1049,7 +2900,6 @@
             this.showClientPage.Controls.Add(this.showClientContactsDataGridView);
             this.showClientPage.Controls.Add(this.showClientTitleLabel);
             this.showClientPage.Controls.Add(this.showClientDataGridView);
-            resources.ApplyResources(this.showClientPage, "showClientPage");
             this.showClientPage.Name = "showClientPage";
             // 
             // showClientDeleteButton
@@ -1144,6 +2994,7 @@
             // 
             // addClientPage
             // 
+            resources.ApplyResources(this.addClientPage, "addClientPage");
             this.addClientPage.BackColor = System.Drawing.Color.AliceBlue;
             this.addClientPage.Controls.Add(this.addClientIsNecessaryLabel);
             this.addClientPage.Controls.Add(this.label4);
@@ -1167,7 +3018,6 @@
             this.addClientPage.Controls.Add(this.addClientNameLabel);
             this.addClientPage.Controls.Add(this.addClientTaxPayerStatusButton);
             this.addClientPage.Controls.Add(this.addClientWorkDocumentButton);
-            resources.ApplyResources(this.addClientPage, "addClientPage");
             this.addClientPage.Name = "addClientPage";
             // 
             // addClientIsNecessaryLabel
@@ -1311,6 +3161,7 @@
             // 
             // updateClientPage
             // 
+            resources.ApplyResources(this.updateClientPage, "updateClientPage");
             this.updateClientPage.BackColor = System.Drawing.Color.AliceBlue;
             this.updateClientPage.Controls.Add(this.updateClientSelectDiapasonComboBox);
             this.updateClientPage.Controls.Add(this.updateClientSelectDiapasonLabel);
@@ -1339,14 +3190,13 @@
             this.updateClientPage.Controls.Add(this.updateClientNameLabel);
             this.updateClientPage.Controls.Add(this.updateClientTaxPayerStatusButton);
             this.updateClientPage.Controls.Add(this.updateClientWorkDocumentButton);
-            resources.ApplyResources(this.updateClientPage, "updateClientPage");
             this.updateClientPage.Name = "updateClientPage";
             // 
             // updateClientSelectDiapasonComboBox
             // 
+            resources.ApplyResources(this.updateClientSelectDiapasonComboBox, "updateClientSelectDiapasonComboBox");
             this.updateClientSelectDiapasonComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.updateClientSelectDiapasonComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            resources.ApplyResources(this.updateClientSelectDiapasonComboBox, "updateClientSelectDiapasonComboBox");
             this.updateClientSelectDiapasonComboBox.Name = "updateClientSelectDiapasonComboBox";
             this.updateClientSelectDiapasonComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.selectClientDiapasonUpdateComboBox_MouseClick);
             // 
@@ -1528,20 +3378,20 @@
             // 
             // deleteClientPage
             // 
+            resources.ApplyResources(this.deleteClientPage, "deleteClientPage");
             this.deleteClientPage.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteClientPage.Controls.Add(this.deleteClientSelectDiapasoneComboBox);
             this.deleteClientPage.Controls.Add(this.label8);
             this.deleteClientPage.Controls.Add(this.deleteClientButton);
             this.deleteClientPage.Controls.Add(this.label30);
             this.deleteClientPage.Controls.Add(this.deleteClientComboBox);
-            resources.ApplyResources(this.deleteClientPage, "deleteClientPage");
             this.deleteClientPage.Name = "deleteClientPage";
             // 
             // deleteClientSelectDiapasoneComboBox
             // 
+            resources.ApplyResources(this.deleteClientSelectDiapasoneComboBox, "deleteClientSelectDiapasoneComboBox");
             this.deleteClientSelectDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.deleteClientSelectDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            resources.ApplyResources(this.deleteClientSelectDiapasoneComboBox, "deleteClientSelectDiapasoneComboBox");
             this.deleteClientSelectDiapasoneComboBox.Name = "deleteClientSelectDiapasoneComboBox";
             this.deleteClientSelectDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.deleteClientSelectDiapasoneComboBox_MouseClick);
             // 
@@ -1573,6 +3423,7 @@
             // 
             // showForwarderPage
             // 
+            resources.ApplyResources(this.showForwarderPage, "showForwarderPage");
             this.showForwarderPage.BackColor = System.Drawing.Color.AliceBlue;
             this.showForwarderPage.Controls.Add(this.showForwarderDeleteButton);
             this.showForwarderPage.Controls.Add(this.label31);
@@ -1583,7 +3434,6 @@
             this.showForwarderPage.Controls.Add(this.label34);
             this.showForwarderPage.Controls.Add(this.forwarderDataGridView);
             this.showForwarderPage.Controls.Add(this.label32);
-            resources.ApplyResources(this.showForwarderPage, "showForwarderPage");
             this.showForwarderPage.Name = "showForwarderPage";
             // 
             // showForwarderDeleteButton
@@ -1670,6 +3520,7 @@
             // 
             // addForwarderPage
             // 
+            resources.ApplyResources(this.addForwarderPage, "addForwarderPage");
             this.addForwarderPage.BackColor = System.Drawing.Color.AliceBlue;
             this.addForwarderPage.Controls.Add(this.addForwarderSplitContainer);
             this.addForwarderPage.Controls.Add(this.label5);
@@ -1692,48 +3543,7 @@
             this.addForwarderPage.Controls.Add(this.label50);
             this.addForwarderPage.Controls.Add(this.addTaxPayerStatusForwarderButton);
             this.addForwarderPage.Controls.Add(this.addWorkDocumentForwarderButton);
-            resources.ApplyResources(this.addForwarderPage, "addForwarderPage");
             this.addForwarderPage.Name = "addForwarderPage";
-            // 
-            // addForwarderSplitContainer
-            // 
-            resources.ApplyResources(this.addForwarderSplitContainer, "addForwarderSplitContainer");
-            this.addForwarderSplitContainer.Name = "addForwarderSplitContainer";
-            // 
-            // addForwarderSplitContainer.Panel1
-            // 
-            this.addForwarderSplitContainer.Panel1.Controls.Add(this.addForwarderStampPictureBox);
-            this.addForwarderSplitContainer.Panel1.Controls.Add(this.forwarderAddStampButton);
-            // 
-            // addForwarderSplitContainer.Panel2
-            // 
-            this.addForwarderSplitContainer.Panel2.Controls.Add(this.commentForwarderTextBox);
-            this.addForwarderSplitContainer.Panel2.Controls.Add(this.label46);
-            // 
-            // addForwarderStampPictureBox
-            // 
-            this.addForwarderStampPictureBox.BackColor = System.Drawing.SystemColors.Window;
-            resources.ApplyResources(this.addForwarderStampPictureBox, "addForwarderStampPictureBox");
-            this.addForwarderStampPictureBox.Name = "addForwarderStampPictureBox";
-            this.addForwarderStampPictureBox.TabStop = false;
-            // 
-            // forwarderAddStampButton
-            // 
-            resources.ApplyResources(this.forwarderAddStampButton, "forwarderAddStampButton");
-            this.forwarderAddStampButton.Name = "forwarderAddStampButton";
-            this.forwarderAddStampButton.TabStop = false;
-            this.forwarderAddStampButton.UseVisualStyleBackColor = true;
-            this.forwarderAddStampButton.Click += new System.EventHandler(this.forwarderAddImageButton_Click);
-            // 
-            // commentForwarderTextBox
-            // 
-            resources.ApplyResources(this.commentForwarderTextBox, "commentForwarderTextBox");
-            this.commentForwarderTextBox.Name = "commentForwarderTextBox";
-            // 
-            // label46
-            // 
-            resources.ApplyResources(this.label46, "label46");
-            this.label46.Name = "label46";
             // 
             // label5
             // 
@@ -1864,6 +3674,7 @@
             // 
             // updateForwarderPage
             // 
+            resources.ApplyResources(this.updateForwarderPage, "updateForwarderPage");
             this.updateForwarderPage.BackColor = System.Drawing.Color.AliceBlue;
             this.updateForwarderPage.Controls.Add(this.updateOrderSplitContainer);
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateContactDeleteButton);
@@ -1889,49 +3700,7 @@
             this.updateForwarderPage.Controls.Add(this.label65);
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateTaxPayerStatusAddButton);
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateWorkDocumentAddButton);
-            resources.ApplyResources(this.updateForwarderPage, "updateForwarderPage");
             this.updateForwarderPage.Name = "updateForwarderPage";
-            // 
-            // updateOrderSplitContainer
-            // 
-            resources.ApplyResources(this.updateOrderSplitContainer, "updateOrderSplitContainer");
-            this.updateOrderSplitContainer.Name = "updateOrderSplitContainer";
-            // 
-            // updateOrderSplitContainer.Panel1
-            // 
-            this.updateOrderSplitContainer.Panel1.Controls.Add(this.label36);
-            this.updateOrderSplitContainer.Panel1.Controls.Add(this.updateForwarderStampPictureBox);
-            // 
-            // updateOrderSplitContainer.Panel2
-            // 
-            this.updateOrderSplitContainer.Panel2.Controls.Add(this.label61);
-            this.updateOrderSplitContainer.Panel2.Controls.Add(this.commentForwarderUpdateTextBox);
-            // 
-            // label36
-            // 
-            resources.ApplyResources(this.label36, "label36");
-            this.label36.Name = "label36";
-            // 
-            // updateForwarderStampPictureBox
-            // 
-            resources.ApplyResources(this.updateForwarderStampPictureBox, "updateForwarderStampPictureBox");
-            this.updateForwarderStampPictureBox.BackColor = System.Drawing.SystemColors.Window;
-            this.updateForwarderStampPictureBox.Name = "updateForwarderStampPictureBox";
-            this.updateForwarderStampPictureBox.TabStop = false;
-            this.updateForwarderStampPictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.updateForwarderStampPictureBox_Paint);
-            this.updateForwarderStampPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.updateForwarderStampPictureBox_MouseClick);
-            // 
-            // label61
-            // 
-            resources.ApplyResources(this.label61, "label61");
-            this.label61.Name = "label61";
-            // 
-            // commentForwarderUpdateTextBox
-            // 
-            resources.ApplyResources(this.commentForwarderUpdateTextBox, "commentForwarderUpdateTextBox");
-            this.commentForwarderUpdateTextBox.Name = "commentForwarderUpdateTextBox";
-            this.commentForwarderUpdateTextBox.TabStop = false;
-            this.commentForwarderUpdateTextBox.TextChanged += new System.EventHandler(this.commentForwarderUpdateTextBox_TextChanged);
             // 
             // forwarderUpdateContactDeleteButton
             // 
@@ -2096,11 +3865,11 @@
             // 
             // deleteForwarderPage
             // 
+            resources.ApplyResources(this.deleteForwarderPage, "deleteForwarderPage");
             this.deleteForwarderPage.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteForwarderPage.Controls.Add(this.forwarderDeleteButton);
             this.deleteForwarderPage.Controls.Add(this.label42);
             this.deleteForwarderPage.Controls.Add(this.forwarderDeleteComboBox);
-            resources.ApplyResources(this.deleteForwarderPage, "deleteForwarderPage");
             this.deleteForwarderPage.Name = "deleteForwarderPage";
             // 
             // forwarderDeleteButton
@@ -2127,6 +3896,7 @@
             // 
             // showTransporterPage
             // 
+            resources.ApplyResources(this.showTransporterPage, "showTransporterPage");
             this.showTransporterPage.BackColor = System.Drawing.Color.AliceBlue;
             this.showTransporterPage.Controls.Add(this.showTransporterDeleteButton);
             this.showTransporterPage.Controls.Add(this.label15);
@@ -2142,7 +3912,6 @@
             this.showTransporterPage.Controls.Add(this.transporterShowCommentRichTextBox);
             this.showTransporterPage.Controls.Add(this.transporterShowContactsDataGridView);
             this.showTransporterPage.Controls.Add(this.transporterShowDataGridView);
-            resources.ApplyResources(this.showTransporterPage, "showTransporterPage");
             this.showTransporterPage.Name = "showTransporterPage";
             // 
             // showTransporterDeleteButton
@@ -2264,6 +4033,7 @@
             // 
             // addTransporterPage
             // 
+            resources.ApplyResources(this.addTransporterPage, "addTransporterPage");
             this.addTransporterPage.BackColor = System.Drawing.Color.AliceBlue;
             this.addTransporterPage.Controls.Add(this.transporterAddFilterPanel);
             this.addTransporterPage.Controls.Add(this.label6);
@@ -2291,7 +4061,6 @@
             this.addTransporterPage.Controls.Add(this.label78);
             this.addTransporterPage.Controls.Add(this.transporterAddTaxPayerStatusAddButton);
             this.addTransporterPage.Controls.Add(this.transporterAddWorkDocumentAddButton);
-            resources.ApplyResources(this.addTransporterPage, "addTransporterPage");
             this.addTransporterPage.Name = "addTransporterPage";
             // 
             // transporterAddFilterPanel
@@ -2520,6 +4289,7 @@
             // 
             // updateTransporterPage
             // 
+            resources.ApplyResources(this.updateTransporterPage, "updateTransporterPage");
             this.updateTransporterPage.BackColor = System.Drawing.Color.AliceBlue;
             this.updateTransporterPage.Controls.Add(this.transporterUpdateFilterPanel);
             this.updateTransporterPage.Controls.Add(this.selectTransporterDiapasoneUpdateComboBox);
@@ -2552,7 +4322,6 @@
             this.updateTransporterPage.Controls.Add(this.label98);
             this.updateTransporterPage.Controls.Add(this.transporterUpdateTaxPayerStatusAddButton);
             this.updateTransporterPage.Controls.Add(this.transporterUpdateWorkDocumentAddButton);
-            resources.ApplyResources(this.updateTransporterPage, "updateTransporterPage");
             this.updateTransporterPage.Name = "updateTransporterPage";
             // 
             // transporterUpdateFilterPanel
@@ -2630,9 +4399,9 @@
             // 
             // selectTransporterDiapasoneUpdateComboBox
             // 
+            resources.ApplyResources(this.selectTransporterDiapasoneUpdateComboBox, "selectTransporterDiapasoneUpdateComboBox");
             this.selectTransporterDiapasoneUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.selectTransporterDiapasoneUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            resources.ApplyResources(this.selectTransporterDiapasoneUpdateComboBox, "selectTransporterDiapasoneUpdateComboBox");
             this.selectTransporterDiapasoneUpdateComboBox.Name = "selectTransporterDiapasoneUpdateComboBox";
             this.selectTransporterDiapasoneUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.selectTransporterDiapasoneUpdateComboBox_MouseClick);
             // 
@@ -2834,20 +4603,20 @@
             // 
             // deleteTransporterPage
             // 
+            resources.ApplyResources(this.deleteTransporterPage, "deleteTransporterPage");
             this.deleteTransporterPage.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteTransporterPage.Controls.Add(this.deleteTransporterSelectDiapasoneComboBox);
             this.deleteTransporterPage.Controls.Add(this.label17);
             this.deleteTransporterPage.Controls.Add(this.transporterDeleteButton);
             this.deleteTransporterPage.Controls.Add(this.label11);
             this.deleteTransporterPage.Controls.Add(this.transporterDeleteComboBox);
-            resources.ApplyResources(this.deleteTransporterPage, "deleteTransporterPage");
             this.deleteTransporterPage.Name = "deleteTransporterPage";
             // 
             // deleteTransporterSelectDiapasoneComboBox
             // 
+            resources.ApplyResources(this.deleteTransporterSelectDiapasoneComboBox, "deleteTransporterSelectDiapasoneComboBox");
             this.deleteTransporterSelectDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.deleteTransporterSelectDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            resources.ApplyResources(this.deleteTransporterSelectDiapasoneComboBox, "deleteTransporterSelectDiapasoneComboBox");
             this.deleteTransporterSelectDiapasoneComboBox.Name = "deleteTransporterSelectDiapasoneComboBox";
             this.deleteTransporterSelectDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.deleteTransporterSelectDiapasoneComboBox_MouseClick);
             // 
@@ -2880,6 +4649,7 @@
             // 
             // addContractPage
             // 
+            resources.ApplyResources(this.addContractPage, "addContractPage");
             this.addContractPage.BackColor = System.Drawing.Color.AliceBlue;
             this.addContractPage.Controls.Add(this.secondPersonRoleDocumentСomboBox);
             this.addContractPage.Controls.Add(this.label18cont);
@@ -2901,14 +4671,13 @@
             this.addContractPage.Controls.Add(this.label37cont);
             this.addContractPage.Controls.Add(this.personNameLabel);
             this.addContractPage.Controls.Add(this.firstPersonNameDocumentComboBox);
-            resources.ApplyResources(this.addContractPage, "addContractPage");
             this.addContractPage.Name = "addContractPage";
             // 
             // secondPersonRoleDocumentСomboBox
             // 
+            resources.ApplyResources(this.secondPersonRoleDocumentСomboBox, "secondPersonRoleDocumentСomboBox");
             this.secondPersonRoleDocumentСomboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.secondPersonRoleDocumentСomboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            resources.ApplyResources(this.secondPersonRoleDocumentСomboBox, "secondPersonRoleDocumentСomboBox");
             this.secondPersonRoleDocumentСomboBox.Items.AddRange(new object[] {
             resources.GetString("secondPersonRoleDocumentСomboBox.Items"),
             resources.GetString("secondPersonRoleDocumentСomboBox.Items1"),
@@ -2924,9 +4693,9 @@
             // 
             // secondPersonDiapasonDocumentComboBox
             // 
+            resources.ApplyResources(this.secondPersonDiapasonDocumentComboBox, "secondPersonDiapasonDocumentComboBox");
             this.secondPersonDiapasonDocumentComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.secondPersonDiapasonDocumentComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            resources.ApplyResources(this.secondPersonDiapasonDocumentComboBox, "secondPersonDiapasonDocumentComboBox");
             this.secondPersonDiapasonDocumentComboBox.Name = "secondPersonDiapasonDocumentComboBox";
             this.secondPersonDiapasonDocumentComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.secondPersonDiapasonDocumentComboBox_MouseClick);
             // 
@@ -2957,9 +4726,9 @@
             // 
             // documentTypeComboBox
             // 
+            resources.ApplyResources(this.documentTypeComboBox, "documentTypeComboBox");
             this.documentTypeComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.documentTypeComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            resources.ApplyResources(this.documentTypeComboBox, "documentTypeComboBox");
             this.documentTypeComboBox.Items.AddRange(new object[] {
             resources.GetString("documentTypeComboBox.Items"),
             resources.GetString("documentTypeComboBox.Items1")});
@@ -3041,6 +4810,7 @@
             // 
             // addOrderPage
             // 
+            resources.ApplyResources(this.addOrderPage, "addOrderPage");
             this.addOrderPage.BackColor = System.Drawing.Color.AliceBlue;
             this.addOrderPage.Controls.Add(this.OrderAddFreightTextBox);
             this.addOrderPage.Controls.Add(this.label101);
@@ -3048,7 +4818,6 @@
             this.addOrderPage.Controls.Add(this.addOrderSplitContainer3);
             this.addOrderPage.Controls.Add(this.addOrderSplitContainer2);
             this.addOrderPage.Controls.Add(this.addOrderSplitContainer1);
-            resources.ApplyResources(this.addOrderPage, "addOrderPage");
             this.addOrderPage.Name = "addOrderPage";
             // 
             // OrderAddFreightTextBox
@@ -3062,714 +4831,9 @@
             resources.ApplyResources(this.label101, "label101");
             this.label101.Name = "label101";
             // 
-            // splitContainer6
-            // 
-            resources.ApplyResources(this.splitContainer6, "splitContainer6");
-            this.splitContainer6.Name = "splitContainer6";
-            // 
-            // splitContainer6.Panel1
-            // 
-            this.splitContainer6.Panel1.Controls.Add(this.OrderAddAdditionalTermsAddButton);
-            this.splitContainer6.Panel1.Controls.Add(this.OrderAddPaymentTermsAddButton);
-            this.splitContainer6.Panel1.Controls.Add(this.OrderAddAdditionalTermsSelectComboBox);
-            this.splitContainer6.Panel1.Controls.Add(this.OrderAddPaymentTermsSelectComboBox);
-            this.splitContainer6.Panel1.Controls.Add(this.label102);
-            this.splitContainer6.Panel1.Controls.Add(this.label103);
-            // 
-            // splitContainer6.Panel2
-            // 
-            this.splitContainer6.Panel2.Controls.Add(this.OrderAddOrderDenyAddButton);
-            this.splitContainer6.Panel2.Controls.Add(this.OrderAddButton);
-            this.splitContainer6.Panel2.Controls.Add(this.label108);
-            this.splitContainer6.Panel2.Controls.Add(this.OrderAddDenyFineSelectComboBox);
-            // 
-            // OrderAddAdditionalTermsAddButton
-            // 
-            resources.ApplyResources(this.OrderAddAdditionalTermsAddButton, "OrderAddAdditionalTermsAddButton");
-            this.OrderAddAdditionalTermsAddButton.Name = "OrderAddAdditionalTermsAddButton";
-            this.OrderAddAdditionalTermsAddButton.TabStop = false;
-            this.OrderAddAdditionalTermsAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddAdditionalTermsAddButton.Click += new System.EventHandler(this.OrderAddAdditionalTermsAddButton_Click);
-            // 
-            // OrderAddPaymentTermsAddButton
-            // 
-            resources.ApplyResources(this.OrderAddPaymentTermsAddButton, "OrderAddPaymentTermsAddButton");
-            this.OrderAddPaymentTermsAddButton.Name = "OrderAddPaymentTermsAddButton";
-            this.OrderAddPaymentTermsAddButton.TabStop = false;
-            this.OrderAddPaymentTermsAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddPaymentTermsAddButton.Click += new System.EventHandler(this.OrderAddPaymentTermsAddButton_Click);
-            // 
-            // OrderAddAdditionalTermsSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddAdditionalTermsSelectComboBox, "OrderAddAdditionalTermsSelectComboBox");
-            this.OrderAddAdditionalTermsSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddAdditionalTermsSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddAdditionalTermsSelectComboBox.Name = "OrderAddAdditionalTermsSelectComboBox";
-            this.OrderAddAdditionalTermsSelectComboBox.Sorted = true;
-            this.OrderAddAdditionalTermsSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddAdditionalTermsSelectComboBox_SelectedIndexChanged);
-            this.OrderAddAdditionalTermsSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddAdditionalTermsSelectComboBox_TextUpdate);
-            this.OrderAddAdditionalTermsSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddAdditionalTermsSelectComboBox_MouseClick);
-            // 
-            // OrderAddPaymentTermsSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddPaymentTermsSelectComboBox, "OrderAddPaymentTermsSelectComboBox");
-            this.OrderAddPaymentTermsSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddPaymentTermsSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddPaymentTermsSelectComboBox.Name = "OrderAddPaymentTermsSelectComboBox";
-            this.OrderAddPaymentTermsSelectComboBox.Sorted = true;
-            this.OrderAddPaymentTermsSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddPaymentTermsSelectComboBox_SelectedIndexChanged);
-            this.OrderAddPaymentTermsSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddPaymentTermsSelectComboBox_TextUpdate);
-            this.OrderAddPaymentTermsSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddPaymentTermsSelectComboBox_MouseClick);
-            // 
-            // label102
-            // 
-            resources.ApplyResources(this.label102, "label102");
-            this.label102.Name = "label102";
-            // 
-            // label103
-            // 
-            resources.ApplyResources(this.label103, "label103");
-            this.label103.Name = "label103";
-            // 
-            // OrderAddOrderDenyAddButton
-            // 
-            resources.ApplyResources(this.OrderAddOrderDenyAddButton, "OrderAddOrderDenyAddButton");
-            this.OrderAddOrderDenyAddButton.Name = "OrderAddOrderDenyAddButton";
-            this.OrderAddOrderDenyAddButton.TabStop = false;
-            this.OrderAddOrderDenyAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddOrderDenyAddButton.Click += new System.EventHandler(this.OrderAddOrderDenyAddButton_Click);
-            // 
-            // OrderAddButton
-            // 
-            resources.ApplyResources(this.OrderAddButton, "OrderAddButton");
-            this.OrderAddButton.Name = "OrderAddButton";
-            this.OrderAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddButton.Click += new System.EventHandler(this.OrderAddButton_Click);
-            // 
-            // label108
-            // 
-            resources.ApplyResources(this.label108, "label108");
-            this.label108.Name = "label108";
-            // 
-            // OrderAddDenyFineSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddDenyFineSelectComboBox, "OrderAddDenyFineSelectComboBox");
-            this.OrderAddDenyFineSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddDenyFineSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddDenyFineSelectComboBox.Name = "OrderAddDenyFineSelectComboBox";
-            this.OrderAddDenyFineSelectComboBox.Sorted = true;
-            this.OrderAddDenyFineSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddDenyFineSelectComboBox_SelectedIndexChanged);
-            this.OrderAddDenyFineSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddDenyFineSelectComboBox_TextUpdate);
-            this.OrderAddDenyFineSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddDenyFineSelectComboBox_MouseClick);
-            // 
-            // addOrderSplitContainer3
-            // 
-            resources.ApplyResources(this.addOrderSplitContainer3, "addOrderSplitContainer3");
-            this.addOrderSplitContainer3.Name = "addOrderSplitContainer3";
-            // 
-            // addOrderSplitContainer3.Panel1
-            // 
-            this.addOrderSplitContainer3.Panel1.Controls.Add(this.addOrderSplitContainer4);
-            // 
-            // addOrderSplitContainer3.Panel2
-            // 
-            this.addOrderSplitContainer3.Panel2.Controls.Add(this.splitContainer5);
-            // 
-            // addOrderSplitContainer4
-            // 
-            resources.ApplyResources(this.addOrderSplitContainer4, "addOrderSplitContainer4");
-            this.addOrderSplitContainer4.Name = "addOrderSplitContainer4";
-            // 
-            // addOrderSplitContainer4.Panel1
-            // 
-            this.addOrderSplitContainer4.Panel1.Controls.Add(this.OrderAddWeightTextBox);
-            this.addOrderSplitContainer4.Panel1.Controls.Add(this.label91);
-            this.addOrderSplitContainer4.Panel1.Controls.Add(this.OrderAddCargoSelectComboBox);
-            this.addOrderSplitContainer4.Panel1.Controls.Add(this.label87);
-            this.addOrderSplitContainer4.Panel1.Controls.Add(this.OrderAddCargoAddButton);
-            // 
-            // addOrderSplitContainer4.Panel2
-            // 
-            this.addOrderSplitContainer4.Panel2.Controls.Add(this.OrderAddLoadingForm2AddButton);
-            this.addOrderSplitContainer4.Panel2.Controls.Add(this.OrderAddLoadingForm1AddButton);
-            this.addOrderSplitContainer4.Panel2.Controls.Add(this.OrderAddLoadingForm2SelectComboBox);
-            this.addOrderSplitContainer4.Panel2.Controls.Add(this.label88);
-            this.addOrderSplitContainer4.Panel2.Controls.Add(this.OrderAddLoadingForm1SelectComboBox);
-            this.addOrderSplitContainer4.Panel2.Controls.Add(this.label85);
-            // 
-            // OrderAddWeightTextBox
-            // 
-            resources.ApplyResources(this.OrderAddWeightTextBox, "OrderAddWeightTextBox");
-            this.OrderAddWeightTextBox.Name = "OrderAddWeightTextBox";
-            this.OrderAddWeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OrderAddWeightTextBox_KeyPress);
-            // 
-            // label91
-            // 
-            resources.ApplyResources(this.label91, "label91");
-            this.label91.Name = "label91";
-            // 
-            // OrderAddCargoSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddCargoSelectComboBox, "OrderAddCargoSelectComboBox");
-            this.OrderAddCargoSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddCargoSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddCargoSelectComboBox.Name = "OrderAddCargoSelectComboBox";
-            this.OrderAddCargoSelectComboBox.Sorted = true;
-            this.OrderAddCargoSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddCargoSelectComboBox_SelectedIndexChanged);
-            this.OrderAddCargoSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddCargoSelectComboBox_TextUpdate);
-            this.OrderAddCargoSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddCargoSelectComboBox_MouseClick);
-            // 
-            // label87
-            // 
-            resources.ApplyResources(this.label87, "label87");
-            this.label87.Name = "label87";
-            // 
-            // OrderAddCargoAddButton
-            // 
-            resources.ApplyResources(this.OrderAddCargoAddButton, "OrderAddCargoAddButton");
-            this.OrderAddCargoAddButton.Name = "OrderAddCargoAddButton";
-            this.OrderAddCargoAddButton.TabStop = false;
-            this.OrderAddCargoAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddCargoAddButton.Click += new System.EventHandler(this.OrderAddCargoAddButton_Click);
-            // 
-            // OrderAddLoadingForm2AddButton
-            // 
-            resources.ApplyResources(this.OrderAddLoadingForm2AddButton, "OrderAddLoadingForm2AddButton");
-            this.OrderAddLoadingForm2AddButton.Name = "OrderAddLoadingForm2AddButton";
-            this.OrderAddLoadingForm2AddButton.TabStop = false;
-            this.OrderAddLoadingForm2AddButton.UseVisualStyleBackColor = true;
-            this.OrderAddLoadingForm2AddButton.Click += new System.EventHandler(this.OrderAddLoadingForm1AddButton_Click);
-            // 
-            // OrderAddLoadingForm1AddButton
-            // 
-            resources.ApplyResources(this.OrderAddLoadingForm1AddButton, "OrderAddLoadingForm1AddButton");
-            this.OrderAddLoadingForm1AddButton.Name = "OrderAddLoadingForm1AddButton";
-            this.OrderAddLoadingForm1AddButton.TabStop = false;
-            this.OrderAddLoadingForm1AddButton.UseVisualStyleBackColor = true;
-            this.OrderAddLoadingForm1AddButton.Click += new System.EventHandler(this.OrderAddLoadingForm1AddButton_Click);
-            // 
-            // OrderAddLoadingForm2SelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddLoadingForm2SelectComboBox, "OrderAddLoadingForm2SelectComboBox");
-            this.OrderAddLoadingForm2SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddLoadingForm2SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddLoadingForm2SelectComboBox.Name = "OrderAddLoadingForm2SelectComboBox";
-            this.OrderAddLoadingForm2SelectComboBox.Sorted = true;
-            this.OrderAddLoadingForm2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddLoadingForm2SelectComboBox_SelectedIndexChanged);
-            this.OrderAddLoadingForm2SelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddLoadingForm2SelectComboBox_TextUpdate);
-            this.OrderAddLoadingForm2SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddLoadingForm2SelectComboBox_MouseClick);
-            // 
-            // label88
-            // 
-            resources.ApplyResources(this.label88, "label88");
-            this.label88.Name = "label88";
-            // 
-            // OrderAddLoadingForm1SelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddLoadingForm1SelectComboBox, "OrderAddLoadingForm1SelectComboBox");
-            this.OrderAddLoadingForm1SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddLoadingForm1SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddLoadingForm1SelectComboBox.Name = "OrderAddLoadingForm1SelectComboBox";
-            this.OrderAddLoadingForm1SelectComboBox.Sorted = true;
-            this.OrderAddLoadingForm1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddLoadingForm1SelectComboBox_SelectedIndexChanged);
-            this.OrderAddLoadingForm1SelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddLoadingForm1SelectComboBox_TextUpdate);
-            this.OrderAddLoadingForm1SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddLoadingForm1SelectComboBox_MouseClick);
-            // 
-            // label85
-            // 
-            resources.ApplyResources(this.label85, "label85");
-            this.label85.Name = "label85";
-            // 
-            // splitContainer5
-            // 
-            resources.ApplyResources(this.splitContainer5, "splitContainer5");
-            this.splitContainer5.Name = "splitContainer5";
-            // 
-            // splitContainer5.Panel1
-            // 
-            this.splitContainer5.Panel1.Controls.Add(this.OrderAddFineForDelayAddButton);
-            this.splitContainer5.Panel1.Controls.Add(this.OrderAddFineForDelaySelectComboBox);
-            this.splitContainer5.Panel1.Controls.Add(this.OrderAddRegularyDelayAddButton);
-            this.splitContainer5.Panel1.Controls.Add(this.OrderAddRegularyDelaySelectComboBox);
-            this.splitContainer5.Panel1.Controls.Add(this.label106);
-            this.splitContainer5.Panel1.Controls.Add(this.label107);
-            // 
-            // splitContainer5.Panel2
-            // 
-            this.splitContainer5.Panel2.Controls.Add(this.OrderAddTrailerSelectComboBox);
-            this.splitContainer5.Panel2.Controls.Add(this.label104);
-            this.splitContainer5.Panel2.Controls.Add(this.OrderAddTrailerAddButton);
-            this.splitContainer5.Panel2.Controls.Add(this.OrderAddCubeSelectComboBox);
-            this.splitContainer5.Panel2.Controls.Add(this.OrderAddCubeAddButton);
-            this.splitContainer5.Panel2.Controls.Add(this.label105);
-            // 
-            // OrderAddFineForDelayAddButton
-            // 
-            resources.ApplyResources(this.OrderAddFineForDelayAddButton, "OrderAddFineForDelayAddButton");
-            this.OrderAddFineForDelayAddButton.Name = "OrderAddFineForDelayAddButton";
-            this.OrderAddFineForDelayAddButton.TabStop = false;
-            this.OrderAddFineForDelayAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddFineForDelayAddButton.Click += new System.EventHandler(this.OrderAddFineForDelayAddButton_Click);
-            // 
-            // OrderAddFineForDelaySelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddFineForDelaySelectComboBox, "OrderAddFineForDelaySelectComboBox");
-            this.OrderAddFineForDelaySelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddFineForDelaySelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddFineForDelaySelectComboBox.Name = "OrderAddFineForDelaySelectComboBox";
-            this.OrderAddFineForDelaySelectComboBox.Sorted = true;
-            this.OrderAddFineForDelaySelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddFineForDelaySelectComboBox_SelectedIndexChanged);
-            this.OrderAddFineForDelaySelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddFineForDelaySelectComboBox_TextUpdate);
-            this.OrderAddFineForDelaySelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddFineForDelaySelectComboBox_MouseClick);
-            // 
-            // OrderAddRegularyDelayAddButton
-            // 
-            resources.ApplyResources(this.OrderAddRegularyDelayAddButton, "OrderAddRegularyDelayAddButton");
-            this.OrderAddRegularyDelayAddButton.Name = "OrderAddRegularyDelayAddButton";
-            this.OrderAddRegularyDelayAddButton.TabStop = false;
-            this.OrderAddRegularyDelayAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddRegularyDelayAddButton.Click += new System.EventHandler(this.OrderAddRegularyDelayAddButton_Click);
-            // 
-            // OrderAddRegularyDelaySelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddRegularyDelaySelectComboBox, "OrderAddRegularyDelaySelectComboBox");
-            this.OrderAddRegularyDelaySelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddRegularyDelaySelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddRegularyDelaySelectComboBox.Name = "OrderAddRegularyDelaySelectComboBox";
-            this.OrderAddRegularyDelaySelectComboBox.Sorted = true;
-            this.OrderAddRegularyDelaySelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddRegularyDelaySelectComboBox_SelectedIndexChanged);
-            this.OrderAddRegularyDelaySelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddRegularyDelaySelectComboBox_TextUpdate);
-            this.OrderAddRegularyDelaySelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddRegularyDelaySelectComboBox_MouseClick);
-            // 
-            // label106
-            // 
-            resources.ApplyResources(this.label106, "label106");
-            this.label106.Name = "label106";
-            // 
-            // label107
-            // 
-            resources.ApplyResources(this.label107, "label107");
-            this.label107.Name = "label107";
-            // 
-            // OrderAddTrailerSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddTrailerSelectComboBox, "OrderAddTrailerSelectComboBox");
-            this.OrderAddTrailerSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddTrailerSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddTrailerSelectComboBox.Name = "OrderAddTrailerSelectComboBox";
-            this.OrderAddTrailerSelectComboBox.Sorted = true;
-            this.OrderAddTrailerSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddTrailerSelectComboBox_SelectedIndexChanged);
-            this.OrderAddTrailerSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddTrailerSelectComboBox_TextUpdate);
-            this.OrderAddTrailerSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddTrailerSelectComboBox_MouseClick);
-            // 
-            // label104
-            // 
-            resources.ApplyResources(this.label104, "label104");
-            this.label104.Name = "label104";
-            // 
-            // OrderAddTrailerAddButton
-            // 
-            resources.ApplyResources(this.OrderAddTrailerAddButton, "OrderAddTrailerAddButton");
-            this.OrderAddTrailerAddButton.Name = "OrderAddTrailerAddButton";
-            this.OrderAddTrailerAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddTrailerAddButton.Click += new System.EventHandler(this.OrderAddTrailerAddButton_Click);
-            // 
-            // OrderAddCubeSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddCubeSelectComboBox, "OrderAddCubeSelectComboBox");
-            this.OrderAddCubeSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddCubeSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddCubeSelectComboBox.Name = "OrderAddCubeSelectComboBox";
-            this.OrderAddCubeSelectComboBox.Sorted = true;
-            this.OrderAddCubeSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddCubeSelectComboBox_SelectedIndexChanged);
-            this.OrderAddCubeSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddCubeSelectComboBox_TextUpdate);
-            this.OrderAddCubeSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddCubeSelectComboBox_MouseClick);
-            // 
-            // OrderAddCubeAddButton
-            // 
-            resources.ApplyResources(this.OrderAddCubeAddButton, "OrderAddCubeAddButton");
-            this.OrderAddCubeAddButton.Name = "OrderAddCubeAddButton";
-            this.OrderAddCubeAddButton.TabStop = false;
-            this.OrderAddCubeAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddCubeAddButton.Click += new System.EventHandler(this.OrderAddCubeAddButton_Click);
-            // 
-            // label105
-            // 
-            resources.ApplyResources(this.label105, "label105");
-            this.label105.Name = "label105";
-            // 
-            // addOrderSplitContainer2
-            // 
-            resources.ApplyResources(this.addOrderSplitContainer2, "addOrderSplitContainer2");
-            this.addOrderSplitContainer2.Name = "addOrderSplitContainer2";
-            // 
-            // addOrderSplitContainer2.Panel1
-            // 
-            this.addOrderSplitContainer2.Panel1.Controls.Add(this.splitContainer8);
-            // 
-            // addOrderSplitContainer2.Panel2
-            // 
-            this.addOrderSplitContainer2.Panel2.Controls.Add(this.splitContainer7);
-            // 
-            // splitContainer8
-            // 
-            resources.ApplyResources(this.splitContainer8, "splitContainer8");
-            this.splitContainer8.Name = "splitContainer8";
-            // 
-            // splitContainer8.Panel1
-            // 
-            this.splitContainer8.Panel1.Controls.Add(this.label51);
-            this.splitContainer8.Panel1.Controls.Add(this.OrderAddDownloadDateToTimePicker);
-            this.splitContainer8.Panel1.Controls.Add(this.OrderAddDownloadAddressAddButton);
-            this.splitContainer8.Panel1.Controls.Add(this.OrderAddDownloadDateFromTimePicker);
-            this.splitContainer8.Panel1.Controls.Add(this.label90);
-            // 
-            // splitContainer8.Panel2
-            // 
-            this.splitContainer8.Panel2.Controls.Add(this.label66);
-            this.splitContainer8.Panel2.Controls.Add(this.OrderAddUploadDateToTimePicker);
-            this.splitContainer8.Panel2.Controls.Add(this.OrderAddUploadAddressAddButton);
-            this.splitContainer8.Panel2.Controls.Add(this.OrderAddUploadDateFromTimePicker);
-            this.splitContainer8.Panel2.Controls.Add(this.label92);
-            // 
-            // label51
-            // 
-            resources.ApplyResources(this.label51, "label51");
-            this.label51.Name = "label51";
-            // 
-            // OrderAddDownloadDateToTimePicker
-            // 
-            resources.ApplyResources(this.OrderAddDownloadDateToTimePicker, "OrderAddDownloadDateToTimePicker");
-            this.OrderAddDownloadDateToTimePicker.Checked = false;
-            this.OrderAddDownloadDateToTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.OrderAddDownloadDateToTimePicker.Name = "OrderAddDownloadDateToTimePicker";
-            this.OrderAddDownloadDateToTimePicker.ShowCheckBox = true;
-            // 
-            // OrderAddDownloadAddressAddButton
-            // 
-            resources.ApplyResources(this.OrderAddDownloadAddressAddButton, "OrderAddDownloadAddressAddButton");
-            this.OrderAddDownloadAddressAddButton.Name = "OrderAddDownloadAddressAddButton";
-            this.OrderAddDownloadAddressAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddDownloadAddressAddButton.Click += new System.EventHandler(this.OrderAddDownloadAddressAddButton_Click);
-            // 
-            // OrderAddDownloadDateFromTimePicker
-            // 
-            resources.ApplyResources(this.OrderAddDownloadDateFromTimePicker, "OrderAddDownloadDateFromTimePicker");
-            this.OrderAddDownloadDateFromTimePicker.Checked = false;
-            this.OrderAddDownloadDateFromTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.OrderAddDownloadDateFromTimePicker.Name = "OrderAddDownloadDateFromTimePicker";
-            this.OrderAddDownloadDateFromTimePicker.ShowCheckBox = true;
-            this.OrderAddDownloadDateFromTimePicker.ValueChanged += new System.EventHandler(this.OrderAddDownloadDateFromTimePicker_ValueChanged);
-            // 
-            // label90
-            // 
-            resources.ApplyResources(this.label90, "label90");
-            this.label90.Name = "label90";
-            // 
-            // label66
-            // 
-            resources.ApplyResources(this.label66, "label66");
-            this.label66.Name = "label66";
-            // 
-            // OrderAddUploadDateToTimePicker
-            // 
-            resources.ApplyResources(this.OrderAddUploadDateToTimePicker, "OrderAddUploadDateToTimePicker");
-            this.OrderAddUploadDateToTimePicker.Checked = false;
-            this.OrderAddUploadDateToTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.OrderAddUploadDateToTimePicker.Name = "OrderAddUploadDateToTimePicker";
-            this.OrderAddUploadDateToTimePicker.ShowCheckBox = true;
-            this.OrderAddUploadDateToTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
-            // 
-            // OrderAddUploadAddressAddButton
-            // 
-            resources.ApplyResources(this.OrderAddUploadAddressAddButton, "OrderAddUploadAddressAddButton");
-            this.OrderAddUploadAddressAddButton.Name = "OrderAddUploadAddressAddButton";
-            this.OrderAddUploadAddressAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddUploadAddressAddButton.Click += new System.EventHandler(this.OrderAddUploadAddressAddButton_Click);
-            // 
-            // OrderAddUploadDateFromTimePicker
-            // 
-            resources.ApplyResources(this.OrderAddUploadDateFromTimePicker, "OrderAddUploadDateFromTimePicker");
-            this.OrderAddUploadDateFromTimePicker.Checked = false;
-            this.OrderAddUploadDateFromTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.OrderAddUploadDateFromTimePicker.Name = "OrderAddUploadDateFromTimePicker";
-            this.OrderAddUploadDateFromTimePicker.ShowCheckBox = true;
-            this.OrderAddUploadDateFromTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
-            this.OrderAddUploadDateFromTimePicker.ValueChanged += new System.EventHandler(this.OrderAddUploadDateFromTimePicker_ValueChanged);
-            // 
-            // label92
-            // 
-            resources.ApplyResources(this.label92, "label92");
-            this.label92.Name = "label92";
-            // 
-            // splitContainer7
-            // 
-            resources.ApplyResources(this.splitContainer7, "splitContainer7");
-            this.splitContainer7.Name = "splitContainer7";
-            // 
-            // splitContainer7.Panel1
-            // 
-            this.splitContainer7.Panel1.Controls.Add(this.OrderAddTirCmrSelectComboBox);
-            this.splitContainer7.Panel1.Controls.Add(this.OrderAddTirCmrAddButton);
-            this.splitContainer7.Panel1.Controls.Add(this.OrderAddCustomsAddressAddButton);
-            this.splitContainer7.Panel1.Controls.Add(this.label79);
-            // 
-            // splitContainer7.Panel2
-            // 
-            this.splitContainer7.Panel2.Controls.Add(this.OrderAddStaffButton);
-            this.splitContainer7.Panel2.Controls.Add(this.OrderAddPersonalLabel);
-            this.splitContainer7.Panel2.Controls.Add(this.OrderAddStaffComboBox);
-            this.splitContainer7.Panel2.Controls.Add(this.OrderAddUncustomsAddressAddButton);
-            this.splitContainer7.Panel2.Controls.Add(this.OrderAddADRSelectComboBox);
-            this.splitContainer7.Panel2.Controls.Add(this.label89);
-            // 
-            // OrderAddTirCmrSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddTirCmrSelectComboBox, "OrderAddTirCmrSelectComboBox");
-            this.OrderAddTirCmrSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddTirCmrSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddTirCmrSelectComboBox.Name = "OrderAddTirCmrSelectComboBox";
-            this.OrderAddTirCmrSelectComboBox.Sorted = true;
-            this.OrderAddTirCmrSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddTirCmrSelectComboBox_SelectedIndexChanged);
-            this.OrderAddTirCmrSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddTirCmrSelectComboBox_TextUpdate);
-            this.OrderAddTirCmrSelectComboBox.Click += new System.EventHandler(this.OrderAddTirCmrSelectComboBox_Click);
-            // 
-            // OrderAddTirCmrAddButton
-            // 
-            resources.ApplyResources(this.OrderAddTirCmrAddButton, "OrderAddTirCmrAddButton");
-            this.OrderAddTirCmrAddButton.Name = "OrderAddTirCmrAddButton";
-            this.OrderAddTirCmrAddButton.TabStop = false;
-            this.OrderAddTirCmrAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddTirCmrAddButton.Click += new System.EventHandler(this.OrderAddTirCmrAddButton_Click);
-            // 
-            // OrderAddCustomsAddressAddButton
-            // 
-            resources.ApplyResources(this.OrderAddCustomsAddressAddButton, "OrderAddCustomsAddressAddButton");
-            this.OrderAddCustomsAddressAddButton.Name = "OrderAddCustomsAddressAddButton";
-            this.OrderAddCustomsAddressAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddCustomsAddressAddButton.Click += new System.EventHandler(this.OrderAddCustomsAddressAddButton_Click);
-            // 
-            // label79
-            // 
-            resources.ApplyResources(this.label79, "label79");
-            this.label79.Name = "label79";
-            // 
-            // OrderAddStaffButton
-            // 
-            resources.ApplyResources(this.OrderAddStaffButton, "OrderAddStaffButton");
-            this.OrderAddStaffButton.Name = "OrderAddStaffButton";
-            this.OrderAddStaffButton.TabStop = false;
-            this.OrderAddStaffButton.UseVisualStyleBackColor = true;
-            this.OrderAddStaffButton.Click += new System.EventHandler(this.OrderAddSatffAddButton_Click);
-            // 
-            // OrderAddPersonalLabel
-            // 
-            resources.ApplyResources(this.OrderAddPersonalLabel, "OrderAddPersonalLabel");
-            this.OrderAddPersonalLabel.Name = "OrderAddPersonalLabel";
-            // 
-            // OrderAddStaffComboBox
-            // 
-            resources.ApplyResources(this.OrderAddStaffComboBox, "OrderAddStaffComboBox");
-            this.OrderAddStaffComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddStaffComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddStaffComboBox.Items.AddRange(new object[] {
-            resources.GetString("OrderAddStaffComboBox.Items"),
-            resources.GetString("OrderAddStaffComboBox.Items1")});
-            this.OrderAddStaffComboBox.Name = "OrderAddStaffComboBox";
-            this.OrderAddStaffComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddStaffSelectComboBox_SelectedIndexChanged);
-            this.OrderAddStaffComboBox.TextUpdate += new System.EventHandler(this.OrderAddStaffSelectComboBox_TextUpdate);
-            this.OrderAddStaffComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddStaffSelectComboBox_MouseClick);
-            // 
-            // OrderAddUncustomsAddressAddButton
-            // 
-            resources.ApplyResources(this.OrderAddUncustomsAddressAddButton, "OrderAddUncustomsAddressAddButton");
-            this.OrderAddUncustomsAddressAddButton.Name = "OrderAddUncustomsAddressAddButton";
-            this.OrderAddUncustomsAddressAddButton.UseVisualStyleBackColor = true;
-            this.OrderAddUncustomsAddressAddButton.Click += new System.EventHandler(this.OrderAddUncustomsAddressAddButton_Click);
-            // 
-            // OrderAddADRSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddADRSelectComboBox, "OrderAddADRSelectComboBox");
-            this.OrderAddADRSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddADRSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddADRSelectComboBox.Items.AddRange(new object[] {
-            resources.GetString("OrderAddADRSelectComboBox.Items"),
-            resources.GetString("OrderAddADRSelectComboBox.Items1"),
-            resources.GetString("OrderAddADRSelectComboBox.Items2"),
-            resources.GetString("OrderAddADRSelectComboBox.Items3"),
-            resources.GetString("OrderAddADRSelectComboBox.Items4"),
-            resources.GetString("OrderAddADRSelectComboBox.Items5"),
-            resources.GetString("OrderAddADRSelectComboBox.Items6"),
-            resources.GetString("OrderAddADRSelectComboBox.Items7"),
-            resources.GetString("OrderAddADRSelectComboBox.Items8")});
-            this.OrderAddADRSelectComboBox.Name = "OrderAddADRSelectComboBox";
-            this.OrderAddADRSelectComboBox.Sorted = true;
-            this.OrderAddADRSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddADRSelectComboBox_MouseClick);
-            // 
-            // label89
-            // 
-            resources.ApplyResources(this.label89, "label89");
-            this.label89.Name = "label89";
-            // 
-            // addOrderSplitContainer1
-            // 
-            resources.ApplyResources(this.addOrderSplitContainer1, "addOrderSplitContainer1");
-            this.addOrderSplitContainer1.Name = "addOrderSplitContainer1";
-            // 
-            // addOrderSplitContainer1.Panel1
-            // 
-            this.addOrderSplitContainer1.Panel1.Controls.Add(this.label37);
-            this.addOrderSplitContainer1.Panel1.Controls.Add(this.OrderAddClientSelectComboBox);
-            this.addOrderSplitContainer1.Panel1.Controls.Add(this.OrderAddLanduageSelectComboBox);
-            this.addOrderSplitContainer1.Panel1.Controls.Add(this.OrderAddTransporterSelectComboBox);
-            this.addOrderSplitContainer1.Panel1.Controls.Add(this.label53);
-            this.addOrderSplitContainer1.Panel1.Controls.Add(this.label56);
-            this.addOrderSplitContainer1.Panel1.Controls.Add(this.label52);
-            this.addOrderSplitContainer1.Panel1.Controls.Add(this.label58);
-            this.addOrderSplitContainer1.Panel1.Controls.Add(this.OrderAddDateSelectDateTimePicker);
-            this.addOrderSplitContainer1.Panel1.Controls.Add(this.OrderAddClientDiapasoneComboBox);
-            this.addOrderSplitContainer1.Panel1.Controls.Add(this.OrderAddTransporterDiapasoneComboBox);
-            // 
-            // addOrderSplitContainer1.Panel2
-            // 
-            this.addOrderSplitContainer1.Panel2.Controls.Add(this.label39);
-            this.addOrderSplitContainer1.Panel2.Controls.Add(this.OrderAddForwarder3SelectComboBox);
-            this.addOrderSplitContainer1.Panel2.Controls.Add(this.label54);
-            this.addOrderSplitContainer1.Panel2.Controls.Add(this.label55);
-            this.addOrderSplitContainer1.Panel2.Controls.Add(this.OrderAddForwarder2SelectComboBox);
-            this.addOrderSplitContainer1.Panel2.Controls.Add(this.OrderAddForwarder1SelectComboBox);
-            // 
-            // label37
-            // 
-            resources.ApplyResources(this.label37, "label37");
-            this.label37.Name = "label37";
-            // 
-            // OrderAddClientSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddClientSelectComboBox, "OrderAddClientSelectComboBox");
-            this.OrderAddClientSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddClientSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddClientSelectComboBox.Name = "OrderAddClientSelectComboBox";
-            this.OrderAddClientSelectComboBox.Sorted = true;
-            this.OrderAddClientSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddClientSelectComboBox_SelectedIndexChanged);
-            this.OrderAddClientSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddClientSelectComboBox_TextUpdate);
-            this.OrderAddClientSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddClientSelectComboBox_MouseClick);
-            // 
-            // OrderAddLanduageSelectComboBox
-            // 
-            this.OrderAddLanduageSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddLanduageSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            resources.ApplyResources(this.OrderAddLanduageSelectComboBox, "OrderAddLanduageSelectComboBox");
-            this.OrderAddLanduageSelectComboBox.Items.AddRange(new object[] {
-            resources.GetString("OrderAddLanduageSelectComboBox.Items"),
-            resources.GetString("OrderAddLanduageSelectComboBox.Items1"),
-            resources.GetString("OrderAddLanduageSelectComboBox.Items2")});
-            this.OrderAddLanduageSelectComboBox.Name = "OrderAddLanduageSelectComboBox";
-            this.OrderAddLanduageSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddLanduageSelectComboBox_MouseClick);
-            // 
-            // OrderAddTransporterSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddTransporterSelectComboBox, "OrderAddTransporterSelectComboBox");
-            this.OrderAddTransporterSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddTransporterSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddTransporterSelectComboBox.Name = "OrderAddTransporterSelectComboBox";
-            this.OrderAddTransporterSelectComboBox.Sorted = true;
-            this.OrderAddTransporterSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddTransporterSelectComboBox_SelectedIndexChanged);
-            this.OrderAddTransporterSelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddTransporterSelectComboBox_TextUpdate);
-            this.OrderAddTransporterSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddTransporterSelectComboBox_MouseClick);
-            // 
-            // label53
-            // 
-            resources.ApplyResources(this.label53, "label53");
-            this.label53.Name = "label53";
-            // 
-            // label56
-            // 
-            resources.ApplyResources(this.label56, "label56");
-            this.label56.Name = "label56";
-            // 
-            // label52
-            // 
-            resources.ApplyResources(this.label52, "label52");
-            this.label52.Name = "label52";
-            // 
-            // label58
-            // 
-            resources.ApplyResources(this.label58, "label58");
-            this.label58.Name = "label58";
-            // 
-            // OrderAddDateSelectDateTimePicker
-            // 
-            this.OrderAddDateSelectDateTimePicker.Checked = false;
-            resources.ApplyResources(this.OrderAddDateSelectDateTimePicker, "OrderAddDateSelectDateTimePicker");
-            this.OrderAddDateSelectDateTimePicker.Name = "OrderAddDateSelectDateTimePicker";
-            // 
-            // OrderAddClientDiapasoneComboBox
-            // 
-            this.OrderAddClientDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddClientDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            resources.ApplyResources(this.OrderAddClientDiapasoneComboBox, "OrderAddClientDiapasoneComboBox");
-            this.OrderAddClientDiapasoneComboBox.Name = "OrderAddClientDiapasoneComboBox";
-            this.OrderAddClientDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddClientDiapasoneComboBox_MouseClick);
-            // 
-            // OrderAddTransporterDiapasoneComboBox
-            // 
-            this.OrderAddTransporterDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddTransporterDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            resources.ApplyResources(this.OrderAddTransporterDiapasoneComboBox, "OrderAddTransporterDiapasoneComboBox");
-            this.OrderAddTransporterDiapasoneComboBox.Name = "OrderAddTransporterDiapasoneComboBox";
-            this.OrderAddTransporterDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddTransporterDiapasoneComboBox_MouseClick);
-            // 
-            // label39
-            // 
-            resources.ApplyResources(this.label39, "label39");
-            this.label39.Name = "label39";
-            // 
-            // OrderAddForwarder3SelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddForwarder3SelectComboBox, "OrderAddForwarder3SelectComboBox");
-            this.OrderAddForwarder3SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddForwarder3SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddForwarder3SelectComboBox.Name = "OrderAddForwarder3SelectComboBox";
-            this.OrderAddForwarder3SelectComboBox.Sorted = true;
-            this.OrderAddForwarder3SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddForwarder3SelectComboBox_SelectedIndexChanged);
-            this.OrderAddForwarder3SelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddForwarder3SelectComboBox_TextUpdate);
-            this.OrderAddForwarder3SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddForwarder3SelectComboBox_MouseClick);
-            // 
-            // label54
-            // 
-            resources.ApplyResources(this.label54, "label54");
-            this.label54.Name = "label54";
-            // 
-            // label55
-            // 
-            resources.ApplyResources(this.label55, "label55");
-            this.label55.Name = "label55";
-            // 
-            // OrderAddForwarder2SelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddForwarder2SelectComboBox, "OrderAddForwarder2SelectComboBox");
-            this.OrderAddForwarder2SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddForwarder2SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddForwarder2SelectComboBox.Name = "OrderAddForwarder2SelectComboBox";
-            this.OrderAddForwarder2SelectComboBox.Sorted = true;
-            this.OrderAddForwarder2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddForwarder2SelectComboBox_SelectedIndexChanged);
-            this.OrderAddForwarder2SelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddForwarder2SelectComboBox_TextUpdate);
-            this.OrderAddForwarder2SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddForwarder2SelectComboBox_MouseClick);
-            // 
-            // OrderAddForwarder1SelectComboBox
-            // 
-            resources.ApplyResources(this.OrderAddForwarder1SelectComboBox, "OrderAddForwarder1SelectComboBox");
-            this.OrderAddForwarder1SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderAddForwarder1SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderAddForwarder1SelectComboBox.Name = "OrderAddForwarder1SelectComboBox";
-            this.OrderAddForwarder1SelectComboBox.Sorted = true;
-            this.OrderAddForwarder1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderAddForwarder1SelectComboBox_SelectedIndexChanged);
-            this.OrderAddForwarder1SelectComboBox.TextUpdate += new System.EventHandler(this.OrderAddForwarder1SelectComboBox_TextUpdate);
-            this.OrderAddForwarder1SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddForwarder1SelectComboBox_MouseClick);
-            // 
             // showTrackingPage
             // 
+            resources.ApplyResources(this.showTrackingPage, "showTrackingPage");
             this.showTrackingPage.BackColor = System.Drawing.Color.AliceBlue;
             this.showTrackingPage.Controls.Add(this.trackingShowDeleteOrderButton);
             this.showTrackingPage.Controls.Add(this.exportTrackingToExcelButton);
@@ -3792,7 +4856,6 @@
             this.showTrackingPage.Controls.Add(this.trackingShowSearchButton);
             this.showTrackingPage.Controls.Add(this.trackingShowSearchTextBox);
             this.showTrackingPage.Controls.Add(this.trackingShowDataGridView);
-            resources.ApplyResources(this.showTrackingPage, "showTrackingPage");
             this.showTrackingPage.Name = "showTrackingPage";
             // 
             // trackingShowDeleteOrderButton
@@ -3819,43 +4882,6 @@
             this.trackingShowForwardersDataGridView.Name = "trackingShowForwardersDataGridView";
             this.trackingShowForwardersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.trackingShowForwardersDataGridView.TabStop = false;
-            // 
-            // showTrackingSplitContainer1
-            // 
-            resources.ApplyResources(this.showTrackingSplitContainer1, "showTrackingSplitContainer1");
-            this.showTrackingSplitContainer1.Name = "showTrackingSplitContainer1";
-            // 
-            // showTrackingSplitContainer1.Panel1
-            // 
-            this.showTrackingSplitContainer1.Panel1.Controls.Add(this.trackingShowDownloadAddressDataGridView);
-            // 
-            // showTrackingSplitContainer1.Panel2
-            // 
-            this.showTrackingSplitContainer1.Panel2.Controls.Add(this.trackingShowUploadAddressDataGridView);
-            // 
-            // trackingShowDownloadAddressDataGridView
-            // 
-            this.trackingShowDownloadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.trackingShowDownloadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.trackingShowDownloadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.trackingShowDownloadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.trackingShowDownloadAddressDataGridView, "trackingShowDownloadAddressDataGridView");
-            this.trackingShowDownloadAddressDataGridView.MultiSelect = false;
-            this.trackingShowDownloadAddressDataGridView.Name = "trackingShowDownloadAddressDataGridView";
-            this.trackingShowDownloadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.trackingShowDownloadAddressDataGridView.TabStop = false;
-            // 
-            // trackingShowUploadAddressDataGridView
-            // 
-            this.trackingShowUploadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.trackingShowUploadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.trackingShowUploadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.trackingShowUploadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.trackingShowUploadAddressDataGridView, "trackingShowUploadAddressDataGridView");
-            this.trackingShowUploadAddressDataGridView.MultiSelect = false;
-            this.trackingShowUploadAddressDataGridView.Name = "trackingShowUploadAddressDataGridView";
-            this.trackingShowUploadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.trackingShowUploadAddressDataGridView.TabStop = false;
             // 
             // trackingShowAddNoteRichTextBox
             // 
@@ -3999,6 +5025,7 @@
             // 
             // updateOrderPage
             // 
+            resources.ApplyResources(this.updateOrderPage, "updateOrderPage");
             this.updateOrderPage.BackColor = System.Drawing.Color.AliceBlue;
             this.updateOrderPage.Controls.Add(this.OrderUpdateShowNoActiveCheckBox);
             this.updateOrderPage.Controls.Add(this.OrderUpdateDiapasoneDateTimePicker);
@@ -4011,7 +5038,6 @@
             this.updateOrderPage.Controls.Add(this.OrderUpdateSplitContainer2);
             this.updateOrderPage.Controls.Add(this.OrderUpdateSplitContainer5);
             this.updateOrderPage.Controls.Add(this.OrderUpdateSplitContainer8);
-            resources.ApplyResources(this.updateOrderPage, "updateOrderPage");
             this.updateOrderPage.Name = "updateOrderPage";
             // 
             // OrderUpdateShowNoActiveCheckBox
@@ -4060,715 +5086,9 @@
             resources.ApplyResources(this.OrderUpdateLabel25, "OrderUpdateLabel25");
             this.OrderUpdateLabel25.Name = "OrderUpdateLabel25";
             // 
-            // OrderUpdateSplitContainer1
-            // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer1, "OrderUpdateSplitContainer1");
-            this.OrderUpdateSplitContainer1.Name = "OrderUpdateSplitContainer1";
-            // 
-            // OrderUpdateSplitContainer1.Panel1
-            // 
-            this.OrderUpdateSplitContainer1.Panel1.Controls.Add(this.OrderUpdateAdditionalTermsAddButton);
-            this.OrderUpdateSplitContainer1.Panel1.Controls.Add(this.OrderUpdatePaymentTermsAddButton);
-            this.OrderUpdateSplitContainer1.Panel1.Controls.Add(this.OrderUpdateAdditionalTermsSelectComboBox);
-            this.OrderUpdateSplitContainer1.Panel1.Controls.Add(this.OrderUpdateLabel1);
-            this.OrderUpdateSplitContainer1.Panel1.Controls.Add(this.OrderUpdatePaymentTermsSelectComboBox);
-            this.OrderUpdateSplitContainer1.Panel1.Controls.Add(this.OrderUpdateLabel2);
-            // 
-            // OrderUpdateSplitContainer1.Panel2
-            // 
-            this.OrderUpdateSplitContainer1.Panel2.Controls.Add(this.OrderUpdateButton);
-            this.OrderUpdateSplitContainer1.Panel2.Controls.Add(this.OrderUpdateOrderDenyAddButton);
-            this.OrderUpdateSplitContainer1.Panel2.Controls.Add(this.OrderUpdateLabel3);
-            this.OrderUpdateSplitContainer1.Panel2.Controls.Add(this.OrderUpdateDenyFineSelectComboBox);
-            // 
-            // OrderUpdateAdditionalTermsAddButton
-            // 
-            resources.ApplyResources(this.OrderUpdateAdditionalTermsAddButton, "OrderUpdateAdditionalTermsAddButton");
-            this.OrderUpdateAdditionalTermsAddButton.Name = "OrderUpdateAdditionalTermsAddButton";
-            this.OrderUpdateAdditionalTermsAddButton.TabStop = false;
-            this.OrderUpdateAdditionalTermsAddButton.UseVisualStyleBackColor = true;
-            this.OrderUpdateAdditionalTermsAddButton.Click += new System.EventHandler(this.OrderUpdateAdditionalTermsAddButton_Click);
-            // 
-            // OrderUpdatePaymentTermsAddButton
-            // 
-            resources.ApplyResources(this.OrderUpdatePaymentTermsAddButton, "OrderUpdatePaymentTermsAddButton");
-            this.OrderUpdatePaymentTermsAddButton.Name = "OrderUpdatePaymentTermsAddButton";
-            this.OrderUpdatePaymentTermsAddButton.TabStop = false;
-            this.OrderUpdatePaymentTermsAddButton.UseVisualStyleBackColor = true;
-            this.OrderUpdatePaymentTermsAddButton.Click += new System.EventHandler(this.OrderUpdatePaymentTermsAddButton_Click);
-            // 
-            // OrderUpdateAdditionalTermsSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateAdditionalTermsSelectComboBox, "OrderUpdateAdditionalTermsSelectComboBox");
-            this.OrderUpdateAdditionalTermsSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateAdditionalTermsSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateAdditionalTermsSelectComboBox.Name = "OrderUpdateAdditionalTermsSelectComboBox";
-            this.OrderUpdateAdditionalTermsSelectComboBox.Sorted = true;
-            this.OrderUpdateAdditionalTermsSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateAdditionalTermsSelectComboBox_SelectedIndexChanged);
-            this.OrderUpdateAdditionalTermsSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateAdditionalTermsSelectComboBox_TextUpdate);
-            this.OrderUpdateAdditionalTermsSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateAdditionalTermsSelectComboBox_MouseClick);
-            // 
-            // OrderUpdateLabel1
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel1, "OrderUpdateLabel1");
-            this.OrderUpdateLabel1.Name = "OrderUpdateLabel1";
-            // 
-            // OrderUpdatePaymentTermsSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdatePaymentTermsSelectComboBox, "OrderUpdatePaymentTermsSelectComboBox");
-            this.OrderUpdatePaymentTermsSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdatePaymentTermsSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdatePaymentTermsSelectComboBox.Name = "OrderUpdatePaymentTermsSelectComboBox";
-            this.OrderUpdatePaymentTermsSelectComboBox.Sorted = true;
-            this.OrderUpdatePaymentTermsSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdatePaymentTermsSelectComboBox_SelectedIndexChanged);
-            this.OrderUpdatePaymentTermsSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdatePaymentTermsSelectComboBox_TextUpdate);
-            this.OrderUpdatePaymentTermsSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdatePaymentTermsSelectComboBox_MouseClick);
-            // 
-            // OrderUpdateLabel2
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel2, "OrderUpdateLabel2");
-            this.OrderUpdateLabel2.Name = "OrderUpdateLabel2";
-            // 
-            // OrderUpdateButton
-            // 
-            resources.ApplyResources(this.OrderUpdateButton, "OrderUpdateButton");
-            this.OrderUpdateButton.Name = "OrderUpdateButton";
-            this.OrderUpdateButton.UseVisualStyleBackColor = true;
-            this.OrderUpdateButton.Click += new System.EventHandler(this.OrderUpdateButton_Click);
-            // 
-            // OrderUpdateOrderDenyAddButton
-            // 
-            resources.ApplyResources(this.OrderUpdateOrderDenyAddButton, "OrderUpdateOrderDenyAddButton");
-            this.OrderUpdateOrderDenyAddButton.Name = "OrderUpdateOrderDenyAddButton";
-            this.OrderUpdateOrderDenyAddButton.TabStop = false;
-            this.OrderUpdateOrderDenyAddButton.UseVisualStyleBackColor = true;
-            this.OrderUpdateOrderDenyAddButton.Click += new System.EventHandler(this.OrderUpdateOrderDenyAddButton_Click);
-            // 
-            // OrderUpdateLabel3
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel3, "OrderUpdateLabel3");
-            this.OrderUpdateLabel3.Name = "OrderUpdateLabel3";
-            // 
-            // OrderUpdateDenyFineSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateDenyFineSelectComboBox, "OrderUpdateDenyFineSelectComboBox");
-            this.OrderUpdateDenyFineSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateDenyFineSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateDenyFineSelectComboBox.Name = "OrderUpdateDenyFineSelectComboBox";
-            this.OrderUpdateDenyFineSelectComboBox.Sorted = true;
-            this.OrderUpdateDenyFineSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateDenyFineSelectComboBox_SelectedIndexChanged);
-            this.OrderUpdateDenyFineSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateDenyFineSelectComboBox_TextUpdate);
-            this.OrderUpdateDenyFineSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateDenyFineSelectComboBox_MouseClick);
-            // 
-            // OrderUpdateSplitContainer2
-            // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer2, "OrderUpdateSplitContainer2");
-            this.OrderUpdateSplitContainer2.Name = "OrderUpdateSplitContainer2";
-            // 
-            // OrderUpdateSplitContainer2.Panel1
-            // 
-            this.OrderUpdateSplitContainer2.Panel1.Controls.Add(this.OrderUpdateSplitContainer3);
-            // 
-            // OrderUpdateSplitContainer2.Panel2
-            // 
-            this.OrderUpdateSplitContainer2.Panel2.Controls.Add(this.OrderUpdateSplitContainer4);
-            // 
-            // OrderUpdateSplitContainer3
-            // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer3, "OrderUpdateSplitContainer3");
-            this.OrderUpdateSplitContainer3.Name = "OrderUpdateSplitContainer3";
-            // 
-            // OrderUpdateSplitContainer3.Panel1
-            // 
-            this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateWeightTextBox);
-            this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateCargoSelectComboBox);
-            this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateLabel5);
-            this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateCargoAddButton);
-            this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateLabel4);
-            // 
-            // OrderUpdateSplitContainer3.Panel2
-            // 
-            this.OrderUpdateSplitContainer3.Panel2.Controls.Add(this.OrderUpdateLoadingForm2AddButton);
-            this.OrderUpdateSplitContainer3.Panel2.Controls.Add(this.OrderUpdateLoadingForm1AddButton);
-            this.OrderUpdateSplitContainer3.Panel2.Controls.Add(this.OrderUpdateLoadingForm2SelectComboBox);
-            this.OrderUpdateSplitContainer3.Panel2.Controls.Add(this.OrderUpdateLabel6);
-            this.OrderUpdateSplitContainer3.Panel2.Controls.Add(this.OrderUpdateLoadingForm1SelectComboBox);
-            this.OrderUpdateSplitContainer3.Panel2.Controls.Add(this.OrderUpdateLabel7);
-            // 
-            // OrderUpdateWeightTextBox
-            // 
-            resources.ApplyResources(this.OrderUpdateWeightTextBox, "OrderUpdateWeightTextBox");
-            this.OrderUpdateWeightTextBox.Name = "OrderUpdateWeightTextBox";
-            this.OrderUpdateWeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OrderUpdateWeightTextBox_KeyPress);
-            // 
-            // OrderUpdateCargoSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateCargoSelectComboBox, "OrderUpdateCargoSelectComboBox");
-            this.OrderUpdateCargoSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateCargoSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateCargoSelectComboBox.Name = "OrderUpdateCargoSelectComboBox";
-            this.OrderUpdateCargoSelectComboBox.Sorted = true;
-            this.OrderUpdateCargoSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateCargoSelectComboBox_SelectedIndexChanged);
-            this.OrderUpdateCargoSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateCargoSelectComboBox_TextUpdate);
-            this.OrderUpdateCargoSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateCargoSelectComboBox_MouseClick);
-            // 
-            // OrderUpdateLabel5
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel5, "OrderUpdateLabel5");
-            this.OrderUpdateLabel5.Name = "OrderUpdateLabel5";
-            // 
-            // OrderUpdateCargoAddButton
-            // 
-            resources.ApplyResources(this.OrderUpdateCargoAddButton, "OrderUpdateCargoAddButton");
-            this.OrderUpdateCargoAddButton.Name = "OrderUpdateCargoAddButton";
-            this.OrderUpdateCargoAddButton.TabStop = false;
-            this.OrderUpdateCargoAddButton.UseVisualStyleBackColor = true;
-            this.OrderUpdateCargoAddButton.Click += new System.EventHandler(this.OrderUpdateCargoAddButton_Click);
-            // 
-            // OrderUpdateLabel4
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel4, "OrderUpdateLabel4");
-            this.OrderUpdateLabel4.Name = "OrderUpdateLabel4";
-            // 
-            // OrderUpdateLoadingForm2AddButton
-            // 
-            resources.ApplyResources(this.OrderUpdateLoadingForm2AddButton, "OrderUpdateLoadingForm2AddButton");
-            this.OrderUpdateLoadingForm2AddButton.Name = "OrderUpdateLoadingForm2AddButton";
-            this.OrderUpdateLoadingForm2AddButton.TabStop = false;
-            this.OrderUpdateLoadingForm2AddButton.UseVisualStyleBackColor = true;
-            this.OrderUpdateLoadingForm2AddButton.Click += new System.EventHandler(this.OrderUpdateLoadingForm1AddButton_Click);
-            // 
-            // OrderUpdateLoadingForm1AddButton
-            // 
-            resources.ApplyResources(this.OrderUpdateLoadingForm1AddButton, "OrderUpdateLoadingForm1AddButton");
-            this.OrderUpdateLoadingForm1AddButton.Name = "OrderUpdateLoadingForm1AddButton";
-            this.OrderUpdateLoadingForm1AddButton.TabStop = false;
-            this.OrderUpdateLoadingForm1AddButton.UseVisualStyleBackColor = true;
-            this.OrderUpdateLoadingForm1AddButton.Click += new System.EventHandler(this.OrderUpdateLoadingForm1AddButton_Click);
-            // 
-            // OrderUpdateLoadingForm2SelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateLoadingForm2SelectComboBox, "OrderUpdateLoadingForm2SelectComboBox");
-            this.OrderUpdateLoadingForm2SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateLoadingForm2SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateLoadingForm2SelectComboBox.Name = "OrderUpdateLoadingForm2SelectComboBox";
-            this.OrderUpdateLoadingForm2SelectComboBox.Sorted = true;
-            this.OrderUpdateLoadingForm2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateLoadingForm2SelectComboBox_SelectedIndexChanged);
-            this.OrderUpdateLoadingForm2SelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateLoadingForm2SelectComboBox_TextUpdate);
-            this.OrderUpdateLoadingForm2SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateLoadingForm2SelectComboBox_MouseClick);
-            // 
-            // OrderUpdateLabel6
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel6, "OrderUpdateLabel6");
-            this.OrderUpdateLabel6.Name = "OrderUpdateLabel6";
-            // 
-            // OrderUpdateLoadingForm1SelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateLoadingForm1SelectComboBox, "OrderUpdateLoadingForm1SelectComboBox");
-            this.OrderUpdateLoadingForm1SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateLoadingForm1SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateLoadingForm1SelectComboBox.Name = "OrderUpdateLoadingForm1SelectComboBox";
-            this.OrderUpdateLoadingForm1SelectComboBox.Sorted = true;
-            this.OrderUpdateLoadingForm1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateLoadingForm1SelectComboBox_SelectedIndexChanged);
-            this.OrderUpdateLoadingForm1SelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateLoadingForm1SelectComboBox_TextUpdate);
-            this.OrderUpdateLoadingForm1SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateLoadingForm1SelectComboBox_MouseClick);
-            // 
-            // OrderUpdateLabel7
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel7, "OrderUpdateLabel7");
-            this.OrderUpdateLabel7.Name = "OrderUpdateLabel7";
-            // 
-            // OrderUpdateSplitContainer4
-            // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer4, "OrderUpdateSplitContainer4");
-            this.OrderUpdateSplitContainer4.Name = "OrderUpdateSplitContainer4";
-            // 
-            // OrderUpdateSplitContainer4.Panel1
-            // 
-            this.OrderUpdateSplitContainer4.Panel1.Controls.Add(this.OrderUpdateFineForDelayAddButton);
-            this.OrderUpdateSplitContainer4.Panel1.Controls.Add(this.OrderUpdateFineForDelaySelectComboBox);
-            this.OrderUpdateSplitContainer4.Panel1.Controls.Add(this.OrderUpdateRegularyDelayAddButton);
-            this.OrderUpdateSplitContainer4.Panel1.Controls.Add(this.OrderUpdateLabel8);
-            this.OrderUpdateSplitContainer4.Panel1.Controls.Add(this.OrderUpdateRegularyDelaySelectComboBox);
-            this.OrderUpdateSplitContainer4.Panel1.Controls.Add(this.OrderUpdateLabel9);
-            // 
-            // OrderUpdateSplitContainer4.Panel2
-            // 
-            this.OrderUpdateSplitContainer4.Panel2.Controls.Add(this.OrderUpdateTrailerSelectComboBox);
-            this.OrderUpdateSplitContainer4.Panel2.Controls.Add(this.OrderUpdateLabel10);
-            this.OrderUpdateSplitContainer4.Panel2.Controls.Add(this.OrderUpdateTrailerAddButton);
-            this.OrderUpdateSplitContainer4.Panel2.Controls.Add(this.OrderUpdateCubeSelectComboBox);
-            this.OrderUpdateSplitContainer4.Panel2.Controls.Add(this.OrderUpdateLabel11);
-            this.OrderUpdateSplitContainer4.Panel2.Controls.Add(this.OrderUpdateCubeAddButton);
-            // 
-            // OrderUpdateFineForDelayAddButton
-            // 
-            resources.ApplyResources(this.OrderUpdateFineForDelayAddButton, "OrderUpdateFineForDelayAddButton");
-            this.OrderUpdateFineForDelayAddButton.Name = "OrderUpdateFineForDelayAddButton";
-            this.OrderUpdateFineForDelayAddButton.TabStop = false;
-            this.OrderUpdateFineForDelayAddButton.UseVisualStyleBackColor = true;
-            this.OrderUpdateFineForDelayAddButton.Click += new System.EventHandler(this.OrderUpdateFineForDelayAddButton_Click);
-            // 
-            // OrderUpdateFineForDelaySelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateFineForDelaySelectComboBox, "OrderUpdateFineForDelaySelectComboBox");
-            this.OrderUpdateFineForDelaySelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateFineForDelaySelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateFineForDelaySelectComboBox.Name = "OrderUpdateFineForDelaySelectComboBox";
-            this.OrderUpdateFineForDelaySelectComboBox.Sorted = true;
-            this.OrderUpdateFineForDelaySelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateFineForDelaySelectComboBox_SelectedIndexChanged);
-            this.OrderUpdateFineForDelaySelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateFineForDelaySelectComboBox_TextUpdate);
-            this.OrderUpdateFineForDelaySelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateFineForDelaySelectComboBox_MouseClick);
-            // 
-            // OrderUpdateRegularyDelayAddButton
-            // 
-            resources.ApplyResources(this.OrderUpdateRegularyDelayAddButton, "OrderUpdateRegularyDelayAddButton");
-            this.OrderUpdateRegularyDelayAddButton.Name = "OrderUpdateRegularyDelayAddButton";
-            this.OrderUpdateRegularyDelayAddButton.TabStop = false;
-            this.OrderUpdateRegularyDelayAddButton.UseVisualStyleBackColor = true;
-            this.OrderUpdateRegularyDelayAddButton.Click += new System.EventHandler(this.OrderUpdateRegularyDelayAddButton_Click);
-            // 
-            // OrderUpdateLabel8
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel8, "OrderUpdateLabel8");
-            this.OrderUpdateLabel8.Name = "OrderUpdateLabel8";
-            // 
-            // OrderUpdateRegularyDelaySelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateRegularyDelaySelectComboBox, "OrderUpdateRegularyDelaySelectComboBox");
-            this.OrderUpdateRegularyDelaySelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateRegularyDelaySelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateRegularyDelaySelectComboBox.Name = "OrderUpdateRegularyDelaySelectComboBox";
-            this.OrderUpdateRegularyDelaySelectComboBox.Sorted = true;
-            this.OrderUpdateRegularyDelaySelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateRegularyDelaySelectComboBox_SelectedIndexChanged);
-            this.OrderUpdateRegularyDelaySelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateRegularyDelaySelectComboBox_TextUpdate);
-            this.OrderUpdateRegularyDelaySelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateRegularyDelaySelectComboBox_MouseClick);
-            // 
-            // OrderUpdateLabel9
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel9, "OrderUpdateLabel9");
-            this.OrderUpdateLabel9.Name = "OrderUpdateLabel9";
-            // 
-            // OrderUpdateTrailerSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateTrailerSelectComboBox, "OrderUpdateTrailerSelectComboBox");
-            this.OrderUpdateTrailerSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateTrailerSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateTrailerSelectComboBox.Name = "OrderUpdateTrailerSelectComboBox";
-            this.OrderUpdateTrailerSelectComboBox.Sorted = true;
-            this.OrderUpdateTrailerSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateTrailerSelectComboBox_SelectedIndexChanged);
-            this.OrderUpdateTrailerSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateTrailerSelectComboBox_TextUpdate);
-            this.OrderUpdateTrailerSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateTrailerSelectComboBox_MouseClick);
-            // 
-            // OrderUpdateLabel10
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel10, "OrderUpdateLabel10");
-            this.OrderUpdateLabel10.Name = "OrderUpdateLabel10";
-            // 
-            // OrderUpdateTrailerAddButton
-            // 
-            resources.ApplyResources(this.OrderUpdateTrailerAddButton, "OrderUpdateTrailerAddButton");
-            this.OrderUpdateTrailerAddButton.Name = "OrderUpdateTrailerAddButton";
-            this.OrderUpdateTrailerAddButton.UseVisualStyleBackColor = true;
-            this.OrderUpdateTrailerAddButton.Click += new System.EventHandler(this.OrderUpdateTrailerAddButton_Click);
-            // 
-            // OrderUpdateCubeSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateCubeSelectComboBox, "OrderUpdateCubeSelectComboBox");
-            this.OrderUpdateCubeSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateCubeSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateCubeSelectComboBox.Name = "OrderUpdateCubeSelectComboBox";
-            this.OrderUpdateCubeSelectComboBox.Sorted = true;
-            this.OrderUpdateCubeSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateCubeSelectComboBox_SelectedIndexChanged);
-            this.OrderUpdateCubeSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateCubeSelectComboBox_TextUpdate);
-            this.OrderUpdateCubeSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateCubeSelectComboBox_MouseClick);
-            // 
-            // OrderUpdateLabel11
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel11, "OrderUpdateLabel11");
-            this.OrderUpdateLabel11.Name = "OrderUpdateLabel11";
-            // 
-            // OrderUpdateCubeAddButton
-            // 
-            resources.ApplyResources(this.OrderUpdateCubeAddButton, "OrderUpdateCubeAddButton");
-            this.OrderUpdateCubeAddButton.Name = "OrderUpdateCubeAddButton";
-            this.OrderUpdateCubeAddButton.TabStop = false;
-            this.OrderUpdateCubeAddButton.UseVisualStyleBackColor = true;
-            this.OrderUpdateCubeAddButton.Click += new System.EventHandler(this.OrderUpdateCubeAddButton_Click);
-            // 
-            // OrderUpdateSplitContainer5
-            // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer5, "OrderUpdateSplitContainer5");
-            this.OrderUpdateSplitContainer5.Name = "OrderUpdateSplitContainer5";
-            // 
-            // OrderUpdateSplitContainer5.Panel1
-            // 
-            this.OrderUpdateSplitContainer5.Panel1.Controls.Add(this.OrderUpdateSplitContainer6);
-            // 
-            // OrderUpdateSplitContainer5.Panel2
-            // 
-            this.OrderUpdateSplitContainer5.Panel2.Controls.Add(this.OrderUpdateSplitContainer7);
-            // 
-            // OrderUpdateSplitContainer6
-            // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer6, "OrderUpdateSplitContainer6");
-            this.OrderUpdateSplitContainer6.Name = "OrderUpdateSplitContainer6";
-            // 
-            // OrderUpdateSplitContainer6.Panel1
-            // 
-            this.OrderUpdateSplitContainer6.Panel1.Controls.Add(this.OrderUpdateDownloadDateFromTimePicker);
-            this.OrderUpdateSplitContainer6.Panel1.Controls.Add(this.OrderUpdateDownloadDateToTimePicker);
-            this.OrderUpdateSplitContainer6.Panel1.Controls.Add(this.label67);
-            this.OrderUpdateSplitContainer6.Panel1.Controls.Add(this.OrderUpdateDownloadAddressesButton);
-            this.OrderUpdateSplitContainer6.Panel1.Controls.Add(this.OrderUpdateLabel12);
-            // 
-            // OrderUpdateSplitContainer6.Panel2
-            // 
-            this.OrderUpdateSplitContainer6.Panel2.Controls.Add(this.OrderUpdateUploadDateToTimePicker);
-            this.OrderUpdateSplitContainer6.Panel2.Controls.Add(this.OrderUpdateLabel13);
-            this.OrderUpdateSplitContainer6.Panel2.Controls.Add(this.OrderUpdateUploadAddressesButton);
-            this.OrderUpdateSplitContainer6.Panel2.Controls.Add(this.OrderUpdateUploadDateFromTimePicker);
-            this.OrderUpdateSplitContainer6.Panel2.Controls.Add(this.label69);
-            // 
-            // OrderUpdateDownloadDateFromTimePicker
-            // 
-            resources.ApplyResources(this.OrderUpdateDownloadDateFromTimePicker, "OrderUpdateDownloadDateFromTimePicker");
-            this.OrderUpdateDownloadDateFromTimePicker.Checked = false;
-            this.OrderUpdateDownloadDateFromTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.OrderUpdateDownloadDateFromTimePicker.Name = "OrderUpdateDownloadDateFromTimePicker";
-            this.OrderUpdateDownloadDateFromTimePicker.ShowCheckBox = true;
-            // 
-            // OrderUpdateDownloadDateToTimePicker
-            // 
-            resources.ApplyResources(this.OrderUpdateDownloadDateToTimePicker, "OrderUpdateDownloadDateToTimePicker");
-            this.OrderUpdateDownloadDateToTimePicker.Checked = false;
-            this.OrderUpdateDownloadDateToTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.OrderUpdateDownloadDateToTimePicker.Name = "OrderUpdateDownloadDateToTimePicker";
-            this.OrderUpdateDownloadDateToTimePicker.ShowCheckBox = true;
-            // 
-            // label67
-            // 
-            resources.ApplyResources(this.label67, "label67");
-            this.label67.Name = "label67";
-            // 
-            // OrderUpdateDownloadAddressesButton
-            // 
-            resources.ApplyResources(this.OrderUpdateDownloadAddressesButton, "OrderUpdateDownloadAddressesButton");
-            this.OrderUpdateDownloadAddressesButton.Name = "OrderUpdateDownloadAddressesButton";
-            this.OrderUpdateDownloadAddressesButton.UseVisualStyleBackColor = true;
-            this.OrderUpdateDownloadAddressesButton.Click += new System.EventHandler(this.OrderUpdateDownloadAddressesButton_Click);
-            // 
-            // OrderUpdateLabel12
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel12, "OrderUpdateLabel12");
-            this.OrderUpdateLabel12.Name = "OrderUpdateLabel12";
-            // 
-            // OrderUpdateUploadDateToTimePicker
-            // 
-            resources.ApplyResources(this.OrderUpdateUploadDateToTimePicker, "OrderUpdateUploadDateToTimePicker");
-            this.OrderUpdateUploadDateToTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.OrderUpdateUploadDateToTimePicker.Checked = false;
-            this.OrderUpdateUploadDateToTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.OrderUpdateUploadDateToTimePicker.Name = "OrderUpdateUploadDateToTimePicker";
-            this.OrderUpdateUploadDateToTimePicker.ShowCheckBox = true;
-            this.OrderUpdateUploadDateToTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
-            // 
-            // OrderUpdateLabel13
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel13, "OrderUpdateLabel13");
-            this.OrderUpdateLabel13.Name = "OrderUpdateLabel13";
-            // 
-            // OrderUpdateUploadAddressesButton
-            // 
-            resources.ApplyResources(this.OrderUpdateUploadAddressesButton, "OrderUpdateUploadAddressesButton");
-            this.OrderUpdateUploadAddressesButton.Name = "OrderUpdateUploadAddressesButton";
-            this.OrderUpdateUploadAddressesButton.UseVisualStyleBackColor = true;
-            this.OrderUpdateUploadAddressesButton.Click += new System.EventHandler(this.OrderUpdateUploadAddressesButton_Click);
-            // 
-            // OrderUpdateUploadDateFromTimePicker
-            // 
-            resources.ApplyResources(this.OrderUpdateUploadDateFromTimePicker, "OrderUpdateUploadDateFromTimePicker");
-            this.OrderUpdateUploadDateFromTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.OrderUpdateUploadDateFromTimePicker.Checked = false;
-            this.OrderUpdateUploadDateFromTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.OrderUpdateUploadDateFromTimePicker.Name = "OrderUpdateUploadDateFromTimePicker";
-            this.OrderUpdateUploadDateFromTimePicker.ShowCheckBox = true;
-            this.OrderUpdateUploadDateFromTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
-            // 
-            // label69
-            // 
-            resources.ApplyResources(this.label69, "label69");
-            this.label69.Name = "label69";
-            // 
-            // OrderUpdateSplitContainer7
-            // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer7, "OrderUpdateSplitContainer7");
-            this.OrderUpdateSplitContainer7.Name = "OrderUpdateSplitContainer7";
-            // 
-            // OrderUpdateSplitContainer7.Panel1
-            // 
-            this.OrderUpdateSplitContainer7.Panel1.Controls.Add(this.OrderUpdateTirCmrSelectComboBox);
-            this.OrderUpdateSplitContainer7.Panel1.Controls.Add(this.OrderUpdateTirCmrAddButton);
-            this.OrderUpdateSplitContainer7.Panel1.Controls.Add(this.OrderUpdateCustumsAddressesButton);
-            this.OrderUpdateSplitContainer7.Panel1.Controls.Add(this.OrderUpdateLabel14);
-            // 
-            // OrderUpdateSplitContainer7.Panel2
-            // 
-            this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateStaffButton);
-            this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateStaffSelectComboBox);
-            this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateUncustumsAddressesButton);
-            this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateADRSelectComboBox);
-            this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateLabel16);
-            this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateLabel15);
-            // 
-            // OrderUpdateTirCmrSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateTirCmrSelectComboBox, "OrderUpdateTirCmrSelectComboBox");
-            this.OrderUpdateTirCmrSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateTirCmrSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateTirCmrSelectComboBox.Name = "OrderUpdateTirCmrSelectComboBox";
-            this.OrderUpdateTirCmrSelectComboBox.Sorted = true;
-            this.OrderUpdateTirCmrSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateTirCmrSelectComboBox_SelectedIndexChanged);
-            this.OrderUpdateTirCmrSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateTirCmrSelectComboBox_TextUpdate);
-            this.OrderUpdateTirCmrSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateTirCmrSelectComboBox_MouseClick);
-            // 
-            // OrderUpdateTirCmrAddButton
-            // 
-            resources.ApplyResources(this.OrderUpdateTirCmrAddButton, "OrderUpdateTirCmrAddButton");
-            this.OrderUpdateTirCmrAddButton.Name = "OrderUpdateTirCmrAddButton";
-            this.OrderUpdateTirCmrAddButton.TabStop = false;
-            this.OrderUpdateTirCmrAddButton.UseVisualStyleBackColor = true;
-            this.OrderUpdateTirCmrAddButton.Click += new System.EventHandler(this.OrderUpdateTirCmrAddButton_Click);
-            // 
-            // OrderUpdateCustumsAddressesButton
-            // 
-            resources.ApplyResources(this.OrderUpdateCustumsAddressesButton, "OrderUpdateCustumsAddressesButton");
-            this.OrderUpdateCustumsAddressesButton.Name = "OrderUpdateCustumsAddressesButton";
-            this.OrderUpdateCustumsAddressesButton.UseVisualStyleBackColor = true;
-            this.OrderUpdateCustumsAddressesButton.Click += new System.EventHandler(this.OrderUpdateCustumsAddressesButton_Click);
-            // 
-            // OrderUpdateLabel14
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel14, "OrderUpdateLabel14");
-            this.OrderUpdateLabel14.Name = "OrderUpdateLabel14";
-            // 
-            // OrderUpdateStaffButton
-            // 
-            resources.ApplyResources(this.OrderUpdateStaffButton, "OrderUpdateStaffButton");
-            this.OrderUpdateStaffButton.Name = "OrderUpdateStaffButton";
-            this.OrderUpdateStaffButton.TabStop = false;
-            this.OrderUpdateStaffButton.UseVisualStyleBackColor = true;
-            this.OrderUpdateStaffButton.Click += new System.EventHandler(this.OrderUpdateStaffAddButton_Click);
-            // 
-            // OrderUpdateStaffSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateStaffSelectComboBox, "OrderUpdateStaffSelectComboBox");
-            this.OrderUpdateStaffSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateStaffSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateStaffSelectComboBox.Items.AddRange(new object[] {
-            resources.GetString("OrderUpdateStaffSelectComboBox.Items"),
-            resources.GetString("OrderUpdateStaffSelectComboBox.Items1")});
-            this.OrderUpdateStaffSelectComboBox.Name = "OrderUpdateStaffSelectComboBox";
-            this.OrderUpdateStaffSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateStaffSelectComboBox_SelectedIndexChanged);
-            this.OrderUpdateStaffSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateStaffSelectComboBox_TextUpdate);
-            this.OrderUpdateStaffSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateStaffSelectComboBox_MouseClick);
-            // 
-            // OrderUpdateUncustumsAddressesButton
-            // 
-            resources.ApplyResources(this.OrderUpdateUncustumsAddressesButton, "OrderUpdateUncustumsAddressesButton");
-            this.OrderUpdateUncustumsAddressesButton.Name = "OrderUpdateUncustumsAddressesButton";
-            this.OrderUpdateUncustumsAddressesButton.UseVisualStyleBackColor = true;
-            this.OrderUpdateUncustumsAddressesButton.Click += new System.EventHandler(this.OrderUpdateUncustumsAddressesButton_Click);
-            // 
-            // OrderUpdateADRSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateADRSelectComboBox, "OrderUpdateADRSelectComboBox");
-            this.OrderUpdateADRSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateADRSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateADRSelectComboBox.Items.AddRange(new object[] {
-            resources.GetString("OrderUpdateADRSelectComboBox.Items"),
-            resources.GetString("OrderUpdateADRSelectComboBox.Items1"),
-            resources.GetString("OrderUpdateADRSelectComboBox.Items2"),
-            resources.GetString("OrderUpdateADRSelectComboBox.Items3"),
-            resources.GetString("OrderUpdateADRSelectComboBox.Items4"),
-            resources.GetString("OrderUpdateADRSelectComboBox.Items5"),
-            resources.GetString("OrderUpdateADRSelectComboBox.Items6"),
-            resources.GetString("OrderUpdateADRSelectComboBox.Items7"),
-            resources.GetString("OrderUpdateADRSelectComboBox.Items8")});
-            this.OrderUpdateADRSelectComboBox.Name = "OrderUpdateADRSelectComboBox";
-            this.OrderUpdateADRSelectComboBox.Sorted = true;
-            this.OrderUpdateADRSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateADRSelectComboBox_MouseClick);
-            // 
-            // OrderUpdateLabel16
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel16, "OrderUpdateLabel16");
-            this.OrderUpdateLabel16.Name = "OrderUpdateLabel16";
-            // 
-            // OrderUpdateLabel15
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel15, "OrderUpdateLabel15");
-            this.OrderUpdateLabel15.Name = "OrderUpdateLabel15";
-            // 
-            // OrderUpdateSplitContainer8
-            // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer8, "OrderUpdateSplitContainer8");
-            this.OrderUpdateSplitContainer8.Name = "OrderUpdateSplitContainer8";
-            // 
-            // OrderUpdateSplitContainer8.Panel1
-            // 
-            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.label38);
-            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateClientSelectComboBox);
-            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateLanguageSelectComboBox);
-            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateTransporterSelectComboBox);
-            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateLabel17);
-            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateLabel18);
-            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateLabel19);
-            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateLabel20);
-            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateClientDiapasoneComboBox);
-            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateDateDateTimePicker);
-            this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateTransporterDiapasoneComboBox);
-            // 
-            // OrderUpdateSplitContainer8.Panel2
-            // 
-            this.OrderUpdateSplitContainer8.Panel2.Controls.Add(this.OrderUpdatelabel28);
-            this.OrderUpdateSplitContainer8.Panel2.Controls.Add(this.OrderUpdateForwarder3SelectComboBox);
-            this.OrderUpdateSplitContainer8.Panel2.Controls.Add(this.OrderUpdateLabel21);
-            this.OrderUpdateSplitContainer8.Panel2.Controls.Add(this.OrderUpdateLabel22);
-            this.OrderUpdateSplitContainer8.Panel2.Controls.Add(this.OrderUpdateForwarder2SelectComboBox);
-            this.OrderUpdateSplitContainer8.Panel2.Controls.Add(this.OrderUpdateForwarder1SelectComboBox);
-            // 
-            // label38
-            // 
-            resources.ApplyResources(this.label38, "label38");
-            this.label38.Name = "label38";
-            // 
-            // OrderUpdateClientSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateClientSelectComboBox, "OrderUpdateClientSelectComboBox");
-            this.OrderUpdateClientSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateClientSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateClientSelectComboBox.Name = "OrderUpdateClientSelectComboBox";
-            this.OrderUpdateClientSelectComboBox.Sorted = true;
-            this.OrderUpdateClientSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateClientSelectComboBox_SelectedIndexChanged);
-            this.OrderUpdateClientSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateClientSelectComboBox_TextUpdate);
-            this.OrderUpdateClientSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateClientSelectComboBox_MouseClick);
-            // 
-            // OrderUpdateLanguageSelectComboBox
-            // 
-            this.OrderUpdateLanguageSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateLanguageSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            resources.ApplyResources(this.OrderUpdateLanguageSelectComboBox, "OrderUpdateLanguageSelectComboBox");
-            this.OrderUpdateLanguageSelectComboBox.Items.AddRange(new object[] {
-            resources.GetString("OrderUpdateLanguageSelectComboBox.Items"),
-            resources.GetString("OrderUpdateLanguageSelectComboBox.Items1"),
-            resources.GetString("OrderUpdateLanguageSelectComboBox.Items2")});
-            this.OrderUpdateLanguageSelectComboBox.Name = "OrderUpdateLanguageSelectComboBox";
-            this.OrderUpdateLanguageSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateLanguageSelectComboBox_MouseClick);
-            // 
-            // OrderUpdateTransporterSelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateTransporterSelectComboBox, "OrderUpdateTransporterSelectComboBox");
-            this.OrderUpdateTransporterSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateTransporterSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateTransporterSelectComboBox.Name = "OrderUpdateTransporterSelectComboBox";
-            this.OrderUpdateTransporterSelectComboBox.Sorted = true;
-            this.OrderUpdateTransporterSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateTransporterSelectComboBox_SelectedIndexChanged);
-            this.OrderUpdateTransporterSelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateTransporterSelectComboBox_TextUpdate);
-            this.OrderUpdateTransporterSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateTransporterSelectComboBox_MouseClick);
-            // 
-            // OrderUpdateLabel17
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel17, "OrderUpdateLabel17");
-            this.OrderUpdateLabel17.Name = "OrderUpdateLabel17";
-            // 
-            // OrderUpdateLabel18
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel18, "OrderUpdateLabel18");
-            this.OrderUpdateLabel18.Name = "OrderUpdateLabel18";
-            // 
-            // OrderUpdateLabel19
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel19, "OrderUpdateLabel19");
-            this.OrderUpdateLabel19.Name = "OrderUpdateLabel19";
-            // 
-            // OrderUpdateLabel20
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel20, "OrderUpdateLabel20");
-            this.OrderUpdateLabel20.Name = "OrderUpdateLabel20";
-            // 
-            // OrderUpdateClientDiapasoneComboBox
-            // 
-            this.OrderUpdateClientDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateClientDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            resources.ApplyResources(this.OrderUpdateClientDiapasoneComboBox, "OrderUpdateClientDiapasoneComboBox");
-            this.OrderUpdateClientDiapasoneComboBox.Name = "OrderUpdateClientDiapasoneComboBox";
-            this.OrderUpdateClientDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateClientDiapasoneComboBox_MouseClick);
-            // 
-            // OrderUpdateDateDateTimePicker
-            // 
-            this.OrderUpdateDateDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.OrderUpdateDateDateTimePicker.Checked = false;
-            resources.ApplyResources(this.OrderUpdateDateDateTimePicker, "OrderUpdateDateDateTimePicker");
-            this.OrderUpdateDateDateTimePicker.Name = "OrderUpdateDateDateTimePicker";
-            // 
-            // OrderUpdateTransporterDiapasoneComboBox
-            // 
-            this.OrderUpdateTransporterDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateTransporterDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            resources.ApplyResources(this.OrderUpdateTransporterDiapasoneComboBox, "OrderUpdateTransporterDiapasoneComboBox");
-            this.OrderUpdateTransporterDiapasoneComboBox.Name = "OrderUpdateTransporterDiapasoneComboBox";
-            this.OrderUpdateTransporterDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateTransporterDiapasoneComboBox_MouseClick);
-            // 
-            // OrderUpdatelabel28
-            // 
-            resources.ApplyResources(this.OrderUpdatelabel28, "OrderUpdatelabel28");
-            this.OrderUpdatelabel28.Name = "OrderUpdatelabel28";
-            // 
-            // OrderUpdateForwarder3SelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateForwarder3SelectComboBox, "OrderUpdateForwarder3SelectComboBox");
-            this.OrderUpdateForwarder3SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateForwarder3SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateForwarder3SelectComboBox.Name = "OrderUpdateForwarder3SelectComboBox";
-            this.OrderUpdateForwarder3SelectComboBox.Sorted = true;
-            this.OrderUpdateForwarder3SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateForwarder3SelectComboBox_SelectedIndexChanged);
-            this.OrderUpdateForwarder3SelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateForwarder3SelectComboBox_TextUpdate);
-            this.OrderUpdateForwarder3SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateForwarder3SelectComboBox_MouseClick);
-            // 
-            // OrderUpdateLabel21
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel21, "OrderUpdateLabel21");
-            this.OrderUpdateLabel21.Name = "OrderUpdateLabel21";
-            // 
-            // OrderUpdateLabel22
-            // 
-            resources.ApplyResources(this.OrderUpdateLabel22, "OrderUpdateLabel22");
-            this.OrderUpdateLabel22.Name = "OrderUpdateLabel22";
-            // 
-            // OrderUpdateForwarder2SelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateForwarder2SelectComboBox, "OrderUpdateForwarder2SelectComboBox");
-            this.OrderUpdateForwarder2SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateForwarder2SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateForwarder2SelectComboBox.Name = "OrderUpdateForwarder2SelectComboBox";
-            this.OrderUpdateForwarder2SelectComboBox.Sorted = true;
-            this.OrderUpdateForwarder2SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateForwarder2SelectComboBox_SelectedIndexChanged);
-            this.OrderUpdateForwarder2SelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateForwarder2SelectComboBox_TextUpdate);
-            this.OrderUpdateForwarder2SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateForwarder2SelectComboBox_MouseClick);
-            // 
-            // OrderUpdateForwarder1SelectComboBox
-            // 
-            resources.ApplyResources(this.OrderUpdateForwarder1SelectComboBox, "OrderUpdateForwarder1SelectComboBox");
-            this.OrderUpdateForwarder1SelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.OrderUpdateForwarder1SelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.OrderUpdateForwarder1SelectComboBox.Name = "OrderUpdateForwarder1SelectComboBox";
-            this.OrderUpdateForwarder1SelectComboBox.Sorted = true;
-            this.OrderUpdateForwarder1SelectComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderUpdateForwarder1SelectComboBox_SelectedIndexChanged);
-            this.OrderUpdateForwarder1SelectComboBox.TextUpdate += new System.EventHandler(this.OrderUpdateForwarder1SelectComboBox_TextUpdate);
-            this.OrderUpdateForwarder1SelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateForwarder1SelectComboBox_MouseClick);
-            // 
             // showContractsPage
             // 
+            resources.ApplyResources(this.showContractsPage, "showContractsPage");
             this.showContractsPage.BackColor = System.Drawing.Color.AliceBlue;
             this.showContractsPage.Controls.Add(this.originalContractStateRadioButton);
             this.showContractsPage.Controls.Add(this.faxContractStateRadioButton);
@@ -4782,7 +5102,6 @@
             this.showContractsPage.Controls.Add(this.contractShowSearchTextBox);
             this.showContractsPage.Controls.Add(this.label36ShowContract);
             this.showContractsPage.Controls.Add(this.contractShowDataGridView);
-            resources.ApplyResources(this.showContractsPage, "showContractsPage");
             this.showContractsPage.Name = "showContractsPage";
             this.showContractsPage.Tag = "3";
             // 
@@ -4884,6 +5203,7 @@
             // 
             // showArbeitenPage
             // 
+            resources.ApplyResources(this.showArbeitenPage, "showArbeitenPage");
             this.showArbeitenPage.BackColor = System.Drawing.Color.AliceBlue;
             this.showArbeitenPage.Controls.Add(this.splitContainer1);
             this.showArbeitenPage.Controls.Add(this.arbeitenShowForwardersDataGridView);
@@ -4896,49 +5216,7 @@
             this.showArbeitenPage.Controls.Add(this.arbeitenShowSearchButton);
             this.showArbeitenPage.Controls.Add(this.arbeitenShowSearchTextBox);
             this.showArbeitenPage.Controls.Add(this.arbeitenShowMainDataGridView);
-            resources.ApplyResources(this.showArbeitenPage, "showArbeitenPage");
             this.showArbeitenPage.Name = "showArbeitenPage";
-            // 
-            // splitContainer1
-            // 
-            resources.ApplyResources(this.splitContainer1, "splitContainer1");
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.arbeitenShowDownloadAddressDataGridView);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.arbeitenShowUploadAddressDataGridView);
-            // 
-            // arbeitenShowDownloadAddressDataGridView
-            // 
-            this.arbeitenShowDownloadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.arbeitenShowDownloadAddressDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.arbeitenShowDownloadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.arbeitenShowDownloadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.arbeitenShowDownloadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.arbeitenShowDownloadAddressDataGridView, "arbeitenShowDownloadAddressDataGridView");
-            this.arbeitenShowDownloadAddressDataGridView.MultiSelect = false;
-            this.arbeitenShowDownloadAddressDataGridView.Name = "arbeitenShowDownloadAddressDataGridView";
-            this.arbeitenShowDownloadAddressDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.arbeitenShowDownloadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.arbeitenShowDownloadAddressDataGridView.TabStop = false;
-            // 
-            // arbeitenShowUploadAddressDataGridView
-            // 
-            this.arbeitenShowUploadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.arbeitenShowUploadAddressDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.arbeitenShowUploadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.arbeitenShowUploadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.arbeitenShowUploadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.arbeitenShowUploadAddressDataGridView, "arbeitenShowUploadAddressDataGridView");
-            this.arbeitenShowUploadAddressDataGridView.MultiSelect = false;
-            this.arbeitenShowUploadAddressDataGridView.Name = "arbeitenShowUploadAddressDataGridView";
-            this.arbeitenShowUploadAddressDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.arbeitenShowUploadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.arbeitenShowUploadAddressDataGridView.TabStop = false;
             // 
             // arbeitenShowForwardersDataGridView
             // 
@@ -5027,6 +5305,7 @@
             // 
             // addArbeitenPage
             // 
+            resources.ApplyResources(this.addArbeitenPage, "addArbeitenPage");
             this.addArbeitenPage.BackColor = System.Drawing.Color.AliceBlue;
             this.addArbeitenPage.Controls.Add(this.arbeitenAddButton);
             this.addArbeitenPage.Controls.Add(this.arbeitenAddSplitContainer);
@@ -5037,7 +5316,6 @@
             this.addArbeitenPage.Controls.Add(this.arbeitenAddOrderFilterLabel);
             this.addArbeitenPage.Controls.Add(this.arbeitenAddNoteTextBox);
             this.addArbeitenPage.Controls.Add(this.arbeitenAddNoteLabel);
-            resources.ApplyResources(this.addArbeitenPage, "addArbeitenPage");
             this.addArbeitenPage.Name = "addArbeitenPage";
             // 
             // arbeitenAddButton
@@ -5046,123 +5324,6 @@
             this.arbeitenAddButton.Name = "arbeitenAddButton";
             this.arbeitenAddButton.UseVisualStyleBackColor = true;
             this.arbeitenAddButton.Click += new System.EventHandler(this.arbeitenAddButton_Click);
-            // 
-            // arbeitenAddSplitContainer
-            // 
-            resources.ApplyResources(this.arbeitenAddSplitContainer, "arbeitenAddSplitContainer");
-            this.arbeitenAddSplitContainer.Name = "arbeitenAddSplitContainer";
-            // 
-            // arbeitenAddSplitContainer.Panel1
-            // 
-            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientPaymentDateLabel);
-            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientPaymentTextBox);
-            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientPaymentLabel);
-            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientTextBox);
-            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddAccountNumberLabelTextBox);
-            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientLabel);
-            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddAccountNumberLabel);
-            this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientPaymentDateTimePicker);
-            // 
-            // arbeitenAddSplitContainer.Panel2
-            // 
-            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddDownloadDateLabel);
-            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddDownloadDateTimePicker);
-            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterPaymentTextBox);
-            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterPaymentLabel);
-            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterVehicleTextBox);
-            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterVehicleLabel);
-            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterTextBox);
-            this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterLabel);
-            // 
-            // arbeitenAddClientPaymentDateLabel
-            // 
-            resources.ApplyResources(this.arbeitenAddClientPaymentDateLabel, "arbeitenAddClientPaymentDateLabel");
-            this.arbeitenAddClientPaymentDateLabel.Name = "arbeitenAddClientPaymentDateLabel";
-            // 
-            // arbeitenAddClientPaymentTextBox
-            // 
-            resources.ApplyResources(this.arbeitenAddClientPaymentTextBox, "arbeitenAddClientPaymentTextBox");
-            this.arbeitenAddClientPaymentTextBox.Name = "arbeitenAddClientPaymentTextBox";
-            // 
-            // arbeitenAddClientPaymentLabel
-            // 
-            resources.ApplyResources(this.arbeitenAddClientPaymentLabel, "arbeitenAddClientPaymentLabel");
-            this.arbeitenAddClientPaymentLabel.Name = "arbeitenAddClientPaymentLabel";
-            // 
-            // arbeitenAddClientTextBox
-            // 
-            resources.ApplyResources(this.arbeitenAddClientTextBox, "arbeitenAddClientTextBox");
-            this.arbeitenAddClientTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.arbeitenAddClientTextBox.Name = "arbeitenAddClientTextBox";
-            this.arbeitenAddClientTextBox.ReadOnly = true;
-            // 
-            // arbeitenAddAccountNumberLabelTextBox
-            // 
-            resources.ApplyResources(this.arbeitenAddAccountNumberLabelTextBox, "arbeitenAddAccountNumberLabelTextBox");
-            this.arbeitenAddAccountNumberLabelTextBox.Name = "arbeitenAddAccountNumberLabelTextBox";
-            // 
-            // arbeitenAddClientLabel
-            // 
-            resources.ApplyResources(this.arbeitenAddClientLabel, "arbeitenAddClientLabel");
-            this.arbeitenAddClientLabel.Name = "arbeitenAddClientLabel";
-            // 
-            // arbeitenAddAccountNumberLabel
-            // 
-            resources.ApplyResources(this.arbeitenAddAccountNumberLabel, "arbeitenAddAccountNumberLabel");
-            this.arbeitenAddAccountNumberLabel.Name = "arbeitenAddAccountNumberLabel";
-            // 
-            // arbeitenAddClientPaymentDateTimePicker
-            // 
-            resources.ApplyResources(this.arbeitenAddClientPaymentDateTimePicker, "arbeitenAddClientPaymentDateTimePicker");
-            this.arbeitenAddClientPaymentDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.arbeitenAddClientPaymentDateTimePicker.Checked = false;
-            this.arbeitenAddClientPaymentDateTimePicker.Name = "arbeitenAddClientPaymentDateTimePicker";
-            this.arbeitenAddClientPaymentDateTimePicker.ShowCheckBox = true;
-            // 
-            // arbeitenAddDownloadDateLabel
-            // 
-            resources.ApplyResources(this.arbeitenAddDownloadDateLabel, "arbeitenAddDownloadDateLabel");
-            this.arbeitenAddDownloadDateLabel.Name = "arbeitenAddDownloadDateLabel";
-            // 
-            // arbeitenAddDownloadDateTimePicker
-            // 
-            resources.ApplyResources(this.arbeitenAddDownloadDateTimePicker, "arbeitenAddDownloadDateTimePicker");
-            this.arbeitenAddDownloadDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.arbeitenAddDownloadDateTimePicker.Checked = false;
-            this.arbeitenAddDownloadDateTimePicker.Name = "arbeitenAddDownloadDateTimePicker";
-            this.arbeitenAddDownloadDateTimePicker.ShowCheckBox = true;
-            // 
-            // arbeitenAddTransporterPaymentTextBox
-            // 
-            resources.ApplyResources(this.arbeitenAddTransporterPaymentTextBox, "arbeitenAddTransporterPaymentTextBox");
-            this.arbeitenAddTransporterPaymentTextBox.Name = "arbeitenAddTransporterPaymentTextBox";
-            // 
-            // arbeitenAddTransporterPaymentLabel
-            // 
-            resources.ApplyResources(this.arbeitenAddTransporterPaymentLabel, "arbeitenAddTransporterPaymentLabel");
-            this.arbeitenAddTransporterPaymentLabel.Name = "arbeitenAddTransporterPaymentLabel";
-            // 
-            // arbeitenAddTransporterVehicleTextBox
-            // 
-            resources.ApplyResources(this.arbeitenAddTransporterVehicleTextBox, "arbeitenAddTransporterVehicleTextBox");
-            this.arbeitenAddTransporterVehicleTextBox.Name = "arbeitenAddTransporterVehicleTextBox";
-            // 
-            // arbeitenAddTransporterVehicleLabel
-            // 
-            resources.ApplyResources(this.arbeitenAddTransporterVehicleLabel, "arbeitenAddTransporterVehicleLabel");
-            this.arbeitenAddTransporterVehicleLabel.Name = "arbeitenAddTransporterVehicleLabel";
-            // 
-            // arbeitenAddTransporterTextBox
-            // 
-            resources.ApplyResources(this.arbeitenAddTransporterTextBox, "arbeitenAddTransporterTextBox");
-            this.arbeitenAddTransporterTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.arbeitenAddTransporterTextBox.Name = "arbeitenAddTransporterTextBox";
-            this.arbeitenAddTransporterTextBox.ReadOnly = true;
-            // 
-            // arbeitenAddTransporterLabel
-            // 
-            resources.ApplyResources(this.arbeitenAddTransporterLabel, "arbeitenAddTransporterLabel");
-            this.arbeitenAddTransporterLabel.Name = "arbeitenAddTransporterLabel";
             // 
             // arbeitenAddOrderFilterCheckBox
             // 
@@ -5212,6 +5373,7 @@
             // 
             // updateArbeitenPage
             // 
+            resources.ApplyResources(this.updateArbeitenPage, "updateArbeitenPage");
             this.updateArbeitenPage.BackColor = System.Drawing.Color.AliceBlue;
             this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateButton);
             this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateSplitContainer);
@@ -5222,7 +5384,6 @@
             this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateOrderFilterLabel);
             this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateNoteTextBox);
             this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateNoteLabel);
-            resources.ApplyResources(this.updateArbeitenPage, "updateArbeitenPage");
             this.updateArbeitenPage.Name = "updateArbeitenPage";
             // 
             // arbeitenUpdateButton
@@ -5231,123 +5392,6 @@
             this.arbeitenUpdateButton.Name = "arbeitenUpdateButton";
             this.arbeitenUpdateButton.UseVisualStyleBackColor = true;
             this.arbeitenUpdateButton.Click += new System.EventHandler(this.arbeitenUpdateButton_Click);
-            // 
-            // arbeitenUpdateSplitContainer
-            // 
-            resources.ApplyResources(this.arbeitenUpdateSplitContainer, "arbeitenUpdateSplitContainer");
-            this.arbeitenUpdateSplitContainer.Name = "arbeitenUpdateSplitContainer";
-            // 
-            // arbeitenUpdateSplitContainer.Panel1
-            // 
-            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientPaymentDateLabel);
-            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientPaymentTextBox);
-            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientPaymentLabel);
-            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientTextBox);
-            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateAccountNumberLabelTextBox);
-            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientLabel);
-            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateAccountNumberLabel);
-            this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientPaymentDateTimePicker);
-            // 
-            // arbeitenUpdateSplitContainer.Panel2
-            // 
-            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateDownloadDateLabel);
-            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateDownloadDateTimePicker);
-            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterPaymentTextBox);
-            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterPaymentLabel);
-            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterVehicleTextBox);
-            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterVehicleLabel);
-            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterTextBox);
-            this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterLabel);
-            // 
-            // arbeitenUpdateClientPaymentDateLabel
-            // 
-            resources.ApplyResources(this.arbeitenUpdateClientPaymentDateLabel, "arbeitenUpdateClientPaymentDateLabel");
-            this.arbeitenUpdateClientPaymentDateLabel.Name = "arbeitenUpdateClientPaymentDateLabel";
-            // 
-            // arbeitenUpdateClientPaymentTextBox
-            // 
-            resources.ApplyResources(this.arbeitenUpdateClientPaymentTextBox, "arbeitenUpdateClientPaymentTextBox");
-            this.arbeitenUpdateClientPaymentTextBox.Name = "arbeitenUpdateClientPaymentTextBox";
-            // 
-            // arbeitenUpdateClientPaymentLabel
-            // 
-            resources.ApplyResources(this.arbeitenUpdateClientPaymentLabel, "arbeitenUpdateClientPaymentLabel");
-            this.arbeitenUpdateClientPaymentLabel.Name = "arbeitenUpdateClientPaymentLabel";
-            // 
-            // arbeitenUpdateClientTextBox
-            // 
-            resources.ApplyResources(this.arbeitenUpdateClientTextBox, "arbeitenUpdateClientTextBox");
-            this.arbeitenUpdateClientTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.arbeitenUpdateClientTextBox.Name = "arbeitenUpdateClientTextBox";
-            this.arbeitenUpdateClientTextBox.ReadOnly = true;
-            // 
-            // arbeitenUpdateAccountNumberLabelTextBox
-            // 
-            resources.ApplyResources(this.arbeitenUpdateAccountNumberLabelTextBox, "arbeitenUpdateAccountNumberLabelTextBox");
-            this.arbeitenUpdateAccountNumberLabelTextBox.Name = "arbeitenUpdateAccountNumberLabelTextBox";
-            // 
-            // arbeitenUpdateClientLabel
-            // 
-            resources.ApplyResources(this.arbeitenUpdateClientLabel, "arbeitenUpdateClientLabel");
-            this.arbeitenUpdateClientLabel.Name = "arbeitenUpdateClientLabel";
-            // 
-            // arbeitenUpdateAccountNumberLabel
-            // 
-            resources.ApplyResources(this.arbeitenUpdateAccountNumberLabel, "arbeitenUpdateAccountNumberLabel");
-            this.arbeitenUpdateAccountNumberLabel.Name = "arbeitenUpdateAccountNumberLabel";
-            // 
-            // arbeitenUpdateClientPaymentDateTimePicker
-            // 
-            resources.ApplyResources(this.arbeitenUpdateClientPaymentDateTimePicker, "arbeitenUpdateClientPaymentDateTimePicker");
-            this.arbeitenUpdateClientPaymentDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.arbeitenUpdateClientPaymentDateTimePicker.Checked = false;
-            this.arbeitenUpdateClientPaymentDateTimePicker.Name = "arbeitenUpdateClientPaymentDateTimePicker";
-            this.arbeitenUpdateClientPaymentDateTimePicker.ShowCheckBox = true;
-            // 
-            // arbeitenUpdateDownloadDateLabel
-            // 
-            resources.ApplyResources(this.arbeitenUpdateDownloadDateLabel, "arbeitenUpdateDownloadDateLabel");
-            this.arbeitenUpdateDownloadDateLabel.Name = "arbeitenUpdateDownloadDateLabel";
-            // 
-            // arbeitenUpdateDownloadDateTimePicker
-            // 
-            resources.ApplyResources(this.arbeitenUpdateDownloadDateTimePicker, "arbeitenUpdateDownloadDateTimePicker");
-            this.arbeitenUpdateDownloadDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.arbeitenUpdateDownloadDateTimePicker.Checked = false;
-            this.arbeitenUpdateDownloadDateTimePicker.Name = "arbeitenUpdateDownloadDateTimePicker";
-            this.arbeitenUpdateDownloadDateTimePicker.ShowCheckBox = true;
-            // 
-            // arbeitenUpdateTransporterPaymentTextBox
-            // 
-            resources.ApplyResources(this.arbeitenUpdateTransporterPaymentTextBox, "arbeitenUpdateTransporterPaymentTextBox");
-            this.arbeitenUpdateTransporterPaymentTextBox.Name = "arbeitenUpdateTransporterPaymentTextBox";
-            // 
-            // arbeitenUpdateTransporterPaymentLabel
-            // 
-            resources.ApplyResources(this.arbeitenUpdateTransporterPaymentLabel, "arbeitenUpdateTransporterPaymentLabel");
-            this.arbeitenUpdateTransporterPaymentLabel.Name = "arbeitenUpdateTransporterPaymentLabel";
-            // 
-            // arbeitenUpdateTransporterVehicleTextBox
-            // 
-            resources.ApplyResources(this.arbeitenUpdateTransporterVehicleTextBox, "arbeitenUpdateTransporterVehicleTextBox");
-            this.arbeitenUpdateTransporterVehicleTextBox.Name = "arbeitenUpdateTransporterVehicleTextBox";
-            // 
-            // arbeitenUpdateTransporterVehicleLabel
-            // 
-            resources.ApplyResources(this.arbeitenUpdateTransporterVehicleLabel, "arbeitenUpdateTransporterVehicleLabel");
-            this.arbeitenUpdateTransporterVehicleLabel.Name = "arbeitenUpdateTransporterVehicleLabel";
-            // 
-            // arbeitenUpdateTransporterTextBox
-            // 
-            resources.ApplyResources(this.arbeitenUpdateTransporterTextBox, "arbeitenUpdateTransporterTextBox");
-            this.arbeitenUpdateTransporterTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.arbeitenUpdateTransporterTextBox.Name = "arbeitenUpdateTransporterTextBox";
-            this.arbeitenUpdateTransporterTextBox.ReadOnly = true;
-            // 
-            // arbeitenUpdateTransporterLabel
-            // 
-            resources.ApplyResources(this.arbeitenUpdateTransporterLabel, "arbeitenUpdateTransporterLabel");
-            this.arbeitenUpdateTransporterLabel.Name = "arbeitenUpdateTransporterLabel";
             // 
             // arbeitenUpdateOrderFilterCheckBox
             // 
@@ -5420,45 +5464,49 @@
             resources.ApplyResources(this.labelshow69, "labelshow69");
             this.labelshow69.Name = "labelshow69";
             // 
+            // folderBrowserDialog
+            // 
+            resources.ApplyResources(this.folderBrowserDialog, "folderBrowserDialog");
+            // 
             // addOrderUkrStrip
             // 
-            this.addOrderUkrStrip.Name = "addOrderUkrStrip";
             resources.ApplyResources(this.addOrderUkrStrip, "addOrderUkrStrip");
+            this.addOrderUkrStrip.Name = "addOrderUkrStrip";
             // 
             // updateOrderUkrStrip
             // 
-            this.updateOrderUkrStrip.Name = "updateOrderUkrStrip";
             resources.ApplyResources(this.updateOrderUkrStrip, "updateOrderUkrStrip");
+            this.updateOrderUkrStrip.Name = "updateOrderUkrStrip";
             // 
             // deleteOrderUkrStrip
             // 
-            this.deleteOrderUkrStrip.Name = "deleteOrderUkrStrip";
             resources.ApplyResources(this.deleteOrderUkrStrip, "deleteOrderUkrStrip");
+            this.deleteOrderUkrStrip.Name = "deleteOrderUkrStrip";
             // 
             // trackingOrderUkrStrip
             // 
-            this.trackingOrderUkrStrip.Name = "trackingOrderUkrStrip";
             resources.ApplyResources(this.trackingOrderUkrStrip, "trackingOrderUkrStrip");
+            this.trackingOrderUkrStrip.Name = "trackingOrderUkrStrip";
             // 
             // addOrderIntStrip
             // 
-            this.addOrderIntStrip.Name = "addOrderIntStrip";
             resources.ApplyResources(this.addOrderIntStrip, "addOrderIntStrip");
+            this.addOrderIntStrip.Name = "addOrderIntStrip";
             // 
             // updateOrderIntStrip
             // 
-            this.updateOrderIntStrip.Name = "updateOrderIntStrip";
             resources.ApplyResources(this.updateOrderIntStrip, "updateOrderIntStrip");
+            this.updateOrderIntStrip.Name = "updateOrderIntStrip";
             // 
             // deleteOrderIntStrip
             // 
-            this.deleteOrderIntStrip.Name = "deleteOrderIntStrip";
             resources.ApplyResources(this.deleteOrderIntStrip, "deleteOrderIntStrip");
+            this.deleteOrderIntStrip.Name = "deleteOrderIntStrip";
             // 
             // trackingOrderIntStrip
             // 
-            this.trackingOrderIntStrip.Name = "trackingOrderIntStrip";
             resources.ApplyResources(this.trackingOrderIntStrip, "trackingOrderIntStrip");
+            this.trackingOrderIntStrip.Name = "trackingOrderIntStrip";
             // 
             // ruLangButton
             // 
@@ -5491,38 +5539,12 @@
             this.Name = "MainForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
-            this.dataControl.ResumeLayout(false);
-            this.helloPage.ResumeLayout(false);
-            this.helloPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.helloPictureBox)).EndInit();
-            this.showClientPage.ResumeLayout(false);
-            this.showClientPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.showClientBankDetailsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showClientContactsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showClientDataGridView)).EndInit();
-            this.addClientPage.ResumeLayout(false);
-            this.addClientPage.PerformLayout();
-            this.updateClientPage.ResumeLayout(false);
-            this.updateClientPage.PerformLayout();
-            this.deleteClientPage.ResumeLayout(false);
-            this.deleteClientPage.PerformLayout();
-            this.showForwarderPage.ResumeLayout(false);
-            this.showForwarderPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.forwarderBankDetailsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.forwarderContactsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.forwarderDataGridView)).EndInit();
-            this.addForwarderPage.ResumeLayout(false);
-            this.addForwarderPage.PerformLayout();
             this.addForwarderSplitContainer.Panel1.ResumeLayout(false);
             this.addForwarderSplitContainer.Panel2.ResumeLayout(false);
             this.addForwarderSplitContainer.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addForwarderSplitContainer)).EndInit();
             this.addForwarderSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.addForwarderStampPictureBox)).EndInit();
-            this.updateForwarderPage.ResumeLayout(false);
-            this.updateForwarderPage.PerformLayout();
             this.updateOrderSplitContainer.Panel1.ResumeLayout(false);
             this.updateOrderSplitContainer.Panel1.PerformLayout();
             this.updateOrderSplitContainer.Panel2.ResumeLayout(false);
@@ -5530,28 +5552,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.updateOrderSplitContainer)).EndInit();
             this.updateOrderSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.updateForwarderStampPictureBox)).EndInit();
-            this.deleteForwarderPage.ResumeLayout(false);
-            this.deleteForwarderPage.PerformLayout();
-            this.showTransporterPage.ResumeLayout(false);
-            this.showTransporterPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.transporterShowCountryDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transporterShowBankDetailsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transporterShowContactsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transporterShowDataGridView)).EndInit();
-            this.addTransporterPage.ResumeLayout(false);
-            this.addTransporterPage.PerformLayout();
-            this.transporterAddFilterPanel.ResumeLayout(false);
-            this.transporterAddFilterPanel.PerformLayout();
-            this.updateTransporterPage.ResumeLayout(false);
-            this.updateTransporterPage.PerformLayout();
-            this.transporterUpdateFilterPanel.ResumeLayout(false);
-            this.transporterUpdateFilterPanel.PerformLayout();
-            this.deleteTransporterPage.ResumeLayout(false);
-            this.deleteTransporterPage.PerformLayout();
-            this.addContractPage.ResumeLayout(false);
-            this.addContractPage.PerformLayout();
-            this.addOrderPage.ResumeLayout(false);
-            this.addOrderPage.PerformLayout();
             this.splitContainer6.Panel1.ResumeLayout(false);
             this.splitContainer6.Panel1.PerformLayout();
             this.splitContainer6.Panel2.ResumeLayout(false);
@@ -5596,20 +5596,12 @@
             this.addOrderSplitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addOrderSplitContainer1)).EndInit();
             this.addOrderSplitContainer1.ResumeLayout(false);
-            this.showTrackingPage.ResumeLayout(false);
-            this.showTrackingPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackingShowForwardersDataGridView)).EndInit();
             this.showTrackingSplitContainer1.Panel1.ResumeLayout(false);
             this.showTrackingSplitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.showTrackingSplitContainer1)).EndInit();
             this.showTrackingSplitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.trackingShowDownloadAddressDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingShowUploadAddressDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackingShowCommentDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackingShowTransporterContactsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackingShowDataGridView)).EndInit();
-            this.updateOrderPage.ResumeLayout(false);
-            this.updateOrderPage.PerformLayout();
             this.OrderUpdateSplitContainer1.Panel1.ResumeLayout(false);
             this.OrderUpdateSplitContainer1.Panel1.PerformLayout();
             this.OrderUpdateSplitContainer1.Panel2.ResumeLayout(false);
@@ -5654,36 +5646,92 @@
             this.OrderUpdateSplitContainer8.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderUpdateSplitContainer8)).EndInit();
             this.OrderUpdateSplitContainer8.ResumeLayout(false);
-            this.showContractsPage.ResumeLayout(false);
-            this.showContractsPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.contractShowTransporterContactDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contractShowDataGridView)).EndInit();
-            this.showArbeitenPage.ResumeLayout(false);
-            this.showArbeitenPage.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowDownloadAddressDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowUploadAddressDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowForwardersDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowMainDataGridView)).EndInit();
-            this.addArbeitenPage.ResumeLayout(false);
-            this.addArbeitenPage.PerformLayout();
             this.arbeitenAddSplitContainer.Panel1.ResumeLayout(false);
             this.arbeitenAddSplitContainer.Panel1.PerformLayout();
             this.arbeitenAddSplitContainer.Panel2.ResumeLayout(false);
             this.arbeitenAddSplitContainer.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arbeitenAddSplitContainer)).EndInit();
             this.arbeitenAddSplitContainer.ResumeLayout(false);
-            this.updateArbeitenPage.ResumeLayout(false);
-            this.updateArbeitenPage.PerformLayout();
             this.arbeitenUpdateSplitContainer.Panel1.ResumeLayout(false);
             this.arbeitenUpdateSplitContainer.Panel1.PerformLayout();
             this.arbeitenUpdateSplitContainer.Panel2.ResumeLayout(false);
             this.arbeitenUpdateSplitContainer.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arbeitenUpdateSplitContainer)).EndInit();
             this.arbeitenUpdateSplitContainer.ResumeLayout(false);
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
+            this.dataControl.ResumeLayout(false);
+            this.helloPage.ResumeLayout(false);
+            this.helloPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.helloPictureBox)).EndInit();
+            this.showClientPage.ResumeLayout(false);
+            this.showClientPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showClientBankDetailsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showClientContactsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showClientDataGridView)).EndInit();
+            this.addClientPage.ResumeLayout(false);
+            this.addClientPage.PerformLayout();
+            this.updateClientPage.ResumeLayout(false);
+            this.updateClientPage.PerformLayout();
+            this.deleteClientPage.ResumeLayout(false);
+            this.deleteClientPage.PerformLayout();
+            this.showForwarderPage.ResumeLayout(false);
+            this.showForwarderPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.forwarderBankDetailsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.forwarderContactsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.forwarderDataGridView)).EndInit();
+            this.addForwarderPage.ResumeLayout(false);
+            this.addForwarderPage.PerformLayout();
+            this.updateForwarderPage.ResumeLayout(false);
+            this.updateForwarderPage.PerformLayout();
+            this.deleteForwarderPage.ResumeLayout(false);
+            this.deleteForwarderPage.PerformLayout();
+            this.showTransporterPage.ResumeLayout(false);
+            this.showTransporterPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowCountryDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowBankDetailsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowContactsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transporterShowDataGridView)).EndInit();
+            this.addTransporterPage.ResumeLayout(false);
+            this.addTransporterPage.PerformLayout();
+            this.transporterAddFilterPanel.ResumeLayout(false);
+            this.transporterAddFilterPanel.PerformLayout();
+            this.updateTransporterPage.ResumeLayout(false);
+            this.updateTransporterPage.PerformLayout();
+            this.transporterUpdateFilterPanel.ResumeLayout(false);
+            this.transporterUpdateFilterPanel.PerformLayout();
+            this.deleteTransporterPage.ResumeLayout(false);
+            this.deleteTransporterPage.PerformLayout();
+            this.addContractPage.ResumeLayout(false);
+            this.addContractPage.PerformLayout();
+            this.addOrderPage.ResumeLayout(false);
+            this.addOrderPage.PerformLayout();
+            this.showTrackingPage.ResumeLayout(false);
+            this.showTrackingPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowForwardersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowCommentDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowTransporterContactsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingShowDataGridView)).EndInit();
+            this.updateOrderPage.ResumeLayout(false);
+            this.updateOrderPage.PerformLayout();
+            this.showContractsPage.ResumeLayout(false);
+            this.showContractsPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contractShowTransporterContactDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contractShowDataGridView)).EndInit();
+            this.showArbeitenPage.ResumeLayout(false);
+            this.showArbeitenPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowForwardersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowMainDataGridView)).EndInit();
+            this.addArbeitenPage.ResumeLayout(false);
+            this.addArbeitenPage.PerformLayout();
+            this.updateArbeitenPage.ResumeLayout(false);
+            this.updateArbeitenPage.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

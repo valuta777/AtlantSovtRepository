@@ -120,9 +120,6 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Атлант-Совт</value>
   </data>
-  <data name="addArbeitenPage.Text" xml:space="preserve">
-    <value>addArbeitenPage</value>
-  </data>
   <data name="addArbeitenToolStripMenuItem.Text" xml:space="preserve">
     <value>Додати</value>
   </data>

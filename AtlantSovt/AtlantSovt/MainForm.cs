@@ -1,5 +1,6 @@
 ﻿using AtlantSovt.Additions;
 using AtlantSovt.AtlantSovtDb;
+using MultiLang;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -674,7 +675,7 @@ namespace AtlantSovt
                 {
                     if (db.Clients.Find(client.Id).ClientBankDetail != null)
                     {
-                        if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_банківські_дані_клієнту + client.Name + " ?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_банківські_дані_клієнту + client.Name + " ?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             try
                             {
@@ -3161,7 +3162,7 @@ namespace AtlantSovt
         #region Translate
         private void uaLangButton_Click(object sender, EventArgs e)
         {
-
+            SelectLanguage lang = new SelectLanguage(CultureInfo.CreateSpecificCulture("uk-UA"));
         }
 
         private void ruLangButton_Click(object sender, EventArgs e)
