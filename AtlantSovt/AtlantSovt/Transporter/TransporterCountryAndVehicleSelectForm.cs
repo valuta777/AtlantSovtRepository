@@ -80,13 +80,13 @@ namespace AtlantSovt
                         }
 
                     db.SaveChanges();
-                    return "Успішно вибрано " + transporterFilterSelectCountryCheckedListBox.CheckedItems.Count + " країн(а) \n";                        
+                    return AtlantSovt.Properties.Resources.Успішно_вибрано + transporterFilterSelectCountryCheckedListBox.CheckedItems.Count + AtlantSovt.Properties.Resources.Країн_а;                        
                     }
                 }
                 catch(Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Помилка!!", ex.ToString());
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                     return string.Empty;
                 }
             }
@@ -112,13 +112,13 @@ namespace AtlantSovt
                         }
 
                         db.SaveChanges();
-                        return "Успішно вибрано " + transporterFilterSelectVehicleCheckedListBox.CheckedItems.Count + " тип(ів) транспорту\n";
+                        return AtlantSovt.Properties.Resources.Успішно_вибрано + transporterFilterSelectVehicleCheckedListBox.CheckedItems.Count + AtlantSovt.Properties.Resources.Тип_ів_транспорту;
                     }
                 }
                 catch (Exception e)
                 {
                     Log.Write(e);
-                    MessageBox.Show("Помилка!!", e.ToString());
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + e.Message);
                     return string.Empty;
                 }
             }
@@ -150,7 +150,7 @@ namespace AtlantSovt
         {
             if(transporterFilterSelectVehicleCheckedListBox.CheckedItems.Count != 0 || transporterFilterSelectCountryCheckedListBox.CheckedItems.Count != 0)
             {
-                if (MessageBox.Show("Закрити форму без збереження?\nАдреси та типи транспорту НЕ збережуться.\nДля збереження натисніть <Отмена> та <Додати>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                if (MessageBox.Show(AtlantSovt.Properties.Resources.Закрити_форму_без_збереження_адр_та_транспорта, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) != DialogResult.OK)
                 {
                     e.Cancel = true;
                 }

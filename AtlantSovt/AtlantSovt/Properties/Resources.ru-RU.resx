@@ -1,0 +1,754 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="SWIFT" xml:space="preserve">
+    <value>SWIFT</value>
+  </data>
+  <data name="Адреса_успішно_додана" xml:space="preserve">
+    <value>Адрес успешно добавлен </value>
+  </data>
+  <data name="Банківські_данні_успішно_видалено" xml:space="preserve">
+    <value>Банковские данные успешно удалены</value>
+  </data>
+  <data name="Банківські_дані_успішно_додані_клієнту" xml:space="preserve">
+    <value>Банковские данные успешно добавлены клиенту</value>
+  </data>
+  <data name="Ви_не_вибрали_діапазон" xml:space="preserve">
+    <value>Вы не выбрали диапазон</value>
+  </data>
+  <data name="Ви_не_вибрали_перевізника" xml:space="preserve">
+    <value>Вы не выбирали перевозчика</value>
+  </data>
+  <data name="Виберіть_клієнта" xml:space="preserve">
+    <value>Выберите клиента</value>
+  </data>
+  <data name="Виберіть_спочатку_клієнта" xml:space="preserve">
+    <value>Выберите сначала клиента</value>
+  </data>
+  <data name="Видалити_арбайтен" xml:space="preserve">
+    <value>Удалить арбайтен?</value>
+  </data>
+  <data name="Видалити_договір" xml:space="preserve">
+    <value>Удалить контракт </value>
+  </data>
+  <data name="Видалити_експедитора" xml:space="preserve">
+    <value>Удалить экспедитора </value>
+  </data>
+  <data name="Видалити_клієнта" xml:space="preserve">
+    <value>Удалить клиента </value>
+  </data>
+  <data name="Видалити_контакт" xml:space="preserve">
+    <value>Удалить контакт </value>
+  </data>
+  <data name="Використаний_шаблон" xml:space="preserve">
+    <value>Используемый шаблон</value>
+  </data>
+  <data name="Відкрита" xml:space="preserve">
+    <value>Открытая</value>
+  </data>
+  <data name="Дата_завантаження" xml:space="preserve">
+    <value>Дата загрузки</value>
+  </data>
+  <data name="Дата_завершення" xml:space="preserve">
+    <value>Дата завершения</value>
+  </data>
+  <data name="Дата_закриття" xml:space="preserve">
+    <value>Дата закрытия</value>
+  </data>
+  <data name="Дата_оплати" xml:space="preserve">
+    <value>Дата оплаты</value>
+  </data>
+  <data name="Дата_початку" xml:space="preserve">
+    <value>Дата начала</value>
+  </data>
+  <data name="Деякі_дані_не_заповнені_в" xml:space="preserve">
+    <value>Некоторые данные не заполнены в: </value>
+  </data>
+  <data name="Для_збереження_заповніть_хоча_б_одне_поле" xml:space="preserve">
+    <value>Для сохранения заполните хотя бы одно поле</value>
+  </data>
+  <data name="Договір_успішно_видалений" xml:space="preserve">
+    <value>Соглашение было успешно удалено</value>
+  </data>
+  <data name="Другий_учасник_договору" xml:space="preserve">
+    <value>Второй участник соглашения</value>
+  </data>
+  <data name="Експедитор" xml:space="preserve">
+    <value>Экспедитор</value>
+  </data>
+  <data name="Експедитор_успішно_видалений" xml:space="preserve">
+    <value>Форвардер был успешно удален</value>
+  </data>
+  <data name="Експедитор_успішно_доданий" xml:space="preserve">
+    <value>Экспедитор успешно добавлен</value>
+  </data>
+  <data name="Експедитори" xml:space="preserve">
+    <value>Экспедиторы:</value>
+  </data>
+  <data name="За_кордон" xml:space="preserve">
+    <value>За рубежом</value>
+  </data>
+  <data name="Завершити_роботу" xml:space="preserve">
+    <value>Завершить работу?\nНе сохраненная информация будет потеряна!</value>
+  </data>
+  <data name="Закрита" xml:space="preserve">
+    <value>Закрытая</value>
+  </data>
+  <data name="Закрити_форму_без_збереження_банкінських_даних" xml:space="preserve">
+    <value>Закрыть форму без сохранения?\nБанковские данные НЕ сохраняются.\nДля сохранения нажмите &lt;Отмена&gt; и &lt;Добавить Банковские данные&gt;</value>
+  </data>
+  <data name="Закрити_форму_без_збереження_контакту" xml:space="preserve">
+    <value>Закрыть форму без сохранения?\nКонтакт НЕ сохранится.\nДля сохранения нажмите &lt;Отмена&gt; и &lt;Добавить&gt;</value>
+  </data>
+  <data name="Запис_успішно_видалено" xml:space="preserve">
+    <value>Запись успешно удалена</value>
+  </data>
+  <data name="Запис_успішно_додано" xml:space="preserve">
+    <value>Запись успешно добавлена</value>
+  </data>
+  <data name="Заповніть_хоча_б_одне_поле" xml:space="preserve">
+    <value>Заполните хотя бы одно поле</value>
+  </data>
+  <data name="Заявку_успішно_створено" xml:space="preserve">
+    <value>Заявка успешно создана</value>
+  </data>
+  <data name="Збірний" xml:space="preserve">
+    <value>Сборный</value>
+  </data>
+  <data name="Змін_не_знайдено" xml:space="preserve">
+    <value>Изменений не найдено</value>
+  </data>
+  <data name="ІПН" xml:space="preserve">
+    <value>ИПН</value>
+  </data>
+  <data name="Клієнт" xml:space="preserve">
+    <value>Клиент</value>
+  </data>
+  <data name="Клієнт_успішно_видалений" xml:space="preserve">
+    <value>Клиент успешно удален</value>
+  </data>
+  <data name="Клієнт_успішно_доданий" xml:space="preserve">
+    <value>Клиент успешно добавлен</value>
+  </data>
+  <data name="Код_міста" xml:space="preserve">
+    <value>Код города</value>
+  </data>
+  <data name="Коментар" xml:space="preserve">
+    <value>Комментарий:</value>
+  </data>
+  <data name="Коментар0" xml:space="preserve">
+    <value>Комментарий</value>
+  </data>
+  <data name="Контакт_успішно_видалено" xml:space="preserve">
+    <value>Контакт успешно удален</value>
+  </data>
+  <data name="Контакт_успішно_доданий_клієнту" xml:space="preserve">
+    <value>Контакт успешно добавлен клиенту </value>
+  </data>
+  <data name="Контактна_особа" xml:space="preserve">
+    <value>Контактное лицо</value>
+  </data>
+  <data name="Контактні_дані_перевізника" xml:space="preserve">
+    <value>Контанктные данные перевозчика:</value>
+  </data>
+  <data name="Країна" xml:space="preserve">
+    <value>Страна</value>
+  </data>
+  <data name="Мітка" xml:space="preserve">
+    <value>Метка</value>
+  </data>
+  <data name="На_основі" xml:space="preserve">
+    <value>Исходя из</value>
+  </data>
+  <data name="Назва" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="Назва_банку" xml:space="preserve">
+    <value>Наименование банка</value>
+  </data>
+  <data name="Напрямок" xml:space="preserve">
+    <value>Направление:</value>
+  </data>
+  <data name="Напрямок_1" xml:space="preserve">
+    <value>Направление</value>
+  </data>
+  <data name="Натисніть_на_коментар" xml:space="preserve">
+    <value>Нажмите на комментарий</value>
+  </data>
+  <data name="Не_вибрано" xml:space="preserve">
+    <value>Не выбрано</value>
+  </data>
+  <data name="Не_вибрано_жодного_відстеження" xml:space="preserve">
+    <value>Не выбрано ни одного отслеживания</value>
+  </data>
+  <data name="Не_визначено" xml:space="preserve">
+    <value>Не определено</value>
+  </data>
+  <data name="Не_створена" xml:space="preserve">
+    <value>Не создана</value>
+  </data>
+  <data name="Немає_жодного_договору" xml:space="preserve">
+    <value>Нет ни одного контракта</value>
+  </data>
+  <data name="Немає_жодного_експедитора" xml:space="preserve">
+    <value>Нет ни одного экспедитора</value>
+  </data>
+  <data name="Немає_жодного_запису" xml:space="preserve">
+    <value>Нет ни одной записи</value>
+  </data>
+  <data name="Немає_жодного_клієнта" xml:space="preserve">
+    <value>Нет ни одного клиента</value>
+  </data>
+  <data name="Немає_жодної_заявки" xml:space="preserve">
+    <value>Нет ни одной заявки</value>
+  </data>
+  <data name="Немає_з_єднання" xml:space="preserve">
+    <value>Нет соединения</value>
+  </data>
+  <data name="Німецька" xml:space="preserve">
+    <value>Немецкий</value>
+  </data>
+  <data name="Нове_значення_успішно_додане" xml:space="preserve">
+    <value>Новое значение успешно добавлено</value>
+  </data>
+  <data name="Номер_договору" xml:space="preserve">
+    <value>Номер контракта</value>
+  </data>
+  <data name="Номер_експедитора" xml:space="preserve">
+    <value>Номер экспедитора</value>
+  </data>
+  <data name="Номер_заявки" xml:space="preserve">
+    <value>Номер заявки</value>
+  </data>
+  <data name="Номер_рахунку" xml:space="preserve">
+    <value>Номер счета</value>
+  </data>
+  <data name="Номер_рахунку_клієнта" xml:space="preserve">
+    <value>Номер счета клиента</value>
+  </data>
+  <data name="Номер_свідоцтва" xml:space="preserve">
+    <value>Номер свидетельства</value>
+  </data>
+  <data name="Виберіть_спочатку_запис" xml:space="preserve">
+    <value>Выберите сначала запись</value>
+  </data>
+  <data name="Виберіть_спочатку_перевізника" xml:space="preserve">
+    <value>Выберите сначала перевозчика</value>
+  </data>
+  <data name="Обов_язково_виберіть_шаблон" xml:space="preserve">
+    <value>Обовъъязково выберите шаблон!</value>
+  </data>
+  <data name="Одне_з_обов_язкових_полів_не_заповнено" xml:space="preserve">
+    <value>Одно из обязательных полей не заполнено</value>
+  </data>
+  <data name="Оригінал" xml:space="preserve">
+    <value>Оригинал</value>
+  </data>
+  <data name="Оригінал_договору" xml:space="preserve">
+    <value>Первоначальное соглашение</value>
+  </data>
+  <data name="П_І_Б_Директора" xml:space="preserve">
+    <value>Ф.И.О Директора</value>
+  </data>
+  <data name="Перевізник" xml:space="preserve">
+    <value>Перевозчик</value>
+  </data>
+  <data name="Підтвердження_закриття" xml:space="preserve">
+    <value>Подтверждение закрытия</value>
+  </data>
+  <data name="Підтвердіть_видалення" xml:space="preserve">
+    <value>Подтвердите удаление</value>
+  </data>
+  <data name="По_Україні" xml:space="preserve">
+    <value>По Украине</value>
+  </data>
+  <data name="Польська" xml:space="preserve">
+    <value>Польский</value>
+  </data>
+  <data name="Помилка" xml:space="preserve">
+    <value>Ошибка: </value>
+  </data>
+  <data name="Помилка_з_єднання_з_сервером" xml:space="preserve">
+    <value>Ошибка при подключении к серверу!</value>
+  </data>
+  <data name="Помилка_не_правильний_шлях_шаблону" xml:space="preserve">
+    <value>Ошибка: не правильный путь к шаблону</value>
+  </data>
+  <data name="Помилка_при_зміні_запису" xml:space="preserve">
+    <value>Ошибка при изменении записи:</value>
+  </data>
+  <data name="Помилка_при_створенні_заявки" xml:space="preserve">
+    <value>Ошибка при создании заявки: </value>
+  </data>
+  <data name="Помилка_1" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="Порядковий_номер" xml:space="preserve">
+    <value>Порядковый номер</value>
+  </data>
+  <data name="Працівник" xml:space="preserve">
+    <value>Работник</value>
+  </data>
+  <data name="Примітка" xml:space="preserve">
+    <value>Примечание:</value>
+  </data>
+  <data name="Серія_свідоцтва" xml:space="preserve">
+    <value>Серия свидетельства</value>
+  </data>
+  <data name="Спочатку_виберіть_запис" xml:space="preserve">
+    <value>Сначала выберите запись</value>
+  </data>
+  <data name="Спочатку_виберіть_заявку" xml:space="preserve">
+    <value>Сначала выберите заявку</value>
+  </data>
+  <data name="Стан" xml:space="preserve">
+    <value>Состояние</value>
+  </data>
+  <data name="Стан_договору" xml:space="preserve">
+    <value>Статус контракта</value>
+  </data>
+  <data name="Статус_платника_податку" xml:space="preserve">
+    <value>Статус налогоплательщика</value>
+  </data>
+  <data name="Сума_від_клієнта" xml:space="preserve">
+    <value>Сумма от клиента</value>
+  </data>
+  <data name="Сума_перевізнику" xml:space="preserve">
+    <value>Сумма перевозчику</value>
+  </data>
+  <data name="Українська" xml:space="preserve">
+    <value>Украинский</value>
+  </data>
+  <data name="Фізична_адреса" xml:space="preserve">
+    <value>Физический адрес</value>
+  </data>
+  <data name="Ще_не_присвоєно" xml:space="preserve">
+    <value>Еще не назначено</value>
+  </data>
+  <data name="Юридична_адреса" xml:space="preserve">
+    <value>Юридический адрес</value>
+  </data>
+  <data name="ADR" xml:space="preserve">
+    <value>ADR</value>
+  </data>
+  <data name="CMR" xml:space="preserve">
+    <value>CMR</value>
+  </data>
+  <data name="EKMT" xml:space="preserve">
+    <value>EKMT</value>
+  </data>
+  <data name="IBAN" xml:space="preserve">
+    <value>IBAN</value>
+  </data>
+  <data name="TIR" xml:space="preserve">
+    <value>TIR</value>
+  </data>
+  <data name="_Експедитор0" xml:space="preserve">
+    <value>&lt;Экспедитор&gt; </value>
+  </data>
+  <data name="_Експедитор_1_" xml:space="preserve">
+    <value>\r\n- &lt;Экспедитор 1&gt;</value>
+  </data>
+  <data name="_Експедитор_2_" xml:space="preserve">
+    <value>\r\n- &lt;Экспедитор 2&gt;</value>
+  </data>
+  <data name="_Клієнт0" xml:space="preserve">
+    <value>&lt;Клиент&gt; </value>
+  </data>
+  <data name="_Клієнт_" xml:space="preserve">
+    <value>\r\n- &lt;Клиент&gt;</value>
+  </data>
+  <data name="_Перевізник0" xml:space="preserve">
+    <value>&lt;Перевозчик&gt; </value>
+  </data>
+  <data name="_Перевізник_" xml:space="preserve">
+    <value>\r\n- &lt;Перевозчик&gt;</value>
+  </data>
+  <data name="ЄДРПОУ" xml:space="preserve">
+    <value>ЕДРПОУ</value>
+  </data>
+  <data name="Адрес_завантаження" xml:space="preserve">
+    <value> Адресов загрузки</value>
+  </data>
+  <data name="Адрес_замитнення" xml:space="preserve">
+    <value> Адресов затаможивание</value>
+  </data>
+  <data name="Адрес_розвантаження" xml:space="preserve">
+    <value> Адресов разгрузки</value>
+  </data>
+  <data name="Адрес_розмитнення" xml:space="preserve">
+    <value> Адресов растаможивания</value>
+  </data>
+  <data name="Банківські_дані_успішно_додані_перевізнику" xml:space="preserve">
+    <value>Банковские данные успешно добавлены перевозчику </value>
+  </data>
+  <data name="Банківські_данні_успішно_додані_експедитору" xml:space="preserve">
+    <value>Банковские данные успешно добавлены экспедитору </value>
+  </data>
+  <data name="В_експедитора_вже_є_банківські_дані" xml:space="preserve">
+    <value>В экспедитора уже есть банковские данные</value>
+  </data>
+  <data name="В_експедитора_немає_контактів" xml:space="preserve">
+    <value>В экспедитора нет контактов</value>
+  </data>
+  <data name="В_експедитора_ще_немає_банківських_даних" xml:space="preserve">
+    <value>В экспедитора еще нет банковских данных</value>
+  </data>
+  <data name="В_клієнта_вже_є_банківські_дані" xml:space="preserve">
+    <value>В клиента уже есть банковские данные</value>
+  </data>
+  <data name="В_клієнта_немає_контактів" xml:space="preserve">
+    <value>В клиента нет контактов</value>
+  </data>
+  <data name="В_клієнта_ще_немає_банківських_даних" xml:space="preserve">
+    <value>В клиента еще нет банковских данных</value>
+  </data>
+  <data name="В_перевізника_вже_є_банківські_дані" xml:space="preserve">
+    <value>В перевозчика уже есть банковские данные</value>
+  </data>
+  <data name="В_перевізника_немає_контактів" xml:space="preserve">
+    <value>В перевозчика нет контактов</value>
+  </data>
+  <data name="В_перевізника_ще_немає_банківських_даних" xml:space="preserve">
+    <value>В перевозчика еще нет банковских данных</value>
+  </data>
+  <data name="Виберіть_мову_у_меню_редагування" xml:space="preserve">
+    <value>Выберите язык в меню редактирования</value>
+  </data>
+  <data name="Виберіть_спочатку_експедитора" xml:space="preserve">
+    <value>Выберите сначала экспедитора</value>
+  </data>
+  <data name="Виберіть_спочатку_заявку" xml:space="preserve">
+    <value>Выберите сначала заявку</value>
+  </data>
+  <data name="Видалити_банківські_дані_експедитору" xml:space="preserve">
+    <value>Удалить банковские данные экспедитору</value>
+  </data>
+  <data name="Видалити_банківські_дані_клієнту" xml:space="preserve">
+    <value>Удалить банковские данные клиенту</value>
+  </data>
+  <data name="Видалити_банківські_дані_переперевізнику" xml:space="preserve">
+    <value>Удалить банковские данные перевозчику</value>
+  </data>
+  <data name="Видалити_перевізника" xml:space="preserve">
+    <value>Удалить перевозчика </value>
+  </data>
+  <data name="Виникла_помилка_спробуйте_ще_раз" xml:space="preserve">
+    <value>Возникла ошибка, попробуйте еще раз</value>
+  </data>
+  <data name="Дата_додавання" xml:space="preserve">
+    <value>Дата добавления</value>
+  </data>
+  <data name="Дата_останньої_зміни" xml:space="preserve">
+    <value>Дата последнего изменения</value>
+  </data>
+  <data name="Експедитор_1" xml:space="preserve">
+    <value>Экспедитор 1</value>
+  </data>
+  <data name="Експедитор_2" xml:space="preserve">
+    <value>Экспедитор 2</value>
+  </data>
+  <data name="Експедитор_3" xml:space="preserve">
+    <value>Экспедитор 3</value>
+  </data>
+  <data name="Закрити_форму_без_збереження_адр_та_транспорта" xml:space="preserve">
+    <value>Закрыть форму без сохранения?\nАдреса и типы транспорта НЕ сохранятся.\nДля сохранение нажмите &lt;Отмена&gt; и &lt;Добавить&gt;</value>
+  </data>
+  <data name="Закрити_форму_без_збереження_адрес" xml:space="preserve">
+    <value>Закрыть форму без сохранения?\nВыбранные адреса НЕ добавятся.\n Для сохранения выбранных адресов нажмите &lt;Отмена&gt; и &lt;Прибавить к заявке&gt;</value>
+  </data>
+  <data name="Заявка_вже_закрита_змінити_дату_закриття" xml:space="preserve">
+    <value>Заявка уже закрыта, изменить дату закрытия?</value>
+  </data>
+  <data name="Заявка_ще_не_створена_все_рівно_закрити" xml:space="preserve">
+    <value>Заявка еще не создана, все ровно закрыть?</value>
+  </data>
+  <data name="Заявці_не_призначено_номер_спочатку_створіть_документ" xml:space="preserve">
+    <value>Заявке не назначенно номер, сначала создайте документ</value>
+  </data>
+  <data name="Зміни_збережено" xml:space="preserve">
+    <value>Изменения сохранены: </value>
+  </data>
+  <data name="Коментар_успішно_доданий_заявці" xml:space="preserve">
+    <value>Комментарий успешно добавлен заявке </value>
+  </data>
+  <data name="Контакт_успішно_доданий_експедитору" xml:space="preserve">
+    <value>Контакт успешно добавлен экспедитору </value>
+  </data>
+  <data name="Контакт_успішно_доданий_перевізнику" xml:space="preserve">
+    <value>Контакт успешно добавлен перевозчику </value>
+  </data>
+  <data name="Країн" xml:space="preserve">
+    <value>стран</value>
+  </data>
+  <data name="Країн_а" xml:space="preserve">
+    <value> стран(а) 
+</value>
+  </data>
+  <data name="Мова" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="МФО" xml:space="preserve">
+    <value>МФО</value>
+  </data>
+  <data name="Ні" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="Немає_жодного_перевізника" xml:space="preserve">
+    <value>Нет ни одного перевозчика</value>
+  </data>
+  <data name="Номер_авто" xml:space="preserve">
+    <value>Номер авто</value>
+  </data>
+  <data name="Перевізник_успішно_видалений" xml:space="preserve">
+    <value>Перевозчик успешно удален</value>
+  </data>
+  <data name="Перевізник_успішно_доданий" xml:space="preserve">
+    <value>Перевозчик успешно добавлен</value>
+  </data>
+  <data name="Повна назва" xml:space="preserve">
+    <value>Полное имя</value>
+  </data>
+  <data name="Помилка_1_експедитор" xml:space="preserve">
+    <value>Ошибка (1 экспедитор)
+</value>
+  </data>
+  <data name="Помилка_1_форма_завантаження" xml:space="preserve">
+    <value>Ошибка (1 форма загрузки)
+</value>
+  </data>
+  <data name="Помилка_2_експедитор" xml:space="preserve">
+    <value>Ошибка (2 экспедитор)
+</value>
+  </data>
+  <data name="Помилка_2_форма_завантаження" xml:space="preserve">
+    <value>Ошибка (2  форма загрузки)
+</value>
+  </data>
+  <data name="Помилка_3_експедитор" xml:space="preserve">
+    <value>Ошибка (3 экспедитор)
+</value>
+  </data>
+  <data name="Помилка_при_зміні_заявки" xml:space="preserve">
+    <value>Ошибка при изменении заявки: </value>
+  </data>
+  <data name="Помилка_спробуйте_ще_раз" xml:space="preserve">
+    <value>Ошибка, попробуйте еще раз</value>
+  </data>
+  <data name="Продовжити_без_повного_заповнення_даних" xml:space="preserve">
+    <value>\r\nПродолжить без полного заполнения данных?</value>
+  </data>
+  <data name="Так" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="Телефон" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="Тип_ів_транспорту" xml:space="preserve">
+    <value> тип(ов) транспорта
+</value>
+  </data>
+  <data name="Тип_транспорту" xml:space="preserve">
+    <value>Тип транспорта</value>
+  </data>
+  <data name="Типів_транспорту" xml:space="preserve">
+    <value> типов транспорта</value>
+  </data>
+  <data name="Успішно_вибрано" xml:space="preserve">
+    <value>Успешно выбрано</value>
+  </data>
+  <data name="Успішно_вибрано_другого_експедитора" xml:space="preserve">
+    <value>Успешно выбран второй экспедитор</value>
+  </data>
+  <data name="Успішно_вибрано_другу_форму_завантаження" xml:space="preserve">
+    <value>Успешно выбрана вторая форма загрузки</value>
+  </data>
+  <data name="Успішно_вибрано_першого_експедитора" xml:space="preserve">
+    <value>Успешно выбран первый экспедитор</value>
+  </data>
+  <data name="Успішно_вибрано_першу_форму_завантаження" xml:space="preserve">
+    <value>Успешно выбрана первая форма загрузки</value>
+  </data>
+  <data name="Успішно_вибрано_третього_експедитора" xml:space="preserve">
+    <value>Успешно выбран третий экспедитор</value>
+  </data>
+  <data name="Успішно_видалено" xml:space="preserve">
+    <value>Успешно удалено</value>
+  </data>
+  <data name="Успішно_видалено_другого_експедитора" xml:space="preserve">
+    <value>Успешно удален второй экспедитор</value>
+  </data>
+  <data name="Успішно_видалено_другу_форму_завантаження" xml:space="preserve">
+    <value>Успешно удалена вторая форма загрузки</value>
+  </data>
+  <data name="Успішно_видалено_першого_експедитора" xml:space="preserve">
+    <value>Успешно удален первый экспедитор</value>
+  </data>
+  <data name="Успішно_видалено_першу_форму_завантаження" xml:space="preserve">
+    <value>Успешно удалена первая форма загрузки</value>
+  </data>
+  <data name="Успішно_видалено_третього_експедитора" xml:space="preserve">
+    <value>Успешно удален третий экспедитор</value>
+  </data>
+  <data name="Успішно_додано" xml:space="preserve">
+    <value>Успешно добавлено</value>
+  </data>
+  <data name="Успішно_додано_другого_експедитора" xml:space="preserve">
+    <value>Успешно добавлен второй экспедитор</value>
+  </data>
+  <data name="Успішно_додано_першого_експедитора" xml:space="preserve">
+    <value>Успешно добавлен первый экспедитор</value>
+  </data>
+  <data name="Успішно_додано_третього_експедтора" xml:space="preserve">
+    <value>Успешно добавлен третий экспедитор</value>
+  </data>
+  <data name="Успішно_змінено" xml:space="preserve">
+    <value>Успешно изменено</value>
+  </data>
+  <data name="Успішно_змінено_другого_експедтора" xml:space="preserve">
+    <value>Успешно изменен второй экспедитор</value>
+  </data>
+  <data name="Успішно_змінено_другу_форму_затора" xml:space="preserve">
+    <value>Успешно изменена вторая форма загрузки</value>
+  </data>
+  <data name="Успішно_змінено_першого_експедтора" xml:space="preserve">
+    <value>Успешно изменен первый экспедитор</value>
+  </data>
+  <data name="Успішно_змінено_першу_форму_завантаження" xml:space="preserve">
+    <value>Успешно изменена первая форма загрузки</value>
+  </data>
+  <data name="Успішно_змінено_третього_експедитора" xml:space="preserve">
+    <value>Успешно изменен третий экспедитор</value>
+  </data>
+  <data name="Факс" xml:space="preserve">
+    <value>Факс</value>
+  </data>
+  <data name="Чи_є_експедитором" xml:space="preserve">
+    <value>Является ли экспедитором?</value>
+  </data>
+  <data name="IПН" xml:space="preserve">
+    <value>ИПН</value>
+  </data>
+  <data name="Скорочена_Назва" xml:space="preserve">
+    <value>Сокращенное Название</value>
+  </data>
+</root>

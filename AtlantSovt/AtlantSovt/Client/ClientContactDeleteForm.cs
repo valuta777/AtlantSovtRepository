@@ -63,20 +63,20 @@ namespace AtlantSovt
             using (var db = new AtlantSovtContext())
             {
 
-                if (MessageBox.Show("Видалити контакт " + contact.ContactPerson + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_контакт + contact.ContactPerson + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     try
                     {
                         db.ClientContacts.Attach(contact);
                         db.ClientContacts.Remove(contact);
                         db.SaveChanges();
-                        MessageBox.Show("Контакт успішно видалено");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Контакт_успішно_видалено);
                         ClientUpdateSelectDeleteContactComboBox.Items.Remove(ClientUpdateSelectDeleteContactComboBox.SelectedItem);
                     }
                     catch (Exception ex)
                     {
                         Log.Write(ex);
-                        MessageBox.Show("Помилка!" + Environment.NewLine + ex.Message);
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + Environment.NewLine + ex.Message);
                     }
                 }
             }

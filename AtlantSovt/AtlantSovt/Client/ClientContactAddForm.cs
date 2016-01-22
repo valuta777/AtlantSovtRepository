@@ -50,11 +50,11 @@ namespace AtlantSovt
                     IsAdding = IsAddingnew;
                     if (IsAdding)
                     {
-                        return "Контакт успішно доданий клієнту [" + New_ClientContact.ClientId + "]\n";
+                        return AtlantSovt.Properties.Resources.Контакт_успішно_доданий_клієнту + "[" + New_ClientContact.ClientId + @"]";
                     }
                     else
                     {
-                        MessageBox.Show("Контакт успішно доданий клієнту " + New_ClientContact.ClientId);
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Контакт_успішно_доданий_клієнту + New_ClientContact.ClientId);
                         return string.Empty;
                     }                    
 
@@ -87,7 +87,7 @@ namespace AtlantSovt
             }
             else
             {
-                MessageBox.Show("Для збереження заповніть хочаб одне поле");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Для_збереження_заповніть_хоча_б_одне_поле);
             }
         }
 
@@ -102,7 +102,7 @@ namespace AtlantSovt
             {
                 if (clientAddContactPersonTextBox.Text != "" || clientAddContactPhoneTextBox.Text != "" || clientAddContactFaxTextBox.Text != "" || clientAddContactEmailTextBox.Text != "")
                 {
-                    if (MessageBox.Show("Закрити форму без збереження?\nКонтакт НЕ збережеться.\n Для збереження натисніть <Отмена> та <Додати контакт>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                    if (MessageBox.Show(AtlantSovt.Properties.Resources.Закрити_форму_без_збереження_контакту, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) != DialogResult.OK)
                     {
                         e.Cancel = true;
                     }

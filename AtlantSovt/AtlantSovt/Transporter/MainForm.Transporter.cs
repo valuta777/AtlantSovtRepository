@@ -61,21 +61,21 @@ namespace AtlantSovt
                     Director = t.Director,
                     PhysicalAddress = t.PhysicalAddress,
                     GeographyAddress = t.GeographyAddress,
-                    ContractType = (t.ContractType == true) ? "Оригінал" : "Факс",
+                    ContractType = (t.ContractType == true) ? AtlantSovt.Properties.Resources.Оригінал : AtlantSovt.Properties.Resources.Факс,
                     TaxPayerStatusId = t.TaxPayerStatu.Status,
                     WorkDocumentId = t.WorkDocument.Status,
                 };
 
                 transporterShowDataGridView.DataSource = query.ToList();
-                transporterShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                transporterShowDataGridView.Columns[1].HeaderText = "Повна Назва";
-                transporterShowDataGridView.Columns[2].HeaderText = "Скорочена Назва";
-                transporterShowDataGridView.Columns[3].HeaderText = "П.І.Б. Директора";
-                transporterShowDataGridView.Columns[4].HeaderText = "Фізична адреса";
-                transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
-                transporterShowDataGridView.Columns[6].HeaderText = "Стан договору";
-                transporterShowDataGridView.Columns[7].HeaderText = "Статус платника податку";
-                transporterShowDataGridView.Columns[8].HeaderText = "На основі";
+                transporterShowDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                transporterShowDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Повна_назва;
+                transporterShowDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Скорочена_Назва;
+                transporterShowDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.П_І_Б_Директора;
+                transporterShowDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Фізична_адреса;
+                transporterShowDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Юридична_адреса;
+                transporterShowDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Стан_договору;
+                transporterShowDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Статус_платника_податку;
+                transporterShowDataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.На_основі;
 
 
             } transporterShowDataGridView.Update();
@@ -99,10 +99,10 @@ namespace AtlantSovt
                         Email = con.Email,
                     };
                     transporterShowContactsDataGridView.DataSource = query.ToList();
-                    transporterShowContactsDataGridView.Columns[0].HeaderText = "Контактна особа";
-                    transporterShowContactsDataGridView.Columns[1].HeaderText = "Телефон";
-                    transporterShowContactsDataGridView.Columns[2].HeaderText = "Факс";
-                    transporterShowContactsDataGridView.Columns[3].HeaderText = "Email";
+                    transporterShowContactsDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Контактна_особа;
+                    transporterShowContactsDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Телефон;
+                    transporterShowContactsDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Факс;
+                    transporterShowContactsDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Email;
 
                     var query1 =
                         from f in db.Transporters
@@ -128,15 +128,15 @@ namespace AtlantSovt
                     };
 
                     transporterShowBankDetailsDataGridView.DataSource = query2.ToList();
-                    transporterShowBankDetailsDataGridView.Columns[0].HeaderText = "Назва банку";
-                    transporterShowBankDetailsDataGridView.Columns[1].HeaderText = "МФО";
-                    transporterShowBankDetailsDataGridView.Columns[2].HeaderText = "Номер рахунку";
-                    transporterShowBankDetailsDataGridView.Columns[3].HeaderText = "ЕДРПОУ";
-                    transporterShowBankDetailsDataGridView.Columns[4].HeaderText = "IПН";
-                    transporterShowBankDetailsDataGridView.Columns[5].HeaderText = "Серія свідоцтва";
-                    transporterShowBankDetailsDataGridView.Columns[6].HeaderText = "Номер свідоцтва";
-                    transporterShowBankDetailsDataGridView.Columns[7].HeaderText = "SWIFT";
-                    transporterShowBankDetailsDataGridView.Columns[8].HeaderText = "IBAN";
+                    transporterShowBankDetailsDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Назва_банку;
+                    transporterShowBankDetailsDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.МФО;
+                    transporterShowBankDetailsDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Номер_рахунку;
+                    transporterShowBankDetailsDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.ЄДРПОУ;
+                    transporterShowBankDetailsDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.IПН;
+                    transporterShowBankDetailsDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Серія_свідоцтва;
+                    transporterShowBankDetailsDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Номер_свідоцтва;
+                    transporterShowBankDetailsDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.SWIFT;
+                    transporterShowBankDetailsDataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.IBAN;
 
                    var query3 =
                    from tc in db.TransporterCountries
@@ -147,13 +147,13 @@ namespace AtlantSovt
                    };
 
                     transporterShowCountryDataGridView.DataSource = query3.ToList();
-                    transporterShowCountryDataGridView.Columns[0].HeaderText = "Країна";
+                    transporterShowCountryDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Країна;
 
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Немає жодного перевізника");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_перевізника);
                 }
             }
 
@@ -246,14 +246,14 @@ namespace AtlantSovt
                         };
 
                             transporterShowDataGridView.DataSource = getTransporters.ToList();
-                            transporterShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                            transporterShowDataGridView.Columns[1].HeaderText = "Повна Назва";
-                            transporterShowDataGridView.Columns[2].HeaderText = "Скорочена Назва";
-                            transporterShowDataGridView.Columns[3].HeaderText = "П.І.Б. Директора";
-                            transporterShowDataGridView.Columns[4].HeaderText = "Фізична адреса";
-                            transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
-                            transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
-                            transporterShowDataGridView.Columns[7].HeaderText = "На основі";
+                            transporterShowDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                            transporterShowDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Повна_назва;
+                            transporterShowDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Скорочена_Назва;
+                            transporterShowDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.П_І_Б_Директора;
+                            transporterShowDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Фізична_адреса;
+                            transporterShowDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Юридична_адреса;
+                            transporterShowDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Статус_платника_податку;
+                            transporterShowDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.На_основі;
                             transporterShowDataGridView.Update();
 
                     }
@@ -289,14 +289,14 @@ namespace AtlantSovt
                         };
 
                             transporterShowDataGridView.DataSource = getTransporters.ToList();
-                            transporterShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                            transporterShowDataGridView.Columns[1].HeaderText = "Повна Назва";
-                            transporterShowDataGridView.Columns[2].HeaderText = "Скорочена Назва";
-                            transporterShowDataGridView.Columns[3].HeaderText = "П.І.Б. Директора";
-                            transporterShowDataGridView.Columns[4].HeaderText = "Фізична адреса";
-                            transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
-                            transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
-                            transporterShowDataGridView.Columns[7].HeaderText = "На основі";
+                            transporterShowDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                            transporterShowDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Повна_назва;
+                            transporterShowDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Скорочена_Назва;
+                            transporterShowDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.П_І_Б_Директора;
+                            transporterShowDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Фізична_адреса;
+                            transporterShowDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Юридична_адреса;
+                            transporterShowDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Статус_платника_податку;
+                            transporterShowDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.На_основі;
 
                             transporterShowDataGridView.Update();
                     }
@@ -1590,14 +1590,14 @@ namespace AtlantSovt
                             transporterShowDataGridView.DataSource = OnlyFiltersQueryADAndZbornyAndEKMTAndCMRAndTURAndIfForwarderChecked.ToList();       //63
                         }
                        
-                        transporterShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                        transporterShowDataGridView.Columns[1].HeaderText = "Повна Назва";
-                        transporterShowDataGridView.Columns[2].HeaderText = "Скорочена Назва";
-                        transporterShowDataGridView.Columns[3].HeaderText = "П.І.Б. Директора";
-                        transporterShowDataGridView.Columns[4].HeaderText = "Фізична адреса";
-                        transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
-                        transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
-                        transporterShowDataGridView.Columns[7].HeaderText = "На основі";
+                        transporterShowDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                        transporterShowDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Повна_назва;
+                        transporterShowDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Скорочена_Назва;
+                        transporterShowDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.П_І_Б_Директора;
+                        transporterShowDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Фізична_адреса;
+                        transporterShowDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Юридична_адреса;
+                        transporterShowDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Статус_платника_податку;
+                        transporterShowDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.На_основі;
 
                         transporterShowDataGridView.Update();
 
@@ -1636,14 +1636,14 @@ namespace AtlantSovt
                             };
 
                         transporterShowDataGridView.DataSource = getTransporters.ToList();
-                        transporterShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                        transporterShowDataGridView.Columns[1].HeaderText = "Повна Назва";
-                        transporterShowDataGridView.Columns[2].HeaderText = "Скорочена Назва";
-                        transporterShowDataGridView.Columns[3].HeaderText = "П.І.Б. Директора";
-                        transporterShowDataGridView.Columns[4].HeaderText = "Фізична адреса";
-                        transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
-                        transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
-                        transporterShowDataGridView.Columns[7].HeaderText = "На основі";
+                        transporterShowDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                        transporterShowDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Повна_назва;
+                        transporterShowDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Скорочена_Назва;
+                        transporterShowDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.П_І_Б_Директора;
+                        transporterShowDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Фізична_адреса;
+                        transporterShowDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Юридична_адреса;
+                        transporterShowDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Статус_платника_податку;
+                        transporterShowDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.На_основі;
                         transporterShowDataGridView.Update();
                     }
                     #endregion
@@ -3313,14 +3313,14 @@ namespace AtlantSovt
                             transporterShowDataGridView.DataSource = FiltersAndCountriesQueryADAndZbornyAndEKMTAndCMRAndTURAndIfForwarderChecked.ToList();       //63
                         }
 
-                        transporterShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                        transporterShowDataGridView.Columns[1].HeaderText = "Повна Назва";
-                        transporterShowDataGridView.Columns[2].HeaderText = "Скорочена Назва";
-                        transporterShowDataGridView.Columns[3].HeaderText = "П.І.Б. Директора";
-                        transporterShowDataGridView.Columns[4].HeaderText = "Фізична адреса";
-                        transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
-                        transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
-                        transporterShowDataGridView.Columns[7].HeaderText = "На основі";
+                        transporterShowDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                        transporterShowDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Повна_назва;
+                        transporterShowDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Скорочена_Назва;
+                        transporterShowDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.П_І_Б_Директора;
+                        transporterShowDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Фізична_адреса;
+                        transporterShowDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Юридична_адреса;
+                        transporterShowDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Статус_платника_податку;
+                        transporterShowDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.На_основі;
 
                         transporterShowDataGridView.Update();
 
@@ -4990,14 +4990,14 @@ namespace AtlantSovt
                             transporterShowDataGridView.DataSource = FiltersAndVehiclesQueryADAndZbornyAndEKMTAndCMRAndTURAndIfForwarderChecked.ToList();       //63
                         }
 
-                        transporterShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                        transporterShowDataGridView.Columns[1].HeaderText = "Повна Назва";
-                        transporterShowDataGridView.Columns[2].HeaderText = "Скорочена Назва";
-                        transporterShowDataGridView.Columns[3].HeaderText = "П.І.Б. Директора";
-                        transporterShowDataGridView.Columns[4].HeaderText = "Фізична адреса";
-                        transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
-                        transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
-                        transporterShowDataGridView.Columns[7].HeaderText = "На основі";
+                        transporterShowDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                        transporterShowDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Повна_назва;
+                        transporterShowDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Скорочена_Назва;
+                        transporterShowDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.П_І_Б_Директора;
+                        transporterShowDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Фізична_адреса;
+                        transporterShowDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Юридична_адреса;
+                        transporterShowDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Статус_платника_податку;
+                        transporterShowDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.На_основі;
 
                         transporterShowDataGridView.Update();
 
@@ -7046,14 +7046,14 @@ namespace AtlantSovt
                             transporterShowDataGridView.DataSource = FiltersAndCountriesAndVehiclesQueryADAndZbornyAndEKMTAndCMRAndTURAndIfForwarderChecked.ToList();       //63
                         }
 
-                        transporterShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                        transporterShowDataGridView.Columns[1].HeaderText = "Повна Назва";
-                        transporterShowDataGridView.Columns[2].HeaderText = "Скорочена Назва";
-                        transporterShowDataGridView.Columns[3].HeaderText = "П.І.Б. Директора";
-                        transporterShowDataGridView.Columns[4].HeaderText = "Фізична адреса";
-                        transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
-                        transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
-                        transporterShowDataGridView.Columns[7].HeaderText = "На основі";
+                        transporterShowDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                        transporterShowDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Повна_назва;
+                        transporterShowDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Скорочена_Назва;
+                        transporterShowDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.П_І_Б_Директора;
+                        transporterShowDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Фізична_адреса;
+                        transporterShowDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Юридична_адреса;
+                        transporterShowDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Статус_платника_податку;
+                        transporterShowDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.На_основі;
 
                         transporterShowDataGridView.Update();
 
@@ -7102,14 +7102,14 @@ namespace AtlantSovt
                 };
 
                 transporterShowDataGridView.DataSource = query.ToList();
-                transporterShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                transporterShowDataGridView.Columns[1].HeaderText = "Повна Назва";
-                transporterShowDataGridView.Columns[2].HeaderText = "Скорочена Назва";
-                transporterShowDataGridView.Columns[3].HeaderText = "П.І.Б. Директора";
-                transporterShowDataGridView.Columns[4].HeaderText = "Фізична адреса";
-                transporterShowDataGridView.Columns[5].HeaderText = "Юридична адреса";
-                transporterShowDataGridView.Columns[6].HeaderText = "Статус платника податку";
-                transporterShowDataGridView.Columns[7].HeaderText = "На основі";
+                transporterShowDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                transporterShowDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Повна_назва;
+                transporterShowDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Скорочена_Назва;
+                transporterShowDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.П_І_Б_Директора;
+                transporterShowDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Фізична_адреса;
+                transporterShowDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Юридична_адреса;
+                transporterShowDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Статус_платника_податку;
+                transporterShowDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.На_основі;
 
             } transporterShowDataGridView.Update();
 
@@ -7264,7 +7264,8 @@ namespace AtlantSovt
                         New_Filters.Id = New_Transporter.Id;
                         db.Filters.Add(New_Filters);
                         db.SaveChanges();
-                        string massage = "Перевізник успішно доданий ["+ New_Transporter.Id +"]\n";
+                        string massage = AtlantSovt.Properties.Resources.Перевізник_успішно_доданий + "[" + New_Transporter.Id +@"]
+";
                         if (addTransporterBankDetailsAddForm != null)
                         {
                             massage += addTransporterBankDetailsAddForm.AddTransporterBankDetail(New_Transporter.Id, true);
@@ -7291,7 +7292,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Одне з обов'язкових полів не заповнено");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Одне_з_обов_язкових_полів_не_заповнено);
                 }
             }
         }
@@ -7506,7 +7507,7 @@ namespace AtlantSovt
             {
                 if (selectTransporterDiapasoneUpdateComboBox.Text == "")
                 {
-                    MessageBox.Show("Ви не вибрали діапазон");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Ви_не_вибрали_діапазон);
                 }
                 else
                 {
@@ -7557,7 +7558,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Немає жодних записів");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_запису);
                 }
             }
         }
@@ -7740,11 +7741,11 @@ namespace AtlantSovt
                     db.Entry(transporter).State = EntityState.Modified;
                     db.SaveChanges();
                     
-                    MessageBox.Show("Успішно змінено");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_змінено);
                 }
                 else
                 {
-                    MessageBox.Show("Змін не знайдено");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Змін_не_знайдено);
                 }
             }
         }
@@ -7791,20 +7792,20 @@ namespace AtlantSovt
                 deleteTransporter = db.Transporters.Find(id);
                 if (deleteTransporter != null)
                 {
-                    if (MessageBox.Show("Видалити перевізника " + deleteTransporter.FullName + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_перевізника + deleteTransporter.FullName + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         try
                         {
                             db.Transporters.Attach(deleteTransporter);
                             db.Transporters.Remove(deleteTransporter);
                             db.SaveChanges();
-                            MessageBox.Show("Перевізник успішно видалений");
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Перевізник_успішно_видалений);
                             transporterDeleteComboBox.Items.Remove(transporterDeleteComboBox.SelectedItem);
                         }
                         catch (Exception ex)
                         {
                             Log.Write(ex);
-                            MessageBox.Show("Помилка!" + Environment.NewLine + ex);
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                         }
                     }
                 }
@@ -7817,7 +7818,7 @@ namespace AtlantSovt
             {
                 if (deleteTransporterSelectDiapasoneComboBox.Text == "")
                 {
-                    MessageBox.Show("Ви не вибрали діапазон");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Ви_не_вибрали_діапазон);
                 }
                 else
                 {
@@ -7867,7 +7868,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Немає жодних записів");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_запису);
                     transporterDeleteComboBox.Enabled = false;
                 }
             }

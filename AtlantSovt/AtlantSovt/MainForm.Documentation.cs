@@ -99,7 +99,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Немає жодних записів");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_запису);
                 }
             }
         }
@@ -110,7 +110,7 @@ namespace AtlantSovt
             {
                 if (transporterDiapason.Text == "")
                 {
-                    MessageBox.Show("Ви не вибрали діапазон");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Ви_не_вибрали_діапазон);
                 }
                 else
                 {
@@ -160,7 +160,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Немає жодних записів");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_запису);
                 }
             }
         }
@@ -171,7 +171,7 @@ namespace AtlantSovt
             {
                 if (clientDiapason.Text == "")
                 {
-                    MessageBox.Show("Ви не вибрали діапазон");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Ви_не_вибрали_діапазон);
                 }
                 else
                 {
@@ -265,7 +265,7 @@ namespace AtlantSovt
             catch(Exception ex)
             {
                 Log.Write(ex);
-                MessageBox.Show("Помилка: " + ex.Message);
+                MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
             }
             return isForwarderFull;
         }
@@ -330,7 +330,7 @@ namespace AtlantSovt
             catch (Exception ex)
             {
                 Log.Write(ex);
-                MessageBox.Show("Помилка: " + ex.Message);
+                MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
             }
             return isTransporterFull;
         }
@@ -394,7 +394,7 @@ namespace AtlantSovt
             catch (Exception ex)
             {
                 Log.Write(ex);
-                MessageBox.Show("Помилка: " + ex.Message);
+                MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
             }
             return isClientFull;
         }
@@ -402,7 +402,7 @@ namespace AtlantSovt
         void IsDataComplete()
         {
             bool check = false;
-            string isFull = "Деякі дані не заповнені в: ";
+            string isFull = AtlantSovt.Properties.Resources.Деякі_дані_не_заповнені_в;
             try
             {
                 using (var db = new AtlantSovtContext())
@@ -413,7 +413,7 @@ namespace AtlantSovt
                         if (IsForwarderFull(firstForwarderDocument) != true)
                         {
                             check = true;
-                            isFull += "\r\n- <Експедитор 1> ";
+                            isFull += AtlantSovt.Properties.Resources._Експедитор_1_;
                         }  
                     }
                     if (transporterDocument != null && secondPersonRoleDocumentСomboBox.SelectedIndex == 0)
@@ -421,7 +421,7 @@ namespace AtlantSovt
                         if (IsTransporterFull() != true)
                         {
                             check = true;
-                            isFull += "\r\n- <Перевізник> ";
+                            isFull += AtlantSovt.Properties.Resources._Перевізник_;
                         }
                     }
                     else if (clientDocument != null && secondPersonRoleDocumentСomboBox.SelectedIndex == 1)
@@ -429,7 +429,7 @@ namespace AtlantSovt
                         if (IsClientFull() != true)
                         {
                             check = true;
-                            isFull += "\r\n- <Клієнт> ";
+                            isFull += AtlantSovt.Properties.Resources._Клієнт_;
                         }
                     }
                     else if (secondForwarderDocument != null && secondPersonRoleDocumentСomboBox.SelectedIndex == 2)
@@ -437,13 +437,13 @@ namespace AtlantSovt
                         if (IsForwarderFull(secondForwarderDocument) != true)
                         {
                             check = true;
-                            isFull += "\r\n- <Експедитор 2> ";
+                            isFull += AtlantSovt.Properties.Resources._Експедитор_2_;
                         }  
                     }
 
                     if(check)
                     {
-                        if (MessageBox.Show(isFull + "\r\nПродовжити без повного заповнення даних?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (MessageBox.Show(isFull + AtlantSovt.Properties.Resources.Продовжити_без_повного_заповнення_даних, "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             AddContract();
                             CreateContract();
@@ -463,7 +463,7 @@ namespace AtlantSovt
             catch (Exception ex)
             {
                 Log.Write(ex);
-                MessageBox.Show("Помилка: " + ex.Message);
+                MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
             }
         }
         
@@ -482,22 +482,22 @@ namespace AtlantSovt
                     Id = c.Id,
                     ContractNumber = c.ContractNumber + @"/" + c.ContractDataBegin.Value.Year,
                     Forwarder = c.ForwarderContracts.Where(f => f.IsFirst == 0).FirstOrDefault().Forwarder.Name,
-                    Person2 = (c.ForwarderContracts.Where(f => f.IsFirst == 1).Count() == 1) ? "<Експедитор> " + c.ForwarderContracts.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.Name : (c.TransporterId != null) ? "<Перевізник> " + c.Transporter.FullName : "<Клієнт> " + c.Client.Name,
+                    Person2 = (c.ForwarderContracts.Where(f => f.IsFirst == 1).Count() == 1) ? AtlantSovt.Properties.Resources._Експедитор0 + c.ForwarderContracts.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.Name : (c.TransporterId != null) ? AtlantSovt.Properties.Resources._Перевізник0 + c.Transporter.FullName : AtlantSovt.Properties.Resources._Клієнт0 + c.Client.Name,
                     ContractDateBegin = c.ContractDataBegin,
                     ContractDateEnd = c.ContractDataEnd,
-                    Type = (c.Type == 0) ? "По Україні" : "За кордон",
+                    Type = (c.Type == 0) ? AtlantSovt.Properties.Resources.По_Україні : AtlantSovt.Properties.Resources.За_кордон,
                     Template = c.TemplateName
                 };
 
                 contractShowDataGridView.DataSource = query.ToList();
-                contractShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                contractShowDataGridView.Columns[1].HeaderText = "Номер договору";
-                contractShowDataGridView.Columns[2].HeaderText = "Експедитор";
-                contractShowDataGridView.Columns[3].HeaderText = "Другий учасник договору";
-                contractShowDataGridView.Columns[4].HeaderText = "Дата початку";
-                contractShowDataGridView.Columns[5].HeaderText = "Дата завершення";
-                contractShowDataGridView.Columns[6].HeaderText = "Напрямок";
-                contractShowDataGridView.Columns[7].HeaderText = "Використаний шаблон";
+                contractShowDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                contractShowDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_договору;
+                contractShowDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Експедитор;
+                contractShowDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Другий_учасник_договору;
+                contractShowDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Дата_початку;
+                contractShowDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Дата_завершення;
+                contractShowDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Напрямок_1;
+                contractShowDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Використаний_шаблон;
 
             } contractShowDataGridView.Update();
         }
@@ -518,22 +518,22 @@ namespace AtlantSovt
                     Id = c.Id,
                     ContractNumber = c.ContractNumber + @"/" + c.ContractDataBegin.Value.Year,
                     Forwarder = c.ForwarderContracts.Where(f => f.IsFirst == 0).FirstOrDefault().Forwarder.Name,
-                    Person2 = (c.ForwarderContracts.Where(f => f.IsFirst == 1).Count() == 1) ? "<Експедитор> " + c.ForwarderContracts.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.Name : (c.TransporterId != null) ? "<Перевізник> " + c.Transporter.FullName : "<Клієнт> " + c.Client.Name,
+                    Person2 = (c.ForwarderContracts.Where(f => f.IsFirst == 1).Count() == 1) ? AtlantSovt.Properties.Resources._Експедитор0 + c.ForwarderContracts.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.Name : (c.TransporterId != null) ? AtlantSovt.Properties.Resources._Перевізник0 + c.Transporter.FullName : AtlantSovt.Properties.Resources._Клієнт0 + c.Client.Name,
                     ContractDateBegin = c.ContractDataBegin,
                     ContractDateEnd = c.ContractDataEnd,
-                    Type = (c.Type == 0) ? "По Україні" : "За кордон",
+                    Type = (c.Type == 0) ? AtlantSovt.Properties.Resources.По_Україні : AtlantSovt.Properties.Resources.За_кордон,
                     Template = c.TemplateName
                 };
 
                 contractShowDataGridView.DataSource = query.ToList();
-                contractShowDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                contractShowDataGridView.Columns[1].HeaderText = "Номер договору";
-                contractShowDataGridView.Columns[2].HeaderText = "Експедитор";
-                contractShowDataGridView.Columns[3].HeaderText = "Другий учасник договору";
-                contractShowDataGridView.Columns[4].HeaderText = "Дата початку";
-                contractShowDataGridView.Columns[5].HeaderText = "Дата завершення";
-                contractShowDataGridView.Columns[6].HeaderText = "Напрямок";
-                contractShowDataGridView.Columns[7].HeaderText = "Використаний шаблон";
+                contractShowDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                contractShowDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_договору;
+                contractShowDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Експедитор;
+                contractShowDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Другий_учасник_договору;
+                contractShowDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Дата_початку;
+                contractShowDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Дата_завершення;
+                contractShowDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Напрямок_1;
+                contractShowDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Використаний_шаблон;
 
             } contractShowDataGridView.Update();
         }
@@ -571,7 +571,7 @@ namespace AtlantSovt
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Немає жодного договору");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_договору);
                 }
             }
         }
@@ -618,10 +618,10 @@ namespace AtlantSovt
                         Email = con.Email,
                     };
                     contractShowTransporterContactDataGridView.DataSource = query.ToList();
-                    contractShowTransporterContactDataGridView.Columns[0].HeaderText = "Контактна особа";
-                    contractShowTransporterContactDataGridView.Columns[1].HeaderText = "Телефон";
-                    contractShowTransporterContactDataGridView.Columns[2].HeaderText = "Факс";
-                    contractShowTransporterContactDataGridView.Columns[3].HeaderText = "Email";
+                    contractShowTransporterContactDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Контактна_особа;
+                    contractShowTransporterContactDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Телефон;
+                    contractShowTransporterContactDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Факс;
+                    contractShowTransporterContactDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Email;
 
                     contractShowOpenDocButton.Enabled = true;
                     contractShowDeleteContractButton.Enabled = true;
@@ -634,7 +634,7 @@ namespace AtlantSovt
                     Log.Write(ex);
                     contractShowOpenDocButton.Enabled = false;
                     contractShowDeleteContractButton.Enabled = false;
-                    MessageBox.Show("Немає жодного договору");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_договору);
                 }
             }
             contractShowTransporterContactDataGridView.Update();
@@ -647,7 +647,7 @@ namespace AtlantSovt
 
             if (contractFilecheckedListBox.CheckedItems.Count == 0)
             {
-                MessageBox.Show("Обов'язково виберіть шаблон!");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Обов_язково_виберіть_шаблон);
                 return;
             }
 
@@ -684,7 +684,7 @@ namespace AtlantSovt
                 catch(Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Помилка: " + ex.Message);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                 }
                 contractCount = new DocumentCounter();
                 try
@@ -709,7 +709,7 @@ namespace AtlantSovt
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Помилка: " + ex.Message);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                 }
 
                 try
@@ -766,7 +766,7 @@ namespace AtlantSovt
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Помилка: " + ex.Message);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                 }
             }
         }
@@ -783,19 +783,19 @@ namespace AtlantSovt
 
                     if (contract != null)
                     {
-                        if (MessageBox.Show("Видалити договір " + contract.ContractNumber + @"\" + contract.ContractDataBegin.Value.Year + " ?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_договір + contract.ContractNumber + @"\" + contract.ContractDataBegin.Value.Year + " ?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             try
                             {
                                 db.Contracts.Attach(contract);
                                 db.Contracts.Remove(contract);
                                 db.SaveChanges();
-                                MessageBox.Show("Договір успішно видалений");
+                                MessageBox.Show(AtlantSovt.Properties.Resources.Договір_успішно_видалений);
                             }
                             catch (Exception ex)
                             {
                                 Log.Write(ex);
-                                MessageBox.Show("Помилка!" + Environment.NewLine + ex);
+                                MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                             }
                         }
                     }
@@ -804,7 +804,7 @@ namespace AtlantSovt
             catch (Exception ex)
             {
                 Log.Write(ex);
-                MessageBox.Show("Немає жодного договору");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_договору);
                 contractShowOpenDocButton.Enabled = false;
             }
         }
@@ -1143,7 +1143,7 @@ namespace AtlantSovt
             catch(Exception ex)
             {
                 Log.Write(ex);
-                MessageBox.Show("Помилка: " + ex.Message);
+                MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                 wordDocument.Close(Word.WdSaveOptions.wdDoNotSaveChanges);
             }
         }
@@ -1174,7 +1174,7 @@ namespace AtlantSovt
                 contractShowOpenDocButton.Enabled = false;
                 contractShowDeleteContractButton.Enabled = false;
                 contractShowTransporterContactDataGridView.Visible = false;
-                MessageBox.Show("Немає жодного договору");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_договору);
             }
         }
         
@@ -1242,7 +1242,7 @@ namespace AtlantSovt
             catch (Exception ex)
             {
                 Log.Write(ex);
-                MessageBox.Show("Помилка: не правильний шлях шаблону");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_не_правильний_шлях_шаблону);
             }
             return filePath;
         }

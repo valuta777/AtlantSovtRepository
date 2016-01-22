@@ -62,19 +62,19 @@ namespace AtlantSovt
             using (var db = new AtlantSovtContext())
             {
 
-                if (MessageBox.Show("Видалити контакт " + contact.ContactPerson + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_контакт + contact.ContactPerson + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     try
                     {
                         db.TransporterContacts.Attach(contact);
                         db.TransporterContacts.Remove(contact);
                         db.SaveChanges();
-                        MessageBox.Show("Контакт успішно видалено");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Контакт_успішно_видалено);
                         transporterUpdateSelectDeleteContactComboBox.Items.Remove(transporterUpdateSelectDeleteContactComboBox.SelectedItem);
                     }
                     catch (Exception e)
                     {
-                        MessageBox.Show("Помилка!" + Environment.NewLine + e);
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + e.Message);
                     }
                 }
             }

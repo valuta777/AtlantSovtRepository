@@ -171,11 +171,11 @@ namespace AtlantSovt
                             db.SaveChanges();
                             if (newCountries.Count != 0)
                             {
-                               MessageBox.Show("Успішно додано " + newCountries.Count + " країн"); 
+                               MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_додано + newCountries.Count + AtlantSovt.Properties.Resources.Країн); 
                             }
                             if (deletedCountries.Count != 0)
                             {
-                                MessageBox.Show("Успішно видалено " + deletedCountries.Count + " країн");
+                                MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_видалено + deletedCountries.Count + AtlantSovt.Properties.Resources.Країн);
                             }
                                                     
                        }           
@@ -183,7 +183,7 @@ namespace AtlantSovt
                 }
                 catch(Exception e)
                 {
-                    MessageBox.Show("Помилка!!",e.ToString());
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + e.Message);
                     Log.Write(e);
                 }
             }
@@ -242,11 +242,11 @@ namespace AtlantSovt
                             db.SaveChanges();
                                 if (newVehicles.Count != 0)
                                 {
-                                    MessageBox.Show("Успішно додано " + newVehicles.Count + " типів транспорту");
+                                    MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_додано + newVehicles.Count + AtlantSovt.Properties.Resources.Типів_транспорту);
                                 }
                                 if (deletedVehicles.Count != 0)
                                 {
-                                    MessageBox.Show("Успішно видалено " + deletedVehicles.Count + " типів транспорту");
+                                    MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_видалено + deletedVehicles.Count + AtlantSovt.Properties.Resources.Типів_транспорту);
                                 }
                             }
                         }
@@ -255,7 +255,7 @@ namespace AtlantSovt
                 catch (Exception e)
                 {
                     Log.Write(e);
-                    MessageBox.Show("Помилка!!", e.ToString());
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + e.Message);
                 }
             }
         }

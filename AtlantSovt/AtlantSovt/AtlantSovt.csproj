@@ -249,6 +249,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Additions\menuStripRenderer.cs" />
+    <Compile Include="MlString.cs" />
     <Compile Include="SelectCustomsAddressesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,6 +261,12 @@
     </Compile>
     <Compile Include="SelectDownloadAddressesForm.Designer.cs">
       <DependentUpon>SelectDownloadAddressesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectLanguage.designer.cs">
+      <DependentUpon>SelectLanguage.cs</DependentUpon>
     </Compile>
     <Compile Include="SelectUncustomsAddressesForm.cs">
       <SubType>Form</SubType>
@@ -422,8 +429,113 @@
     <Compile Include="Transporter\TransporterShowFiltrationForm.Designer.cs">
       <DependentUpon>TransporterShowFiltrationForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddAdditionalTermsForm.ru-RU.resx">
+      <DependentUpon>AddAdditionalTermsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAdditionalTermsForm.uk-UA.resx">
+      <DependentUpon>AddAdditionalTermsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAddressForm.ru-RU.resx">
+      <DependentUpon>AddAddressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAddressForm.uk-UA.resx">
+      <DependentUpon>AddAddressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCargoForm.ru-RU.resx">
+      <DependentUpon>AddCargoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCargoForm.uk-UA.resx">
+      <DependentUpon>AddCargoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCountryForm.ru-RU.resx">
+      <DependentUpon>AddCountryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCountryForm.uk-UA.resx">
+      <DependentUpon>AddCountryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCubeForm.ru-RU.resx">
+      <DependentUpon>AddCubeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCubeForm.uk-UA.resx">
+      <DependentUpon>AddCubeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFineForDelayForm.ru-RU.resx">
+      <DependentUpon>AddFineForDelayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFineForDelayForm.uk-UA.resx">
+      <DependentUpon>AddFineForDelayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddLoadingFormForm.ru-RU.resx">
+      <DependentUpon>AddLoadingFormForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddLoadingFormForm.uk-UA.resx">
+      <DependentUpon>AddLoadingFormForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrderDenyForm.ru-RU.resx">
+      <DependentUpon>AddOrderDenyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrderDenyForm.uk-UA.resx">
+      <DependentUpon>AddOrderDenyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrderNoteForm.ru-RU.resx">
+      <DependentUpon>AddOrderNoteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrderNoteForm.uk-UA.resx">
+      <DependentUpon>AddOrderNoteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPaymentTermsForm.ru-RU.resx">
+      <DependentUpon>AddPaymentTermsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPaymentTermsForm.uk-UA.resx">
+      <DependentUpon>AddPaymentTermsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRegularyDelayForm.ru-RU.resx">
+      <DependentUpon>AddRegularyDelayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRegularyDelayForm.uk-UA.resx">
+      <DependentUpon>AddRegularyDelayForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStaffForm.ru-RU.resx">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStaffForm.uk-UA.resx">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTaxPayerStatusForm.ru-RU.resx">
+      <DependentUpon>AddTaxPayerStatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTaxPayerStatusForm.uk-UA.resx">
+      <DependentUpon>AddTaxPayerStatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTirCmrForm.ru-RU.resx">
+      <DependentUpon>AddTirCmrForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTirCmrForm.uk-UA.resx">
+      <DependentUpon>AddTirCmrForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTrackingCloseDateForm.resx">
+      <DependentUpon>AddTrackingCloseDateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTrackingCloseDateForm.ru-RU.resx">
+      <DependentUpon>AddTrackingCloseDateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTrackingCloseDateForm.uk-UA.resx">
+      <DependentUpon>AddTrackingCloseDateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTrackingCommentForm.ru-RU.resx">
+      <DependentUpon>AddTrackingCommentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTrackingCommentForm.uk-UA.resx">
+      <DependentUpon>AddTrackingCommentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTrailerForm.ru-RU.resx">
+      <DependentUpon>AddTrailerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTrailerForm.uk-UA.resx">
+      <DependentUpon>AddTrailerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddTransporterVehicleForm.resx">
       <DependentUpon>AddTransporterVehicleForm.cs</DependentUpon>
@@ -470,26 +582,161 @@
     <EmbeddedResource Include="AddAddressForm.resx">
       <DependentUpon>AddAddressForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddTransporterVehicleForm.ru-RU.resx">
+      <DependentUpon>AddTransporterVehicleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTransporterVehicleForm.uk-UA.resx">
+      <DependentUpon>AddTransporterVehicleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddWorkDocumentForm.ru-RU.resx">
+      <DependentUpon>AddWorkDocumentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddWorkDocumentForm.uk-UA.resx">
+      <DependentUpon>AddWorkDocumentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Client\ClientBankDetailsAddForm.resx">
       <DependentUpon>ClientBankDetailsAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientBankDetailsAddForm.ru-RU.resx">
+      <DependentUpon>ClientBankDetailsAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientBankDetailsAddForm.uk-UA.resx">
+      <DependentUpon>ClientBankDetailsAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientBankDetailsUpdateForm.ru-RU.resx">
+      <DependentUpon>ClientBankDetailsUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientBankDetailsUpdateForm.uk-UA.resx">
+      <DependentUpon>ClientBankDetailsUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientContactAddForm.ru-RU.resx">
+      <DependentUpon>ClientContactAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientContactAddForm.uk-UA.resx">
+      <DependentUpon>ClientContactAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientContactDeleteForm.ru-RU.resx">
+      <DependentUpon>ClientContactDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientContactDeleteForm.uk-UA.resx">
+      <DependentUpon>ClientContactDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientContactUpdateForm.ru-RU.resx">
+      <DependentUpon>ClientContactUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientContactUpdateForm.uk-UA.resx">
+      <DependentUpon>ClientContactUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExportTrackingToExcelForm.resx">
       <DependentUpon>ExportTrackingToExcelForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExportTrackingToExcelForm.ru-RU.resx">
+      <DependentUpon>ExportTrackingToExcelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportTrackingToExcelForm.uk-UA.resx">
+      <DependentUpon>ExportTrackingToExcelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forwarder\ForwarderBankDetailsAddForm.ru-RU.resx">
+      <DependentUpon>ForwarderBankDetailsAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forwarder\ForwarderBankDetailsAddForm.uk-UA.resx">
+      <DependentUpon>ForwarderBankDetailsAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forwarder\ForwarderBankDetailsUpdateForm.ru-RU.resx">
+      <DependentUpon>ForwarderBankDetailsUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forwarder\ForwarderBankDetailsUpdateForm.uk-UA.resx">
+      <DependentUpon>ForwarderBankDetailsUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forwarder\ForwarderContactAddForm.ru-RU.resx">
+      <DependentUpon>ForwarderContactAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forwarder\ForwarderContactAddForm.uk-UA.resx">
+      <DependentUpon>ForwarderContactAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forwarder\ForwarderContactDeleteForm.ru-RU.resx">
+      <DependentUpon>ForwarderContactDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forwarder\ForwarderContactDeleteForm.uk-UA.resx">
+      <DependentUpon>ForwarderContactDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forwarder\ForwarderContactUpdateForm.ru-RU.resx">
+      <DependentUpon>ForwarderContactUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forwarder\ForwarderContactUpdateForm.uk-UA.resx">
+      <DependentUpon>ForwarderContactUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.ru-RU.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.uk-UA.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru-RU.resx">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.uk-UA.resx">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectCustomsAddressesForm.resx">
+      <DependentUpon>SelectCustomsAddressesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectCustomsAddressesForm.ru-RU.resx">
+      <DependentUpon>SelectCustomsAddressesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectCustomsAddressesForm.uk-UA.resx">
       <DependentUpon>SelectCustomsAddressesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectDownloadAddressesForm.resx">
       <DependentUpon>SelectDownloadAddressesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SelectDownloadAddressesForm.ru-RU.resx">
+      <DependentUpon>SelectDownloadAddressesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectDownloadAddressesForm.uk-UA.resx">
+      <DependentUpon>SelectDownloadAddressesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectLanguage.resx">
+      <DependentUpon>SelectLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectLanguage.ru-RU.resx">
+      <DependentUpon>SelectLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectLanguage.uk-UA.resx">
+      <DependentUpon>SelectLanguage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectUncustomsAddressesForm.resx">
+      <DependentUpon>SelectUncustomsAddressesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectUncustomsAddressesForm.ru-RU.resx">
+      <DependentUpon>SelectUncustomsAddressesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectUncustomsAddressesForm.uk-UA.resx">
       <DependentUpon>SelectUncustomsAddressesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectUploadAddressesForm.resx">
       <DependentUpon>SelectUploadAddressesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SelectUploadAddressesForm.ru-RU.resx">
+      <DependentUpon>SelectUploadAddressesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectUploadAddressesForm.uk-UA.resx">
+      <DependentUpon>SelectUploadAddressesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ShowTrackingCommentForm.resx">
       <DependentUpon>ShowTrackingCommentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowTrackingCommentForm.ru-RU.resx">
+      <DependentUpon>ShowTrackingCommentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowTrackingCommentForm.uk-UA.resx">
+      <DependentUpon>ShowTrackingCommentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterBankDetailsAddForm.ru-RU.resx">
+      <DependentUpon>TransporterBankDetailsAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterBankDetailsAddForm.uk-UA.resx">
+      <DependentUpon>TransporterBankDetailsAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transporter\TransporterBankDetailsUpdateForm.resx">
       <DependentUpon>TransporterBankDetailsUpdateForm.cs</DependentUpon>
@@ -499,6 +746,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Client\ClientContactAddForm.resx">
       <DependentUpon>ClientContactAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterBankDetailsUpdateForm.ru-RU.resx">
+      <DependentUpon>TransporterBankDetailsUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterBankDetailsUpdateForm.uk-UA.resx">
+      <DependentUpon>TransporterBankDetailsUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterContactAddForm.ru-RU.resx">
+      <DependentUpon>TransporterContactAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterContactAddForm.uk-UA.resx">
+      <DependentUpon>TransporterContactAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transporter\TransporterContactDeleteForm.resx">
       <DependentUpon>TransporterContactDeleteForm.cs</DependentUpon>
@@ -523,6 +782,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Client\ClientContactDeleteForm.resx">
       <DependentUpon>ClientContactDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterContactDeleteForm.ru-RU.resx">
+      <DependentUpon>TransporterContactDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterContactDeleteForm.uk-UA.resx">
+      <DependentUpon>TransporterContactDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transporter\TransporterContactUpdateForm.resx">
       <DependentUpon>TransporterContactUpdateForm.cs</DependentUpon>
@@ -556,13 +821,37 @@
     <EmbeddedResource Include="Transporter\TransporterContactAddForm.resx">
       <DependentUpon>TransporterContactAddForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterContactUpdateForm.ru-RU.resx">
+      <DependentUpon>TransporterContactUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterContactUpdateForm.uk-UA.resx">
+      <DependentUpon>TransporterContactUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterCountryAndVehicleSelectForm.ru-RU.resx">
+      <DependentUpon>TransporterCountryAndVehicleSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterCountryAndVehicleSelectForm.uk-UA.resx">
+      <DependentUpon>TransporterCountryAndVehicleSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transporter\TransporterCountryUpdateVehicleSelectForm.resx">
       <DependentUpon>TransporterCountryUpdateVehicleSelectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transporter\TransporterCountryAndVehicleSelectForm.resx">
       <DependentUpon>TransporterCountryAndVehicleSelectForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterCountryUpdateVehicleSelectForm.ru-RU.resx">
+      <DependentUpon>TransporterCountryUpdateVehicleSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterCountryUpdateVehicleSelectForm.uk-UA.resx">
+      <DependentUpon>TransporterCountryUpdateVehicleSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transporter\TransporterShowAdditionalDetailsForm.resx">
+      <DependentUpon>TransporterShowAdditionalDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterShowAdditionalDetailsForm.ru-RU.resx">
+      <DependentUpon>TransporterShowAdditionalDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterShowAdditionalDetailsForm.uk-UA.resx">
       <DependentUpon>TransporterShowAdditionalDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transporter\TransporterShowFiltrationForm.resx">
@@ -571,6 +860,12 @@
     <Compile Include="MainForm.Tracking.cs">
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="Transporter\TransporterShowFiltrationForm.ru-RU.resx">
+      <DependentUpon>TransporterShowFiltrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporter\TransporterShowFiltrationForm.uk-UA.resx">
+      <DependentUpon>TransporterShowFiltrationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -595,6 +890,7 @@
     <None Include="Resources\RU.jpg" />
     <None Include="Resources\UA.jpg" />
     <None Include="Resources\addButton.png" />
+    <Content Include="AtlantSovt_ml.xml" />
     <Content Include="Resources\ConnectionStringList.txt" />
     <None Include="Resources\con_anim.gif" />
     <Content Include="Resources\Logo.ico" />

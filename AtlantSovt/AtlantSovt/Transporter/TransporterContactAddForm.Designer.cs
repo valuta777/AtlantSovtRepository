@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransporterContactAddForm));
             this.nameTransporterLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,93 +42,56 @@
             // 
             // nameTransporterLabel
             // 
-            this.nameTransporterLabel.AutoSize = true;
-            this.nameTransporterLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTransporterLabel.Location = new System.Drawing.Point(12, 9);
+            resources.ApplyResources(this.nameTransporterLabel, "nameTransporterLabel");
             this.nameTransporterLabel.Name = "nameTransporterLabel";
-            this.nameTransporterLabel.Size = new System.Drawing.Size(130, 21);
-            this.nameTransporterLabel.TabIndex = 2;
-            this.nameTransporterLabel.Text = "Контактна особа";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 65);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 21);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Номер телефону";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 121);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 21);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Номер факсу";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 177);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 21);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Email";
             // 
             // contactPersonTransporterContactTextBox
             // 
-            this.contactPersonTransporterContactTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactPersonTransporterContactTextBox.Location = new System.Drawing.Point(12, 33);
+            resources.ApplyResources(this.contactPersonTransporterContactTextBox, "contactPersonTransporterContactTextBox");
             this.contactPersonTransporterContactTextBox.Name = "contactPersonTransporterContactTextBox";
-            this.contactPersonTransporterContactTextBox.Size = new System.Drawing.Size(313, 29);
-            this.contactPersonTransporterContactTextBox.TabIndex = 8;
             // 
             // telephoneNumberTransporterContactTextBox
             // 
-            this.telephoneNumberTransporterContactTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telephoneNumberTransporterContactTextBox.Location = new System.Drawing.Point(11, 89);
+            resources.ApplyResources(this.telephoneNumberTransporterContactTextBox, "telephoneNumberTransporterContactTextBox");
             this.telephoneNumberTransporterContactTextBox.Name = "telephoneNumberTransporterContactTextBox";
-            this.telephoneNumberTransporterContactTextBox.Size = new System.Drawing.Size(313, 29);
-            this.telephoneNumberTransporterContactTextBox.TabIndex = 9;
             // 
             // faxNumberTransporterContactTextBox
             // 
-            this.faxNumberTransporterContactTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.faxNumberTransporterContactTextBox.Location = new System.Drawing.Point(11, 145);
+            resources.ApplyResources(this.faxNumberTransporterContactTextBox, "faxNumberTransporterContactTextBox");
             this.faxNumberTransporterContactTextBox.Name = "faxNumberTransporterContactTextBox";
-            this.faxNumberTransporterContactTextBox.Size = new System.Drawing.Size(313, 29);
-            this.faxNumberTransporterContactTextBox.TabIndex = 10;
             // 
             // emailTransporterContactTextBox
             // 
-            this.emailTransporterContactTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTransporterContactTextBox.Location = new System.Drawing.Point(11, 201);
+            resources.ApplyResources(this.emailTransporterContactTextBox, "emailTransporterContactTextBox");
             this.emailTransporterContactTextBox.Name = "emailTransporterContactTextBox";
-            this.emailTransporterContactTextBox.Size = new System.Drawing.Size(313, 29);
-            this.emailTransporterContactTextBox.TabIndex = 11;
             // 
             // addContactTransporterButton
             // 
-            this.addContactTransporterButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addContactTransporterButton.Location = new System.Drawing.Point(11, 237);
+            resources.ApplyResources(this.addContactTransporterButton, "addContactTransporterButton");
             this.addContactTransporterButton.Name = "addContactTransporterButton";
-            this.addContactTransporterButton.Size = new System.Drawing.Size(313, 48);
-            this.addContactTransporterButton.TabIndex = 12;
-            this.addContactTransporterButton.Text = "Додати контакт";
             this.addContactTransporterButton.UseVisualStyleBackColor = true;
             this.addContactTransporterButton.Click += new System.EventHandler(this.addContactTransporterButton_Click);
             // 
             // TransporterContactAddForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(336, 288);
             this.Controls.Add(this.addContactTransporterButton);
             this.Controls.Add(this.emailTransporterContactTextBox);
             this.Controls.Add(this.faxNumberTransporterContactTextBox);
@@ -141,8 +105,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TransporterContactAddForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Додавання контакту";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TransporterContactAddForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

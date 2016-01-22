@@ -101,7 +101,7 @@ namespace AtlantSovt
                 catch(Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Помилка з'єднання з сервером!", "Немає з'єднання", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_з_єднання_з_сервером, AtlantSovt.Properties.Resources.Немає_з_єднання, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
                     try
                     {
                         if (animationThread.IsAlive)
@@ -150,7 +150,7 @@ namespace AtlantSovt
         }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Завершити роботу?\nНе збережена інформація буде втрачена!", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+            if (MessageBox.Show(AtlantSovt.Properties.Resources.Завершити_роботу, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) != DialogResult.OK)
             {
                 e.Cancel = true;
             }
@@ -557,7 +557,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку клієнта");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_клієнта);
                 }
             }
         }
@@ -577,12 +577,12 @@ namespace AtlantSovt
                     }
                     else
                     {
-                        MessageBox.Show("В клієнта немає контактів");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.В_клієнта_немає_контактів);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку клієнта");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_клієнта);
                 }
             }
         }
@@ -602,12 +602,12 @@ namespace AtlantSovt
                     }
                     else
                     {
-                        MessageBox.Show("В клієнта немає контактів");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.В_клієнта_немає_контактів);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку клієнта");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_клієнта);
                 }
             }
         }
@@ -630,12 +630,12 @@ namespace AtlantSovt
                     }
                     else
                     {
-                        MessageBox.Show("В клієнта вже є банківські данні");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.В_клієнта_вже_є_банківські_дані);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку клієнта");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_клієнта);
                 }
             }
         }
@@ -655,12 +655,12 @@ namespace AtlantSovt
                     }
                     else
                     {
-                        MessageBox.Show("В клієнта ще немає банківських данни");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.В_клієнта_ще_немає_банківських_даних);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку клієнта");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_клієнта);
                 }
             }
         }
@@ -674,29 +674,29 @@ namespace AtlantSovt
                 {
                     if (db.Clients.Find(client.Id).ClientBankDetail != null)
                     {
-                        if (MessageBox.Show("Видалити банківські данні клієнту " + client.Name + " ?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_банківські_дані_клієнту + client.Name + " ?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             try
                             {
                                 db.ClientBankDetails.Remove(db.Clients.Find(client.Id).ClientBankDetail);
                                 db.SaveChanges();
-                                MessageBox.Show("Банківські данні успішно видалено");
+                                MessageBox.Show(AtlantSovt.Properties.Resources.Банківські_данні_успішно_видалено);
                             }
                             catch (Exception ex)
                             {
                                 Log.Write(ex);
-                                MessageBox.Show("Помилка!" + Environment.NewLine + ex);
+                                MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                             }
                         }
                     }
                     else
                     {
-                        MessageBox.Show("В клієнта ще немає банківських данних");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.В_клієнта_ще_немає_банківських_даних);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку клієнта");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_клієнта);
                 }
             }
         }
@@ -1015,7 +1015,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку експедитора");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_експедитора);
                 }
             }
         }
@@ -1035,12 +1035,12 @@ namespace AtlantSovt
                     }
                     else
                     {
-                        MessageBox.Show("В експедитора немає контактів");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.В_експедитора_немає_контактів);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку експедитора");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_експедитора);
                 }
             }
         }
@@ -1060,12 +1060,12 @@ namespace AtlantSovt
                     }
                     else
                     {
-                        MessageBox.Show("В експедитора немає контактів");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.В_експедитора_немає_контактів);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку експедитора");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_експедитора);
                 }
             }
         }
@@ -1088,12 +1088,12 @@ namespace AtlantSovt
                     }
                     else
                     {
-                        MessageBox.Show("В експедитора вже є банківські данні");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.В_експедитора_вже_є_банківські_дані);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку експедитора");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_експедитора);
                 }
             }
         }
@@ -1113,12 +1113,12 @@ namespace AtlantSovt
                     }
                     else
                     {
-                        MessageBox.Show("В експедитора ще немає банківських данних");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.В_експедитора_ще_немає_банківських_даних);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку експедитора");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_експедитора);
                 }
             }
         }
@@ -1132,29 +1132,29 @@ namespace AtlantSovt
                 {
                     if (db.Forwarders.Find(forwarder.Id).ForwarderBankDetail != null)
                     {
-                        if (MessageBox.Show("Видалити банківські данні експедитору " + forwarder.Name + " ?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_банківські_дані_експедитору + forwarder.Name + " ?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             try
                             {
                                 db.ForwarderBankDetails.Remove(db.Forwarders.Find(forwarder.Id).ForwarderBankDetail);
                                 db.SaveChanges();
-                                MessageBox.Show("Банківські данні успішно видалено");
+                                MessageBox.Show(AtlantSovt.Properties.Resources.Банківські_данні_успішно_видалено);
                             }
                             catch (Exception ex)
                             {
                                 Log.Write(ex);
-                                MessageBox.Show("Помилка!" + Environment.NewLine + ex);
+                                MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                             }
                         }
                     }
                     else
                     {
-                        MessageBox.Show("В експедитора ще немає банківських данних");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.В_експедитора_ще_немає_банківських_даних);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку експедитора");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_експедитора);
                 }
             }
         }
@@ -1226,7 +1226,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Ви не вибрали перевізника!");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Ви_не_вибрали_перевізника);
                     transporterShowAdditionalDetailsForm.Hide();
                 }
             }
@@ -1557,7 +1557,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку перевізника");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_перевізника);
                 }
             }
         }
@@ -1577,12 +1577,12 @@ namespace AtlantSovt
                     }
                     else
                     {
-                        MessageBox.Show("В перевізника немає контактів");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.В_перевізника_немає_контактів);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку перевізника");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_перевізника);
                 }
             }
         }
@@ -1602,12 +1602,12 @@ namespace AtlantSovt
                     }
                     else
                     {
-                        MessageBox.Show("В перевізника немає контактів");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.В_перевізника_немає_контактів);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку перевізника");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_перевізника);
                 }
             }
         }
@@ -1630,12 +1630,12 @@ namespace AtlantSovt
                     }
                     else
                     {
-                        MessageBox.Show("В перевізника вже є банківські данні");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.В_перевізника_вже_є_банківські_дані);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку перевізника");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_перевізника);
                 }
             }
         }
@@ -1655,12 +1655,12 @@ namespace AtlantSovt
                     }
                     else
                     {
-                        MessageBox.Show("В перевізника ще немає банківських данних");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.В_перевізника_ще_немає_банківських_даних);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку перевізника");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_перевізника);
                 }
             }
         }
@@ -1674,29 +1674,29 @@ namespace AtlantSovt
                 {
                     if (db.Transporters.Find(transporter.Id).TransporterBankDetail != null)
                     {
-                        if (MessageBox.Show("Видалити банківські данні перевізнику " + transporter.FullName + " ?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_банківські_дані_переперевізнику + transporter.FullName + " ?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             try
                             {
                                 db.TransporterBankDetails.Remove(db.Transporters.Find(transporter.Id).TransporterBankDetail);
                                 db.SaveChanges();
-                                MessageBox.Show("Банківські данні успішно видалено");
+                                MessageBox.Show(AtlantSovt.Properties.Resources.Банківські_данні_успішно_видалено);
                             }
                             catch (Exception ex)
                             {
                                 Log.Write(ex);
-                                MessageBox.Show("Помилка!" + Environment.NewLine + ex);
+                                MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                             }
                         }
                     }
                     else
                     {
-                        MessageBox.Show("В перевізника ще немає банківських данних");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.В_перевізника_ще_немає_банківських_даних);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку перевізника");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_перевізника);
                 }
             }
         }
@@ -1712,7 +1712,7 @@ namespace AtlantSovt
             }
             else
             {
-                MessageBox.Show("Оберіть спочатку перевізника");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_перевізника);
             }
         }
             #endregion
@@ -2065,7 +2065,7 @@ namespace AtlantSovt
             {
                 Log.Write(ex);
                 trackingShowAddComment.Dispose();
-                MessageBox.Show("Немає жодної заявки");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодної_заявки);
             }
         }
 
@@ -2085,7 +2085,7 @@ namespace AtlantSovt
                 catch (Exception ex)
             {
                 Log.Write(ex);
-                MessageBox.Show("Натисніть на коментар");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Натисніть_на_коментар);
             }
         }
             else
@@ -2129,7 +2129,7 @@ namespace AtlantSovt
                 Log.Write(ex);
                     orderNoteForm = null;
                 orderNoteForm.Dispose();
-                MessageBox.Show("Немає жодної заявки");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодної_заявки);
             }
         }    
             else
@@ -3161,58 +3161,14 @@ namespace AtlantSovt
         #region Translate
         private void uaLangButton_Click(object sender, EventArgs e)
         {
-            CultureInfo ci = new CultureInfo("uk-UA");
-            changeLanguage(ci);
+
         }
 
         private void ruLangButton_Click(object sender, EventArgs e)
         {
-            CultureInfo ci = new CultureInfo("ru-Ru");
-            changeLanguage(ci);
-        }
 
-        void changeLanguage(CultureInfo ci)
-        {
-            Assembly a = Assembly.Load("AtlantSovt");
-            ResourceManager rm = new ResourceManager("AtlantSovt.Languages.langres", a);
-            //show client
-            showClientTitleLabel.Text = rm.GetString("showClientTitleLabel", ci);
-            showClientSearchButton.Text = rm.GetString("searchButton", ci);
-            showClientBankDetailsLabel.Text = rm.GetString("bankDetailsLabel", ci);
-            showClientContactsLabel.Text = rm.GetString("contactsLabel", ci);
-            showClientNoteLabel.Text = rm.GetString("noteLabel", ci);
-            showClientDeleteButton.Text = rm.GetString("deleteButton", ci);
-            //add client
-            addClientNameLabel.Text = rm.GetString("nameLabel", ci);
-            addClientDirectorLabel.Text = rm.GetString("directorLabel", ci);
-            addClientWorkDocumentLabel.Text = rm.GetString("workDocumentLabel", ci);
-            addClientTaxPayerStatusLabel.Text = rm.GetString("taxPayerStatusLabel", ci);
-            addClientGeographyAddressLabel.Text = rm.GetString("geographyAddressLabel", ci);
-            addClientPhysicalAddressLabel.Text = rm.GetString("physicalAddressLabel", ci);
-            addClientNoteLabel.Text = rm.GetString("noteLabel", ci);
-            addClientContactButton.Text = rm.GetString("addContactButton", ci);
-            addClientBankDetailsButton.Text = rm.GetString("addBankDetailsButton", ci);
-            addClientButton.Text = rm.GetString("addButton", ci);
-            addClientIsNecessaryLabel.Text = rm.GetString("isNecessaryLabel", ci);
-            //update client
-            updateClientSelectDiapasonLabel.Text = rm.GetString("selectDiapasonLabel", ci);
-            updateClientSelectClientLabel.Text = rm.GetString("selectClientLabel", ci);
-            updateClientNameLabel.Text = rm.GetString("nameLabel", ci);
-            updateClientDirectorLabel.Text = rm.GetString("directorLabel", ci);
-            updateClientWorkDocumentLabel.Text = rm.GetString("workDocumentLabel", ci);
-            updateClientTaxPayerStatusLabel.Text = rm.GetString("taxPayerStatusLabel", ci);
-            updateClientGeorgaphyAddressLabel.Text = rm.GetString("geographyAddressLabel", ci);
-            updateClientPhysicalAddressLabel.Text = rm.GetString("physicalAddressLabel", ci);
-            updateClientNoteLabel.Text = rm.GetString("noteLabel", ci);
-            updateClientAddContactButton.Text = rm.GetString("addContactButton", ci);
-            updateClientUpdateContactButton.Text = rm.GetString("updateContactButton", ci);
-            updateClientDeleteContactButton.Text = rm.GetString("deleteContactButton", ci);
-            updateClientAddBankDetailsButton.Text = rm.GetString("addBankDetailsButton", ci);
-            updateClientUpdateBankDetailsButton.Text = rm.GetString("updateBankDetailsButton", ci);
-            updateClientDeleteBankDetailsButton.Text = rm.GetString("deleteBankDetailsButton", ci);
-            updateClientButton.Text = rm.GetString("updateButton", ci);
-            //add client contact
-        } 
+        }
+ 
         #endregion
     }
 }

@@ -117,4 +117,571 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Зміна банківських реквізитів</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>МФО</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Номер рахунку</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Назва банку</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>ЄДРПОУ</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>ІПН</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Номер свідоцтва</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>SWIFT</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>IBAN</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Серія свідоцтва</value>
+  </data>
+  <data name="updateForwarderBankDetailsButton.Text" xml:space="preserve">
+    <value>Змінити</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bankNameUpdateForwarderBankDetailsTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bankNameUpdateForwarderBankDetailsTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="bankNameUpdateForwarderBankDetailsTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 33</value>
+  </data>
+  <data name="bankNameUpdateForwarderBankDetailsTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>536, 25</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bankNameUpdateForwarderBankDetailsTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;bankNameUpdateForwarderBankDetailsTextBox.Name" xml:space="preserve">
+    <value>bankNameUpdateForwarderBankDetailsTextBox</value>
+  </data>
+  <data name="&gt;&gt;bankNameUpdateForwarderBankDetailsTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bankNameUpdateForwarderBankDetailsTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bankNameUpdateForwarderBankDetailsTextBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="MFOUpdateForwarderBankDetailsTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="MFOUpdateForwarderBankDetailsTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="MFOUpdateForwarderBankDetailsTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 80</value>
+  </data>
+  <data name="MFOUpdateForwarderBankDetailsTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>536, 25</value>
+  </data>
+  <data name="MFOUpdateForwarderBankDetailsTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;MFOUpdateForwarderBankDetailsTextBox.Name" xml:space="preserve">
+    <value>MFOUpdateForwarderBankDetailsTextBox</value>
+  </data>
+  <data name="&gt;&gt;MFOUpdateForwarderBankDetailsTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MFOUpdateForwarderBankDetailsTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MFOUpdateForwarderBankDetailsTextBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="accountNumberUpdateForwarderBankDetailsTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="accountNumberUpdateForwarderBankDetailsTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="accountNumberUpdateForwarderBankDetailsTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 127</value>
+  </data>
+  <data name="accountNumberUpdateForwarderBankDetailsTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>536, 25</value>
+  </data>
+  <data name="accountNumberUpdateForwarderBankDetailsTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;accountNumberUpdateForwarderBankDetailsTextBox.Name" xml:space="preserve">
+    <value>accountNumberUpdateForwarderBankDetailsTextBox</value>
+  </data>
+  <data name="&gt;&gt;accountNumberUpdateForwarderBankDetailsTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;accountNumberUpdateForwarderBankDetailsTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;accountNumberUpdateForwarderBankDetailsTextBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="EDRPOUUpdateForwarderBankDetailsTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="EDRPOUUpdateForwarderBankDetailsTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="EDRPOUUpdateForwarderBankDetailsTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 174</value>
+  </data>
+  <data name="EDRPOUUpdateForwarderBankDetailsTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>536, 25</value>
+  </data>
+  <data name="EDRPOUUpdateForwarderBankDetailsTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;EDRPOUUpdateForwarderBankDetailsTextBox.Name" xml:space="preserve">
+    <value>EDRPOUUpdateForwarderBankDetailsTextBox</value>
+  </data>
+  <data name="&gt;&gt;EDRPOUUpdateForwarderBankDetailsTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EDRPOUUpdateForwarderBankDetailsTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EDRPOUUpdateForwarderBankDetailsTextBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="IPNUpdateForwarderBankDetailsTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="IPNUpdateForwarderBankDetailsTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="IPNUpdateForwarderBankDetailsTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 221</value>
+  </data>
+  <data name="IPNUpdateForwarderBankDetailsTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>536, 25</value>
+  </data>
+  <data name="IPNUpdateForwarderBankDetailsTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;IPNUpdateForwarderBankDetailsTextBox.Name" xml:space="preserve">
+    <value>IPNUpdateForwarderBankDetailsTextBox</value>
+  </data>
+  <data name="&gt;&gt;IPNUpdateForwarderBankDetailsTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IPNUpdateForwarderBankDetailsTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;IPNUpdateForwarderBankDetailsTextBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="certificateNumberUpdateForwarderBankDetailsTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="certificateNumberUpdateForwarderBankDetailsTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="certificateNumberUpdateForwarderBankDetailsTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 316</value>
+  </data>
+  <data name="certificateNumberUpdateForwarderBankDetailsTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>536, 25</value>
+  </data>
+  <data name="certificateNumberUpdateForwarderBankDetailsTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;certificateNumberUpdateForwarderBankDetailsTextBox.Name" xml:space="preserve">
+    <value>certificateNumberUpdateForwarderBankDetailsTextBox</value>
+  </data>
+  <data name="&gt;&gt;certificateNumberUpdateForwarderBankDetailsTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;certificateNumberUpdateForwarderBankDetailsTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;certificateNumberUpdateForwarderBankDetailsTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="SWIFTUpdateForwarderBankDetailsTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="SWIFTUpdateForwarderBankDetailsTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="SWIFTUpdateForwarderBankDetailsTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 363</value>
+  </data>
+  <data name="SWIFTUpdateForwarderBankDetailsTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>536, 25</value>
+  </data>
+  <data name="SWIFTUpdateForwarderBankDetailsTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;SWIFTUpdateForwarderBankDetailsTextBox.Name" xml:space="preserve">
+    <value>SWIFTUpdateForwarderBankDetailsTextBox</value>
+  </data>
+  <data name="&gt;&gt;SWIFTUpdateForwarderBankDetailsTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SWIFTUpdateForwarderBankDetailsTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SWIFTUpdateForwarderBankDetailsTextBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="IBANUpdateForwarderBankDetailsTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="IBANUpdateForwarderBankDetailsTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="IBANUpdateForwarderBankDetailsTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 410</value>
+  </data>
+  <data name="IBANUpdateForwarderBankDetailsTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>536, 25</value>
+  </data>
+  <data name="IBANUpdateForwarderBankDetailsTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;IBANUpdateForwarderBankDetailsTextBox.Name" xml:space="preserve">
+    <value>IBANUpdateForwarderBankDetailsTextBox</value>
+  </data>
+  <data name="&gt;&gt;IBANUpdateForwarderBankDetailsTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IBANUpdateForwarderBankDetailsTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;IBANUpdateForwarderBankDetailsTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 9</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 21</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 56</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 21</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 103</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 21</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 150</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 21</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 197</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 21</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 292</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 21</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 339</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 21</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 386</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 21</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="updateForwarderBankDetailsButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="updateForwarderBankDetailsButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="updateForwarderBankDetailsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 443</value>
+  </data>
+  <data name="updateForwarderBankDetailsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>560, 48</value>
+  </data>
+  <data name="updateForwarderBankDetailsButton.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;updateForwarderBankDetailsButton.Name" xml:space="preserve">
+    <value>updateForwarderBankDetailsButton</value>
+  </data>
+  <data name="&gt;&gt;updateForwarderBankDetailsButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateForwarderBankDetailsButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;updateForwarderBankDetailsButton.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="certificateSerialUpdateForwarderBankDetailsTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="certificateSerialUpdateForwarderBankDetailsTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="certificateSerialUpdateForwarderBankDetailsTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 269</value>
+  </data>
+  <data name="certificateSerialUpdateForwarderBankDetailsTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>536, 25</value>
+  </data>
+  <data name="certificateSerialUpdateForwarderBankDetailsTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;certificateSerialUpdateForwarderBankDetailsTextBox.Name" xml:space="preserve">
+    <value>certificateSerialUpdateForwarderBankDetailsTextBox</value>
+  </data>
+  <data name="&gt;&gt;certificateSerialUpdateForwarderBankDetailsTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;certificateSerialUpdateForwarderBankDetailsTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;certificateSerialUpdateForwarderBankDetailsTextBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 245</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 21</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>560, 491</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ForwarderBankDetailsUpdateForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

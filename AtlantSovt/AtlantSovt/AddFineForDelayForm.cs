@@ -35,7 +35,7 @@ namespace AtlantSovt
                     {
                         db.FineForDelays.Add(New_FineForDelay);
                         db.SaveChanges();
-                        MessageBox.Show("Нове значення успішно додане");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Нове_значення_успішно_додане);
                     }
                     catch (Exception ex)
                     {

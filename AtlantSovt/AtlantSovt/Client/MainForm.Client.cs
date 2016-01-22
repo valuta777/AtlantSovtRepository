@@ -44,20 +44,20 @@ namespace AtlantSovt
                     Director = c.Director,
                     PhysicalAddress = c.PhysicalAddress,
                     GeografphyAddress = c.GeografphyAddress,
-                    ContractType = (c.ContractType == true) ? "Оригінал" : "Факс",
+                    ContractType = (c.ContractType == true) ? AtlantSovt.Properties.Resources.Оригінал : AtlantSovt.Properties.Resources.Факс,
                     TaxPayerStatusId = c.TaxPayerStatu.Status,
                     WorkDocumentId = c.WorkDocument.Status,
                 };
 
                 showClientDataGridView.DataSource = query.ToList();
-                showClientDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                showClientDataGridView.Columns[1].HeaderText = "Назва";
-                showClientDataGridView.Columns[2].HeaderText = "П.І.Б. Директора";
-                showClientDataGridView.Columns[3].HeaderText = "Фізична адреса";
-                showClientDataGridView.Columns[4].HeaderText = "Юридична адреса";
-                showClientDataGridView.Columns[5].HeaderText = "Стан договору";
-                showClientDataGridView.Columns[6].HeaderText = "Статус платника податку";
-                showClientDataGridView.Columns[7].HeaderText = "На основі";
+                showClientDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                showClientDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Назва;
+                showClientDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.П_І_Б_Директора;
+                showClientDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Фізична_адреса;
+                showClientDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Юридична_адреса;
+                showClientDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Стан_договору;
+                showClientDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Статус_платника_податку;
+                showClientDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.На_основі;
 
 
             } showClientDataGridView.Update();
@@ -82,10 +82,10 @@ namespace AtlantSovt
                         Email = con.Email,
                     };
                     showClientContactsDataGridView.DataSource = query.ToList();
-                    showClientContactsDataGridView.Columns[0].HeaderText = "Контактна особа";
-                    showClientContactsDataGridView.Columns[1].HeaderText = "Телефон";
-                    showClientContactsDataGridView.Columns[2].HeaderText = "Факс";
-                    showClientContactsDataGridView.Columns[3].HeaderText = "Email";
+                    showClientContactsDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Контактна_особа;
+                    showClientContactsDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Телефон;
+                    showClientContactsDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Факс;
+                    showClientContactsDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Email;
 
                     var query1 =
                         from c in db.Clients
@@ -111,20 +111,20 @@ namespace AtlantSovt
                     };
 
                     showClientBankDetailsDataGridView.DataSource = query2.ToList();
-                    showClientBankDetailsDataGridView.Columns[0].HeaderText = "Назва банку";
-                    showClientBankDetailsDataGridView.Columns[1].HeaderText = "МФО";
-                    showClientBankDetailsDataGridView.Columns[2].HeaderText = "Номер рахунку";
-                    showClientBankDetailsDataGridView.Columns[3].HeaderText = "ЕДРПОУ";
-                    showClientBankDetailsDataGridView.Columns[4].HeaderText = "ІПН";
-                    showClientBankDetailsDataGridView.Columns[5].HeaderText = "Серія свідоцтва";
-                    showClientBankDetailsDataGridView.Columns[6].HeaderText = "Номер свідоцтва";
-                    showClientBankDetailsDataGridView.Columns[7].HeaderText = "SWIFT";
-                    showClientBankDetailsDataGridView.Columns[8].HeaderText = "IBAN";
+                    showClientBankDetailsDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Назва_банку;
+                    showClientBankDetailsDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.МФО;
+                    showClientBankDetailsDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Номер_рахунку;
+                    showClientBankDetailsDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.ЄДРПОУ;
+                    showClientBankDetailsDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.ІПН;
+                    showClientBankDetailsDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Серія_свідоцтва;
+                    showClientBankDetailsDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Номер_свідоцтва;
+                    showClientBankDetailsDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.SWIFT;
+                    showClientBankDetailsDataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.IBAN;
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Немає жодного клієнта");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_клієнта);
                 }
             }
             showClientContactsDataGridView.Update();
@@ -162,14 +162,14 @@ namespace AtlantSovt
 
 
                 showClientDataGridView.DataSource = query.ToList();
-                showClientDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                showClientDataGridView.Columns[1].HeaderText = "Назва";
-                showClientDataGridView.Columns[2].HeaderText = "П.І.Б. Директора";
-                showClientDataGridView.Columns[3].HeaderText = "Фізична адреса";
-                showClientDataGridView.Columns[4].HeaderText = "Юридична адреса";
-                showClientDataGridView.Columns[5].HeaderText = "Оригінал договору";
-                showClientDataGridView.Columns[6].HeaderText = "Статус платника податку";
-                showClientDataGridView.Columns[7].HeaderText = "На основі";
+                showClientDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                showClientDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Назва;
+                showClientDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.П_І_Б_Директора;
+                showClientDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Фізична_адреса;
+                showClientDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Юридична_адреса;
+                showClientDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Оригінал_договору;
+                showClientDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Статус_платника_податку;
+                showClientDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.На_основі;
 
 
             } showClientDataGridView.Update();
@@ -272,7 +272,7 @@ namespace AtlantSovt
                     {
                         db.Clients.Add(New_Client);
                         db.SaveChanges();
-                        string borodakyrka = "Клієнт успішно доданий ["+ New_Client.Id + "]\n";                        
+                        string borodakyrka = AtlantSovt.Properties.Resources.Клієнт_успішно_доданий + " [" + New_Client.Id + @"]";                      
 
                         if (addClientBankDetailsAddForm != null)
                         {
@@ -295,7 +295,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Одне з обов'язкових полів не заповнено");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Одне_з_обов_язкових_полів_не_заповнено);
                 }
             }
 
@@ -429,7 +429,7 @@ namespace AtlantSovt
             {
                 if (updateClientSelectDiapasonComboBox.Text == "")
                 {
-                    MessageBox.Show("Ви не вибрали діапазон");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Ви_не_вибрали_діапазон);
                 }
                 else
                 {
@@ -480,7 +480,7 @@ namespace AtlantSovt
                 }
                 else 
                 {
-                    MessageBox.Show("Немає жодних записів");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_запису);
                 }
             }
         }
@@ -616,11 +616,11 @@ namespace AtlantSovt
 
                     db.Entry(client).State = EntityState.Modified;
                     db.SaveChanges();
-                    MessageBox.Show("Успішно змінено");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_змінено);
                 }
                 else
                 {
-                    MessageBox.Show("Змін не знайдено");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Змін_не_знайдено);
                 }
             }
         }
@@ -667,26 +667,26 @@ namespace AtlantSovt
                 deleteClient = db.Clients.Find(id);
                 if (deleteClient != null)
                 {
-                    if (MessageBox.Show("Видалити клієнта " + deleteClient.Name + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_клієнта + deleteClient.Name + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         try
                         {
                             db.Clients.Attach(deleteClient);
                             db.Clients.Remove(deleteClient);
                             db.SaveChanges();
-                            MessageBox.Show("Клієнт успішно видалений");
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Клієнт_успішно_видалений);
                             deleteClientComboBox.Items.Remove(deleteClientComboBox.SelectedItem);
                         }
                         catch(Exception ex)
                         {
                             Log.Write(ex);
-                            MessageBox.Show("Помилка!" + Environment.NewLine + ex.Message);
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + Environment.NewLine + ex.Message);
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Виберіть клієнта");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_клієнта);
                 }
             }
         }
@@ -695,7 +695,7 @@ namespace AtlantSovt
         {
             if (deleteClientSelectDiapasoneComboBox.Text == "")
             {
-                MessageBox.Show("Ви не вибрали діапазон");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Ви_не_вибрали_діапазон);
             }
             else
             {
@@ -747,7 +747,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Немає жодних записів");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_запису);
                     deleteClientComboBox.Enabled = false;
                 }
             }

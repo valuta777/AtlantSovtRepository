@@ -33,27 +33,27 @@ namespace AtlantSovt
                 new
                 {
                     Id = ar.Id,
-                    OrderNumber = (!ar.Order.IndexNumber.HasValue) ? "Ще не присвоєно" : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
-                    ClientName = (ar.Order.Client == null) ? "Не вибрано" : ar.Order.Client.Name,
+                    OrderNumber = (!ar.Order.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
+                    ClientName = (ar.Order.Client == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Client.Name,
                     ClientAcountNumber = ar.ClientAccountNumber,
                     PaymentDate = ar.PaymentDate,
                     ClientPayment = ar.ClientPayment,
                     DownloadDate = ar.DownloadDate,
                     VehicleNumber = ar.VehicleNumber,
-                    TransporterName = (ar.Order.Transporter == null) ? "Не вибрано" : ar.Order.Transporter.FullName,
+                    TransporterName = (ar.Order.Transporter == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Transporter.FullName,
                     TransporterPayment = ar.TransporterPayment
                 };
                 arbeitenShowMainDataGridView.DataSource = query.ToList();
-                arbeitenShowMainDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                arbeitenShowMainDataGridView.Columns[1].HeaderText = "Номер заявки";
-                arbeitenShowMainDataGridView.Columns[2].HeaderText = "Клієнт";
-                arbeitenShowMainDataGridView.Columns[3].HeaderText = "Номер рахунку клієнта";
-                arbeitenShowMainDataGridView.Columns[4].HeaderText = "Дата оплати";
-                arbeitenShowMainDataGridView.Columns[5].HeaderText = "Сума від клієнта";
-                arbeitenShowMainDataGridView.Columns[6].HeaderText = "Дата завантаження";
-                arbeitenShowMainDataGridView.Columns[7].HeaderText = "№ авто";
-                arbeitenShowMainDataGridView.Columns[8].HeaderText = "Перевізник";
-                arbeitenShowMainDataGridView.Columns[9].HeaderText = "Сума перевізнику";
+                arbeitenShowMainDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                arbeitenShowMainDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                arbeitenShowMainDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                arbeitenShowMainDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Номер_рахунку_клієнта;
+                arbeitenShowMainDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Дата_оплати;
+                arbeitenShowMainDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Сума_від_клієнта;
+                arbeitenShowMainDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                arbeitenShowMainDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Номер_авто;
+                arbeitenShowMainDataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                arbeitenShowMainDataGridView.Columns[9].HeaderText = AtlantSovt.Properties.Resources.Сума_перевізнику;
 
             }
             arbeitenShowMainDataGridView.Update();
@@ -81,12 +81,12 @@ namespace AtlantSovt
                     orderby frw.IsFirst
                     select new
                     {
-                        forwarderNumber = (frw.IsFirst == 1) ? "Експедитор 1" : (frw.IsFirst == 2) ? "Експедитор 2" : "Експедитор 3",
+                        forwarderNumber = (frw.IsFirst == 1) ? AtlantSovt.Properties.Resources.Експедитор_1 : (frw.IsFirst == 2) ? AtlantSovt.Properties.Resources.Експедитор_2 : AtlantSovt.Properties.Resources.Експедитор_3,
                         forwarderName = frw.Forwarder.Name
                     };
                     arbeitenShowForwardersDataGridView.DataSource = query2.ToList();
-                    arbeitenShowForwardersDataGridView.Columns[0].HeaderText = "Номер експедитора";
-                    arbeitenShowForwardersDataGridView.Columns[1].HeaderText = "Назва";
+                    arbeitenShowForwardersDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Номер_експедитора;
+                    arbeitenShowForwardersDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Назва;
 
                     //
 
@@ -99,8 +99,8 @@ namespace AtlantSovt
                             cityCode = add.DownloadAddress.CityCode
                         };
                     arbeitenShowDownloadAddressDataGridView.DataSource = query3.ToList();
-                    arbeitenShowDownloadAddressDataGridView.Columns[0].HeaderText = "Країна";
-                    arbeitenShowDownloadAddressDataGridView.Columns[1].HeaderText = "Код міста";
+                    arbeitenShowDownloadAddressDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Країна;
+                    arbeitenShowDownloadAddressDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Код_міста;
 
                     var query4 =
                         from add in db.OrderUploadAdresses
@@ -111,8 +111,8 @@ namespace AtlantSovt
                             cityCode = add.UploadAddress.CityCode
                         };
                     arbeitenShowUploadAddressDataGridView.DataSource = query4.ToList();
-                    arbeitenShowUploadAddressDataGridView.Columns[0].HeaderText = "Країна";
-                    arbeitenShowUploadAddressDataGridView.Columns[1].HeaderText = "Код міста";
+                    arbeitenShowUploadAddressDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Країна;
+                    arbeitenShowUploadAddressDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Код_міста;
 
                     var query5 =
                         from o in db.Orders
@@ -123,7 +123,7 @@ namespace AtlantSovt
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Немає жодного запису");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_запису);
                 }
             }
             arbeitenShowForwardersDataGridView.Update();
@@ -143,25 +143,25 @@ namespace AtlantSovt
                 if (deleteArbeiten != null)
                 {
 
-                    if (MessageBox.Show("Видалити арбайтен?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_арбайтен, AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         try
                         {
                             db.Arbeitens.Remove(db.Arbeitens.Find(deleteArbeiten.Id));
                             db.SaveChanges();
-                            MessageBox.Show("Запис успішно видалено");
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Запис_успішно_видалено);
                             ShowArbeiten();
                         }
                         catch (Exception ex)
                         {
                             Log.Write(ex);
-                            MessageBox.Show("Помилка: " + Environment.NewLine + ex);
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Оберіть спочатку запис");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_запис);
                 }
             }
         }
@@ -187,27 +187,27 @@ namespace AtlantSovt
                    new
                    {
                        Id = ar.Id,
-                       OrderNumber = (!ar.Order.IndexNumber.HasValue) ? "Ще не присвоєно" : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
-                       ClientName = (ar.Order.Client == null) ? "Не вибрано" : ar.Order.Client.Name,
+                       OrderNumber = (!ar.Order.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
+                       ClientName = (ar.Order.Client == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Client.Name,
                        ClientAcountNumber = ar.ClientAccountNumber,
                        PaymentDate = ar.PaymentDate,
                        ClientPayment = ar.ClientPayment,
                        DownloadDate = ar.DownloadDate,
                        VehicleNumber = ar.VehicleNumber,
-                       TransporterName = (ar.Order.Transporter == null) ? "Не вибрано" : ar.Order.Transporter.FullName,
+                       TransporterName = (ar.Order.Transporter == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Transporter.FullName,
                        TransporterPayment = ar.TransporterPayment
                    };
                     arbeitenShowMainDataGridView.DataSource = queryTextAndDate.ToList();
-                    arbeitenShowMainDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    arbeitenShowMainDataGridView.Columns[1].HeaderText = "Номер заявки";
-                    arbeitenShowMainDataGridView.Columns[2].HeaderText = "Клієнт";
-                    arbeitenShowMainDataGridView.Columns[3].HeaderText = "Номер рахунку клієнта";
-                    arbeitenShowMainDataGridView.Columns[4].HeaderText = "Дата оплати";
-                    arbeitenShowMainDataGridView.Columns[5].HeaderText = "Сума від клієнта";
-                    arbeitenShowMainDataGridView.Columns[6].HeaderText = "Дата завантаження";
-                    arbeitenShowMainDataGridView.Columns[7].HeaderText = "№ авто";
-                    arbeitenShowMainDataGridView.Columns[8].HeaderText = "Перевізник";
-                    arbeitenShowMainDataGridView.Columns[9].HeaderText = "Сума перевізнику";
+                    arbeitenShowMainDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                    arbeitenShowMainDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                    arbeitenShowMainDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                    arbeitenShowMainDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Номер_рахунку_клієнта;
+                    arbeitenShowMainDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Дата_оплати;
+                    arbeitenShowMainDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Сума_від_клієнта;
+                    arbeitenShowMainDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                    arbeitenShowMainDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Номер_авто;
+                    arbeitenShowMainDataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                    arbeitenShowMainDataGridView.Columns[9].HeaderText = AtlantSovt.Properties.Resources.Сума_перевізнику;
 
 
                 }
@@ -223,27 +223,27 @@ namespace AtlantSovt
                    new
                    {
                        Id = ar.Id,
-                       OrderNumber = (!ar.Order.IndexNumber.HasValue) ? "Ще не присвоєно" : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
-                       ClientName = (ar.Order.Client == null) ? "Не вибрано" : ar.Order.Client.Name,
+                       OrderNumber = (!ar.Order.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
+                       ClientName = (ar.Order.Client == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Client.Name,
                        ClientAcountNumber = ar.ClientAccountNumber,
                        PaymentDate = ar.PaymentDate,
                        ClientPayment = ar.ClientPayment,
                        DownloadDate = ar.DownloadDate,
                        VehicleNumber = ar.VehicleNumber,
-                       TransporterName = (ar.Order.Transporter == null) ? "Не вибрано" : ar.Order.Transporter.FullName,
+                       TransporterName = (ar.Order.Transporter == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Transporter.FullName,
                        TransporterPayment = ar.TransporterPayment
                    };
                     arbeitenShowMainDataGridView.DataSource = queryTextAndDate.ToList();
-                    arbeitenShowMainDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    arbeitenShowMainDataGridView.Columns[1].HeaderText = "Номер заявки";
-                    arbeitenShowMainDataGridView.Columns[2].HeaderText = "Клієнт";
-                    arbeitenShowMainDataGridView.Columns[3].HeaderText = "Номер рахунку клієнта";
-                    arbeitenShowMainDataGridView.Columns[4].HeaderText = "Дата оплати";
-                    arbeitenShowMainDataGridView.Columns[5].HeaderText = "Сума від клієнта";
-                    arbeitenShowMainDataGridView.Columns[6].HeaderText = "Дата завантаження";
-                    arbeitenShowMainDataGridView.Columns[7].HeaderText = "№ авто";
-                    arbeitenShowMainDataGridView.Columns[8].HeaderText = "Перевізник";
-                    arbeitenShowMainDataGridView.Columns[9].HeaderText = "Сума перевізнику";
+                    arbeitenShowMainDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                    arbeitenShowMainDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                    arbeitenShowMainDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                    arbeitenShowMainDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Номер_рахунку_клієнта;
+                    arbeitenShowMainDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Дата_оплати;
+                    arbeitenShowMainDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Сума_від_клієнта;
+                    arbeitenShowMainDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                    arbeitenShowMainDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Номер_авто;
+                    arbeitenShowMainDataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                    arbeitenShowMainDataGridView.Columns[9].HeaderText = AtlantSovt.Properties.Resources.Сума_перевізнику;
 
 
                 }
@@ -257,27 +257,27 @@ namespace AtlantSovt
                    new
                    {
                        Id = ar.Id,
-                       OrderNumber = (!ar.Order.IndexNumber.HasValue) ? "Ще не присвоєно" : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
-                       ClientName = (ar.Order.Client == null) ? "Не вибрано" : ar.Order.Client.Name,
+                       OrderNumber = (!ar.Order.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
+                       ClientName = (ar.Order.Client == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Client.Name,
                        ClientAcountNumber = ar.ClientAccountNumber,
                        PaymentDate = ar.PaymentDate,
                        ClientPayment = ar.ClientPayment,
                        DownloadDate = ar.DownloadDate,
                        VehicleNumber = ar.VehicleNumber,
-                       TransporterName = (ar.Order.Transporter == null) ? "Не вибрано" : ar.Order.Transporter.FullName,
+                       TransporterName = (ar.Order.Transporter == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Transporter.FullName,
                        TransporterPayment = ar.TransporterPayment
                    };
                     arbeitenShowMainDataGridView.DataSource = queryTextAndDate.ToList();
-                    arbeitenShowMainDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    arbeitenShowMainDataGridView.Columns[1].HeaderText = "Номер заявки";
-                    arbeitenShowMainDataGridView.Columns[2].HeaderText = "Клієнт";
-                    arbeitenShowMainDataGridView.Columns[3].HeaderText = "Номер рахунку клієнта";
-                    arbeitenShowMainDataGridView.Columns[4].HeaderText = "Дата оплати";
-                    arbeitenShowMainDataGridView.Columns[5].HeaderText = "Сума від клієнта";
-                    arbeitenShowMainDataGridView.Columns[6].HeaderText = "Дата завантаження";
-                    arbeitenShowMainDataGridView.Columns[7].HeaderText = "№ авто";
-                    arbeitenShowMainDataGridView.Columns[8].HeaderText = "Перевізник";
-                    arbeitenShowMainDataGridView.Columns[9].HeaderText = "Сума перевізнику";
+                    arbeitenShowMainDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                    arbeitenShowMainDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                    arbeitenShowMainDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                    arbeitenShowMainDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Номер_рахунку_клієнта;
+                    arbeitenShowMainDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Дата_оплати;
+                    arbeitenShowMainDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Сума_від_клієнта;
+                    arbeitenShowMainDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                    arbeitenShowMainDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Номер_авто;
+                    arbeitenShowMainDataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                    arbeitenShowMainDataGridView.Columns[9].HeaderText = AtlantSovt.Properties.Resources.Сума_перевізнику;
 
 
                 }
@@ -300,27 +300,27 @@ namespace AtlantSovt
                    new
                    {
                        Id = ar.Id,
-                       OrderNumber = (!ar.Order.IndexNumber.HasValue) ? "Ще не присвоєно" : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
-                       ClientName = (ar.Order.Client == null) ? "Не вибрано" : ar.Order.Client.Name,
+                       OrderNumber = (!ar.Order.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
+                       ClientName = (ar.Order.Client == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Client.Name,
                        ClientAcountNumber = ar.ClientAccountNumber,
                        PaymentDate = ar.PaymentDate,
                        ClientPayment = ar.ClientPayment,
                        DownloadDate = ar.DownloadDate,
                        VehicleNumber = ar.VehicleNumber,
-                       TransporterName = (ar.Order.Transporter == null) ? "Не вибрано" : ar.Order.Transporter.FullName,
+                       TransporterName = (ar.Order.Transporter == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Transporter.FullName,
                        TransporterPayment = ar.TransporterPayment
                    };
                     arbeitenShowMainDataGridView.DataSource = queryTextAndDate.ToList();
-                    arbeitenShowMainDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    arbeitenShowMainDataGridView.Columns[1].HeaderText = "Номер заявки";
-                    arbeitenShowMainDataGridView.Columns[2].HeaderText = "Клієнт";
-                    arbeitenShowMainDataGridView.Columns[3].HeaderText = "Номер рахунку клієнта";
-                    arbeitenShowMainDataGridView.Columns[4].HeaderText = "Дата оплати";
-                    arbeitenShowMainDataGridView.Columns[5].HeaderText = "Сума від клієнта";
-                    arbeitenShowMainDataGridView.Columns[6].HeaderText = "Дата завантаження";
-                    arbeitenShowMainDataGridView.Columns[7].HeaderText = "№ авто";
-                    arbeitenShowMainDataGridView.Columns[8].HeaderText = "Перевізник";
-                    arbeitenShowMainDataGridView.Columns[9].HeaderText = "Сума перевізнику";
+                    arbeitenShowMainDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                    arbeitenShowMainDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                    arbeitenShowMainDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                    arbeitenShowMainDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Номер_рахунку_клієнта;
+                    arbeitenShowMainDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Дата_оплати;
+                    arbeitenShowMainDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Сума_від_клієнта;
+                    arbeitenShowMainDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                    arbeitenShowMainDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Номер_авто;
+                    arbeitenShowMainDataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                    arbeitenShowMainDataGridView.Columns[9].HeaderText = AtlantSovt.Properties.Resources.Сума_перевізнику;
 
 
                 }
@@ -334,27 +334,27 @@ namespace AtlantSovt
                    new
                    {
                        Id = ar.Id,
-                       OrderNumber = (!ar.Order.IndexNumber.HasValue) ? "Ще не присвоєно" : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
-                       ClientName = (ar.Order.Client == null) ? "Не вибрано" : ar.Order.Client.Name,
+                       OrderNumber = (!ar.Order.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
+                       ClientName = (ar.Order.Client == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Client.Name,
                        ClientAcountNumber = ar.ClientAccountNumber,
                        PaymentDate = ar.PaymentDate,
                        ClientPayment = ar.ClientPayment,
                        DownloadDate = ar.DownloadDate,
                        VehicleNumber = ar.VehicleNumber,
-                       TransporterName = (ar.Order.Transporter == null) ? "Не вибрано" : ar.Order.Transporter.FullName,
+                       TransporterName = (ar.Order.Transporter == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Transporter.FullName,
                        TransporterPayment = ar.TransporterPayment
                    };
                     arbeitenShowMainDataGridView.DataSource = queryTextAndDate.ToList();
-                    arbeitenShowMainDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    arbeitenShowMainDataGridView.Columns[1].HeaderText = "Номер заявки";
-                    arbeitenShowMainDataGridView.Columns[2].HeaderText = "Клієнт";
-                    arbeitenShowMainDataGridView.Columns[3].HeaderText = "Номер рахунку клієнта";
-                    arbeitenShowMainDataGridView.Columns[4].HeaderText = "Дата оплати";
-                    arbeitenShowMainDataGridView.Columns[5].HeaderText = "Сума від клієнта";
-                    arbeitenShowMainDataGridView.Columns[6].HeaderText = "Дата завантаження";
-                    arbeitenShowMainDataGridView.Columns[7].HeaderText = "№ авто";
-                    arbeitenShowMainDataGridView.Columns[8].HeaderText = "Перевізник";
-                    arbeitenShowMainDataGridView.Columns[9].HeaderText = "Сума перевізнику";
+                    arbeitenShowMainDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                    arbeitenShowMainDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                    arbeitenShowMainDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                    arbeitenShowMainDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Номер_рахунку_клієнта;
+                    arbeitenShowMainDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Дата_оплати;
+                    arbeitenShowMainDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Сума_від_клієнта;
+                    arbeitenShowMainDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                    arbeitenShowMainDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Номер_авто;
+                    arbeitenShowMainDataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                    arbeitenShowMainDataGridView.Columns[9].HeaderText = AtlantSovt.Properties.Resources.Сума_перевізнику;
 
 
                 }
@@ -369,27 +369,27 @@ namespace AtlantSovt
                    new
                    {
                        Id = ar.Id,
-                       OrderNumber = (!ar.Order.IndexNumber.HasValue) ? "Ще не присвоєно" : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
-                       ClientName = (ar.Order.Client == null) ? "Не вибрано" : ar.Order.Client.Name,
+                       OrderNumber = (!ar.Order.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
+                       ClientName = (ar.Order.Client == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Client.Name,
                        ClientAcountNumber = ar.ClientAccountNumber,
                        PaymentDate = ar.PaymentDate,
                        ClientPayment = ar.ClientPayment,
                        DownloadDate = ar.DownloadDate,
                        VehicleNumber = ar.VehicleNumber,
-                       TransporterName = (ar.Order.Transporter == null) ? "Не вибрано" : ar.Order.Transporter.FullName,
+                       TransporterName = (ar.Order.Transporter == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Transporter.FullName,
                        TransporterPayment = ar.TransporterPayment
                    };
                     arbeitenShowMainDataGridView.DataSource = queryTextAndDate.ToList();
-                    arbeitenShowMainDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    arbeitenShowMainDataGridView.Columns[1].HeaderText = "Номер заявки";
-                    arbeitenShowMainDataGridView.Columns[2].HeaderText = "Клієнт";
-                    arbeitenShowMainDataGridView.Columns[3].HeaderText = "Номер рахунку клієнта";
-                    arbeitenShowMainDataGridView.Columns[4].HeaderText = "Дата оплати";
-                    arbeitenShowMainDataGridView.Columns[5].HeaderText = "Сума від клієнта";
-                    arbeitenShowMainDataGridView.Columns[6].HeaderText = "Дата завантаження";
-                    arbeitenShowMainDataGridView.Columns[7].HeaderText = "№ авто";
-                    arbeitenShowMainDataGridView.Columns[8].HeaderText = "Перевізник";
-                    arbeitenShowMainDataGridView.Columns[9].HeaderText = "Сума перевізнику";
+                    arbeitenShowMainDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                    arbeitenShowMainDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                    arbeitenShowMainDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                    arbeitenShowMainDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Номер_рахунку_клієнта;
+                    arbeitenShowMainDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Дата_оплати;
+                    arbeitenShowMainDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Сума_від_клієнта;
+                    arbeitenShowMainDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                    arbeitenShowMainDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Номер_авто;
+                    arbeitenShowMainDataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                    arbeitenShowMainDataGridView.Columns[9].HeaderText = AtlantSovt.Properties.Resources.Сума_перевізнику;
                 }
                 else if (arbeitenShowOnlyActive.Checked == true && arbeitenShowSearchDatePicker.Checked == true && arbeitenShowSearchTextBox.Text == "")// 1 1 0
                 {
@@ -402,27 +402,27 @@ namespace AtlantSovt
                   new
                   {
                       Id = ar.Id,
-                      OrderNumber = (!ar.Order.IndexNumber.HasValue) ? "Ще не присвоєно" : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
-                      ClientName = (ar.Order.Client == null) ? "Не вибрано" : ar.Order.Client.Name,
+                      OrderNumber = (!ar.Order.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
+                      ClientName = (ar.Order.Client == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Client.Name,
                       ClientAcountNumber = ar.ClientAccountNumber,
                       PaymentDate = ar.PaymentDate,
                       ClientPayment = ar.ClientPayment,
                       DownloadDate = ar.DownloadDate,
                       VehicleNumber = ar.VehicleNumber,
-                      TransporterName = (ar.Order.Transporter == null) ? "Не вибрано" : ar.Order.Transporter.FullName,
+                      TransporterName = (ar.Order.Transporter == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Transporter.FullName,
                       TransporterPayment = ar.TransporterPayment
                   };
                     arbeitenShowMainDataGridView.DataSource = queryTextAndDate.ToList();
-                    arbeitenShowMainDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    arbeitenShowMainDataGridView.Columns[1].HeaderText = "Номер заявки";
-                    arbeitenShowMainDataGridView.Columns[2].HeaderText = "Клієнт";
-                    arbeitenShowMainDataGridView.Columns[3].HeaderText = "Номер рахунку клієнта";
-                    arbeitenShowMainDataGridView.Columns[4].HeaderText = "Дата оплати";
-                    arbeitenShowMainDataGridView.Columns[5].HeaderText = "Сума від клієнта";
-                    arbeitenShowMainDataGridView.Columns[6].HeaderText = "Дата завантаження";
-                    arbeitenShowMainDataGridView.Columns[7].HeaderText = "№ авто";
-                    arbeitenShowMainDataGridView.Columns[8].HeaderText = "Перевізник";
-                    arbeitenShowMainDataGridView.Columns[9].HeaderText = "Сума перевізнику";
+                    arbeitenShowMainDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                    arbeitenShowMainDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                    arbeitenShowMainDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                    arbeitenShowMainDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Номер_рахунку_клієнта;
+                    arbeitenShowMainDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Дата_оплати;
+                    arbeitenShowMainDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Сума_від_клієнта;
+                    arbeitenShowMainDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                    arbeitenShowMainDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Номер_авто;
+                    arbeitenShowMainDataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                    arbeitenShowMainDataGridView.Columns[9].HeaderText = AtlantSovt.Properties.Resources.Сума_перевізнику;
 
 
                 }
@@ -439,27 +439,27 @@ namespace AtlantSovt
                   new
                   {
                       Id = ar.Id,
-                      OrderNumber = (!ar.Order.IndexNumber.HasValue) ? "Ще не присвоєно" : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
-                      ClientName = (ar.Order.Client == null) ? "Не вибрано" : ar.Order.Client.Name,
+                      OrderNumber = (!ar.Order.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : ar.Order.IndexNumber + "/" + ar.Order.Date.Value.Year,
+                      ClientName = (ar.Order.Client == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Client.Name,
                       ClientAcountNumber = ar.ClientAccountNumber,
                       PaymentDate = ar.PaymentDate,
                       ClientPayment = ar.ClientPayment,
                       DownloadDate = ar.DownloadDate,
                       VehicleNumber = ar.VehicleNumber,
-                      TransporterName = (ar.Order.Transporter == null) ? "Не вибрано" : ar.Order.Transporter.FullName,
+                      TransporterName = (ar.Order.Transporter == null) ? AtlantSovt.Properties.Resources.Не_вибрано : ar.Order.Transporter.FullName,
                       TransporterPayment = ar.TransporterPayment
                   };
                     arbeitenShowMainDataGridView.DataSource = queryTextAndDate.ToList();
-                    arbeitenShowMainDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    arbeitenShowMainDataGridView.Columns[1].HeaderText = "Номер заявки";
-                    arbeitenShowMainDataGridView.Columns[2].HeaderText = "Клієнт";
-                    arbeitenShowMainDataGridView.Columns[3].HeaderText = "Номер рахунку клієнта";
-                    arbeitenShowMainDataGridView.Columns[4].HeaderText = "Дата оплати";
-                    arbeitenShowMainDataGridView.Columns[5].HeaderText = "Сума від клієнта";
-                    arbeitenShowMainDataGridView.Columns[6].HeaderText = "Дата завантаження";
-                    arbeitenShowMainDataGridView.Columns[7].HeaderText = "№ авто";
-                    arbeitenShowMainDataGridView.Columns[8].HeaderText = "Перевізник";
-                    arbeitenShowMainDataGridView.Columns[9].HeaderText = "Сума перевізнику";
+                    arbeitenShowMainDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                    arbeitenShowMainDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                    arbeitenShowMainDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                    arbeitenShowMainDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Номер_рахунку_клієнта;
+                    arbeitenShowMainDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Дата_оплати;
+                    arbeitenShowMainDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Сума_від_клієнта;
+                    arbeitenShowMainDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                    arbeitenShowMainDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Номер_авто;
+                    arbeitenShowMainDataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                    arbeitenShowMainDataGridView.Columns[9].HeaderText = AtlantSovt.Properties.Resources.Сума_перевізнику;
                 }
                 arbeitenShowMainDataGridView.Update();
                 arbeitenShowMainDataGridView.ClearSelection();
@@ -497,22 +497,22 @@ namespace AtlantSovt
                         {
                             db.Arbeitens.Add( New_Arbeiten);
                             db.SaveChanges();
-                            MessageBox.Show("Запис успішно додано");
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Запис_успішно_додано);
                         }
                         catch (Exception ec)
                         {
                             Log.Write(ec);
-                            MessageBox.Show("Помилка: " + ec.Message);
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ec.Message);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Заповніть хоча б 1 поле");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Заповніть_хоча_б_одне_поле);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Спочатку виберіть заявку");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Спочатку_виберіть_заявку);
                 }
             }
         }
@@ -748,27 +748,27 @@ namespace AtlantSovt
                         {
                             db.Entry(updateArbeiten).State = EntityState.Modified;
                             db.SaveChanges();
-                            MessageBox.Show("Зміни збереженно");
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Зміни_збережено);
                         }
                         else
                         {
-                            MessageBox.Show("Змін не знайдено");
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Змін_не_знайдено);
                         }
                     }
                     catch (DbEntityValidationException e)
                     {
                         Log.Write(e);
-                        MessageBox.Show("Помилка при зміні запису:\n" + e.Message);
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_при_зміні_запису + e.Message);
                     }
                     catch (Exception ex)
                     {
                         Log.Write(ex);
-                        MessageBox.Show("Помилка при зміні запису:\n" + ex.Message);
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_при_зміні_запису + ex.Message);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Спочатку виберіть запис");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Спочатку_виберіть_запис);
                 }
             }
         }

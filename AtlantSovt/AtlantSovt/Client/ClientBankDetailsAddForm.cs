@@ -57,7 +57,7 @@ namespace AtlantSovt
             }
             else
             {
-                MessageBox.Show("Для збереження заповніть хочаб одне поле");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Для_збереження_заповніть_хоча_б_одне_поле);
             }
         }
         internal string AddClientBankDetail(long id, bool newIsAdding)
@@ -84,11 +84,12 @@ namespace AtlantSovt
                     IsAdding = newIsAdding;
                     if (IsAdding)
                     {
-                        return "Банківські данні успішно додані клієнту ["+ New_ClientBankDetail.Id+ "]\n";
+                        return AtlantSovt.Properties.Resources.Банківські_дані_успішно_додані_клієнту + " [" + New_ClientBankDetail.Id+ @"]
+";
                     }        
                     else
                     {
-                        MessageBox.Show("Банківські данні успішно додані клієнту");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Банківські_дані_успішно_додані_клієнту);
                         return string.Empty;
                     }         
                 }
@@ -111,7 +112,7 @@ namespace AtlantSovt
             {
                 if(clientBankNameTextBox.Text != "" || clientMFOTextBox.Text != "" || clientAccountNumberTextBox.Text != "" || clientEDRPOUTextBox.Text != "" || clientIPNTextBox.Text != "" || clientCertificateNumberTextBox.Text !="" || clientCertificateSerialTextBox.Text != "" || clientSWIFTTextBox.Text != "" || clientIBANTextBox.Text != "")
                 {
-                    if (MessageBox.Show("Закрити форму без збереження?\nБанківські данні НЕ збережуться.\n Для збереження натисніть <Отмена> та <Додати Банківські данні>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                    if (MessageBox.Show(AtlantSovt.Properties.Resources.Закрити_форму_без_збереження_банкінських_даних, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) != DialogResult.OK)
                     {
                         e.Cancel = true;
                     }
