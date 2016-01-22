@@ -8,7 +8,7 @@ namespace AtlantSovt.AtlantSovtDb
     public partial class AtlantSovtContext : DbContext
     {
         public AtlantSovtContext()
-            : base(ConnectionForm.GetConnectionString())
+            : base("name=AtlantSovtContext")
         {
         }
 
@@ -99,11 +99,6 @@ namespace AtlantSovt.AtlantSovtDb
                 .HasMany(e => e.ForwarderContracts)
                 .WithOptional(e => e.Contract)
                 .WillCascadeOnDelete();
-
-            modelBuilder.Entity<Country>()
-                .HasMany(e => e.TransporterCountries)
-                .WithRequired(e => e.Country)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<CustomsAddress>()
                 .HasMany(e => e.OrderCustomsAddresses)
@@ -233,10 +228,6 @@ namespace AtlantSovt.AtlantSovtDb
                 .HasMany(e => e.OrderUploadAdresses)
                 .WithRequired(e => e.UploadAddress)
                 .HasForeignKey(e => e.AddressId);
-
-            modelBuilder.Entity<Vehicle>()
-                .Property(e => e.Type)
-                .IsFixedLength();
 
             modelBuilder.Entity<Vehicle>()
                 .HasMany(e => e.TransporterVehicles)

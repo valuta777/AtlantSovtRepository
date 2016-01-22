@@ -117,7 +117,7 @@ namespace AtlantSovt
                     var query5 =
                         from o in db.Orders
                         where o.Arbeiten.Id == ArbeitenClikedId
-                        select o.Note;
+                        select o.Arbeiten.Note;
                     arbeitenShowNoteTextBox.Text = query5.FirstOrDefault();
                 }
                 catch (Exception ex)
@@ -151,6 +151,13 @@ namespace AtlantSovt
                             db.SaveChanges();
                             MessageBox.Show("Запис успішно видалено");
                             ShowArbeiten();
+                            arbeitenShowForwardersDataGridView.DataSource = null;
+                            arbeitenShowUploadAddressDataGridView.DataSource = null;
+                            arbeitenShowDownloadAddressDataGridView.DataSource = null;
+
+                            arbeitenShowNoteTextBox.Text = "";
+
+
                         }
                         catch (Exception ex)
                         {
@@ -608,7 +615,15 @@ namespace AtlantSovt
                                 orderby c.Id
                                 where c.Id == addArbeitenOrder.ClientId
                                 select c;
-                    arbeitenAddClientTextBox.Text = (query.FirstOrDefault().Name + " , " + query.FirstOrDefault().Director + " [" + query.FirstOrDefault().Id + "]");
+                    if (query.Count() != 0)
+                    {
+                        arbeitenAddClientTextBox.Text = (query.FirstOrDefault().Name + " , " + query.FirstOrDefault().Director + " [" + query.FirstOrDefault().Id + "]");
+                    }
+                    else
+                    {
+                        arbeitenAddClientTextBox.Clear();
+                    }
+
                 }
                 else
                 {
@@ -627,8 +642,14 @@ namespace AtlantSovt
                                 orderby c.Id
                                 where c.Id == addArbeitenOrder.TransporterId
                                 select c;
-                    arbeitenAddTransporterTextBox.Text = (query.FirstOrDefault().FullName + " , " + query.FirstOrDefault().Director + " [" + query.FirstOrDefault().Id + "]");
-
+                    if (query.Count() != 0)
+                    {
+                        arbeitenAddTransporterTextBox.Text = (query.FirstOrDefault().FullName + " , " + query.FirstOrDefault().Director + " [" + query.FirstOrDefault().Id + "]");
+                    }
+                    else
+                    {
+                        arbeitenAddTransporterTextBox.Clear();
+                    }
                 }
                 else
                 {

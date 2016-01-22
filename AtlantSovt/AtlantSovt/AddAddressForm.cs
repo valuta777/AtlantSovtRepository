@@ -68,7 +68,7 @@ namespace AtlantSovt
             {
                 var New_UploadAddress = new UploadAddress
                 {
-                    CountryId = country.Id,
+                    CountryId = country?.Id,
                     ClientId = client.Id,
                     CityCode = new_CityCode,
                     StreetName = new_StreetName,
@@ -99,7 +99,7 @@ namespace AtlantSovt
             {
                 var New_DownloadAddress = new DownloadAddress
                 {
-                    CountryId = country.Id,
+                    CountryId = country?.Id,
                     ClientId = client.Id,
                     CityCode = new_CityCode,
                     StreetName = new_StreetName,
@@ -131,7 +131,7 @@ namespace AtlantSovt
             {
                 var New_CustomsAddress = new CustomsAddress
                 {
-                    CountryId = country.Id,
+                    CountryId = country?.Id,
                     ClientId = client.Id,
                     CityCode = new_CityCode,
                     StreetName = new_StreetName,
@@ -163,7 +163,7 @@ namespace AtlantSovt
             {
                 var New_UnCustomsAddress = new UnCustomsAddress
                 {
-                    CountryId = country.Id,
+                    CountryId = country?.Id,
                     ClientId = client.Id,
                     CityCode = new_CityCode,
                     StreetName = new_StreetName,

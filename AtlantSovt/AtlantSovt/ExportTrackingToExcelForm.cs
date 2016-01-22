@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel;
 using System.Runtime.InteropServices;
+using Microsoft.Office.Interop.Word;
 
 namespace AtlantSovt
 {
@@ -103,8 +104,8 @@ namespace AtlantSovt
             int resultCounter = 0;
             int startBorder = 1;
             string note = "";
-            XlRgbColor cellsColor = XlRgbColor.rgbOrange;
-            XlRgbColor subcellsColor = XlRgbColor.rgbYellow;
+            Microsoft.Office.Interop.Excel.XlRgbColor cellsColor = Microsoft.Office.Interop.Excel.XlRgbColor.rgbOrange;
+            Microsoft.Office.Interop.Excel.XlRgbColor subcellsColor = Microsoft.Office.Interop.Excel.XlRgbColor.rgbYellow;
 
             Microsoft.Office.Interop.Excel.Application ObjExcel = new Microsoft.Office.Interop.Excel.Application();
             Microsoft.Office.Interop.Excel.Workbook ObjWorkBook;
@@ -345,7 +346,7 @@ namespace AtlantSovt
                             uaCounter = 0;
                             tcCounter = 0;
                             transConCounter = 0;
-                            ObjWorkSheet.Range[ObjWorkSheet.Cells[startBorder, 1], ObjWorkSheet.Cells[resultCounter - 2, 7]].BorderAround(XlLineStyle.xlContinuous, XlBorderWeight.xlThick);
+                            ObjWorkSheet.Range[ObjWorkSheet.Cells[startBorder, 1], ObjWorkSheet.Cells[resultCounter - 2, 7]].BorderAround(Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous, Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick);
                             startBorder = resultCounter + 1;
                         }
                     }

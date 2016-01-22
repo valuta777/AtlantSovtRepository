@@ -151,7 +151,14 @@ namespace AtlantSovt
                             select address;
                 foreach (var item in query)
                 {
-                    downloadAddresssListBox.Items.Add(item.Country.Name + "," +item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                    if (item.Country != null)
+                    {
+                        downloadAddresssListBox.Items.Add(item.Country.Name + "," + item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                    }
+                    else
+                    {
+                        downloadAddresssListBox.Items.Add(item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                    }
                 }
             }
         }
@@ -166,7 +173,14 @@ namespace AtlantSovt
                                 select address;
                     foreach (var item in query)
                     {
-                        downloadAddresssListBox.Items.Add(item.Country.Name + "," + item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                        if (item.Country != null)
+                        {
+                            downloadAddresssListBox.Items.Add(item.Country.Name + "," + item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                        }
+                        else
+                        {
+                            downloadAddresssListBox.Items.Add(item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                        }
                     }
                 }
             }
