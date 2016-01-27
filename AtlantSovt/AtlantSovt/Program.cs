@@ -17,11 +17,9 @@ namespace AtlantSovt
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //Show the language select dialog
-            //MultiLang.SelectLanguage frmLang = new MultiLang.SelectLanguage() ;
-            //frmLang.LoadSettingsAndShow() ;
-            //frmLang.Dispose() ;
-            //frmLang = null ;
+            Additions.ChangeLanguage changeLanguage = new Additions.ChangeLanguage();
+            changeLanguage.LoadSettings();
+            changeLanguage = null;
 
             Application.Run(new MainForm());
         }

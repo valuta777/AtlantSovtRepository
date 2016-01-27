@@ -547,6 +547,15 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Видалити заявку .
+        /// </summary>
+        internal static string Видалити_заявку {
+            get {
+                return ResourceManager.GetString("Видалити_заявку", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Видалити клієнта .
         /// </summary>
         internal static string Видалити_клієнта {
@@ -931,6 +940,16 @@ namespace AtlantSovt.Properties {
         internal static string Зміни_збережено {
             get {
                 return ResourceManager.GetString("Зміни_збережено", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Змінити мову та перезавантажити програму?
+        ///Не збережена інформація буде втрачена!.
+        /// </summary>
+        internal static string Змінити_мову {
+            get {
+                return ResourceManager.GetString("Змінити_мову", resourceCulture);
             }
         }
         

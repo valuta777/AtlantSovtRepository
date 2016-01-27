@@ -765,4 +765,11 @@
   <data name="Скорочена_Назва" xml:space="preserve">
     <value>Сокращенное Название</value>
   </data>
+  <data name="Змінити_мову" xml:space="preserve">
+    <value>Изменить язык и перезагрузить программу?
+Не сохраненная информация будет потеряна!</value>
+  </data>
+  <data name="Видалити_заявку" xml:space="preserve">
+    <value>Удалить заявку </value>
+  </data>
 </root>

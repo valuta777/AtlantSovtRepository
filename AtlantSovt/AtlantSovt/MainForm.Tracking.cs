@@ -32,6 +32,7 @@ namespace AtlantSovt
 
                 var query =
                 from o in db.Orders
+                where o.IsDeleted == false
                 orderby o.Id
                 select
                 new
@@ -76,7 +77,7 @@ namespace AtlantSovt
                         from o in db.Orders
                         where o.Id == TrackingClikedId
                         select o
-                    ).FirstOrDefault().TransporterId
+                    ).FirstOrDefault().TransporterId 
                     select new
                     {
                         Контактна_персона = con.ContactPerson,
@@ -184,6 +185,7 @@ namespace AtlantSovt
                 {
                     var queryTextAndDate =
                    from o in db.Orders
+                   where o.IsDeleted == false
                    orderby o.Id
                    select
                    new
@@ -215,7 +217,7 @@ namespace AtlantSovt
                     var queryTextAndDate =
                    from o in db.Orders
                    where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Staff.Type.Contains(text) ||
-                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text)))
+                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) && o.IsDeleted == false
                    orderby o.Id
                    select
                    new
@@ -248,7 +250,7 @@ namespace AtlantSovt
                     var queryTextAndDate =
                    from o in db.Orders
                    where ((o.DownloadDateFrom.Value.Month == dateTime.Value.Month) ||
-                   (o.DownloadDateTo.Value.Month == dateTime.Value.Month)) && ((o.DownloadDateFrom.Value.Year == dateTime.Value.Year) || o.DownloadDateTo.Value.Year == dateTime.Value.Year)
+                   (o.DownloadDateTo.Value.Month == dateTime.Value.Month)) && ((o.DownloadDateFrom.Value.Year == dateTime.Value.Year) || o.DownloadDateTo.Value.Year == dateTime.Value.Year) && o.IsDeleted == false
                    orderby o.Id
                    select
                    new
@@ -282,7 +284,7 @@ namespace AtlantSovt
                    from o in db.Orders
                    where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Staff.Type.Contains(text) ||
                          o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) && ((o.DownloadDateFrom.Value.Month == dateTime.Value.Month) ||
-                   (o.DownloadDateTo.Value.Month == dateTime.Value.Month)) && ((o.DownloadDateFrom.Value.Year == dateTime.Value.Year) || o.DownloadDateTo.Value.Year == dateTime.Value.Year)
+                   (o.DownloadDateTo.Value.Month == dateTime.Value.Month)) && ((o.DownloadDateFrom.Value.Year == dateTime.Value.Year) || o.DownloadDateTo.Value.Year == dateTime.Value.Year) && o.IsDeleted == false
                    orderby o.Id
                    select
                    new
@@ -314,7 +316,7 @@ namespace AtlantSovt
                 {
                     var queryTextAndDate =
                    from o in db.Orders
-                   where (o.State == true)
+                   where (o.State == true) && o.IsDeleted == false
                    orderby o.Id
                    select
                    new
@@ -347,7 +349,7 @@ namespace AtlantSovt
                     var queryTextAndDate =
                    from o in db.Orders
                    where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Staff.Type.Contains(text) ||
-                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text)) && (o.State == true))
+                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text)) && (o.State == true)) && o.IsDeleted == false
                    orderby o.Id
                    select
                    new
@@ -379,7 +381,7 @@ namespace AtlantSovt
                     var queryTextAndDate =
                   from o in db.Orders
                   where (o.State == true && ((o.DownloadDateFrom.Value.Month == dateTime.Value.Month) ||
-                   (o.DownloadDateTo.Value.Month == dateTime.Value.Month)) && ((o.DownloadDateFrom.Value.Year == dateTime.Value.Year) || o.DownloadDateTo.Value.Year == dateTime.Value.Year))
+                   (o.DownloadDateTo.Value.Month == dateTime.Value.Month)) && ((o.DownloadDateFrom.Value.Year == dateTime.Value.Year) || o.DownloadDateTo.Value.Year == dateTime.Value.Year)) && o.IsDeleted == false
                   orderby o.Id
                   select
                   new
@@ -414,7 +416,7 @@ namespace AtlantSovt
                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Staff.Type.Contains(text) ||
                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) &&
                         ((o.DownloadDateFrom.Value.Month == dateTime.Value.Month) || (o.DownloadDateTo.Value.Month == dateTime.Value.Month)) && ((o.DownloadDateFrom.Value.Year == dateTime.Value.Year) ||
-                        o.DownloadDateTo.Value.Year == dateTime.Value.Year) && o.State == true
+                        o.DownloadDateTo.Value.Year == dateTime.Value.Year) && o.State == true && o.IsDeleted == false
                   orderby o.Id
                   select
                   new
@@ -445,7 +447,7 @@ namespace AtlantSovt
                 }
         }
 
-        void ShowTrackingCloseOrder()
+        void CloseOrder()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -674,13 +676,14 @@ namespace AtlantSovt
                         string downloadAddressContactPerson = "";
                         string[] regularyDelay;
 
-                        orderNumber = orderDocument.IndexNumber + @"\" + orderDocument.Date.Value.Year;
+                        orderNumber = orderDocument.IndexNumber + @"/" + orderDocument.Date.Value.Year;
                         createDate = orderDocument.Date.Value.ToShortDateString();
 
                         
-                        downloadDate = (!orderDocument.DownloadDateFrom.HasValue) ? "" : (!orderDocument.DownloadDateTo.HasValue) ? orderDocument.DownloadDateFrom.Value.ToShortDateString() : (orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month) ? orderDocument.DownloadDateFrom.Value.Day + "." + orderDocument.DownloadDateFrom.Value.Month + "-" + orderDocument.DownloadDateTo.Value : orderDocument.DownloadDateFrom.Value.Day + "-" + orderDocument.DownloadDateTo.Value + " на ";
-                        downloadDate += (!orderDocument.DownloadDateFrom.HasValue) ? "" : orderDocument.DownloadDateFrom.Value.ToShortTimeString();
+                        downloadDate = (!orderDocument.DownloadDateFrom.HasValue) ? "" : (!orderDocument.DownloadDateTo.HasValue) ? orderDocument.DownloadDateFrom.Value.ToShortDateString() : (orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month) ? orderDocument.DownloadDateFrom.Value.Day + "." + orderDocument.DownloadDateFrom.Value.Month + "-" + orderDocument.DownloadDateTo.Value : orderDocument.DownloadDateFrom.Value.Day + "-" + orderDocument.DownloadDateTo.Value;
+                        downloadDate += (!orderDocument.DownloadDateFrom.HasValue) ? "" : " на " + orderDocument.DownloadDateFrom.Value.ToShortTimeString();
                       
+                        // TODO DATE
                         dateTerms = (!orderDocument.DownloadDateFrom.HasValue) ? "" : (!orderDocument.DownloadDateTo.HasValue) ? orderDocument.DownloadDateFrom.Value.ToShortDateString() : (orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month) ? orderDocument.DownloadDateFrom.Value.Day.ToString().PadLeft(2,'0') + "." + orderDocument.DownloadDateFrom.Value.Month.ToString().PadLeft(2, '0') + "-" + orderDocument.DownloadDateTo.Value.ToShortDateString() : orderDocument.DownloadDateFrom.Value.Day.ToString().PadLeft(2, '0') + "-" + orderDocument.DownloadDateTo.Value.ToShortDateString() + " — ";
                         dateTerms +=(!orderDocument.UploadDateFrom.HasValue) ? "" : (!orderDocument.UploadDateTo.HasValue) ? orderDocument.UploadDateFrom.Value.ToShortDateString() : (orderDocument.UploadDateFrom.Value.Month != orderDocument.UploadDateTo.Value.Month) ? orderDocument.UploadDateFrom.Value.Day.ToString().PadLeft(2, '0') + "." + orderDocument.UploadDateFrom.Value.Month.ToString().PadLeft(2, '0') + "-" + orderDocument.UploadDateTo.Value.ToShortDateString() : orderDocument.UploadDateFrom.Value.Day.ToString().PadLeft(2, '0') + "-" + orderDocument.UploadDateTo.Value.ToShortDateString() + "до " + orderDocument.UploadDateTo.Value.ToShortTimeString();
 
@@ -715,6 +718,7 @@ namespace AtlantSovt
                         string fineForDelay = (orderDocument.FineForDelay == null || orderDocument.FineForDelay.Type == "") ? "_____________________" : orderDocument.FineForDelay.Type;
                         string weight = (Convert.ToString(orderDocument.CargoWeight) == null) ? "" : Convert.ToString(orderDocument.CargoWeight) + " т";
                         string orderDeny = (orderDocument.OrderDeny == null || orderDocument.OrderDeny.Type == "") ? "____________________" : orderDocument.OrderDeny.Type;
+                        string tirCmr = (orderDocument.TirCmr == null || orderDocument.TirCmr.Type == "") ? "" : orderDocument.TirCmr.Type;
 
                         if (orderDocument.RegularyDelay == null || orderDocument.RegularyDelay.Type == "" || orderDocument.RegularyDelay.Type.Split(new char[] { '-' }).Count() < 4 )
                         {
@@ -751,34 +755,54 @@ namespace AtlantSovt
 
                         foreach(var address in DownloadAddressQuery)
                         {
-                            downloadAddress += ((address.DownloadAddress.StreetName != "" && address.DownloadAddress != null) ? address.DownloadAddress.StreetName + " " : "");
-                            downloadAddress += ((address.DownloadAddress.HouseNumber != "" && address.DownloadAddress != null) ? address.DownloadAddress.HouseNumber + ", " : "");
-                            downloadAddress += ((address.DownloadAddress.CityName != "" && address.DownloadAddress != null) ? address.DownloadAddress.CityName + ", " : "");
-                            downloadAddress += address.DownloadAddress.Country.Name + Environment.NewLine;
+                            if(address.DownloadAddress != null)
+                            {
+                                downloadAddress += (address.DownloadAddress.Country.Name != "") ? address.DownloadAddress.Country.Name + ", " : "";
+                                downloadAddress += (address.DownloadAddress.CountryCode != "") ? address.DownloadAddress.CountryCode + ", " : "";
+                                downloadAddress += (address.DownloadAddress.CityCode != "") ? address.DownloadAddress.CityCode + ", " : "";
+                                downloadAddress += (address.DownloadAddress.StreetName != "") ? address.DownloadAddress.StreetName + ", " : "";
+                                downloadAddress += (address.DownloadAddress.HouseNumber != "") ? address.DownloadAddress.HouseNumber + ", " : "";
+                                downloadAddress += (address.DownloadAddress.CompanyName != "") ? address.DownloadAddress.CompanyName + "\r" : "\r";
+                            }
                         }
 
                         foreach (var address in UploaddAddressQuery)
                         {
-                            uploadAddress += ((address.UploadAddress.StreetName != "" && address.UploadAddress != null) ? address.UploadAddress.StreetName + " " : "");
-                            uploadAddress += ((address.UploadAddress.HouseNumber != "" && address.UploadAddress != null) ? address.UploadAddress.HouseNumber + ", " : "");
-                            uploadAddress += ((address.UploadAddress.CityName != "" && address.UploadAddress != null) ? address.UploadAddress.CityName + ", " : "");
-                            uploadAddress += address.UploadAddress.Country.Name + Environment.NewLine;
+                            if (address.UploadAddress != null)
+                            {
+                                uploadAddress += (address.UploadAddress.Country.Name != "") ? address.UploadAddress.Country.Name + ", " : "";
+                                uploadAddress += (address.UploadAddress.CountryCode != "") ? address.UploadAddress.CountryCode + ", " : "";
+                                uploadAddress += (address.UploadAddress.CityCode != "") ? address.UploadAddress.CityCode + ", " : "";
+                                uploadAddress += (address.UploadAddress.StreetName != "") ? address.UploadAddress.StreetName + ", " : "";
+                                uploadAddress += (address.UploadAddress.HouseNumber != "") ? address.UploadAddress.HouseNumber + ", " : "";
+                                uploadAddress += (address.UploadAddress.CompanyName != "") ? address.UploadAddress.CompanyName + "\r" : "\r";
+                            }
                         }
 
                         foreach (var address in CustomAddressQuery)
                         {
-                            customAddress += ((address.CustomsAddress.StreetName != "" && address.CustomsAddress != null) ? address.CustomsAddress.StreetName + " " : "");
-                            customAddress += ((address.CustomsAddress.HouseNumber != "" && address.CustomsAddress != null) ? address.CustomsAddress.HouseNumber + ", " : "");
-                            customAddress += ((address.CustomsAddress.CityName != "" && address.CustomsAddress != null) ? address.CustomsAddress.CityName + ", " : "");
-                            customAddress += address.CustomsAddress.Country.Name + Environment.NewLine;
+                            if (address.CustomsAddress != null)
+                            {
+                                customAddress += (address.CustomsAddress.Country.Name != "") ? address.CustomsAddress.Country.Name + ", " : "";
+                                customAddress += (address.CustomsAddress.CountryCode != "") ? address.CustomsAddress.CountryCode + ", " : "";
+                                customAddress += (address.CustomsAddress.CityCode != "") ? address.CustomsAddress.CityCode + ", " : "";
+                                customAddress += (address.CustomsAddress.StreetName != "") ? address.CustomsAddress.StreetName + ", " : "";
+                                customAddress += (address.CustomsAddress.HouseNumber != "") ? address.CustomsAddress.HouseNumber + ", " : "";
+                                customAddress += (address.CustomsAddress.CompanyName != "") ? address.CustomsAddress.CompanyName + "\r" : "\r";
+                            }
                         }
 
                         foreach (var address in UncustomAddressQuery)
                         {
-                            uncustomAddress += ((address.UnCustomsAddress.StreetName != "" && address.UnCustomsAddress != null) ? address.UnCustomsAddress.StreetName + " " : "");
-                            uncustomAddress += ((address.UnCustomsAddress.HouseNumber != "" && address.UnCustomsAddress != null) ? address.UnCustomsAddress.HouseNumber + ", " : "");
-                            uncustomAddress += ((address.UnCustomsAddress.CityName != "" && address.UnCustomsAddress != null) ? address.UnCustomsAddress.CityName + ", " : "");
-                            uncustomAddress += address.UnCustomsAddress.Country.Name + Environment.NewLine;
+                            if (address.UnCustomsAddress != null)
+                            {
+                                uncustomAddress += (address.UnCustomsAddress.Country.Name != "") ? address.UnCustomsAddress.Country.Name + ", " : "";
+                                uncustomAddress += (address.UnCustomsAddress.CountryCode != "") ? address.UnCustomsAddress.CountryCode + ", " : "";
+                                uncustomAddress += (address.UnCustomsAddress.CityCode != "") ? address.UnCustomsAddress.CityCode + ", " : "";
+                                uncustomAddress += (address.UnCustomsAddress.StreetName != "") ? address.UnCustomsAddress.StreetName + ", " : "";
+                                uncustomAddress += (address.UnCustomsAddress.HouseNumber != "") ? address.UnCustomsAddress.HouseNumber + ", " : "";
+                                uncustomAddress += (address.UnCustomsAddress.CompanyName != "") ? address.UnCustomsAddress.CompanyName + "\r" : "\r";
+                            }
                         }
 
                         ReplaseWordStub("{ForwarderName1}", forwarderName1, wordDocument);
@@ -792,6 +816,7 @@ namespace AtlantSovt
                         ReplaseWordStub("{CustomAddress}", customAddress, wordDocument);
                         ReplaseWordStub("{CargoType}", cargoType, wordDocument);
                         ReplaseWordStub("{Weight}", weight, wordDocument);
+                        ReplaseWordStub("{TIRCMR}", tirCmr, wordDocument);
                         ReplaseWordStub("{LoadingForm1}", loadingForm1, wordDocument);
                         ReplaseWordStub("{LoadingForm2}", loadingForm2, wordDocument);
                         ReplaseWordStub("{DateTerms}", dateTerms, wordDocument);
@@ -841,7 +866,7 @@ namespace AtlantSovt
 
                         if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                         {
-                            orderNumber = orderNumber.Replace(@"\", "_");
+                            orderNumber = orderNumber.Replace(@"/", "_");
                             wordDocument.SaveAs(folderBrowserDialog.SelectedPath + "\\" + orderNumber + ".docx");
                             wordApp.Visible = true;
                         }
@@ -977,6 +1002,43 @@ namespace AtlantSovt
                     MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                 }
             }
+        }
+
+        void ChangeOrderDeleteState()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                try
+                {
+                    Order order;
+                    TrackingClikedId = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+                    order = db.Orders.Find(TrackingClikedId);
+                    if (order != null)
+                    {
+                        try
+                        {
+                            if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_заявку + order.Id + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                order.IsDeleted = true;
+                                db.Entry(order).State = EntityState.Modified;
+                                db.SaveChanges();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Log.Write(ex);
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Виникла_помилка_спробуйте_ще_раз);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Log.Write(ex);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодної_заявки);
+                }
+                ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
+            }
+            trackingShowDataGridView.Update();
         }
     }
 }

@@ -9,7 +9,6 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("UnCustomsAddress")]
     public partial class UnCustomsAddress
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public UnCustomsAddress()
         {
             OrderUnCustomsAddresses = new HashSet<OrderUnCustomsAddress>();
@@ -49,7 +48,6 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual Country Country { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderUnCustomsAddress> OrderUnCustomsAddresses { get; set; }
     }
 }

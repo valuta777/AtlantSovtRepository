@@ -68,6 +68,8 @@ namespace AtlantSovt
             //Tracking
         AddOrderNoteForm orderNoteForm;
         ShowTrackingCommentForm ShowTrackingComment;
+
+        bool languageChanged;
         //Load / Animaton / Test connection
         #region Load
 
@@ -142,6 +144,7 @@ namespace AtlantSovt
             if (Connecting())
             {
                 this.WindowState = FormWindowState.Maximized;
+                this.Activate();
             }
             else
             {
@@ -149,12 +152,22 @@ namespace AtlantSovt
                 Application.Exit();
             }
         }
+
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show(AtlantSovt.Properties.Resources.Завершити_роботу, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) != DialogResult.OK)
+            if(!languageChanged)
             {
-                e.Cancel = true;
+                if (MessageBox.Show(AtlantSovt.Properties.Resources.Завершити_роботу, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) != DialogResult.OK)
+                {
+                    e.Cancel = true;
+                }
             }
+            else
+            {
+                languageChanged = false;
+
+            }
+
         }
         #endregion
 
@@ -2046,7 +2059,7 @@ namespace AtlantSovt
         {
             if(closeDateForm == null)
             {
-            ShowTrackingCloseOrder();
+            CloseOrder();
         }
             else
             {
@@ -2159,6 +2172,11 @@ namespace AtlantSovt
             {
                 ShowTrackingInfo();
             }
+        }
+
+        private void trackingShowDeleteOrderButton_Click(object sender, EventArgs e)
+        {
+            ChangeOrderDeleteState();
         }
 
         #endregion
@@ -3162,14 +3180,37 @@ namespace AtlantSovt
         #region Translate
         private void uaLangButton_Click(object sender, EventArgs e)
         {
-            SelectLanguage lang = new SelectLanguage(CultureInfo.CreateSpecificCulture("uk-UA"));
+            if (MessageBox.Show(AtlantSovt.Properties.Resources.Змінити_мову, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                Additions.ChangeLanguage changeLanguage = new Additions.ChangeLanguage(CultureInfo.CreateSpecificCulture("uk-UA"));
+                changeLanguage.SaveSettings();
+                changeLanguage = null;
+                languageChanged = true;
+                Application.Restart();
+            }
+            else
+            {
+                this.Activate();
+            }
         }
 
         private void ruLangButton_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show(AtlantSovt.Properties.Resources.Змінити_мову, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                Additions.ChangeLanguage changeLanguage = new Additions.ChangeLanguage(CultureInfo.CreateSpecificCulture("ru-RU"));
+                changeLanguage.SaveSettings();
+                changeLanguage = null;
+                languageChanged = true;
+                Application.Restart();
+            }
+            else
+            {
+                this.Activate();
+            }
         }
  
         #endregion
+
     }
 }

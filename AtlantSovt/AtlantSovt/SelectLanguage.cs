@@ -17,13 +17,10 @@ namespace MultiLang
 {
     public partial class SelectLanguage : Form
     {
-        public SelectLanguage(CultureInfo ci)
+        public SelectLanguage()
         {
             InitializeComponent();
-            cultuteInfo = ci;
         }
-
-        private CultureInfo cultuteInfo { get; set; }
 
         //----------------------------------------------
         //Enums
@@ -59,8 +56,6 @@ namespace MultiLang
         {
             LoadSettingsAndShow(false);
         }
-
-        
 
         public void LoadSettingsAndShow(Boolean ForceShow)
         {
@@ -164,7 +159,6 @@ namespace MultiLang
 
         private void SaveSettings()
         {
-
             // Get an isolated store for user, domain, and assembly and put it into 
             // an IsolatedStorageFile object.
             IsolatedStorageFile isoStorage = IsolatedStorageFile.GetUserStoreForDomain();

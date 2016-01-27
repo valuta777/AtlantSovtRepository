@@ -74,7 +74,8 @@ namespace AtlantSovt
 
                     State = null,
 
-                   
+                    IsDeleted = false,
+                    
                     Language = (OrderAddLanduageSelectComboBox.SelectedIndex != -1 && OrderAddLanduageSelectComboBox.Text == OrderAddLanduageSelectComboBox.SelectedItem.ToString()) ? (OrderAddLanduageSelectComboBox.SelectedIndex == 0) ? (byte?)0 : (OrderAddLanduageSelectComboBox.SelectedIndex == 1) ? (byte?)1 : (byte?)2 : null
                 };
                 try

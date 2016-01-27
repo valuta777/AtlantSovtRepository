@@ -1437,4 +1437,11 @@
   <data name="Юридична_адреса1" xml:space="preserve">
     <value>Юридична адреса</value>
   </data>
+  <data name="Змінити_мову" xml:space="preserve">
+    <value>Змінити мову та перезавантажити програму?
+Не збережена інформація буде втрачена!</value>
+  </data>
+  <data name="Видалити_заявку" xml:space="preserve">
+    <value>Видалити заявку</value>
+  </data>
 </root>

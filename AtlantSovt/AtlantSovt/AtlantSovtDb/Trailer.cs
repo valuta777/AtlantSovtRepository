@@ -9,7 +9,6 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("Trailer")]
     public partial class Trailer
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Trailer()
         {
             Orders = new HashSet<Order>();
@@ -20,7 +19,6 @@ namespace AtlantSovt.AtlantSovtDb
         [StringLength(50)]
         public string Type { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
     }
 }

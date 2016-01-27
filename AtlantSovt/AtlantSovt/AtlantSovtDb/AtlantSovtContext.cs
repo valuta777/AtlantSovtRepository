@@ -100,11 +100,6 @@ namespace AtlantSovt.AtlantSovtDb
                 .WithOptional(e => e.Contract)
                 .WillCascadeOnDelete();
 
-            modelBuilder.Entity<Country>()
-                .HasMany(e => e.TransporterCountries)
-                .WithRequired(e => e.Country)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<CustomsAddress>()
                 .HasMany(e => e.OrderCustomsAddresses)
                 .WithRequired(e => e.CustomsAddress)
@@ -233,10 +228,6 @@ namespace AtlantSovt.AtlantSovtDb
                 .HasMany(e => e.OrderUploadAdresses)
                 .WithRequired(e => e.UploadAddress)
                 .HasForeignKey(e => e.AddressId);
-
-            modelBuilder.Entity<Vehicle>()
-                .Property(e => e.Type)
-                .IsFixedLength();
 
             modelBuilder.Entity<Vehicle>()
                 .HasMany(e => e.TransporterVehicles)
