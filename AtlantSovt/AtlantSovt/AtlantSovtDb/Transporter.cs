@@ -9,7 +9,6 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("Transporter")]
     public partial class Transporter
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Transporter()
         {
             Contracts = new HashSet<Contract>();
@@ -44,12 +43,10 @@ namespace AtlantSovt.AtlantSovtDb
 
         public bool? ContractType { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Contract> Contracts { get; set; }
 
         public virtual Filter Filter { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
 
         public virtual TaxPayerStatu TaxPayerStatu { get; set; }
@@ -58,13 +55,10 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual TransporterBankDetail TransporterBankDetail { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TransporterContact> TransporterContacts { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TransporterCountry> TransporterCountries { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TransporterVehicle> TransporterVehicles { get; set; }
     }
 }

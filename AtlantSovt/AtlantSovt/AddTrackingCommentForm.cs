@@ -50,7 +50,7 @@ namespace AtlantSovt
                 {
                     db.TrackingComments.Add(New_TrackingComment);
                     db.SaveChanges();
-                    MessageBox.Show("Коментар успішно доданий заявці " + New_TrackingComment.OrderId);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Коментар_успішно_доданий_заявці + New_TrackingComment.OrderId);
                 }
                 catch (Exception ex)
                 {

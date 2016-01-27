@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExportTrackingToExcelForm));
             this.exportTrackingFormLabel1 = new System.Windows.Forms.Label();
             this.exportTrackingButton = new System.Windows.Forms.Button();
             this.trackingExportSelectAllCheckBox = new System.Windows.Forms.CheckBox();
@@ -42,109 +43,71 @@
             // 
             // exportTrackingFormLabel1
             // 
-            this.exportTrackingFormLabel1.AutoSize = true;
-            this.exportTrackingFormLabel1.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.exportTrackingFormLabel1, "exportTrackingFormLabel1");
             this.exportTrackingFormLabel1.Name = "exportTrackingFormLabel1";
-            this.exportTrackingFormLabel1.Size = new System.Drawing.Size(60, 21);
-            this.exportTrackingFormLabel1.TabIndex = 0;
-            this.exportTrackingFormLabel1.Text = "Заявки";
             // 
             // exportTrackingButton
             // 
-            this.exportTrackingButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.exportTrackingButton.Location = new System.Drawing.Point(590, 496);
+            resources.ApplyResources(this.exportTrackingButton, "exportTrackingButton");
             this.exportTrackingButton.Name = "exportTrackingButton";
-            this.exportTrackingButton.Size = new System.Drawing.Size(194, 65);
-            this.exportTrackingButton.TabIndex = 20;
-            this.exportTrackingButton.Text = "Продовжити >>";
             this.exportTrackingButton.UseVisualStyleBackColor = true;
             this.exportTrackingButton.Click += new System.EventHandler(this.exportTrackingButton_Click);
             // 
             // trackingExportSelectAllCheckBox
             // 
-            this.trackingExportSelectAllCheckBox.AutoSize = true;
-            this.trackingExportSelectAllCheckBox.Location = new System.Drawing.Point(672, 68);
+            resources.ApplyResources(this.trackingExportSelectAllCheckBox, "trackingExportSelectAllCheckBox");
             this.trackingExportSelectAllCheckBox.Name = "trackingExportSelectAllCheckBox";
-            this.trackingExportSelectAllCheckBox.Size = new System.Drawing.Size(112, 25);
-            this.trackingExportSelectAllCheckBox.TabIndex = 21;
-            this.trackingExportSelectAllCheckBox.Text = "Вибрати всі";
             this.trackingExportSelectAllCheckBox.UseVisualStyleBackColor = true;
             this.trackingExportSelectAllCheckBox.CheckedChanged += new System.EventHandler(this.trackingExportSelectAllCheckBox_CheckedChanged);
             // 
             // exportTrackingShowDataGridView
             // 
-            this.exportTrackingShowDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.exportTrackingShowDataGridView, "exportTrackingShowDataGridView");
             this.exportTrackingShowDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.exportTrackingShowDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.exportTrackingShowDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.exportTrackingShowDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.exportTrackingShowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.exportTrackingShowDataGridView.Location = new System.Drawing.Point(0, 99);
             this.exportTrackingShowDataGridView.MultiSelect = false;
             this.exportTrackingShowDataGridView.Name = "exportTrackingShowDataGridView";
             this.exportTrackingShowDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.exportTrackingShowDataGridView.Size = new System.Drawing.Size(784, 391);
-            this.exportTrackingShowDataGridView.TabIndex = 22;
             this.exportTrackingShowDataGridView.TabStop = false;
             // 
             // trackingExportOnlyActive
             // 
-            this.trackingExportOnlyActive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.trackingExportOnlyActive.AutoSize = true;
-            this.trackingExportOnlyActive.Location = new System.Drawing.Point(653, 27);
+            resources.ApplyResources(this.trackingExportOnlyActive, "trackingExportOnlyActive");
             this.trackingExportOnlyActive.Name = "trackingExportOnlyActive";
-            this.trackingExportOnlyActive.Size = new System.Drawing.Size(131, 25);
-            this.trackingExportOnlyActive.TabIndex = 57;
-            this.trackingExportOnlyActive.Text = "Тільки активні";
             this.trackingExportOnlyActive.UseVisualStyleBackColor = true;
             this.trackingExportOnlyActive.CheckedChanged += new System.EventHandler(this.trackingExportOnlyActive_CheckedChanged);
             // 
             // trackingExportDateTimePicker
             // 
-            this.trackingExportDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.trackingExportDateTimePicker, "trackingExportDateTimePicker");
             this.trackingExportDateTimePicker.Checked = false;
-            this.trackingExportDateTimePicker.CustomFormat = "MMMM yyyy";
-            this.trackingExportDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.trackingExportDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.trackingExportDateTimePicker.Location = new System.Drawing.Point(459, 25);
             this.trackingExportDateTimePicker.Name = "trackingExportDateTimePicker";
             this.trackingExportDateTimePicker.ShowCheckBox = true;
-            this.trackingExportDateTimePicker.Size = new System.Drawing.Size(151, 25);
-            this.trackingExportDateTimePicker.TabIndex = 56;
             this.trackingExportDateTimePicker.ValueChanged += new System.EventHandler(this.trackingExportDateTimePicker_ValueChanged);
             // 
             // trackingExportSearchButton
             // 
-            this.trackingExportSearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.trackingExportSearchButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.trackingExportSearchButton.Location = new System.Drawing.Point(316, 23);
+            resources.ApplyResources(this.trackingExportSearchButton, "trackingExportSearchButton");
             this.trackingExportSearchButton.Name = "trackingExportSearchButton";
-            this.trackingExportSearchButton.Size = new System.Drawing.Size(138, 30);
-            this.trackingExportSearchButton.TabIndex = 55;
-            this.trackingExportSearchButton.Text = "Знайти";
             this.trackingExportSearchButton.UseVisualStyleBackColor = true;
             this.trackingExportSearchButton.Click += new System.EventHandler(this.trackingExportSearchButton_Click);
             // 
             // trackingExportSearchTextBox
             // 
-            this.trackingExportSearchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.trackingExportSearchTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.trackingExportSearchTextBox.Location = new System.Drawing.Point(4, 24);
+            resources.ApplyResources(this.trackingExportSearchTextBox, "trackingExportSearchTextBox");
             this.trackingExportSearchTextBox.Name = "trackingExportSearchTextBox";
-            this.trackingExportSearchTextBox.Size = new System.Drawing.Size(306, 29);
-            this.trackingExportSearchTextBox.TabIndex = 54;
             this.trackingExportSearchTextBox.TextChanged += new System.EventHandler(this.trackingExportSearchTextBox_TextChanged);
             this.trackingExportSearchTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.trackingExportSearchTextBox_KeyPress);
             // 
             // ExportTrackingToExcelForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.trackingExportOnlyActive);
             this.Controls.Add(this.trackingExportDateTimePicker);
             this.Controls.Add(this.trackingExportSearchButton);
@@ -153,14 +116,10 @@
             this.Controls.Add(this.trackingExportSelectAllCheckBox);
             this.Controls.Add(this.exportTrackingButton);
             this.Controls.Add(this.exportTrackingFormLabel1);
-            this.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ExportTrackingToExcelForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Експортування в Excel";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ExportTrackingToExcelForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.exportTrackingShowDataGridView)).EndInit();
             this.ResumeLayout(false);

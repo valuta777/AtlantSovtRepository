@@ -65,7 +65,7 @@ namespace AtlantSovt
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Помилка: " + ex.Message);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                 }
             }
         }

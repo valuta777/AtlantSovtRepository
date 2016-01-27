@@ -28,45 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddOrderNoteForm));
             this.addOrderNoteButton = new System.Windows.Forms.Button();
             this.addOrderNoteTextBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // addOrderNoteButton
             // 
-            this.addOrderNoteButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.addOrderNoteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addOrderNoteButton.Location = new System.Drawing.Point(0, 273);
+            resources.ApplyResources(this.addOrderNoteButton, "addOrderNoteButton");
             this.addOrderNoteButton.Name = "addOrderNoteButton";
-            this.addOrderNoteButton.Size = new System.Drawing.Size(517, 59);
-            this.addOrderNoteButton.TabIndex = 93;
-            this.addOrderNoteButton.Text = "Додати примітку";
             this.addOrderNoteButton.UseVisualStyleBackColor = true;
             this.addOrderNoteButton.Click += new System.EventHandler(this.addOrderNoteButton_Click);
             // 
             // addOrderNoteTextBox
             // 
-            this.addOrderNoteTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addOrderNoteTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addOrderNoteTextBox.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.addOrderNoteTextBox, "addOrderNoteTextBox");
             this.addOrderNoteTextBox.Name = "addOrderNoteTextBox";
-            this.addOrderNoteTextBox.Size = new System.Drawing.Size(517, 273);
-            this.addOrderNoteTextBox.TabIndex = 94;
-            this.addOrderNoteTextBox.Text = "";
             // 
             // AddOrderNoteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 332);
             this.Controls.Add(this.addOrderNoteTextBox);
             this.Controls.Add(this.addOrderNoteButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddOrderNoteForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Додавання примітки";
             this.Shown += new System.EventHandler(this.AddOrderNoteForm_Shown);
             this.ResumeLayout(false);
 

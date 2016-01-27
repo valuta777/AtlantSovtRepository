@@ -16,6 +16,11 @@ namespace AtlantSovt
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            Additions.ChangeLanguage changeLanguage = new Additions.ChangeLanguage();
+            changeLanguage.LoadSettings();
+            changeLanguage = null;
+
             Application.Run(new MainForm());
         }
     }

@@ -114,7 +114,7 @@ namespace AtlantSovt
 
                                     db.OrderUnCustomsAddresses.Remove(OrderAddress);
                                 }
-                                MessageBox.Show("Успішно видалено " + deletedAdresses.Count + " Адрес розмитнення");
+                                MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_видалено + deletedAdresses.Count + AtlantSovt.Properties.Resources.Адрес_розмитнення);
                             }
 
                             if (newAddreses.Count != 0)
@@ -129,7 +129,7 @@ namespace AtlantSovt
                                     };
                                     db.Orders.Find(order.Id).OrderUnCustomsAddresses.Add(new_OrderAddress);
                                 }
-                                MessageBox.Show("Успішно додано " + newAddreses.Count + " Адрес розмитнення");
+                                MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_додано + newAddreses.Count + AtlantSovt.Properties.Resources.Адрес_розмитнення);
                             }
                             db.SaveChanges();
                         }
@@ -138,7 +138,7 @@ namespace AtlantSovt
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Помилка: ", ex.ToString());
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка, ex.ToString());
                 }
             }
         }
@@ -152,7 +152,14 @@ namespace AtlantSovt
                             select address;
                 foreach (var item in query)
                 {
-                    uncustomsAddressesListBox.Items.Add(item.Country.Name + "," +item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                    if (item.Country != null)
+                    {
+                        uncustomsAddressesListBox.Items.Add(item.Country.Name + "," + item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                    }
+                    else
+                    {
+                        uncustomsAddressesListBox.Items.Add(item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                    }
                 }
             }
         }
@@ -167,7 +174,14 @@ namespace AtlantSovt
                                 select address;
                     foreach (var item in query)
                     {
-                        uncustomsAddressesListBox.Items.Add(item.Country.Name + "," + item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                        if (item.Country != null)
+                        {
+                            uncustomsAddressesListBox.Items.Add(item.Country.Name + "," + item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                        }
+                        else
+                        {
+                            uncustomsAddressesListBox.Items.Add(item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                        }
                     }
                 }
             }
@@ -218,13 +232,13 @@ namespace AtlantSovt
                         }
 
                         db.SaveChanges();
-                        return "Успішно вибрано " + uncustomsAddressesListBox.CheckedItems.Count + " Адрес розмитнення\n";
+                        return AtlantSovt.Properties.Resources.Успішно_вибрано + uncustomsAddressesListBox.CheckedItems.Count + AtlantSovt.Properties.Resources.Адрес_розмитнення;
                     }
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Помилка:", ex.ToString());
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка +  ex.Message);
                     return string.Empty;
                 }
             }
@@ -249,7 +263,7 @@ namespace AtlantSovt
             {
                 if (uncustomsAddressesListBox.CheckedItems.Count != 0)
                 {
-                    if (MessageBox.Show("Закрити форму без збереження?\nВибрані адреси НЕ додадуться.\n Для збереження вибраних адрес натисніть <Отмена> та <Додати до заявки>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                    if (MessageBox.Show(AtlantSovt.Properties.Resources.Закрити_форму_без_збереження_адрес, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) != DialogResult.OK)
                     {
                         e.Cancel = true;
                     }

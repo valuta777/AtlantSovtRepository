@@ -47,11 +47,11 @@ namespace AtlantSovt
                     IsAdding = IsAddingnew;
                     if (IsAdding)
                     {
-                        return "Контакт успішно доданий експедитору [" + New_ForwarderContact.Id + "]\n";
+                        return AtlantSovt.Properties.Resources.Контакт_успішно_доданий_експедитору + "[" + New_ForwarderContact.Id + @"]";
                     }
                     else
                     {
-                        MessageBox.Show("Контакт успішно доданий експедитору ");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Контакт_успішно_доданий_експедитору);
                         return string.Empty;
                     }
                    
@@ -83,7 +83,7 @@ namespace AtlantSovt
             }
             else
             {
-                MessageBox.Show("Для збереження заповніть хочаб одне поле");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Для_збереження_заповніть_хоча_б_одне_поле);
             }
         }
        internal void AddForwarderContact2(long id) 
@@ -97,7 +97,7 @@ namespace AtlantSovt
             {
                 if (contactPersonForwarderContactTextBox.Text != "" || telephoneNumberForwarderContactTextBox.Text != "" || faxNumberForwarderContactTextBox.Text != "" || emailForwarderContactTextBox.Text != "")
                 {
-                    if (MessageBox.Show("Закрити форму без збереження?\nКонтакт НЕ збережеться.\n Для збереження натисніть <Отмена> та <Додати контакт>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                    if (MessageBox.Show(AtlantSovt.Properties.Resources.Закрити_форму_без_збереження_контакту, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) != DialogResult.OK)
                     {
                         e.Cancel = true;
                     }

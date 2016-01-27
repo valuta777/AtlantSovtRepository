@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel;
 using System.Runtime.InteropServices;
+using Microsoft.Office.Interop.Word;
 
 namespace AtlantSovt
 {
@@ -34,9 +35,9 @@ namespace AtlantSovt
         {
             DataGridViewCheckBoxColumn checkTracking = new DataGridViewCheckBoxColumn();
             checkTracking.Name = "checkTracking";
-            checkTracking.HeaderText = "Мітка";
+            checkTracking.HeaderText = AtlantSovt.Properties.Resources.Мітка;
             exportTrackingShowDataGridView.Columns.Add(checkTracking);
-            exportTrackingShowDataGridView.Columns[9].HeaderText = "Мітка";
+            exportTrackingShowDataGridView.Columns[9].HeaderText = AtlantSovt.Properties.Resources.Мітка;
         }
 
         private MainForm MainForm { get; set; }
@@ -103,8 +104,8 @@ namespace AtlantSovt
             int resultCounter = 0;
             int startBorder = 1;
             string note = "";
-            XlRgbColor cellsColor = XlRgbColor.rgbOrange;
-            XlRgbColor subcellsColor = XlRgbColor.rgbYellow;
+            Microsoft.Office.Interop.Excel.XlRgbColor cellsColor = Microsoft.Office.Interop.Excel.XlRgbColor.rgbOrange;
+            Microsoft.Office.Interop.Excel.XlRgbColor subcellsColor = Microsoft.Office.Interop.Excel.XlRgbColor.rgbYellow;
 
             Microsoft.Office.Interop.Excel.Application ObjExcel = new Microsoft.Office.Interop.Excel.Application();
             Microsoft.Office.Interop.Excel.Workbook ObjWorkBook;
@@ -128,17 +129,17 @@ namespace AtlantSovt
                             orderTracking = db.Orders.Find(id);
 
                             resultCounter++;
-                            ObjWorkSheet.Cells[resultCounter, 1] = "Номер заявки";
-                            ObjWorkSheet.Cells[resultCounter, 2] = "Працівник";
-                            ObjWorkSheet.Cells[resultCounter, 3] = "Клієнт";
-                            ObjWorkSheet.Cells[resultCounter, 4] = "Перевізник";
-                            ObjWorkSheet.Cells[resultCounter, 5] = "Дата завантаження";
-                            ObjWorkSheet.Cells[resultCounter, 6] = "Стан";
-                            ObjWorkSheet.Cells[resultCounter, 7] = "Дата закриття";
+                            ObjWorkSheet.Cells[resultCounter, 1] = AtlantSovt.Properties.Resources.Номер_заявки;
+                            ObjWorkSheet.Cells[resultCounter, 2] = AtlantSovt.Properties.Resources.Працівник;
+                            ObjWorkSheet.Cells[resultCounter, 3] = AtlantSovt.Properties.Resources.Клієнт;
+                            ObjWorkSheet.Cells[resultCounter, 4] = AtlantSovt.Properties.Resources.Перевізник;
+                            ObjWorkSheet.Cells[resultCounter, 5] = AtlantSovt.Properties.Resources.Дата_завантаження;
+                            ObjWorkSheet.Cells[resultCounter, 6] = AtlantSovt.Properties.Resources.Стан;
+                            ObjWorkSheet.Cells[resultCounter, 7] = AtlantSovt.Properties.Resources.Дата_закриття;
                             ObjWorkSheet.Range[ObjWorkSheet.Cells[resultCounter, 1], ObjWorkSheet.Cells[resultCounter, 7]].Interior.Color = cellsColor;
 
                             resultCounter++;
-                            ObjWorkSheet.Cells[resultCounter, 1] = (!orderTracking.IndexNumber.HasValue) ? "Не визначено" : orderTracking.IndexNumber + @"\" + orderTracking.Date.Value.Year;
+                            ObjWorkSheet.Cells[resultCounter, 1] = (!orderTracking.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Не_визначено: orderTracking.IndexNumber + @"\" + orderTracking.Date.Value.Year;
                             ObjWorkSheet.Cells[resultCounter, 2] = (orderTracking.Staff == null || orderTracking.Staff.Type == "") ? "" : orderTracking.Staff.Type;
                             ObjWorkSheet.Cells[resultCounter, 3] = (orderTracking.Client == null || orderTracking.Client.Name == "") ? "" : orderTracking.Client.Name;
                             ObjWorkSheet.Cells[resultCounter, 4] = (orderTracking.Transporter == null || orderTracking.Transporter.FullName == "") ? "" : orderTracking.Transporter.FullName;
@@ -152,19 +153,19 @@ namespace AtlantSovt
                             }
                             else
                             {
-                                ObjWorkSheet.Cells[resultCounter, 5] = "Не визначено";
+                                ObjWorkSheet.Cells[resultCounter, 5] = AtlantSovt.Properties.Resources.Не_визначено;
                             }
-                            ObjWorkSheet.Cells[resultCounter, 6] = (orderTracking.State == null) ? "Не створена" : ((orderTracking.State == false) ? "Закрита" : "Відкрита");
-                            ObjWorkSheet.Cells[resultCounter, 7] = (orderTracking.CloseDate == null) ? "Не визначено" : orderTracking.CloseDate.Value.Day + "." + orderTracking.CloseDate.Value.Month + "." + orderTracking.CloseDate.Value.Year;
+                            ObjWorkSheet.Cells[resultCounter, 6] = (orderTracking.State == null) ? AtlantSovt.Properties.Resources.Не_створена : ((orderTracking.State == false) ? AtlantSovt.Properties.Resources.Закрита : AtlantSovt.Properties.Resources.Відкрита);
+                            ObjWorkSheet.Cells[resultCounter, 7] = (orderTracking.CloseDate == null) ? AtlantSovt.Properties.Resources.Не_визначено : orderTracking.CloseDate.Value.Day + "." + orderTracking.CloseDate.Value.Month + "." + orderTracking.CloseDate.Value.Year;
 
                             resultCounter += 2;
-                            ObjWorkSheet.Cells[resultCounter, 1] = "Експедитори:";
+                            ObjWorkSheet.Cells[resultCounter, 1] = AtlantSovt.Properties.Resources.Експедитори;
                             ObjWorkSheet.Cells[resultCounter, 1].Interior.Color = cellsColor;
 
                             resultCounter++;
-                            ObjWorkSheet.Cells[resultCounter, 1] = "Екпедитор 1";
-                            ObjWorkSheet.Cells[resultCounter, 2] = "Екпедитор 2";
-                            ObjWorkSheet.Cells[resultCounter, 3] = "Екпедитор 3";
+                            ObjWorkSheet.Cells[resultCounter, 1] = AtlantSovt.Properties.Resources.Експедитор_1;
+                            ObjWorkSheet.Cells[resultCounter, 2] = AtlantSovt.Properties.Resources.Експедитор_2;
+                            ObjWorkSheet.Cells[resultCounter, 3] = AtlantSovt.Properties.Resources.Експедитор_3;
                             ObjWorkSheet.Range[ObjWorkSheet.Cells[resultCounter, 1], ObjWorkSheet.Cells[resultCounter, 3]].Interior.Color = subcellsColor;
 
                             resultCounter++;
@@ -182,14 +183,14 @@ namespace AtlantSovt
                             }
 
                             resultCounter += 2;
-                            ObjWorkSheet.Cells[resultCounter, 1] = "Напрямок:";
+                            ObjWorkSheet.Cells[resultCounter, 1] = AtlantSovt.Properties.Resources.Напрямок;
                             ObjWorkSheet.Cells[resultCounter, 1].Interior.Color = cellsColor;
 
                             resultCounter++;
-                            ObjWorkSheet.Cells[resultCounter, 1] = "Країна";
-                            ObjWorkSheet.Cells[resultCounter, 2] = "Код міста";
-                            ObjWorkSheet.Cells[resultCounter, 4] = "Країна";
-                            ObjWorkSheet.Cells[resultCounter, 5] = "Код міста";
+                            ObjWorkSheet.Cells[resultCounter, 1] = AtlantSovt.Properties.Resources.Країна;
+                            ObjWorkSheet.Cells[resultCounter, 2] = AtlantSovt.Properties.Resources.Код_міста;
+                            ObjWorkSheet.Cells[resultCounter, 4] = AtlantSovt.Properties.Resources.Країна;
+                            ObjWorkSheet.Cells[resultCounter, 5] = AtlantSovt.Properties.Resources.Код_міста;
                             ObjWorkSheet.Range[ObjWorkSheet.Cells[resultCounter, 1], ObjWorkSheet.Cells[resultCounter, 5]].Interior.Color = subcellsColor;
 
                             resultCounter++;
@@ -215,7 +216,7 @@ namespace AtlantSovt
 
                             resultCounter += (daCounter > uaCounter) ? daCounter : uaCounter;
                             resultCounter++;
-                            ObjWorkSheet.Cells[resultCounter, 1] = "Контактні дані перевізника:";
+                            ObjWorkSheet.Cells[resultCounter, 1] = AtlantSovt.Properties.Resources.Контактні_дані_перевізника;
                             ObjWorkSheet.Range[ObjWorkSheet.Cells[resultCounter, 1], ObjWorkSheet.Cells[resultCounter, 2]].Merge();
                             ObjWorkSheet.Range[ObjWorkSheet.Cells[resultCounter, 1], ObjWorkSheet.Cells[resultCounter, 2]].Interior.Color = cellsColor;
 
@@ -238,7 +239,7 @@ namespace AtlantSovt
 
                             resultCounter += transConCounter;
                             resultCounter++;
-                            ObjWorkSheet.Cells[resultCounter, 1] = "Коментар:";
+                            ObjWorkSheet.Cells[resultCounter, 1] = AtlantSovt.Properties.Resources.Коментар;
                             ObjWorkSheet.Cells[resultCounter, 1].Interior.Color = cellsColor;
 
                             if (orderTracking.TrackingComments.ToList().Count != 0)
@@ -291,7 +292,7 @@ namespace AtlantSovt
 
                             resultCounter += tcCounter;
                             resultCounter++;
-                            ObjWorkSheet.Cells[resultCounter, 1] = "Примітка:";
+                            ObjWorkSheet.Cells[resultCounter, 1] = AtlantSovt.Properties.Resources.Примітка;
                             ObjWorkSheet.Cells[resultCounter, 1].Interior.Color = cellsColor;
 
                             resultCounter++;
@@ -345,7 +346,7 @@ namespace AtlantSovt
                             uaCounter = 0;
                             tcCounter = 0;
                             transConCounter = 0;
-                            ObjWorkSheet.Range[ObjWorkSheet.Cells[startBorder, 1], ObjWorkSheet.Cells[resultCounter - 2, 7]].BorderAround(XlLineStyle.xlContinuous, XlBorderWeight.xlThick);
+                            ObjWorkSheet.Range[ObjWorkSheet.Cells[startBorder, 1], ObjWorkSheet.Cells[resultCounter - 2, 7]].BorderAround(Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous, Microsoft.Office.Interop.Excel.XlBorderWeight.xlThick);
                             startBorder = resultCounter + 1;
                         }
                     }
@@ -353,7 +354,7 @@ namespace AtlantSovt
 
                     if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                     {
-                        ObjWorkBook.SaveAs(folderBrowserDialog.SelectedPath + @"\" + DateTime.Now.ToString("dd.MM.yyy-HH.mm.ss") +".xlsx");
+                        ObjWorkBook.SaveAs(folderBrowserDialog.SelectedPath + @"\" + DateTime.Now.ToString("dd.MM.yyy-HH.mm.ss") + ".xlsx");
                         //Show Excel
                         ObjExcel.Visible = true;
                         ObjExcel.UserControl = true;
@@ -372,7 +373,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Не вибрано жодного відстеження");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Не_вибрано_жодного_відстеження);
                     ObjExcel.Quit();
                     return;
                 }
@@ -380,7 +381,7 @@ namespace AtlantSovt
             catch(Exception ex)
             {
                 Log.Write(ex);
-                MessageBox.Show("Помилка: " + ex.Message);
+                MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                 ObjWorkBook.Close(false);
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(ObjWorkBook);
                 ObjWorkBook = null;

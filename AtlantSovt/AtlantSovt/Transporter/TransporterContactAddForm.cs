@@ -50,11 +50,11 @@ namespace AtlantSovt
                     IsAdding = IsAddingnew;
                     if (IsAdding)
                     {
-                        return "Контакт успішно доданий перевізнику [" + New_TransporterContact.TransporterId + "]\n";
+                        return AtlantSovt.Properties.Resources.Контакт_успішно_доданий_перевізнику + "[" + New_TransporterContact.TransporterId + @"]";
                     }
                     else
                     {
-                        MessageBox.Show("Контакт успішно доданий перевізнику " + New_TransporterContact.TransporterId);
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Контакт_успішно_доданий_перевізнику + New_TransporterContact.TransporterId);
                         return string.Empty;
                     }
                 }
@@ -84,7 +84,7 @@ namespace AtlantSovt
             }
             else
             {
-                MessageBox.Show("Для збереження заповніть хочаб одне поле");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Для_збереження_заповніть_хоча_б_одне_поле);
             }
         }
         internal void AddTransporterContact2(long id) 
@@ -98,7 +98,7 @@ namespace AtlantSovt
             {
                 if (contactPersonTransporterContactTextBox.Text != "" || telephoneNumberTransporterContactTextBox.Text != "" || faxNumberTransporterContactTextBox.Text != "" || emailTransporterContactTextBox.Text != "")
                 {
-                    if (MessageBox.Show("Закрити форму без збереження?\nКонтакт НЕ збережеться.\n Для збереження натисніть <Отмена> та <Додати контакт>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                    if (MessageBox.Show(AtlantSovt.Properties.Resources.Закрити_форму_без_збереження_контакту, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) != DialogResult.OK)
                     {
                         e.Cancel = true;
                     }

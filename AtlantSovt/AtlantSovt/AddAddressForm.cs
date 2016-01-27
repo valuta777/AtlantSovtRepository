@@ -82,7 +82,7 @@ namespace AtlantSovt
                 {
                     db.UploadAddresses.Add(New_UploadAddress);
                     db.SaveChanges();
-                    MessageBox.Show("Адреса успішно додана ");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Адреса_успішно_додана);
                     return New_UploadAddress.Id;
                 }
                 catch (Exception ex)
@@ -113,7 +113,7 @@ namespace AtlantSovt
                 {
                     db.DownloadAddresses.Add(New_DownloadAddress);
                     db.SaveChanges();
-                    MessageBox.Show("Адреса успішно додана ");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Адреса_успішно_додана);
                     return New_DownloadAddress.Id;
                 }
                 catch (Exception ex)
@@ -145,7 +145,7 @@ namespace AtlantSovt
                 {
                     db.CustomsAddresses.Add(New_CustomsAddress);
                     db.SaveChanges();
-                    MessageBox.Show("Адреса успішно додана ");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Адреса_успішно_додана);
                     return New_CustomsAddress.Id;
                 }
                 catch (Exception ex)
@@ -177,7 +177,7 @@ namespace AtlantSovt
                 {
                     db.UnCustomsAddresses.Add(New_UnCustomsAddress);
                     db.SaveChanges();                   
-                    MessageBox.Show("Адреса успішно додана ");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Адреса_успішно_додана);
                     return New_UnCustomsAddress.Id;
                 }
                 catch (Exception ex)
@@ -224,7 +224,7 @@ namespace AtlantSovt
 
                     break;
 
-                default: MessageBox.Show("Error");break;
+                default: MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_1);break;
             }
             
         }

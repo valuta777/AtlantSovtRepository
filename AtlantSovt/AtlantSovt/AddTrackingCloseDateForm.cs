@@ -53,7 +53,7 @@ namespace AtlantSovt
                 catch(Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Виникла помилка, спробуйте ще раз");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виникла_помилка_спробуйте_ще_раз);
                 }
             }
         }

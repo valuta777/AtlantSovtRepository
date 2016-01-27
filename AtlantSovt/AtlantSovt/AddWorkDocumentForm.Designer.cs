@@ -28,43 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddWorkDocumentForm));
             this.addWorkDocumentButton = new System.Windows.Forms.Button();
             this.addWorkDocumentTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // addWorkDocumentButton
             // 
-            this.addWorkDocumentButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.addWorkDocumentButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addWorkDocumentButton.Location = new System.Drawing.Point(0, 29);
+            resources.ApplyResources(this.addWorkDocumentButton, "addWorkDocumentButton");
             this.addWorkDocumentButton.Name = "addWorkDocumentButton";
-            this.addWorkDocumentButton.Size = new System.Drawing.Size(384, 52);
-            this.addWorkDocumentButton.TabIndex = 3;
-            this.addWorkDocumentButton.Text = "Додати";
             this.addWorkDocumentButton.UseVisualStyleBackColor = true;
             this.addWorkDocumentButton.Click += new System.EventHandler(this.addWorkDocumentButton_Click);
             // 
             // addWorkDocumentTextBox
             // 
-            this.addWorkDocumentTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addWorkDocumentTextBox.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.addWorkDocumentTextBox, "addWorkDocumentTextBox");
             this.addWorkDocumentTextBox.Name = "addWorkDocumentTextBox";
-            this.addWorkDocumentTextBox.Size = new System.Drawing.Size(384, 29);
-            this.addWorkDocumentTextBox.TabIndex = 2;
             // 
             // AddWorkDocumentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 81);
             this.Controls.Add(this.addWorkDocumentButton);
             this.Controls.Add(this.addWorkDocumentTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddWorkDocumentForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Додавання документу";
             this.ResumeLayout(false);
             this.PerformLayout();
 

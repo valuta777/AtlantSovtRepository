@@ -50,7 +50,7 @@ namespace AtlantSovt
                     {
                         db.Countries.Add(New_Country);
                         db.SaveChanges();
-                        MessageBox.Show("Нове значення успішно додане");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Нове_значення_успішно_додане);
                     }
                     catch (Exception ex)
                     {

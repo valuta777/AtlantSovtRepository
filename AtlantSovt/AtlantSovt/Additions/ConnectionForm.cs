@@ -34,7 +34,7 @@ namespace AtlantSovt
             catch (Exception ex)
             {
                 Log.Write(ex);
-                MessageBox.Show("Помилка: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
+                MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message, AtlantSovt.Properties.Resources.Помилка_1, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
             }
 
             if (str == "")

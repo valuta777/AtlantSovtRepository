@@ -117,4 +117,271 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Додавання контакту</value>
+  </data>
+  <data name="clientAddContactButton.Text" xml:space="preserve">
+    <value>Додати контакт</value>
+  </data>
+  <data name="clientAddContactEmailLabel.Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="clientAddContactFaxLabel.Text" xml:space="preserve">
+    <value>Номер факсу</value>
+  </data>
+  <data name="clientAddContactNumberLabel.Text" xml:space="preserve">
+    <value>Номер телефону</value>
+  </data>
+  <data name="clientAddContactPersonLabel.Text" xml:space="preserve">
+    <value>Контактна особа</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="clientAddContactPersonLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="clientAddContactPersonLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="clientAddContactPersonLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="clientAddContactPersonLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="clientAddContactPersonLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactPersonLabel.Name" xml:space="preserve">
+    <value>clientAddContactPersonLabel</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactPersonLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactPersonLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactPersonLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="clientAddContactNumberLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="clientAddContactNumberLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="clientAddContactNumberLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 65</value>
+  </data>
+  <data name="clientAddContactNumberLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="clientAddContactNumberLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactNumberLabel.Name" xml:space="preserve">
+    <value>clientAddContactNumberLabel</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactNumberLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactNumberLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactNumberLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="clientAddContactFaxLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="clientAddContactFaxLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="clientAddContactFaxLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 121</value>
+  </data>
+  <data name="clientAddContactFaxLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 21</value>
+  </data>
+  <data name="clientAddContactFaxLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactFaxLabel.Name" xml:space="preserve">
+    <value>clientAddContactFaxLabel</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactFaxLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactFaxLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactFaxLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="clientAddContactEmailLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="clientAddContactEmailLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="clientAddContactEmailLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 177</value>
+  </data>
+  <data name="clientAddContactEmailLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 21</value>
+  </data>
+  <data name="clientAddContactEmailLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactEmailLabel.Name" xml:space="preserve">
+    <value>clientAddContactEmailLabel</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactEmailLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactEmailLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactEmailLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="clientAddContactPersonTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="clientAddContactPersonTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 33</value>
+  </data>
+  <data name="clientAddContactPersonTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 29</value>
+  </data>
+  <data name="clientAddContactPersonTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactPersonTextBox.Name" xml:space="preserve">
+    <value>clientAddContactPersonTextBox</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactPersonTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactPersonTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactPersonTextBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="clientAddContactPhoneTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="clientAddContactPhoneTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 89</value>
+  </data>
+  <data name="clientAddContactPhoneTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 29</value>
+  </data>
+  <data name="clientAddContactPhoneTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactPhoneTextBox.Name" xml:space="preserve">
+    <value>clientAddContactPhoneTextBox</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactPhoneTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactPhoneTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactPhoneTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="clientAddContactFaxTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="clientAddContactFaxTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 145</value>
+  </data>
+  <data name="clientAddContactFaxTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 29</value>
+  </data>
+  <data name="clientAddContactFaxTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactFaxTextBox.Name" xml:space="preserve">
+    <value>clientAddContactFaxTextBox</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactFaxTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactFaxTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactFaxTextBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="clientAddContactEmailTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="clientAddContactEmailTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 201</value>
+  </data>
+  <data name="clientAddContactEmailTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 29</value>
+  </data>
+  <data name="clientAddContactEmailTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactEmailTextBox.Name" xml:space="preserve">
+    <value>clientAddContactEmailTextBox</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactEmailTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactEmailTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactEmailTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="clientAddContactButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="clientAddContactButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 237</value>
+  </data>
+  <data name="clientAddContactButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 48</value>
+  </data>
+  <data name="clientAddContactButton.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactButton.Name" xml:space="preserve">
+    <value>clientAddContactButton</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;clientAddContactButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>336, 288</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ClientContactAddForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

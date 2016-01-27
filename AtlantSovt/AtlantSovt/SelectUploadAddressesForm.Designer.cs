@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectUploadAddressesForm));
             this.addUploadAddressButton = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.addUploadAdressesToOrderButton = new System.Windows.Forms.Button();
@@ -40,20 +41,14 @@
             // 
             // addUploadAddressButton
             // 
-            this.addUploadAddressButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addUploadAddressButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.addUploadAddressButton.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.addUploadAddressButton, "addUploadAddressButton");
             this.addUploadAddressButton.Name = "addUploadAddressButton";
-            this.addUploadAddressButton.Size = new System.Drawing.Size(281, 46);
-            this.addUploadAddressButton.TabIndex = 1;
-            this.addUploadAddressButton.Text = "Додати нову адресу";
             this.addUploadAddressButton.UseVisualStyleBackColor = true;
             this.addUploadAddressButton.Click += new System.EventHandler(this.addUploadAddressButton_Click);
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 228);
+            resources.ApplyResources(this.splitContainer1, "splitContainer1");
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -63,48 +58,32 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.addUploadAdressesToOrderButton);
-            this.splitContainer1.Size = new System.Drawing.Size(564, 46);
-            this.splitContainer1.SplitterDistance = 281;
-            this.splitContainer1.SplitterWidth = 2;
-            this.splitContainer1.TabIndex = 3;
             // 
             // addUploadAdressesToOrderButton
             // 
-            this.addUploadAdressesToOrderButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addUploadAdressesToOrderButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.addUploadAdressesToOrderButton.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.addUploadAdressesToOrderButton, "addUploadAdressesToOrderButton");
             this.addUploadAdressesToOrderButton.Name = "addUploadAdressesToOrderButton";
-            this.addUploadAdressesToOrderButton.Size = new System.Drawing.Size(281, 46);
-            this.addUploadAdressesToOrderButton.TabIndex = 2;
-            this.addUploadAdressesToOrderButton.Text = "Додати до заявки";
             this.addUploadAdressesToOrderButton.UseVisualStyleBackColor = true;
             this.addUploadAdressesToOrderButton.Click += new System.EventHandler(this.addUploadAdressesToOrderButton_Click);
             // 
             // uploadAddressListBox
             // 
             this.uploadAddressListBox.CheckOnClick = true;
-            this.uploadAddressListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uploadAddressListBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            resources.ApplyResources(this.uploadAddressListBox, "uploadAddressListBox");
             this.uploadAddressListBox.FormattingEnabled = true;
-            this.uploadAddressListBox.Location = new System.Drawing.Point(0, 0);
             this.uploadAddressListBox.Name = "uploadAddressListBox";
-            this.uploadAddressListBox.Size = new System.Drawing.Size(564, 228);
-            this.uploadAddressListBox.TabIndex = 4;
             this.uploadAddressListBox.DoubleClick += new System.EventHandler(this.uploadAddressListBox_DoubleClick);
             // 
             // SelectUploadAddressesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 274);
             this.Controls.Add(this.uploadAddressListBox);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SelectUploadAddressesForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Виберіть адреси розвантаження";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SelectUploadAddressesForm_FormClosing);
             this.Load += new System.EventHandler(this.SelectUploadAddressesForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);

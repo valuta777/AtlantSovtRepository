@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddRegularyDelayForm));
             this.addRegularyDelayButton = new System.Windows.Forms.Button();
             this.addRegularyDelayTextBox = new System.Windows.Forms.TextBox();
             this.addRegularyDelayTextBox2 = new System.Windows.Forms.TextBox();
@@ -41,98 +42,60 @@
             // 
             // addRegularyDelayButton
             // 
-            this.addRegularyDelayButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.addRegularyDelayButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addRegularyDelayButton.Location = new System.Drawing.Point(0, 238);
+            resources.ApplyResources(this.addRegularyDelayButton, "addRegularyDelayButton");
             this.addRegularyDelayButton.Name = "addRegularyDelayButton";
-            this.addRegularyDelayButton.Size = new System.Drawing.Size(487, 52);
-            this.addRegularyDelayButton.TabIndex = 3;
-            this.addRegularyDelayButton.Text = "Додати";
             this.addRegularyDelayButton.UseVisualStyleBackColor = true;
             this.addRegularyDelayButton.Click += new System.EventHandler(this.addCargoButton_Click);
             // 
             // addRegularyDelayTextBox
             // 
-            this.addRegularyDelayTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addRegularyDelayTextBox.Location = new System.Drawing.Point(12, 33);
+            resources.ApplyResources(this.addRegularyDelayTextBox, "addRegularyDelayTextBox");
             this.addRegularyDelayTextBox.Name = "addRegularyDelayTextBox";
-            this.addRegularyDelayTextBox.Size = new System.Drawing.Size(463, 29);
-            this.addRegularyDelayTextBox.TabIndex = 2;
             this.addRegularyDelayTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addRegularyDelayTextBox_KeyPress);
             // 
             // addRegularyDelayTextBox2
             // 
-            this.addRegularyDelayTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addRegularyDelayTextBox2.Location = new System.Drawing.Point(12, 89);
+            resources.ApplyResources(this.addRegularyDelayTextBox2, "addRegularyDelayTextBox2");
             this.addRegularyDelayTextBox2.Name = "addRegularyDelayTextBox2";
-            this.addRegularyDelayTextBox2.Size = new System.Drawing.Size(463, 29);
-            this.addRegularyDelayTextBox2.TabIndex = 4;
             this.addRegularyDelayTextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addRegularyDelayTextBox2_KeyPress);
             // 
             // addRegularyDelayTextBox3
             // 
-            this.addRegularyDelayTextBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addRegularyDelayTextBox3.Location = new System.Drawing.Point(12, 145);
+            resources.ApplyResources(this.addRegularyDelayTextBox3, "addRegularyDelayTextBox3");
             this.addRegularyDelayTextBox3.Name = "addRegularyDelayTextBox3";
-            this.addRegularyDelayTextBox3.Size = new System.Drawing.Size(463, 29);
-            this.addRegularyDelayTextBox3.TabIndex = 5;
             this.addRegularyDelayTextBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addRegularyDelayTextBox3_KeyPress);
             // 
             // addRegularyDelayTextBox4
             // 
-            this.addRegularyDelayTextBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addRegularyDelayTextBox4.Location = new System.Drawing.Point(12, 201);
+            resources.ApplyResources(this.addRegularyDelayTextBox4, "addRegularyDelayTextBox4");
             this.addRegularyDelayTextBox4.Name = "addRegularyDelayTextBox4";
-            this.addRegularyDelayTextBox4.Size = new System.Drawing.Size(463, 29);
-            this.addRegularyDelayTextBox4.TabIndex = 6;
             this.addRegularyDelayTextBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addRegularyDelayTextBox4_KeyPress);
             // 
             // label79
             // 
-            this.label79.AutoSize = true;
-            this.label79.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label79.Location = new System.Drawing.Point(12, 9);
+            resources.ApplyResources(this.label79, "label79");
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(472, 21);
-            this.label79.TabIndex = 132;
-            this.label79.Text = "Нормативний простій при завантаженні / митному оформленні ";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 65);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(414, 21);
-            this.label1.TabIndex = 133;
-            this.label1.Text = "Нормативний простій при розвантаженні / розмитненні";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(8, 121);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(474, 21);
-            this.label2.TabIndex = 134;
-            this.label2.Text = "Нормативний простій простій на кордоні в очікувані декларації ";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(12, 177);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(451, 21);
-            this.label3.TabIndex = 135;
-            this.label3.Text = "Кількість годин до вихідних при яких простій не враховується";
             // 
             // AddRegularyDelayForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 290);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -146,8 +109,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddRegularyDelayForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Додавання нормативних простоїв";
             this.ResumeLayout(false);
             this.PerformLayout();
 

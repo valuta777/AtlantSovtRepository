@@ -28,43 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAdditionalTermsForm));
             this.addAdditionalTermsButton = new System.Windows.Forms.Button();
             this.addAdditionalTermsTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // addAdditionalTermsButton
             // 
-            this.addAdditionalTermsButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.addAdditionalTermsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addAdditionalTermsButton.Location = new System.Drawing.Point(0, 29);
+            resources.ApplyResources(this.addAdditionalTermsButton, "addAdditionalTermsButton");
             this.addAdditionalTermsButton.Name = "addAdditionalTermsButton";
-            this.addAdditionalTermsButton.Size = new System.Drawing.Size(384, 52);
-            this.addAdditionalTermsButton.TabIndex = 3;
-            this.addAdditionalTermsButton.Text = "Додати";
             this.addAdditionalTermsButton.UseVisualStyleBackColor = true;
             this.addAdditionalTermsButton.Click += new System.EventHandler(this.addCargoButton_Click);
             // 
             // addAdditionalTermsTextBox
             // 
-            this.addAdditionalTermsTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addAdditionalTermsTextBox.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.addAdditionalTermsTextBox, "addAdditionalTermsTextBox");
             this.addAdditionalTermsTextBox.Name = "addAdditionalTermsTextBox";
-            this.addAdditionalTermsTextBox.Size = new System.Drawing.Size(386, 29);
-            this.addAdditionalTermsTextBox.TabIndex = 2;
             // 
             // AddAdditionalTermsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 81);
             this.Controls.Add(this.addAdditionalTermsTextBox);
             this.Controls.Add(this.addAdditionalTermsButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddAdditionalTermsForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Додавання додаткових умов";
             this.ResumeLayout(false);
             this.PerformLayout();
 
