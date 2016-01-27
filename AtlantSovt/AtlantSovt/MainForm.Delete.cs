@@ -22,7 +22,7 @@ namespace AtlantSovt
                 {
                     if (deleteObjectId != null)
                     { 
-                        if (MessageBox.Show("Видалити запис?\n Видалення цього запису приведе до його втрати у звязаних таблицях.", "Підтвердження видалення", MessageBoxButtons.YesNo) == DialogResult.OK)
+                        if (MessageBox.Show("Видалити запис?\nВидалення цього запису приведе до його втрати у звязаних таблицях.", "Підтвердження видалення", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         { 
                             if (tableSelector.ElementType.Name == typeof(Country).Name)
                             {
