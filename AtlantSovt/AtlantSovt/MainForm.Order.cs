@@ -74,7 +74,8 @@ namespace AtlantSovt
 
                     State = null,
 
-                   
+                    IsDeleted = false,
+                    
                     Language = (OrderAddLanduageSelectComboBox.SelectedIndex != -1 && OrderAddLanduageSelectComboBox.Text == OrderAddLanduageSelectComboBox.SelectedItem.ToString()) ? (OrderAddLanduageSelectComboBox.SelectedIndex == 0) ? (byte?)0 : (OrderAddLanduageSelectComboBox.SelectedIndex == 1) ? (byte?)1 : (byte?)2 : null
                 };
                 try
@@ -82,7 +83,7 @@ namespace AtlantSovt
                     db.Orders.Add(New_Order);
                     db.Entry(New_Order).State = EntityState.Added;
                     db.SaveChanges();
-                    string massage = "Заявку успішно створено\n";
+                    string massage = AtlantSovt.Properties.Resources.Заявку_успішно_створено;
 
                     massage += BridgeAddes(New_Order);
 
@@ -91,7 +92,7 @@ namespace AtlantSovt
                 catch (DbEntityValidationException ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Помилка при створенні заявки\n" + ex);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_при_створенні_заявки + ex.Message);
                 }
             }
         }
@@ -112,12 +113,12 @@ namespace AtlantSovt
                         db.Orders.Find(New_Order.Id).OrderLoadingForms.Add(New_OrderLoadingForm1);
                         db.Entry(New_OrderLoadingForm1).State = EntityState.Added;
                         db.SaveChanges();
-                        returnMessage += "Успішно вибрано першу форму завантаження\n";
+                        returnMessage += AtlantSovt.Properties.Resources.Успішно_вибрано_першу_форму_завантаження;
                     }
                     catch (Exception ex)
                     {
                         Log.Write(ex);
-                        MessageBox.Show("Помилка (1 форма завантаження)\n" + ex.Message);
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_1_форма_завантаження + ex.Message);
                     }
                 }
                 if (loadingForm2OrderAdd != null)
@@ -132,12 +133,12 @@ namespace AtlantSovt
                         db.Orders.Find(New_Order.Id).OrderLoadingForms.Add(New_OrderLoadingForm2);
                         db.Entry(New_OrderLoadingForm2).State = EntityState.Added;
                         db.SaveChanges();
-                        returnMessage += "Успішно вибрано другу форму завантаження\n";
+                        returnMessage += AtlantSovt.Properties.Resources.Успішно_вибрано_другу_форму_завантаження;
                     }
                     catch (Exception ex)
                     {
                         Log.Write(ex);
-                        MessageBox.Show("Помилка (2 форма завантаження)\n" + ex.Message);
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_2_форма_завантаження + ex.Message);
                     }
                 }
 
@@ -177,12 +178,12 @@ namespace AtlantSovt
                         db.Entry(New_Forwarder1Order).State = EntityState.Added;
                         db.SaveChanges();
 
-                        returnMessage += "Успішно вибрано першого експедитора\n";
+                        returnMessage += AtlantSovt.Properties.Resources.Успішно_вибрано_першого_експедитора;
                     }
                     catch (Exception ex)
                     {
                         Log.Write(ex);
-                        MessageBox.Show("Помилка (1 експедитор)\n" + ex.Message);
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_1_експедитор + ex.Message);
                     }
 
                 }
@@ -198,12 +199,12 @@ namespace AtlantSovt
                         db.Orders.Find(New_Order.Id).ForwarderOrders.Add(New_Forwarder2Order);
                         db.Entry(New_Forwarder2Order).State = EntityState.Added;
                         db.SaveChanges();
-                        returnMessage += "Успішно вибрано другого експедитора\n";
+                        returnMessage += AtlantSovt.Properties.Resources.Успішно_вибрано_другого_експедитора;
                     }
                     catch (Exception ex)
                     {
                         Log.Write(ex);
-                        MessageBox.Show("Помилка (2 експедитор)\n" + ex.Message);
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_2_експедитор + ex.Message);
                     }
                 }
                 if (forwarder3OrderAdd != null)
@@ -218,12 +219,12 @@ namespace AtlantSovt
                         db.Orders.Find(New_Order.Id).ForwarderOrders.Add(New_Forwarder3Order);
                         db.Entry(New_Forwarder3Order).State = EntityState.Added;
                         db.SaveChanges();
-                        returnMessage += "Успішно вибрано третього експедитора\n";
+                        returnMessage += AtlantSovt.Properties.Resources.Успішно_вибрано_третього_експедитора;
                     }
                     catch (Exception ex)
                     {
                         Log.Write(ex);
-                        MessageBox.Show("Помилка (3 експедитор)\n" + ex.Message);
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_3_експедитор + ex.Message);
                     }
                 }
 
@@ -263,7 +264,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Немає жодних записів");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_запису);
                 }
             }
         }
@@ -273,7 +274,7 @@ namespace AtlantSovt
             {
                 if (OrderAddClientDiapasoneComboBox.Text == "")
                 {
-                    MessageBox.Show("Ви не вибрали діапазон");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Ви_не_вибрали_діапазон);
                 }
                 else
                 {
@@ -342,7 +343,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Немає жодних записів");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_запису);
                 }
             }
         }
@@ -352,7 +353,7 @@ namespace AtlantSovt
             {
                 if (OrderAddTransporterDiapasoneComboBox.Text == "")
                 {
-                    MessageBox.Show("Ви не вибрали діапазон");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Ви_не_вибрали_діапазон);
                 }
                 else
                 {
@@ -503,7 +504,7 @@ namespace AtlantSovt
             }
             else 
             {
-                MessageBox.Show("Виберіть спочатку клієнта");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_клієнта);
             }
         }
         void DownloadAddressForm()
@@ -523,7 +524,7 @@ namespace AtlantSovt
             }
             else
             {
-                MessageBox.Show("Виберіть спочатку клієнта");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_клієнта);
             }
         }
         void CustomsAddressForm()
@@ -543,7 +544,7 @@ namespace AtlantSovt
             }
             else
             {
-                MessageBox.Show("Виберіть спочатку клієнта");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_клієнта);
             }
         }
         void UncustomsAddressForm()
@@ -563,7 +564,7 @@ namespace AtlantSovt
             }
             else
             {
-                MessageBox.Show("Виберіть спочатку клієнта");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_клієнта);
             }
         }
         //інші комбобокси
@@ -1840,12 +1841,12 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Виберіть спочатку заявку");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_заявку);
                 } 
             }
             else
             {
-                MessageBox.Show("Виберіть спочатку клієнта");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_клієнта);
             }
         }
         void DownloadAddressUpdate()
@@ -1870,12 +1871,12 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Виберіть спочатку заявку");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_заявку);
                 }                
             }
             else
             {
-                MessageBox.Show("Виберіть спочатку клієнта");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_клієнта);
             }
         }
         void CustomsAddressUpdate()
@@ -1897,13 +1898,13 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Виберіть спочатку заявку");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_заявку);
                 }  
 
             }
             else
             {
-                MessageBox.Show("Виберіть спочатку клієнта");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_клієнта);
             }
         }
         void UncustomsAddressUpdate()
@@ -1926,12 +1927,12 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Виберіть спочатку заявку");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_заявку);
                 }  
             }
             else
             {
-                MessageBox.Show("Виберіть спочатку клієнта");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_клієнта);
             }
         }
         //Client
@@ -1964,7 +1965,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Немає жодних записів");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_запису);
                 }
             }
         }
@@ -1974,7 +1975,7 @@ namespace AtlantSovt
             {
                 if (OrderUpdateClientDiapasoneComboBox.SelectedIndex == -1)
                 {
-                    MessageBox.Show("Ви не вибрали діапазон");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Ви_не_вибрали_діапазон);
                 }
                 else
                 {
@@ -2042,7 +2043,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Немає жодних записів");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_запису);
                 }
             }
         }
@@ -2052,7 +2053,7 @@ namespace AtlantSovt
             {
                 if (OrderUpdateTransporterDiapasoneComboBox.Text == "")
                 {
-                    MessageBox.Show("Ви не вибрали діапазон");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Ви_не_вибрали_діапазон);
                 }
                 else
                 {
@@ -2521,7 +2522,7 @@ namespace AtlantSovt
                                         UpdateLoadingForm1.LoadingFormId = loadingForm1OrderUpdate.Id;
                                         db.Entry(UpdateLoadingForm1).State = EntityState.Modified;
                                         IsModified = true;
-                                        updateMessage += "Успішно змінено першу форму завантаження\n";
+                                        updateMessage += AtlantSovt.Properties.Resources.Успішно_змінено_першу_форму_завантаження;
 
                                     }
                                 }
@@ -2535,7 +2536,7 @@ namespace AtlantSovt
                                     db.Orders.Find(updateOrder.Id).OrderLoadingForms.Add(New_OrderLoadingForm1);
                                     db.Entry(New_OrderLoadingForm1).State = EntityState.Added;
                                     IsModified = true;
-                                    updateMessage += "Успішно вибрано першу форму завантаження\n";
+                                    updateMessage += AtlantSovt.Properties.Resources.Успішно_вибрано_першу_форму_завантаження;
                                 }
                             }
                             else if (updateOrder.OrderLoadingForms.Where(lf1 => lf1.IsFirst == true).Count() != 0)
@@ -2543,14 +2544,14 @@ namespace AtlantSovt
                                 OrderLoadingForm Delete_OrderLoadingForm1 = db.Orders.Find(updateOrder.Id).OrderLoadingForms.Where(lf1 => lf1.IsFirst == true).FirstOrDefault();
                                 db.Orders.Find(updateOrder.Id).OrderLoadingForms.Remove(Delete_OrderLoadingForm1);
                                 db.Entry(Delete_OrderLoadingForm1).State = EntityState.Deleted;
-                                updateMessage += "Успішно видалено першу форму завантаження\n";
+                                updateMessage += AtlantSovt.Properties.Resources.Успішно_видалено_першу_форму_завантаження;
                                 IsModified = true;
                             }
                         }
                         catch (Exception ex)
                         {
                             Log.Write(ex);
-                            MessageBox.Show("Помилка (1 форма завантаження)\n" + ex.Message);
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_1_форма_завантаження + ex.Message);
                         }
 
                         try
@@ -2566,7 +2567,7 @@ namespace AtlantSovt
                                         UpdateLoadingForm2.LoadingFormId = loadingForm2OrderUpdate.Id;
                                         db.Entry(UpdateLoadingForm2).State = EntityState.Modified;
                                         IsModified = true;
-                                        updateMessage += "Успішно змінено другу форму завантаження\n";
+                                        updateMessage += AtlantSovt.Properties.Resources.Успішно_змінено_другу_форму_затора;
                                     }
                                 }
                                 else
@@ -2579,7 +2580,7 @@ namespace AtlantSovt
                                     db.Orders.Find(updateOrder.Id).OrderLoadingForms.Add(New_OrderLoadingForm2);
                                     db.Entry(New_OrderLoadingForm2).State = EntityState.Added;
                                     IsModified = true;
-                                    updateMessage += "Успішно вибрано другу форму завантаження\n";
+                                    updateMessage += AtlantSovt.Properties.Resources.Успішно_вибрано_другу_форму_завантаження;
                                 }
                             }
                             else if (updateOrder.OrderLoadingForms.Where(lf1 => lf1.IsFirst == false).Count() != 0)
@@ -2587,14 +2588,14 @@ namespace AtlantSovt
                                 OrderLoadingForm Delete_OrderLoadingForm2 = db.Orders.Find(updateOrder.Id).OrderLoadingForms.Where(lf1 => lf1.IsFirst == false).FirstOrDefault();
                                 db.Orders.Find(updateOrder.Id).OrderLoadingForms.Remove(Delete_OrderLoadingForm2);
                                 db.Entry(Delete_OrderLoadingForm2).State = EntityState.Deleted;
-                                updateMessage += "Успішно видалено другу форму завантаження\n";
+                                updateMessage += AtlantSovt.Properties.Resources.Успішно_видалено_другу_форму_завантаження;
                                 IsModified = true;
                             }
                         }
                         catch (Exception ex)
                         {
                             Log.Write(ex);
-                            MessageBox.Show("Помилка (2 форма завантаження)\n" + ex.Message);
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_2_форма_завантаження + ex.Message);
                         }
                         
                         try
@@ -2610,7 +2611,7 @@ namespace AtlantSovt
                                         UpdateForwarder1Order.ForwarderId = forwarder1OrderUpdate.Id;
                                         db.Entry(UpdateForwarder1Order).State = EntityState.Modified;
                                         IsModified = true;
-                                        updateMessage += "Успішно змінено першого експедитора\n";
+                                        updateMessage += AtlantSovt.Properties.Resources.Успішно_змінено_першого_експедтора;
                                     }
                                 }
                                 else
@@ -2623,7 +2624,7 @@ namespace AtlantSovt
                                     db.Orders.Find(updateOrder.Id).ForwarderOrders.Add(New_Forwarder1Order);
                                     db.Entry(New_Forwarder1Order).State = EntityState.Added;
                                     IsModified = true;
-                                    updateMessage += "Успішно додано першого експедитора\n";
+                                    updateMessage += AtlantSovt.Properties.Resources.Успішно_додано_першого_експедитора;
                                 }
                             }
                             else if (updateOrder.ForwarderOrders.Where(fo1 => fo1.IsFirst == 1).Count() != 0)
@@ -2632,13 +2633,13 @@ namespace AtlantSovt
                                 db.Orders.Find(updateOrder.Id).ForwarderOrders.Remove(Delete_Forwarder1Order);
                                 db.Entry(Delete_Forwarder1Order).State = EntityState.Deleted;
                                 IsModified = true;
-                                updateMessage += "Успішно видалено першого експедитора\n";
+                                updateMessage += AtlantSovt.Properties.Resources.Успішно_видалено_першого_експедитора;
                             }
                         }
                         catch (Exception ex)
                         {
                             Log.Write(ex);
-                            MessageBox.Show("Помилка (1 експедитор)\n" + ex.Message);
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_1_експедитор + ex.Message);
                         }
 
                         try
@@ -2654,7 +2655,7 @@ namespace AtlantSovt
                                         UpdateForwarder2Order.ForwarderId = forwarder2OrderUpdate.Id;
                                         db.Entry(UpdateForwarder2Order).State = EntityState.Modified;
                                         IsModified = true;
-                                        updateMessage += "Успішно змінено другого експедитора\n";
+                                        updateMessage += AtlantSovt.Properties.Resources.Успішно_змінено_другого_експедтора;
                                     }
                                 }
                                 else
@@ -2667,7 +2668,7 @@ namespace AtlantSovt
                                     db.Orders.Find(updateOrder.Id).ForwarderOrders.Add(New_Forwarder2Order);
                                     db.Entry(New_Forwarder2Order).State = EntityState.Added;
                                     IsModified = true;
-                                    updateMessage += "Успішно додано другого експедитора\n";
+                                    updateMessage += AtlantSovt.Properties.Resources.Успішно_додано_другого_експедитора;
                                 }
                             }
                             else if (updateOrder.ForwarderOrders.Where(fo2 => fo2.IsFirst == 2).Count() != 0)
@@ -2676,13 +2677,13 @@ namespace AtlantSovt
                                 db.Orders.Find(updateOrder.Id).ForwarderOrders.Remove(Delete_Forwarder2Order);
                                 db.Entry(Delete_Forwarder2Order).State = EntityState.Deleted;
                                 IsModified = true;
-                                updateMessage += "Успішно видалено другого експедитора\n";
+                                updateMessage += AtlantSovt.Properties.Resources.Успішно_видалено_другого_експедитора;
                             }
                         }
                         catch (Exception ex)
                         {
                             Log.Write(ex);
-                            MessageBox.Show("Помилка (2 експедитор)\n" + ex.Message);
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_2_експедитор + ex.Message);
                         }
 
                         try
@@ -2698,7 +2699,7 @@ namespace AtlantSovt
                                         UpdateForwarder3Order.ForwarderId = forwarder3OrderUpdate.Id;
                                         db.Entry(UpdateForwarder3Order).State = EntityState.Modified;
                                         IsModified = true;
-                                        updateMessage += "Успішно змінено третього експедитора\n";
+                                        updateMessage += AtlantSovt.Properties.Resources.Успішно_змінено_третього_експедитора;
                                     }
                                 }
                                 else
@@ -2711,7 +2712,7 @@ namespace AtlantSovt
                                     db.Orders.Find(updateOrder.Id).ForwarderOrders.Add(New_Forwarder3Order);
                                     db.Entry(New_Forwarder3Order).State = EntityState.Added;
                                     IsModified = true;
-                                    updateMessage += "Успішно додано третього експедитора\n";
+                                    updateMessage += AtlantSovt.Properties.Resources.Успішно_додано_третього_експедтора;
                                 }
                             }
                             else if (updateOrder.ForwarderOrders.Where(fo3 => fo3.IsFirst == 3).Count() != 0)
@@ -2720,40 +2721,40 @@ namespace AtlantSovt
                                 db.Orders.Find(updateOrder.Id).ForwarderOrders.Remove(Delete_Forwarder3Order);
                                 db.Entry(Delete_Forwarder3Order).State = EntityState.Deleted;
                                 IsModified = true;
-                                updateMessage += "Успішно видалено третього експедитора\n";
+                                updateMessage += AtlantSovt.Properties.Resources.Успішно_видалено_третього_експедитора;
                             }
                         }
                         catch (Exception ex)
                         {
                             Log.Write(ex);
-                            MessageBox.Show("Помилка (3 експедитор)\n" + ex.Message);
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_3_експедитор + ex.Message);
                         }
 
                         if (IsModified)
                         {
                             db.Entry(updateOrder).State = EntityState.Modified;
                             db.SaveChanges();
-                            MessageBox.Show("Зміни збереженно\n"+ updateMessage);
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Зміни_збережено + updateMessage);
                         }
                         else 
                         {
-                            MessageBox.Show("Змін не знайдено");
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Змін_не_знайдено);
                         }                        
                     }
                     catch (DbEntityValidationException e)
                     {
                         Log.Write(e);
-                        MessageBox.Show("Помилка при зміні заявки\n" + e);
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_при_зміні_заявки + e);
                     }
                     catch (Exception ex)
                     {
                         Log.Write(ex);
-                        MessageBox.Show("Помилка при зміні заявки\n" + ex.Message);
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_при_зміні_заявки + ex.Message);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Спочатку виберіть заявку");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Спочатку_виберіть_заявку);
                 }
             }
         }

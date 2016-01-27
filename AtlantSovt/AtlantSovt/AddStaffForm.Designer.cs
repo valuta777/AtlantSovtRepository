@@ -28,43 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddStaffForm));
             this.addStaffButton = new System.Windows.Forms.Button();
             this.addStaffTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // addStaffButton
             // 
-            this.addStaffButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.addStaffButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addStaffButton.Location = new System.Drawing.Point(0, 29);
+            resources.ApplyResources(this.addStaffButton, "addStaffButton");
             this.addStaffButton.Name = "addStaffButton";
-            this.addStaffButton.Size = new System.Drawing.Size(384, 52);
-            this.addStaffButton.TabIndex = 3;
-            this.addStaffButton.Text = "Додати";
             this.addStaffButton.UseVisualStyleBackColor = true;
             this.addStaffButton.Click += new System.EventHandler(this.addStaffButton_Click);
             // 
             // addStaffTextBox
             // 
-            this.addStaffTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addStaffTextBox.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.addStaffTextBox, "addStaffTextBox");
             this.addStaffTextBox.Name = "addStaffTextBox";
-            this.addStaffTextBox.Size = new System.Drawing.Size(384, 29);
-            this.addStaffTextBox.TabIndex = 2;
             // 
-            // addStaffForm
+            // AddStaffForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 81);
             this.Controls.Add(this.addStaffButton);
             this.Controls.Add(this.addStaffTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "addStaffForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Додавання персоналу";
+            this.Name = "AddStaffForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

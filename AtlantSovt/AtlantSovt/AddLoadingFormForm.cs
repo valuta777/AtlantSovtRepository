@@ -35,7 +35,7 @@ namespace AtlantSovt
                     {
                         db.LoadingForms.Add(New_LoadingForm);
                         db.SaveChanges();
-                        MessageBox.Show("Нове значення успішно додане");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Нове_значення_успішно_додане);
                     }
                     catch (Exception ex)
                     {

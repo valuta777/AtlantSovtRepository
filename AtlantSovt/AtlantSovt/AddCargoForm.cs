@@ -35,7 +35,7 @@ namespace AtlantSovt
                     {
                         db.Cargoes.Add(New_Cargo);
                         db.SaveChanges();
-                        MessageBox.Show("Нове значення успішно додане");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Нове_значення_успішно_додане);
                     }
                     catch (Exception ex)
                     {

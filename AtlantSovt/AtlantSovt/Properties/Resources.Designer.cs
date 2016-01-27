@@ -61,12 +61,97 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 
+        ///- &lt;Експедитор 1&gt;.
+        /// </summary>
+        internal static string _Експедитор_1_ {
+            get {
+                return ResourceManager.GetString("_Експедитор_1_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ///- &lt;Експедитор 2&gt;.
+        /// </summary>
+        internal static string _Експедитор_2_ {
+            get {
+                return ResourceManager.GetString("_Експедитор_2_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;Експедитор&gt; .
+        /// </summary>
+        internal static string _Експедитор0 {
+            get {
+                return ResourceManager.GetString("_Експедитор0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ///- &lt;Клієнт&gt;.
+        /// </summary>
+        internal static string _Клієнт_ {
+            get {
+                return ResourceManager.GetString("_Клієнт_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;Клієнт&gt; .
+        /// </summary>
+        internal static string _Клієнт0 {
+            get {
+                return ResourceManager.GetString("_Клієнт0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ///- &lt;Перевізник&gt;.
+        /// </summary>
+        internal static string _Перевізник_ {
+            get {
+                return ResourceManager.GetString("_Перевізник_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;Перевізник&gt; .
+        /// </summary>
+        internal static string _Перевізник0 {
+            get {
+                return ResourceManager.GetString("_Перевізник0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap addButton {
             get {
                 object obj = ResourceManager.GetObject("addButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ADR.
+        /// </summary>
+        internal static string ADR {
+            get {
+                return ResourceManager.GetString("ADR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CMR.
+        /// </summary>
+        internal static string CMR {
+            get {
+                return ResourceManager.GetString("CMR", resourceCulture);
             }
         }
         
@@ -87,6 +172,1881 @@ namespace AtlantSovt.Properties {
             get {
                 object obj = ResourceManager.GetObject("demologo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EKMT.
+        /// </summary>
+        internal static string EKMT {
+            get {
+                return ResourceManager.GetString("EKMT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        internal static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IBAN.
+        /// </summary>
+        internal static string IBAN {
+            get {
+                return ResourceManager.GetString("IBAN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IПН.
+        /// </summary>
+        internal static string IПН {
+            get {
+                return ResourceManager.GetString("IПН", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RU {
+            get {
+                object obj = ResourceManager.GetObject("RU", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SWIFT.
+        /// </summary>
+        internal static string SWIFT {
+            get {
+                return ResourceManager.GetString("SWIFT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TIR.
+        /// </summary>
+        internal static string TIR {
+            get {
+                return ResourceManager.GetString("TIR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UA {
+            get {
+                object obj = ResourceManager.GetObject("UA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Адрес завантаження.
+        /// </summary>
+        internal static string Адрес_завантаження {
+            get {
+                return ResourceManager.GetString("Адрес_завантаження", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Адрес замитнення.
+        /// </summary>
+        internal static string Адрес_замитнення {
+            get {
+                return ResourceManager.GetString("Адрес_замитнення", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Адрес розвантаження .
+        /// </summary>
+        internal static string Адрес_розвантаження {
+            get {
+                return ResourceManager.GetString("Адрес_розвантаження", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Адрес розмитнення.
+        /// </summary>
+        internal static string Адрес_розмитнення {
+            get {
+                return ResourceManager.GetString("Адрес_розмитнення", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Адреса успішно додана .
+        /// </summary>
+        internal static string Адреса_успішно_додана {
+            get {
+                return ResourceManager.GetString("Адреса_успішно_додана", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Банківські дані успішно додані експедитору .
+        /// </summary>
+        internal static string Банківські_дані_успішно_додані_експедитору {
+            get {
+                return ResourceManager.GetString("Банківські_дані_успішно_додані_експедитору", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Банківські дані успішно додані клієнту .
+        /// </summary>
+        internal static string Банківські_дані_успішно_додані_клієнту {
+            get {
+                return ResourceManager.GetString("Банківські_дані_успішно_додані_клієнту", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Банківські дані успішно додані перевізнику .
+        /// </summary>
+        internal static string Банківські_дані_успішно_додані_перевізнику {
+            get {
+                return ResourceManager.GetString("Банківські_дані_успішно_додані_перевізнику", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Банківські данні успішно видалено.
+        /// </summary>
+        internal static string Банківські_данні_успішно_видалено {
+            get {
+                return ResourceManager.GetString("Банківські_данні_успішно_видалено", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to В експедитора вже є банківські дані.
+        /// </summary>
+        internal static string В_експедитора_вже_є_банківські_дані {
+            get {
+                return ResourceManager.GetString("В_експедитора_вже_є_банківські_дані", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to В експедитора немає контактів.
+        /// </summary>
+        internal static string В_експедитора_немає_контактів {
+            get {
+                return ResourceManager.GetString("В_експедитора_немає_контактів", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to В експедитора ще немає банківських даних.
+        /// </summary>
+        internal static string В_експедитора_ще_немає_банківських_даних {
+            get {
+                return ResourceManager.GetString("В_експедитора_ще_немає_банківських_даних", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to В клієнта вже є банківські дані.
+        /// </summary>
+        internal static string В_клієнта_вже_є_банківські_дані {
+            get {
+                return ResourceManager.GetString("В_клієнта_вже_є_банківські_дані", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to В клієнта немає контактів.
+        /// </summary>
+        internal static string В_клієнта_немає_контактів {
+            get {
+                return ResourceManager.GetString("В_клієнта_немає_контактів", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to В клієнта ще немає банківських даних.
+        /// </summary>
+        internal static string В_клієнта_ще_немає_банківських_даних {
+            get {
+                return ResourceManager.GetString("В_клієнта_ще_немає_банківських_даних", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to В перевізника вже є банківські дані.
+        /// </summary>
+        internal static string В_перевізника_вже_є_банківські_дані {
+            get {
+                return ResourceManager.GetString("В_перевізника_вже_є_банківські_дані", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to В перевізника немає контактів.
+        /// </summary>
+        internal static string В_перевізника_немає_контактів {
+            get {
+                return ResourceManager.GetString("В_перевізника_немає_контактів", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to В перевізника ще немає банківських даних.
+        /// </summary>
+        internal static string В_перевізника_ще_немає_банківських_даних {
+            get {
+                return ResourceManager.GetString("В_перевізника_ще_немає_банківських_даних", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ви не вибрали діапазон.
+        /// </summary>
+        internal static string Ви_не_вибрали_діапазон {
+            get {
+                return ResourceManager.GetString("Ви_не_вибрали_діапазон", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ви не вибрали перевізника.
+        /// </summary>
+        internal static string Ви_не_вибрали_перевізника {
+            get {
+                return ResourceManager.GetString("Ви_не_вибрали_перевізника", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Виберіть клієнта.
+        /// </summary>
+        internal static string Виберіть_клієнта {
+            get {
+                return ResourceManager.GetString("Виберіть_клієнта", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Виберіть мову у меню редагування.
+        /// </summary>
+        internal static string Виберіть_мову_у_меню_редагування {
+            get {
+                return ResourceManager.GetString("Виберіть_мову_у_меню_редагування", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Виберіть спочатку експедитора.
+        /// </summary>
+        internal static string Виберіть_спочатку_експедитора {
+            get {
+                return ResourceManager.GetString("Виберіть_спочатку_експедитора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Виберіть спочатку запис.
+        /// </summary>
+        internal static string Виберіть_спочатку_запис {
+            get {
+                return ResourceManager.GetString("Виберіть_спочатку_запис", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Виберіть спочатку заявку.
+        /// </summary>
+        internal static string Виберіть_спочатку_заявку {
+            get {
+                return ResourceManager.GetString("Виберіть_спочатку_заявку", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Виберіть спочатку клієнта.
+        /// </summary>
+        internal static string Виберіть_спочатку_клієнта {
+            get {
+                return ResourceManager.GetString("Виберіть_спочатку_клієнта", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Виберіть спочатку перевізника.
+        /// </summary>
+        internal static string Виберіть_спочатку_перевізника {
+            get {
+                return ResourceManager.GetString("Виберіть_спочатку_перевізника", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Видалити арбайтен?.
+        /// </summary>
+        internal static string Видалити_арбайтен {
+            get {
+                return ResourceManager.GetString("Видалити_арбайтен", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Видалити банківські дані експедитору .
+        /// </summary>
+        internal static string Видалити_банківські_дані_експедитору {
+            get {
+                return ResourceManager.GetString("Видалити_банківські_дані_експедитору", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Видалити банківські дані клієнту .
+        /// </summary>
+        internal static string Видалити_банківські_дані_клієнту {
+            get {
+                return ResourceManager.GetString("Видалити_банківські_дані_клієнту", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Видалити банківські дані перевізнику .
+        /// </summary>
+        internal static string Видалити_банківські_дані_переперевізнику {
+            get {
+                return ResourceManager.GetString("Видалити_банківські_дані_переперевізнику", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Видалити договір .
+        /// </summary>
+        internal static string Видалити_договір {
+            get {
+                return ResourceManager.GetString("Видалити_договір", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Видалити експедитора .
+        /// </summary>
+        internal static string Видалити_експедитора {
+            get {
+                return ResourceManager.GetString("Видалити_експедитора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Видалити заявку .
+        /// </summary>
+        internal static string Видалити_заявку {
+            get {
+                return ResourceManager.GetString("Видалити_заявку", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Видалити клієнта .
+        /// </summary>
+        internal static string Видалити_клієнта {
+            get {
+                return ResourceManager.GetString("Видалити_клієнта", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Видалити контакт .
+        /// </summary>
+        internal static string Видалити_контакт {
+            get {
+                return ResourceManager.GetString("Видалити_контакт", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Видалити перевізника .
+        /// </summary>
+        internal static string Видалити_перевізника {
+            get {
+                return ResourceManager.GetString("Видалити_перевізника", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Використаний шаблон.
+        /// </summary>
+        internal static string Використаний_шаблон {
+            get {
+                return ResourceManager.GetString("Використаний_шаблон", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Виникла помилка, спробуйте ще раз.
+        /// </summary>
+        internal static string Виникла_помилка_спробуйте_ще_раз {
+            get {
+                return ResourceManager.GetString("Виникла_помилка_спробуйте_ще_раз", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Відкрита.
+        /// </summary>
+        internal static string Відкрита {
+            get {
+                return ResourceManager.GetString("Відкрита", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дата додавання.
+        /// </summary>
+        internal static string Дата_додавання {
+            get {
+                return ResourceManager.GetString("Дата_додавання", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дата завантаження.
+        /// </summary>
+        internal static string Дата_завантаження {
+            get {
+                return ResourceManager.GetString("Дата_завантаження", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дата завершення.
+        /// </summary>
+        internal static string Дата_завершення {
+            get {
+                return ResourceManager.GetString("Дата_завершення", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дата закриття.
+        /// </summary>
+        internal static string Дата_закриття {
+            get {
+                return ResourceManager.GetString("Дата_закриття", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дата оплати.
+        /// </summary>
+        internal static string Дата_оплати {
+            get {
+                return ResourceManager.GetString("Дата_оплати", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дата останньої зміни.
+        /// </summary>
+        internal static string Дата_останньої_зміни {
+            get {
+                return ResourceManager.GetString("Дата_останньої_зміни", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дата початку.
+        /// </summary>
+        internal static string Дата_початку {
+            get {
+                return ResourceManager.GetString("Дата_початку", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Деякі дані_не заповнені в: .
+        /// </summary>
+        internal static string Деякі_дані_не_заповнені_в {
+            get {
+                return ResourceManager.GetString("Деякі_дані_не_заповнені_в", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Для збереження заповніть хоча б одне поле.
+        /// </summary>
+        internal static string Для_збереження_заповніть_хоча_б_одне_поле {
+            get {
+                return ResourceManager.GetString("Для_збереження_заповніть_хоча_б_одне_поле", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Договір успішно видалений.
+        /// </summary>
+        internal static string Договір_успішно_видалений {
+            get {
+                return ResourceManager.GetString("Договір_успішно_видалений", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Другий учасник договору.
+        /// </summary>
+        internal static string Другий_учасник_договору {
+            get {
+                return ResourceManager.GetString("Другий_учасник_договору", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Експедитор.
+        /// </summary>
+        internal static string Експедитор {
+            get {
+                return ResourceManager.GetString("Експедитор", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Експедитор 1.
+        /// </summary>
+        internal static string Експедитор_1 {
+            get {
+                return ResourceManager.GetString("Експедитор_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Експедитор 2.
+        /// </summary>
+        internal static string Експедитор_2 {
+            get {
+                return ResourceManager.GetString("Експедитор_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Експедитор 3.
+        /// </summary>
+        internal static string Експедитор_3 {
+            get {
+                return ResourceManager.GetString("Експедитор_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Експедитор успішно видалений.
+        /// </summary>
+        internal static string Експедитор_успішно_видалений {
+            get {
+                return ResourceManager.GetString("Експедитор_успішно_видалений", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Експедитор успішно доданий
+        ///.
+        /// </summary>
+        internal static string Експедитор_успішно_доданий {
+            get {
+                return ResourceManager.GetString("Експедитор_успішно_доданий", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Експедитори:.
+        /// </summary>
+        internal static string Експедитори {
+            get {
+                return ResourceManager.GetString("Експедитори", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ЄДРПОУ.
+        /// </summary>
+        internal static string ЄДРПОУ {
+            get {
+                return ResourceManager.GetString("ЄДРПОУ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to За кордон.
+        /// </summary>
+        internal static string За_кордон {
+            get {
+                return ResourceManager.GetString("За_кордон", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Завершити роботу?
+        ///Не збережена інформація буде втрачена!.
+        /// </summary>
+        internal static string Завершити_роботу {
+            get {
+                return ResourceManager.GetString("Завершити_роботу", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Закрита.
+        /// </summary>
+        internal static string Закрита {
+            get {
+                return ResourceManager.GetString("Закрита", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Закрити форму без збереження?
+        ///Адреси та типи транспорту НЕ збережуться.
+        ///Для збереження натисніть &lt;Отмена&gt; та &lt;Додати&gt;.
+        /// </summary>
+        internal static string Закрити_форму_без_збереження_адр_та_транспорта {
+            get {
+                return ResourceManager.GetString("Закрити_форму_без_збереження_адр_та_транспорта", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Закрити форму без збереження?
+        ///Вибрані адреси НЕ додадуться.
+        ///Для збереження вибраних адрес натисніть &lt;Отмена&gt; та &lt;Додати до заявки&gt;.
+        /// </summary>
+        internal static string Закрити_форму_без_збереження_адрес {
+            get {
+                return ResourceManager.GetString("Закрити_форму_без_збереження_адрес", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Закрити форму без збереження?
+        ///Банківські данні НЕ збережуться.
+        ///Для збереження натисніть &lt;Отмена&gt; та &lt;Додати Банківські данні&gt;.
+        /// </summary>
+        internal static string Закрити_форму_без_збереження_банкінських_даних {
+            get {
+                return ResourceManager.GetString("Закрити_форму_без_збереження_банкінських_даних", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Закрити форму без збереження?
+        ///Контакт НЕ збережеться.
+        /// Для збереження натисніть &lt;Отмена&gt; та &lt;Додати контакт&gt;.
+        /// </summary>
+        internal static string Закрити_форму_без_збереження_контакту {
+            get {
+                return ResourceManager.GetString("Закрити_форму_без_збереження_контакту", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Запис успішно видалено.
+        /// </summary>
+        internal static string Запис_успішно_видалено {
+            get {
+                return ResourceManager.GetString("Запис_успішно_видалено", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Запис успішно додано.
+        /// </summary>
+        internal static string Запис_успішно_додано {
+            get {
+                return ResourceManager.GetString("Запис_успішно_додано", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Заповніть хоча б одне поле.
+        /// </summary>
+        internal static string Заповніть_хоча_б_одне_поле {
+            get {
+                return ResourceManager.GetString("Заповніть_хоча_б_одне_поле", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Заявка вже закрита, змінити дату закриття?.
+        /// </summary>
+        internal static string Заявка_вже_закрита_змінити_дату_закриття {
+            get {
+                return ResourceManager.GetString("Заявка_вже_закрита_змінити_дату_закриття", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Заявка ще не створена, все рівно закрити?.
+        /// </summary>
+        internal static string Заявка_ще_не_створена_все_рівно_закрити {
+            get {
+                return ResourceManager.GetString("Заявка_ще_не_створена_все_рівно_закрити", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Заявку успішно створено.
+        /// </summary>
+        internal static string Заявку_успішно_створено {
+            get {
+                return ResourceManager.GetString("Заявку_успішно_створено", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Заявці не призначено номер, спочатку створіть документ.
+        /// </summary>
+        internal static string Заявці_не_призначено_номер_спочатку_створіть_документ {
+            get {
+                return ResourceManager.GetString("Заявці_не_призначено_номер_спочатку_створіть_документ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Збірний.
+        /// </summary>
+        internal static string Збірний {
+            get {
+                return ResourceManager.GetString("Збірний", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Змін не знайдено.
+        /// </summary>
+        internal static string Змін_не_знайдено {
+            get {
+                return ResourceManager.GetString("Змін_не_знайдено", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Зміни збережено: .
+        /// </summary>
+        internal static string Зміни_збережено {
+            get {
+                return ResourceManager.GetString("Зміни_збережено", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Змінити мову та перезавантажити програму?
+        ///Не збережена інформація буде втрачена!.
+        /// </summary>
+        internal static string Змінити_мову {
+            get {
+                return ResourceManager.GetString("Змінити_мову", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ІПН.
+        /// </summary>
+        internal static string ІПН {
+            get {
+                return ResourceManager.GetString("ІПН", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Клієнт.
+        /// </summary>
+        internal static string Клієнт {
+            get {
+                return ResourceManager.GetString("Клієнт", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Клієнт успішно видалений.
+        /// </summary>
+        internal static string Клієнт_успішно_видалений {
+            get {
+                return ResourceManager.GetString("Клієнт_успішно_видалений", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Клієнт успішно доданий.
+        /// </summary>
+        internal static string Клієнт_успішно_доданий {
+            get {
+                return ResourceManager.GetString("Клієнт_успішно_доданий", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Код міста.
+        /// </summary>
+        internal static string Код_міста {
+            get {
+                return ResourceManager.GetString("Код_міста", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Коментар:.
+        /// </summary>
+        internal static string Коментар {
+            get {
+                return ResourceManager.GetString("Коментар", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Коментар успішно доданий заявці .
+        /// </summary>
+        internal static string Коментар_успішно_доданий_заявці {
+            get {
+                return ResourceManager.GetString("Коментар_успішно_доданий_заявці", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Коментар.
+        /// </summary>
+        internal static string Коментар0 {
+            get {
+                return ResourceManager.GetString("Коментар0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Контакт успішно видалено.
+        /// </summary>
+        internal static string Контакт_успішно_видалено {
+            get {
+                return ResourceManager.GetString("Контакт_успішно_видалено", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Контакт успішно доданий експедитору .
+        /// </summary>
+        internal static string Контакт_успішно_доданий_експедитору {
+            get {
+                return ResourceManager.GetString("Контакт_успішно_доданий_експедитору", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Контакт успішно доданий клієнту .
+        /// </summary>
+        internal static string Контакт_успішно_доданий_клієнту {
+            get {
+                return ResourceManager.GetString("Контакт_успішно_доданий_клієнту", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Контакт успішно доданий перевізнику .
+        /// </summary>
+        internal static string Контакт_успішно_доданий_перевізнику {
+            get {
+                return ResourceManager.GetString("Контакт_успішно_доданий_перевізнику", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Контактна особа.
+        /// </summary>
+        internal static string Контактна_особа {
+            get {
+                return ResourceManager.GetString("Контактна_особа", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Контактні дані перевізника:.
+        /// </summary>
+        internal static string Контактні_дані_перевізника {
+            get {
+                return ResourceManager.GetString("Контактні_дані_перевізника", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  країн.
+        /// </summary>
+        internal static string Країн {
+            get {
+                return ResourceManager.GetString("Країн", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  країн(а) 
+        ///.
+        /// </summary>
+        internal static string Країн_а {
+            get {
+                return ResourceManager.GetString("Країн_а", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Країна.
+        /// </summary>
+        internal static string Країна {
+            get {
+                return ResourceManager.GetString("Країна", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Мітка.
+        /// </summary>
+        internal static string Мітка {
+            get {
+                return ResourceManager.GetString("Мітка", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Мова.
+        /// </summary>
+        internal static string Мова {
+            get {
+                return ResourceManager.GetString("Мова", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to МФО.
+        /// </summary>
+        internal static string МФО {
+            get {
+                return ResourceManager.GetString("МФО", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to На основі.
+        /// </summary>
+        internal static string На_основі {
+            get {
+                return ResourceManager.GetString("На_основі", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Назва.
+        /// </summary>
+        internal static string Назва {
+            get {
+                return ResourceManager.GetString("Назва", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Назва банку.
+        /// </summary>
+        internal static string Назва_банку {
+            get {
+                return ResourceManager.GetString("Назва_банку", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Напрямок:.
+        /// </summary>
+        internal static string Напрямок {
+            get {
+                return ResourceManager.GetString("Напрямок", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Напрямок.
+        /// </summary>
+        internal static string Напрямок_1 {
+            get {
+                return ResourceManager.GetString("Напрямок_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Натисніть на коментар.
+        /// </summary>
+        internal static string Натисніть_на_коментар {
+            get {
+                return ResourceManager.GetString("Натисніть_на_коментар", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Не вибрано.
+        /// </summary>
+        internal static string Не_вибрано {
+            get {
+                return ResourceManager.GetString("Не_вибрано", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Не вибрано жодного відстеження.
+        /// </summary>
+        internal static string Не_вибрано_жодного_відстеження {
+            get {
+                return ResourceManager.GetString("Не_вибрано_жодного_відстеження", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Не визначено.
+        /// </summary>
+        internal static string Не_визначено {
+            get {
+                return ResourceManager.GetString("Не_визначено", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Не створена.
+        /// </summary>
+        internal static string Не_створена {
+            get {
+                return ResourceManager.GetString("Не_створена", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Немає жодного договору.
+        /// </summary>
+        internal static string Немає_жодного_договору {
+            get {
+                return ResourceManager.GetString("Немає_жодного_договору", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Немає жодного експедитора.
+        /// </summary>
+        internal static string Немає_жодного_експедитора {
+            get {
+                return ResourceManager.GetString("Немає_жодного_експедитора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Немає жодного запису.
+        /// </summary>
+        internal static string Немає_жодного_запису {
+            get {
+                return ResourceManager.GetString("Немає_жодного_запису", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Немає жодного клієнта.
+        /// </summary>
+        internal static string Немає_жодного_клієнта {
+            get {
+                return ResourceManager.GetString("Немає_жодного_клієнта", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Немає жодного перевізника.
+        /// </summary>
+        internal static string Немає_жодного_перевізника {
+            get {
+                return ResourceManager.GetString("Немає_жодного_перевізника", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Немає жодної заявки.
+        /// </summary>
+        internal static string Немає_жодної_заявки {
+            get {
+                return ResourceManager.GetString("Немає_жодної_заявки", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Немає з&apos;єднання.
+        /// </summary>
+        internal static string Немає_з_єднання {
+            get {
+                return ResourceManager.GetString("Немає_з_єднання", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ні.
+        /// </summary>
+        internal static string Ні {
+            get {
+                return ResourceManager.GetString("Ні", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Німецька.
+        /// </summary>
+        internal static string Німецька {
+            get {
+                return ResourceManager.GetString("Німецька", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Нове значення успішно додане.
+        /// </summary>
+        internal static string Нове_значення_успішно_додане {
+            get {
+                return ResourceManager.GetString("Нове_значення_успішно_додане", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Номер авто.
+        /// </summary>
+        internal static string Номер_авто {
+            get {
+                return ResourceManager.GetString("Номер_авто", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Номер договору.
+        /// </summary>
+        internal static string Номер_договору {
+            get {
+                return ResourceManager.GetString("Номер_договору", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Номер експедитора.
+        /// </summary>
+        internal static string Номер_експедитора {
+            get {
+                return ResourceManager.GetString("Номер_експедитора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Номер заявки.
+        /// </summary>
+        internal static string Номер_заявки {
+            get {
+                return ResourceManager.GetString("Номер_заявки", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Номер рахунку.
+        /// </summary>
+        internal static string Номер_рахунку {
+            get {
+                return ResourceManager.GetString("Номер_рахунку", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Номер рахунку клієнта.
+        /// </summary>
+        internal static string Номер_рахунку_клієнта {
+            get {
+                return ResourceManager.GetString("Номер_рахунку_клієнта", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Номер свідоцтва.
+        /// </summary>
+        internal static string Номер_свідоцтва {
+            get {
+                return ResourceManager.GetString("Номер_свідоцтва", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Обов&apos;язково виберіть шаблон!.
+        /// </summary>
+        internal static string Обов_язково_виберіть_шаблон {
+            get {
+                return ResourceManager.GetString("Обов_язково_виберіть_шаблон", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Одне з обов&apos;язкових полів не заповнено.
+        /// </summary>
+        internal static string Одне_з_обов_язкових_полів_не_заповнено {
+            get {
+                return ResourceManager.GetString("Одне_з_обов_язкових_полів_не_заповнено", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Оригінал.
+        /// </summary>
+        internal static string Оригінал {
+            get {
+                return ResourceManager.GetString("Оригінал", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Оригінал договору.
+        /// </summary>
+        internal static string Оригінал_договору {
+            get {
+                return ResourceManager.GetString("Оригінал_договору", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to П.І.Б. Директора.
+        /// </summary>
+        internal static string П_І_Б_Директора {
+            get {
+                return ResourceManager.GetString("П_І_Б_Директора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Перевізник.
+        /// </summary>
+        internal static string Перевізник {
+            get {
+                return ResourceManager.GetString("Перевізник", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Перевізник успішно видалений.
+        /// </summary>
+        internal static string Перевізник_успішно_видалений {
+            get {
+                return ResourceManager.GetString("Перевізник_успішно_видалений", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Перевізник успішно доданий .
+        /// </summary>
+        internal static string Перевізник_успішно_доданий {
+            get {
+                return ResourceManager.GetString("Перевізник_успішно_доданий", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Підтвердження закриття.
+        /// </summary>
+        internal static string Підтвердження_закриття {
+            get {
+                return ResourceManager.GetString("Підтвердження_закриття", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Підтвердіть видалення.
+        /// </summary>
+        internal static string Підтвердіть_видалення {
+            get {
+                return ResourceManager.GetString("Підтвердіть_видалення", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to По Україні.
+        /// </summary>
+        internal static string По_Україні {
+            get {
+                return ResourceManager.GetString("По_Україні", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Повна назва.
+        /// </summary>
+        internal static string Повна_назва {
+            get {
+                return ResourceManager.GetString("Повна_назва", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Польська.
+        /// </summary>
+        internal static string Польська {
+            get {
+                return ResourceManager.GetString("Польська", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Помилка: .
+        /// </summary>
+        internal static string Помилка {
+            get {
+                return ResourceManager.GetString("Помилка", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Помилка.
+        /// </summary>
+        internal static string Помилка_1 {
+            get {
+                return ResourceManager.GetString("Помилка_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Помилка (1 експедитор)
+        ///: .
+        /// </summary>
+        internal static string Помилка_1_експедитор {
+            get {
+                return ResourceManager.GetString("Помилка_1_експедитор", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Помилка (1 форма завантаження)
+        ///: .
+        /// </summary>
+        internal static string Помилка_1_форма_завантаження {
+            get {
+                return ResourceManager.GetString("Помилка_1_форма_завантаження", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Помилка (2 експедитор)
+        ///: .
+        /// </summary>
+        internal static string Помилка_2_експедитор {
+            get {
+                return ResourceManager.GetString("Помилка_2_експедитор", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Помилка (2 форма завантаження)
+        ///: .
+        /// </summary>
+        internal static string Помилка_2_форма_завантаження {
+            get {
+                return ResourceManager.GetString("Помилка_2_форма_завантаження", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Помилка (3 експедитор)
+        ///: .
+        /// </summary>
+        internal static string Помилка_3_експедитор {
+            get {
+                return ResourceManager.GetString("Помилка_3_експедитор", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Помилка з&apos;єднання з сервером!.
+        /// </summary>
+        internal static string Помилка_з_єднання_з_сервером {
+            get {
+                return ResourceManager.GetString("Помилка_з_єднання_з_сервером", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Помилка: не правильний шлях до шаблону.
+        /// </summary>
+        internal static string Помилка_не_правильний_шлях_шаблону {
+            get {
+                return ResourceManager.GetString("Помилка_не_правильний_шлях_шаблону", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Помилка при зміні запису.
+        /// </summary>
+        internal static string Помилка_при_зміні_запису {
+            get {
+                return ResourceManager.GetString("Помилка_при_зміні_запису", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Помилка при зміні заявки: .
+        /// </summary>
+        internal static string Помилка_при_зміні_заявки {
+            get {
+                return ResourceManager.GetString("Помилка_при_зміні_заявки", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Помилка при створенні заявки: .
+        /// </summary>
+        internal static string Помилка_при_створенні_заявки {
+            get {
+                return ResourceManager.GetString("Помилка_при_створенні_заявки", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Помилка, спробуйте ще раз.
+        /// </summary>
+        internal static string Помилка_спробуйте_ще_раз {
+            get {
+                return ResourceManager.GetString("Помилка_спробуйте_ще_раз", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Порядковий номер.
+        /// </summary>
+        internal static string Порядковий_номер {
+            get {
+                return ResourceManager.GetString("Порядковий_номер", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Працівник.
+        /// </summary>
+        internal static string Працівник {
+            get {
+                return ResourceManager.GetString("Працівник", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Примітка:.
+        /// </summary>
+        internal static string Примітка {
+            get {
+                return ResourceManager.GetString("Примітка", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ///Продовжити без повного заповнення даних?.
+        /// </summary>
+        internal static string Продовжити_без_повного_заповнення_даних {
+            get {
+                return ResourceManager.GetString("Продовжити_без_повного_заповнення_даних", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Серія свідоцтва.
+        /// </summary>
+        internal static string Серія_свідоцтва {
+            get {
+                return ResourceManager.GetString("Серія_свідоцтва", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Скорочена Назва.
+        /// </summary>
+        internal static string Скорочена_Назва {
+            get {
+                return ResourceManager.GetString("Скорочена_Назва", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Спочатку виберіть запис.
+        /// </summary>
+        internal static string Спочатку_виберіть_запис {
+            get {
+                return ResourceManager.GetString("Спочатку_виберіть_запис", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Спочатку виберіть заявку.
+        /// </summary>
+        internal static string Спочатку_виберіть_заявку {
+            get {
+                return ResourceManager.GetString("Спочатку_виберіть_заявку", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Стан.
+        /// </summary>
+        internal static string Стан {
+            get {
+                return ResourceManager.GetString("Стан", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Стан договору.
+        /// </summary>
+        internal static string Стан_договору {
+            get {
+                return ResourceManager.GetString("Стан_договору", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Статус платника податку.
+        /// </summary>
+        internal static string Статус_платника_податку {
+            get {
+                return ResourceManager.GetString("Статус_платника_податку", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сума від клієнта.
+        /// </summary>
+        internal static string Сума_від_клієнта {
+            get {
+                return ResourceManager.GetString("Сума_від_клієнта", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сума перевізнику.
+        /// </summary>
+        internal static string Сума_перевізнику {
+            get {
+                return ResourceManager.GetString("Сума_перевізнику", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Так.
+        /// </summary>
+        internal static string Так {
+            get {
+                return ResourceManager.GetString("Так", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Телефон.
+        /// </summary>
+        internal static string Телефон {
+            get {
+                return ResourceManager.GetString("Телефон", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  тип(ів) транспорту
+        ///.
+        /// </summary>
+        internal static string Тип_ів_транспорту {
+            get {
+                return ResourceManager.GetString("Тип_ів_транспорту", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Тип транспорту.
+        /// </summary>
+        internal static string Тип_транспорту {
+            get {
+                return ResourceManager.GetString("Тип_транспорту", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  типів транспорту.
+        /// </summary>
+        internal static string Типів_транспорту {
+            get {
+                return ResourceManager.GetString("Типів_транспорту", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Українська.
+        /// </summary>
+        internal static string Українська {
+            get {
+                return ResourceManager.GetString("Українська", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно вибрано .
+        /// </summary>
+        internal static string Успішно_вибрано {
+            get {
+                return ResourceManager.GetString("Успішно_вибрано", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно вибрано другого експедитора
+        ///.
+        /// </summary>
+        internal static string Успішно_вибрано_другого_експедитора {
+            get {
+                return ResourceManager.GetString("Успішно_вибрано_другого_експедитора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно вибрано другу форму завантаження
+        ///.
+        /// </summary>
+        internal static string Успішно_вибрано_другу_форму_завантаження {
+            get {
+                return ResourceManager.GetString("Успішно_вибрано_другу_форму_завантаження", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно вибрано першого експедитора
+        ///.
+        /// </summary>
+        internal static string Успішно_вибрано_першого_експедитора {
+            get {
+                return ResourceManager.GetString("Успішно_вибрано_першого_експедитора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно вибрано першу форму завантаження
+        ///.
+        /// </summary>
+        internal static string Успішно_вибрано_першу_форму_завантаження {
+            get {
+                return ResourceManager.GetString("Успішно_вибрано_першу_форму_завантаження", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно вибрано третього експедитора
+        ///.
+        /// </summary>
+        internal static string Успішно_вибрано_третього_експедитора {
+            get {
+                return ResourceManager.GetString("Успішно_вибрано_третього_експедитора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно видалено .
+        /// </summary>
+        internal static string Успішно_видалено {
+            get {
+                return ResourceManager.GetString("Успішно_видалено", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно видалено другого експедитора
+        ///.
+        /// </summary>
+        internal static string Успішно_видалено_другого_експедитора {
+            get {
+                return ResourceManager.GetString("Успішно_видалено_другого_експедитора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно видалено другу форму завантаження
+        ///.
+        /// </summary>
+        internal static string Успішно_видалено_другу_форму_завантаження {
+            get {
+                return ResourceManager.GetString("Успішно_видалено_другу_форму_завантаження", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно видалено першого експедитора
+        ///.
+        /// </summary>
+        internal static string Успішно_видалено_першого_експедитора {
+            get {
+                return ResourceManager.GetString("Успішно_видалено_першого_експедитора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно видалено першу форму завантаження
+        ///.
+        /// </summary>
+        internal static string Успішно_видалено_першу_форму_завантаження {
+            get {
+                return ResourceManager.GetString("Успішно_видалено_першу_форму_завантаження", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно видалено третього експедитора
+        ///.
+        /// </summary>
+        internal static string Успішно_видалено_третього_експедитора {
+            get {
+                return ResourceManager.GetString("Успішно_видалено_третього_експедитора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно додано .
+        /// </summary>
+        internal static string Успішно_додано {
+            get {
+                return ResourceManager.GetString("Успішно_додано", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно додано другого експедитора
+        ///.
+        /// </summary>
+        internal static string Успішно_додано_другого_експедитора {
+            get {
+                return ResourceManager.GetString("Успішно_додано_другого_експедитора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно додано першого експедитора
+        ///.
+        /// </summary>
+        internal static string Успішно_додано_першого_експедитора {
+            get {
+                return ResourceManager.GetString("Успішно_додано_першого_експедитора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно додано третього експедитора
+        ///.
+        /// </summary>
+        internal static string Успішно_додано_третього_експедтора {
+            get {
+                return ResourceManager.GetString("Успішно_додано_третього_експедтора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно змінено.
+        /// </summary>
+        internal static string Успішно_змінено {
+            get {
+                return ResourceManager.GetString("Успішно_змінено", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно змінено другого експедитора
+        ///.
+        /// </summary>
+        internal static string Успішно_змінено_другого_експедтора {
+            get {
+                return ResourceManager.GetString("Успішно_змінено_другого_експедтора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно змінено другу форму завантаження
+        ///.
+        /// </summary>
+        internal static string Успішно_змінено_другу_форму_затора {
+            get {
+                return ResourceManager.GetString("Успішно_змінено_другу_форму_затора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно змінено першого експедитора
+        ///.
+        /// </summary>
+        internal static string Успішно_змінено_першого_експедтора {
+            get {
+                return ResourceManager.GetString("Успішно_змінено_першого_експедтора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно змінено першу форму завантаження
+        ///.
+        /// </summary>
+        internal static string Успішно_змінено_першу_форму_завантаження {
+            get {
+                return ResourceManager.GetString("Успішно_змінено_першу_форму_завантаження", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Успішно змінено третього експедитора
+        ///.
+        /// </summary>
+        internal static string Успішно_змінено_третього_експедитора {
+            get {
+                return ResourceManager.GetString("Успішно_змінено_третього_експедитора", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Факс.
+        /// </summary>
+        internal static string Факс {
+            get {
+                return ResourceManager.GetString("Факс", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Фізична адреса.
+        /// </summary>
+        internal static string Фізична_адреса {
+            get {
+                return ResourceManager.GetString("Фізична_адреса", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Чи є експедитором?.
+        /// </summary>
+        internal static string Чи_є_експедитором {
+            get {
+                return ResourceManager.GetString("Чи_є_експедитором", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ще не присвоєно.
+        /// </summary>
+        internal static string Ще_не_присвоєно {
+            get {
+                return ResourceManager.GetString("Ще_не_присвоєно", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Юридична адреса.
+        /// </summary>
+        internal static string Юридична_адреса {
+            get {
+                return ResourceManager.GetString("Юридична_адреса", resourceCulture);
             }
         }
     }

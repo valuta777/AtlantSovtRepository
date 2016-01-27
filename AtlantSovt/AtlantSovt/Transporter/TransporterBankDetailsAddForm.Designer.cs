@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransporterBankDetailsAddForm));
             this.transporterBankNameTextBox = new System.Windows.Forms.TextBox();
             this.transporterMFOTextBox = new System.Windows.Forms.TextBox();
             this.transporterAccountNumberTextBox = new System.Windows.Forms.TextBox();
@@ -51,202 +52,106 @@
             // 
             // transporterBankNameTextBox
             // 
-            this.transporterBankNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterBankNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterBankNameTextBox.Location = new System.Drawing.Point(13, 33);
+            resources.ApplyResources(this.transporterBankNameTextBox, "transporterBankNameTextBox");
             this.transporterBankNameTextBox.Name = "transporterBankNameTextBox";
-            this.transporterBankNameTextBox.Size = new System.Drawing.Size(536, 25);
-            this.transporterBankNameTextBox.TabIndex = 0;
             // 
             // transporterMFOTextBox
             // 
-            this.transporterMFOTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterMFOTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterMFOTextBox.Location = new System.Drawing.Point(13, 80);
+            resources.ApplyResources(this.transporterMFOTextBox, "transporterMFOTextBox");
             this.transporterMFOTextBox.Name = "transporterMFOTextBox";
-            this.transporterMFOTextBox.Size = new System.Drawing.Size(536, 25);
-            this.transporterMFOTextBox.TabIndex = 1;
             // 
             // transporterAccountNumberTextBox
             // 
-            this.transporterAccountNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterAccountNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterAccountNumberTextBox.Location = new System.Drawing.Point(13, 127);
+            resources.ApplyResources(this.transporterAccountNumberTextBox, "transporterAccountNumberTextBox");
             this.transporterAccountNumberTextBox.Name = "transporterAccountNumberTextBox";
-            this.transporterAccountNumberTextBox.Size = new System.Drawing.Size(536, 25);
-            this.transporterAccountNumberTextBox.TabIndex = 2;
             // 
             // transporterEDRPOUTextBox
             // 
-            this.transporterEDRPOUTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterEDRPOUTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterEDRPOUTextBox.Location = new System.Drawing.Point(13, 174);
+            resources.ApplyResources(this.transporterEDRPOUTextBox, "transporterEDRPOUTextBox");
             this.transporterEDRPOUTextBox.Name = "transporterEDRPOUTextBox";
-            this.transporterEDRPOUTextBox.Size = new System.Drawing.Size(536, 25);
-            this.transporterEDRPOUTextBox.TabIndex = 3;
             // 
             // transporterIPNTextBox
             // 
-            this.transporterIPNTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterIPNTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterIPNTextBox.Location = new System.Drawing.Point(13, 221);
+            resources.ApplyResources(this.transporterIPNTextBox, "transporterIPNTextBox");
             this.transporterIPNTextBox.Name = "transporterIPNTextBox";
-            this.transporterIPNTextBox.Size = new System.Drawing.Size(536, 25);
-            this.transporterIPNTextBox.TabIndex = 4;
             // 
             // transporterCertificateNumberTextBox
             // 
-            this.transporterCertificateNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterCertificateNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterCertificateNumberTextBox.Location = new System.Drawing.Point(13, 316);
+            resources.ApplyResources(this.transporterCertificateNumberTextBox, "transporterCertificateNumberTextBox");
             this.transporterCertificateNumberTextBox.Name = "transporterCertificateNumberTextBox";
-            this.transporterCertificateNumberTextBox.Size = new System.Drawing.Size(536, 25);
-            this.transporterCertificateNumberTextBox.TabIndex = 6;
             // 
             // transporterSWIFTTextBox
             // 
-            this.transporterSWIFTTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterSWIFTTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterSWIFTTextBox.Location = new System.Drawing.Point(13, 363);
+            resources.ApplyResources(this.transporterSWIFTTextBox, "transporterSWIFTTextBox");
             this.transporterSWIFTTextBox.Name = "transporterSWIFTTextBox";
-            this.transporterSWIFTTextBox.Size = new System.Drawing.Size(536, 25);
-            this.transporterSWIFTTextBox.TabIndex = 7;
             // 
             // transporterIBANTextBox
             // 
-            this.transporterIBANTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterIBANTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterIBANTextBox.Location = new System.Drawing.Point(13, 410);
+            resources.ApplyResources(this.transporterIBANTextBox, "transporterIBANTextBox");
             this.transporterIBANTextBox.Name = "transporterIBANTextBox";
-            this.transporterIBANTextBox.Size = new System.Drawing.Size(536, 25);
-            this.transporterIBANTextBox.TabIndex = 8;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 9);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 21);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Назва банку";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 56);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 21);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "МФО";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 103);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 21);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Номер рахунку";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 150);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 21);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "ЄДРПОУ";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 197);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 21);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "ІПН";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 292);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(132, 21);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Номер свідоцтва";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(9, 339);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 21);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "SWIFT";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(9, 386);
+            resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 21);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "IBAN";
             // 
             // addTransporterBankDetailsButton
             // 
-            this.addTransporterBankDetailsButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.addTransporterBankDetailsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addTransporterBankDetailsButton.Location = new System.Drawing.Point(0, 443);
+            resources.ApplyResources(this.addTransporterBankDetailsButton, "addTransporterBankDetailsButton");
             this.addTransporterBankDetailsButton.Name = "addTransporterBankDetailsButton";
-            this.addTransporterBankDetailsButton.Size = new System.Drawing.Size(560, 48);
-            this.addTransporterBankDetailsButton.TabIndex = 9;
-            this.addTransporterBankDetailsButton.Text = "Додати";
             this.addTransporterBankDetailsButton.UseVisualStyleBackColor = true;
             this.addTransporterBankDetailsButton.Click += new System.EventHandler(this.addTransporterBankDetailsButton_Click);
             // 
             // transporterCertificateSerialTextBox
             // 
-            this.transporterCertificateSerialTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.transporterCertificateSerialTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterCertificateSerialTextBox.Location = new System.Drawing.Point(13, 270);
+            resources.ApplyResources(this.transporterCertificateSerialTextBox, "transporterCertificateSerialTextBox");
             this.transporterCertificateSerialTextBox.Name = "transporterCertificateSerialTextBox";
-            this.transporterCertificateSerialTextBox.Size = new System.Drawing.Size(536, 25);
-            this.transporterCertificateSerialTextBox.TabIndex = 5;
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(9, 246);
+            resources.ApplyResources(this.label15, "label15");
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(123, 21);
-            this.label15.TabIndex = 40;
-            this.label15.Text = "Серія свідоцтва";
             // 
             // TransporterBankDetailsAddForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(560, 491);
             this.Controls.Add(this.transporterCertificateSerialTextBox);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.transporterIBANTextBox);
@@ -270,8 +175,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TransporterBankDetailsAddForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Додавання банківських реквізитів";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TransporterBankDetailsAddForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectCustomsAddressesForm));
             this.addCustomsAddressesButton = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.addCustomsAddressesToOrderButton = new System.Windows.Forms.Button();
@@ -40,20 +41,14 @@
             // 
             // addCustomsAddressesButton
             // 
-            this.addCustomsAddressesButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addCustomsAddressesButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.addCustomsAddressesButton.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.addCustomsAddressesButton, "addCustomsAddressesButton");
             this.addCustomsAddressesButton.Name = "addCustomsAddressesButton";
-            this.addCustomsAddressesButton.Size = new System.Drawing.Size(281, 46);
-            this.addCustomsAddressesButton.TabIndex = 1;
-            this.addCustomsAddressesButton.Text = "Додати нову адресу";
             this.addCustomsAddressesButton.UseVisualStyleBackColor = true;
             this.addCustomsAddressesButton.Click += new System.EventHandler(this.addCustomsAddressButton_Click);
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 228);
+            resources.ApplyResources(this.splitContainer1, "splitContainer1");
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -63,48 +58,32 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.addCustomsAddressesToOrderButton);
-            this.splitContainer1.Size = new System.Drawing.Size(564, 46);
-            this.splitContainer1.SplitterDistance = 281;
-            this.splitContainer1.SplitterWidth = 2;
-            this.splitContainer1.TabIndex = 3;
             // 
             // addCustomsAddressesToOrderButton
             // 
-            this.addCustomsAddressesToOrderButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addCustomsAddressesToOrderButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.addCustomsAddressesToOrderButton.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.addCustomsAddressesToOrderButton, "addCustomsAddressesToOrderButton");
             this.addCustomsAddressesToOrderButton.Name = "addCustomsAddressesToOrderButton";
-            this.addCustomsAddressesToOrderButton.Size = new System.Drawing.Size(281, 46);
-            this.addCustomsAddressesToOrderButton.TabIndex = 2;
-            this.addCustomsAddressesToOrderButton.Text = "Додати до заявки";
             this.addCustomsAddressesToOrderButton.UseVisualStyleBackColor = true;
             this.addCustomsAddressesToOrderButton.Click += new System.EventHandler(this.addCustomsAddressToOrderButton_Click);
             // 
             // customsAddressesListBox
             // 
             this.customsAddressesListBox.CheckOnClick = true;
-            this.customsAddressesListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customsAddressesListBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            resources.ApplyResources(this.customsAddressesListBox, "customsAddressesListBox");
             this.customsAddressesListBox.FormattingEnabled = true;
-            this.customsAddressesListBox.Location = new System.Drawing.Point(0, 0);
             this.customsAddressesListBox.Name = "customsAddressesListBox";
-            this.customsAddressesListBox.Size = new System.Drawing.Size(564, 228);
-            this.customsAddressesListBox.TabIndex = 4;
             this.customsAddressesListBox.DoubleClick += new System.EventHandler(this.сustomsAddressListBox_DoubleClick);
             // 
             // SelectCustomsAddressesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 274);
             this.Controls.Add(this.customsAddressesListBox);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SelectCustomsAddressesForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Виберіть адреси замитнення";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SelectCustomsAddressesForm_FormClosing);
             this.Load += new System.EventHandler(this.SelectCustomsAddressesForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);

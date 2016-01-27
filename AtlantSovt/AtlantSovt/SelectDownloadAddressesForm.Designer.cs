@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectDownloadAddressesForm));
             this.addDownloadAddressButton = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.addDownloadAddressToOrderButton = new System.Windows.Forms.Button();
@@ -40,20 +41,14 @@
             // 
             // addDownloadAddressButton
             // 
-            this.addDownloadAddressButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addDownloadAddressButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.addDownloadAddressButton.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.addDownloadAddressButton, "addDownloadAddressButton");
             this.addDownloadAddressButton.Name = "addDownloadAddressButton";
-            this.addDownloadAddressButton.Size = new System.Drawing.Size(281, 46);
-            this.addDownloadAddressButton.TabIndex = 1;
-            this.addDownloadAddressButton.Text = "Додати нову адресу";
             this.addDownloadAddressButton.UseVisualStyleBackColor = true;
             this.addDownloadAddressButton.Click += new System.EventHandler(this.addDownloadAddressButton_Click);
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 228);
+            resources.ApplyResources(this.splitContainer1, "splitContainer1");
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -63,48 +58,32 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.addDownloadAddressToOrderButton);
-            this.splitContainer1.Size = new System.Drawing.Size(564, 46);
-            this.splitContainer1.SplitterDistance = 281;
-            this.splitContainer1.SplitterWidth = 2;
-            this.splitContainer1.TabIndex = 3;
             // 
             // addDownloadAddressToOrderButton
             // 
-            this.addDownloadAddressToOrderButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addDownloadAddressToOrderButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.addDownloadAddressToOrderButton.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.addDownloadAddressToOrderButton, "addDownloadAddressToOrderButton");
             this.addDownloadAddressToOrderButton.Name = "addDownloadAddressToOrderButton";
-            this.addDownloadAddressToOrderButton.Size = new System.Drawing.Size(281, 46);
-            this.addDownloadAddressToOrderButton.TabIndex = 2;
-            this.addDownloadAddressToOrderButton.Text = "Додати до заявки";
             this.addDownloadAddressToOrderButton.UseVisualStyleBackColor = true;
             this.addDownloadAddressToOrderButton.Click += new System.EventHandler(this.addDownloadAddressToOrderButton_Click);
             // 
             // downloadAddresssListBox
             // 
             this.downloadAddresssListBox.CheckOnClick = true;
-            this.downloadAddresssListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.downloadAddresssListBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            resources.ApplyResources(this.downloadAddresssListBox, "downloadAddresssListBox");
             this.downloadAddresssListBox.FormattingEnabled = true;
-            this.downloadAddresssListBox.Location = new System.Drawing.Point(0, 0);
             this.downloadAddresssListBox.Name = "downloadAddresssListBox";
-            this.downloadAddresssListBox.Size = new System.Drawing.Size(564, 228);
-            this.downloadAddresssListBox.TabIndex = 4;
             this.downloadAddresssListBox.DoubleClick += new System.EventHandler(this.downloadAddressListBox_DoubleClick);
             // 
             // SelectDownloadAddressesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 274);
             this.Controls.Add(this.downloadAddresssListBox);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SelectDownloadAddressesForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Виберіть адреси завантаження";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SelectDownloadAddressesForm_FormClosing);
             this.Load += new System.EventHandler(this.SelectDownloadAddressesForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);

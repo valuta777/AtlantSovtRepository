@@ -92,11 +92,11 @@ namespace AtlantSovt
                     }
                     db.Entry(contact).State = EntityState.Modified;
                     db.SaveChanges();
-                    MessageBox.Show("Успішно змінено");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_змінено);
                 }
                 else
                 {
-                    MessageBox.Show("Змін не знайдено");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Змін_не_знайдено);
                 }
             }
         }

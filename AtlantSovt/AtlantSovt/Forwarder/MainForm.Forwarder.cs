@@ -52,13 +52,13 @@ namespace AtlantSovt
                 };
 
                 forwarderDataGridView.DataSource = query.ToList();
-                forwarderDataGridView.Columns[0].HeaderText = "Порядковий номер";
-                forwarderDataGridView.Columns[1].HeaderText = "Назва";
-                forwarderDataGridView.Columns[2].HeaderText = "П.І.Б. Директора";
-                forwarderDataGridView.Columns[3].HeaderText = "Фізична адреса";
-                forwarderDataGridView.Columns[4].HeaderText = "Юридична адреса";
-                forwarderDataGridView.Columns[5].HeaderText = "Статус платника податку";
-                forwarderDataGridView.Columns[6].HeaderText = "На основі";
+                forwarderDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                forwarderDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Назва;
+                forwarderDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.П_І_Б_Директора;
+                forwarderDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Фізична_адреса;
+                forwarderDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Юридична_адреса;
+                forwarderDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Статус_платника_податку;
+                forwarderDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.На_основі;
 
             } forwarderDataGridView.Update();
 
@@ -82,10 +82,10 @@ namespace AtlantSovt
                         Email = con.Email,
                     };
                     forwarderContactsDataGridView.DataSource = query.ToList();
-                    forwarderContactsDataGridView.Columns[0].HeaderText = "Контактна особа";
-                    forwarderContactsDataGridView.Columns[1].HeaderText = "Телефон";
-                    forwarderContactsDataGridView.Columns[2].HeaderText = "Факс";
-                    forwarderContactsDataGridView.Columns[3].HeaderText = "Email";
+                    forwarderContactsDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Контактна_особа;
+                    forwarderContactsDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Телефон;
+                    forwarderContactsDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Факс;
+                    forwarderContactsDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Email;
 
                     var query1 =
                         from f in db.Forwarders
@@ -112,20 +112,20 @@ namespace AtlantSovt
                     };
 
                     forwarderBankDetailsDataGridView.DataSource = query2.ToList();
-                    forwarderBankDetailsDataGridView.Columns[0].HeaderText = "Назва банку";
-                    forwarderBankDetailsDataGridView.Columns[1].HeaderText = "МФО";
-                    forwarderBankDetailsDataGridView.Columns[2].HeaderText = "Номер рахунку";
-                    forwarderBankDetailsDataGridView.Columns[3].HeaderText = "ЕДРПОУ";
-                    forwarderBankDetailsDataGridView.Columns[4].HeaderText = "ІПН";
-                    forwarderBankDetailsDataGridView.Columns[5].HeaderText = "Серія свідоцтва";
-                    forwarderBankDetailsDataGridView.Columns[6].HeaderText = "Номер свідоцтва";
-                    forwarderBankDetailsDataGridView.Columns[7].HeaderText = "SWIFT";
-                    forwarderBankDetailsDataGridView.Columns[8].HeaderText = "IBAN";
+                    forwarderBankDetailsDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Назва_банку;
+                    forwarderBankDetailsDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.МФО;
+                    forwarderBankDetailsDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Номер_рахунку;
+                    forwarderBankDetailsDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.ЄДРПОУ;
+                    forwarderBankDetailsDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.ІПН;
+                    forwarderBankDetailsDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Серія_свідоцтва;
+                    forwarderBankDetailsDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Номер_свідоцтва;
+                    forwarderBankDetailsDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.SWIFT;
+                    forwarderBankDetailsDataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.IBAN;
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Немає жодного експедитора");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_експедитора);
                 }
             }
 
@@ -333,7 +333,7 @@ namespace AtlantSovt
                     {
                         db.Forwarders.Add(New_Forwarder);
                         db.SaveChanges();
-                        string massage = "Експедитор успішно доданий\n";
+                        string massage = AtlantSovt.Properties.Resources.Експедитор_успішно_доданий;
 
 
                         if (addForwarderBankDetailsAddForm != null)
@@ -358,7 +358,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    MessageBox.Show("Одне з обов'язкових полів не заповнено");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Одне_з_обов_язкових_полів_не_заповнено);
                 }
             }
         }
@@ -565,11 +565,11 @@ namespace AtlantSovt
                     db.Entry(forwarder.ForwarderStamp).State = EntityState.Modified;
 
                     db.SaveChanges();
-                    MessageBox.Show("Успішно змінено");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_змінено);
                 }
                 else
                 {
-                    MessageBox.Show("Змін не знайдено");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Змін_не_знайдено);
                 }
             }
         }
@@ -613,20 +613,20 @@ namespace AtlantSovt
                 deleteForwarder = db.Forwarders.Find(id);
                 if (deleteForwarder != null)
                 {
-                    if (MessageBox.Show("Видалити експедитора " + deleteForwarder.Name + "?", "Підтвердіть видалення!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_експедитора + deleteForwarder.Name + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         try
                         {
                             db.Forwarders.Attach(deleteForwarder);
                             db.Forwarders.Remove(deleteForwarder);
                             db.SaveChanges();
-                            MessageBox.Show("Експедитор успішно видалений");
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Експедитор_успішно_видалений);
                             forwarderDeleteComboBox.Items.Remove(forwarderDeleteComboBox.SelectedItem);
                         }
                         catch (Exception ex)
                         {
                             Log.Write(ex);
-                            MessageBox.Show("Помилка!" + Environment.NewLine + ex);
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                         }
                     }
                 }

@@ -57,7 +57,7 @@ namespace AtlantSovt
             }
             else
             {
-                MessageBox.Show("Для збереження заповніть хочаб одне поле");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Для_збереження_заповніть_хоча_б_одне_поле);
             }
 
         }
@@ -85,11 +85,11 @@ namespace AtlantSovt
                     IsAdding = newIsAdding;
                     if (IsAdding)
                     {
-                        return "Банківські данні успішно додані експедитору [" + New_ForwarderBankDetail.Id + "]\n";
+                        return AtlantSovt.Properties.Resources.Банківські_дані_успішно_додані_експедитору + "[" + New_ForwarderBankDetail.Id + @"]";
                     }
                     else
                     {
-                        MessageBox.Show("Банківські данні успішно додані експедитору");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Банківські_дані_успішно_додані_експедитору);
                         return string.Empty;
                     }
                     
@@ -115,7 +115,7 @@ namespace AtlantSovt
                forwarderIPNTextBox.Text != "" || forwarderCertificateSerialTextBox.Text != "" || forwarderCertificateNumberTextBox.Text != "" || forwarderSWIFTTextBox.Text != ""
                || forwarderIBANTextBox.Text != "")
                 {
-                    if (MessageBox.Show("Закрити форму без збереження?\nБанківські данні НЕ збережуться.\n Для збереження натисніть <Отмена> та <Додати Банківські данні>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                    if (MessageBox.Show(AtlantSovt.Properties.Resources.Закрити_форму_без_збереження_банкінських_даних, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) != DialogResult.OK)
                     {
                         e.Cancel = true;
                     }

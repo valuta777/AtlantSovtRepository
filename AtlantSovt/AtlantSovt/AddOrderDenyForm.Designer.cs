@@ -28,43 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddOrderDenyForm));
             this.addOrderDenyButton = new System.Windows.Forms.Button();
             this.addOrderDenyTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // addOrderDenyButton
             // 
-            this.addOrderDenyButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.addOrderDenyButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addOrderDenyButton.Location = new System.Drawing.Point(0, 29);
+            resources.ApplyResources(this.addOrderDenyButton, "addOrderDenyButton");
             this.addOrderDenyButton.Name = "addOrderDenyButton";
-            this.addOrderDenyButton.Size = new System.Drawing.Size(384, 52);
-            this.addOrderDenyButton.TabIndex = 3;
-            this.addOrderDenyButton.Text = "Додати";
             this.addOrderDenyButton.UseVisualStyleBackColor = true;
             this.addOrderDenyButton.Click += new System.EventHandler(this.addCargoButton_Click);
             // 
             // addOrderDenyTextBox
             // 
-            this.addOrderDenyTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addOrderDenyTextBox.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.addOrderDenyTextBox, "addOrderDenyTextBox");
             this.addOrderDenyTextBox.Name = "addOrderDenyTextBox";
-            this.addOrderDenyTextBox.Size = new System.Drawing.Size(384, 29);
-            this.addOrderDenyTextBox.TabIndex = 2;
             // 
             // AddOrderDenyForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 81);
             this.Controls.Add(this.addOrderDenyButton);
             this.Controls.Add(this.addOrderDenyTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddOrderDenyForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Додавання штрафу за відмову від заявки";
             this.ResumeLayout(false);
             this.PerformLayout();
 

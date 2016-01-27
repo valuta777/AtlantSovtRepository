@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConnectionForm));
             this.connectionAnimation = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.connectionAnimation)).BeginInit();
             this.SuspendLayout();
@@ -35,23 +36,18 @@
             // connectionAnimation
             // 
             this.connectionAnimation.BackColor = System.Drawing.Color.Transparent;
-            this.connectionAnimation.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.connectionAnimation, "connectionAnimation");
             this.connectionAnimation.Image = global::AtlantSovt.Properties.Resources.con_anim;
-            this.connectionAnimation.Location = new System.Drawing.Point(0, 0);
             this.connectionAnimation.Name = "connectionAnimation";
-            this.connectionAnimation.Size = new System.Drawing.Size(400, 427);
-            this.connectionAnimation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.connectionAnimation.TabIndex = 0;
             this.connectionAnimation.TabStop = false;
             // 
             // ConnectionForm
             // 
-            this.ClientSize = new System.Drawing.Size(400, 427);
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.connectionAnimation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConnectionForm";
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TopMost = true;
             this.TransparencyKey = this.BackColor;
             ((System.ComponentModel.ISupportInitialize)(this.connectionAnimation)).EndInit();

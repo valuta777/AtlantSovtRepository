@@ -9,7 +9,6 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("CustomsAddress")]
     public partial class CustomsAddress
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CustomsAddress()
         {
             OrderCustomsAddresses = new HashSet<OrderCustomsAddress>();
@@ -49,7 +48,6 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual Country Country { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderCustomsAddress> OrderCustomsAddresses { get; set; }
     }
 }

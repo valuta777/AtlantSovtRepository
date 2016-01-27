@@ -32,30 +32,31 @@ namespace AtlantSovt
 
                 var query =
                 from o in db.Orders
+                where o.IsDeleted == false
                 orderby o.Id
                 select
                 new
                 {
                     Id = o.Id,
-                    OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
+                    OrderNumber = (!o.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : o.IndexNumber + "/" + o.Date.Value.Year,
                     Staff = o.Staff.Type,
                     ClientName = o.Client.Name,
                     TransporterName = o.Transporter.FullName,
                     DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
-                    State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
-                    CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day + "." + o.CloseDate.Value.Month + "." + o.CloseDate.Value.Year,
-                    Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька",
+                    State = (!o.State.HasValue) ? AtlantSovt.Properties.Resources.Не_створена : ((o.State == false) ? AtlantSovt.Properties.Resources.Закрита : AtlantSovt.Properties.Resources.Відкрита),
+                    CloseDate = (!o.CloseDate.HasValue) ? AtlantSovt.Properties.Resources.Не_визначено : o.CloseDate.Value.Day + "." + o.CloseDate.Value.Month + "." + o.CloseDate.Value.Year,
+                    Language = (!o.Language.HasValue) ? AtlantSovt.Properties.Resources.Не_вибрано : (o.Language == 0) ? AtlantSovt.Properties.Resources.Українська : (o.Language == 1) ? AtlantSovt.Properties.Resources.Польська : AtlantSovt.Properties.Resources.Німецька,
                 };
                 dataGridView.DataSource = query.ToList();
-                dataGridView.Columns[0].HeaderText = "Порядковий номер";
-                dataGridView.Columns[1].HeaderText = "Номер заявки";
-                dataGridView.Columns[2].HeaderText = "Працівник";
-                dataGridView.Columns[3].HeaderText = "Клієнт";
-                dataGridView.Columns[4].HeaderText = "Перевізник";
-                dataGridView.Columns[5].HeaderText = "Дата завантаження";
-                dataGridView.Columns[6].HeaderText = "Стан";
-                dataGridView.Columns[7].HeaderText = "Дата закриття";
-                dataGridView.Columns[8].HeaderText = "Мова";
+                dataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                dataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                dataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Працівник;
+                dataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                dataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                dataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                dataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Стан;
+                dataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Дата_закриття;
+                dataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Мова;
             }
             dataGridView.Update();
             dataGridView.ClearSelection();
@@ -76,7 +77,7 @@ namespace AtlantSovt
                         from o in db.Orders
                         where o.Id == TrackingClikedId
                         select o
-                    ).FirstOrDefault().TransporterId
+                    ).FirstOrDefault().TransporterId 
                     select new
                     {
                         Контактна_персона = con.ContactPerson,
@@ -85,10 +86,10 @@ namespace AtlantSovt
                         Email = con.Email,
                     };
                     trackingShowTransporterContactsDataGridView.DataSource = query.ToList();
-                    trackingShowTransporterContactsDataGridView.Columns[0].HeaderText = "Контактна особа";
-                    trackingShowTransporterContactsDataGridView.Columns[1].HeaderText = "Телефон";
-                    trackingShowTransporterContactsDataGridView.Columns[2].HeaderText = "Факс";
-                    trackingShowTransporterContactsDataGridView.Columns[3].HeaderText = "Email";
+                    trackingShowTransporterContactsDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Контактна_особа;
+                    trackingShowTransporterContactsDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Телефон;
+                    trackingShowTransporterContactsDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Факс;
+                    trackingShowTransporterContactsDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Email;
 
                     var query1 =
                         from com in db.TrackingComments
@@ -101,9 +102,9 @@ namespace AtlantSovt
                     };
 
                     trackingShowCommentDataGridView.DataSource = query1.ToList();
-                    trackingShowCommentDataGridView.Columns[0].HeaderText = "Коментар";
-                    trackingShowCommentDataGridView.Columns[1].HeaderText = "Дата додавання";
-                    trackingShowCommentDataGridView.Columns[2].HeaderText = "Дата останньої зміни";
+                    trackingShowCommentDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Коментар0;
+                    trackingShowCommentDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Дата_додавання;
+                    trackingShowCommentDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Дата_останньої_зміни;
 
                     trackingShowCommentDataGridView.Columns[1].Width = 150;
                     trackingShowCommentDataGridView.Columns[2].Width = 150;
@@ -117,8 +118,8 @@ namespace AtlantSovt
                       cityCode = add.DownloadAddress.CityCode
                   };
                     trackingShowDownloadAddressDataGridView.DataSource = query3.ToList();
-                    trackingShowDownloadAddressDataGridView.Columns[0].HeaderText = "Країна";
-                    trackingShowDownloadAddressDataGridView.Columns[1].HeaderText = "Код міста";
+                    trackingShowDownloadAddressDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Країна;
+                    trackingShowDownloadAddressDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Код_міста;
 
                     var query4 =
                  from add in db.OrderUploadAdresses
@@ -129,13 +130,13 @@ namespace AtlantSovt
                      cityCode = add.UploadAddress.CityCode
                  };
                     trackingShowUploadAddressDataGridView.DataSource = query4.ToList();
-                    trackingShowUploadAddressDataGridView.Columns[0].HeaderText = "Країна";
-                    trackingShowUploadAddressDataGridView.Columns[1].HeaderText = "Код міста";
+                    trackingShowUploadAddressDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Країна;
+                    trackingShowUploadAddressDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Код_міста;
                 }
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Немає жодної заявки");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодної_заявки);
                     trackingShowAddCommentButton.Enabled = false;
                     trackingShowCloseOrderButton.Enabled = false;
                     showTrackingCreateOrderDoc.Enabled = false;
@@ -156,12 +157,12 @@ namespace AtlantSovt
                     orderby f.IsFirst
                     select new
                     {
-                        forwarderNumber = (f.IsFirst == 1) ? "Експедитор 1" : (f.IsFirst == 2) ? "Експедитор 2" : "Експедитор 3",
+                        forwarderNumber = (f.IsFirst == 1) ? AtlantSovt.Properties.Resources.Експедитор_1 : (f.IsFirst == 2) ? AtlantSovt.Properties.Resources.Експедитор_2 : AtlantSovt.Properties.Resources.Експедитор_3,
                         forwarderName = f.Forwarder.Name
                     };
                 trackingShowForwardersDataGridView.DataSource = query6.ToList();
-                trackingShowForwardersDataGridView.Columns[0].HeaderText = "Номер експедитора";
-                trackingShowForwardersDataGridView.Columns[1].HeaderText = "Назва";
+                trackingShowForwardersDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Номер_експедитора;
+                trackingShowForwardersDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Назва;
             }
             trackingShowTransporterContactsDataGridView.Update();
 
@@ -184,63 +185,64 @@ namespace AtlantSovt
                 {
                     var queryTextAndDate =
                    from o in db.Orders
+                   where o.IsDeleted == false
                    orderby o.Id
                    select
                    new
                    {
                        Id = o.Id,
-                       OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
+                       OrderNumber = (!o.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : o.IndexNumber + "/" + o.Date.Value.Year,
                        Staff = o.Staff.Type,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
-                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
-                       CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
-                       Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
+                       State = (!o.State.HasValue) ? AtlantSovt.Properties.Resources.Не_створена : ((o.State == false) ? AtlantSovt.Properties.Resources.Закрита : AtlantSovt.Properties.Resources.Відкрита),
+                       CloseDate = (!o.CloseDate.HasValue) ? AtlantSovt.Properties.Resources.Не_визначено : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
+                       Language = (!o.Language.HasValue) ? AtlantSovt.Properties.Resources.Не_вибрано : (o.Language == 0) ? AtlantSovt.Properties.Resources.Українська : (o.Language == 1) ? AtlantSovt.Properties.Resources.Польська : AtlantSovt.Properties.Resources.Німецька
 
                    };
                     dataGridView.DataSource = queryTextAndDate.ToList();
-                    dataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    dataGridView.Columns[1].HeaderText = "Номер заявки";
-                    dataGridView.Columns[2].HeaderText = "Працівник";
-                    dataGridView.Columns[3].HeaderText = "Клієнт";
-                    dataGridView.Columns[4].HeaderText = "Перевізник";
-                    dataGridView.Columns[5].HeaderText = "Дата завантаження";
-                    dataGridView.Columns[6].HeaderText = "Стан";
-                    dataGridView.Columns[7].HeaderText = "Дата закриття";
-                    dataGridView.Columns[8].HeaderText = "Мова";
+                    dataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                    dataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                    dataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Працівник;
+                    dataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                    dataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                    dataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                    dataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Стан;
+                    dataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Дата_закриття;
+                    dataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Мова;
                 }
                 else if (checkBox.Checked != true && dateTime.Checked != true && textBox.Text != "") // 0 0 1
                 {
                     var queryTextAndDate =
                    from o in db.Orders
                    where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Staff.Type.Contains(text) ||
-                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text)))
+                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) && o.IsDeleted == false
                    orderby o.Id
                    select
                    new
                    {
                        Id = o.Id,
-                       OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
+                       OrderNumber = (!o.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : o.IndexNumber + "/" + o.Date.Value.Year,
                        Staff = o.Staff.Type,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
-                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
-                        CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
-                       Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
+                       State = (!o.State.HasValue) ? AtlantSovt.Properties.Resources.Не_створена : ((o.State == false) ? AtlantSovt.Properties.Resources.Закрита : AtlantSovt.Properties.Resources.Відкрита),
+                        CloseDate = (!o.CloseDate.HasValue) ? AtlantSovt.Properties.Resources.Не_визначено : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
+                       Language = (!o.Language.HasValue) ? AtlantSovt.Properties.Resources.Не_вибрано : (o.Language == 0) ? AtlantSovt.Properties.Resources.Українська : (o.Language == 1) ? AtlantSovt.Properties.Resources.Польська : AtlantSovt.Properties.Resources.Німецька
 
                    };
                     dataGridView.DataSource = queryTextAndDate.ToList();
-                    dataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    dataGridView.Columns[1].HeaderText = "Номер заявки";
-                    dataGridView.Columns[2].HeaderText = "Працівник";
-                    dataGridView.Columns[3].HeaderText = "Клієнт";
-                    dataGridView.Columns[4].HeaderText = "Перевізник";
-                    dataGridView.Columns[5].HeaderText = "Дата завантаження";
-                    dataGridView.Columns[6].HeaderText = "Стан";
-                    dataGridView.Columns[7].HeaderText = "Дата закриття";
-                    dataGridView.Columns[8].HeaderText = "Мова";
+                    dataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                    dataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                    dataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Працівник;
+                    dataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                    dataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                    dataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                    dataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Стан;
+                    dataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Дата_закриття;
+                    dataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Мова;
 
                 }
                 else if (checkBox.Checked != true && dateTime.Checked == true && textBox.Text == "") // 0 1 0
@@ -248,32 +250,32 @@ namespace AtlantSovt
                     var queryTextAndDate =
                    from o in db.Orders
                    where ((o.DownloadDateFrom.Value.Month == dateTime.Value.Month) ||
-                   (o.DownloadDateTo.Value.Month == dateTime.Value.Month)) && ((o.DownloadDateFrom.Value.Year == dateTime.Value.Year) || o.DownloadDateTo.Value.Year == dateTime.Value.Year)
+                   (o.DownloadDateTo.Value.Month == dateTime.Value.Month)) && ((o.DownloadDateFrom.Value.Year == dateTime.Value.Year) || o.DownloadDateTo.Value.Year == dateTime.Value.Year) && o.IsDeleted == false
                    orderby o.Id
                    select
                    new
                    {
                        Id = o.Id,
-                       OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
+                       OrderNumber = (!o.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : o.IndexNumber + "/" + o.Date.Value.Year,
                        Staff = o.Staff.Type,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
-                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
-                       CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
-                       Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
+                       State = (!o.State.HasValue) ? AtlantSovt.Properties.Resources.Не_створена : ((o.State == false) ? AtlantSovt.Properties.Resources.Закрита : AtlantSovt.Properties.Resources.Відкрита),
+                       CloseDate = (!o.CloseDate.HasValue) ? AtlantSovt.Properties.Resources.Не_визначено : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
+                       Language = (!o.Language.HasValue) ? AtlantSovt.Properties.Resources.Не_вибрано : (o.Language == 0) ? AtlantSovt.Properties.Resources.Українська : (o.Language == 1) ? AtlantSovt.Properties.Resources.Польська : AtlantSovt.Properties.Resources.Німецька
 
                    };
                     dataGridView.DataSource = queryTextAndDate.ToList();
-                    dataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    dataGridView.Columns[1].HeaderText = "Номер заявки";
-                    dataGridView.Columns[2].HeaderText = "Працівник";
-                    dataGridView.Columns[3].HeaderText = "Клієнт";
-                    dataGridView.Columns[4].HeaderText = "Перевізник";
-                    dataGridView.Columns[5].HeaderText = "Дата завантаження";
-                    dataGridView.Columns[6].HeaderText = "Стан";
-                    dataGridView.Columns[7].HeaderText = "Дата закриття";
-                    dataGridView.Columns[8].HeaderText = "Мова";
+                    dataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                    dataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                    dataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Працівник;
+                    dataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                    dataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                    dataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                    dataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Стан;
+                    dataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Дата_закриття;
+                    dataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Мова;
 
                 }
                 else if (checkBox.Checked != true && dateTime.Checked == true && textBox.Text != "")// 0 1 1
@@ -282,64 +284,64 @@ namespace AtlantSovt
                    from o in db.Orders
                    where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Staff.Type.Contains(text) ||
                          o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) && ((o.DownloadDateFrom.Value.Month == dateTime.Value.Month) ||
-                   (o.DownloadDateTo.Value.Month == dateTime.Value.Month)) && ((o.DownloadDateFrom.Value.Year == dateTime.Value.Year) || o.DownloadDateTo.Value.Year == dateTime.Value.Year)
+                   (o.DownloadDateTo.Value.Month == dateTime.Value.Month)) && ((o.DownloadDateFrom.Value.Year == dateTime.Value.Year) || o.DownloadDateTo.Value.Year == dateTime.Value.Year) && o.IsDeleted == false
                    orderby o.Id
                    select
                    new
                    {
                        Id = o.Id,
-                       OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
+                       OrderNumber = (!o.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : o.IndexNumber + "/" + o.Date.Value.Year,
                        Staff = o.Staff.Type,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
-                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
-                       CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
-                       Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
+                       State = (!o.State.HasValue) ? AtlantSovt.Properties.Resources.Не_створена : ((o.State == false) ? AtlantSovt.Properties.Resources.Закрита : AtlantSovt.Properties.Resources.Відкрита),
+                       CloseDate = (!o.CloseDate.HasValue) ? AtlantSovt.Properties.Resources.Не_визначено : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
+                       Language = (!o.Language.HasValue) ? AtlantSovt.Properties.Resources.Не_вибрано : (o.Language == 0) ? AtlantSovt.Properties.Resources.Українська : (o.Language == 1) ? AtlantSovt.Properties.Resources.Польська : AtlantSovt.Properties.Resources.Німецька
 
                    };
                     dataGridView.DataSource = queryTextAndDate.ToList();
-                    dataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    dataGridView.Columns[1].HeaderText = "Номер заявки";
-                    dataGridView.Columns[2].HeaderText = "Працівник";
-                    dataGridView.Columns[3].HeaderText = "Клієнт";
-                    dataGridView.Columns[4].HeaderText = "Перевізник";
-                    dataGridView.Columns[5].HeaderText = "Дата завантаження";
-                    dataGridView.Columns[6].HeaderText = "Стан";
-                    dataGridView.Columns[7].HeaderText = "Дата закриття";
-                    dataGridView.Columns[8].HeaderText = "Мова";
+                    dataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                    dataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                    dataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Працівник;
+                    dataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                    dataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                    dataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                    dataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Стан;
+                    dataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Дата_закриття;
+                    dataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Мова;
 
                 }
                 else if (checkBox.Checked == true && dateTime.Checked != true && textBox.Text == "") // 1 0 0
                 {
                     var queryTextAndDate =
                    from o in db.Orders
-                   where (o.State == true)
+                   where (o.State == true) && o.IsDeleted == false
                    orderby o.Id
                    select
                    new
                    {
                        Id = o.Id,
-                       OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
+                       OrderNumber = (!o.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : o.IndexNumber + "/" + o.Date.Value.Year,
                        Staff = o.Staff.Type,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
-                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
-                       CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
-                       Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
+                       State = (!o.State.HasValue) ? AtlantSovt.Properties.Resources.Не_створена : ((o.State == false) ? AtlantSovt.Properties.Resources.Закрита : AtlantSovt.Properties.Resources.Відкрита),
+                       CloseDate = (!o.CloseDate.HasValue) ? AtlantSovt.Properties.Resources.Не_визначено : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
+                       Language = (!o.Language.HasValue) ? AtlantSovt.Properties.Resources.Не_вибрано : (o.Language == 0) ? AtlantSovt.Properties.Resources.Українська : (o.Language == 1) ? AtlantSovt.Properties.Resources.Польська : AtlantSovt.Properties.Resources.Німецька
 
                    };
                     dataGridView.DataSource = queryTextAndDate.ToList();
-                    dataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    dataGridView.Columns[1].HeaderText = "Номер заявки";
-                    dataGridView.Columns[2].HeaderText = "Працівник";
-                    dataGridView.Columns[3].HeaderText = "Клієнт";
-                    dataGridView.Columns[4].HeaderText = "Перевізник";
-                    dataGridView.Columns[5].HeaderText = "Дата завантаження";
-                    dataGridView.Columns[6].HeaderText = "Стан";
-                    dataGridView.Columns[7].HeaderText = "Дата закриття";
-                    dataGridView.Columns[8].HeaderText = "Мова";
+                    dataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                    dataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                    dataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Працівник;
+                    dataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                    dataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                    dataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                    dataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Стан;
+                    dataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Дата_закриття;
+                    dataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Мова;
 
                 }
                 else if (checkBox.Checked == true && dateTime.Checked != true && textBox.Text != "") // 1 0 1
@@ -347,64 +349,64 @@ namespace AtlantSovt
                     var queryTextAndDate =
                    from o in db.Orders
                    where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Staff.Type.Contains(text) ||
-                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text)) && (o.State == true))
+                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text)) && (o.State == true)) && o.IsDeleted == false
                    orderby o.Id
                    select
                    new
                    {
                        Id = o.Id,
-                       OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
+                       OrderNumber = (!o.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : o.IndexNumber + "/" + o.Date.Value.Year,
                        Staff = o.Staff.Type,
                        ClientName = o.Client.Name,
                        TransporterName = o.Transporter.FullName,
                        DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
-                       State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
-                       CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
-                       Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
+                       State = (!o.State.HasValue) ? AtlantSovt.Properties.Resources.Не_створена : ((o.State == false) ? AtlantSovt.Properties.Resources.Закрита : AtlantSovt.Properties.Resources.Відкрита),
+                       CloseDate = (!o.CloseDate.HasValue) ? AtlantSovt.Properties.Resources.Не_визначено : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
+                       Language = (!o.Language.HasValue) ? AtlantSovt.Properties.Resources.Не_вибрано : (o.Language == 0) ? AtlantSovt.Properties.Resources.Українська : (o.Language == 1) ? AtlantSovt.Properties.Resources.Польська : AtlantSovt.Properties.Resources.Німецька
 
                    };
                     dataGridView.DataSource = queryTextAndDate.ToList();
-                    dataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    dataGridView.Columns[1].HeaderText = "Номер заявки";
-                    dataGridView.Columns[2].HeaderText = "Працівник";
-                    dataGridView.Columns[3].HeaderText = "Клієнт";
-                    dataGridView.Columns[4].HeaderText = "Перевізник";
-                    dataGridView.Columns[5].HeaderText = "Дата завантаження";
-                    dataGridView.Columns[6].HeaderText = "Стан";
-                    dataGridView.Columns[7].HeaderText = "Дата закриття";
-                    dataGridView.Columns[8].HeaderText = "Мова";
+                    dataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                    dataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                    dataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Працівник;
+                    dataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                    dataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                    dataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                    dataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Стан;
+                    dataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Дата_закриття;
+                    dataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Мова;
                 }
                 else if (checkBox.Checked == true && dateTime.Checked == true && textBox.Text == "")// 1 1 0
                 {
                     var queryTextAndDate =
                   from o in db.Orders
                   where (o.State == true && ((o.DownloadDateFrom.Value.Month == dateTime.Value.Month) ||
-                   (o.DownloadDateTo.Value.Month == dateTime.Value.Month)) && ((o.DownloadDateFrom.Value.Year == dateTime.Value.Year) || o.DownloadDateTo.Value.Year == dateTime.Value.Year))
+                   (o.DownloadDateTo.Value.Month == dateTime.Value.Month)) && ((o.DownloadDateFrom.Value.Year == dateTime.Value.Year) || o.DownloadDateTo.Value.Year == dateTime.Value.Year)) && o.IsDeleted == false
                   orderby o.Id
                   select
                   new
                   {
                       Id = o.Id,
-                      OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
+                      OrderNumber = (!o.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : o.IndexNumber + "/" + o.Date.Value.Year,
                       Staff = o.Staff.Type,
                       ClientName = o.Client.Name,
                       TransporterName = o.Transporter.FullName,
                       DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
-                      State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
-                      CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
-                      Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
+                      State = (!o.State.HasValue) ? AtlantSovt.Properties.Resources.Не_створена : ((o.State == false) ? AtlantSovt.Properties.Resources.Закрита : AtlantSovt.Properties.Resources.Відкрита),
+                      CloseDate = (!o.CloseDate.HasValue) ? AtlantSovt.Properties.Resources.Не_визначено : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
+                      Language = (!o.Language.HasValue) ? AtlantSovt.Properties.Resources.Не_вибрано : (o.Language == 0) ? AtlantSovt.Properties.Resources.Українська : (o.Language == 1) ? AtlantSovt.Properties.Resources.Польська : AtlantSovt.Properties.Resources.Німецька
 
                   };
                     dataGridView.DataSource = queryTextAndDate.ToList();
-                    dataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    dataGridView.Columns[1].HeaderText = "Номер заявки";
-                    dataGridView.Columns[2].HeaderText = "Працівник";
-                    dataGridView.Columns[3].HeaderText = "Клієнт";
-                    dataGridView.Columns[4].HeaderText = "Перевізник";
-                    dataGridView.Columns[5].HeaderText = "Дата завантаження";
-                    dataGridView.Columns[6].HeaderText = "Стан";
-                    dataGridView.Columns[7].HeaderText = "Дата закриття";
-                    dataGridView.Columns[8].HeaderText = "Мова";
+                    dataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                    dataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                    dataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Працівник;
+                    dataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                    dataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                    dataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                    dataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Стан;
+                    dataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Дата_закриття;
+                    dataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Мова;
 
                 }
                 else if (checkBox.Checked == true && dateTime.Checked == true && textBox.Text != "")// 1 1 1
@@ -414,38 +416,38 @@ namespace AtlantSovt
                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Staff.Type.Contains(text) ||
                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) &&
                         ((o.DownloadDateFrom.Value.Month == dateTime.Value.Month) || (o.DownloadDateTo.Value.Month == dateTime.Value.Month)) && ((o.DownloadDateFrom.Value.Year == dateTime.Value.Year) ||
-                        o.DownloadDateTo.Value.Year == dateTime.Value.Year) && o.State == true
+                        o.DownloadDateTo.Value.Year == dateTime.Value.Year) && o.State == true && o.IsDeleted == false
                   orderby o.Id
                   select
                   new
                   {
                       Id = o.Id,
-                      OrderNumber = (!o.IndexNumber.HasValue) ? "Ще не присвоєно" : o.IndexNumber + "/" + o.Date.Value.Year,
+                      OrderNumber = (!o.IndexNumber.HasValue) ? AtlantSovt.Properties.Resources.Ще_не_присвоєно : o.IndexNumber + "/" + o.Date.Value.Year,
                       Staff = o.Staff.Type,
                       ClientName = o.Client.Name,
                       TransporterName = o.Transporter.FullName,
                       DownloadDate = (!o.DownloadDateTo.HasValue) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + "." + o.DownloadDateFrom.Value.Year : (o.DownloadDateFrom.Value.Month != o.DownloadDateTo.Value.Month) ? o.DownloadDateFrom.Value.Day + "." + o.DownloadDateFrom.Value.Month + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year : o.DownloadDateFrom.Value.Day + " - " + o.DownloadDateTo.Value.Day + "." + o.DownloadDateTo.Value.Month + "." + o.DownloadDateTo.Value.Year,
-                      State = (!o.State.HasValue) ? "Не створена" : ((o.State == false) ? "Закрита" : "Відкрита"),
-                      CloseDate = (!o.CloseDate.HasValue) ? "Не визначено" : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
-                      Language = (!o.Language.HasValue) ? "Не вибрано" : (o.Language == 0) ? "Українська" : (o.Language == 1) ? "Польська" : "Німецька"
+                      State = (!o.State.HasValue) ? AtlantSovt.Properties.Resources.Не_створена : ((o.State == false) ? AtlantSovt.Properties.Resources.Закрита : AtlantSovt.Properties.Resources.Відкрита),
+                      CloseDate = (!o.CloseDate.HasValue) ? AtlantSovt.Properties.Resources.Не_визначено : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
+                      Language = (!o.Language.HasValue) ? AtlantSovt.Properties.Resources.Не_вибрано : (o.Language == 0) ? AtlantSovt.Properties.Resources.Українська : (o.Language == 1) ? AtlantSovt.Properties.Resources.Польська : AtlantSovt.Properties.Resources.Німецька
 
                   };
                     dataGridView.DataSource = queryTextAndDate.ToList();
-                    dataGridView.Columns[0].HeaderText = "Порядковий номер";
-                    dataGridView.Columns[1].HeaderText = "Номер заявки";
-                    dataGridView.Columns[2].HeaderText = "Працівник";
-                    dataGridView.Columns[3].HeaderText = "Клієнт";
-                    dataGridView.Columns[4].HeaderText = "Перевізник";
-                    dataGridView.Columns[5].HeaderText = "Дата завантаження";
-                    dataGridView.Columns[6].HeaderText = "Стан";
-                    dataGridView.Columns[7].HeaderText = "Дата закриття";
-                    dataGridView.Columns[8].HeaderText = "Мова";
+                    dataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
+                    dataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Номер_заявки;
+                    dataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Працівник;
+                    dataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.Клієнт;
+                    dataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
+                    dataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Дата_завантаження;
+                    dataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Стан;
+                    dataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Дата_закриття;
+                    dataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Мова;
 
                 } dataGridView.Update();
                 }
         }
 
-        void ShowTrackingCloseOrder()
+        void CloseOrder()
         {
             using (var db = new AtlantSovtContext())
             {
@@ -465,7 +467,7 @@ namespace AtlantSovt
                         }
                         else if (order.State == false)
                         {
-                            if (MessageBox.Show("Заявка вже закрита, змінити дату закриття?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            if (MessageBox.Show(AtlantSovt.Properties.Resources.Заявка_вже_закрита_змінити_дату_закриття, "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
                                 closeDateForm = new AddTrackingCloseDateForm(this);
                                 closeDateForm.Id = TrackingClikedId;
@@ -474,7 +476,7 @@ namespace AtlantSovt
                         }
                         else if (!order.State.HasValue)
                         {
-                            if (MessageBox.Show("Заявка ще не створена, все рівно закрити?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            if (MessageBox.Show(AtlantSovt.Properties.Resources.Заявка_ще_не_створена_все_рівно_закрити, "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
                                 closeDateForm = new AddTrackingCloseDateForm(this);
                                 closeDateForm.Id = TrackingClikedId;
@@ -484,7 +486,7 @@ namespace AtlantSovt
                     }
                     else
                     {
-                        MessageBox.Show("Заявці не призначено номер, спочатку створіть документ");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Заявці_не_призначено_номер_спочатку_створіть_документ);
                         return;
                         
                     }
@@ -492,7 +494,7 @@ namespace AtlantSovt
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Немає жодної заявки");
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодної_заявки);
                 }
             }
             trackingShowDataGridView.Update();
@@ -624,7 +626,7 @@ namespace AtlantSovt
                     {
                         isOrderLanguageSelected = false;
                         isOrderFull = false;
-                        MessageBox.Show("Виберіть мову у меню редагування");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_мову_у_меню_редагування);
                     }
                 }
                 else
@@ -633,7 +635,7 @@ namespace AtlantSovt
                 }
                 if (!isOrderFull && isOrderLanguageSelected)
                 {
-                    if (MessageBox.Show("Продовжити без повного заповнення даних?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show(AtlantSovt.Properties.Resources.Продовжити_без_повного_заповнення_даних, "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         isOrderFull = true;
                     }
@@ -674,13 +676,14 @@ namespace AtlantSovt
                         string downloadAddressContactPerson = "";
                         string[] regularyDelay;
 
-                        orderNumber = orderDocument.IndexNumber + @"\" + orderDocument.Date.Value.Year;
+                        orderNumber = orderDocument.IndexNumber + @"/" + orderDocument.Date.Value.Year;
                         createDate = orderDocument.Date.Value.ToShortDateString();
 
                         
-                        downloadDate = (!orderDocument.DownloadDateFrom.HasValue) ? "" : (!orderDocument.DownloadDateTo.HasValue) ? orderDocument.DownloadDateFrom.Value.ToShortDateString() : (orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month) ? orderDocument.DownloadDateFrom.Value.Day + "." + orderDocument.DownloadDateFrom.Value.Month + "-" + orderDocument.DownloadDateTo.Value : orderDocument.DownloadDateFrom.Value.Day + "-" + orderDocument.DownloadDateTo.Value + " на ";
-                        downloadDate += (!orderDocument.DownloadDateFrom.HasValue) ? "" : orderDocument.DownloadDateFrom.Value.ToShortTimeString();
+                        downloadDate = (!orderDocument.DownloadDateFrom.HasValue) ? "" : (!orderDocument.DownloadDateTo.HasValue) ? orderDocument.DownloadDateFrom.Value.ToShortDateString() : (orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month) ? orderDocument.DownloadDateFrom.Value.Day + "." + orderDocument.DownloadDateFrom.Value.Month + "-" + orderDocument.DownloadDateTo.Value : orderDocument.DownloadDateFrom.Value.Day + "-" + orderDocument.DownloadDateTo.Value;
+                        downloadDate += (!orderDocument.DownloadDateFrom.HasValue) ? "" : " на " + orderDocument.DownloadDateFrom.Value.ToShortTimeString();
                       
+                        // TODO DATE
                         dateTerms = (!orderDocument.DownloadDateFrom.HasValue) ? "" : (!orderDocument.DownloadDateTo.HasValue) ? orderDocument.DownloadDateFrom.Value.ToShortDateString() : (orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month) ? orderDocument.DownloadDateFrom.Value.Day.ToString().PadLeft(2,'0') + "." + orderDocument.DownloadDateFrom.Value.Month.ToString().PadLeft(2, '0') + "-" + orderDocument.DownloadDateTo.Value.ToShortDateString() : orderDocument.DownloadDateFrom.Value.Day.ToString().PadLeft(2, '0') + "-" + orderDocument.DownloadDateTo.Value.ToShortDateString() + " — ";
                         dateTerms +=(!orderDocument.UploadDateFrom.HasValue) ? "" : (!orderDocument.UploadDateTo.HasValue) ? orderDocument.UploadDateFrom.Value.ToShortDateString() : (orderDocument.UploadDateFrom.Value.Month != orderDocument.UploadDateTo.Value.Month) ? orderDocument.UploadDateFrom.Value.Day.ToString().PadLeft(2, '0') + "." + orderDocument.UploadDateFrom.Value.Month.ToString().PadLeft(2, '0') + "-" + orderDocument.UploadDateTo.Value.ToShortDateString() : orderDocument.UploadDateFrom.Value.Day.ToString().PadLeft(2, '0') + "-" + orderDocument.UploadDateTo.Value.ToShortDateString() + "до " + orderDocument.UploadDateTo.Value.ToShortTimeString();
 
@@ -715,6 +718,7 @@ namespace AtlantSovt
                         string fineForDelay = (orderDocument.FineForDelay == null || orderDocument.FineForDelay.Type == "") ? "_____________________" : orderDocument.FineForDelay.Type;
                         string weight = (Convert.ToString(orderDocument.CargoWeight) == null) ? "" : Convert.ToString(orderDocument.CargoWeight) + " т";
                         string orderDeny = (orderDocument.OrderDeny == null || orderDocument.OrderDeny.Type == "") ? "____________________" : orderDocument.OrderDeny.Type;
+                        string tirCmr = (orderDocument.TirCmr == null || orderDocument.TirCmr.Type == "") ? "" : orderDocument.TirCmr.Type;
 
                         if (orderDocument.RegularyDelay == null || orderDocument.RegularyDelay.Type == "" || orderDocument.RegularyDelay.Type.Split(new char[] { '-' }).Count() < 4 )
                         {
@@ -751,34 +755,54 @@ namespace AtlantSovt
 
                         foreach(var address in DownloadAddressQuery)
                         {
-                            downloadAddress += ((address.DownloadAddress.StreetName != "" && address.DownloadAddress != null) ? address.DownloadAddress.StreetName + " " : "");
-                            downloadAddress += ((address.DownloadAddress.HouseNumber != "" && address.DownloadAddress != null) ? address.DownloadAddress.HouseNumber + ", " : "");
-                            downloadAddress += ((address.DownloadAddress.CityName != "" && address.DownloadAddress != null) ? address.DownloadAddress.CityName + ", " : "");
-                            downloadAddress += address.DownloadAddress.Country.Name + Environment.NewLine;
+                            if(address.DownloadAddress != null)
+                            {
+                                downloadAddress += (address.DownloadAddress.Country.Name != "") ? address.DownloadAddress.Country.Name + ", " : "";
+                                downloadAddress += (address.DownloadAddress.CountryCode != "") ? address.DownloadAddress.CountryCode + ", " : "";
+                                downloadAddress += (address.DownloadAddress.CityCode != "") ? address.DownloadAddress.CityCode + ", " : "";
+                                downloadAddress += (address.DownloadAddress.StreetName != "") ? address.DownloadAddress.StreetName + ", " : "";
+                                downloadAddress += (address.DownloadAddress.HouseNumber != "") ? address.DownloadAddress.HouseNumber + ", " : "";
+                                downloadAddress += (address.DownloadAddress.CompanyName != "") ? address.DownloadAddress.CompanyName + "\r" : "\r";
+                            }
                         }
 
                         foreach (var address in UploaddAddressQuery)
                         {
-                            uploadAddress += ((address.UploadAddress.StreetName != "" && address.UploadAddress != null) ? address.UploadAddress.StreetName + " " : "");
-                            uploadAddress += ((address.UploadAddress.HouseNumber != "" && address.UploadAddress != null) ? address.UploadAddress.HouseNumber + ", " : "");
-                            uploadAddress += ((address.UploadAddress.CityName != "" && address.UploadAddress != null) ? address.UploadAddress.CityName + ", " : "");
-                            uploadAddress += address.UploadAddress.Country.Name + Environment.NewLine;
+                            if (address.UploadAddress != null)
+                            {
+                                uploadAddress += (address.UploadAddress.Country.Name != "") ? address.UploadAddress.Country.Name + ", " : "";
+                                uploadAddress += (address.UploadAddress.CountryCode != "") ? address.UploadAddress.CountryCode + ", " : "";
+                                uploadAddress += (address.UploadAddress.CityCode != "") ? address.UploadAddress.CityCode + ", " : "";
+                                uploadAddress += (address.UploadAddress.StreetName != "") ? address.UploadAddress.StreetName + ", " : "";
+                                uploadAddress += (address.UploadAddress.HouseNumber != "") ? address.UploadAddress.HouseNumber + ", " : "";
+                                uploadAddress += (address.UploadAddress.CompanyName != "") ? address.UploadAddress.CompanyName + "\r" : "\r";
+                            }
                         }
 
                         foreach (var address in CustomAddressQuery)
                         {
-                            customAddress += ((address.CustomsAddress.StreetName != "" && address.CustomsAddress != null) ? address.CustomsAddress.StreetName + " " : "");
-                            customAddress += ((address.CustomsAddress.HouseNumber != "" && address.CustomsAddress != null) ? address.CustomsAddress.HouseNumber + ", " : "");
-                            customAddress += ((address.CustomsAddress.CityName != "" && address.CustomsAddress != null) ? address.CustomsAddress.CityName + ", " : "");
-                            customAddress += address.CustomsAddress.Country.Name + Environment.NewLine;
+                            if (address.CustomsAddress != null)
+                            {
+                                customAddress += (address.CustomsAddress.Country.Name != "") ? address.CustomsAddress.Country.Name + ", " : "";
+                                customAddress += (address.CustomsAddress.CountryCode != "") ? address.CustomsAddress.CountryCode + ", " : "";
+                                customAddress += (address.CustomsAddress.CityCode != "") ? address.CustomsAddress.CityCode + ", " : "";
+                                customAddress += (address.CustomsAddress.StreetName != "") ? address.CustomsAddress.StreetName + ", " : "";
+                                customAddress += (address.CustomsAddress.HouseNumber != "") ? address.CustomsAddress.HouseNumber + ", " : "";
+                                customAddress += (address.CustomsAddress.CompanyName != "") ? address.CustomsAddress.CompanyName + "\r" : "\r";
+                            }
                         }
 
                         foreach (var address in UncustomAddressQuery)
                         {
-                            uncustomAddress += ((address.UnCustomsAddress.StreetName != "" && address.UnCustomsAddress != null) ? address.UnCustomsAddress.StreetName + " " : "");
-                            uncustomAddress += ((address.UnCustomsAddress.HouseNumber != "" && address.UnCustomsAddress != null) ? address.UnCustomsAddress.HouseNumber + ", " : "");
-                            uncustomAddress += ((address.UnCustomsAddress.CityName != "" && address.UnCustomsAddress != null) ? address.UnCustomsAddress.CityName + ", " : "");
-                            uncustomAddress += address.UnCustomsAddress.Country.Name + Environment.NewLine;
+                            if (address.UnCustomsAddress != null)
+                            {
+                                uncustomAddress += (address.UnCustomsAddress.Country.Name != "") ? address.UnCustomsAddress.Country.Name + ", " : "";
+                                uncustomAddress += (address.UnCustomsAddress.CountryCode != "") ? address.UnCustomsAddress.CountryCode + ", " : "";
+                                uncustomAddress += (address.UnCustomsAddress.CityCode != "") ? address.UnCustomsAddress.CityCode + ", " : "";
+                                uncustomAddress += (address.UnCustomsAddress.StreetName != "") ? address.UnCustomsAddress.StreetName + ", " : "";
+                                uncustomAddress += (address.UnCustomsAddress.HouseNumber != "") ? address.UnCustomsAddress.HouseNumber + ", " : "";
+                                uncustomAddress += (address.UnCustomsAddress.CompanyName != "") ? address.UnCustomsAddress.CompanyName + "\r" : "\r";
+                            }
                         }
 
                         ReplaseWordStub("{ForwarderName1}", forwarderName1, wordDocument);
@@ -792,6 +816,7 @@ namespace AtlantSovt
                         ReplaseWordStub("{CustomAddress}", customAddress, wordDocument);
                         ReplaseWordStub("{CargoType}", cargoType, wordDocument);
                         ReplaseWordStub("{Weight}", weight, wordDocument);
+                        ReplaseWordStub("{TIRCMR}", tirCmr, wordDocument);
                         ReplaseWordStub("{LoadingForm1}", loadingForm1, wordDocument);
                         ReplaseWordStub("{LoadingForm2}", loadingForm2, wordDocument);
                         ReplaseWordStub("{DateTerms}", dateTerms, wordDocument);
@@ -841,7 +866,7 @@ namespace AtlantSovt
 
                         if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                         {
-                            orderNumber = orderNumber.Replace(@"\", "_");
+                            orderNumber = orderNumber.Replace(@"/", "_");
                             wordDocument.SaveAs(folderBrowserDialog.SelectedPath + "\\" + orderNumber + ".docx");
                             wordApp.Visible = true;
                         }
@@ -874,7 +899,7 @@ namespace AtlantSovt
                 {
                 wordDocument.Close(Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges);
                 }
-                MessageBox.Show("Помилка, спробуйте ще раз");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_спробуйте_ще_раз);
             }
         }
 
@@ -920,7 +945,7 @@ namespace AtlantSovt
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Помилка: " + ex.Message);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                 }
 
                 orderCount = new OrderCounter();
@@ -948,7 +973,7 @@ namespace AtlantSovt
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Помилка: " + ex.Message);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                 }
 
                 try
@@ -974,9 +999,46 @@ namespace AtlantSovt
                 catch (Exception ex)
                 {
                     Log.Write(ex);
-                    MessageBox.Show("Помилка: " + ex.Message);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                 }
             }
+        }
+
+        void ChangeOrderDeleteState()
+        {
+            using (var db = new AtlantSovtContext())
+            {
+                try
+                {
+                    Order order;
+                    TrackingClikedId = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+                    order = db.Orders.Find(TrackingClikedId);
+                    if (order != null)
+                    {
+                        try
+                        {
+                            if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_заявку + order.Id + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                order.IsDeleted = true;
+                                db.Entry(order).State = EntityState.Modified;
+                                db.SaveChanges();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Log.Write(ex);
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Виникла_помилка_спробуйте_ще_раз);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Log.Write(ex);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодної_заявки);
+                }
+                ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
+            }
+            trackingShowDataGridView.Update();
         }
     }
 }

@@ -6,7 +6,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -48,11 +50,11 @@ namespace AtlantSovt
                     IsAdding = IsAddingnew;
                     if (IsAdding)
                     {
-                        return "Контакт успішно доданий клієнту [" + New_ClientContact.ClientId + "]\n";
+                        return AtlantSovt.Properties.Resources.Контакт_успішно_доданий_клієнту + "[" + New_ClientContact.ClientId + @"]";
                     }
                     else
                     {
-                        MessageBox.Show("Контакт успішно доданий клієнту " + New_ClientContact.ClientId);
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Контакт_успішно_доданий_клієнту + New_ClientContact.ClientId);
                         return string.Empty;
                     }                    
 
@@ -69,13 +71,13 @@ namespace AtlantSovt
 
         private void addContactClientButton_Click(object sender, EventArgs e)
         {
-            if (contactPersonClientContactTextBox.Text != "" || telephoneNumberClientContactTextBox.Text != "" || faxNumberClientContactTextBox.Text != "" || emailClientContactTextBox.Text != "")
+            if (clientAddContactPersonTextBox.Text != "" || clientAddContactPhoneTextBox.Text != "" || clientAddContactFaxTextBox.Text != "" || clientAddContactEmailTextBox.Text != "")
             {
 
-                new_ContactPerson = contactPersonClientContactTextBox.Text;
-                new_TelephoneNumber = telephoneNumberClientContactTextBox.Text;
-                new_FaxNumber = faxNumberClientContactTextBox.Text;
-                new_Email = emailClientContactTextBox.Text;
+                new_ContactPerson = clientAddContactPersonTextBox.Text;
+                new_TelephoneNumber = clientAddContactPhoneTextBox.Text;
+                new_FaxNumber = clientAddContactFaxTextBox.Text;
+                new_Email = clientAddContactEmailTextBox.Text;
 
                 this.Hide();
                 if (Id != 0)
@@ -85,10 +87,11 @@ namespace AtlantSovt
             }
             else
             {
-                MessageBox.Show("Для збереження заповніть хочаб одне поле");
+                MessageBox.Show(AtlantSovt.Properties.Resources.Для_збереження_заповніть_хоча_б_одне_поле);
             }
         }
-       internal void AddClientContact2(long id) 
+
+        internal void AddClientContact2(long id) 
         {
             Id = id;
         }
@@ -97,14 +100,20 @@ namespace AtlantSovt
         {
             if (IsAdding)
             {
-                if (contactPersonClientContactTextBox.Text != "" || telephoneNumberClientContactTextBox.Text != "" || faxNumberClientContactTextBox.Text != "" || emailClientContactTextBox.Text != "")
+                if (clientAddContactPersonTextBox.Text != "" || clientAddContactPhoneTextBox.Text != "" || clientAddContactFaxTextBox.Text != "" || clientAddContactEmailTextBox.Text != "")
                 {
-                    if (MessageBox.Show("Закрити форму без збереження?\nКонтакт НЕ збережеться.\n Для збереження натисніть <Отмена> та <Додати контакт>", "Підтвердження закриття", MessageBoxButtons.OKCancel) != DialogResult.OK)
+                    if (MessageBox.Show(AtlantSovt.Properties.Resources.Закрити_форму_без_збереження_контакту, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) != DialogResult.OK)
                     {
                         e.Cancel = true;
                     }
                 }
             }
         }
+
+        public void changeLanguage(ResourceManager rm, CultureInfo ci)
+        {
+            clientAddContactPersonLabel.Text = rm.GetString("addContactForm", ci);
+        }
+
     }
 }
