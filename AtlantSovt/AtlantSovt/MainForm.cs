@@ -174,99 +174,99 @@ namespace AtlantSovt
         //MenuStrips
         #region MenuStrips               
 
-                private void addClientsStrip_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
-                    dataControl.SelectedIndex = 2;
-                }
+        private void addClientsStrip_Click(object sender, EventArgs e)
+        {
+            helloPictureBox.Image = null;
+            dataControl.SelectedIndex = 2;
+        }
 
-                private void updateClientsStrip_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
-                    dataControl.SelectedIndex = 3;
-                }
+        private void updateClientsStrip_Click(object sender, EventArgs e)
+        {
+            helloPictureBox.Image = null;
+            dataControl.SelectedIndex = 3;
+        }
 
-                private void deleteClientsStrip_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
-                    dataControl.SelectedIndex = 4;
-                }               
+        private void deleteClientsStrip_Click(object sender, EventArgs e)
+        {
+            helloPictureBox.Image = null;
+            dataControl.SelectedIndex = 4;
+        }               
 
-                private void addForwarderStrip_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
-                    dataControl.SelectedIndex = 6;
-                }
+        private void addForwarderStrip_Click(object sender, EventArgs e)
+        {
+            helloPictureBox.Image = null;
+            dataControl.SelectedIndex = 6;
+        }
 
-                private void updateForwarderStrip_Click(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 7;
-                    helloPictureBox.Image = null;
-                }
+        private void updateForwarderStrip_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 7;
+            helloPictureBox.Image = null;
+        }
 
-                private void deleteForwarderStrip_Click(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 8;
-                    helloPictureBox.Image = null;
-                }
+        private void deleteForwarderStrip_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 8;
+            helloPictureBox.Image = null;
+        }
 
-                private void addTransporterStrip_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null; 
-                    dataControl.SelectedIndex = 10;
-                }
+        private void addTransporterStrip_Click(object sender, EventArgs e)
+        {
+            helloPictureBox.Image = null; 
+            dataControl.SelectedIndex = 10;
+        }
 
-                private void updateTransporterStrip_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
-                    dataControl.SelectedIndex = 11;
-                }
+        private void updateTransporterStrip_Click(object sender, EventArgs e)
+        {
+            helloPictureBox.Image = null;
+            dataControl.SelectedIndex = 11;
+        }
 
-                private void deleteTransporterStrip_Click(object sender, EventArgs e)
-                {
-                    helloPictureBox.Image = null;
-                    dataControl.SelectedIndex = 12;
-                }
+        private void deleteTransporterStrip_Click(object sender, EventArgs e)
+        {
+            helloPictureBox.Image = null;
+            dataControl.SelectedIndex = 12;
+        }
 
-                private void createContractMenuItem_Click(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 13;
-                    helloPictureBox.Image = null;
-                    GetDocumentFiles();
+        private void createContractMenuItem_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 13;
+            helloPictureBox.Image = null;
+            GetDocumentFiles();
 
-                }
+        }
 
-                private void addOrderMenuItem_Click(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 14;
-                    helloPictureBox.Image = null;
+        private void addOrderMenuItem_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 14;
+            helloPictureBox.Image = null;
 
-                }
+        }
 
-                private void showTrackingMenuItem_Click(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 15;
-                    helloPictureBox.Image = null;
-                    ShowTracking(trackingShowDataGridView);
-                    trackingShowTransporterContactsDataGridView.Visible = false;
-                    trackingShowCommentDataGridView.Visible = false;
-                    trackingShowUploadAddressDataGridView.Visible = false;
-                    trackingShowDownloadAddressDataGridView.Visible = false;
-                    trackingShowForwardersDataGridView.Visible = false;
-                }
+        private void showTrackingMenuItem_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 15;
+            helloPictureBox.Image = null;
+            ShowTracking(trackingShowDataGridView);
+            trackingShowTransporterContactsDataGridView.Visible = false;
+            trackingShowCommentDataGridView.Visible = false;
+            trackingShowUploadAddressDataGridView.Visible = false;
+            trackingShowDownloadAddressDataGridView.Visible = false;
+            trackingShowForwardersDataGridView.Visible = false;
+        }
 
-                private void updateOrderMenuItem_DoubleClick(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 16;
-                    helloPictureBox.Image = null;
-                }
+        private void updateOrderMenuItem_DoubleClick(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 16;
+            helloPictureBox.Image = null;
+        }
 
-                private void showContractMenuItem_Click(object sender, EventArgs e)
-                {
-                    dataControl.SelectedIndex = 17;
-                    helloPictureBox.Image = null;
-                    ShowContract();
-                }
+        private void showContractMenuItem_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 17;
+            helloPictureBox.Image = null;
+            ShowContract();
+        }
         private void showArbeitenMenuItem_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 18;
@@ -289,11 +289,11 @@ namespace AtlantSovt
             dataControl.SelectedIndex = 20;
             helloPictureBox.Image = null;
         }
-                private void AtlantSovtlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-                {
-                    System.Diagnostics.Process.Start(AtlantSovtlinkLabel.Text);
-                }
-                #endregion
+        private void AtlantSovtlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(AtlantSovtlinkLabel.Text);
+        }
+        #endregion
 
         //Client
         #region Client
@@ -2181,7 +2181,7 @@ namespace AtlantSovt
 
         #endregion
 
-        // Order
+        //Order
         #region Order
         private void OrderAddClientDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
         {
@@ -3091,17 +3091,12 @@ namespace AtlantSovt
             arbeitenAddOrderSelectComboBox.Items.Clear();
             LoadArbeitenAddOrderSelectComboBox();
         }
-
-
-
         private void arbeitenAddOrderFilterCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             arbeitenAddOrderSelectComboBox.SelectedIndex = -1;
             arbeitenAddOrderSelectComboBox.Items.Clear();
             LoadArbeitenAddOrderSelectComboBox();
         }
-
-
         private void arbeitenShowSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -3133,8 +3128,6 @@ namespace AtlantSovt
             ShowArbeitenSearch();
         }
 
-
-
         //update
 
         private void arbeitenUpdateOrderSelectComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -3142,7 +3135,7 @@ namespace AtlantSovt
             arbeitenUpdateOrderSelectComboBox.Items.Clear();
             LoadArbeitenUpdateOrderSelectComboBox();
             arbeitenUpdateOrderSelectComboBox.DroppedDown = true;
-        }
+        }    
         private void arbeitenUpdateOrderSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitOrderArbeitenUpdate();
@@ -3150,6 +3143,7 @@ namespace AtlantSovt
             LoadArbeitenUpdateClientTextBox();
             LoadAllFieldsArbeitenUpdate();
         }
+
         private void arbeitenUpdateOrderSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitOrderArbeitenUpdate();
@@ -3162,17 +3156,96 @@ namespace AtlantSovt
             arbeitenUpdateOrderSelectComboBox.Items.Clear();
             LoadArbeitenUpdateOrderSelectComboBox();
         }
-
         private void arbeitenUpdateOrderFilterCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             arbeitenUpdateOrderSelectComboBox.SelectedIndex = -1;
             arbeitenUpdateOrderSelectComboBox.Items.Clear();
             LoadArbeitenUpdateOrderSelectComboBox();
         }
+
+        
+
         private void arbeitenUpdateButton_Click(object sender, EventArgs e)
         {
             UpdateArbeiten();
         }
+
+
+        #endregion
+        //Deletes
+        #region delete
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            helloPictureBox.Image = null;
+            dataControl.SelectedIndex = 21;
+            deleteTableSelectComboBox.Items.Clear();
+            LoadTabels();
+        }
+
+        private void deleteItemSelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitItems();
+        }
+
+        private void deleteDiaposoneSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadItems();
+        }
+
+        private void deleteTableSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            deleteTableSelectComboBox.Items.Clear();
+            LoadTabels();
+            deleteTableSelectComboBox.DroppedDown = true;
+        }     
+
+        private void deleteTableSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            deleteItemSelectComboBox.SelectedIndex = -1;
+            deleteDiaposoneSelectComboBox.SelectedIndex = -1;
+
+            deleteItemSelectComboBox.Items.Clear();
+
+            deleteDiaposoneSelectComboBox.Items.Clear();
+            if (deleteTableSelectComboBox.SelectedIndex != -1 && deleteTableSelectComboBox.SelectedIndex <= 3)
+            {
+                LoadDiapasone();               
+            }
+            else
+            {                
+                LoadItems();
+            }                
+        }
+        private void deleteTableSelectComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            if (deleteTableSelectComboBox.SelectedIndex == -1 || deleteTableSelectComboBox.Text != deleteTableSelectComboBox.SelectedItem.ToString() || deleteTableSelectComboBox.Text == "")
+            {
+                deleteItemSelectComboBox.SelectedIndex = -1;
+                deleteItemSelectComboBox.Items.Clear();
+
+                deleteDiaposoneSelectComboBox.SelectedIndex = -1;
+                deleteDiaposoneSelectComboBox.Items.Clear();
+            }            
+        }
+
+        private void deleteItemSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SplitItems();
+        }
+        private void deleteItemSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoadItems();
+            deleteItemSelectComboBox.DroppedDown = true;
+        }
+
+        private void deteteAdditionsButton_Click(object sender, EventArgs e)
+        {
+            DeleteItems();
+            deleteItemSelectComboBox.SelectedIndex = -1;
+            deleteItemSelectComboBox.Items.Clear();
+            LoadItems();
+        }
+
 
         #endregion
 

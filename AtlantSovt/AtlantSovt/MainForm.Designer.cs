@@ -264,6 +264,8 @@
             this.showArbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addArbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateArbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.additionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataControl = new System.Windows.Forms.TabControl();
             this.helloPage = new System.Windows.Forms.TabPage();
             this.CreatorsLabel = new System.Windows.Forms.Label();
@@ -586,6 +588,14 @@
             this.arbeitenUpdateOrderFilterLabel = new System.Windows.Forms.Label();
             this.arbeitenUpdateNoteTextBox = new System.Windows.Forms.TextBox();
             this.arbeitenUpdateNoteLabel = new System.Windows.Forms.Label();
+            this.deletePage = new System.Windows.Forms.TabPage();
+            this.deteteAdditionsButton = new System.Windows.Forms.Button();
+            this.deleteTableSelectLabel = new System.Windows.Forms.Label();
+            this.deleteItemSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.deleteDiapasoneSelectLabel = new System.Windows.Forms.Label();
+            this.deleteDiaposoneSelectComboBox = new System.Windows.Forms.ComboBox();
+            this.deleteItemSelectLabel = new System.Windows.Forms.Label();
+            this.deleteTableSelectComboBox = new System.Windows.Forms.ComboBox();
             this.labelshow57 = new System.Windows.Forms.Label();
             this.labelshow58 = new System.Windows.Forms.Label();
             this.labelshow67 = new System.Windows.Forms.Label();
@@ -740,6 +750,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.arbeitenShowMainDataGridView)).BeginInit();
             this.addArbeitenPage.SuspendLayout();
             this.updateArbeitenPage.SuspendLayout();
+            this.deletePage.SuspendLayout();
             this.SuspendLayout();
             // 
             // addForwarderSplitContainer
@@ -2558,7 +2569,8 @@
             this.forwarderToolStripMenuItem,
             this.documentationToolStripMenuItem,
             this.orderToolStripMenuItem,
-            this.arbeitenToolStripMenuItem});
+            this.arbeitenToolStripMenuItem,
+            this.additionsToolStripMenuItem});
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             // 
@@ -2764,6 +2776,19 @@
             resources.ApplyResources(this.updateArbeitenToolStripMenuItem, "updateArbeitenToolStripMenuItem");
             this.updateArbeitenToolStripMenuItem.Click += new System.EventHandler(this.updateArbeitenMenuItem_Click);
             // 
+            // additionsToolStripMenuItem
+            // 
+            this.additionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteToolStripMenuItem});
+            this.additionsToolStripMenuItem.Name = "additionsToolStripMenuItem";
+            resources.ApplyResources(this.additionsToolStripMenuItem, "additionsToolStripMenuItem");
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
             // dataControl
             // 
             resources.ApplyResources(this.dataControl, "dataControl");
@@ -2788,6 +2813,7 @@
             this.dataControl.Controls.Add(this.showArbeitenPage);
             this.dataControl.Controls.Add(this.addArbeitenPage);
             this.dataControl.Controls.Add(this.updateArbeitenPage);
+            this.dataControl.Controls.Add(this.deletePage);
             this.dataControl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.dataControl.Name = "dataControl";
             this.dataControl.SelectedIndex = 0;
@@ -5396,6 +5422,70 @@
             resources.ApplyResources(this.arbeitenUpdateNoteLabel, "arbeitenUpdateNoteLabel");
             this.arbeitenUpdateNoteLabel.Name = "arbeitenUpdateNoteLabel";
             // 
+            // deletePage
+            // 
+            this.deletePage.BackColor = System.Drawing.Color.AliceBlue;
+            this.deletePage.Controls.Add(this.deteteAdditionsButton);
+            this.deletePage.Controls.Add(this.deleteTableSelectLabel);
+            this.deletePage.Controls.Add(this.deleteItemSelectComboBox);
+            this.deletePage.Controls.Add(this.deleteDiapasoneSelectLabel);
+            this.deletePage.Controls.Add(this.deleteDiaposoneSelectComboBox);
+            this.deletePage.Controls.Add(this.deleteItemSelectLabel);
+            this.deletePage.Controls.Add(this.deleteTableSelectComboBox);
+            resources.ApplyResources(this.deletePage, "deletePage");
+            this.deletePage.Name = "deletePage";
+            // 
+            // deteteAdditionsButton
+            // 
+            resources.ApplyResources(this.deteteAdditionsButton, "deteteAdditionsButton");
+            this.deteteAdditionsButton.Name = "deteteAdditionsButton";
+            this.deteteAdditionsButton.UseVisualStyleBackColor = true;
+            this.deteteAdditionsButton.Click += new System.EventHandler(this.deteteAdditionsButton_Click);
+            // 
+            // deleteTableSelectLabel
+            // 
+            resources.ApplyResources(this.deleteTableSelectLabel, "deleteTableSelectLabel");
+            this.deleteTableSelectLabel.Name = "deleteTableSelectLabel";
+            // 
+            // deleteItemSelectComboBox
+            // 
+            resources.ApplyResources(this.deleteItemSelectComboBox, "deleteItemSelectComboBox");
+            this.deleteItemSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.deleteItemSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.deleteItemSelectComboBox.Name = "deleteItemSelectComboBox";
+            this.deleteItemSelectComboBox.Sorted = true;
+            this.deleteItemSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.deleteItemSelectComboBox_SelectedIndexChanged);
+            this.deleteItemSelectComboBox.TextUpdate += new System.EventHandler(this.deleteItemSelectComboBox_TextUpdate);
+            this.deleteItemSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.deleteItemSelectComboBox_MouseClick);
+            // 
+            // deleteDiapasoneSelectLabel
+            // 
+            resources.ApplyResources(this.deleteDiapasoneSelectLabel, "deleteDiapasoneSelectLabel");
+            this.deleteDiapasoneSelectLabel.Name = "deleteDiapasoneSelectLabel";
+            // 
+            // deleteDiaposoneSelectComboBox
+            // 
+            this.deleteDiaposoneSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.deleteDiaposoneSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.deleteDiaposoneSelectComboBox, "deleteDiaposoneSelectComboBox");
+            this.deleteDiaposoneSelectComboBox.Name = "deleteDiaposoneSelectComboBox";
+            this.deleteDiaposoneSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.deleteDiaposoneSelectComboBox_SelectedIndexChanged);
+            // 
+            // deleteItemSelectLabel
+            // 
+            resources.ApplyResources(this.deleteItemSelectLabel, "deleteItemSelectLabel");
+            this.deleteItemSelectLabel.Name = "deleteItemSelectLabel";
+            // 
+            // deleteTableSelectComboBox
+            // 
+            resources.ApplyResources(this.deleteTableSelectComboBox, "deleteTableSelectComboBox");
+            this.deleteTableSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.deleteTableSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.deleteTableSelectComboBox.Name = "deleteTableSelectComboBox";
+            this.deleteTableSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.deleteTableSelectComboBox_SelectedIndexChanged);
+            this.deleteTableSelectComboBox.TextUpdate += new System.EventHandler(this.deleteTableSelectComboBox_TextUpdate);
+            this.deleteTableSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.deleteTableSelectComboBox_MouseClick);
+            // 
             // labelshow57
             // 
             resources.ApplyResources(this.labelshow57, "labelshow57");
@@ -5685,6 +5775,8 @@
             this.addArbeitenPage.PerformLayout();
             this.updateArbeitenPage.ResumeLayout(false);
             this.updateArbeitenPage.PerformLayout();
+            this.deletePage.ResumeLayout(false);
+            this.deletePage.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6313,6 +6405,16 @@
         private System.Windows.Forms.Button showClientDeleteButton;
         private System.Windows.Forms.Button showForwarderDeleteButton;
         private System.Windows.Forms.Button showTransporterDeleteButton;
+        private System.Windows.Forms.ToolStripMenuItem additionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.TabPage deletePage;
+        private System.Windows.Forms.Label deleteTableSelectLabel;
+        private System.Windows.Forms.ComboBox deleteItemSelectComboBox;
+        private System.Windows.Forms.Label deleteDiapasoneSelectLabel;
+        private System.Windows.Forms.ComboBox deleteDiaposoneSelectComboBox;
+        private System.Windows.Forms.Label deleteItemSelectLabel;
+        private System.Windows.Forms.ComboBox deleteTableSelectComboBox;
+        private System.Windows.Forms.Button deteteAdditionsButton;
         private System.Windows.Forms.Button uaLangButton;
         private System.Windows.Forms.Button ruLangButton;
         }

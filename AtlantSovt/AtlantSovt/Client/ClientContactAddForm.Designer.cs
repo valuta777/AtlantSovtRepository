@@ -105,6 +105,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ClientContactAddForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Додавання контакту";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientContactAddForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
