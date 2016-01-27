@@ -8,7 +8,7 @@ namespace AtlantSovt.AtlantSovtDb
     public partial class AtlantSovtContext : DbContext
     {
         public AtlantSovtContext()
-            : base("name=AtlantSovtContext")
+            : base(ConnectionForm.GetConnectionString())
         {
         }
 
