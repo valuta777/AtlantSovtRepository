@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransporterContactDeleteForm));
             this.label27dt = new System.Windows.Forms.Label();
             this.transporterUpdateSelectDeleteContactComboBox = new System.Windows.Forms.ComboBox();
             this.transporterUpdateContactDeleteButton = new System.Windows.Forms.Button();
@@ -35,47 +36,30 @@
             // 
             // label27dt
             // 
-            this.label27dt.AutoSize = true;
-            this.label27dt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label27dt.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.label27dt, "label27dt");
             this.label27dt.Name = "label27dt";
-            this.label27dt.Size = new System.Drawing.Size(133, 21);
-            this.label27dt.TabIndex = 65;
-            this.label27dt.Text = "Виберіть контакт";
             // 
             // transporterUpdateSelectDeleteContactComboBox
             // 
-            this.transporterUpdateSelectDeleteContactComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.transporterUpdateSelectDeleteContactComboBox, "transporterUpdateSelectDeleteContactComboBox");
             this.transporterUpdateSelectDeleteContactComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.transporterUpdateSelectDeleteContactComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.transporterUpdateSelectDeleteContactComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateSelectDeleteContactComboBox.Location = new System.Drawing.Point(0, 24);
             this.transporterUpdateSelectDeleteContactComboBox.Name = "transporterUpdateSelectDeleteContactComboBox";
-            this.transporterUpdateSelectDeleteContactComboBox.Size = new System.Drawing.Size(499, 29);
             this.transporterUpdateSelectDeleteContactComboBox.Sorted = true;
-            this.transporterUpdateSelectDeleteContactComboBox.TabIndex = 64;
             this.transporterUpdateSelectDeleteContactComboBox.SelectedIndexChanged += new System.EventHandler(this.TransporterUpdateSelectDeleteContactComboBox_SelectedIndexChanged);
             this.transporterUpdateSelectDeleteContactComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TransporterUpdateSelectDeleteContactComboBox_MouseClick);
             // 
             // transporterUpdateContactDeleteButton
             // 
-            this.transporterUpdateContactDeleteButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.transporterUpdateContactDeleteButton.Enabled = false;
-            this.transporterUpdateContactDeleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.transporterUpdateContactDeleteButton.Location = new System.Drawing.Point(0, 52);
+            resources.ApplyResources(this.transporterUpdateContactDeleteButton, "transporterUpdateContactDeleteButton");
             this.transporterUpdateContactDeleteButton.Name = "transporterUpdateContactDeleteButton";
-            this.transporterUpdateContactDeleteButton.Size = new System.Drawing.Size(499, 52);
-            this.transporterUpdateContactDeleteButton.TabIndex = 66;
-            this.transporterUpdateContactDeleteButton.Text = "Видалити контакт";
             this.transporterUpdateContactDeleteButton.UseVisualStyleBackColor = true;
             this.transporterUpdateContactDeleteButton.Click += new System.EventHandler(this.DeleteTransporterContactButton_Click);
             // 
             // TransporterContactDeleteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 104);
             this.Controls.Add(this.transporterUpdateContactDeleteButton);
             this.Controls.Add(this.label27dt);
             this.Controls.Add(this.transporterUpdateSelectDeleteContactComboBox);
@@ -83,8 +67,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TransporterContactDeleteForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Видалення контакту";
             this.ResumeLayout(false);
             this.PerformLayout();
 

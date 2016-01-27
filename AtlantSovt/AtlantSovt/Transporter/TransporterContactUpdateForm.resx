@@ -117,4 +117,328 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1t.Text" xml:space="preserve">
+    <value>Номер телефону</value>
+  </data>
+  <data name="label2t.Text" xml:space="preserve">
+    <value>Номер факсу</value>
+  </data>
+  <data name="label3t.Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="label4t.Text" xml:space="preserve">
+    <value>Оберіть контакт</value>
+  </data>
+  <data name="nameTransporterLabel.Text" xml:space="preserve">
+    <value>Контактна особа</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Зміна контакту</value>
+  </data>
+  <data name="updateTransporterContactButton.Text" xml:space="preserve">
+    <value>Змінити контакт</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="nameTransporterLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="nameTransporterLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="nameTransporterLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 73</value>
+  </data>
+  <data name="nameTransporterLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="nameTransporterLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;nameTransporterLabel.Name" xml:space="preserve">
+    <value>nameTransporterLabel</value>
+  </data>
+  <data name="&gt;&gt;nameTransporterLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nameTransporterLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;nameTransporterLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label1t.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1t.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label1t.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 129</value>
+  </data>
+  <data name="label1t.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="label1t.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label1t.Name" xml:space="preserve">
+    <value>label1t</value>
+  </data>
+  <data name="&gt;&gt;label1t.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1t.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1t.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label2t.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2t.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label2t.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 185</value>
+  </data>
+  <data name="label2t.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 21</value>
+  </data>
+  <data name="label2t.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label2t.Name" xml:space="preserve">
+    <value>label2t</value>
+  </data>
+  <data name="&gt;&gt;label2t.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2t.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2t.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label3t.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3t.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label3t.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 241</value>
+  </data>
+  <data name="label3t.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 21</value>
+  </data>
+  <data name="label3t.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label3t.Name" xml:space="preserve">
+    <value>label3t</value>
+  </data>
+  <data name="&gt;&gt;label3t.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3t.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3t.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="contactPersonUpdateTransporterContactTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="contactPersonUpdateTransporterContactTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 97</value>
+  </data>
+  <data name="contactPersonUpdateTransporterContactTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 29</value>
+  </data>
+  <data name="contactPersonUpdateTransporterContactTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;contactPersonUpdateTransporterContactTextBox.Name" xml:space="preserve">
+    <value>contactPersonUpdateTransporterContactTextBox</value>
+  </data>
+  <data name="&gt;&gt;contactPersonUpdateTransporterContactTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;contactPersonUpdateTransporterContactTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;contactPersonUpdateTransporterContactTextBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="telephoneNumberUpdateTransporterContactTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="telephoneNumberUpdateTransporterContactTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 153</value>
+  </data>
+  <data name="telephoneNumberUpdateTransporterContactTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 29</value>
+  </data>
+  <data name="telephoneNumberUpdateTransporterContactTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;telephoneNumberUpdateTransporterContactTextBox.Name" xml:space="preserve">
+    <value>telephoneNumberUpdateTransporterContactTextBox</value>
+  </data>
+  <data name="&gt;&gt;telephoneNumberUpdateTransporterContactTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;telephoneNumberUpdateTransporterContactTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;telephoneNumberUpdateTransporterContactTextBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="faxNumberUpdateTransporterContactTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="faxNumberUpdateTransporterContactTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 209</value>
+  </data>
+  <data name="faxNumberUpdateTransporterContactTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 29</value>
+  </data>
+  <data name="faxNumberUpdateTransporterContactTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;faxNumberUpdateTransporterContactTextBox.Name" xml:space="preserve">
+    <value>faxNumberUpdateTransporterContactTextBox</value>
+  </data>
+  <data name="&gt;&gt;faxNumberUpdateTransporterContactTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;faxNumberUpdateTransporterContactTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;faxNumberUpdateTransporterContactTextBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="emailUpdateTransporterContactTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="emailUpdateTransporterContactTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 265</value>
+  </data>
+  <data name="emailUpdateTransporterContactTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 29</value>
+  </data>
+  <data name="emailUpdateTransporterContactTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;emailUpdateTransporterContactTextBox.Name" xml:space="preserve">
+    <value>emailUpdateTransporterContactTextBox</value>
+  </data>
+  <data name="&gt;&gt;emailUpdateTransporterContactTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;emailUpdateTransporterContactTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;emailUpdateTransporterContactTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="updateTransporterContactButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="updateTransporterContactButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 301</value>
+  </data>
+  <data name="updateTransporterContactButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 48</value>
+  </data>
+  <data name="updateTransporterContactButton.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;updateTransporterContactButton.Name" xml:space="preserve">
+    <value>updateTransporterContactButton</value>
+  </data>
+  <data name="&gt;&gt;updateTransporterContactButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateTransporterContactButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;updateTransporterContactButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="transporterUpdateContactSelectComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="transporterUpdateContactSelectComboBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="transporterUpdateContactSelectComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 41</value>
+  </data>
+  <data name="transporterUpdateContactSelectComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 29</value>
+  </data>
+  <data name="transporterUpdateContactSelectComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;transporterUpdateContactSelectComboBox.Name" xml:space="preserve">
+    <value>transporterUpdateContactSelectComboBox</value>
+  </data>
+  <data name="&gt;&gt;transporterUpdateContactSelectComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transporterUpdateContactSelectComboBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;transporterUpdateContactSelectComboBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label4t.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4t.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label4t.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 17</value>
+  </data>
+  <data name="label4t.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 21</value>
+  </data>
+  <data name="label4t.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;label4t.Name" xml:space="preserve">
+    <value>label4t</value>
+  </data>
+  <data name="&gt;&gt;label4t.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4t.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label4t.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>336, 361</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>TransporterContactUpdateForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

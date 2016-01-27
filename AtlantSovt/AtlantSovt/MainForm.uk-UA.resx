@@ -1,0 +1,1240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="addArbeitenPage.Text" xml:space="preserve">
+    <value>addArbeitenPage</value>
+  </data>
+  <data name="addArbeitenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Додати</value>
+  </data>
+  <data name="addBankDetailsClientButton.Text" xml:space="preserve">
+    <value>Додати банківські дані</value>
+  </data>
+  <data name="addBankDetailsForwarderButton.Text" xml:space="preserve">
+    <value>Додати банківські дані</value>
+  </data>
+  <data name="addClientButton.Text" xml:space="preserve">
+    <value>Додати клієнта</value>
+  </data>
+  <data name="addClientPage.Text" xml:space="preserve">
+    <value>addClientPage</value>
+  </data>
+  <data name="addClientsStrip.Text" xml:space="preserve">
+    <value>Додати</value>
+  </data>
+  <data name="addContactClientButton.Text" xml:space="preserve">
+    <value>Додати контакт</value>
+  </data>
+  <data name="addContactForwarderButton.Text" xml:space="preserve">
+    <value>Додати контакт</value>
+  </data>
+  <data name="addContractMenuItemStrip.Text" xml:space="preserve">
+    <value>Додати</value>
+  </data>
+  <data name="addContractPage.Text" xml:space="preserve">
+    <value>documentationPage</value>
+  </data>
+  <data name="addForwarderButton.Text" xml:space="preserve">
+    <value>Додати експедитора</value>
+  </data>
+  <data name="addForwarderPage.Text" xml:space="preserve">
+    <value>addForwarderPage</value>
+  </data>
+  <data name="addForwarderStrip.Text" xml:space="preserve">
+    <value>Додати</value>
+  </data>
+  <data name="additionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Додатково</value>
+  </data>
+  <data name="addOrderMenuItem.Text" xml:space="preserve">
+    <value>Додати</value>
+  </data>
+  <data name="addOrderPage.Text" xml:space="preserve">
+    <value>addOrderPage</value>
+  </data>
+  <data name="addTransporterPage.Text" xml:space="preserve">
+    <value>addTransporterPage</value>
+  </data>
+  <data name="addTransporterStrip.Text" xml:space="preserve">
+    <value>Додати</value>
+  </data>
+  <data name="arbeitenAddAccountNumberLabel.Text" xml:space="preserve">
+    <value>Номер рахунку клієнта</value>
+  </data>
+  <data name="arbeitenAddButton.Text" xml:space="preserve">
+    <value>Додати</value>
+  </data>
+  <data name="arbeitenAddClientLabel.Text" xml:space="preserve">
+    <value>Клієнт</value>
+  </data>
+  <data name="arbeitenAddClientPaymentDateLabel.Text" xml:space="preserve">
+    <value>Дата оплати</value>
+  </data>
+  <data name="arbeitenAddClientPaymentLabel.Text" xml:space="preserve">
+    <value>Сума від клієнта</value>
+  </data>
+  <data name="arbeitenAddDownloadDateLabel.Text" xml:space="preserve">
+    <value>Дата завантаження</value>
+  </data>
+  <data name="arbeitenAddNoteLabel.Text" xml:space="preserve">
+    <value>Примітка:</value>
+  </data>
+  <data name="arbeitenAddOrderFilterCheckBox.Text" xml:space="preserve">
+    <value>Показувати закриті</value>
+  </data>
+  <data name="arbeitenAddOrderFilterDateTimePicker.CustomFormat" xml:space="preserve">
+    <value>MMMM yy</value>
+  </data>
+  <data name="arbeitenAddOrderFilterLabel.Text" xml:space="preserve">
+    <value>Виберіть діапазон</value>
+  </data>
+  <data name="arbeitenAddOrderSelectLabel.Text" xml:space="preserve">
+    <value>Виберіть заявку</value>
+  </data>
+  <data name="arbeitenAddTransporterLabel.Text" xml:space="preserve">
+    <value>Перевізник</value>
+  </data>
+  <data name="arbeitenAddTransporterPaymentLabel.Text" xml:space="preserve">
+    <value>Сума перевізнику</value>
+  </data>
+  <data name="arbeitenAddTransporterVehicleLabel.Text" xml:space="preserve">
+    <value>Номер Авто</value>
+  </data>
+  <data name="arbeitenDeleteButton.Text" xml:space="preserve">
+    <value>Видалити запис</value>
+  </data>
+  <data name="arbeitenShowMainLabel.Text" xml:space="preserve">
+    <value>Арбайтен</value>
+  </data>
+  <data name="arbeitenShowNoteLabel.Text" xml:space="preserve">
+    <value>Примітка</value>
+  </data>
+  <data name="arbeitenShowOnlyActive.Text" xml:space="preserve">
+    <value>Тільки активні:</value>
+  </data>
+  <data name="arbeitenShowSearchButton.Text" xml:space="preserve">
+    <value>Знайти</value>
+  </data>
+  <data name="arbeitenShowSearchDatePicker.CustomFormat" xml:space="preserve">
+    <value>MMMM yyyy</value>
+  </data>
+  <data name="arbeitenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Арбайтен</value>
+  </data>
+  <data name="arbeitenUpdateAccountNumberLabel.Text" xml:space="preserve">
+    <value>Номер рахунку клієнта</value>
+  </data>
+  <data name="arbeitenUpdateButton.Text" xml:space="preserve">
+    <value>Змінити</value>
+  </data>
+  <data name="arbeitenUpdateClientLabel.Text" xml:space="preserve">
+    <value>Клієнт</value>
+  </data>
+  <data name="arbeitenUpdateClientPaymentDateLabel.Text" xml:space="preserve">
+    <value>Дата оплати</value>
+  </data>
+  <data name="arbeitenUpdateClientPaymentLabel.Text" xml:space="preserve">
+    <value>Сума від клієнта</value>
+  </data>
+  <data name="arbeitenUpdateDownloadDateLabel.Text" xml:space="preserve">
+    <value>Дата завантаження</value>
+  </data>
+  <data name="arbeitenUpdateNoteLabel.Text" xml:space="preserve">
+    <value>Примітка:</value>
+  </data>
+  <data name="arbeitenUpdateOrderFilterCheckBox.Text" xml:space="preserve">
+    <value>Показувати закриті</value>
+  </data>
+  <data name="arbeitenUpdateOrderFilterDateTimePicker.CustomFormat" xml:space="preserve">
+    <value>MMMM yy</value>
+  </data>
+  <data name="arbeitenUpdateOrderFilterLabel.Text" xml:space="preserve">
+    <value>Виберіть діапазон</value>
+  </data>
+  <data name="arbeitenUpdateOrderSelectLabel.Text" xml:space="preserve">
+    <value>Виберіть заявку</value>
+  </data>
+  <data name="arbeitenUpdateTransporterLabel.Text" xml:space="preserve">
+    <value>Перевізник</value>
+  </data>
+  <data name="arbeitenUpdateTransporterPaymentLabel.Text" xml:space="preserve">
+    <value>Сума перевізнику</value>
+  </data>
+  <data name="arbeitenUpdateTransporterVehicleLabel.Text" xml:space="preserve">
+    <value>Номер Авто</value>
+  </data>
+  <data name="AtlantSovtlinkLabel.Text" xml:space="preserve">
+    <value>http://www.atlantsovt.com</value>
+  </data>
+  <data name="clientShowSearchButton.Text" xml:space="preserve">
+    <value>Знайти</value>
+  </data>
+  <data name="clientToolStripMenuItem.Text" xml:space="preserve">
+    <value>Клієнт</value>
+  </data>
+  <data name="clientUpdateAddBankDetailsButton.Text" xml:space="preserve">
+    <value>Додати банківські данні</value>
+  </data>
+  <data name="clientUpdateAddContactButton.Text" xml:space="preserve">
+    <value>Додати контакт</value>
+  </data>
+  <data name="clientUpdateBankDetailsDeleteButton.Text" xml:space="preserve">
+    <value>Видалити банківські данні</value>
+  </data>
+  <data name="clientUpdateBankDetailsUpdateButton.Text" xml:space="preserve">
+    <value>Змінити банківські данні</value>
+  </data>
+  <data name="clientUpdateContactDeleteButton.Text" xml:space="preserve">
+    <value>Видалити контакт</value>
+  </data>
+  <data name="clientUpdateContactUpdateButton.Text" xml:space="preserve">
+    <value>Змінити контакт</value>
+  </data>
+  <data name="commentClientLabel.Text" xml:space="preserve">
+    <value>Примітка</value>
+  </data>
+  <data name="contractShowDeleteContractButton.Text" xml:space="preserve">
+    <value>Видалити договір</value>
+  </data>
+  <data name="contractShowOpenDocButton.Text" xml:space="preserve">
+    <value>Відкрити у Word</value>
+  </data>
+  <data name="contractShowSearchButton.Text" xml:space="preserve">
+    <value>Знайти</value>
+  </data>
+  <data name="createContactButton.Text" xml:space="preserve">
+    <value>Створити договір</value>
+  </data>
+  <data name="CreatorsLabel.Text" xml:space="preserve">
+    <value>©2015  DevArt </value>
+  </data>
+  <data name="deleteClientButton.Text" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="deleteClientPage.Text" xml:space="preserve">
+    <value>deleteClientPage</value>
+  </data>
+  <data name="deleteClientsStrip.Text" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="deleteDiapasoneSelectLabel.Text" xml:space="preserve">
+    <value>Виберіть діапазон</value>
+  </data>
+  <data name="deleteForwarderPage.Text" xml:space="preserve">
+    <value>deleteForwarderPage</value>
+  </data>
+  <data name="deleteForwarderStrip.Text" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="deleteItemSelectLabel.Text" xml:space="preserve">
+    <value>Виберіть запис</value>
+  </data>
+  <data name="deletePage.Text" xml:space="preserve">
+    <value>deletePage</value>
+  </data>
+  <data name="deleteTableSelectLabel.Text" xml:space="preserve">
+    <value>Виберіть таблицю</value>
+  </data>
+  <data name="deleteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Видалення</value>
+  </data>
+  <data name="deleteTransporterPage.Text" xml:space="preserve">
+    <value>deleteTransporterPage</value>
+  </data>
+  <data name="deleteTransporterStrip.Text" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="deteteAdditionsButton.Text" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="directorClientLabel.Text" xml:space="preserve">
+    <value>П.І.Б. Директора</value>
+  </data>
+  <data name="documentationToolStripMenuItem.Text" xml:space="preserve">
+    <value>Договори</value>
+  </data>
+  <data name="documentTypeComboBox.Items" xml:space="preserve">
+    <value>По Україні</value>
+  </data>
+  <data name="documentTypeComboBox.Items1" xml:space="preserve">
+    <value>За кордон</value>
+  </data>
+  <data name="exportTrackingToExcelButton.Text" xml:space="preserve">
+    <value>Імпортувати в Excel</value>
+  </data>
+  <data name="faxContractStateRadioButton.Text" xml:space="preserve">
+    <value>Факс</value>
+  </data>
+  <data name="forwarderAddStampButton.Text" xml:space="preserve">
+    <value>Додати печатку
+</value>
+  </data>
+  <data name="forwarderDeleteButton.Text" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="forwarderToolStripMenuItem.Text" xml:space="preserve">
+    <value>Експедитор</value>
+  </data>
+  <data name="forwarderUpdateBankDetailsAddButton.Text" xml:space="preserve">
+    <value>Додати банківські данні</value>
+  </data>
+  <data name="forwarderUpdateBankDetailsDeleteButton.Text" xml:space="preserve">
+    <value>Видалити банківські данні</value>
+  </data>
+  <data name="forwarderUpdateBankDetailsUpdateButton.Text" xml:space="preserve">
+    <value>Змінити банківські данні</value>
+  </data>
+  <data name="forwarderUpdateButton.Text" xml:space="preserve">
+    <value>Змінити</value>
+  </data>
+  <data name="forwarderUpdateContactAddButton.Text" xml:space="preserve">
+    <value>Додати контакт</value>
+  </data>
+  <data name="forwarderUpdateContactDeleteButton.Text" xml:space="preserve">
+    <value>Видалити контакт</value>
+  </data>
+  <data name="forwarderUpdateContactUpdateButton.Text" xml:space="preserve">
+    <value>Змінити контакт</value>
+  </data>
+  <data name="geographyAddressClientLabel.Text" xml:space="preserve">
+    <value>Юридична адреса</value>
+  </data>
+  <data name="helloPage.Text" xml:space="preserve">
+    <value>Hello</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Клієнти</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Примітка</value>
+  </data>
+  <data name="label100.Text" xml:space="preserve">
+    <value>Примітка</value>
+  </data>
+  <data name="label101.Text" xml:space="preserve">
+    <value>Ставка фрахту:</value>
+  </data>
+  <data name="label102.Text" xml:space="preserve">
+    <value>Додаткові умови</value>
+  </data>
+  <data name="label103.Text" xml:space="preserve">
+    <value>Умови оплати</value>
+  </data>
+  <data name="label104.Text" xml:space="preserve">
+    <value>Причіп</value>
+  </data>
+  <data name="label105.Text" xml:space="preserve">
+    <value>Куб</value>
+  </data>
+  <data name="label106.Text" xml:space="preserve">
+    <value>Штраф за простої</value>
+  </data>
+  <data name="label107.Text" xml:space="preserve">
+    <value>Нормативні простої</value>
+  </data>
+  <data name="label108.Text" xml:space="preserve">
+    <value>Штраф за відмову від заявки</value>
+  </data>
+  <data name="label109cont.Text" xml:space="preserve">
+    <value>1 - </value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Виберіть перевізника</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Банківські реквізити</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Примітка</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Контакти</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Перевізники</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Виберіть діапазон</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Виберіть діапазон</value>
+  </data>
+  <data name="label18cont.Text" xml:space="preserve">
+    <value>Виберіть діапазон:</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Контакти</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>Статус платника податку</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>На підставі якого документу</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>Примітка</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>Юридична адреса</value>
+  </data>
+  <data name="label24.Text" xml:space="preserve">
+    <value>Фізична адреса</value>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>П.І.Б. Директора</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>Назва</value>
+  </data>
+  <data name="label27.Text" xml:space="preserve">
+    <value>Виберіть клієнта</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>Банківські реквізити</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>Виберіть клієнта</value>
+  </data>
+  <data name="label31.Text" xml:space="preserve">
+    <value>Банківські реквізити</value>
+  </data>
+  <data name="label32.Text" xml:space="preserve">
+    <value>Примітка</value>
+  </data>
+  <data name="label33.Text" xml:space="preserve">
+    <value>Контакти</value>
+  </data>
+  <data name="label34.Text" xml:space="preserve">
+    <value>Експедитори</value>
+  </data>
+  <data name="label36.Text" xml:space="preserve">
+    <value>Печатка</value>
+  </data>
+  <data name="label36cont.Text" xml:space="preserve">
+    <value>Дата укладання угоди:</value>
+  </data>
+  <data name="label36ShowContract.Text" xml:space="preserve">
+    <value>Договори</value>
+  </data>
+  <data name="label37.Text" xml:space="preserve">
+    <value>Мова:</value>
+  </data>
+  <data name="label37cont.Text" xml:space="preserve">
+    <value>Експедитор:</value>
+  </data>
+  <data name="label37ShowContract.Text" xml:space="preserve">
+    <value>Контактні дані перевізника</value>
+  </data>
+  <data name="label38.Text" xml:space="preserve">
+    <value>Мова:</value>
+  </data>
+  <data name="label38cont.Text" xml:space="preserve">
+    <value>2 - </value>
+  </data>
+  <data name="label38ShowTracking.Text" xml:space="preserve">
+    <value>Примітка</value>
+  </data>
+  <data name="label39.Text" xml:space="preserve">
+    <value>Виберіть третього експедитора </value>
+  </data>
+  <data name="label39cont.Text" xml:space="preserve">
+    <value>3 - </value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="label40.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="label41.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="label42.Text" xml:space="preserve">
+    <value>Виберіть експедитора</value>
+  </data>
+  <data name="label43.Text" xml:space="preserve">
+    <value>Виберіть експедитора</value>
+  </data>
+  <data name="label44.Text" xml:space="preserve">
+    <value>Статус платника податку</value>
+  </data>
+  <data name="label45.Text" xml:space="preserve">
+    <value>На підставі якого документу</value>
+  </data>
+  <data name="label46.Text" xml:space="preserve">
+    <value>Примітка</value>
+  </data>
+  <data name="label47.Text" xml:space="preserve">
+    <value>Юридична адреса</value>
+  </data>
+  <data name="label48.Text" xml:space="preserve">
+    <value>Фізична адреса</value>
+  </data>
+  <data name="label49.Text" xml:space="preserve">
+    <value>П.І.Б. Директора</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>* - одне з обов'язкових полів</value>
+  </data>
+  <data name="label50.Text" xml:space="preserve">
+    <value>Назва</value>
+  </data>
+  <data name="label51.Text" xml:space="preserve">
+    <value>Дата завантаження | До</value>
+  </data>
+  <data name="label51cont.Text" xml:space="preserve">
+    <value>Другий учасник договору:</value>
+  </data>
+  <data name="label52.Text" xml:space="preserve">
+    <value>Виберіть діапазон</value>
+  </data>
+  <data name="label53.Text" xml:space="preserve">
+    <value>Виберіть клієнта</value>
+  </data>
+  <data name="label54.Text" xml:space="preserve">
+    <value>Виберіть першого експедитора </value>
+  </data>
+  <data name="label55.Text" xml:space="preserve">
+    <value>Виберіть другого експедитора </value>
+  </data>
+  <data name="label56.Text" xml:space="preserve">
+    <value>Виберіть перевізника</value>
+  </data>
+  <data name="label58.Text" xml:space="preserve">
+    <value>Виберіть діапазон</value>
+  </data>
+  <data name="label59.Text" xml:space="preserve">
+    <value>Статус платника податку</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>* - одне з обов'язкових полів</value>
+  </data>
+  <data name="label60.Text" xml:space="preserve">
+    <value>На підставі якого документу</value>
+  </data>
+  <data name="label61.Text" xml:space="preserve">
+    <value>Примітка</value>
+  </data>
+  <data name="label62.Text" xml:space="preserve">
+    <value>Юридична адреса</value>
+  </data>
+  <data name="label63.Text" xml:space="preserve">
+    <value>Фізична адреса</value>
+  </data>
+  <data name="label64.Text" xml:space="preserve">
+    <value>П.І.Б. Директора</value>
+  </data>
+  <data name="label65.Text" xml:space="preserve">
+    <value>Назва</value>
+  </data>
+  <data name="label66.Text" xml:space="preserve">
+    <value>Дата доставки | До</value>
+  </data>
+  <data name="label66cont.Text" xml:space="preserve">
+    <value>Виберіть шаблон:</value>
+  </data>
+  <data name="label67.Text" xml:space="preserve">
+    <value>Дата завантаження | До</value>
+  </data>
+  <data name="label67cont.Text" xml:space="preserve">
+    <value>4 - </value>
+  </data>
+  <data name="label68.Text" xml:space="preserve">
+    <value>ТЗОВ "Атлант-Совт"</value>
+  </data>
+  <data name="label69.Text" xml:space="preserve">
+    <value>Дата доставки | До</value>
+  </data>
+  <data name="label69cont.Text" xml:space="preserve">
+    <value>Напрямок:</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Виберіть діапазон</value>
+  </data>
+  <data name="label70.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="label71.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="label72.Text" xml:space="preserve">
+    <value>Статус платника податку</value>
+  </data>
+  <data name="label73.Text" xml:space="preserve">
+    <value>На підставі якого документу</value>
+  </data>
+  <data name="label74.Text" xml:space="preserve">
+    <value>Примітка</value>
+  </data>
+  <data name="label75.Text" xml:space="preserve">
+    <value>Юридична адреса</value>
+  </data>
+  <data name="label76.Text" xml:space="preserve">
+    <value>Фізична адреса</value>
+  </data>
+  <data name="label77.Text" xml:space="preserve">
+    <value>П.І.Б. Директора</value>
+  </data>
+  <data name="label78.Text" xml:space="preserve">
+    <value>Назва</value>
+  </data>
+  <data name="label79.Text" xml:space="preserve">
+    <value>TIR/ CMR </value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Виберіть діапазон</value>
+  </data>
+  <data name="label80.Text" xml:space="preserve">
+    <value>Скорочена назва</value>
+  </data>
+  <data name="label85.Text" xml:space="preserve">
+    <value>Форма завантаження 1</value>
+  </data>
+  <data name="label86.Text" xml:space="preserve">
+    <value>Скорочена назва</value>
+  </data>
+  <data name="label87.Text" xml:space="preserve">
+    <value>Тип вантажу</value>
+  </data>
+  <data name="label88.Text" xml:space="preserve">
+    <value>Форма завантаження 2</value>
+  </data>
+  <data name="label89.Text" xml:space="preserve">
+    <value>АДР</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>* - одне з обов'язкових полів</value>
+  </data>
+  <data name="label90.Text" xml:space="preserve">
+    <value>Дата завантаження | Від</value>
+  </data>
+  <data name="label91.Text" xml:space="preserve">
+    <value>Вага</value>
+  </data>
+  <data name="label92.Text" xml:space="preserve">
+    <value>Дата доставки | Від</value>
+  </data>
+  <data name="label93.Text" xml:space="preserve">
+    <value>Статус платника податку</value>
+  </data>
+  <data name="label94.Text" xml:space="preserve">
+    <value>На підставі якого документу</value>
+  </data>
+  <data name="label95.Text" xml:space="preserve">
+    <value>Юридична адреса</value>
+  </data>
+  <data name="label96.Text" xml:space="preserve">
+    <value>Фізична адреса</value>
+  </data>
+  <data name="label97.Text" xml:space="preserve">
+    <value>П.І.Б. Директора</value>
+  </data>
+  <data name="label98.Text" xml:space="preserve">
+    <value>Назва</value>
+  </data>
+  <data name="label99.Text" xml:space="preserve">
+    <value>Виберіть перевізника</value>
+  </data>
+  <data name="labelshow57.Text" xml:space="preserve">
+    <value>Банківські реквізити</value>
+  </data>
+  <data name="labelshow58.Text" xml:space="preserve">
+    <value>Примітка</value>
+  </data>
+  <data name="labelshow67.Text" xml:space="preserve">
+    <value>Контакти</value>
+  </data>
+  <data name="labelshow68.Text" xml:space="preserve">
+    <value>Перевізники</value>
+  </data>
+  <data name="labelshow69.Text" xml:space="preserve">
+    <value>Країни</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Атлант-Совт</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="nameClientLabel.Text" xml:space="preserve">
+    <value>Назва</value>
+  </data>
+  <data name="notSelectedContractStateRadioButton.Text" xml:space="preserve">
+    <value>Не визначено</value>
+  </data>
+  <data name="onlyActiveLabel.Text" xml:space="preserve">
+    <value>Тільки активні:</value>
+  </data>
+  <data name="OrderAddADRSelectComboBox.Items" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="OrderAddADRSelectComboBox.Items1" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="OrderAddADRSelectComboBox.Items2" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="OrderAddADRSelectComboBox.Items3" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="OrderAddADRSelectComboBox.Items4" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="OrderAddADRSelectComboBox.Items5" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="OrderAddADRSelectComboBox.Items6" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="OrderAddADRSelectComboBox.Items7" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="OrderAddADRSelectComboBox.Items8" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="OrderAddButton.Text" xml:space="preserve">
+    <value>Сформувати</value>
+  </data>
+  <data name="OrderAddCustomsAddressAddButton.Text" xml:space="preserve">
+    <value>Замитнення</value>
+  </data>
+  <data name="OrderAddDownloadAddressAddButton.Text" xml:space="preserve">
+    <value>Завантаження</value>
+  </data>
+  <data name="OrderAddDownloadDateFromTimePicker.CustomFormat" xml:space="preserve">
+    <value>dd MMM yy р. HH:mm</value>
+  </data>
+  <data name="OrderAddDownloadDateToTimePicker.CustomFormat" xml:space="preserve">
+    <value>dd MMM yy р. HH:mm</value>
+  </data>
+  <data name="OrderAddLanduageSelectComboBox.Items" xml:space="preserve">
+    <value>Українська</value>
+  </data>
+  <data name="OrderAddLanduageSelectComboBox.Items1" xml:space="preserve">
+    <value>Польська</value>
+  </data>
+  <data name="OrderAddLanduageSelectComboBox.Items2" xml:space="preserve">
+    <value>Німецька</value>
+  </data>
+  <data name="OrderAddPersonalLabel.Text" xml:space="preserve">
+    <value>Працівник</value>
+  </data>
+  <data name="OrderAddStaffComboBox.Items" xml:space="preserve">
+    <value>У</value>
+  </data>
+  <data name="OrderAddStaffComboBox.Items1" xml:space="preserve">
+    <value>І</value>
+  </data>
+  <data name="OrderAddUncustomsAddressAddButton.Text" xml:space="preserve">
+    <value>Розмитнення</value>
+  </data>
+  <data name="OrderAddUploadAddressAddButton.Text" xml:space="preserve">
+    <value>Розвантаження</value>
+  </data>
+  <data name="OrderAddUploadDateFromTimePicker.CustomFormat" xml:space="preserve">
+    <value>dd MMM yy р. HH:mm</value>
+  </data>
+  <data name="OrderAddUploadDateToTimePicker.CustomFormat" xml:space="preserve">
+    <value>dd MMM yy р. HH:mm</value>
+  </data>
+  <data name="orderToolStripMenuItem.Text" xml:space="preserve">
+    <value>Заявка</value>
+  </data>
+  <data name="OrderUpdateADRSelectComboBox.Items" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="OrderUpdateADRSelectComboBox.Items1" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="OrderUpdateADRSelectComboBox.Items2" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="OrderUpdateADRSelectComboBox.Items3" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="OrderUpdateADRSelectComboBox.Items4" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="OrderUpdateADRSelectComboBox.Items5" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="OrderUpdateADRSelectComboBox.Items6" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="OrderUpdateADRSelectComboBox.Items7" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="OrderUpdateADRSelectComboBox.Items8" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="OrderUpdateButton.Text" xml:space="preserve">
+    <value>Змінити</value>
+  </data>
+  <data name="OrderUpdateCustumsAddressesButton.Text" xml:space="preserve">
+    <value>Замитнення</value>
+  </data>
+  <data name="OrderUpdateDiapasoneDateTimePicker.CustomFormat" xml:space="preserve">
+    <value>MMMM yy</value>
+  </data>
+  <data name="OrderUpdateDownloadAddressesButton.Text" xml:space="preserve">
+    <value>Завантаження</value>
+  </data>
+  <data name="OrderUpdateDownloadDateFromTimePicker.CustomFormat" xml:space="preserve">
+    <value>dd MMM yy р. HH:mm</value>
+  </data>
+  <data name="OrderUpdateDownloadDateToTimePicker.CustomFormat" xml:space="preserve">
+    <value>dd MMM yy р. HH:mm</value>
+  </data>
+  <data name="OrderUpdateLabel1.Text" xml:space="preserve">
+    <value>Умови оплати</value>
+  </data>
+  <data name="OrderUpdateLabel10.Text" xml:space="preserve">
+    <value>Причіп</value>
+  </data>
+  <data name="OrderUpdateLabel11.Text" xml:space="preserve">
+    <value>Куб</value>
+  </data>
+  <data name="OrderUpdateLabel12.Text" xml:space="preserve">
+    <value>Дата завантаження | Від</value>
+  </data>
+  <data name="OrderUpdateLabel13.Text" xml:space="preserve">
+    <value>Дата доставки | Від</value>
+  </data>
+  <data name="OrderUpdateLabel14.Text" xml:space="preserve">
+    <value>TIR/ CMR </value>
+  </data>
+  <data name="OrderUpdateLabel15.Text" xml:space="preserve">
+    <value>Працівник</value>
+  </data>
+  <data name="OrderUpdateLabel16.Text" xml:space="preserve">
+    <value>АДР</value>
+  </data>
+  <data name="OrderUpdateLabel17.Text" xml:space="preserve">
+    <value>Виберіть клієнта</value>
+  </data>
+  <data name="OrderUpdateLabel18.Text" xml:space="preserve">
+    <value>Виберіть перевізника</value>
+  </data>
+  <data name="OrderUpdateLabel19.Text" xml:space="preserve">
+    <value>Виберіть діапазон</value>
+  </data>
+  <data name="OrderUpdateLabel2.Text" xml:space="preserve">
+    <value>Додаткові умови</value>
+  </data>
+  <data name="OrderUpdateLabel20.Text" xml:space="preserve">
+    <value>Виберіть діапазон</value>
+  </data>
+  <data name="OrderUpdateLabel21.Text" xml:space="preserve">
+    <value>Виберіть першого експедитора </value>
+  </data>
+  <data name="OrderUpdateLabel22.Text" xml:space="preserve">
+    <value>Виберіть другого експедитора </value>
+  </data>
+  <data name="OrderUpdateLabel23.Text" xml:space="preserve">
+    <value>Виберіть заявку</value>
+  </data>
+  <data name="OrderUpdateLabel24.Text" xml:space="preserve">
+    <value>Виберіть діапазон</value>
+  </data>
+  <data name="OrderUpdateLabel25.Text" xml:space="preserve">
+    <value>Ставка фрахту:</value>
+  </data>
+  <data name="OrderUpdatelabel28.Text" xml:space="preserve">
+    <value>Виберіть третього експедитора </value>
+  </data>
+  <data name="OrderUpdateLabel3.Text" xml:space="preserve">
+    <value>Штраф за відмову від заявки</value>
+  </data>
+  <data name="OrderUpdateLabel4.Text" xml:space="preserve">
+    <value>Вага</value>
+  </data>
+  <data name="OrderUpdateLabel5.Text" xml:space="preserve">
+    <value>Тип вантажу</value>
+  </data>
+  <data name="OrderUpdateLabel6.Text" xml:space="preserve">
+    <value>Форма завантаження 2</value>
+  </data>
+  <data name="OrderUpdateLabel7.Text" xml:space="preserve">
+    <value>Форма завантаження 1</value>
+  </data>
+  <data name="OrderUpdateLabel8.Text" xml:space="preserve">
+    <value>Нормативні простої</value>
+  </data>
+  <data name="OrderUpdateLabel9.Text" xml:space="preserve">
+    <value>Штраф за простої</value>
+  </data>
+  <data name="OrderUpdateLanguageSelectComboBox.Items" xml:space="preserve">
+    <value>Українська</value>
+  </data>
+  <data name="OrderUpdateLanguageSelectComboBox.Items1" xml:space="preserve">
+    <value>Польська</value>
+  </data>
+  <data name="OrderUpdateLanguageSelectComboBox.Items2" xml:space="preserve">
+    <value>Німецька</value>
+  </data>
+  <data name="OrderUpdateShowNoActiveCheckBox.Text" xml:space="preserve">
+    <value>Показувати закриті</value>
+  </data>
+  <data name="OrderUpdateStaffSelectComboBox.Items" xml:space="preserve">
+    <value>У</value>
+  </data>
+  <data name="OrderUpdateStaffSelectComboBox.Items1" xml:space="preserve">
+    <value>І</value>
+  </data>
+  <data name="OrderUpdateUncustumsAddressesButton.Text" xml:space="preserve">
+    <value>Розмитнення</value>
+  </data>
+  <data name="OrderUpdateUploadAddressesButton.Text" xml:space="preserve">
+    <value>Розвантаження</value>
+  </data>
+  <data name="OrderUpdateUploadDateFromTimePicker.CustomFormat" xml:space="preserve">
+    <value>dd MMM yy р. HH:mm</value>
+  </data>
+  <data name="OrderUpdateUploadDateToTimePicker.CustomFormat" xml:space="preserve">
+    <value>dd MMM yy р. HH:mm</value>
+  </data>
+  <data name="originalContractStateRadioButton.Text" xml:space="preserve">
+    <value>Оригінал</value>
+  </data>
+  <data name="physicalAddressClientLabel.Text" xml:space="preserve">
+    <value>Фізична адреса</value>
+  </data>
+  <data name="refreshContactFilesButton.Text" xml:space="preserve">
+    <value>Оновити список шаблонів</value>
+  </data>
+  <data name="secondPersonRoleDocumentСomboBox.Items" xml:space="preserve">
+    <value>Перевізник</value>
+  </data>
+  <data name="secondPersonRoleDocumentСomboBox.Items1" xml:space="preserve">
+    <value>Клієнт</value>
+  </data>
+  <data name="secondPersonRoleDocumentСomboBox.Items2" xml:space="preserve">
+    <value>Експедитор</value>
+  </data>
+  <data name="showArbeitenPage.Text" xml:space="preserve">
+    <value>showArbeitenPage</value>
+  </data>
+  <data name="showArbeitenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Переглянути</value>
+  </data>
+  <data name="showClientDeleteButton.Text" xml:space="preserve">
+    <value>Видалити клієнта</value>
+  </data>
+  <data name="showClientPage.Text" xml:space="preserve">
+    <value>showClientPage</value>
+  </data>
+  <data name="showClientsStrip.Text" xml:space="preserve">
+    <value>Переглянути</value>
+  </data>
+  <data name="showContractMenuItemStrip.Text" xml:space="preserve">
+    <value>Переглянути</value>
+  </data>
+  <data name="showContractsPage.Text" xml:space="preserve">
+    <value>showContractsPage</value>
+  </data>
+  <data name="showContractStateLabel.Text" xml:space="preserve">
+    <value>Стан договору</value>
+  </data>
+  <data name="showForwarderDeleteButton.Text" xml:space="preserve">
+    <value>Видалити експедитора</value>
+  </data>
+  <data name="showForwarderPage.Text" xml:space="preserve">
+    <value>showForwarderPage</value>
+  </data>
+  <data name="showForwarderStrip.Text" xml:space="preserve">
+    <value>Переглянути</value>
+  </data>
+  <data name="showTrackingCreateOrderDoc.Text" xml:space="preserve">
+    <value>Сформувати заявку в Word</value>
+  </data>
+  <data name="showTrackingDateTimePicker.CustomFormat" xml:space="preserve">
+    <value>MMMM yyyy</value>
+  </data>
+  <data name="showTrackingMenuItem.Text" xml:space="preserve">
+    <value>Відстежити</value>
+  </data>
+  <data name="showTrackingPage.Text" xml:space="preserve">
+    <value>showTrackingPage</value>
+  </data>
+  <data name="showTransporterDeleteButton.Text" xml:space="preserve">
+    <value>Видалити перевізника</value>
+  </data>
+  <data name="showTransporterPage.Text" xml:space="preserve">
+    <value>showTransporterPage</value>
+  </data>
+  <data name="showTransporterStrip.Text" xml:space="preserve">
+    <value>Переглянути</value>
+  </data>
+  <data name="taxPayerStatusClientLabel.Text" xml:space="preserve">
+    <value>Статус платника податку</value>
+  </data>
+  <data name="trackingLabel1.Text" xml:space="preserve">
+    <value>Контактні дані перевізника</value>
+  </data>
+  <data name="trackingLabel16.Text" xml:space="preserve">
+    <value>Напрямок</value>
+  </data>
+  <data name="trackingLabel17.Text" xml:space="preserve">
+    <value>Коментар</value>
+  </data>
+  <data name="trackingLabel2.Text" xml:space="preserve">
+    <value>Відстеження</value>
+  </data>
+  <data name="trackingShowAddCommentButton.Text" xml:space="preserve">
+    <value>Додати коментар</value>
+  </data>
+  <data name="trackingShowCloseOrderButton.Text" xml:space="preserve">
+    <value>Закрити заявку</value>
+  </data>
+  <data name="trackingShowDeleteOrderButton.Text" xml:space="preserve">
+    <value>Видалити заявку</value>
+  </data>
+  <data name="trackingShowSearchButton.Text" xml:space="preserve">
+    <value>Знайти</value>
+  </data>
+  <data name="transporterAddBankDetailsAddButton.Text" xml:space="preserve">
+    <value>Додати банківські дані</value>
+  </data>
+  <data name="transporterAddButton.Text" xml:space="preserve">
+    <value>Додати перевізника</value>
+  </data>
+  <data name="transporterAddContactAddButton.Text" xml:space="preserve">
+    <value>Додати контакт</value>
+  </data>
+  <data name="transporterAddCountryAndVehicleSelectButton.Text" xml:space="preserve">
+    <value>Вибрати країни та типи транспорту</value>
+  </data>
+  <data name="transporterAddFiltersSelectADCheckBox.Text" xml:space="preserve">
+    <value>ADR</value>
+  </data>
+  <data name="transporterAddFiltersSelectCMRCheckBox.Text" xml:space="preserve">
+    <value>CMR</value>
+  </data>
+  <data name="transporterAddFiltersSelectEKMTCheckBox.Text" xml:space="preserve">
+    <value>ЕКМТ</value>
+  </data>
+  <data name="transporterAddFiltersSelectIfForwarderCheckBox.Text" xml:space="preserve">
+    <value>Експедитор</value>
+  </data>
+  <data name="transporterAddFiltersSelectTURCheckBox.Text" xml:space="preserve">
+    <value>TIR</value>
+  </data>
+  <data name="transporterAddFiltersSelectZbornyCheckBox.Text" xml:space="preserve">
+    <value>Збірний</value>
+  </data>
+  <data name="transporterDeleteButton.Text" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="transporterShowAdditionalDetailsButton.Text" xml:space="preserve">
+    <value>Додаткові параметри</value>
+  </data>
+  <data name="transporterShowFilterSelectButton.Text" xml:space="preserve">
+    <value>Фільтрація</value>
+  </data>
+  <data name="transporterShowSearchButton.Text" xml:space="preserve">
+    <value>Знайти</value>
+  </data>
+  <data name="transporterUpdateBankDetailsAddButton.Text" xml:space="preserve">
+    <value>Додати банківські данні</value>
+  </data>
+  <data name="transporterUpdateBankDetailsDeleteButton.Text" xml:space="preserve">
+    <value>Видалити банківські данні</value>
+  </data>
+  <data name="transporterUpdateBankDetailsUpdateButton.Text" xml:space="preserve">
+    <value>Змінити банківські данні</value>
+  </data>
+  <data name="transporterUpdateButton.Text" xml:space="preserve">
+    <value>Змінити</value>
+  </data>
+  <data name="transporterUpdateContactAddButton.Text" xml:space="preserve">
+    <value>Додати контакт</value>
+  </data>
+  <data name="transporterUpdateContactDeleteButton.Text" xml:space="preserve">
+    <value>Видалити контакт</value>
+  </data>
+  <data name="transporterUpdateContactUpdateButton.Text" xml:space="preserve">
+    <value>Змінити контакт</value>
+  </data>
+  <data name="transporterUpdateCountriesAndVehicleUpdateButton.Text" xml:space="preserve">
+    <value>Змінити країни та тип транспортеру</value>
+  </data>
+  <data name="transporterUpdateFiltersSelectADCheckBox.Text" xml:space="preserve">
+    <value>ADR</value>
+  </data>
+  <data name="transporterUpdateFiltersSelectCMRCheckBox.Text" xml:space="preserve">
+    <value>CMR</value>
+  </data>
+  <data name="transporterUpdateFiltersSelectEKMTCheckBox.Text" xml:space="preserve">
+    <value>ЕКМТ</value>
+  </data>
+  <data name="transporterUpdateFiltersSelectIfForwarderCheckBox.Text" xml:space="preserve">
+    <value>Експедитор</value>
+  </data>
+  <data name="transporterUpdateFiltersSelectTURCheckBox.Text" xml:space="preserve">
+    <value>TIR</value>
+  </data>
+  <data name="transporterUpdateFiltersSelectZbornyCheckBox.Text" xml:space="preserve">
+    <value>Збірний</value>
+  </data>
+  <data name="trasporterToolStripMenuItem.Text" xml:space="preserve">
+    <value>Перевізник</value>
+  </data>
+  <data name="updateArbeitenPage.Text" xml:space="preserve">
+    <value>updateArbeitenPage</value>
+  </data>
+  <data name="updateArbeitenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Змінити</value>
+  </data>
+  <data name="updateClientButton.Text" xml:space="preserve">
+    <value>Змінити</value>
+  </data>
+  <data name="updateClientPage.Text" xml:space="preserve">
+    <value>updateClientPage</value>
+  </data>
+  <data name="updateClientsStrip.Text" xml:space="preserve">
+    <value>Змінити</value>
+  </data>
+  <data name="updateForwarderPage.Text" xml:space="preserve">
+    <value>updateForwarderPage</value>
+  </data>
+  <data name="updateForwarderStrip.Text" xml:space="preserve">
+    <value>Змінити</value>
+  </data>
+  <data name="updateOrderMenuItem.Text" xml:space="preserve">
+    <value>Редагувати</value>
+  </data>
+  <data name="updateOrderPage.Text" xml:space="preserve">
+    <value>updateOrderPage</value>
+  </data>
+  <data name="updateTransporterPage.Text" xml:space="preserve">
+    <value>updateTransporterPage</value>
+  </data>
+  <data name="updateTransporterStrip.Text" xml:space="preserve">
+    <value>Змінити</value>
+  </data>
+  <data name="workDocumentClientLabel.Text" xml:space="preserve">
+    <value>На підставі якого документу</value>
+  </data>
+  <data name="yearLabel.Text" xml:space="preserve">
+    <value>2015</value>
+  </data>
+</root>

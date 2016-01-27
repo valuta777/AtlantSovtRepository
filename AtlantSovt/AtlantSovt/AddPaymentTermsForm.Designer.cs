@@ -28,43 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddPaymentTermsForm));
             this.addPaymentTermsButton = new System.Windows.Forms.Button();
             this.addPaymentTermsTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // addPaymentTermsButton
             // 
-            this.addPaymentTermsButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.addPaymentTermsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addPaymentTermsButton.Location = new System.Drawing.Point(0, 29);
+            resources.ApplyResources(this.addPaymentTermsButton, "addPaymentTermsButton");
             this.addPaymentTermsButton.Name = "addPaymentTermsButton";
-            this.addPaymentTermsButton.Size = new System.Drawing.Size(384, 52);
-            this.addPaymentTermsButton.TabIndex = 3;
-            this.addPaymentTermsButton.Text = "Додати";
             this.addPaymentTermsButton.UseVisualStyleBackColor = true;
             this.addPaymentTermsButton.Click += new System.EventHandler(this.addCargoButton_Click);
             // 
             // addPaymentTermsTextBox
             // 
-            this.addPaymentTermsTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addPaymentTermsTextBox.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.addPaymentTermsTextBox, "addPaymentTermsTextBox");
             this.addPaymentTermsTextBox.Name = "addPaymentTermsTextBox";
-            this.addPaymentTermsTextBox.Size = new System.Drawing.Size(383, 29);
-            this.addPaymentTermsTextBox.TabIndex = 2;
             // 
             // AddPaymentTermsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 81);
             this.Controls.Add(this.addPaymentTermsButton);
             this.Controls.Add(this.addPaymentTermsTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddPaymentTermsForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Додавання умов оплати";
             this.ResumeLayout(false);
             this.PerformLayout();
 

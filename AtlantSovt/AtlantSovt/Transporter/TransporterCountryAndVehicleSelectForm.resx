@@ -117,4 +117,172 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="transporterAddCountryButton.Text" xml:space="preserve">
+    <value>Додати нові країни</value>
+  </data>
+  <data name="transporterAddVehicleButton.Text" xml:space="preserve">
+    <value>Додати нові типи транспорту</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Вибір країн і типів транспорту</value>
+  </data>
+  <data name="transporterFilterSelectButton.Text" xml:space="preserve">
+    <value>Додати</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="transporterFilterSelectCountryCheckedListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="transporterFilterSelectCountryCheckedListBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="transporterFilterSelectCountryCheckedListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="transporterFilterSelectCountryCheckedListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>701, 148</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="transporterFilterSelectCountryCheckedListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="&gt;&gt;transporterFilterSelectCountryCheckedListBox.Name" xml:space="preserve">
+    <value>transporterFilterSelectCountryCheckedListBox</value>
+  </data>
+  <data name="&gt;&gt;transporterFilterSelectCountryCheckedListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transporterFilterSelectCountryCheckedListBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;transporterFilterSelectCountryCheckedListBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="transporterFilterSelectVehicleCheckedListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="transporterFilterSelectVehicleCheckedListBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="transporterFilterSelectVehicleCheckedListBox.HorizontalExtent" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="transporterFilterSelectVehicleCheckedListBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="transporterFilterSelectVehicleCheckedListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 152</value>
+  </data>
+  <data name="transporterFilterSelectVehicleCheckedListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>701, 148</value>
+  </data>
+  <data name="transporterFilterSelectVehicleCheckedListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
+  <data name="&gt;&gt;transporterFilterSelectVehicleCheckedListBox.Name" xml:space="preserve">
+    <value>transporterFilterSelectVehicleCheckedListBox</value>
+  </data>
+  <data name="&gt;&gt;transporterFilterSelectVehicleCheckedListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transporterFilterSelectVehicleCheckedListBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;transporterFilterSelectVehicleCheckedListBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="transporterFilterSelectButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="transporterFilterSelectButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="transporterFilterSelectButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 303</value>
+  </data>
+  <data name="transporterFilterSelectButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>801, 77</value>
+  </data>
+  <data name="transporterFilterSelectButton.TabIndex" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="&gt;&gt;transporterFilterSelectButton.Name" xml:space="preserve">
+    <value>transporterFilterSelectButton</value>
+  </data>
+  <data name="&gt;&gt;transporterFilterSelectButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transporterFilterSelectButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;transporterFilterSelectButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="transporterAddCountryButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="transporterAddCountryButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>701, 0</value>
+  </data>
+  <data name="transporterAddCountryButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 148</value>
+  </data>
+  <data name="transporterAddCountryButton.TabIndex" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="&gt;&gt;transporterAddCountryButton.Name" xml:space="preserve">
+    <value>transporterAddCountryButton</value>
+  </data>
+  <data name="&gt;&gt;transporterAddCountryButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transporterAddCountryButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;transporterAddCountryButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="transporterAddVehicleButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="transporterAddVehicleButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>701, 152</value>
+  </data>
+  <data name="transporterAddVehicleButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 148</value>
+  </data>
+  <data name="transporterAddVehicleButton.TabIndex" type="System.Int32, mscorlib">
+    <value>107</value>
+  </data>
+  <data name="&gt;&gt;transporterAddVehicleButton.Name" xml:space="preserve">
+    <value>transporterAddVehicleButton</value>
+  </data>
+  <data name="&gt;&gt;transporterAddVehicleButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transporterAddVehicleButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;transporterAddVehicleButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>801, 380</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>TransporterCountryAndVehicleSelectForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

@@ -117,4 +117,313 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="transporterShowFilterButton.Text" xml:space="preserve">
+    <value>Фільтрувати</value>
+  </data>
+  <data name="transporterShowFiltersSelectADCheckBox.Text" xml:space="preserve">
+    <value>ADR</value>
+  </data>
+  <data name="transporterShowFiltersSelectCMRCheckBox.Text" xml:space="preserve">
+    <value>CMR</value>
+  </data>
+  <data name="transporterShowFiltersSelectEKMTCheckBox.Text" xml:space="preserve">
+    <value>ЕКМТ</value>
+  </data>
+  <data name="transporterShowFiltersSelectIfForwarderCheckBox.Text" xml:space="preserve">
+    <value>Експедитор</value>
+  </data>
+  <data name="transporterShowFiltersSelectTURCheckBox.Text" xml:space="preserve">
+    <value>TIR</value>
+  </data>
+  <data name="transporterShowFiltersSelectZbornyCheckBox.Text" xml:space="preserve">
+    <value>Збірний</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Фільтрація</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="transporterShowFiltersSelectCountryCheckedListBox.ColumnWidth" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="transporterShowFiltersSelectCountryCheckedListBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="transporterShowFiltersSelectCountryCheckedListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="transporterShowFiltersSelectCountryCheckedListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 124</value>
+  </data>
+  <data name="transporterShowFiltersSelectCountryCheckedListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectCountryCheckedListBox.Name" xml:space="preserve">
+    <value>transporterShowFiltersSelectCountryCheckedListBox</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectCountryCheckedListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectCountryCheckedListBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectCountryCheckedListBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="transporterShowFilterButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="transporterShowFilterButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="transporterShowFilterButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 305</value>
+  </data>
+  <data name="transporterShowFilterButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 75</value>
+  </data>
+  <data name="transporterShowFilterButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFilterButton.Name" xml:space="preserve">
+    <value>transporterShowFilterButton</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFilterButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFilterButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFilterButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="transporterShowFiltersSelectVehicleCheckedListBox.ColumnWidth" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="transporterShowFiltersSelectVehicleCheckedListBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="transporterShowFiltersSelectVehicleCheckedListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 126</value>
+  </data>
+  <data name="transporterShowFiltersSelectVehicleCheckedListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 124</value>
+  </data>
+  <data name="transporterShowFiltersSelectVehicleCheckedListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectVehicleCheckedListBox.Name" xml:space="preserve">
+    <value>transporterShowFiltersSelectVehicleCheckedListBox</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectVehicleCheckedListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectVehicleCheckedListBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectVehicleCheckedListBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="transporterShowFiltersSelectADCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="transporterShowFiltersSelectADCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="transporterShowFiltersSelectADCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>725, 13</value>
+  </data>
+  <data name="transporterShowFiltersSelectADCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 25</value>
+  </data>
+  <data name="transporterShowFiltersSelectADCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectADCheckBox.Name" xml:space="preserve">
+    <value>transporterShowFiltersSelectADCheckBox</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectADCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectADCheckBox.Parent" xml:space="preserve">
+    <value>transporterShowFilterPanel</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectADCheckBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="transporterShowFiltersSelectZbornyCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="transporterShowFiltersSelectZbornyCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="transporterShowFiltersSelectZbornyCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>572, 13</value>
+  </data>
+  <data name="transporterShowFiltersSelectZbornyCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 25</value>
+  </data>
+  <data name="transporterShowFiltersSelectZbornyCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectZbornyCheckBox.Name" xml:space="preserve">
+    <value>transporterShowFiltersSelectZbornyCheckBox</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectZbornyCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectZbornyCheckBox.Parent" xml:space="preserve">
+    <value>transporterShowFilterPanel</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectZbornyCheckBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="transporterShowFiltersSelectEKMTCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="transporterShowFiltersSelectEKMTCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="transporterShowFiltersSelectEKMTCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 13</value>
+  </data>
+  <data name="transporterShowFiltersSelectEKMTCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 25</value>
+  </data>
+  <data name="transporterShowFiltersSelectEKMTCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectEKMTCheckBox.Name" xml:space="preserve">
+    <value>transporterShowFiltersSelectEKMTCheckBox</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectEKMTCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectEKMTCheckBox.Parent" xml:space="preserve">
+    <value>transporterShowFilterPanel</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectEKMTCheckBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="transporterShowFiltersSelectCMRCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="transporterShowFiltersSelectCMRCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="transporterShowFiltersSelectCMRCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 13</value>
+  </data>
+  <data name="transporterShowFiltersSelectCMRCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 25</value>
+  </data>
+  <data name="transporterShowFiltersSelectCMRCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectCMRCheckBox.Name" xml:space="preserve">
+    <value>transporterShowFiltersSelectCMRCheckBox</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectCMRCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectCMRCheckBox.Parent" xml:space="preserve">
+    <value>transporterShowFilterPanel</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectCMRCheckBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="transporterShowFiltersSelectTURCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="transporterShowFiltersSelectTURCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="transporterShowFiltersSelectTURCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 13</value>
+  </data>
+  <data name="transporterShowFiltersSelectTURCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 25</value>
+  </data>
+  <data name="transporterShowFiltersSelectTURCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectTURCheckBox.Name" xml:space="preserve">
+    <value>transporterShowFiltersSelectTURCheckBox</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectTURCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectTURCheckBox.Parent" xml:space="preserve">
+    <value>transporterShowFilterPanel</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectTURCheckBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="transporterShowFiltersSelectIfForwarderCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="transporterShowFiltersSelectIfForwarderCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="transporterShowFiltersSelectIfForwarderCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 13</value>
+  </data>
+  <data name="transporterShowFiltersSelectIfForwarderCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 25</value>
+  </data>
+  <data name="transporterShowFiltersSelectIfForwarderCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectIfForwarderCheckBox.Name" xml:space="preserve">
+    <value>transporterShowFiltersSelectIfForwarderCheckBox</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectIfForwarderCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectIfForwarderCheckBox.Parent" xml:space="preserve">
+    <value>transporterShowFilterPanel</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFiltersSelectIfForwarderCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="transporterShowFilterPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 252</value>
+  </data>
+  <data name="transporterShowFilterPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 52</value>
+  </data>
+  <data name="transporterShowFilterPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFilterPanel.Name" xml:space="preserve">
+    <value>transporterShowFilterPanel</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFilterPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFilterPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;transporterShowFilterPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 380</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>TransporterShowFiltrationForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
