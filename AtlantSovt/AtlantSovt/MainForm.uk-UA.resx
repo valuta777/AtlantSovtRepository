@@ -120,9 +120,6 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Атлант-Совт</value>
   </data>
-  <data name="addArbeitenPage.Text" xml:space="preserve">
-    <value>addArbeitenPage</value>
-  </data>
   <data name="addArbeitenToolStripMenuItem.Text" xml:space="preserve">
     <value>Додати</value>
   </data>
@@ -185,9 +182,6 @@
   </data>
   <data name="addForwarderStrip.Text" xml:space="preserve">
     <value>Додати</value>
-  </data>
-  <data name="additionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Додатково</value>
   </data>
   <data name="addOrderMenuItem.Text" xml:space="preserve">
     <value>Додати</value>
@@ -327,34 +321,16 @@
   <data name="deleteClientsStrip.Text" xml:space="preserve">
     <value>Видалити</value>
   </data>
-  <data name="deleteDiapasoneSelectLabel.Text" xml:space="preserve">
-    <value>Виберіть діапазон</value>
-  </data>
   <data name="deleteForwarderPage.Text" xml:space="preserve">
     <value>deleteForwarderPage</value>
   </data>
   <data name="deleteForwarderStrip.Text" xml:space="preserve">
     <value>Видалити</value>
   </data>
-  <data name="deleteItemSelectLabel.Text" xml:space="preserve">
-    <value>Виберіть запис</value>
-  </data>
-  <data name="deletePage.Text" xml:space="preserve">
-    <value>deletePage</value>
-  </data>
-  <data name="deleteTableSelectLabel.Text" xml:space="preserve">
-    <value>Виберіть таблицю</value>
-  </data>
-  <data name="deleteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Видалити</value>
-  </data>
   <data name="deleteTransporterPage.Text" xml:space="preserve">
     <value>deleteTransporterPage</value>
   </data>
   <data name="deleteTransporterStrip.Text" xml:space="preserve">
-    <value>Видалити</value>
-  </data>
-  <data name="deteteAdditionsButton.Text" xml:space="preserve">
     <value>Видалити</value>
   </data>
   <data name="documentationToolStripMenuItem.Text" xml:space="preserve">
@@ -447,7 +423,6 @@
   </data>
   <data name="label14.Text" xml:space="preserve">
     <value>Контактні дані</value>
-    <comment>Previous text: Контакти</comment>
   </data>
   <data name="label15.Text" xml:space="preserve">
     <value>Перевізники</value>
@@ -459,7 +434,7 @@
     <value>Виберіть діапазон</value>
   </data>
   <data name="label18cont.Text" xml:space="preserve">
-    <value>Виберіть діапазон:</value>
+    <value>Виберіть діапазон</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>*</value>
@@ -493,7 +468,7 @@
     <value>Мова:</value>
   </data>
   <data name="label37cont.Text" xml:space="preserve">
-    <value>Експедитор:</value>
+    <value>Експедитор</value>
   </data>
   <data name="label37ShowContract.Text" xml:space="preserve">
     <value>Контактні дані перевізника</value>
@@ -556,7 +531,7 @@
     <value>Дата завантаження | До</value>
   </data>
   <data name="label51cont.Text" xml:space="preserve">
-    <value>Другий учасник договору:</value>
+    <value>Другий учасник договору</value>
   </data>
   <data name="label52.Text" xml:space="preserve">
     <value>Виберіть діапазон</value>
@@ -604,7 +579,7 @@
     <value>Дата доставки | До</value>
   </data>
   <data name="label66cont.Text" xml:space="preserve">
-    <value>Виберіть шаблон:</value>
+    <value>Виберіть шаблон</value>
   </data>
   <data name="label67.Text" xml:space="preserve">
     <value>Дата завантаження | До</value>
@@ -619,7 +594,7 @@
     <value>Дата доставки | До</value>
   </data>
   <data name="label69cont.Text" xml:space="preserve">
-    <value>Напрямок:</value>
+    <value>Напрямок</value>
   </data>
   <data name="label70.Text" xml:space="preserve">
     <value>*</value>
@@ -709,8 +684,8 @@
     <value>Примітка</value>
   </data>
   <data name="labelshow67.Text" xml:space="preserve">
-    <value>Контакти</value>
-    <comment>Previous text: Контактні дані</comment>
+    <value>Контактні дані</value>
+    <comment>Previous text: Контакти</comment>
   </data>
   <data name="labelshow68.Text" xml:space="preserve">
     <value>Перевізники</value>
@@ -848,8 +823,7 @@
     <value>Працівник</value>
   </data>
   <data name="OrderUpdateLabel16.Text" xml:space="preserve">
-    <value>АДР</value>
-    <comment>Previous text: ADR</comment>
+    <value>ADR</value>
   </data>
   <data name="OrderUpdateLabel17.Text" xml:space="preserve">
     <value>Виберіть клієнта</value>

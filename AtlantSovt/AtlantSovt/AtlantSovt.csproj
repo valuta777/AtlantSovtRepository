@@ -51,6 +51,7 @@
     <ApplicationIcon>Resources\Logo.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
+  <PropertyGroup />
   <PropertyGroup>
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
@@ -679,12 +680,8 @@
     <EmbeddedResource Include="MainForm.uk-UA.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.ru-RU.resx">
-      <DependentUpon>Resources.resx</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.uk-UA.resx">
-      <DependentUpon>Resources.resx</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru-RU.resx" />
+    <EmbeddedResource Include="Properties\Resources.uk-UA.resx" />
     <EmbeddedResource Include="SelectCustomsAddressesForm.resx">
       <DependentUpon>SelectCustomsAddressesForm.cs</DependentUpon>
     </EmbeddedResource>

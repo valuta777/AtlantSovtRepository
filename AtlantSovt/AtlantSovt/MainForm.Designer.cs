@@ -530,7 +530,6 @@
             this.trackingShowAddCommentButton = new System.Windows.Forms.Button();
             this.trackingShowCloseOrderButton = new System.Windows.Forms.Button();
             this.showTrackingOnlyActive = new System.Windows.Forms.CheckBox();
-            this.onlyActiveLabel = new System.Windows.Forms.Label();
             this.showTrackingDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.trackingLabel1 = new System.Windows.Forms.Label();
             this.trackingShowTransporterContactsDataGridView = new System.Windows.Forms.DataGridView();
@@ -4828,7 +4827,6 @@
             this.showTrackingPage.Controls.Add(this.trackingShowAddCommentButton);
             this.showTrackingPage.Controls.Add(this.trackingShowCloseOrderButton);
             this.showTrackingPage.Controls.Add(this.showTrackingOnlyActive);
-            this.showTrackingPage.Controls.Add(this.onlyActiveLabel);
             this.showTrackingPage.Controls.Add(this.showTrackingDateTimePicker);
             this.showTrackingPage.Controls.Add(this.trackingLabel1);
             this.showTrackingPage.Controls.Add(this.trackingShowTransporterContactsDataGridView);
@@ -4930,11 +4928,6 @@
             this.showTrackingOnlyActive.Name = "showTrackingOnlyActive";
             this.showTrackingOnlyActive.UseVisualStyleBackColor = true;
             this.showTrackingOnlyActive.CheckedChanged += new System.EventHandler(this.showTrackingOnlyActive_CheckedChanged);
-            // 
-            // onlyActiveLabel
-            // 
-            resources.ApplyResources(this.onlyActiveLabel, "onlyActiveLabel");
-            this.onlyActiveLabel.Name = "onlyActiveLabel";
             // 
             // showTrackingDateTimePicker
             // 
@@ -6146,7 +6139,6 @@
         private System.Windows.Forms.Label label67cont;
         private System.Windows.Forms.Label yearLabel;
         private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.Label onlyActiveLabel;
         private System.Windows.Forms.Button trackingShowCloseOrderButton;
         private System.Windows.Forms.Button trackingShowAddCommentButton;
         private System.Windows.Forms.Label trackingLabel17;
