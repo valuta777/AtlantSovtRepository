@@ -3172,6 +3172,7 @@ namespace AtlantSovt
 
 
         #endregion
+
         //Deletes
         #region delete
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)

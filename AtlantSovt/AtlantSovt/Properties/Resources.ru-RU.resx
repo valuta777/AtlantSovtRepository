@@ -772,4 +772,61 @@
   <data name="Видалити_заявку" xml:space="preserve">
     <value>Удалить заявку </value>
   </data>
+  <data name="Адреса_завантаження" xml:space="preserve">
+    <value>Адрес загрузки</value>
+  </data>
+  <data name="Адреса_замитнення" xml:space="preserve">
+    <value>Адрес затаможивание</value>
+  </data>
+  <data name="Адреса_розвантаження" xml:space="preserve">
+    <value>Адрес разгрузки</value>
+  </data>
+  <data name="Адреса_розмитнення" xml:space="preserve">
+    <value>Адрес растаможивания</value>
+  </data>
+  <data name="Видалення_цього_запису_приведе_до_його_втрати_у_звязаних_таблицях" xml:space="preserve">
+    <value>Удаление этой записи приведет к его потере в связанных таблицах</value>
+  </data>
+  <data name="Видалити_запис" xml:space="preserve">
+    <value>Удалить_запись</value>
+  </data>
+  <data name="Додаткові_умови" xml:space="preserve">
+    <value>Дополнительные условия</value>
+  </data>
+  <data name="Країни" xml:space="preserve">
+    <value>Страны</value>
+  </data>
+  <data name="Куб" xml:space="preserve">
+    <value>Куб</value>
+  </data>
+  <data name="На_основі_документу" xml:space="preserve">
+    <value>На основе документа</value>
+  </data>
+  <data name="Нормативні_простої" xml:space="preserve">
+    <value>Нормативные простои</value>
+  </data>
+  <data name="Працівники" xml:space="preserve">
+    <value>Работники</value>
+  </data>
+  <data name="Причіп" xml:space="preserve">
+    <value>Прицеп</value>
+  </data>
+  <data name="Типи_вантажу" xml:space="preserve">
+    <value>Типы груза</value>
+  </data>
+  <data name="Типи_транспорту" xml:space="preserve">
+    <value>Типы транспорта</value>
+  </data>
+  <data name="Умови_оплати" xml:space="preserve">
+    <value>Условия оплаты</value>
+  </data>
+  <data name="Форми_завантаження" xml:space="preserve">
+    <value>Формы загрузки</value>
+  </data>
+  <data name="Штрафи_за_відмову_від_заявки" xml:space="preserve">
+    <value>Штрафы за отказ от заявки</value>
+  </data>
+  <data name="Штрафи_за_простої" xml:space="preserve">
+    <value>Штрафы за простои</value>
+  </data>
 </root>

@@ -1019,7 +1019,7 @@ namespace AtlantSovt
                     {
                         try
                         {
-                            if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_заявку + order.Id + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_заявку + " " + + order.Id + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
                                 order.IsDeleted = true;
                                 db.Entry(order).State = EntityState.Modified;

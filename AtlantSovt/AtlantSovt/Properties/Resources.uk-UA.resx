@@ -159,10 +159,18 @@
     <value>
 - &lt;Клієнт&gt;</value>
   </data>
+  <data name="_Клієнт_1" xml:space="preserve">
+    <value>
+- &lt;Клієнт&gt;</value>
+  </data>
   <data name="_Перевізник0" xml:space="preserve">
     <value>&lt;Перевізник&gt; </value>
   </data>
   <data name="_Перевізник_" xml:space="preserve">
+    <value>
+- &lt;Перевізник&gt;</value>
+  </data>
+  <data name="_Перевізник_1" xml:space="preserve">
     <value>
 - &lt;Перевізник&gt;</value>
   </data>
@@ -183,6 +191,18 @@
   </data>
   <data name="Адрес_розмитнення" xml:space="preserve">
     <value> Адрес розмитнення</value>
+  </data>
+  <data name="Адреса_завантаження" xml:space="preserve">
+    <value>Адреса завантаження</value>
+  </data>
+  <data name="Адреса_замитнення" xml:space="preserve">
+    <value>Адреса замитнення</value>
+  </data>
+  <data name="Адреса_розвантаження" xml:space="preserve">
+    <value>Адреса розвантаження</value>
+  </data>
+  <data name="Адреса_розмитнення" xml:space="preserve">
+    <value>Адреса розмитнення</value>
   </data>
   <data name="Адреса_успішно_додана" xml:space="preserve">
     <value>Адреса успішно додана </value>
@@ -256,6 +276,9 @@
   <data name="Виберіть_спочатку_перевізника" xml:space="preserve">
     <value>Виберіть спочатку перевізника</value>
   </data>
+  <data name="Видалення_цього_запису_приведе_до_його_втрати_у_звязаних_таблицях" xml:space="preserve">
+    <value>Видалення цього запису приведе до його втрати у зв'язаних таблицях</value>
+  </data>
   <data name="Видалити_арбайтен" xml:space="preserve">
     <value>Видалити арбайтен?</value>
   </data>
@@ -273,6 +296,12 @@
   </data>
   <data name="Видалити_експедитора" xml:space="preserve">
     <value>Видалити експедитора </value>
+  </data>
+  <data name="Видалити_запис" xml:space="preserve">
+    <value>Видалити запис</value>
+  </data>
+  <data name="Видалити_заявку" xml:space="preserve">
+    <value>Видалити заявку</value>
   </data>
   <data name="Видалити_клієнта" xml:space="preserve">
     <value>Видалити клієнта </value>
@@ -318,6 +347,9 @@
   </data>
   <data name="Договір_успішно_видалений" xml:space="preserve">
     <value>Договір успішно видалений</value>
+  </data>
+  <data name="Додаткові_умови" xml:space="preserve">
+    <value>Додаткові умови</value>
   </data>
   <data name="Другий_учасник_договору" xml:space="preserve">
     <value>Другий учасник договору</value>
@@ -404,6 +436,10 @@
   <data name="Зміни_збережено" xml:space="preserve">
     <value>Зміни збережено: </value>
   </data>
+  <data name="Змінити_мову" xml:space="preserve">
+    <value>Змінити мову та перезавантажити програму?
+Не збережена інформація буде втрачена!</value>
+  </data>
   <data name="Клієнт" xml:space="preserve">
     <value>Клієнт</value>
   </data>
@@ -453,6 +489,12 @@
   <data name="Країна" xml:space="preserve">
     <value>Країна</value>
   </data>
+  <data name="Країни" xml:space="preserve">
+    <value>Країни</value>
+  </data>
+  <data name="Куб" xml:space="preserve">
+    <value>Куб</value>
+  </data>
   <data name="Мітка" xml:space="preserve">
     <value>Мітка</value>
   </data>
@@ -470,6 +512,9 @@
   </data>
   <data name="На_основі" xml:space="preserve">
     <value>На основі</value>
+  </data>
+  <data name="На_основі_документу" xml:space="preserve">
+    <value>На основі документу</value>
   </data>
   <data name="Назва" xml:space="preserve">
     <value>Назва</value>
@@ -542,6 +587,9 @@
   </data>
   <data name="Номер_свідоцтва" xml:space="preserve">
     <value>Номер свідоцтва</value>
+  </data>
+  <data name="Нормативні_простої" xml:space="preserve">
+    <value>Нормативні простої</value>
   </data>
   <data name="Обов_язково_виберіть_шаблон" xml:space="preserve">
     <value>Обов'язково виберіть шаблон!</value>
@@ -632,8 +680,14 @@
   <data name="Працівник" xml:space="preserve">
     <value>Працівник</value>
   </data>
+  <data name="Працівники" xml:space="preserve">
+    <value>Працівники</value>
+  </data>
   <data name="Примітка" xml:space="preserve">
     <value>Примітка:</value>
+  </data>
+  <data name="Причіп" xml:space="preserve">
+    <value>Причіп</value>
   </data>
   <data name="Продовжити_без_повного_заповнення_даних" xml:space="preserve">
     <value>
@@ -652,6 +706,9 @@
     <value>Спочатку виберіть заявку</value>
   </data>
   <data name="Стан" xml:space="preserve">
+    <value>Стан</value>
+  </data>
+  <data name="Стан1" xml:space="preserve">
     <value>Стан</value>
   </data>
   <data name="Стан_договору" xml:space="preserve">
@@ -682,8 +739,17 @@
   <data name="Типів_транспорту" xml:space="preserve">
     <value> типів транспорту</value>
   </data>
+  <data name="Типи_вантажу" xml:space="preserve">
+    <value>Типи вантажу</value>
+  </data>
+  <data name="Типи_транспорту" xml:space="preserve">
+    <value>Типи транспорту</value>
+  </data>
   <data name="Українська" xml:space="preserve">
     <value>Українська</value>
+  </data>
+  <data name="Умови_оплати" xml:space="preserve">
+    <value>Умови оплати</value>
   </data>
   <data name="Успішно_вибрано" xml:space="preserve">
     <value>Успішно вибрано </value>
@@ -775,55 +841,22 @@
   <data name="Факс" xml:space="preserve">
     <value>Факс</value>
   </data>
+  <data name="Форми_завантаження" xml:space="preserve">
+    <value>Форми завантаження</value>
+  </data>
   <data name="Чи_є_експедитором" xml:space="preserve">
     <value>Чи є експедитором?</value>
+  </data>
+  <data name="Штрафи_за_відмову_від_заявки" xml:space="preserve">
+    <value>Штрафи за відмову від заявки</value>
+  </data>
+  <data name="Штрафи_за_простої" xml:space="preserve">
+    <value>Штрафи за простої</value>
   </data>
   <data name="Ще_не_присвоєно" xml:space="preserve">
     <value>Ще не присвоєно</value>
   </data>
   <data name="Юридична_адреса" xml:space="preserve">
     <value>Юридична адреса</value>
-  </data>
-  <data name="ADR1" xml:space="preserve">
-    <value>ADR</value>
-  </data>
-  <data name="CMR1" xml:space="preserve">
-    <value>CMR</value>
-  </data>
-  <data name="EKMT1" xml:space="preserve">
-    <value>EKMT</value>
-  </data>
-  <data name="Email1" xml:space="preserve">
-    <value>Email</value>
-  </data>
-  <data name="IBAN1" xml:space="preserve">
-    <value>IBAN</value>
-  </data>
-  <data name="IПН1" xml:space="preserve">
-    <value>IПН</value>
-  </data>
-  <data name="SWIFT1" xml:space="preserve">
-    <value>SWIFT</value>
-  </data>
-  <data name="TIR1" xml:space="preserve">
-    <value>TIR</value>
-  </data>
-  <data name="_Клієнт_1" xml:space="preserve">
-    <value>
-- &lt;Клієнт&gt;</value>
-  </data>
-  <data name="_Перевізник_1" xml:space="preserve">
-    <value>
-- &lt;Перевізник&gt;</value>
-  </data>
-  <data name="Стан1" xml:space="preserve">
-    <value>Стан</value>
-  </data>
-  <data name="Змінити_мову" xml:space="preserve">
-    <value>Змінити мову та перезавантажити програму?
-Не збережена інформація буде втрачена!</value>
-  </data>
-  <data name="Видалити_заявку" xml:space="preserve">
-    <value>Видалити заявку</value>
   </data>
 </root>
