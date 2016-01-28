@@ -710,7 +710,7 @@ namespace AtlantSovt
 
                         string transporterName = (orderDocument.Transporter == null || orderDocument.Transporter.FullName == "") ? "" : orderDocument.Transporter.FullName;
                         string cargoType = (orderDocument.Cargo == null || orderDocument.Cargo.Type == "") ? "" : orderDocument.Cargo.Type + ", ";
-                        string cube = (orderDocument.Cube == null || orderDocument.Cube.Type == "") ? "" : orderDocument.Cube.Type + ", ";
+                        string cube = (orderDocument.Cube == null || orderDocument.Cube.Type == "") ? "" : orderDocument.Cube.Type + " м³, ";
                         string additionalTerms = (orderDocument.AdditionalTerm == null || orderDocument.AdditionalTerm.Type == "") ? "" : orderDocument.AdditionalTerm.Type;
                         string trailer = (orderDocument.Trailer == null || orderDocument.Trailer.Type == "") ? "" : orderDocument.Trailer.Type + ", ";
                         string paymentTerms = (orderDocument.Payment == null || orderDocument.Payment.Type == "") ? "" : orderDocument.Payment.Type;
@@ -762,7 +762,7 @@ namespace AtlantSovt
                                 downloadAddress += (address.DownloadAddress.CityCode != "") ? address.DownloadAddress.CityCode + ", " : "";
                                 downloadAddress += (address.DownloadAddress.StreetName != "") ? address.DownloadAddress.StreetName + ", " : "";
                                 downloadAddress += (address.DownloadAddress.HouseNumber != "") ? address.DownloadAddress.HouseNumber + ", " : "";
-                                downloadAddress += (address.DownloadAddress.CompanyName != "") ? address.DownloadAddress.CompanyName + "\r" : "\r";
+                                downloadAddress += (address.DownloadAddress.CompanyName != "") ? address.DownloadAddress.CompanyName + "\v" : "\v";
                             }
                         }
 
@@ -775,7 +775,9 @@ namespace AtlantSovt
                                 uploadAddress += (address.UploadAddress.CityCode != "") ? address.UploadAddress.CityCode + ", " : "";
                                 uploadAddress += (address.UploadAddress.StreetName != "") ? address.UploadAddress.StreetName + ", " : "";
                                 uploadAddress += (address.UploadAddress.HouseNumber != "") ? address.UploadAddress.HouseNumber + ", " : "";
-                                uploadAddress += (address.UploadAddress.CompanyName != "") ? address.UploadAddress.CompanyName + "\r" : "\r";
+                                uploadAddress += (address.UploadAddress.CompanyName != "") ? address.UploadAddress.CompanyName + "," : "";
+                                uploadAddress += " згідно CMR";
+
                             }
                         }
 
@@ -788,7 +790,7 @@ namespace AtlantSovt
                                 customAddress += (address.CustomsAddress.CityCode != "") ? address.CustomsAddress.CityCode + ", " : "";
                                 customAddress += (address.CustomsAddress.StreetName != "") ? address.CustomsAddress.StreetName + ", " : "";
                                 customAddress += (address.CustomsAddress.HouseNumber != "") ? address.CustomsAddress.HouseNumber + ", " : "";
-                                customAddress += (address.CustomsAddress.CompanyName != "") ? address.CustomsAddress.CompanyName + "\r" : "\r";
+                                customAddress += (address.CustomsAddress.CompanyName != "") ? address.CustomsAddress.CompanyName : "";
                             }
                         }
 
@@ -801,7 +803,7 @@ namespace AtlantSovt
                                 uncustomAddress += (address.UnCustomsAddress.CityCode != "") ? address.UnCustomsAddress.CityCode + ", " : "";
                                 uncustomAddress += (address.UnCustomsAddress.StreetName != "") ? address.UnCustomsAddress.StreetName + ", " : "";
                                 uncustomAddress += (address.UnCustomsAddress.HouseNumber != "") ? address.UnCustomsAddress.HouseNumber + ", " : "";
-                                uncustomAddress += (address.UnCustomsAddress.CompanyName != "") ? address.UnCustomsAddress.CompanyName + "\r" : "\r";
+                                uncustomAddress += (address.UnCustomsAddress.CompanyName != "") ? address.UnCustomsAddress.CompanyName : "";
                             }
                         }
 

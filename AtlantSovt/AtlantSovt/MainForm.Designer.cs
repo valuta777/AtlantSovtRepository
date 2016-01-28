@@ -2785,6 +2785,7 @@
             // 
             // deleteToolStripMenuItem
             // 
+            this.deleteToolStripMenuItem.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
@@ -3126,7 +3127,6 @@
             // addClientTaxPayerStatusButton
             // 
             resources.ApplyResources(this.addClientTaxPayerStatusButton, "addClientTaxPayerStatusButton");
-            this.addClientTaxPayerStatusButton.Image = global::AtlantSovt.Properties.Resources.addButton;
             this.addClientTaxPayerStatusButton.Name = "addClientTaxPayerStatusButton";
             this.addClientTaxPayerStatusButton.TabStop = false;
             this.addClientTaxPayerStatusButton.UseVisualStyleBackColor = true;
@@ -3135,7 +3135,6 @@
             // addClientWorkDocumentButton
             // 
             resources.ApplyResources(this.addClientWorkDocumentButton, "addClientWorkDocumentButton");
-            this.addClientWorkDocumentButton.Image = global::AtlantSovt.Properties.Resources.addButton;
             this.addClientWorkDocumentButton.Name = "addClientWorkDocumentButton";
             this.addClientWorkDocumentButton.TabStop = false;
             this.addClientWorkDocumentButton.UseVisualStyleBackColor = true;
@@ -5554,7 +5553,6 @@
             // ruLangButton
             // 
             resources.ApplyResources(this.ruLangButton, "ruLangButton");
-            this.ruLangButton.BackgroundImage = global::AtlantSovt.Properties.Resources.RU;
             this.ruLangButton.Name = "ruLangButton";
             this.ruLangButton.UseVisualStyleBackColor = true;
             this.ruLangButton.Click += new System.EventHandler(this.ruLangButton_Click);
@@ -5562,7 +5560,6 @@
             // uaLangButton
             // 
             resources.ApplyResources(this.uaLangButton, "uaLangButton");
-            this.uaLangButton.BackgroundImage = global::AtlantSovt.Properties.Resources.UA;
             this.uaLangButton.Name = "uaLangButton";
             this.uaLangButton.UseVisualStyleBackColor = true;
             this.uaLangButton.Click += new System.EventHandler(this.uaLangButton_Click);

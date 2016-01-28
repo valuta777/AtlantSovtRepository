@@ -243,6 +243,12 @@
     <Compile Include="MainForm.Arbeiten.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MainForm.Delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Delete.Designer.cs">
+      <DependentUpon>MainForm.Delete.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.Documentation.cs">
       <SubType>Form</SubType>
     </Compile>
