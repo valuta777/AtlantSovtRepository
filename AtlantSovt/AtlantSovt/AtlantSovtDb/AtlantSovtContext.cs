@@ -8,7 +8,7 @@ namespace AtlantSovt.AtlantSovtDb
     public partial class AtlantSovtContext : DbContext
     {
         public AtlantSovtContext()
-            : base(ConnectionForm.GetConnectionString())
+           : base(ConnectionForm.GetConnectionString())
         {
         }
 
@@ -134,15 +134,6 @@ namespace AtlantSovt.AtlantSovtDb
                 .HasMany(e => e.OrderLoadingForms)
                 .WithRequired(e => e.LoadingForm)
                 .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Order>()
-                .Property(e => e.YorU)
-                .IsFixedLength()
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Order>()
-                .Property(e => e.Freight)
-                .IsUnicode(false);
 
             modelBuilder.Entity<Order>()
                 .HasOptional(e => e.Arbeiten)

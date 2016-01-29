@@ -12,20 +12,20 @@ namespace AtlantSovt.AtlantSovtDb
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
 
-        [StringLength(50)]
+        [StringLength(100)]
         public string ClientAccountNumber { get; set; }
 
         public DateTime? PaymentDate { get; set; }
 
-        [StringLength(50)]
+        [StringLength(100)]
         public string ClientPayment { get; set; }
 
         public DateTime? DownloadDate { get; set; }
 
-        [StringLength(50)]
+        [StringLength(100)]
         public string VehicleNumber { get; set; }
 
-        [StringLength(50)]
+        [StringLength(100)]
         public string TransporterPayment { get; set; }
 
         public string Note { get; set; }

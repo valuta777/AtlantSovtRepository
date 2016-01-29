@@ -9,6 +9,7 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("Vehicle")]
     public partial class Vehicle
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Vehicle()
         {
             TransporterVehicles = new HashSet<TransporterVehicle>();
@@ -19,6 +20,7 @@ namespace AtlantSovt.AtlantSovtDb
         [StringLength(50)]
         public string Type { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TransporterVehicle> TransporterVehicles { get; set; }
     }
 }

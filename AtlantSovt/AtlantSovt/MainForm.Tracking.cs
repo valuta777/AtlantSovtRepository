@@ -583,7 +583,7 @@ namespace AtlantSovt
                         if (orderDocument.Payment == null || orderDocument.Payment.Type == "") isOrderFull = false;
                         if (orderDocument.Freight == null || orderDocument.Freight == "") isOrderFull = false;
                         if (orderDocument.FineForDelay == null || orderDocument.FineForDelay.Type == "") isOrderFull = false;
-                        if (Convert.ToString(orderDocument.CargoWeight) == null) isOrderFull = false;
+                        if (orderDocument.CargoWeight == null) isOrderFull = false;
                         if (orderDocument.OrderDeny == null || orderDocument.OrderDeny.Type == "") isOrderFull = false;
 
                         if (orderDocument.RegularyDelay == null || orderDocument.RegularyDelay.Type == "")
@@ -797,7 +797,7 @@ namespace AtlantSovt
                         string paymentTerms = (orderDocument.Payment == null || orderDocument.Payment.Type == "") ? "" : orderDocument.Payment.Type;
                         string freight = (orderDocument.Freight == null || orderDocument.Freight == "") ? "" : orderDocument.Freight;
                         string fineForDelay = (orderDocument.FineForDelay == null || orderDocument.FineForDelay.Type == "") ? "_____________________" : orderDocument.FineForDelay.Type;
-                        string weight = (Convert.ToString(orderDocument.CargoWeight) == null) ? "" : Convert.ToString(orderDocument.CargoWeight) + " т";
+                        string weight = (orderDocument.CargoWeight == null) ? "" : orderDocument.CargoWeight;
                         string orderDeny = (orderDocument.OrderDeny == null || orderDocument.OrderDeny.Type == "") ? "____________________" : orderDocument.OrderDeny.Type;
                         string tirCmr = (orderDocument.TirCmr == null || orderDocument.TirCmr.Type == "") ? "" : orderDocument.TirCmr.Type;
 

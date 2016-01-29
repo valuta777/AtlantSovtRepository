@@ -9,6 +9,7 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("Cargo")]
     public partial class Cargo
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Cargo()
         {
             Orders = new HashSet<Order>();
@@ -16,9 +17,10 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long Id { get; set; }
 
-        [StringLength(50)]
+        [StringLength(100)]
         public string Type { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
     }
 }
