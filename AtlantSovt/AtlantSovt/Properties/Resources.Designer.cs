@@ -100,6 +100,16 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 
+        ///- &lt;Клієнт&gt;.
+        /// </summary>
+        internal static string _Клієнт_1 {
+            get {
+                return ResourceManager.GetString("_Клієнт_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;Клієнт&gt; .
         /// </summary>
         internal static string _Клієнт0 {
@@ -115,6 +125,16 @@ namespace AtlantSovt.Properties {
         internal static string _Перевізник_ {
             get {
                 return ResourceManager.GetString("_Перевізник_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ///- &lt;Перевізник&gt;.
+        /// </summary>
+        internal static string _Перевізник_1 {
+            get {
+                return ResourceManager.GetString("_Перевізник_1", resourceCulture);
             }
         }
         
@@ -282,6 +302,42 @@ namespace AtlantSovt.Properties {
         internal static string Адрес_розмитнення {
             get {
                 return ResourceManager.GetString("Адрес_розмитнення", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Адреса завантаження.
+        /// </summary>
+        internal static string Адреса_завантаження {
+            get {
+                return ResourceManager.GetString("Адреса_завантаження", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Адреса замитнення.
+        /// </summary>
+        internal static string Адреса_замитнення {
+            get {
+                return ResourceManager.GetString("Адреса_замитнення", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Адреса розвантаження.
+        /// </summary>
+        internal static string Адреса_розвантаження {
+            get {
+                return ResourceManager.GetString("Адреса_розвантаження", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Адреса розмитнення.
+        /// </summary>
+        internal static string Адреса_розмитнення {
+            get {
+                return ResourceManager.GetString("Адреса_розмитнення", resourceCulture);
             }
         }
         
@@ -493,6 +549,15 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Видалення цього запису приведе до його втрати у зв&apos;язаних таблицях.
+        /// </summary>
+        internal static string Видалення_цього_запису_приведе_до_його_втрати_у_звязаних_таблицях {
+            get {
+                return ResourceManager.GetString("Видалення_цього_запису_приведе_до_його_втрати_у_звязаних_таблицях", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Видалити арбайтен?.
         /// </summary>
         internal static string Видалити_арбайтен {
@@ -547,7 +612,16 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Видалити заявку .
+        ///   Looks up a localized string similar to Видалити запис.
+        /// </summary>
+        internal static string Видалити_запис {
+            get {
+                return ResourceManager.GetString("Видалити_запис", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Видалити заявку.
         /// </summary>
         internal static string Видалити_заявку {
             get {
@@ -700,6 +774,15 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Додаткові умови.
+        /// </summary>
+        internal static string Додаткові_умови {
+            get {
+                return ResourceManager.GetString("Додаткові_умови", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Другий учасник договору.
         /// </summary>
         internal static string Другий_учасник_договору {
@@ -845,7 +928,7 @@ namespace AtlantSovt.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Закрити форму без збереження?
         ///Контакт НЕ збережеться.
-        /// Для збереження натисніть &lt;Отмена&gt; та &lt;Додати контакт&gt;.
+        ///Для збереження натисніть &lt;Отмена&gt; та &lt;Додати контакт&gt;.
         /// </summary>
         internal static string Закрити_форму_без_збереження_контакту {
             get {
@@ -1108,6 +1191,24 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Країни.
+        /// </summary>
+        internal static string Країни {
+            get {
+                return ResourceManager.GetString("Країни", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Куб.
+        /// </summary>
+        internal static string Куб {
+            get {
+                return ResourceManager.GetString("Куб", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Мітка.
         /// </summary>
         internal static string Мітка {
@@ -1140,6 +1241,15 @@ namespace AtlantSovt.Properties {
         internal static string На_основі {
             get {
                 return ResourceManager.GetString("На_основі", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to На основі документу.
+        /// </summary>
+        internal static string На_основі_документу {
+            get {
+                return ResourceManager.GetString("На_основі_документу", resourceCulture);
             }
         }
         
@@ -1374,6 +1484,15 @@ namespace AtlantSovt.Properties {
         internal static string Номер_свідоцтва {
             get {
                 return ResourceManager.GetString("Номер_свідоцтва", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Нормативні простої.
+        /// </summary>
+        internal static string Нормативні_простої {
+            get {
+                return ResourceManager.GetString("Нормативні_простої", resourceCulture);
             }
         }
         
@@ -1635,11 +1754,29 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Працівники.
+        /// </summary>
+        internal static string Працівники {
+            get {
+                return ResourceManager.GetString("Працівники", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Примітка:.
         /// </summary>
         internal static string Примітка {
             get {
                 return ResourceManager.GetString("Примітка", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Причіп.
+        /// </summary>
+        internal static string Причіп {
+            get {
+                return ResourceManager.GetString("Причіп", resourceCulture);
             }
         }
         
@@ -1708,6 +1845,15 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Стан.
+        /// </summary>
+        internal static string Стан1 {
+            get {
+                return ResourceManager.GetString("Стан1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Статус платника податку.
         /// </summary>
         internal static string Статус_платника_податку {
@@ -1772,6 +1918,24 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Типи вантажу.
+        /// </summary>
+        internal static string Типи_вантажу {
+            get {
+                return ResourceManager.GetString("Типи_вантажу", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Типи транспорту.
+        /// </summary>
+        internal static string Типи_транспорту {
+            get {
+                return ResourceManager.GetString("Типи_транспорту", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to  типів транспорту.
         /// </summary>
         internal static string Типів_транспорту {
@@ -1786,6 +1950,15 @@ namespace AtlantSovt.Properties {
         internal static string Українська {
             get {
                 return ResourceManager.GetString("Українська", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Умови оплати.
+        /// </summary>
+        internal static string Умови_оплати {
+            get {
+                return ResourceManager.GetString("Умови_оплати", resourceCulture);
             }
         }
         
@@ -2024,11 +2197,38 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Форми завантаження.
+        /// </summary>
+        internal static string Форми_завантаження {
+            get {
+                return ResourceManager.GetString("Форми_завантаження", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Чи є експедитором?.
         /// </summary>
         internal static string Чи_є_експедитором {
             get {
                 return ResourceManager.GetString("Чи_є_експедитором", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Штрафи за відмову від заявки.
+        /// </summary>
+        internal static string Штрафи_за_відмову_від_заявки {
+            get {
+                return ResourceManager.GetString("Штрафи_за_відмову_від_заявки", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Штрафи за простої.
+        /// </summary>
+        internal static string Штрафи_за_простої {
+            get {
+                return ResourceManager.GetString("Штрафи_за_простої", resourceCulture);
             }
         }
         

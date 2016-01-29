@@ -177,7 +177,18 @@ namespace AtlantSovt
         public void ShowTrackingSearch(DataGridView dataGridView, TextBox textBox, DateTimePicker dateTime, System.Windows.Forms.CheckBox checkBox)
         {
             var text = textBox.Text;
+            string[] orderNumber = text.Split('/');
+            int indexNumber = 0;
+            int yearCreate = 0;
+            int orderId = 0;
+            Int32.TryParse(text, out orderId);
+            if(orderNumber.Count() == 2)
+            {
+                Int32.TryParse(orderNumber[0], out indexNumber);
+                Int32.TryParse(orderNumber[1], out yearCreate);
+            }
 
+ 
             using (var db = new AtlantSovtContext())
             {
                 dataGridView.Columns.Clear();
@@ -199,7 +210,6 @@ namespace AtlantSovt
                        State = (!o.State.HasValue) ? AtlantSovt.Properties.Resources.Не_створена : ((o.State == false) ? AtlantSovt.Properties.Resources.Закрита : AtlantSovt.Properties.Resources.Відкрита),
                        CloseDate = (!o.CloseDate.HasValue) ? AtlantSovt.Properties.Resources.Не_визначено : o.CloseDate.Value.Day.ToString() + "." + o.CloseDate.Value.Month.ToString() + "." + o.CloseDate.Value.Year.ToString(),
                        Language = (!o.Language.HasValue) ? AtlantSovt.Properties.Resources.Не_вибрано : (o.Language == 0) ? AtlantSovt.Properties.Resources.Українська : (o.Language == 1) ? AtlantSovt.Properties.Resources.Польська : AtlantSovt.Properties.Resources.Німецька
-
                    };
                     dataGridView.DataSource = queryTextAndDate.ToList();
                     dataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
@@ -216,7 +226,7 @@ namespace AtlantSovt
                 {
                     var queryTextAndDate =
                    from o in db.Orders
-                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Staff.Type.Contains(text) ||
+                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Transporter.ShortName.Contains(text)  || o.Staff.Type.Contains(text) || o.Note.Contains(text) || (o.IndexNumber == indexNumber && o.Date.Value.Year == yearCreate) || o.Id == orderId ||
                          o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) && o.IsDeleted == false
                    orderby o.Id
                    select
@@ -282,7 +292,7 @@ namespace AtlantSovt
                 {
                     var queryTextAndDate =
                    from o in db.Orders
-                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Staff.Type.Contains(text) ||
+                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Transporter.ShortName.Contains(text) || o.Staff.Type.Contains(text) || o.Note.Contains(text) || (o.IndexNumber == indexNumber && o.Date.Value.Year == yearCreate) || o.Id == orderId ||
                          o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) && ((o.DownloadDateFrom.Value.Month == dateTime.Value.Month) ||
                    (o.DownloadDateTo.Value.Month == dateTime.Value.Month)) && ((o.DownloadDateFrom.Value.Year == dateTime.Value.Year) || o.DownloadDateTo.Value.Year == dateTime.Value.Year) && o.IsDeleted == false
                    orderby o.Id
@@ -348,8 +358,8 @@ namespace AtlantSovt
                 {
                     var queryTextAndDate =
                    from o in db.Orders
-                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Staff.Type.Contains(text) ||
-                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text)) && (o.State == true)) && o.IsDeleted == false
+                   where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Transporter.ShortName.Contains(text)  || o.Staff.Type.Contains(text) || o.Note.Contains(text) || (o.IndexNumber == indexNumber && o.Date.Value.Year == yearCreate) || o.Id == orderId ||
+                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) && (o.State == true) && o.IsDeleted == false
                    orderby o.Id
                    select
                    new
@@ -413,7 +423,7 @@ namespace AtlantSovt
                 {
                     var queryTextAndDate =
                   from o in db.Orders
-                  where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Staff.Type.Contains(text) ||
+                  where (o.Client.Name.Contains(text) || o.Transporter.FullName.Contains(text) || o.Transporter.ShortName.Contains(text) || o.Staff.Type.Contains(text) || o.Note.Contains(text) || (o.IndexNumber == indexNumber && o.Date.Value.Year == yearCreate) || o.Id == orderId ||
                         o.Transporter.TransporterContacts.Any(c => c.TelephoneNumber.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.Email.Contains(text)) || o.Transporter.TransporterContacts.Any(c => c.ContactPerson.Contains(text))) &&
                         ((o.DownloadDateFrom.Value.Month == dateTime.Value.Month) || (o.DownloadDateTo.Value.Month == dateTime.Value.Month)) && ((o.DownloadDateFrom.Value.Year == dateTime.Value.Year) ||
                         o.DownloadDateTo.Value.Year == dateTime.Value.Year) && o.State == true && o.IsDeleted == false
@@ -757,7 +767,7 @@ namespace AtlantSovt
                             dateTerms = "";
                         }
 
-
+                      
 
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).Count() == 1)
                         {
@@ -782,7 +792,7 @@ namespace AtlantSovt
 
                         string transporterName = (orderDocument.Transporter == null || orderDocument.Transporter.FullName == "") ? "" : orderDocument.Transporter.FullName;
                         string cargoType = (orderDocument.Cargo == null || orderDocument.Cargo.Type == "") ? "" : orderDocument.Cargo.Type + ", ";
-                        string cube = (orderDocument.Cube == null || orderDocument.Cube.Type == "") ? "" : orderDocument.Cube.Type + ", ";
+                        string cube = (orderDocument.Cube == null || orderDocument.Cube.Type == "") ? "" : orderDocument.Cube.Type + " м³, ";
                         string additionalTerms = (orderDocument.AdditionalTerm == null || orderDocument.AdditionalTerm.Type == "") ? "" : orderDocument.AdditionalTerm.Type;
                         string trailer = (orderDocument.Trailer == null || orderDocument.Trailer.Type == "") ? "" : orderDocument.Trailer.Type + ", ";
                         string paymentTerms = (orderDocument.Payment == null || orderDocument.Payment.Type == "") ? "" : orderDocument.Payment.Type;
@@ -829,13 +839,12 @@ namespace AtlantSovt
                         {
                             if(address.DownloadAddress != null)
                             {
-                                //todo country != null
-                                downloadAddress += (address.DownloadAddress.Country.Name != "") ? address.DownloadAddress.Country.Name + ", " : "";
-                                downloadAddress += (address.DownloadAddress.CountryCode != "") ? address.DownloadAddress.CountryCode + ", " : "";
-                                downloadAddress += (address.DownloadAddress.CityCode != "") ? address.DownloadAddress.CityCode + ", " : "";
-                                downloadAddress += (address.DownloadAddress.StreetName != "") ? address.DownloadAddress.StreetName + ", " : "";
-                                downloadAddress += (address.DownloadAddress.HouseNumber != "") ? address.DownloadAddress.HouseNumber + ", " : "";
-                                downloadAddress += (address.DownloadAddress.CompanyName != "") ? address.DownloadAddress.CompanyName + "\r" : "\r";
+                                downloadAddress += (address.DownloadAddress.Country.Name != "" && address.DownloadAddress.Country.Name != null) ? address.DownloadAddress.Country.Name + ", " : "";
+                                downloadAddress += (address.DownloadAddress.CountryCode != "" && address.DownloadAddress.CountryCode != null) ? address.DownloadAddress.CountryCode + ", " : "";
+                                downloadAddress += (address.DownloadAddress.CityCode != "" && address.DownloadAddress.CityCode != null) ? address.DownloadAddress.CityCode + ", " : "";
+                                downloadAddress += (address.DownloadAddress.StreetName != "" && address.DownloadAddress.StreetName != null) ? address.DownloadAddress.StreetName + ", " : "";
+                                downloadAddress += (address.DownloadAddress.HouseNumber != "" && address.DownloadAddress.HouseNumber != null) ? address.DownloadAddress.HouseNumber + ", " : "";
+                                downloadAddress += (address.DownloadAddress.CompanyName != "" && address.DownloadAddress.CompanyName != null) ? address.DownloadAddress.CompanyName + "\v" : "\v";
                             }
                         }
 
@@ -843,13 +852,14 @@ namespace AtlantSovt
                         {
                             if (address.UploadAddress != null)
                             {
-                                //todo country != null
-                                uploadAddress += (address.UploadAddress.Country.Name != "") ? address.UploadAddress.Country.Name + ", " : "";
-                                uploadAddress += (address.UploadAddress.CountryCode != "") ? address.UploadAddress.CountryCode + ", " : "";
-                                uploadAddress += (address.UploadAddress.CityCode != "") ? address.UploadAddress.CityCode + ", " : "";
-                                uploadAddress += (address.UploadAddress.StreetName != "") ? address.UploadAddress.StreetName + ", " : "";
-                                uploadAddress += (address.UploadAddress.HouseNumber != "") ? address.UploadAddress.HouseNumber + ", " : "";
-                                uploadAddress += (address.UploadAddress.CompanyName != "") ? address.UploadAddress.CompanyName + "\r" : "\r";
+                                uploadAddress += (address.UploadAddress.Country.Name != "" && address.UploadAddress.Country.Name != null) ? address.UploadAddress.Country.Name + ", " : "";
+                                uploadAddress += (address.UploadAddress.CountryCode != "" && address.UploadAddress.CountryCode != null) ? address.UploadAddress.CountryCode + ", " : "";
+                                uploadAddress += (address.UploadAddress.CityCode != "" && address.UploadAddress.CityCode != null) ? address.UploadAddress.CityCode + ", " : "";
+                                uploadAddress += (address.UploadAddress.StreetName != "" && address.UploadAddress.StreetName != null) ? address.UploadAddress.StreetName + ", " : "";
+                                uploadAddress += (address.UploadAddress.HouseNumber != "" && address.UploadAddress.HouseNumber != null) ? address.UploadAddress.HouseNumber + ", " : "";
+                                uploadAddress += (address.UploadAddress.CompanyName != "" && address.UploadAddress.CompanyName != null) ? address.UploadAddress.CompanyName + "," : "";
+                                uploadAddress += " згідно CMR";
+
                             }
                         }
 
@@ -857,13 +867,12 @@ namespace AtlantSovt
                         {
                             if (address.CustomsAddress != null)
                             {
-                                //todo country != null
-                                customAddress += (address.CustomsAddress.Country.Name != "") ? address.CustomsAddress.Country.Name + ", " : "";
-                                customAddress += (address.CustomsAddress.CountryCode != "") ? address.CustomsAddress.CountryCode + ", " : "";
-                                customAddress += (address.CustomsAddress.CityCode != "") ? address.CustomsAddress.CityCode + ", " : "";
-                                customAddress += (address.CustomsAddress.StreetName != "") ? address.CustomsAddress.StreetName + ", " : "";
-                                customAddress += (address.CustomsAddress.HouseNumber != "") ? address.CustomsAddress.HouseNumber + ", " : "";
-                                customAddress += (address.CustomsAddress.CompanyName != "") ? address.CustomsAddress.CompanyName + "\r" : "\r";
+                                customAddress += (address.CustomsAddress.Country.Name != "" && address.CustomsAddress.Country.Name != null) ? address.CustomsAddress.Country.Name + ", " : "";
+                                customAddress += (address.CustomsAddress.CountryCode != "" && address.CustomsAddress.CountryCode != null) ? address.CustomsAddress.CountryCode + ", " : "";
+                                customAddress += (address.CustomsAddress.CityCode != "" && address.CustomsAddress.CityCode != null) ? address.CustomsAddress.CityCode + ", " : "";
+                                customAddress += (address.CustomsAddress.StreetName != "" && address.CustomsAddress.StreetName != null) ? address.CustomsAddress.StreetName + ", " : "";
+                                customAddress += (address.CustomsAddress.HouseNumber != "" && address.CustomsAddress.HouseNumber != null) ? address.CustomsAddress.HouseNumber + ", " : "";
+                                customAddress += (address.CustomsAddress.CompanyName != "" && address.CustomsAddress.CompanyName != null) ? address.CustomsAddress.CompanyName : "";
                             }
                         }
 
@@ -871,13 +880,12 @@ namespace AtlantSovt
                         {
                             if (address.UnCustomsAddress != null)
                             {
-                                //todo country != null
-                                uncustomAddress += (address.UnCustomsAddress.Country.Name != "") ? address.UnCustomsAddress.Country.Name + ", " : "";
-                                uncustomAddress += (address.UnCustomsAddress.CountryCode != "") ? address.UnCustomsAddress.CountryCode + ", " : "";
-                                uncustomAddress += (address.UnCustomsAddress.CityCode != "") ? address.UnCustomsAddress.CityCode + ", " : "";
-                                uncustomAddress += (address.UnCustomsAddress.StreetName != "") ? address.UnCustomsAddress.StreetName + ", " : "";
-                                uncustomAddress += (address.UnCustomsAddress.HouseNumber != "") ? address.UnCustomsAddress.HouseNumber + ", " : "";
-                                uncustomAddress += (address.UnCustomsAddress.CompanyName != "") ? address.UnCustomsAddress.CompanyName + "\r" : "\r";
+                                uncustomAddress += (address.UnCustomsAddress.Country.Name != "" && address.UnCustomsAddress.Country.Name != null) ? address.UnCustomsAddress.Country.Name + ", " : "";
+                                uncustomAddress += (address.UnCustomsAddress.CountryCode != "" && address.UnCustomsAddress.CountryCode != null) ? address.UnCustomsAddress.CountryCode + ", " : "";
+                                uncustomAddress += (address.UnCustomsAddress.CityCode != "" && address.UnCustomsAddress.CityCode != null) ? address.UnCustomsAddress.CityCode + ", " : "";
+                                uncustomAddress += (address.UnCustomsAddress.StreetName != "" && address.UnCustomsAddress.StreetName != null) ? address.UnCustomsAddress.StreetName + ", " : "";
+                                uncustomAddress += (address.UnCustomsAddress.HouseNumber != "" && address.UnCustomsAddress.HouseNumber != null) ? address.UnCustomsAddress.HouseNumber + ", " : "";
+                                uncustomAddress += (address.UnCustomsAddress.CompanyName != "" && address.UnCustomsAddress.CompanyName != null) ? address.UnCustomsAddress.CompanyName : "";
                             }
                         }
 
@@ -1093,7 +1101,7 @@ namespace AtlantSovt
                     {
                         try
                         {
-                            if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_заявку + order.Id + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_заявку + " " + + order.Id + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
                                 order.IsDeleted = true;
                                 db.Entry(order).State = EntityState.Modified;
