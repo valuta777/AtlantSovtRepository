@@ -37,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>x64</PlatformTarget>
@@ -50,6 +51,7 @@
   <PropertyGroup>
     <ApplicationIcon>Resources\Logo.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup />
   <PropertyGroup>
     <NoWin32Manifest>true</NoWin32Manifest>
@@ -256,7 +258,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Additions\menuStripRenderer.cs" />
-    <Compile Include="MlString.cs" />
     <Compile Include="SelectCustomsAddressesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -680,11 +681,9 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.ru-RU.resx">
-      <DependentUpon>Resources.resx</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.uk-UA.resx">
-      <DependentUpon>Resources.resx</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.uk-UA.resx" />
     <EmbeddedResource Include="SelectCustomsAddressesForm.resx">
       <DependentUpon>SelectCustomsAddressesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -897,7 +896,9 @@
     <None Include="Resources\RU.jpg" />
     <None Include="Resources\UA.jpg" />
     <None Include="Resources\addButton.png" />
-    <Content Include="AtlantSovt_ml.xml" />
+    <Content Include="AtlantSovt_ml.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Resources\ConnectionStringList.txt" />
     <None Include="Resources\con_anim.gif" />
     <Content Include="Resources\Logo.ico" />

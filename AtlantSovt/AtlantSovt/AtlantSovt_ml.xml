@@ -824,6 +824,7 @@
   </GeneralIds>
   <GeneralIds>
     <StringID>274</StringID>
+    <Comment>Previous text: Підтвердіть видалення!</Comment>
   </GeneralIds>
   <GeneralIds>
     <StringID>275</StringID>
@@ -1061,6 +1062,8 @@
   </GeneralIds>
   <GeneralIds>
     <StringID>353</StringID>
+    <Comment>Previous text: Помилка при зміні запису:
+</Comment>
   </GeneralIds>
   <GeneralIds>
     <StringID>354</StringID>
@@ -1082,6 +1085,7 @@
   </GeneralIds>
   <GeneralIds>
     <StringID>360</StringID>
+    <Comment>Previous text: Клієнт успішно доданий [</Comment>
   </GeneralIds>
   <GeneralIds>
     <StringID>361</StringID>
@@ -1151,6 +1155,7 @@
   </GeneralIds>
   <GeneralIds>
     <StringID>383</StringID>
+    <Comment>Previous text: Ви не вибрали перевізника!</Comment>
   </GeneralIds>
   <GeneralIds>
     <StringID>384</StringID>
@@ -1175,6 +1180,7 @@
   </GeneralIds>
   <GeneralIds>
     <StringID>391</StringID>
+    <Comment>Previous text: Деякі дані не заповнені в: </Comment>
   </GeneralIds>
   <GeneralIds>
     <StringID>392</StringID>
@@ -1484,39 +1490,53 @@
   </GeneralIds>
   <GeneralIds>
     <StringID>494</StringID>
+    <Comment>Previous text: Заявку успішно створено
+</Comment>
   </GeneralIds>
   <GeneralIds>
     <StringID>495</StringID>
+    <Comment>Previous text: Помилка при створенні заявки
+</Comment>
   </GeneralIds>
   <GeneralIds>
     <StringID>496</StringID>
   </GeneralIds>
   <GeneralIds>
     <StringID>497</StringID>
+    <Comment>Previous text: Помилка (1 форма завантаження)
+</Comment>
   </GeneralIds>
   <GeneralIds>
     <StringID>498</StringID>
   </GeneralIds>
   <GeneralIds>
     <StringID>499</StringID>
+    <Comment>Previous text: Помилка (2 форма завантаження)
+</Comment>
   </GeneralIds>
   <GeneralIds>
     <StringID>500</StringID>
   </GeneralIds>
   <GeneralIds>
     <StringID>501</StringID>
+    <Comment>Previous text: Помилка (1 експедитор)
+</Comment>
   </GeneralIds>
   <GeneralIds>
     <StringID>502</StringID>
   </GeneralIds>
   <GeneralIds>
     <StringID>503</StringID>
+    <Comment>Previous text: Помилка (2 експедитор)
+</Comment>
   </GeneralIds>
   <GeneralIds>
     <StringID>504</StringID>
   </GeneralIds>
   <GeneralIds>
     <StringID>505</StringID>
+    <Comment>Previous text: Помилка (3 експедитор)
+</Comment>
   </GeneralIds>
   <GeneralIds>
     <StringID>506</StringID>
@@ -1568,6 +1588,8 @@
   </GeneralIds>
   <GeneralIds>
     <StringID>522</StringID>
+    <Comment>Previous text: Помилка при зміні заявки
+</Comment>
   </GeneralIds>
   <GeneralIds>
     <StringID>523</StringID>
@@ -1727,6 +1749,7 @@
   </GeneralIds>
   <GeneralIds>
     <StringID>575</StringID>
+    <Comment>Previous text: Повна Назва</Comment>
   </GeneralIds>
   <GeneralIds>
     <StringID>576</StringID>
@@ -1739,6 +1762,7 @@
   </GeneralIds>
   <GeneralIds>
     <StringID>579</StringID>
+    <Comment>Previous text: Перевізник успішно доданий [</Comment>
   </GeneralIds>
   <GeneralIds>
     <StringID>580</StringID>
@@ -1996,6 +2020,113 @@
   <GeneralIds>
     <StringID>660</StringID>
     <Comment>Previous text: ResourceserOrder.docx</Comment>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>661</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>662</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>663</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>664</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>665</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>666</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>667</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>668</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>669</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>670</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>671</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>672</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>673</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>674</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>675</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>676</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>677</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>678</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>679</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>680</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>681</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>682</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>683</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>684</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>685</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>686</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>687</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>688</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>689</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>690</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>691</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>692</StringID>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>693</StringID>
+    <Comment>Previous text: Контактні дані</Comment>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>694</StringID>
+    <Comment>Previous text: ADR</Comment>
+  </GeneralIds>
+  <GeneralIds>
+    <StringID>695</StringID>
   </GeneralIds>
   <Languages>
     <LanguageID>1058</LanguageID>
@@ -4905,7 +5036,7 @@
   <GeneralTexts>
     <StringID>274</StringID>
     <LanguageID>1058</LanguageID>
-    <LanguageText>Підтвердіть видалення!</LanguageText>
+    <LanguageText>Підтвердіть видалення</LanguageText>
     <Status>1</Status>
   </GeneralTexts>
   <GeneralTexts>
@@ -5381,8 +5512,7 @@
   <GeneralTexts>
     <StringID>353</StringID>
     <LanguageID>1058</LanguageID>
-    <LanguageText>Помилка при зміні запису:
-</LanguageText>
+    <LanguageText>Помилка при зміні запису</LanguageText>
     <Status>1</Status>
   </GeneralTexts>
   <GeneralTexts>
@@ -5424,7 +5554,7 @@
   <GeneralTexts>
     <StringID>360</StringID>
     <LanguageID>1058</LanguageID>
-    <LanguageText>Клієнт успішно доданий [</LanguageText>
+    <LanguageText>Клієнт успішно доданий</LanguageText>
     <Status>1</Status>
   </GeneralTexts>
   <GeneralTexts>
@@ -5563,7 +5693,7 @@
   <GeneralTexts>
     <StringID>383</StringID>
     <LanguageID>1058</LanguageID>
-    <LanguageText>Ви не вибрали перевізника!</LanguageText>
+    <LanguageText>Ви не вибрали перевізника</LanguageText>
     <Status>1</Status>
   </GeneralTexts>
   <GeneralTexts>
@@ -5611,7 +5741,7 @@
   <GeneralTexts>
     <StringID>391</StringID>
     <LanguageID>1058</LanguageID>
-    <LanguageText>Деякі дані не заповнені в: </LanguageText>
+    <LanguageText>Деякі дані_не заповнені в: </LanguageText>
     <Status>1</Status>
   </GeneralTexts>
   <GeneralTexts>
@@ -6241,15 +6371,13 @@
   <GeneralTexts>
     <StringID>494</StringID>
     <LanguageID>1058</LanguageID>
-    <LanguageText>Заявку успішно створено
-</LanguageText>
+    <LanguageText>Заявку успішно створено</LanguageText>
     <Status>1</Status>
   </GeneralTexts>
   <GeneralTexts>
     <StringID>495</StringID>
     <LanguageID>1058</LanguageID>
-    <LanguageText>Помилка при створенні заявки
-</LanguageText>
+    <LanguageText>Помилка при створенні заявки: </LanguageText>
     <Status>1</Status>
   </GeneralTexts>
   <GeneralTexts>
@@ -6263,7 +6391,7 @@
     <StringID>497</StringID>
     <LanguageID>1058</LanguageID>
     <LanguageText>Помилка (1 форма завантаження)
-</LanguageText>
+: </LanguageText>
     <Status>1</Status>
   </GeneralTexts>
   <GeneralTexts>
@@ -6277,7 +6405,7 @@
     <StringID>499</StringID>
     <LanguageID>1058</LanguageID>
     <LanguageText>Помилка (2 форма завантаження)
-</LanguageText>
+: </LanguageText>
     <Status>1</Status>
   </GeneralTexts>
   <GeneralTexts>
@@ -6291,7 +6419,7 @@
     <StringID>501</StringID>
     <LanguageID>1058</LanguageID>
     <LanguageText>Помилка (1 експедитор)
-</LanguageText>
+: </LanguageText>
     <Status>1</Status>
   </GeneralTexts>
   <GeneralTexts>
@@ -6305,7 +6433,7 @@
     <StringID>503</StringID>
     <LanguageID>1058</LanguageID>
     <LanguageText>Помилка (2 експедитор)
-</LanguageText>
+: </LanguageText>
     <Status>1</Status>
   </GeneralTexts>
   <GeneralTexts>
@@ -6319,7 +6447,7 @@
     <StringID>505</StringID>
     <LanguageID>1058</LanguageID>
     <LanguageText>Помилка (3 експедитор)
-</LanguageText>
+: </LanguageText>
     <Status>1</Status>
   </GeneralTexts>
   <GeneralTexts>
@@ -6435,8 +6563,7 @@
   <GeneralTexts>
     <StringID>522</StringID>
     <LanguageID>1058</LanguageID>
-    <LanguageText>Помилка при зміні заявки
-</LanguageText>
+    <LanguageText>Помилка при зміні заявки: </LanguageText>
     <Status>1</Status>
   </GeneralTexts>
   <GeneralTexts>
@@ -6772,7 +6899,7 @@
   <GeneralTexts>
     <StringID>575</StringID>
     <LanguageID>1058</LanguageID>
-    <LanguageText>Повна Назва</LanguageText>
+    <LanguageText>Повна назва</LanguageText>
     <Status>1</Status>
   </GeneralTexts>
   <GeneralTexts>
@@ -6796,7 +6923,7 @@
   <GeneralTexts>
     <StringID>579</StringID>
     <LanguageID>1058</LanguageID>
-    <LanguageText>Перевізник успішно доданий [</LanguageText>
+    <LanguageText>Перевізник успішно доданий </LanguageText>
     <Status>1</Status>
   </GeneralTexts>
   <GeneralTexts>
@@ -7251,7 +7378,7 @@
     <StringID>274</StringID>
     <LanguageID>1049</LanguageID>
     <LanguageText>Подтвердите удаление!</LanguageText>
-    <Status>5</Status>
+    <Status>7</Status>
   </GeneralTexts>
   <GeneralTexts>
     <StringID>275</StringID>
@@ -7584,7 +7711,7 @@
     <LanguageID>1049</LanguageID>
     <LanguageText>Ошибка при смене запись &lt; код класс = «4» &gt; 
 </LanguageText>
-    <Status>5</Status>
+    <Status>7</Status>
   </GeneralTexts>
   <GeneralTexts>
     <StringID>354</StringID>
@@ -7614,7 +7741,7 @@
     <StringID>360</StringID>
     <LanguageID>1049</LanguageID>
     <LanguageText>Клиент успешно добавили [</LanguageText>
-    <Status>5</Status>
+    <Status>7</Status>
   </GeneralTexts>
   <GeneralTexts>
     <StringID>361</StringID>
@@ -7747,7 +7874,7 @@
     <StringID>383</StringID>
     <LanguageID>1049</LanguageID>
     <LanguageText>Вы выбираете перевозчика!</LanguageText>
-    <Status>5</Status>
+    <Status>7</Status>
   </GeneralTexts>
   <GeneralTexts>
     <StringID>384</StringID>
@@ -7795,7 +7922,7 @@
     <StringID>391</StringID>
     <LanguageID>1049</LanguageID>
     <LanguageText>Некоторые данные не находятся: </LanguageText>
-    <Status>5</Status>
+    <Status>7</Status>
   </GeneralTexts>
   <GeneralTexts>
     <StringID>392</StringID>
@@ -7970,14 +8097,14 @@
     <LanguageID>1049</LanguageID>
     <LanguageText>Приложение было успешно создано &lt; код класс = «4» &gt; 
 </LanguageText>
-    <Status>5</Status>
+    <Status>7</Status>
   </GeneralTexts>
   <GeneralTexts>
     <StringID>495</StringID>
     <LanguageID>1049</LanguageID>
     <LanguageText>Ошибка при создании приложения &lt; код класс = «4» &gt; 
 </LanguageText>
-    <Status>5</Status>
+    <Status>7</Status>
   </GeneralTexts>
   <GeneralTexts>
     <StringID>496</StringID>
@@ -7991,7 +8118,7 @@
     <LanguageID>1049</LanguageID>
     <LanguageText>Ошибка (форма 1 неделю) &lt; код класс = «4» &gt; 
 </LanguageText>
-    <Status>5</Status>
+    <Status>7</Status>
   </GeneralTexts>
   <GeneralTexts>
     <StringID>498</StringID>
@@ -8005,7 +8132,7 @@
     <LanguageID>1049</LanguageID>
     <LanguageText>Ошибка (2 формы скачать) &lt; код класс = «4» &gt; 
 </LanguageText>
-    <Status>5</Status>
+    <Status>7</Status>
   </GeneralTexts>
   <GeneralTexts>
     <StringID>500</StringID>
@@ -8019,7 +8146,7 @@
     <LanguageID>1049</LanguageID>
     <LanguageText>Ошибка (1 форвардер) &lt; код класс = «4» &gt; 
 </LanguageText>
-    <Status>5</Status>
+    <Status>7</Status>
   </GeneralTexts>
   <GeneralTexts>
     <StringID>502</StringID>
@@ -8033,7 +8160,7 @@
     <LanguageID>1049</LanguageID>
     <LanguageText>Ошибка (2 экспедитора) &lt; код класс = «4» &gt; 
 </LanguageText>
-    <Status>5</Status>
+    <Status>7</Status>
   </GeneralTexts>
   <GeneralTexts>
     <StringID>504</StringID>
@@ -8047,7 +8174,7 @@
     <LanguageID>1049</LanguageID>
     <LanguageText>Ошибка (3 экспедитора) &lt; код класс = «4» &gt; 
 </LanguageText>
-    <Status>5</Status>
+    <Status>7</Status>
   </GeneralTexts>
   <GeneralTexts>
     <StringID>506</StringID>
@@ -8215,6 +8342,724 @@
     <StringID>660</StringID>
     <LanguageID>1058</LanguageID>
     <LanguageText>Resources\gerOrder.docx</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>661</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>
+- &lt;Експедитор 1&gt;</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>662</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>
+- &lt;Експедитор 2&gt;</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>663</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>
+- &lt;Клієнт&gt;</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>664</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>
+- &lt;Перевізник&gt;</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>665</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Банківські дані успішно додані клієнту </LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>666</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Банківські дані успішно додані експедитору </LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>667</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Банківські дані успішно додані перевізнику </LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>668</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>В експедитора вже є банківські дані</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>669</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>В експедитора ще немає банківських даних</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>670</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>В клієнта вже є банківські дані</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>671</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>В клієнта ще немає банківських даних</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>672</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>В перевізника вже є банківські дані</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>673</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>В перевізника ще немає банківських даних</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>674</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Видалити банківські дані експедитору </LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>675</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Видалити банківські дані клієнту </LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>676</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Видалити банківські дані перевізнику </LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>677</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Для збереження заповніть хоча б одне поле</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>678</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Закрити форму без збереження?
+Банківські данні НЕ збережуться.
+Для збереження натисніть &lt;Отмена&gt; та &lt;Додати Банківські данні&gt;</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>679</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Закрити форму без збереження?
+Вибрані адреси НЕ додадуться.
+Для збереження вибраних адрес натисніть &lt;Отмена&gt; та &lt;Додати до заявки&gt;</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>680</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Заповніть хоча б одне поле</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>681</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Виберіть спочатку експедитора</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>682</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Виберіть спочатку запис</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>683</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Виберіть спочатку перевізника</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>684</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Помилка: не правильний шлях до шаблону</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>685</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Зміни збережено: </LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>686</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Номер авто</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>687</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Змінити мову та перезавантажити програму?
+Не збережена інформація буде втрачена!</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>688</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Видалити заявку </LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>661</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>
+- &lt;Экспедитор 1&gt;</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>662</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>
+- &lt;Экспедитор 2&gt;</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>663</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>
+- &lt;Клиент&gt;</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>664</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>
+- &lt;Перевозчик&gt;</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>125</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>CMR</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>628</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>EKMT</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>44</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>IBAN</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>577</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>ИПН</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>596</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText> Адресов загрузки</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>589</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText> Адресов затаможивание</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>606</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText> Адресов разгрузки</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>604</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText> Адресов растаможивания</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>665</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Банковские данные успешно добавлены клиенту</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>667</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Банковские данные успешно добавлены перевозчику </LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>668</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>В экспедитора уже есть банковские данные</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>669</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>В экспедитора еще нет банковских данных</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>670</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>В клиента уже есть банковские данные</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>671</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>В клиента еще нет банковских данных</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>672</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>В перевозчика уже есть банковские данные</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>673</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>В перевозчика еще нет банковских данных</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>529</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Выберите язык в меню редактирования</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>681</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Выберите сначала экспедитора</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>682</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Выберите сначала запись</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>507</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Выберите сначала заявку</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>683</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Выберите сначала перевозчика</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>674</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Удалить банковские данные экспедитору</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>675</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Удалить банковские данные клиенту</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>676</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Удалить банковские данные перевозчику</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>688</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Удалить заявку </LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>580</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Удалить перевозчика </LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>524</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Дата добавления</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>525</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Дата последнего изменения</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>677</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Для сохранения заполните хотя бы одно поле</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>622</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Закрыть форму без сохранения?
+Адреса и типы транспорта НЕ сохранятся.
+Для сохранение нажмите &lt;Отмена&gt; и &lt;Добавить&gt;</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>679</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Закрыть форму без сохранения?
+Выбранные адреса НЕ добавятся.
+Для сохранения выбранных адресов нажмите &lt;Отмена&gt; и &lt;Прибавить к заявке&gt;</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>678</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Закрыть форму без сохранения?
+Банковские данные НЕ сохраняются.
+Для сохранения нажмите &lt;Отмена&gt; и &lt;Добавить Банковские данные&gt;</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>680</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Заполните хотя бы одно поле</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>526</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Заявка уже закрыта, изменить дату закрытия?</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>527</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Заявка еще не создана, все ровно закрыть?</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>528</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Заявке не назначенно номер, сначала создайте документ</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>685</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Изменения сохранены: </LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>687</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Изменить язык и перезагрузить программу?
+Не сохраненная информация будет потеряна!</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>618</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Контакт успешно добавлен перевозчику </LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>623</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>стран</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>620</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText> стран(а) 
+</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>523</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Язык</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>38</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>МФО</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>578</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Нет ни одного перевозчика</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>626</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Нет</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>686</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Номер авто</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>581</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Перевозчик успешно удален</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>579</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Перевозчик успешно добавлен</LanguageText>
+    <Status>7</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>684</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Ошибка: не правильный путь к шаблону</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>522</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Ошибка при изменении заявки: </LanguageText>
+    <Status>7</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>574</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Ошибка, попробуйте еще раз</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>576</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Сокращенное Название</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>625</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Да</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>356</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Телефон</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>621</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText> тип(ов) транспорта
+</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>631</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Тип транспорта</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>624</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText> типов транспорта</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>593</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Успешно выбрано</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>588</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Успешно удалено</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>517</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Успешно удален второй экспедитор</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>511</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Успешно удалена вторая форма загрузки</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>514</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Успешно удален первый экспедитор</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>509</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Успешно удалена первая форма загрузки</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>520</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Успешно удален третий экспедитор</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>590</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Успешно добавлено</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>516</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Успешно добавлен второй экспедитор</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>513</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Успешно добавлен первый экспедитор</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>519</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Успешно добавлен третий экспедитор</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>515</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Успешно изменен второй экспедитор</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>510</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Успешно изменена вторая форма загрузки</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>512</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Успешно изменен первый экспедитор</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>508</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Успешно изменена первая форма загрузки</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>518</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Успешно изменен третий экспедитор</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>209</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Факс</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>630</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Является ли экспедитором?</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>689</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Виберіть таблицю</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>690</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Виберіть запис</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>691</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>deletePage</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>692</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Повна назва</LanguageText>
+    <Status>6</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>693</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>Контакты</LanguageText>
+    <Status>7</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>693</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Контакти</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>694</StringID>
+    <LanguageID>1049</LanguageID>
+    <LanguageText>ADR</LanguageText>
+    <Status>7</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>694</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>АДР</LanguageText>
+    <Status>1</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>695</StringID>
+    <LanguageID>1058</LanguageID>
+    <LanguageText>Додатково</LanguageText>
     <Status>1</Status>
   </GeneralTexts>
   <Properties>
@@ -11677,7 +12522,7 @@
   <Properties>
     <Component>MainForm.cs</Component>
     <Name>OrderUpdateLabel16.Text</Name>
-    <StringID>185</StringID>
+    <StringID>694</StringID>
     <Selected>true</Selected>
     <ResourceName>OrderUpdateLabel16.Text</ResourceName>
     <Hidden>false</Hidden>
@@ -12170,7 +13015,7 @@
   <Properties>
     <Component>MainForm.cs</Component>
     <Name>labelshow67.Text</Name>
-    <StringID>107</StringID>
+    <StringID>693</StringID>
     <Selected>true</Selected>
     <ResourceName>labelshow67.Text</ResourceName>
     <Hidden>false</Hidden>
@@ -13441,66 +14286,10 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>Error</Name>
-    <StringID>247</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Error</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>Помилка</Name>
     <StringID>248</StringID>
     <Selected>true</Selected>
     <ResourceName>Помилка</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Виникла_помилка_спробуйте_ще_р</Name>
-    <StringID>253</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Виникла_помилка_спробуйте_ще_р</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Коментар_успішно_доданий_заявц</Name>
-    <StringID>254</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Коментар_успішно_доданий_заявц</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Для_збереження_заповніть_хочаб</Name>
-    <StringID>258</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Для_збереження_заповніть_хочаб</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Банківські_данні_успішно_додан</Name>
-    <StringID>259</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Банківські_данні_успішно_додан</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Банківські_данні_успішно_додан0</Name>
-    <StringID>261</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Банківські_данні_успішно_додан0</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Закрити_форму_без_збереження_Б</Name>
-    <StringID>262</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Закрити_форму_без_збереження_Б</ResourceName>
     <Hidden>false</Hidden>
   </Properties>
   <Properties>
@@ -13529,30 +14318,6 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>Контакт_успішно_доданий_клієнт</Name>
-    <StringID>267</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Контакт_успішно_доданий_клієнт</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Контакт_успішно_доданий_клієнт0</Name>
-    <StringID>268</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Контакт_успішно_доданий_клієнт0</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Закрити_форму_без_збереження_К</Name>
-    <StringID>269</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Закрити_форму_без_збереження_К</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>Видалити_контакт</Name>
     <StringID>272</StringID>
     <Selected>true</Selected>
@@ -13573,54 +14338,6 @@
     <StringID>275</StringID>
     <Selected>true</Selected>
     <ResourceName>Контакт_успішно_видалено</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Помилка0</Name>
-    <StringID>276</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Помилка0</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Resources_ConnectionString</Name>
-    <StringID>649</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Resources_ConnectionString</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_bin_Release</Name>
-    <StringID>650</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_bin_Release</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_bin_Debug</Name>
-    <StringID>651</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_bin_Debug</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Помилка1</Name>
-    <StringID>280</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Помилка1</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>it_s_not_empty_string</Name>
-    <StringID>281</StringID>
-    <Selected>true</Selected>
-    <ResourceName>it_s_not_empty_string</ResourceName>
     <Hidden>false</Hidden>
   </Properties>
   <Properties>
@@ -13721,30 +14438,6 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>Екпедитор_1</Name>
-    <StringID>303</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Екпедитор_1</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Екпедитор_2</Name>
-    <StringID>304</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Екпедитор_2</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Екпедитор_3</Name>
-    <StringID>305</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Екпедитор_3</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>Напрямок</Name>
     <StringID>137</StringID>
     <Selected>true</Selected>
@@ -13801,78 +14494,6 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>Банківські_данні_успішно_додан1</Name>
-    <StringID>314</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Банківські_данні_успішно_додан1</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Банківські_данні_успішно_додан2</Name>
-    <StringID>315</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Банківські_данні_успішно_додан2</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Контакт_успішно_доданий_експед</Name>
-    <StringID>317</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Контакт_успішно_доданий_експед</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Контакт_успішно_доданий_експед0</Name>
-    <StringID>318</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Контакт_успішно_доданий_експед0</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Log</Name>
-    <StringID>324</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Log</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_log</Name>
-    <StringID>325</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_log</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_0_dd_MM_yyy_HH_mm_ss_fff</Name>
-    <StringID>326</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_0_dd_MM_yyy_HH_mm_ss_fff</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>res9</Name>
-    <StringID>327</StringID>
-    <Selected>true</Selected>
-    <ResourceName>res9</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Windows_1251</Name>
-    <StringID>328</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Windows_1251</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>Ще_не_присвоєно</Name>
     <StringID>334</StringID>
     <Selected>true</Selected>
@@ -13917,14 +14538,6 @@
     <StringID>218</StringID>
     <Selected>true</Selected>
     <ResourceName>Сума_від_клієнта</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_авто</Name>
-    <StringID>338</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_авто</ResourceName>
     <Hidden>false</Hidden>
   </Properties>
   <Properties>
@@ -14001,14 +14614,6 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>Оберіть_спочатку_запис</Name>
-    <StringID>346</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Оберіть_спочатку_запис</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>Запис_успішно_додано</Name>
     <StringID>347</StringID>
     <Selected>true</Selected>
@@ -14017,34 +14622,10 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>Заповніть_хоча_б_1_поле</Name>
-    <StringID>348</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Заповніть_хоча_б_1_поле</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>Спочатку_виберіть_заявку</Name>
     <StringID>349</StringID>
     <Selected>true</Selected>
     <ResourceName>Спочатку_виберіть_заявку</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>res12</Name>
-    <StringID>351</StringID>
-    <Selected>true</Selected>
-    <ResourceName>res12</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Зміни_збереженно</Name>
-    <StringID>352</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Зміни_збереженно</ResourceName>
     <Hidden>false</Hidden>
   </Properties>
   <Properties>
@@ -14177,14 +14758,6 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>ЕДРПОУ</Name>
-    <StringID>357</StringID>
-    <Selected>true</Selected>
-    <ResourceName>ЕДРПОУ</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>ІПН</Name>
     <StringID>41</StringID>
     <Selected>true</Selected>
@@ -14249,26 +14822,10 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>Одне_з_обов_язкових_полів_не_з</Name>
-    <StringID>361</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Одне_з_обов_язкових_полів_не_з</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>Ви_не_вибрали_діапазон</Name>
     <StringID>362</StringID>
     <Selected>true</Selected>
     <ResourceName>Ви_не_вибрали_діапазон</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Немає_жодних_записів</Name>
-    <StringID>363</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Немає_жодних_записів</ResourceName>
     <Hidden>false</Hidden>
   </Properties>
   <Properties>
@@ -14313,90 +14870,10 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>Завершити_роботу_Не_збережена_</Name>
-    <StringID>368</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Завершити_роботу_Не_збережена_</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Оберіть_спочатку_клієнта</Name>
-    <StringID>369</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Оберіть_спочатку_клієнта</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>В_клієнта_немає_контактів</Name>
     <StringID>370</StringID>
     <Selected>true</Selected>
     <ResourceName>В_клієнта_немає_контактів</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>В_клієнта_вже_є_банківські_дан</Name>
-    <StringID>371</StringID>
-    <Selected>true</Selected>
-    <ResourceName>В_клієнта_вже_є_банківські_дан</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>В_клієнта_ще_немає_банківських</Name>
-    <StringID>372</StringID>
-    <Selected>true</Selected>
-    <ResourceName>В_клієнта_ще_немає_банківських</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Видалити_банківські_данні_кліє</Name>
-    <StringID>373</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Видалити_банківські_данні_кліє</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>res13</Name>
-    <StringID>374</StringID>
-    <Selected>true</Selected>
-    <ResourceName>res13</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Банківські_данні_успішно_видал</Name>
-    <StringID>375</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Банківські_данні_успішно_видал</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>В_клієнта_ще_немає_банківських0</Name>
-    <StringID>376</StringID>
-    <Selected>true</Selected>
-    <ResourceName>В_клієнта_ще_немає_банківських0</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Файлы_png_png</Name>
-    <StringID>377</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Файлы_png_png</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Оберіть_спочатку_експедитора</Name>
-    <StringID>378</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Оберіть_спочатку_експедитора</ResourceName>
     <Hidden>false</Hidden>
   </Properties>
   <Properties>
@@ -14409,30 +14886,6 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>В_експедитора_вже_є_банківські</Name>
-    <StringID>380</StringID>
-    <Selected>true</Selected>
-    <ResourceName>В_експедитора_вже_є_банківські</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>В_експедитора_ще_немає_банківс</Name>
-    <StringID>381</StringID>
-    <Selected>true</Selected>
-    <ResourceName>В_експедитора_ще_немає_банківс</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Видалити_банківські_данні_експ</Name>
-    <StringID>382</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Видалити_банківські_данні_експ</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>Ви_не_вибрали_перевізника</Name>
     <StringID>383</StringID>
     <Selected>true</Selected>
@@ -14441,42 +14894,10 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>Оберіть_спочатку_перевізника</Name>
-    <StringID>384</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Оберіть_спочатку_перевізника</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>В_перевізника_немає_контактів</Name>
     <StringID>385</StringID>
     <Selected>true</Selected>
     <ResourceName>В_перевізника_немає_контактів</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>В_перевізника_вже_є_банківські</Name>
-    <StringID>386</StringID>
-    <Selected>true</Selected>
-    <ResourceName>В_перевізника_вже_є_банківські</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>В_перевізника_ще_немає_банківс</Name>
-    <StringID>387</StringID>
-    <Selected>true</Selected>
-    <ResourceName>В_перевізника_ще_немає_банківс</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Видалити_банківські_данні_пере</Name>
-    <StringID>388</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Видалити_банківські_данні_пере</ResourceName>
     <Hidden>false</Hidden>
   </Properties>
   <Properties>
@@ -14501,54 +14922,6 @@
     <StringID>391</StringID>
     <Selected>true</Selected>
     <ResourceName>Деякі_дані_не_заповнені_в</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_Експедитор_1</Name>
-    <StringID>392</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_Експедитор_1</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_Перевізник</Name>
-    <StringID>393</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_Перевізник</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_Клієнт</Name>
-    <StringID>394</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_Клієнт</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_Експедитор_2</Name>
-    <StringID>395</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_Експедитор_2</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_Продовжити_без_повного_заповн</Name>
-    <StringID>396</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_Продовжити_без_повного_заповн</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_Експедитор</Name>
-    <StringID>397</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_Експедитор</ResourceName>
     <Hidden>false</Hidden>
   </Properties>
   <Properties>
@@ -14625,14 +14998,6 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>Напрямок0</Name>
-    <StringID>197</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Напрямок0</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>Використаний_шаблон</Name>
     <StringID>404</StringID>
     <Selected>true</Selected>
@@ -14669,22 +15034,6 @@
     <StringID>411</StringID>
     <Selected>true</Selected>
     <ResourceName>Договір_успішно_видалений</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_docx</Name>
-    <StringID>483</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_docx</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Помилка_не_правильний_шлях_шаб</Name>
-    <StringID>489</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Помилка_не_правильний_шлях_шаб</ResourceName>
     <Hidden>false</Hidden>
   </Properties>
   <Properties>
@@ -14737,26 +15086,10 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>Успішно_вибрано_першу_форму_за</Name>
-    <StringID>496</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_вибрано_першу_форму_за</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>Помилка_1_форма_завантаження</Name>
     <StringID>497</StringID>
     <Selected>true</Selected>
     <ResourceName>Помилка_1_форма_завантаження</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Успішно_вибрано_другу_форму_за</Name>
-    <StringID>498</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_вибрано_другу_форму_за</ResourceName>
     <Hidden>false</Hidden>
   </Properties>
   <Properties>
@@ -14769,14 +15102,6 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>Успішно_вибрано_першого_експед</Name>
-    <StringID>500</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_вибрано_першого_експед</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>Помилка_1_експедитор</Name>
     <StringID>501</StringID>
     <Selected>true</Selected>
@@ -14785,26 +15110,10 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>Успішно_вибрано_другого_експед</Name>
-    <StringID>502</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_вибрано_другого_експед</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>Помилка_2_експедитор</Name>
     <StringID>503</StringID>
     <Selected>true</Selected>
     <ResourceName>Помилка_2_експедитор</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Успішно_вибрано_третього_експе</Name>
-    <StringID>504</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_вибрано_третього_експе</ResourceName>
     <Hidden>false</Hidden>
   </Properties>
   <Properties>
@@ -14829,118 +15138,6 @@
     <StringID>507</StringID>
     <Selected>true</Selected>
     <ResourceName>Виберіть_спочатку_заявку</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Успішно_змінено_першу_форму_за</Name>
-    <StringID>508</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_змінено_першу_форму_за</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Успішно_видалено_першу_форму_з</Name>
-    <StringID>509</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_видалено_першу_форму_з</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Успішно_змінено_другу_форму_за</Name>
-    <StringID>510</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_змінено_другу_форму_за</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Успішно_видалено_другу_форму_з</Name>
-    <StringID>511</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_видалено_другу_форму_з</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Успішно_змінено_першого_експед</Name>
-    <StringID>512</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_змінено_першого_експед</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Успішно_додано_першого_експеди</Name>
-    <StringID>513</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_додано_першого_експеди</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Успішно_видалено_першого_експе</Name>
-    <StringID>514</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_видалено_першого_експе</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Успішно_змінено_другого_експед</Name>
-    <StringID>515</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_змінено_другого_експед</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Успішно_додано_другого_експеди</Name>
-    <StringID>516</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_додано_другого_експеди</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Успішно_видалено_другого_експе</Name>
-    <StringID>517</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_видалено_другого_експе</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Успішно_змінено_третього_експе</Name>
-    <StringID>518</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_змінено_третього_експе</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Успішно_додано_третього_експед</Name>
-    <StringID>519</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_додано_третього_експед</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Успішно_видалено_третього_експ</Name>
-    <StringID>520</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Успішно_видалено_третього_експ</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Зміни_збереженно0</Name>
-    <StringID>521</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Зміни_збереженно0</ResourceName>
     <Hidden>false</Hidden>
   </Properties>
   <Properties>
@@ -15009,58 +15206,10 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>Заявка_вже_закрита_змінити_дат</Name>
-    <StringID>526</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Заявка_вже_закрита_змінити_дат</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Заявка_ще_не_створена_все_рівн</Name>
-    <StringID>527</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Заявка_ще_не_створена_все_рівн</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Заявці_не_призначено_номер_спо</Name>
-    <StringID>528</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Заявці_не_призначено_номер_спо</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Виберіть_мову_у_меню_редагуван</Name>
-    <StringID>529</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Виберіть_мову_у_меню_редагуван</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Продовжити_без_повного_заповне</Name>
-    <StringID>530</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Продовжити_без_повного_заповне</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>Помилка_спробуйте_ще_раз</Name>
     <StringID>574</StringID>
     <Selected>true</Selected>
     <ResourceName>Помилка_спробуйте_ще_раз</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Повна_Назва</Name>
-    <StringID>575</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Повна_Назва</ResourceName>
     <Hidden>false</Hidden>
   </Properties>
   <Properties>
@@ -15121,14 +15270,6 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>_Адрес_замитнення</Name>
-    <StringID>589</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_Адрес_замитнення</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>Успішно_додано</Name>
     <StringID>590</StringID>
     <Selected>true</Selected>
@@ -15141,182 +15282,6 @@
     <StringID>593</StringID>
     <Selected>true</Selected>
     <ResourceName>Успішно_вибрано</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_Адрес_замитнення0</Name>
-    <StringID>594</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_Адрес_замитнення0</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Закрити_форму_без_збереження_В</Name>
-    <StringID>595</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Закрити_форму_без_збереження_В</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_Адрес_завантаження</Name>
-    <StringID>596</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_Адрес_завантаження</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Помилка2</Name>
-    <StringID>597</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Помилка2</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_Адрес_завантаження0</Name>
-    <StringID>598</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_Адрес_завантаження0</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Помилка3</Name>
-    <StringID>599</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Помилка3</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Select_language</Name>
-    <StringID>602</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Select_language</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>CultureSettings_xml</Name>
-    <StringID>603</StringID>
-    <Selected>true</Selected>
-    <ResourceName>CultureSettings_xml</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_Адрес_розмитнення</Name>
-    <StringID>604</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_Адрес_розмитнення</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_Адрес_розмитнення0</Name>
-    <StringID>605</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_Адрес_розмитнення0</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_Адрес_розвантаження</Name>
-    <StringID>606</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_Адрес_розвантаження</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_Адрес_розвантаження0</Name>
-    <StringID>607</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_Адрес_розвантаження0</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_Адрес_розвантаження1</Name>
-    <StringID>608</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_Адрес_розвантаження1</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Банківські_данні_успішно_додан3</Name>
-    <StringID>614</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Банківські_данні_успішно_додан3</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Банківські_данні_успішно_додан4</Name>
-    <StringID>615</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Банківські_данні_успішно_додан4</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Контакт_успішно_доданий_переві</Name>
-    <StringID>617</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Контакт_успішно_доданий_переві</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Контакт_успішно_доданий_переві0</Name>
-    <StringID>618</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Контакт_успішно_доданий_переві0</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_країн_а</Name>
-    <StringID>620</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_країн_а</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_тип_ів_транспорту</Name>
-    <StringID>621</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_тип_ів_транспорту</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>Закрити_форму_без_збереження_А</Name>
-    <StringID>622</StringID>
-    <Selected>true</Selected>
-    <ResourceName>Закрити_форму_без_збереження_А</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_країн</Name>
-    <StringID>623</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_країн</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>_типів_транспорту</Name>
-    <StringID>624</StringID>
-    <Selected>true</Selected>
-    <ResourceName>_типів_транспорту</ResourceName>
     <Hidden>false</Hidden>
   </Properties>
   <Properties>
@@ -15361,14 +15326,6 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>AD</Name>
-    <StringID>629</StringID>
-    <Selected>true</Selected>
-    <ResourceName>AD</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>Чи_є_експедитором</Name>
     <StringID>630</StringID>
     <Selected>true</Selected>
@@ -15385,34 +15342,674 @@
   </Properties>
   <Properties>
     <Component>Resources.resx</Component>
-    <Name>TUR</Name>
-    <StringID>627</StringID>
-    <Selected>true</Selected>
-    <ResourceName>TUR</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>The_language_change_will_take_</Name>
-    <StringID>601</StringID>
-    <Selected>true</Selected>
-    <ResourceName>The_language_change_will_take_</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
-    <Name>atlantsovt_logs_gmail_com</Name>
-    <StringID>329</StringID>
-    <Selected>true</Selected>
-    <ResourceName>atlantsovt_logs_gmail_com</ResourceName>
-    <Hidden>false</Hidden>
-  </Properties>
-  <Properties>
-    <Component>Resources.resx</Component>
     <Name>Мітка</Name>
     <StringID>291</StringID>
     <Selected>true</Selected>
     <ResourceName>Мітка</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Адрес_завантаження</Name>
+    <StringID>596</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Адрес_завантаження</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Адрес_замитнення</Name>
+    <StringID>589</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Адрес_замитнення</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Адрес_розвантаження</Name>
+    <StringID>606</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Адрес_розвантаження</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Адрес_розмитнення</Name>
+    <StringID>604</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Адрес_розмитнення</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>_Експедитор0</Name>
+    <StringID>397</StringID>
+    <Selected>true</Selected>
+    <ResourceName>_Експедитор0</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>_Експедитор_1_</Name>
+    <StringID>661</StringID>
+    <Selected>true</Selected>
+    <ResourceName>_Експедитор_1_</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>_Експедитор_2_</Name>
+    <StringID>662</StringID>
+    <Selected>true</Selected>
+    <ResourceName>_Експедитор_2_</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>_Клієнт_</Name>
+    <StringID>663</StringID>
+    <Selected>true</Selected>
+    <ResourceName>_Клієнт_</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Країн</Name>
+    <StringID>623</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Країн</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Країн_а</Name>
+    <StringID>620</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Країн_а</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>_Перевізник_</Name>
+    <StringID>664</StringID>
+    <Selected>true</Selected>
+    <ResourceName>_Перевізник_</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Продовжити_без_повного_заповнення_даних</Name>
+    <StringID>396</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Продовжити_без_повного_заповнення_даних</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Тип_ів_транспорту</Name>
+    <StringID>621</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Тип_ів_транспорту</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Типів_транспорту</Name>
+    <StringID>624</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Типів_транспорту</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>ADR</Name>
+    <StringID>122</StringID>
+    <Selected>true</Selected>
+    <ResourceName>ADR</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>TIR</Name>
+    <StringID>123</StringID>
+    <Selected>true</Selected>
+    <ResourceName>TIR</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Банківські_данні_успішно_видалено</Name>
+    <StringID>375</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Банківські_данні_успішно_видалено</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Банківські_дані_успішно_додані_клієнту</Name>
+    <StringID>665</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Банківські_дані_успішно_додані_клієнту</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Банківські_дані_успішно_додані_експедитору</Name>
+    <StringID>666</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Банківські_дані_успішно_додані_експедитору</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Банківські_дані_успішно_додані_перевізнику</Name>
+    <StringID>667</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Банківські_дані_успішно_додані_перевізнику</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>В_експедитора_вже_є_банківські_дані</Name>
+    <StringID>668</StringID>
+    <Selected>true</Selected>
+    <ResourceName>В_експедитора_вже_є_банківські_дані</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>В_експедитора_ще_немає_банківських_даних</Name>
+    <StringID>669</StringID>
+    <Selected>true</Selected>
+    <ResourceName>В_експедитора_ще_немає_банківських_даних</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>В_клієнта_вже_є_банківські_дані</Name>
+    <StringID>670</StringID>
+    <Selected>true</Selected>
+    <ResourceName>В_клієнта_вже_є_банківські_дані</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>В_клієнта_ще_немає_банківських_даних</Name>
+    <StringID>671</StringID>
+    <Selected>true</Selected>
+    <ResourceName>В_клієнта_ще_немає_банківських_даних</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>В_перевізника_вже_є_банківські_дані</Name>
+    <StringID>672</StringID>
+    <Selected>true</Selected>
+    <ResourceName>В_перевізника_вже_є_банківські_дані</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>В_перевізника_ще_немає_банківських_даних</Name>
+    <StringID>673</StringID>
+    <Selected>true</Selected>
+    <ResourceName>В_перевізника_ще_немає_банківських_даних</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Виберіть_мову_у_меню_редагування</Name>
+    <StringID>529</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Виберіть_мову_у_меню_редагування</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Видалити_банківські_дані_експедитору</Name>
+    <StringID>674</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Видалити_банківські_дані_експедитору</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Видалити_банківські_дані_клієнту</Name>
+    <StringID>675</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Видалити_банківські_дані_клієнту</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Видалити_банківські_дані_переперевізнику</Name>
+    <StringID>676</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Видалити_банківські_дані_переперевізнику</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Виникла_помилка_спробуйте_ще_раз</Name>
+    <StringID>253</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Виникла_помилка_спробуйте_ще_раз</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Для_збереження_заповніть_хоча_б_одне_поле</Name>
+    <StringID>677</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Для_збереження_заповніть_хоча_б_одне_поле</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>ЄДРПОУ</Name>
+    <StringID>40</StringID>
+    <Selected>true</Selected>
+    <ResourceName>ЄДРПОУ</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Завершити_роботу</Name>
+    <StringID>368</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Завершити_роботу</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Закрити_форму_без_збереження_адр_та_транспорта</Name>
+    <StringID>622</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Закрити_форму_без_збереження_адр_та_транспорта</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Закрити_форму_без_збереження_банкінських_даних</Name>
+    <StringID>678</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Закрити_форму_без_збереження_банкінських_даних</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Закрити_форму_без_збереження_адрес</Name>
+    <StringID>679</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Закрити_форму_без_збереження_адрес</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Закрити_форму_без_збереження_контакту</Name>
+    <StringID>269</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Закрити_форму_без_збереження_контакту</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Заповніть_хоча_б_одне_поле</Name>
+    <StringID>680</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Заповніть_хоча_б_одне_поле</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Заявка_вже_закрита_змінити_дату_закриття</Name>
+    <StringID>526</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Заявка_вже_закрита_змінити_дату_закриття</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Заявка_ще_не_створена_все_рівно_закрити</Name>
+    <StringID>527</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Заявка_ще_не_створена_все_рівно_закрити</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Заявці_не_призначено_номер_спочатку_створіть_документ</Name>
+    <StringID>528</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Заявці_не_призначено_номер_спочатку_створіть_документ</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Коментар_успішно_доданий_заявці</Name>
+    <StringID>254</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Коментар_успішно_доданий_заявці</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Контакт_успішно_доданий_експедитору</Name>
+    <StringID>318</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Контакт_успішно_доданий_експедитору</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Контакт_успішно_доданий_клієнту</Name>
+    <StringID>268</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Контакт_успішно_доданий_клієнту</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Контакт_успішно_доданий_перевізнику</Name>
+    <StringID>618</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Контакт_успішно_доданий_перевізнику</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Напрямок_1</Name>
+    <StringID>197</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Напрямок_1</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Виберіть_спочатку_експедитора</Name>
+    <StringID>681</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Виберіть_спочатку_експедитора</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Виберіть_спочатку_запис</Name>
+    <StringID>682</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Виберіть_спочатку_запис</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Виберіть_спочатку_перевізника</Name>
+    <StringID>683</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Виберіть_спочатку_перевізника</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Одне_з_обов_язкових_полів_не_заповнено</Name>
+    <StringID>361</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Одне_з_обов_язкових_полів_не_заповнено</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Помилка_не_правильний_шлях_шаблону</Name>
+    <StringID>684</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Помилка_не_правильний_шлях_шаблону</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Помилка_1</Name>
+    <StringID>280</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Помилка_1</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_вибрано_другого_експедитора</Name>
+    <StringID>502</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_вибрано_другого_експедитора</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_вибрано_другу_форму_завантаження</Name>
+    <StringID>498</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_вибрано_другу_форму_завантаження</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_вибрано_першого_експедитора</Name>
+    <StringID>500</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_вибрано_першого_експедитора</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_вибрано_першу_форму_завантаження</Name>
+    <StringID>496</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_вибрано_першу_форму_завантаження</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_вибрано_третього_експедитора</Name>
+    <StringID>504</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_вибрано_третього_експедитора</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_видалено_другого_експедитора</Name>
+    <StringID>517</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_видалено_другого_експедитора</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_видалено_другу_форму_завантаження</Name>
+    <StringID>511</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_видалено_другу_форму_завантаження</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_видалено_першого_експедитора</Name>
+    <StringID>514</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_видалено_першого_експедитора</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_видалено_першу_форму_завантаження</Name>
+    <StringID>509</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_видалено_першу_форму_завантаження</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_видалено_третього_експедитора</Name>
+    <StringID>520</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_видалено_третього_експедитора</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_додано_другого_експедитора</Name>
+    <StringID>516</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_додано_другого_експедитора</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_додано_першого_експедитора</Name>
+    <StringID>513</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_додано_першого_експедитора</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_додано_третього_експедтора</Name>
+    <StringID>519</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_додано_третього_експедтора</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_змінено_другого_експедтора</Name>
+    <StringID>515</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_змінено_другого_експедтора</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_змінено_другу_форму_затора</Name>
+    <StringID>510</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_змінено_другу_форму_затора</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_змінено_першого_експедтора</Name>
+    <StringID>512</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_змінено_першого_експедтора</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_змінено_першу_форму_завантаження</Name>
+    <StringID>508</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_змінено_першу_форму_завантаження</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Успішно_змінено_третього_експедитора</Name>
+    <StringID>518</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Успішно_змінено_третього_експедитора</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Зміни_збережено</Name>
+    <StringID>685</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Зміни_збережено</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Номер_авто</Name>
+    <StringID>686</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Номер_авто</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Змінити_мову</Name>
+    <StringID>687</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Змінити_мову</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Видалити_заявку</Name>
+    <StringID>688</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Видалити_заявку</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>MainForm.cs</Component>
+    <Name>deteteAdditionsButton.Text</Name>
+    <StringID>68</StringID>
+    <Selected>true</Selected>
+    <ResourceName>deteteAdditionsButton.Text</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>MainForm.cs</Component>
+    <Name>deleteTableSelectLabel.Text</Name>
+    <StringID>689</StringID>
+    <Selected>true</Selected>
+    <ResourceName>deleteTableSelectLabel.Text</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>MainForm.cs</Component>
+    <Name>deleteDiapasoneSelectLabel.Text</Name>
+    <StringID>99</StringID>
+    <Selected>true</Selected>
+    <ResourceName>deleteDiapasoneSelectLabel.Text</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>MainForm.cs</Component>
+    <Name>deleteItemSelectLabel.Text</Name>
+    <StringID>690</StringID>
+    <Selected>true</Selected>
+    <ResourceName>deleteItemSelectLabel.Text</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>MainForm.cs</Component>
+    <Name>deletePage.Text</Name>
+    <StringID>691</StringID>
+    <Selected>true</Selected>
+    <ResourceName>deletePage.Text</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>Resources.resx</Component>
+    <Name>Повна_назва</Name>
+    <StringID>692</StringID>
+    <Selected>true</Selected>
+    <ResourceName>Повна_назва</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>MainForm.cs</Component>
+    <Name>deleteToolStripMenuItem.Text</Name>
+    <StringID>68</StringID>
+    <Selected>true</Selected>
+    <ResourceName>deleteToolStripMenuItem.Text</ResourceName>
+    <Hidden>false</Hidden>
+  </Properties>
+  <Properties>
+    <Component>MainForm.cs</Component>
+    <Name>additionsToolStripMenuItem.Text</Name>
+    <StringID>695</StringID>
+    <Selected>true</Selected>
+    <ResourceName>additionsToolStripMenuItem.Text</ResourceName>
     <Hidden>false</Hidden>
   </Properties>
   <GeneralAttributes>
@@ -15422,7 +16019,7 @@
   </GeneralAttributes>
   <GeneralAttributes>
     <Name>StatusHash</Name>
-    <TextValue>GQSMUnv94arBXDIBWYPjoDs3ndo=</TextValue>
+    <TextValue>Am1mnHetpwUJdd7gU+PNElnFb6I=</TextValue>
     <NumValue>0</NumValue>
   </GeneralAttributes>
   <GeneralAttributes>
@@ -15451,9 +16048,6 @@
     <NumValue>-1</NumValue>
   </GeneralAttributes>
   <IgnoredModules>
-    <ModuleName>SelectLanguage.designer.cs</ModuleName>
-  </IgnoredModules>
-  <IgnoredModules>
     <ModuleName>SelectLanguage.cs</ModuleName>
   </IgnoredModules>
   <IgnoredModules>
@@ -15464,8 +16058,5 @@
   </IgnoredModules>
   <IgnoredModules>
     <ModuleName>ConnectionForm.cs</ModuleName>
-  </IgnoredModules>
-  <IgnoredModules>
-    <ModuleName>ConnectionForm.Designer.cs</ModuleName>
   </IgnoredModules>
 </MdbTranslationStore>

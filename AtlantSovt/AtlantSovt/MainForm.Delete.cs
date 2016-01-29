@@ -14,6 +14,7 @@ namespace AtlantSovt
     partial class MainForm
     {
         object deleteObjectId = null;        
+
         private void DeleteItems<T>(IQueryable<T> tableSelector)
         {
             using (var db = new AtlantSovtContext())
@@ -21,8 +22,8 @@ namespace AtlantSovt
                 try
                 {
                     if (deleteObjectId != null)
-                    { 
-                        if (MessageBox.Show("Видалити запис?\nВидалення цього запису приведе до його втрати у звязаних таблицях.", "Підтвердження видалення", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_запис + "?" + "\n" + AtlantSovt.Properties.Resources.Видалення_цього_запису_приведе_до_його_втрати_у_звязаних_таблицях, AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo) == DialogResult.Yes)
                         { 
                             if (tableSelector.ElementType.Name == typeof(Country).Name)
                             {
@@ -91,23 +92,23 @@ namespace AtlantSovt
                             try
                             {
                                 db.SaveChanges();
-                                MessageBox.Show("Успішно видалено запис");
+                                MessageBox.Show(AtlantSovt.Properties.Resources.Запис_успішно_видалено);
                             }
                             catch (Exception ex)
                             {
-                                MessageBox.Show("Помилка: \n" + ex.Message);
+                                MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                             }
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Спочатку виберіть запис");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Спочатку_виберіть_запис);
 
                     }                    
                 }
                 catch(Exception exx)
                 {
-                    MessageBox.Show("Помилка: \n" + exx.Message);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + exx.Message);
                 }
             }
         }
@@ -195,12 +196,13 @@ namespace AtlantSovt
                     deleteItemSelectComboBox.Enabled = true;
                     deleteItemSelectComboBox.Visible = true;
                 }
-                catch (Exception exx)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка: \n" + exx.Message);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                 }
             }
         }
+
         private void SplitItems<T>(IQueryable<T> tableSelector)
         {
             using (var db = new AtlantSovtContext())
@@ -290,9 +292,9 @@ namespace AtlantSovt
                     }
                     deteteAdditionsButton.Enabled = true;
                 }
-                catch (Exception exx)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка: \n" + exx.Message);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                 }
             }
         }
@@ -305,7 +307,7 @@ namespace AtlantSovt
                 {
                     if (deleteObjectId != null)
                     {
-                        if (MessageBox.Show("Видалити запис?\n Видалення цього запису приведе до його втрати у звязаних таблицях." , "Підтвердження видалення", MessageBoxButtons.YesNo) != DialogResult.OK)
+                        if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_запис + "?" + "\n" + AtlantSovt.Properties.Resources.Видалення_цього_запису_приведе_до_його_втрати_у_звязаних_таблицях, AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {                         
                             
                             if (tableSelector.ElementType.Name == typeof(DownloadAddress).Name)
@@ -331,23 +333,23 @@ namespace AtlantSovt
                             try
                             {
                                 db.SaveChanges();
-                                MessageBox.Show("Успішно видалено запис");
+                                MessageBox.Show(AtlantSovt.Properties.Resources.Запис_успішно_видалено);
                             }
                             catch (Exception ex)
                             {
-                                MessageBox.Show("Помилка: \n" + ex.Message);
+                                MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                             }
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Спочатку виберіть запис");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Спочатку_виберіть_запис);
 
                     }
                 }
                 catch (Exception exx)
                 {
-                    MessageBox.Show("Помилка: \n" + exx.Message);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + exx.Message);
                 }
             }
         }
@@ -362,7 +364,7 @@ namespace AtlantSovt
                 {
                     if (deleteDiaposoneSelectComboBox.Text == "")
                     {
-                        MessageBox.Show("Ви не вибрали діапазон");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Ви_не_вибрали_діапазон);
                     }
                     else
                     {
@@ -467,7 +469,7 @@ namespace AtlantSovt
 
                 catch (Exception exx)
                 {
-                    MessageBox.Show("Помилка: \n" + exx.Message);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + exx.Message);
                 }
             }
         }        
@@ -519,7 +521,7 @@ namespace AtlantSovt
                 }
                 catch (Exception exx)
                 {
-                    MessageBox.Show("Помилка: \n" + exx.Message);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + exx.Message);
                 }
             }
         }
@@ -571,7 +573,7 @@ namespace AtlantSovt
                 }
                 else
                 {
-                    //MessageBox.Show("Немає жодних записів");
+                    //MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодного_запису);
                 }
             }}
 
@@ -579,25 +581,25 @@ namespace AtlantSovt
         {
             List<string> Tabels = new List<string>
             {
-                "Адреси завантаження",
-                "Адреси розвантаження",
-                "Адреси замитнення",
-                "Адреси розмитнення",
-                "Країни",
-                "Типи транспорту",
-                "Статус платника податку",
-                "На основі документу",
-                "Працівники",
-                "Причіп",
-                "Куб",
-                "Tir/Cmr",
-                "Типи вантажу",
-                "Форми завантаження",
-                "Умови оплати",
-                "Додаткові умови",
-                "Нормативні простої",
-                "Штрафи за простої",
-                "Штрафи за відмову від заявки",
+                AtlantSovt.Properties.Resources.Адреса_завантаження,
+                AtlantSovt.Properties.Resources.Адреса_розвантаження,
+                AtlantSovt.Properties.Resources.Адреса_замитнення,
+                AtlantSovt.Properties.Resources.Адреса_розмитнення,
+                AtlantSovt.Properties.Resources.Країни,
+                AtlantSovt.Properties.Resources.Типи_транспорту,
+                AtlantSovt.Properties.Resources.Статус_платника_податку,
+                AtlantSovt.Properties.Resources.На_основі_документу,
+                AtlantSovt.Properties.Resources.Працівники,
+                AtlantSovt.Properties.Resources.Причіп,
+                AtlantSovt.Properties.Resources.Куб,
+                AtlantSovt.Properties.Resources.TIR + "/" + AtlantSovt.Properties.Resources.CMR,
+                AtlantSovt.Properties.Resources.Типи_вантажу,
+                AtlantSovt.Properties.Resources.Форми_завантаження,
+                AtlantSovt.Properties.Resources.Умови_оплати,
+                AtlantSovt.Properties.Resources.Додаткові_умови,
+                AtlantSovt.Properties.Resources.Нормативні_простої,
+                AtlantSovt.Properties.Resources.Штрафи_за_простої,
+                AtlantSovt.Properties.Resources.Штрафи_за_відмову_від_заявки,
             };
             foreach (string tabl in Tabels)
             {

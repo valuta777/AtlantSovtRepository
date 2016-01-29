@@ -383,3 +383,8 @@ R:\Робота\03.01.2016\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\
 R:\Робота\03.01.2016\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csproj.GenerateResource.Cache
 R:\Робота\03.01.2016\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.exe
 R:\Робота\03.01.2016\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.pdb
+E:\AtlantSovtRepository1\AtlantSovt\AtlantSovt\bin\Debug\AtlantSovt.exe.config
+E:\AtlantSovtRepository1\AtlantSovt\AtlantSovt\obj\Debug\Interop.VBIDE.dll
+E:\AtlantSovtRepository1\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csproj.ResolveComReference.cache
+E:\AtlantSovtRepository1\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.exe
+E:\AtlantSovtRepository1\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.pdb
