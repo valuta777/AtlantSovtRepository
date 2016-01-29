@@ -2755,13 +2755,7 @@ namespace AtlantSovt
         {
             OrderAdd();
         }
-        private void OrderAddWeightTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(46) && e.KeyChar != Convert.ToChar(8))
-            {
-                e.Handled = true;
-            }
-        }
+
         private void OrderAddADRSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddADRSelectComboBox.DroppedDown = true;
@@ -3217,13 +3211,7 @@ namespace AtlantSovt
             LoadOrderUpdateLoadingForm2SelectComboBox();
             OrderUpdateLoadingForm2SelectComboBox.DroppedDown = true;
         }
-        private void OrderUpdateWeightTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(46) && e.KeyChar != Convert.ToChar(8))
-            {
-                e.Handled = true;
-            }
-        }
+
         private void OrderAddDownloadDateFromTimePicker_ValueChanged(object sender, EventArgs e)
         {
             if (OrderAddDownloadDateToTimePicker.Checked)
@@ -3432,7 +3420,33 @@ namespace AtlantSovt
             }                
         }
 
+        private void OrderUpdateDownloadDateFromTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            if (OrderUpdateDownloadDateToTimePicker.Checked)
+            {
+                OrderUpdateDownloadDateToTimePicker.MinDate = OrderUpdateDownloadDateFromTimePicker.Value.AddDays(1);
+            }
+            else
+            {
+                OrderUpdateDownloadDateToTimePicker.MinDate = OrderUpdateDownloadDateFromTimePicker.Value.AddDays(1);
+                OrderUpdateDownloadDateToTimePicker.Value = OrderUpdateDownloadDateToTimePicker.MinDate;
+                OrderUpdateDownloadDateToTimePicker.Checked = false;
+            }
+        }
 
+        private void OrderUpdateUploadDateFromTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            if (OrderUpdateUploadDateToTimePicker.Checked)
+            {
+                OrderUpdateUploadDateToTimePicker.MinDate = OrderUpdateUploadDateFromTimePicker.Value.AddDays(1);
+            }
+            else
+            {
+                OrderUpdateUploadDateToTimePicker.MinDate = OrderUpdateUploadDateFromTimePicker.Value.AddDays(1);
+                OrderUpdateUploadDateToTimePicker.Value = OrderUpdateUploadDateToTimePicker.MinDate;
+                OrderUpdateUploadDateToTimePicker.Checked = false;
+            }
+        }
 
         private void deleteTableSelectComboBox_TextUpdate(object sender, EventArgs e)
         {

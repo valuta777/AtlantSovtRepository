@@ -9,6 +9,7 @@ namespace AtlantSovt.AtlantSovtDb
     [Table("Client")]
     public partial class Client
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Client()
         {
             ClientContacts = new HashSet<ClientContact>();
@@ -28,10 +29,10 @@ namespace AtlantSovt.AtlantSovtDb
         [StringLength(50)]
         public string Director { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string PhysicalAddress { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string GeografphyAddress { get; set; }
 
         public long? WorkDocumentId { get; set; }
@@ -51,18 +52,25 @@ namespace AtlantSovt.AtlantSovtDb
 
         public virtual ClientBankDetail ClientBankDetail { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ClientContact> ClientContacts { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Contract> Contracts { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CustomsAddress> CustomsAddresses { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DownloadAddress> DownloadAddresses { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UnCustomsAddress> UnCustomsAddresses { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UploadAddress> UploadAddresses { get; set; }
     }
 }
