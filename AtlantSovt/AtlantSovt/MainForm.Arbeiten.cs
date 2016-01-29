@@ -183,12 +183,25 @@ namespace AtlantSovt
 
             var text = arbeitenShowSearchTextBox.Text;
 
+            string[] orderNumber = text.Split('/');
+            int indexNumber = 0;
+            int yearCreate = 0;
+            int orderId = 0;
+            Int32.TryParse(text, out orderId);
+
+            if (orderNumber.Count() == 2)
+            {
+                Int32.TryParse(orderNumber[0], out indexNumber);
+                Int32.TryParse(orderNumber[1], out yearCreate);
+            }
+
             using (var db = new AtlantSovtContext())
             {
                 if (arbeitenShowOnlyActive.Checked != true && arbeitenShowSearchDatePicker.Checked != true && arbeitenShowSearchTextBox.Text == "")// 0 0 0
                 {
                     var queryTextAndDate =
                    from ar in db.Arbeitens
+                   where ar.Order.IsDeleted == false
                    orderby ar.Id
                    select
                    new
@@ -222,9 +235,8 @@ namespace AtlantSovt
                 {
                     var queryTextAndDate =
                    from ar in db.Arbeitens
-                   where (ar.Order.Client.Name.Contains(text) || ar.VehicleNumber.Contains(text) || ar.Order.OrderDownloadAddresses.Any(c => c.DownloadAddress.Country.Name.Contains(text) || c.DownloadAddress.CityCode.Contains(text))) || ar.Order.OrderUploadAdresses.Any(c => c.UploadAddress.Country.Name.Contains(text) || c.UploadAddress.CityCode.Contains(text))
-
-
+                   where (ar.Order.Client.Name.Contains(text) || ar.VehicleNumber.Contains(text) || ar.Order.OrderDownloadAddresses.Any(c => c.DownloadAddress.Country.Name.Contains(text) || c.DownloadAddress.CityCode.Contains(text)) || ar.Order.OrderUploadAdresses.Any(c => c.UploadAddress.Country.Name.Contains(text) || c.UploadAddress.CityCode.Contains(text)) || ar.Order.Transporter.FullName.Contains(text) || ar.Order.Transporter.ShortName.Contains(text) || ar.Note.Contains(text) || (ar.Order.IndexNumber == indexNumber && ar.Order.Date.Value.Year == yearCreate) || ar.Order.Id == orderId)
+                   && ar.Order.IsDeleted == false
                    orderby ar.Id
                    select
                    new
@@ -259,6 +271,7 @@ namespace AtlantSovt
                     var queryTextAndDate =
                    from ar in db.Arbeitens
                    where ((ar.Order.DownloadDateFrom.Value.Month == arbeitenShowSearchDatePicker.Value.Month) || (ar.Order.DownloadDateTo.Value.Month == arbeitenShowSearchDatePicker.Value.Month)) && ((ar.Order.DownloadDateFrom.Value.Year == arbeitenShowSearchDatePicker.Value.Year) || ar.Order.DownloadDateTo.Value.Year == arbeitenShowSearchDatePicker.Value.Year)
+                   && ar.Order.IsDeleted == false
                    orderby ar.Id
                    select
                    new
@@ -285,23 +298,18 @@ namespace AtlantSovt
                     arbeitenShowMainDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Номер_авто;
                     arbeitenShowMainDataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.Перевізник;
                     arbeitenShowMainDataGridView.Columns[9].HeaderText = AtlantSovt.Properties.Resources.Сума_перевізнику;
-
-
                 }
                 else if (arbeitenShowOnlyActive.Checked != true && arbeitenShowSearchDatePicker.Checked == true && arbeitenShowSearchTextBox.Text != "")// 0 1 1
                 {
-                    var queryTextAndDate =
+                   var queryTextAndDate =
                    from ar in db.Arbeitens
-                   where (ar.Order.Client.Name.Contains(text) || ar.VehicleNumber.Contains(text) ||
-                   ar.Order.OrderDownloadAddresses.Any(c => c.DownloadAddress.Country.Name.Contains(text) ||
-                   c.DownloadAddress.CityCode.Contains(text))) ||
-                   ar.Order.OrderUploadAdresses.Any(c => c.UploadAddress.Country.Name.Contains(text)
-                   || c.UploadAddress.CityCode.Contains(text))
+                   where (ar.Order.Client.Name.Contains(text) || ar.VehicleNumber.Contains(text) || ar.Order.OrderDownloadAddresses.Any(c => c.DownloadAddress.Country.Name.Contains(text) || c.DownloadAddress.CityCode.Contains(text)) || ar.Order.OrderUploadAdresses.Any(c => c.UploadAddress.Country.Name.Contains(text) || c.UploadAddress.CityCode.Contains(text)) || ar.Order.Transporter.FullName.Contains(text) || ar.Order.Transporter.ShortName.Contains(text) || ar.Note.Contains(text) || (ar.Order.IndexNumber == indexNumber && ar.Order.Date.Value.Year == yearCreate) || ar.Order.Id == orderId)
 
                    && ((ar.Order.DownloadDateFrom.Value.Month == arbeitenShowSearchDatePicker.Value.Month) ||
                    (ar.Order.DownloadDateTo.Value.Month == arbeitenShowSearchDatePicker.Value.Month))
                    && ((ar.Order.DownloadDateFrom.Value.Year == arbeitenShowSearchDatePicker.Value.Year) ||
                    ar.Order.DownloadDateTo.Value.Year == arbeitenShowSearchDatePicker.Value.Year)
+                   && ar.Order.IsDeleted == false
                    orderby ar.Id
                    select
                    new
@@ -336,6 +344,7 @@ namespace AtlantSovt
                     var queryTextAndDate =
                    from ar in db.Arbeitens
                    where (ar.Order.State == true)
+                   && ar.Order.IsDeleted == false
                    orderby ar.Id
                    select
                    new
@@ -369,8 +378,9 @@ namespace AtlantSovt
                 {
                     var queryTextAndDate =
                    from ar in db.Arbeitens
-                   where (ar.Order.Client.Name.Contains(text) || ar.VehicleNumber.Contains(text) || ar.Order.OrderDownloadAddresses.Any(c => c.DownloadAddress.Country.Name.Contains(text) || c.DownloadAddress.CityCode.Contains(text))) || ar.Order.OrderUploadAdresses.Any(c => c.UploadAddress.Country.Name.Contains(text) || c.UploadAddress.CityCode.Contains(text))
+                   where (ar.Order.Client.Name.Contains(text) || ar.VehicleNumber.Contains(text) || ar.Order.OrderDownloadAddresses.Any(c => c.DownloadAddress.Country.Name.Contains(text) || c.DownloadAddress.CityCode.Contains(text)) || ar.Order.OrderUploadAdresses.Any(c => c.UploadAddress.Country.Name.Contains(text) || c.UploadAddress.CityCode.Contains(text)) || ar.Order.Transporter.FullName.Contains(text) || ar.Order.Transporter.ShortName.Contains(text) || ar.Note.Contains(text) || (ar.Order.IndexNumber == indexNumber && ar.Order.Date.Value.Year == yearCreate) || ar.Order.Id == orderId)
                    && (ar.Order.State == true)
+                   && ar.Order.IsDeleted == false
                    orderby ar.Id
                    select
                    new
@@ -404,6 +414,7 @@ namespace AtlantSovt
                   from ar in db.Arbeitens
                   where (ar.Order.State == true && ((ar.Order.DownloadDateFrom.Value.Month == arbeitenShowSearchDatePicker.Value.Month) ||
                    (ar.Order.DownloadDateTo.Value.Month == arbeitenShowSearchDatePicker.Value.Month)) && ((ar.Order.DownloadDateFrom.Value.Year == arbeitenShowSearchDatePicker.Value.Year) || ar.Order.DownloadDateTo.Value.Year == arbeitenShowSearchDatePicker.Value.Year))
+                  && ar.Order.IsDeleted == false
                   orderby ar.Id
                   select
                   new
@@ -437,10 +448,11 @@ namespace AtlantSovt
                 {
                     var queryTextAndDate =
                   from ar in db.Arbeitens
-                  where (ar.Order.Client.Name.Contains(text) || ar.VehicleNumber.Contains(text) || ar.Order.OrderDownloadAddresses.Any(c => c.DownloadAddress.Country.Name.Contains(text) || c.DownloadAddress.CityCode.Contains(text))) || ar.Order.OrderUploadAdresses.Any(c => c.UploadAddress.Country.Name.Contains(text) || c.UploadAddress.CityCode.Contains(text))
+                  where (ar.Order.Client.Name.Contains(text) || ar.VehicleNumber.Contains(text) || ar.Order.OrderDownloadAddresses.Any(c => c.DownloadAddress.Country.Name.Contains(text) || c.DownloadAddress.CityCode.Contains(text)) || ar.Order.OrderUploadAdresses.Any(c => c.UploadAddress.Country.Name.Contains(text) || c.UploadAddress.CityCode.Contains(text)) || ar.Order.Transporter.FullName.Contains(text) || ar.Order.Transporter.ShortName.Contains(text) || ar.Note.Contains(text) || (ar.Order.IndexNumber == indexNumber && ar.Order.Date.Value.Year == yearCreate) || ar.Order.Id == orderId)
                   && ((ar.Order.DownloadDateFrom.Value.Month == arbeitenShowSearchDatePicker.Value.Month) || (ar.Order.DownloadDateTo.Value.Month == arbeitenShowSearchDatePicker.Value.Month)) && ((ar.Order.DownloadDateFrom.Value.Year == arbeitenShowSearchDatePicker.Value.Year) ||
                         ar.Order.DownloadDateTo.Value.Year == arbeitenShowSearchDatePicker.Value.Year)
                   && ar.Order.State == true
+                  && ar.Order.IsDeleted == false
                   orderby ar.Id
                   select
                   new
