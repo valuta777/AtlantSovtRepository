@@ -7367,7 +7367,9 @@ namespace AtlantSovt
 
         void ClearAllBoxesTransporterUpdate()
         {
+            workDocumentTransporterUpdateComboBox.SelectedIndex = -1;
             workDocumentTransporterUpdateComboBox.Items.Clear();
+            taxPayerStatusTransporterUpdateComboBox.SelectedIndex = -1;
             taxPayerStatusTransporterUpdateComboBox.Items.Clear();
             nameTransporterUpdateTextBox.Clear();
             directorTransporterUpdateTextBox.Clear();            
@@ -7388,12 +7390,21 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = selectTransporterUpdateComboBox.SelectedItem.ToString();
-                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedNameAndDirector[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                transporter = db.Transporters.Find(id);
-                filters = db.Filters.Find(transporter.Id);
+                if (selectTransporterUpdateComboBox.SelectedIndex != -1 && selectTransporterUpdateComboBox.Text == selectTransporterUpdateComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = selectTransporterUpdateComboBox.SelectedItem.ToString();
+                    string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedNameAndDirector[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    transporter = db.Transporters.Find(id);
+                    filters = db.Filters.Find(transporter.Id);
+                }
+                else
+                {
+                    transporter = null;
+                    filters = null;
+                    ClearAllBoxesTransporterUpdate();
+                }
                 if (transporter != null)
                 {
                     nameTransporterUpdateTextBox.Text = Convert.ToString(transporter.FullName);
@@ -7422,78 +7433,80 @@ namespace AtlantSovt
                         taxPayerStatusTransporterUpdateComboBox.SelectedIndex = -1;
                     }
 
+                    if (filters != null)
+                    {
+                        if (transporter.Filter.IfForwarder != null)
+                        {
+                            transporterUpdateFiltersSelectIfForwarderCheckBox.Checked = Convert.ToBoolean(transporter.Filter.IfForwarder.Value);
+                            if (transporter.Filter.IfForwarder.Value)
+                            {
+                                transporterUpdateFiltersSelectIfForwarderCheckBox.CheckState = CheckState.Checked;
+                            }
+                            else
+                            {
+                                transporterUpdateFiltersSelectIfForwarderCheckBox.CheckState = CheckState.Unchecked;
+                            }
+                        }
+                        if (transporter.Filter.TUR != null)
+                        {
+                            transporterUpdateFiltersSelectTURCheckBox.Checked = Convert.ToBoolean(transporter.Filter.TUR.Value);
+                            if (transporter.Filter.TUR.Value)
+                            {
+                                transporterUpdateFiltersSelectTURCheckBox.CheckState = CheckState.Checked;
+                            }
+                            else
+                            {
+                                transporterUpdateFiltersSelectTURCheckBox.CheckState = CheckState.Unchecked;
+                            }
+                        }
+                        if (transporter.Filter.CMR != null)
+                        {
+                            transporterUpdateFiltersSelectCMRCheckBox.Checked = Convert.ToBoolean(transporter.Filter.CMR.Value);
+                            if (transporter.Filter.CMR.Value)
+                            {
+                                transporterUpdateFiltersSelectCMRCheckBox.CheckState = CheckState.Checked;
+                            }
+                            else
+                            {
+                                transporterUpdateFiltersSelectCMRCheckBox.CheckState = CheckState.Unchecked;
+                            }
+                        }
+                        if (transporter.Filter.EKMT != null)
+                        {
+                            transporterUpdateFiltersSelectEKMTCheckBox.Checked = Convert.ToBoolean(transporter.Filter.EKMT.Value);
+                            if (transporter.Filter.EKMT.Value)
+                            {
+                                transporterUpdateFiltersSelectEKMTCheckBox.CheckState = CheckState.Checked;
+                            }
+                            else
+                            {
+                                transporterUpdateFiltersSelectEKMTCheckBox.CheckState = CheckState.Unchecked;
+                            }
 
-                    if (transporter.Filter.IfForwarder != null)
-                    {
-                        transporterUpdateFiltersSelectIfForwarderCheckBox.Checked = Convert.ToBoolean(transporter.Filter.IfForwarder.Value);
-                        if (transporter.Filter.IfForwarder.Value)
-                        {
-                            transporterUpdateFiltersSelectIfForwarderCheckBox.CheckState = CheckState.Checked;
                         }
-                        else
+                        if (transporter.Filter.Zborny != null)
                         {
-                            transporterUpdateFiltersSelectIfForwarderCheckBox.CheckState = CheckState.Unchecked;
+                            transporterUpdateFiltersSelectZbornyCheckBox.Checked = Convert.ToBoolean(transporter.Filter.Zborny.Value);
+                            if (transporter.Filter.Zborny.Value)
+                            {
+                                transporterUpdateFiltersSelectZbornyCheckBox.CheckState = CheckState.Checked;
+                            }
+                            else
+                            {
+                                transporterUpdateFiltersSelectZbornyCheckBox.CheckState = CheckState.Unchecked;
+                            }
                         }
-                    }
-                    if (transporter.Filter.TUR != null)
-                    {
-                        transporterUpdateFiltersSelectTURCheckBox.Checked = Convert.ToBoolean(transporter.Filter.TUR.Value);
-                        if (transporter.Filter.TUR.Value)
+                        if (transporter.Filter.AD != null)
                         {
-                            transporterUpdateFiltersSelectTURCheckBox.CheckState = CheckState.Checked;
-                        }
-                        else
-                        {
-                            transporterUpdateFiltersSelectTURCheckBox.CheckState = CheckState.Unchecked;
-                        }
-                    }
-                    if (transporter.Filter.CMR != null)
-                    {
-                        transporterUpdateFiltersSelectCMRCheckBox.Checked = Convert.ToBoolean(transporter.Filter.CMR.Value);
-                        if (transporter.Filter.CMR.Value)
-                        {
-                            transporterUpdateFiltersSelectCMRCheckBox.CheckState = CheckState.Checked;
-                        }
-                        else
-                        {
-                            transporterUpdateFiltersSelectCMRCheckBox.CheckState = CheckState.Unchecked;
-                        }
-                    }
-                    if (transporter.Filter.EKMT != null)
-                    {
-                        transporterUpdateFiltersSelectEKMTCheckBox.Checked = Convert.ToBoolean(transporter.Filter.EKMT.Value);
-                        if (transporter.Filter.EKMT.Value)
-                        {
-                            transporterUpdateFiltersSelectEKMTCheckBox.CheckState = CheckState.Checked;
-                        }
-                        else
-                        {
-                            transporterUpdateFiltersSelectEKMTCheckBox.CheckState = CheckState.Unchecked;
-                        }
-
-                    }
-                    if (transporter.Filter.Zborny != null)
-                    {
-                        transporterUpdateFiltersSelectZbornyCheckBox.Checked = Convert.ToBoolean(transporter.Filter.Zborny.Value);
-                        if (transporter.Filter.Zborny.Value)
-                        {
-                            transporterUpdateFiltersSelectZbornyCheckBox.CheckState = CheckState.Checked;
-                        }
-                        else
-                        {
-                            transporterUpdateFiltersSelectZbornyCheckBox.CheckState = CheckState.Unchecked;
-                        }
-                    }
-                    if (transporter.Filter.AD != null)
-                    {
-                        transporterUpdateFiltersSelectADCheckBox.Checked = Convert.ToBoolean(transporter.Filter.AD.Value);
-                        if (transporter.Filter.AD.Value)
-                        {
-                            transporterUpdateFiltersSelectADCheckBox.CheckState = CheckState.Checked;
-                        }
-                        else
-                        {
-                            transporterUpdateFiltersSelectADCheckBox.CheckState = CheckState.Unchecked;
+                            transporterUpdateFiltersSelectADCheckBox.Checked = Convert.ToBoolean(transporter.Filter.AD.Value);
+                            if (transporter.Filter.AD.Value)
+                            {
+                                transporterUpdateFiltersSelectADCheckBox.CheckState = CheckState.Checked;
+                            }
+                            else
+                            {
+                                transporterUpdateFiltersSelectADCheckBox.CheckState = CheckState.Unchecked;
+                            }
                         }
                     }
                 }
@@ -7595,11 +7608,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = workDocumentTransporterUpdateComboBox.SelectedItem.ToString();
-                string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedStatus[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                transporterWorkDocument = db.WorkDocuments.Find(id);
+                if (workDocumentTransporterUpdateComboBox.SelectedIndex != -1 && workDocumentTransporterUpdateComboBox.Text == workDocumentTransporterUpdateComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = workDocumentTransporterUpdateComboBox.SelectedItem.ToString();
+                    string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedStatus[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    transporterWorkDocument = db.WorkDocuments.Find(id);
+                }
+                else
+                {
+                    transporterWorkDocument = null;
+                }
             }
         }
 
@@ -7607,11 +7627,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = taxPayerStatusTransporterUpdateComboBox.SelectedItem.ToString();
-                string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedStatus[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                transporterTaxPayerStatus = db.TaxPayerStatus.Find(id);
+                if (taxPayerStatusTransporterUpdateComboBox.SelectedIndex != -1 && taxPayerStatusTransporterUpdateComboBox.Text == taxPayerStatusTransporterUpdateComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = taxPayerStatusTransporterUpdateComboBox.SelectedItem.ToString();
+                    string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedStatus[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    transporterTaxPayerStatus = db.TaxPayerStatus.Find(id);
+                }
+                else
+                {
+                    transporterTaxPayerStatus = null;
+                }
             }
         }
 
@@ -7619,133 +7646,139 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                //якщо хоча б один з флагів = true
-                if (transporterFullNameChanged || transporterDirectorChanged || transporterPhysicalAddressChanged || transporterGeographyAddressChanged || transporterCommentChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterOriginalChanged || transporterFaxChanged || transporterFiltersChanged || transporterShortNameChanged)
+                if (transporter != null)
                 {
-                    if (transporterFullNameChanged)
+                    //якщо хоча б один з флагів = true
+                    if (transporterFullNameChanged || transporterDirectorChanged || transporterPhysicalAddressChanged || transporterGeographyAddressChanged || transporterCommentChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterWorkDocumentChanged || transporterTaxPayerStatusChanged || transporterOriginalChanged || transporterFaxChanged || transporterFiltersChanged || transporterShortNameChanged)
                     {
-                        transporter.FullName = nameTransporterUpdateTextBox.Text;
-                    }
-                    if (transporterShortNameChanged)
-                    {
-                        transporter.ShortName = shortNameTransporterUpdateTextBox.Text;
-                    }
-                    if (transporterDirectorChanged)
-                    {
-                        transporter.Director = directorTransporterUpdateTextBox.Text;
-                    }                    
-                    if (transporterPhysicalAddressChanged)
-                    {
-                        transporter.PhysicalAddress = physicalAddressTransporterUpdateTextBox.Text;
-                    }
-                    if (transporterGeographyAddressChanged)
-                    {
-                        transporter.GeographyAddress = geographyAddressTransporterUpdateTextBox.Text;
-                    }
-                    if (transporterCommentChanged)
-                    {
-                        transporter.Comment = commentTransporterUpdateTextBox.Text;
-                    }
-                    if (transporterWorkDocumentChanged)
-                    {
-                        if (workDocumentTransporterUpdateComboBox.Text != "")
+                        if (transporterFullNameChanged)
                         {
-                            transporter.WorkDocument = null;
-                            transporter.WorkDocumentId = transporterWorkDocument.Id;
+                            transporter.FullName = nameTransporterUpdateTextBox.Text;
                         }
-                        else 
+                        if (transporterShortNameChanged)
                         {
-                            transporter.WorkDocumentId = null;
-                            transporter.WorkDocument = null;
+                            transporter.ShortName = shortNameTransporterUpdateTextBox.Text;
                         }
-                    }
-                    if (transporterTaxPayerStatusChanged)
-                    {
-                        if (taxPayerStatusTransporterUpdateComboBox.Text != "")
+                        if (transporterDirectorChanged)
                         {
-                            transporter.TaxPayerStatu = null;
-                            transporter.TaxPayerStatusId = transporterTaxPayerStatus.Id;
+                            transporter.Director = directorTransporterUpdateTextBox.Text;
                         }
-                        else 
-                        {                           
-                            transporter.TaxPayerStatusId = null;
-                            transporter.TaxPayerStatu = null;
+                        if (transporterPhysicalAddressChanged)
+                        {
+                            transporter.PhysicalAddress = physicalAddressTransporterUpdateTextBox.Text;
                         }
-                    }
-                    if (transporterFiltersChanged)
-                    {                         
+                        if (transporterGeographyAddressChanged)
+                        {
+                            transporter.GeographyAddress = geographyAddressTransporterUpdateTextBox.Text;
+                        }
+                        if (transporterCommentChanged)
+                        {
+                            transporter.Comment = commentTransporterUpdateTextBox.Text;
+                        }
+                        if (transporterWorkDocumentChanged)
+                        {
+                            if (transporterWorkDocument != null)
+                            {
+                                transporter.WorkDocument = null;
+                                transporter.WorkDocumentId = transporterWorkDocument.Id;
+                            }
+                            else
+                            {
+                                transporter.WorkDocumentId = null;
+                                transporter.WorkDocument = null;
+                            }
+                        }
+                        if (transporterTaxPayerStatusChanged)
+                        {
+                            if (transporterTaxPayerStatus != null)
+                            {
+                                transporter.TaxPayerStatu = null;
+                                transporter.TaxPayerStatusId = transporterTaxPayerStatus.Id;
+                            }
+                            else
+                            {
+                                transporter.TaxPayerStatusId = null;
+                                transporter.TaxPayerStatu = null;
+                            }
+                        }
+                        if (transporterFiltersChanged)
+                        {
+                            if (transporterUpdateFiltersSelectIfForwarderCheckBox.CheckState != CheckState.Indeterminate)
+                            {
+                                filters.IfForwarder = transporterUpdateFiltersSelectIfForwarderCheckBox.Checked;
+                            }
+                            else
+                            {
+                                filters.IfForwarder = null;
+                            }
 
-                        if (transporterUpdateFiltersSelectIfForwarderCheckBox.CheckState != CheckState.Indeterminate)
-                        {
-                            filters.IfForwarder = transporterUpdateFiltersSelectIfForwarderCheckBox.Checked;
-                        }
-                        else 
-                        {
-                            filters.IfForwarder = null;
-                        }
+                            if (transporterUpdateFiltersSelectTURCheckBox.CheckState != CheckState.Indeterminate)
+                            {
+                                filters.TUR = transporterUpdateFiltersSelectTURCheckBox.Checked;
+                            }
+                            else
+                            {
+                                filters.TUR = null;
+                            }
 
-                        if (transporterUpdateFiltersSelectTURCheckBox.CheckState != CheckState.Indeterminate)
-                        {
-                            filters.TUR = transporterUpdateFiltersSelectTURCheckBox.Checked;
-                        }
-                        else 
-                        {
-                            filters.TUR = null;
-                        }
+                            if (transporterUpdateFiltersSelectCMRCheckBox.CheckState != CheckState.Indeterminate)
+                            {
+                                filters.CMR = transporterUpdateFiltersSelectCMRCheckBox.Checked;
+                            }
+                            else
+                            {
+                                filters.CMR = null;
+                            }
 
-                        if (transporterUpdateFiltersSelectCMRCheckBox.CheckState != CheckState.Indeterminate)
-                        {
-                            filters.CMR = transporterUpdateFiltersSelectCMRCheckBox.Checked;
-                        }
-                        else 
-                        {
-                            filters.CMR = null;
-                        }
+                            if (transporterUpdateFiltersSelectEKMTCheckBox.CheckState != CheckState.Indeterminate)
+                            {
+                                filters.EKMT = transporterUpdateFiltersSelectEKMTCheckBox.Checked;
+                            }
+                            else
+                            {
+                                filters.EKMT = null;
+                            }
 
-                        if (transporterUpdateFiltersSelectEKMTCheckBox.CheckState != CheckState.Indeterminate)
-                        {
-                            filters.EKMT = transporterUpdateFiltersSelectEKMTCheckBox.Checked;
-                        }
-                        else 
-                        {
-                            filters.EKMT = null;
-                        }
+                            if (transporterUpdateFiltersSelectZbornyCheckBox.CheckState != CheckState.Indeterminate)
+                            {
+                                filters.Zborny = transporterUpdateFiltersSelectZbornyCheckBox.Checked;
+                            }
+                            else
+                            {
+                                filters.Zborny = null;
+                            }
 
-                        if (transporterUpdateFiltersSelectZbornyCheckBox.CheckState != CheckState.Indeterminate)
-                        {
-                            filters.Zborny = transporterUpdateFiltersSelectZbornyCheckBox.Checked;
+                            if (transporterUpdateFiltersSelectADCheckBox.CheckState != CheckState.Indeterminate)
+                            {
+                                filters.AD = transporterUpdateFiltersSelectADCheckBox.Checked;
+                            }
+                            else
+                            {
+                                filters.AD = null;
+                            }
+                            db.Entry(filters).State = EntityState.Modified;
                         }
-                        else 
+                        if (transporterOriginalChanged)
                         {
-                           filters.Zborny = null;
+                            transporter.ContractType = true;
                         }
+                        else
+                        {
+                            transporter.ContractType = false;
+                        }
+                        db.Entry(transporter).State = EntityState.Modified;
+                        db.SaveChanges();
 
-                        if (transporterUpdateFiltersSelectADCheckBox.CheckState != CheckState.Indeterminate)
-                        {
-                            filters.AD = transporterUpdateFiltersSelectADCheckBox.Checked;
-                        }
-                        else 
-                        {
-                            filters.AD = null;
-                        }
-                        db.Entry(filters).State = EntityState.Modified;
-                    }                    
-                    if (transporterOriginalChanged)
-                    {
-                        transporter.ContractType = true;
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_змінено);
                     }
                     else
                     {
-                        transporter.ContractType = false;
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Змін_не_знайдено);
                     }
-                    db.Entry(transporter).State = EntityState.Modified;
-                    db.SaveChanges();
-                    
-                    MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_змінено);
                 }
                 else
                 {
-                    MessageBox.Show(AtlantSovt.Properties.Resources.Змін_не_знайдено);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_перевізника);
                 }
             }
         }
@@ -7758,7 +7791,6 @@ namespace AtlantSovt
             if (transporter != null)
             {
                 updateTransporterContactAddForm.AddTransporterContact2(transporter.Id);
-                updateTransporterContactAddForm = null;
             }
         }
 

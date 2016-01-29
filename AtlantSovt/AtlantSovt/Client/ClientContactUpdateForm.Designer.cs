@@ -100,6 +100,7 @@
             this.clientUpdateContactSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.clientUpdateContactSelectComboBox.Name = "clientUpdateContactSelectComboBox";
             this.clientUpdateContactSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.clientUpdateContactSelectComboBox_SelectedIndexChanged);
+            this.clientUpdateContactSelectComboBox.TextChanged += new System.EventHandler(this.clientUpdateContactSelectComboBox_TextChanged);
             this.clientUpdateContactSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.clientUpdateContactSelectComboBox_MouseClick);
             // 
             // label4

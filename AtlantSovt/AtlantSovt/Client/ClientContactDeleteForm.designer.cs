@@ -47,6 +47,7 @@
             this.ClientUpdateSelectDeleteContactComboBox.Name = "ClientUpdateSelectDeleteContactComboBox";
             this.ClientUpdateSelectDeleteContactComboBox.Sorted = true;
             this.ClientUpdateSelectDeleteContactComboBox.SelectedIndexChanged += new System.EventHandler(this.ClientUpdateSelectDeleteContactComboBox_SelectedIndexChanged);
+            this.ClientUpdateSelectDeleteContactComboBox.TextUpdate += new System.EventHandler(this.ClientUpdateSelectDeleteContactComboBox_TextUpdate);
             this.ClientUpdateSelectDeleteContactComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClientUpdateSelectDeleteContactComboBox_MouseClick);
             // 
             // DeleteClientContactButton

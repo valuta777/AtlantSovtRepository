@@ -67,6 +67,7 @@
             this.addressAddCountryNameComboBox.FormattingEnabled = true;
             this.addressAddCountryNameComboBox.Name = "addressAddCountryNameComboBox";
             this.addressAddCountryNameComboBox.SelectedIndexChanged += new System.EventHandler(this.addressAddCountryNameComboBox_SelectedIndexChanged);
+            this.addressAddCountryNameComboBox.TextUpdate += new System.EventHandler(this.addressAddCountryNameComboBox_TextUpdate);
             this.addressAddCountryNameComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.addressAddCountryNameComboBox_MouseClick);
             // 
             // addressAddCountryAddButton
@@ -177,7 +178,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddAddressForm";
-            this.TopMost = true;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddAddressForm_FormClosed);
             this.Load += new System.EventHandler(this.AddAddressForm_Load);
             this.ResumeLayout(false);

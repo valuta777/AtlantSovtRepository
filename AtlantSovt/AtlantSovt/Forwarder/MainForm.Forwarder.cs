@@ -367,24 +367,35 @@ namespace AtlantSovt
 
         void ClearAllBoxesForwarderUpdate()
         {
+            workDocumentForwarderUpdateComboBox.SelectedIndex = -1;
             workDocumentForwarderUpdateComboBox.Items.Clear();
+            taxPayerStatusForwarderUpdateComboBox.SelectedIndex = -1;
             taxPayerStatusForwarderUpdateComboBox.Items.Clear();
             nameForwarderUpdateTextBox.Clear();
             directorForwarderUpdateTextBox.Clear();           
             physicalAddressForwarderUpdateTextBox.Clear();
             geographyAddressForwarderUpdateTextBox.Clear();
             commentForwarderUpdateTextBox.Clear();
+            updateForwarderStampPictureBox.Image = null;
         }
 
         void SplitUpdateForwarder()
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = selectForwarderUpdateComboBox.SelectedItem.ToString();
-                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedNameAndDirector[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                forwarder = db.Forwarders.Find(id);
+                if (selectForwarderUpdateComboBox.SelectedIndex != -1 && selectForwarderUpdateComboBox.Text == selectForwarderUpdateComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = selectForwarderUpdateComboBox.SelectedItem.ToString();
+                    string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedNameAndDirector[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    forwarder = db.Forwarders.Find(id);
+                }
+                else
+                {
+                    forwarder = null;
+                    ClearAllBoxesForwarderUpdate();
+                }
                 if (forwarder != null)
                 {
                     nameForwarderUpdateTextBox.Text = Convert.ToString(forwarder.Name);
@@ -469,7 +480,7 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                if (workDocumentForwarderUpdateComboBox.Text != "")
+                if (workDocumentForwarderUpdateComboBox.SelectedIndex != -1 && workDocumentForwarderUpdateComboBox.Text == workDocumentForwarderUpdateComboBox.SelectedItem.ToString())
                 {
                     string comboboxText = workDocumentForwarderUpdateComboBox.SelectedItem.ToString();
                     string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
@@ -488,7 +499,7 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                if (taxPayerStatusForwarderUpdateComboBox.Text != "")
+                if (taxPayerStatusForwarderUpdateComboBox.SelectedIndex != -1 && taxPayerStatusForwarderUpdateComboBox.Text == taxPayerStatusForwarderUpdateComboBox.SelectedItem.ToString())
                 {
                     string comboboxText = taxPayerStatusForwarderUpdateComboBox.SelectedItem.ToString();
                     string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
@@ -507,69 +518,76 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                //якщо хоча б один з флагів = true
-                if (forwarderNameChanged || forwarderDirectorChanged || forwarderPhysicalAddressChanged || forwarderGeographyAddressChanged || forwarderCommentChanged || forwarderWorkDocumentChanged || forwarderTaxPayerStatusChanged || forwarderStampChanged)
+                if (forwarder != null)
                 {
-                    if (forwarderNameChanged)
+                    //якщо хоча б один з флагів = true
+                    if (forwarderNameChanged || forwarderDirectorChanged || forwarderPhysicalAddressChanged || forwarderGeographyAddressChanged || forwarderCommentChanged || forwarderWorkDocumentChanged || forwarderTaxPayerStatusChanged || forwarderStampChanged)
                     {
-                        forwarder.Name = nameForwarderUpdateTextBox.Text;
-                    }
-                    if (forwarderDirectorChanged)
-                    {
-                        forwarder.Director = directorForwarderUpdateTextBox.Text;
-                    }
-                    if (forwarderPhysicalAddressChanged)
-                    {
-                        forwarder.PhysicalAddress = physicalAddressForwarderUpdateTextBox.Text;
-                    }
-                    if (forwarderGeographyAddressChanged)
-                    {
-                        forwarder.GeographyAddress = geographyAddressForwarderUpdateTextBox.Text;
-                    }                   
-                    if (forwarderCommentChanged)
-                    {
-                        forwarder.Comment = commentForwarderUpdateTextBox.Text;
-                    }
-                    if (forwarderWorkDocumentChanged)
-                    {
-                        if (workDocumentForwarderUpdateComboBox.Text != "")
+                        if (forwarderNameChanged)
                         {
-                            forwarder.WorkDocument = null;
-                            forwarder.WorkDocumentId = forwarderWorkDocument.Id;
+                            forwarder.Name = nameForwarderUpdateTextBox.Text;
                         }
-                        else
+                        if (forwarderDirectorChanged)
                         {
-                            forwarder.WorkDocumentId = null;
-                            forwarder.WorkDocument = null;
+                            forwarder.Director = directorForwarderUpdateTextBox.Text;
                         }
-                    }
-                    if (forwarderTaxPayerStatusChanged)
-                    {
-                        if (taxPayerStatusForwarderUpdateComboBox.Text != "")
+                        if (forwarderPhysicalAddressChanged)
                         {
-                            forwarder.TaxPayerStatu = null;
-                            forwarder.TaxPayerStatusId = forwarderTaxPayerStatus.Id;
+                            forwarder.PhysicalAddress = physicalAddressForwarderUpdateTextBox.Text;
                         }
-                        else
+                        if (forwarderGeographyAddressChanged)
                         {
-                            forwarder.TaxPayerStatusId = null;
-                            forwarder.TaxPayerStatu = null;
+                            forwarder.GeographyAddress = geographyAddressForwarderUpdateTextBox.Text;
                         }
-                    }
-                    if (forwarderStampChanged)
-                    {
-                        forwarder.ForwarderStamp.Stamp = (updateForwarderStampPictureBox.Image != null) ? imageToByteArray(updateForwarderStampPictureBox.Image) : null;
-                    }
+                        if (forwarderCommentChanged)
+                        {
+                            forwarder.Comment = commentForwarderUpdateTextBox.Text;
+                        }
+                        if (forwarderWorkDocumentChanged)
+                        {
+                            if (forwarderWorkDocument != null)
+                            {
+                                forwarder.WorkDocument = null;
+                                forwarder.WorkDocumentId = forwarderWorkDocument.Id;
+                            }
+                            else
+                            {
+                                forwarder.WorkDocumentId = null;
+                                forwarder.WorkDocument = null;
+                            }
+                        }
+                        if (forwarderTaxPayerStatusChanged)
+                        {
+                            if (forwarderTaxPayerStatus != null)
+                            {
+                                forwarder.TaxPayerStatu = null;
+                                forwarder.TaxPayerStatusId = forwarderTaxPayerStatus.Id;
+                            }
+                            else
+                            {
+                                forwarder.TaxPayerStatusId = null;
+                                forwarder.TaxPayerStatu = null;
+                            }
+                        }
+                        if (forwarderStampChanged)
+                        {
+                            forwarder.ForwarderStamp.Stamp = (updateForwarderStampPictureBox.Image != null) ? imageToByteArray(updateForwarderStampPictureBox.Image) : null;
+                        }
 
-                    db.Entry(forwarder).State = EntityState.Modified;
-                    db.Entry(forwarder.ForwarderStamp).State = EntityState.Modified;
+                        db.Entry(forwarder).State = EntityState.Modified;
+                        db.Entry(forwarder.ForwarderStamp).State = EntityState.Modified;
 
-                    db.SaveChanges();
-                    MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_змінено);
+                        db.SaveChanges();
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_змінено);
+                    }
+                    else
+                    {
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Змін_не_знайдено);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show(AtlantSovt.Properties.Resources.Змін_не_знайдено);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_експедитора);
                 }
             }
         }
@@ -583,7 +601,6 @@ namespace AtlantSovt
             if (forwarder != null)
             {
                 updateForwarderContactAddForm.AddForwarderContact2(forwarder.Id);
-                updateForwarderContactAddForm = null;
             }
         }
 
@@ -651,11 +668,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = forwarderDeleteComboBox.SelectedItem.ToString();
-                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedNameAndDirector[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                deleteForwarder = db.Forwarders.Find(id);
+                if (taxPayerStatusForwarderUpdateComboBox.SelectedIndex != -1 && taxPayerStatusForwarderUpdateComboBox.Text == taxPayerStatusForwarderUpdateComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = forwarderDeleteComboBox.SelectedItem.ToString();
+                    string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedNameAndDirector[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    deleteForwarder = db.Forwarders.Find(id);
+                }
+                else
+                {
+                    deleteForwarder = null;
+                }
             }
         }
 

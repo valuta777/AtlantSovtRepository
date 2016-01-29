@@ -100,6 +100,7 @@
             this.transporterUpdateContactSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.transporterUpdateContactSelectComboBox.Name = "transporterUpdateContactSelectComboBox";
             this.transporterUpdateContactSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.transporterUpdateContactSelectComboBox_SelectedIndexChanged);
+            this.transporterUpdateContactSelectComboBox.TextChanged += new System.EventHandler(this.transporterUpdateContactSelectComboBox_TextChanged);
             this.transporterUpdateContactSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.transporterUpdateContactSelectComboBox_MouseClick);
             // 
             // label4t

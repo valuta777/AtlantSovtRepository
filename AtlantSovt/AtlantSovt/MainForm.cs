@@ -29,7 +29,12 @@ namespace AtlantSovt
             menuStrip.Renderer = new menuStripRenderer();
             yearLabel.Text = DateTime.Now.ToShortDateString();
         }
-            //Client Forms
+
+        //common Forms
+        AddWorkDocumentForm addWorkDocument;
+        AddTaxPayerStatusForm addTaxPayerStatus;
+
+        //Client Forms
         Image forwarderAddStamp = null;
             //Contact
         ClientContactAddForm addClientContactAddForm, updateClientContactAddForm;
@@ -68,6 +73,21 @@ namespace AtlantSovt
             //Tracking
         AddOrderNoteForm orderNoteForm;
         ShowTrackingCommentForm ShowTrackingComment;
+        AddTrackingCommentForm trackingShowAddComment;
+
+            //Order 
+            
+        AddCargoForm addCargoForm;
+        AddLoadingFormForm addLoadingFormForm;
+        AddOrderDenyForm addOrderDenyForm;
+        AddAdditionalTermsForm addAdditionalTermsForm;
+        AddPaymentTermsForm addPaymentTermsForm;
+        AddTrailerForm addTrailerForm;
+        AddStaffForm addStaffForm;
+        AddCubeForm addCubeForm;
+        AddRegularyDelayForm addRegularyDelayForm;
+        AddTirCmrForm addTirCmrForm;
+        AddFineForDelayForm addFineForDelayForm;
 
         bool languageChanged;
         //Load / Animaton / Test connection
@@ -98,7 +118,6 @@ namespace AtlantSovt
                     {
                         Log.Write(ex);
                     }
-
                     return true;
                 }
                 catch(Exception ex)
@@ -152,7 +171,6 @@ namespace AtlantSovt
                 Application.Exit();
             }
         }
-
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if(!languageChanged)
@@ -172,62 +190,53 @@ namespace AtlantSovt
         #endregion
 
         //MenuStrips
-        #region MenuStrips               
+        #region MenuStrips            
 
         private void addClientsStrip_Click(object sender, EventArgs e)
         {
             helloPictureBox.Image = null;
             dataControl.SelectedIndex = 2;
         }
-
         private void updateClientsStrip_Click(object sender, EventArgs e)
         {
             helloPictureBox.Image = null;
             dataControl.SelectedIndex = 3;
         }
-
         private void deleteClientsStrip_Click(object sender, EventArgs e)
         {
             helloPictureBox.Image = null;
             dataControl.SelectedIndex = 4;
         }               
-
         private void addForwarderStrip_Click(object sender, EventArgs e)
         {
             helloPictureBox.Image = null;
             dataControl.SelectedIndex = 6;
         }
-
         private void updateForwarderStrip_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 7;
             helloPictureBox.Image = null;
         }
-
         private void deleteForwarderStrip_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 8;
             helloPictureBox.Image = null;
         }
-
         private void addTransporterStrip_Click(object sender, EventArgs e)
         {
             helloPictureBox.Image = null; 
             dataControl.SelectedIndex = 10;
         }
-
         private void updateTransporterStrip_Click(object sender, EventArgs e)
         {
             helloPictureBox.Image = null;
             dataControl.SelectedIndex = 11;
         }
-
         private void deleteTransporterStrip_Click(object sender, EventArgs e)
         {
             helloPictureBox.Image = null;
             dataControl.SelectedIndex = 12;
         }
-
         private void createContractMenuItem_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 13;
@@ -235,14 +244,12 @@ namespace AtlantSovt
             GetDocumentFiles();
 
         }
-
         private void addOrderMenuItem_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 14;
             helloPictureBox.Image = null;
 
         }
-
         private void showTrackingMenuItem_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 15;
@@ -254,13 +261,11 @@ namespace AtlantSovt
             trackingShowDownloadAddressDataGridView.Visible = false;
             trackingShowForwardersDataGridView.Visible = false;
         }
-
         private void updateOrderMenuItem_DoubleClick(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 16;
             helloPictureBox.Image = null;
         }
-
         private void showContractMenuItem_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 17;
@@ -277,13 +282,11 @@ namespace AtlantSovt
             arbeitenShowNoteTextBox.Visible = false;
             arbeitenShowForwardersDataGridView.Visible = false;
         }
-
         private void addArbeitenMenuItem_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 19;
             helloPictureBox.Image = null;
         }
-
         private void updateArbeitenMenuItem_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 20;
@@ -298,26 +301,23 @@ namespace AtlantSovt
         //Client
         #region Client
 
-                //Show
-                #region Show
+        //Show
+        #region Show
         private void showClientsStrip_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 1;
             helloPictureBox.Image = null;
             ShowClient();
         }
-
         private void clientDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowClientInfo();
         }
-
         private void clientShowSearchButton_Click(object sender, EventArgs e)
         {
             ShowClientSearch();
 
         }
-
         private void clientShowSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -325,7 +325,6 @@ namespace AtlantSovt
                 ShowClientSearch();
             }
         }
-
         private void clientShowSearchTextBox_TextChanged(object sender, EventArgs e)
         {
             if (showClientSearchTextBox.Text == "")
@@ -333,7 +332,6 @@ namespace AtlantSovt
                 ShowClient();
             }
         }
-
         private void clientDataGridView_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Delete)
@@ -350,30 +348,42 @@ namespace AtlantSovt
                 ShowClientInfo();
             }
         }
-
         private void showClientDeleteButton_Click(object sender, EventArgs e)
         {
             DeleteClient(Convert.ToInt32(showClientDataGridView.CurrentRow.Cells[0].Value));
             ShowClient();
         }
+        #endregion
 
-                #endregion
-
-                //Add
-                #region Add
+        //Add
+        #region Add
 
         private void addWorkDocumentClientButton_Click(object sender, EventArgs e)
-        {
-            AddWorkDocumentForm addWorkDocument = new AddWorkDocumentForm();
-            addWorkDocument.Show();
-        }
-        
+        { 
+            if (addWorkDocument == null || addWorkDocument.IsDisposed)
+            {
+                addWorkDocument = new AddWorkDocumentForm();
+                addWorkDocument.Show();
+            }
+            else
+            {
+                addWorkDocument.Show();
+                addWorkDocument.Focus();
+            }
+        }        
         private void addTaxPayerStatusClientButton_Click(object sender, EventArgs e)
         {
-            AddTaxPayerStatusForm addTaxPayerStatus = new AddTaxPayerStatusForm();
-            addTaxPayerStatus.Show();
-        }
-        
+            if (addTaxPayerStatus == null || addTaxPayerStatus.IsDisposed)
+            {
+                addTaxPayerStatus = new AddTaxPayerStatusForm();
+                addTaxPayerStatus.Show();
+            }
+            else
+            {
+                addTaxPayerStatus.Show();
+                addTaxPayerStatus.Focus();
+            }
+        }        
         private void addContactClientButton_Click(object sender, EventArgs e)
         {
             if (addClientContactAddForm == null || addClientContactAddForm.IsDisposed)
@@ -386,22 +396,20 @@ namespace AtlantSovt
                 addClientContactAddForm.Show();
                 addClientContactAddForm.Focus();
             }
-        }
-        
+        }        
         private void addBankDetailsClientButton_Click(object sender, EventArgs e)
         {
             if (addClientBankDetailsAddForm == null || addClientBankDetailsAddForm.IsDisposed)
             {
-            addClientBankDetailsAddForm = new ClientBankDetailsAddForm();
-            addClientBankDetailsAddForm.Show();
-        }
+                addClientBankDetailsAddForm = new ClientBankDetailsAddForm();
+                addClientBankDetailsAddForm.Show();
+            }
             else
             {
                 addClientBankDetailsAddForm.Show();
                 addClientBankDetailsAddForm.Focus();
             }            
-        }
-        
+        }        
         private void addClientButton_Click(object sender, EventArgs e)
         {
             SplitLoadWorkDocumentClientAddInfo();
@@ -416,41 +424,34 @@ namespace AtlantSovt
             addClientGeographyAddressTextBox.Text = "";
             addClientNoteTextBox.Text = "";
             clientTaxPayerStatus = null;
-            clientWorkDocument = null;
-            
-        }
-        
+            clientWorkDocument = null;            
+        }        
         private void workDocumentClientComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             addClientWorkDocumentComboBox.Items.Clear();
             LoadWorkDocumentClientAddInfoComboBox();
             addClientWorkDocumentComboBox.DroppedDown = true;
-        }
-        
+        }        
         private void taxPayerStatusClientComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             addClientTaxPayerStatusComboBox.Items.Clear();
             LoadTaxPayerStatusClientAddInfoComboBox();
             addClientTaxPayerStatusComboBox.DroppedDown = true;
-        }
-        
+        }        
         private void workDocumentClientAddComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             clientWorkDocumentFlag = true;
-            //SplitLoadWorkDocumentClientAddInfo();
-            
-        }
-        
+            //SplitLoadWorkDocumentClientAddInfo();            
+        }        
         private void TaxPayerStatusClientAddComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             clientTaxPayerStatusFlag = true;
             //SplitLoadTaxPayerStatusClientAddInfo();
         }
-
         #endregion
 
-                //Update 
-                #region Update
+        //Update 
+        #region Update
 
         private void selectClientUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -459,19 +460,20 @@ namespace AtlantSovt
             LoadTaxPayerStatusClientUpdateInfoComboBox();
             SplitUpdateClient();
         }
-
+        private void updateClientSelectClientComboBox_TextChanged(object sender, EventArgs e)
+        {
+            SplitUpdateClient();
+        }
         private void selectClientUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             updateClientSelectClientComboBox.Items.Clear();
             LoadSelectClientUpdateInfoComboBox();
             updateClientSelectClientComboBox.DroppedDown = true;
         }
-
         private void selectClientDiapasonUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             LoadDiasoneClientUpdateInfoCombobox();
         }
-
         private void workDocumentClientUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             updateClientWorkDocumentComboBox.Items.Clear();
@@ -479,7 +481,6 @@ namespace AtlantSovt
             updateClientWorkDocumentComboBox.DroppedDown = true;
 
         }
-
         private void taxPayerStatusClientUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             updateClientTaxPayerStatusComboBox.Items.Clear();
@@ -487,77 +488,84 @@ namespace AtlantSovt
             updateClientTaxPayerStatusComboBox.DroppedDown = true;
 
         }
-
         private void workDocumentClientUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             clientWorkDocumentChanged = true;
             SplitLoadWorkDocumentClientUpdateInfo();
            
         }
-
         private void taxPayerStatusClientUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             clientTaxPayerStatusChanged = true;
             SplitLoadTaxPayerStatusClientUpdateInfo();
         }
-
         private void workDocumentClientUpdateComboBox_TextChanged(object sender, EventArgs e)
         {
             clientWorkDocumentChanged = true;
-        }
+            SplitLoadWorkDocumentClientUpdateInfo();
 
+        }
         private void taxPayerStatusClientUpdateComboBox_TextChanged(object sender, EventArgs e)
         {
             clientTaxPayerStatusChanged = true;
+            SplitLoadTaxPayerStatusClientUpdateInfo();
 
         }
-
         private void clientUpdateWorkDocumentAddButton_Click(object sender, EventArgs e)
         {
-            AddWorkDocumentForm addWorkDocument = new AddWorkDocumentForm();
-            addWorkDocument.Show();
-        }
 
+            if (addWorkDocument == null || addWorkDocument.IsDisposed)
+            {
+                addWorkDocument = new AddWorkDocumentForm();
+                addWorkDocument.Show();
+            }
+            else
+            {
+                addWorkDocument.Show();
+                addWorkDocument.Focus();
+            }
+        }
         private void clientUpdateTaxPayerStatusAddButton_Click(object sender, EventArgs e)
-        {
-            AddTaxPayerStatusForm addTaxPayerStatus = new AddTaxPayerStatusForm();
-            addTaxPayerStatus.Show();
-        }
+        {           
 
+            if (addTaxPayerStatus == null || addTaxPayerStatus.IsDisposed)
+            {
+                addTaxPayerStatus = new AddTaxPayerStatusForm();
+                addTaxPayerStatus.Show();
+            }
+            else
+            {
+                addTaxPayerStatus.Show();
+                addTaxPayerStatus.Focus();
+            }
+        }
         private void nameClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             clientNameChanged = true;
         }
-
         private void directorClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             clientDirectorChanged = true;
         }
-
         private void physicalAddressClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             clientPhysicalAddressChanged = true;
         }
-
         private void geographyAddressClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             clientGeographyAddressChanged = true;
         }
-
         private void commentClientUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             clientCommentChanged = true;
         }
-
         private void updateClientButton_Click(object sender, EventArgs e)
         {
             UpdateClient();
             clientNameChanged = clientDirectorChanged = clientPhysicalAddressChanged = clientGeographyAddressChanged = clientCommentChanged = clientWorkDocumentChanged = clientTaxPayerStatusChanged = clientOriginalChanged = clientFaxChanged = false;
-            
         }
-
-                //Contact
-                #region Contact
+        //Contact
+        #region Contact
         //Add
         private void clientUpdateAddContactButton_Click(object sender, EventArgs e)
         {
@@ -565,9 +573,18 @@ namespace AtlantSovt
             {
                 if (client != null)
                 {
-                    updateClientContactAddForm = new ClientContactAddForm();
-                    updateClientContactAddForm.Show();
-                    AddNewContact();
+                    if (updateClientContactAddForm == null || updateClientContactAddForm.IsDisposed)
+                    { 
+                        updateClientContactAddForm = new ClientContactAddForm();
+                        updateClientContactAddForm.Show();
+                        AddNewContact();
+                    }
+                    else
+                    {
+                        updateClientContactAddForm.Show();
+                        updateClientContactAddForm.Focus();
+                        AddNewContact();
+                    }
                 }
                 else
                 {
@@ -585,9 +602,18 @@ namespace AtlantSovt
                 {
                     if (db.Clients.Find(client.Id).ClientContacts.Count != 0)
                     {
-                        updateClientContactUpdateForm = new ClientContactUpdateForm();
-                        updateClientContactUpdateForm.Show();
-                        UpdateContact();
+                        if (updateClientContactUpdateForm == null || updateClientContactUpdateForm.IsDisposed)
+                        {
+                            updateClientContactUpdateForm = new ClientContactUpdateForm();
+                            updateClientContactUpdateForm.Show();
+                            UpdateContact();
+                        }
+                        else
+                        {
+                            updateClientContactUpdateForm.Show();
+                            updateClientContactUpdateForm.Focus();
+                            UpdateContact();
+                        }
                     }
                     else
                     {
@@ -610,9 +636,18 @@ namespace AtlantSovt
                 {
                     if (db.Clients.Find(client.Id).ClientContacts.Count != 0)
                     {
-                        deleteClientContactDeleteForm = new ClientContactDeleteForm();
-                        deleteClientContactDeleteForm.Show();
-                        DeleteContact();
+                        if (deleteClientContactDeleteForm == null || deleteClientContactDeleteForm.IsDisposed)
+                        {
+                            deleteClientContactDeleteForm = new ClientContactDeleteForm();
+                            deleteClientContactDeleteForm.Show();
+                            DeleteContact();
+                        }
+                        else
+                        {
+                            deleteClientContactDeleteForm.Show();
+                            deleteClientContactDeleteForm.Focus();
+                            DeleteContact();
+                        }
                     }
                     else
                     {
@@ -627,8 +662,8 @@ namespace AtlantSovt
         }
         #endregion
 
-                //Bank Details
-                #region Bank Details
+        //Bank Details
+        #region Bank Details
         //Add
         private void clientUpdateAddClientBankDetailsButton_Click(object sender, EventArgs e)
         {
@@ -638,9 +673,18 @@ namespace AtlantSovt
                 {
                     if (db.Clients.Find(client.Id).ClientBankDetail == null)
                     {
-                        updateClientBankDetailsAddForm = new ClientBankDetailsAddForm();
-                        updateClientBankDetailsAddForm.Show();
-                        updateClientBankDetailsAddForm.AddClientBankDetail2(client.Id);
+                        if (updateClientBankDetailsAddForm == null || updateClientBankDetailsAddForm.IsDisposed)
+                        {
+                            updateClientBankDetailsAddForm = new ClientBankDetailsAddForm();
+                            updateClientBankDetailsAddForm.Show();
+                            updateClientBankDetailsAddForm.AddClientBankDetail2(client.Id);
+                        }
+                        else
+                        {
+                            updateClientBankDetailsAddForm.Show();
+                            updateClientBankDetailsAddForm.Focus();
+                            updateClientBankDetailsAddForm.AddClientBankDetail2(client.Id);
+                        }
                     }
                     else
                     {
@@ -653,7 +697,6 @@ namespace AtlantSovt
                 }
             }
         }
-
         //Update
         private void clientUpdateBankDetailsUpdateButton_Click(object sender, EventArgs e)
         {
@@ -663,9 +706,18 @@ namespace AtlantSovt
                 {
                     if (db.Clients.Find(client.Id).ClientBankDetail != null)
                     {
-                        updateClientBankDetailsUpdateForm = new ClientBankDetailsUpdateForm();
-                        updateClientBankDetailsUpdateForm.Show();
-                        updateClientBankDetailsUpdateForm.UpdateBankDetails(db.Clients.Find(client.Id).ClientBankDetail);
+                        if (updateClientBankDetailsUpdateForm == null || updateClientBankDetailsUpdateForm.IsDisposed)
+                        {
+                            updateClientBankDetailsUpdateForm = new ClientBankDetailsUpdateForm();
+                            updateClientBankDetailsUpdateForm.Show();
+                            updateClientBankDetailsUpdateForm.UpdateBankDetails(db.Clients.Find(client.Id).ClientBankDetail);
+                        }
+                        else
+                        {
+                            updateClientBankDetailsUpdateForm.Show();
+                            updateClientBankDetailsUpdateForm.Focus();
+                            updateClientBankDetailsUpdateForm.UpdateBankDetails(db.Clients.Find(client.Id).ClientBankDetail);
+                        }
                     }
                     else
                     {
@@ -715,11 +767,10 @@ namespace AtlantSovt
             }
         }
         #endregion 
+        #endregion
 
-                #endregion
-
-                //Delete
-                #region Delete
+        //Delete
+        #region Delete
 
         private void deleteClientButton_Click(object sender, EventArgs e)
         {
@@ -754,24 +805,20 @@ namespace AtlantSovt
 
             }
         }
-
-        #endregion        
-
+        #endregion
         #endregion
 
         //Forwarder
         #region Forwarder
 
-            //Show
-                #region Show
-
+        //Show
+        #region Show
         private void showForwarderStrip_Click(object sender, EventArgs e)
         {
             dataControl.SelectedIndex = 5;
             helloPictureBox.Image = null;
             ShowForwarder();
         }
-
         private void forwarderDataGridView_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Delete)
@@ -787,13 +834,11 @@ namespace AtlantSovt
             {
                 ShowForwarderInfo();
             }
-        }
-        
+        }        
         private void forwarderDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowForwarderInfo();
         }
-
         private void showForwarderDeleteButton_Click(object sender, EventArgs e)
         {
             DeleteForwarder(Convert.ToInt32(forwarderDataGridView.CurrentRow.Cells[0].Value));
@@ -801,50 +846,60 @@ namespace AtlantSovt
         }
         #endregion
 
-            //Add
-                #region Add
+        //Add
+        #region Add
         private void workDocumentForwarderComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             workDocumentForwarderComboBox.Items.Clear();
             LoadWorkDocumentForwarderAddInfoComboBox();
             workDocumentForwarderComboBox.DroppedDown = true;
         }
-
         private void workDocumentForwarderComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             forwarderWorkDocumentAdded = true;
         }
-
         private void taxPayerStatusForwarderComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             taxPayerStatusForwarderComboBox.Items.Clear();
             LoadTaxPayerStatusForwarderAddInfoComboBox();
             taxPayerStatusForwarderComboBox.DroppedDown = true;
         }
-
         private void taxPayerStatusForwarderComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             forwarderTaxPayerStatusAdded = true;
         }
-
         private void addWorkDocumentForwarderButton_Click(object sender, EventArgs e)
-        {
-            AddWorkDocumentForm addWorkDocument = new AddWorkDocumentForm();
-            addWorkDocument.Show();
+        {          
+            if (addWorkDocument == null || addWorkDocument.IsDisposed)
+            {
+                addWorkDocument = new AddWorkDocumentForm();
+                addWorkDocument.Show();
+            }
+            else
+            {
+                addWorkDocument.Show();
+                addWorkDocument.Focus();
+            }
         }
-
         private void addTaxPayerStatusForwarderButton_Click(object sender, EventArgs e)
         {
-            AddTaxPayerStatusForm addTaxPayerStatus = new AddTaxPayerStatusForm();
-            addTaxPayerStatus.Show();
+            if (addTaxPayerStatus == null || addTaxPayerStatus.IsDisposed)
+            {
+                addTaxPayerStatus = new AddTaxPayerStatusForm();
+                addTaxPayerStatus.Show();
+            }
+            else
+            {
+                addTaxPayerStatus.Show();
+                addTaxPayerStatus.Focus();
+            }
         }
-
         private void addContactForwarderButton_Click(object sender, EventArgs e)
         {
             if (addForwarderContactAddForm == null || addForwarderContactAddForm.IsDisposed)
             {
-            addForwarderContactAddForm = new ForwarderContactAddForm();
-            addForwarderContactAddForm.Show();
+                addForwarderContactAddForm = new ForwarderContactAddForm();
+                addForwarderContactAddForm.Show();
             }
             else
             {
@@ -853,13 +908,12 @@ namespace AtlantSovt
             }
             
         }
-
         private void addBankDetailsForwarderButton_Click(object sender, EventArgs e)
         {
             if (addForwarderBankDetailsAddForm == null || addForwarderBankDetailsAddForm.IsDisposed)
             {
-            addForwarderBankDetailsAddForm = new ForwarderBankDetailsAddForm();
-            addForwarderBankDetailsAddForm.Show();
+                addForwarderBankDetailsAddForm = new ForwarderBankDetailsAddForm();
+                addForwarderBankDetailsAddForm.Show();
             }
             else
             {
@@ -867,7 +921,6 @@ namespace AtlantSovt
                 addForwarderBankDetailsAddForm.Focus();
             }
         }
-
         private void forwarderAddImageButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog ForwarderImageAdd = new OpenFileDialog();
@@ -879,7 +932,6 @@ namespace AtlantSovt
                 addForwarderStampPictureBox.Image = Image.FromFile(ForwarderImageAdd.FileName);
             }
         }
-
         private void addForwarderButton_Click(object sender, EventArgs e)
         {
             SplitLoadWorkDocumentForwarderAddInfo();
@@ -900,13 +952,17 @@ namespace AtlantSovt
         }
         #endregion
 
-            //Update
-                #region Update
+        //Update
+        #region Update
         private void selectForwarderUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ClearAllBoxesForwarderUpdate();
             LoadWorkDocumentForwarderUpdateInfoComboBox();
             LoadTaxPayerStatusForwarderUpdateInfoComboBox();
+            SplitUpdateForwarder();
+        }
+        private void selectForwarderUpdateComboBox_TextChanged(object sender, EventArgs e)
+        {
             SplitUpdateForwarder();
         }
 
@@ -916,97 +972,106 @@ namespace AtlantSovt
             LoadSelectForwarderUpdateInfoComboBox();
             selectForwarderUpdateComboBox.DroppedDown = true;
         }
-
         private void workDocumentForwarderUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             workDocumentForwarderUpdateComboBox.Items.Clear();
             LoadWorkDocumentForwarderUpdateInfoComboBox();
             workDocumentForwarderUpdateComboBox.DroppedDown = true;
         }
-
         private void taxPayerStatusForwarderUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             taxPayerStatusForwarderUpdateComboBox.Items.Clear();
             LoadTaxPayerStatusForwarderUpdateInfoComboBox();
             taxPayerStatusForwarderUpdateComboBox.DroppedDown = true;
-        }
-        
+        }        
         private void workDocumentForwarderUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             forwarderWorkDocumentChanged = true;
             SplitLoadWorkDocumentForwarderUpdateInfo();
-
         }
-
         private void taxPayerStatusForwarderUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             forwarderTaxPayerStatusChanged = true;
             SplitLoadTaxPayerStatusForwarderUpdateInfo();
         }
-
         private void workDocumentForwarderUpdateComboBox_TextChanged(object sender, EventArgs e)
         {
             forwarderWorkDocumentChanged = true;
+            SplitLoadWorkDocumentForwarderUpdateInfo();
         }
-
         private void taxPayerStatusForwarderUpdateComboBox_TextChanged(object sender, EventArgs e)
         {
             forwarderTaxPayerStatusChanged = true;
-        }
-      
+            SplitLoadTaxPayerStatusForwarderUpdateInfo();
+        }      
         private void forwarderUpdateWorkDocumentAddButton_Click(object sender, EventArgs e)
         {
-            AddWorkDocumentForm addWorkDocument = new AddWorkDocumentForm();
-            addWorkDocument.Show();
+            if (addWorkDocument == null || addWorkDocument.IsDisposed)
+            {
+                addWorkDocument = new AddWorkDocumentForm();
+                addWorkDocument.Show();
+            }
+            else
+            {
+                addWorkDocument.Show();
+                addWorkDocument.Focus();
+            }
         }
-
         private void forwarderUpdateTaxPayerStatusAddButton_Click(object sender, EventArgs e)
         {
-            AddTaxPayerStatusForm addTaxPayerStatus = new AddTaxPayerStatusForm();
-            addTaxPayerStatus.Show();
+            if (addTaxPayerStatus == null || addTaxPayerStatus.IsDisposed)
+            {
+                addTaxPayerStatus = new AddTaxPayerStatusForm();
+                addTaxPayerStatus.Show();
+            }
+            else
+            {
+                addTaxPayerStatus.Show();
+                addTaxPayerStatus.Focus();
+            }
         }
-
         private void nameForwarderUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             forwarderNameChanged = true;
         }
-
         private void directorForwarderUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             forwarderDirectorChanged = true;
         }
-
         private void physicalAddressForwarderUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             forwarderPhysicalAddressChanged = true;
         }
-
         private void geographyAddressForwarderUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             forwarderGeographyAddressChanged = true;
         }
-
         private void commentForwarderUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             forwarderCommentChanged = true;
         }
-
         private void updateForwarderStampPictureBox_Paint(object sender, PaintEventArgs e)
         {
-            forwarderStampChanged = true;
+           
         }
-
         private void updateForwarderStampPictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            OpenFileDialog ForwarderImageAdd = new OpenFileDialog();
-            ForwarderImageAdd.Multiselect = false;
-            ForwarderImageAdd.Filter = "Файлы png|*.png";
-            if (ForwarderImageAdd.ShowDialog() == DialogResult.OK)
+            if (forwarder != null)
             {
-                updateForwarderStampPictureBox.Image = Image.FromFile(ForwarderImageAdd.FileName);
+                OpenFileDialog ForwarderImageAdd = new OpenFileDialog();
+                ForwarderImageAdd.Multiselect = false;
+                ForwarderImageAdd.Filter = "Файлы png|*.png";
+                if (ForwarderImageAdd.ShowDialog() == DialogResult.OK)
+                {
+                    updateForwarderStampPictureBox.Image = Image.FromFile(ForwarderImageAdd.FileName);
+                    forwarderStampChanged = true;
+                }
+            }
+            else
+            {
+                MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_експедитора);
             }
         }
-
         private void updateForwarderButton_Click(object sender, EventArgs e)
         {
             UpdateForwarder();
@@ -1023,9 +1088,18 @@ namespace AtlantSovt
             {
                 if (forwarder != null)
                 {
-                    updateForwarderContactAddForm = new ForwarderContactAddForm();
-                    updateForwarderContactAddForm.Show();
-                    AddNewForwarderContact();
+                    if (updateForwarderContactAddForm == null || updateForwarderContactAddForm.IsDisposed)
+                    {
+                        updateForwarderContactAddForm = new ForwarderContactAddForm();
+                        updateForwarderContactAddForm.Show();
+                        AddNewForwarderContact();
+                    }
+                    else
+                    {
+                        updateForwarderContactAddForm.Show();
+                        updateForwarderContactAddForm.Focus();
+                        AddNewForwarderContact();
+                    }
                 }
                 else
                 {
@@ -1033,7 +1107,6 @@ namespace AtlantSovt
                 }
             }
         }
-
         //Update
         private void forwarderUpdateContactUpdateButton_Click(object sender, EventArgs e)
         {
@@ -1043,9 +1116,18 @@ namespace AtlantSovt
                 {
                     if (db.Forwarders.Find(forwarder.Id).ForwarderContacts.Count != 0)
                     {
-                        updateForwarderContactUpdateForm = new ForwarderContactUpdateForm();
-                        updateForwarderContactUpdateForm.Show();
-                        UpdateForwarderContact();
+                        if (updateForwarderContactUpdateForm == null || updateForwarderContactUpdateForm.IsDisposed)
+                        {
+                            updateForwarderContactUpdateForm = new ForwarderContactUpdateForm();
+                            updateForwarderContactUpdateForm.Show();
+                            UpdateForwarderContact();
+                        }
+                        else
+                        {
+                            updateForwarderContactUpdateForm.Show();
+                            updateForwarderContactUpdateForm.Focus();
+                            UpdateForwarderContact();
+                        }
                     }
                     else
                     {
@@ -1058,7 +1140,6 @@ namespace AtlantSovt
                 }
             }
         }
-
         //Delete
         private void forwarderUpdateContactDeleteButton_Click(object sender, EventArgs e)
         {
@@ -1068,9 +1149,18 @@ namespace AtlantSovt
                 {
                     if (db.Forwarders.Find(forwarder.Id).ForwarderContacts.Count != 0)
                     {
-                        deleteForwarderContactDeleteForm = new ForwarderContactDeleteForm();
-                        deleteForwarderContactDeleteForm.Show();
-                        DeleteForwarderContact();
+                        if (deleteForwarderContactDeleteForm == null || deleteForwarderContactDeleteForm.IsDisposed)
+                        {
+                            deleteForwarderContactDeleteForm = new ForwarderContactDeleteForm();
+                            deleteForwarderContactDeleteForm.Show();
+                            DeleteForwarderContact();
+                        }
+                        else
+                        {
+                            deleteForwarderContactDeleteForm.Show();
+                            deleteForwarderContactDeleteForm.Focus();
+                            DeleteForwarderContact();
+                        }
                     }
                     else
                     {
@@ -1084,7 +1174,6 @@ namespace AtlantSovt
             }
         }
         #endregion
-
         //Bank Details
         #region Bank Details
         //Add
@@ -1096,9 +1185,18 @@ namespace AtlantSovt
                 {
                     if (db.Forwarders.Find(forwarder.Id).ForwarderBankDetail == null)
                     {
-                        updateForwarderBankDetailsAddForm = new ForwarderBankDetailsAddForm();
-                        updateForwarderBankDetailsAddForm.Show();
-                        updateForwarderBankDetailsAddForm.AddForwarderBankDetail2(forwarder.Id);
+                        if (updateForwarderBankDetailsAddForm == null || updateForwarderBankDetailsAddForm.IsDisposed)
+                        {
+                            updateForwarderBankDetailsAddForm = new ForwarderBankDetailsAddForm();
+                            updateForwarderBankDetailsAddForm.Show();
+                            updateForwarderBankDetailsAddForm.AddForwarderBankDetail2(forwarder.Id);
+                        }
+                        else
+                        {
+                            updateForwarderBankDetailsAddForm.Show();
+                            updateForwarderBankDetailsAddForm.Focus();
+                            updateForwarderBankDetailsAddForm.AddForwarderBankDetail2(forwarder.Id);
+                        }
                     }
                     else
                     {
@@ -1111,7 +1209,6 @@ namespace AtlantSovt
                 }
             }
         }
-
         //Update
         private void forwarderUpdateBankDetailsUpdateButton_Click(object sender, EventArgs e)
         {
@@ -1121,9 +1218,18 @@ namespace AtlantSovt
                 {
                     if (db.Forwarders.Find(forwarder.Id).ForwarderBankDetail != null)
                     {
-                        updateForwarderBankDetailsUpdateForm = new ForwarderBankDetailsUpdateForm();
-                        updateForwarderBankDetailsUpdateForm.Show();
-                        updateForwarderBankDetailsUpdateForm.UpdateForwarderBankDetails(db.Forwarders.Find(forwarder.Id).ForwarderBankDetail);
+                        if (updateForwarderBankDetailsUpdateForm == null || updateForwarderBankDetailsUpdateForm.IsDisposed)
+                        {
+                            updateForwarderBankDetailsUpdateForm = new ForwarderBankDetailsUpdateForm();
+                            updateForwarderBankDetailsUpdateForm.Show();
+                            updateForwarderBankDetailsUpdateForm.UpdateForwarderBankDetails(db.Forwarders.Find(forwarder.Id).ForwarderBankDetail);
+                        }
+                        else
+                        {
+                            updateForwarderBankDetailsUpdateForm.Show();
+                            updateForwarderBankDetailsUpdateForm.Focus();
+                            updateForwarderBankDetailsUpdateForm.UpdateForwarderBankDetails(db.Forwarders.Find(forwarder.Id).ForwarderBankDetail);
+                        }
                     }
                     else
                     {
@@ -1136,7 +1242,6 @@ namespace AtlantSovt
                 }
             }
         }
-
         //Delete
         private void forwarderUpdateBankDetaitsDeleteButton_Click(object sender, EventArgs e)
         {
@@ -1172,12 +1277,11 @@ namespace AtlantSovt
                 }
             }
         }
-        #endregion 
+        #endregion
+        #endregion
 
-                #endregion
-
-            //Delete
-                #region Delete
+        //Delete
+        #region Delete
 
         private void forwarderDeleteButton_Click(object sender, EventArgs e)
         {
@@ -1186,12 +1290,15 @@ namespace AtlantSovt
             forwarderDeleteButton.Enabled = false;
             //DeleteForwarder();
         }
-
         private void forwarderDeleteComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitDeleteForwarder();
         }
+        private void forwarderDeleteComboBox_TextChanged(object sender, EventArgs e)
+        {
+            SplitDeleteForwarder();
 
+        }
         private void forwarderDeleteComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             forwarderDeleteComboBox.Items.Clear();
@@ -1207,190 +1314,202 @@ namespace AtlantSovt
 
             }
         }
-                #endregion
 
+        #endregion
         #endregion
 
         //Transporter
         #region Transporter
 
-            //Show
-            #region Show
+        //Show
+        #region Show
 
-            private void showTransporterStrip_Click(object sender, EventArgs e)
-            {
-                dataControl.SelectedIndex = 9;
-                helloPictureBox.Image = null;
-                ShowTransporter();
-            }
-
-            private void transporterShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-            {
-                ShowTransporterInfo();
-            }
-
-            private void transporterShowAdditionalDetailsButton_Click(object sender, EventArgs e)
+        private void showTransporterStrip_Click(object sender, EventArgs e)
+        {
+            dataControl.SelectedIndex = 9;
+            helloPictureBox.Image = null;
+            ShowTransporter();
+        }
+        private void transporterShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ShowTransporterInfo();
+        }
+        private void transporterShowAdditionalDetailsButton_Click(object sender, EventArgs e)
+        {
+            if (transporterShowAdditionalDetailsForm == null || transporterShowAdditionalDetailsForm.IsDisposed)
             {
                 transporterShowAdditionalDetailsForm = new TransporterShowAdditionalDetailsForm();
                 if (TransporterClikedId != 0)
                 {
                     transporterShowAdditionalDetailsForm.ShowTransporterAdditionalDetails(TransporterClikedId);
                     transporterShowAdditionalDetailsForm.Show();
-
                 }
                 else
                 {
                     MessageBox.Show(AtlantSovt.Properties.Resources.Ви_не_вибрали_перевізника);
-                    transporterShowAdditionalDetailsForm.Hide();
+                    transporterShowAdditionalDetailsForm.Dispose();
                 }
             }
-
-            private void transporterShowFilterSelectButton_Click(object sender, EventArgs e)
+            else
+            {
+                if (TransporterClikedId != 0)
+                {
+                    transporterShowAdditionalDetailsForm.ShowTransporterAdditionalDetails(TransporterClikedId);
+                    transporterShowAdditionalDetailsForm.Show();
+                    transporterShowAdditionalDetailsForm.Focus();
+                }
+                else
+                {
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Ви_не_вибрали_перевізника);
+                    transporterShowAdditionalDetailsForm.Dispose();
+                }
+            }
+        }
+        private void transporterShowFilterSelectButton_Click(object sender, EventArgs e)
+        {
+            if (transporterShowFiltrationForm == null || transporterShowFiltrationForm.IsDisposed)
             {
                 transporterShowFiltrationForm = new TransporterShowFiltrationForm(this);
-
-                transporterShowFiltrationForm.LoadCoutriesToTransporterShowChechedBoxList();
-
-                transporterShowFiltrationForm.LoadVehicleToTransporterShowChechedBoxList();
-
                 transporterShowFiltrationForm.Show();
             }
-
-            private void transporterShowSearchButton_Click(object sender, EventArgs e)
+            else
+            {                
+                transporterShowFiltrationForm.Show();
+                transporterShowFiltrationForm.Focus();
+            }
+            transporterShowFiltrationForm.LoadCoutriesToTransporterShowChechedBoxList();
+            transporterShowFiltrationForm.LoadVehicleToTransporterShowChechedBoxList();
+        }
+        private void transporterShowSearchButton_Click(object sender, EventArgs e)
+        {
+            ShowTransporterSearch();
+        }
+        private void transporterShowSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
             {
                 ShowTransporterSearch();
-
             }
-
-            private void transporterShowSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        }    
+        private void transporterShowSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (transporterShowSearchTextBox.Text == "")
             {
-                if(e.KeyChar == (char)Keys.Enter)
-                {
-                    ShowTransporterSearch();
-                }
-            }    
-
-            private void transporterShowSearchTextBox_TextChanged(object sender, EventArgs e)
-            {
-                if (transporterShowSearchTextBox.Text == "")
-                {
-                    ShowTransporter();
-                }
+                ShowTransporter();
             }
-
-            private void transporterShowDataGridView_KeyDown(object sender, KeyEventArgs e)
-            {
-                if (e.KeyCode == Keys.Delete)
-                {
-                    DeleteTransporter(Convert.ToInt32(transporterShowDataGridView.CurrentRow.Cells[0].Value));
-                    ShowTransporter();
-                }
-                if (e.KeyCode == Keys.Up)
-                {
-                    ShowTransporterInfo();
-                }
-                if (e.KeyCode == Keys.Down)
-                {
-                    ShowTransporterInfo();
-                }
-            }
-
-            private void showTransporterDeleteButton_Click(object sender, EventArgs e)
+        }
+        private void transporterShowDataGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
             {
                 DeleteTransporter(Convert.ToInt32(transporterShowDataGridView.CurrentRow.Cells[0].Value));
                 ShowTransporter();
             }
-
-            #endregion
-
-            //Add
-            #region Add
+            if (e.KeyCode == Keys.Up)
+            {
+                ShowTransporterInfo();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                ShowTransporterInfo();
+            }
+        }
+        private void showTransporterDeleteButton_Click(object sender, EventArgs e)
+        {
+            DeleteTransporter(Convert.ToInt32(transporterShowDataGridView.CurrentRow.Cells[0].Value));
+            ShowTransporter();
+        }
+        #endregion
+        //Add
+        #region Add
 
         private void transporterAddWorkDocumentAddButton_Click(object sender, EventArgs e)
-        {
-            AddWorkDocumentForm addWorkDocument = new AddWorkDocumentForm();
-            addWorkDocument.Show();
+        { 
+            if (addWorkDocument == null || addWorkDocument.IsDisposed)
+            {
+                addWorkDocument = new AddWorkDocumentForm();
+                addWorkDocument.Show();
+            }
+            else
+            {
+                addWorkDocument.Show();
+                addWorkDocument.Focus();
+            }
         }
-
         private void transporterAddTaxPayerStatusAddButton_Click(object sender, EventArgs e)
-        {
-            AddTaxPayerStatusForm addTaxPayerStatus = new AddTaxPayerStatusForm();
-            addTaxPayerStatus.Show();
+        {            
+            if (addTaxPayerStatus == null || addTaxPayerStatus.IsDisposed)
+            {
+                addTaxPayerStatus = new AddTaxPayerStatusForm();
+                addTaxPayerStatus.Show();
+            }
+            else
+            {
+                addTaxPayerStatus.Show();
+                addTaxPayerStatus.Focus();
+            }
         }
-
         private void transporterAddContactAddButton_Click(object sender, EventArgs e)
         {
             if (addTransporterContactAddForm == null || addTransporterContactAddForm.IsDisposed)
             {
-            addTransporterContactAddForm = new TransporterContactAddForm();
-            addTransporterContactAddForm.Show();
+                addTransporterContactAddForm = new TransporterContactAddForm();
+                addTransporterContactAddForm.Show();
             }
             else
             {
                 addTransporterContactAddForm.Show();
                 addTransporterContactAddForm.Focus();
+            }
         }
-        }
-
         private void transporterAddBankDetailsAddButton_Click(object sender, EventArgs e)
         {
             
             if (addTransporterBankDetailsAddForm == null || addTransporterBankDetailsAddForm.IsDisposed)
             {
-            addTransporterBankDetailsAddForm = new TransporterBankDetailsAddForm();
-            addTransporterBankDetailsAddForm.Show();
-        }
+                addTransporterBankDetailsAddForm = new TransporterBankDetailsAddForm();
+                addTransporterBankDetailsAddForm.Show();
+            }
             else
             {
                 addTransporterBankDetailsAddForm.Show();
                 addTransporterBankDetailsAddForm.Focus();
             }
         }
-
         private void transporterAddCountryAndVehicleSelectButton_Click(object sender, EventArgs e)
         {
             
             if (transporterCountryAndVehicleSelectForm == null || transporterCountryAndVehicleSelectForm.IsDisposed)
             {
-            transporterCountryAndVehicleSelectForm = new TransporterCountryAndVehicleSelectForm();
-            transporterCountryAndVehicleSelectForm.Show();
-        }
+                transporterCountryAndVehicleSelectForm = new TransporterCountryAndVehicleSelectForm();
+                transporterCountryAndVehicleSelectForm.Show();
+            }
             else
             {
                 transporterCountryAndVehicleSelectForm.Show();
                 transporterCountryAndVehicleSelectForm.Focus();
             }
         }
-
         private void workDocumentTransporterAddComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             workDocumentTransporterAddComboBox.Items.Clear();
             LoadWorkDocumentTransporterAddInfoComboBox();
             workDocumentTransporterAddComboBox.DroppedDown = true;
         }
-
         private void taxPayerStatusTransporterAddComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             taxPayerStatusTransporterAddComboBox.Items.Clear();
             LoadTaxPayerStatusTransporterAddInfoComboBox();
             taxPayerStatusTransporterAddComboBox.DroppedDown = true;
         }
-
         private void workDocumentTransporterAddComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             transporterAddWorkDocumentFlag = true;
-
         }
-
         private void taxPayerStatusTransporterAddComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             transporterAddTaxPayerStatusFlag = true;
-        }
-
-
-
-
-
+        }        
         private void transporterAddButton_Click(object sender, EventArgs e)
         {
             SplitLoadWorkDocumentTransporterAddInfo();
@@ -1415,10 +1534,10 @@ namespace AtlantSovt
             transporterAddFiltersSelectCMRCheckBox.CheckState =  CheckState.Indeterminate;
             transporterAddFiltersSelectEKMTCheckBox.CheckState = CheckState.Indeterminate;
         }
-            #endregion
+        #endregion
 
-            //Update
-            #region Update
+        //Update
+        #region Update
 
         private void selectTransporterUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1427,71 +1546,78 @@ namespace AtlantSovt
             LoadTaxPayerStatusTransporterUpdateInfoComboBox();
             SplitUpdateTransporter();
         }
-
+        private void selectTransporterUpdateComboBox_TextChanged(object sender, EventArgs e)
+        {
+            SplitUpdateTransporter();
+        }
         private void selectTransporterUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             selectTransporterUpdateComboBox.Items.Clear();
             LoadSelectTransporterUpdateInfoComboBox();
             selectTransporterUpdateComboBox.DroppedDown = true;
         }
-
         private void selectTransporterDiapasoneUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             LoadDiasoneTransporterUpdateInfoCombobox();
         }
-
         private void workDocumentTransporterUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             workDocumentTransporterUpdateComboBox.Items.Clear();
             LoadWorkDocumentTransporterUpdateInfoComboBox();
             workDocumentTransporterUpdateComboBox.DroppedDown = true;
         }
-
         private void taxPayerStatusTransporterUpdateComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             taxPayerStatusTransporterUpdateComboBox.Items.Clear();
             LoadTaxPayerStatusTransporterUpdateInfoComboBox();
             taxPayerStatusTransporterUpdateComboBox.DroppedDown = true;
-        }
-
-
-
-
-
+        }        
         private void workDocumentTransporterUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             transporterWorkDocumentChanged = true;
             SplitLoadWorkDocumentTransporterUpdateInfo();
         }
-
         private void taxPayerStatusTransporterUpdateComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             transporterTaxPayerStatusChanged = true;
             SplitLoadTaxPayerStatusTransporterUpdateInfo();
         }
-
         private void workDocumentTransporterUpdateComboBox_TextChanged(object sender, EventArgs e)
         {
             transporterWorkDocumentChanged = true;
+            SplitLoadWorkDocumentTransporterUpdateInfo();
         }
-
         private void taxPayerStatusTransporterUpdateComboBox_TextChanged(object sender, EventArgs e)
         {
             transporterTaxPayerStatusChanged = true;
+            SplitLoadTaxPayerStatusTransporterUpdateInfo();
         }
-
         private void transporterUpdateWorkDocumentAddButton_Click(object sender, EventArgs e)
         {
-            AddWorkDocumentForm addWorkDocument = new AddWorkDocumentForm();
-            addWorkDocument.Show();
+            if (addWorkDocument == null || addWorkDocument.IsDisposed)
+            {
+                addWorkDocument = new AddWorkDocumentForm();
+                addWorkDocument.Show();
+            }
+            else
+            {
+                addWorkDocument.Show();
+                addWorkDocument.Focus();
+            }
         }
-
         private void transporterUpdateTaxPayerStatusAddButton_Click(object sender, EventArgs e)
         {
-            AddTaxPayerStatusForm addTaxPayerStatus = new AddTaxPayerStatusForm();
-            addTaxPayerStatus.Show();
+            if (addTaxPayerStatus == null || addTaxPayerStatus.IsDisposed)
+            {
+                addTaxPayerStatus = new AddTaxPayerStatusForm();
+                addTaxPayerStatus.Show();
+            }
+            else
+            {
+                addTaxPayerStatus.Show();
+                addTaxPayerStatus.Focus();
+            }
         }
-
         private void nameTransporterUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             transporterFullNameChanged = true;
@@ -1500,7 +1626,6 @@ namespace AtlantSovt
         {
             transporterShortNameChanged = true;
         }
-
         private void directorTransporterUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             transporterDirectorChanged = true;
@@ -1509,47 +1634,38 @@ namespace AtlantSovt
         {
             transporterPhysicalAddressChanged = true;
         }
-
         private void geographyAddressTransporterUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             transporterGeographyAddressChanged = true;
         }
-
         private void commentTransporterUpdateTextBox_TextChanged(object sender, EventArgs e)
         {
             transporterCommentChanged = true;
-        }
-        
+        }        
         private void transporterUpdateFiltersSelectIfForwarderCheckBox_CheckStateChanged(object sender, EventArgs e)
         {
             transporterFiltersChanged = true;
         }
-
         private void transporterUpdateFiltersSelectTURCheckBox_CheckStateChanged(object sender, EventArgs e)
         {
             transporterFiltersChanged = true;
         }
-
         private void transporterUpdateFiltersSelectCMRCheckBox_CheckStateChanged(object sender, EventArgs e)
         {
             transporterFiltersChanged = true;
         }
-
         private void transporterUpdateFiltersSelectEKMTCheckBox_CheckStateChanged(object sender, EventArgs e)
         {
             transporterFiltersChanged = true;
         }
-
         private void transporterUpdateFiltersSelectZbornyCheckBox_CheckStateChanged(object sender, EventArgs e)
         {
             transporterFiltersChanged = true;
         }
-
         private void transporterUpdateFiltersSelectADCheckBox_CheckStateChanged(object sender, EventArgs e)
         {
             transporterFiltersChanged = true;
         }
-
         private void transporterUpdateButton_Click(object sender, EventArgs e)
         {
             UpdateTransporter();
@@ -1565,9 +1681,18 @@ namespace AtlantSovt
             {
                 if (transporter != null)
                 {
-                    updateTransporterContactAddForm = new TransporterContactAddForm();
-                    updateTransporterContactAddForm.Show();
-                    AddNewTransporterContact();
+                    if (updateTransporterContactAddForm == null || updateTransporterContactAddForm.IsDisposed)
+                    {
+                        updateTransporterContactAddForm = new TransporterContactAddForm();
+                        updateTransporterContactAddForm.Show();
+                        AddNewTransporterContact();
+                    }
+                    else
+                    {
+                        updateTransporterContactAddForm.Show();
+                        updateTransporterContactAddForm.Focus();
+                        AddNewTransporterContact();
+                    }
                 }
                 else
                 {
@@ -1585,9 +1710,18 @@ namespace AtlantSovt
                 {
                     if (db.Transporters.Find(transporter.Id).TransporterContacts.Count != 0)
                     {
-                        updateTransporterContactUpdateForm = new TransporterContactUpdateForm();
-                        updateTransporterContactUpdateForm.Show();
-                        UpdateTransporterContact();
+                        if (updateTransporterContactUpdateForm == null || updateTransporterContactUpdateForm.IsDisposed)
+                        {
+                            updateTransporterContactUpdateForm = new TransporterContactUpdateForm();
+                            updateTransporterContactUpdateForm.Show();
+                            UpdateTransporterContact();
+                        }
+                        else
+                        {
+                            updateTransporterContactUpdateForm.Show();
+                            updateTransporterContactUpdateForm.Focus();
+                            UpdateTransporterContact();
+                        }
                     }
                     else
                     {
@@ -1610,9 +1744,19 @@ namespace AtlantSovt
                 {
                     if (db.Transporters.Find(transporter.Id).TransporterContacts.Count != 0)
                     {
-                        deleteTransporterContactDeleteForm = new TransporterContactDeleteForm();
-                        deleteTransporterContactDeleteForm.Show();
-                        DeleteTransporterContact();
+
+                        if (deleteTransporterContactDeleteForm == null || deleteTransporterContactDeleteForm.IsDisposed)
+                        {
+                            deleteTransporterContactDeleteForm = new TransporterContactDeleteForm();
+                            deleteTransporterContactDeleteForm.Show();
+                            DeleteTransporterContact();
+                        }
+                        else
+                        {
+                            deleteTransporterContactDeleteForm.Show();
+                            deleteTransporterContactDeleteForm.Focus();
+                            DeleteTransporterContact();
+                        }
                     }
                     else
                     {
@@ -1638,9 +1782,18 @@ namespace AtlantSovt
                 {
                     if (db.Transporters.Find(transporter.Id).TransporterBankDetail == null)
                     {
-                        updateTransporterBankDetailsAddForm = new TransporterBankDetailsAddForm();
-                        updateTransporterBankDetailsAddForm.Show();
-                        updateTransporterBankDetailsAddForm.AddTransporterBankDetail2(transporter.Id);
+                        if (updateTransporterBankDetailsAddForm == null || updateTransporterBankDetailsAddForm.IsDisposed)
+                        {
+                            updateTransporterBankDetailsAddForm = new TransporterBankDetailsAddForm();
+                            updateTransporterBankDetailsAddForm.Show();
+                            updateTransporterBankDetailsAddForm.AddTransporterBankDetail2(transporter.Id);
+                        }
+                        else
+                        {
+                            updateTransporterBankDetailsAddForm.Show();
+                            updateTransporterBankDetailsAddForm.Focus();
+                            updateTransporterBankDetailsAddForm.AddTransporterBankDetail2(transporter.Id);
+                        }
                     }
                     else
                     {
@@ -1663,9 +1816,18 @@ namespace AtlantSovt
                 {
                     if (db.Transporters.Find(transporter.Id).TransporterBankDetail != null)
                     {
-                        updateTransporterBankDetailsUpdateForm = new TransporterBankDetailsUpdateForm();
-                        updateTransporterBankDetailsUpdateForm.Show();
-                        updateTransporterBankDetailsUpdateForm.UpdateTransporterBankDetails(db.Transporters.Find(transporter.Id).TransporterBankDetail);
+                        if (updateTransporterBankDetailsUpdateForm == null || updateTransporterBankDetailsUpdateForm.IsDisposed)
+                        {
+                            updateTransporterBankDetailsUpdateForm = new TransporterBankDetailsUpdateForm();
+                            updateTransporterBankDetailsUpdateForm.Show();
+                            updateTransporterBankDetailsUpdateForm.UpdateTransporterBankDetails(db.Transporters.Find(transporter.Id).TransporterBankDetail);
+                        }
+                        else
+                        {
+                            updateTransporterBankDetailsUpdateForm.Show();
+                            updateTransporterBankDetailsUpdateForm.Focus();
+                            updateTransporterBankDetailsUpdateForm.UpdateTransporterBankDetails(db.Transporters.Find(transporter.Id).TransporterBankDetail);
+                        }
                     }
                     else
                     {
@@ -1720,20 +1882,28 @@ namespace AtlantSovt
         {
             if (transporter != null)
             {
-                transporterCountryUpdateVehicleSelectForm = new TransporterCountryUpdateVehicleSelectForm();
-                transporterCountryUpdateVehicleSelectForm.Show();
-                transporterCountryUpdateVehicleSelectForm.CoutriesAndVehiclesSelect(transporter);
+                if (transporterCountryUpdateVehicleSelectForm == null || transporterCountryUpdateVehicleSelectForm.IsDisposed)
+                {
+                    transporterCountryUpdateVehicleSelectForm = new TransporterCountryUpdateVehicleSelectForm();
+                    transporterCountryUpdateVehicleSelectForm.Show();
+                    transporterCountryUpdateVehicleSelectForm.CoutriesAndVehiclesSelect(transporter);
+                }
+                else
+                {
+                    transporterCountryUpdateVehicleSelectForm.Show();
+                    transporterCountryUpdateVehicleSelectForm.Focus();
+                    transporterCountryUpdateVehicleSelectForm.CoutriesAndVehiclesSelect(transporter);
+                }
             }
             else
             {
                 MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_перевізника);
             }
         }
-            #endregion
-
+        #endregion
       
-            //Delete
-            #region Delete
+        //Delete
+        #region Delete
         private void transporterDeleteButton_Click(object sender, EventArgs e)
         {
             transporterDeleteComboBox.Text = "";
@@ -1768,7 +1938,6 @@ namespace AtlantSovt
             }
         }
             #endregion
-
         #endregion
 
         //Documentation
@@ -1836,17 +2005,15 @@ namespace AtlantSovt
             if (secondPersonRoleDocumentСomboBox.SelectedIndex == 0)
             {
                 SplitTransporterDocumentComboBox(secondPersonNameDocumentComboBox);
-        }
+            }
             else if (secondPersonRoleDocumentСomboBox.SelectedIndex == 1)
             {
                 SplitClientDocumentComboBox(secondPersonNameDocumentComboBox);
-
             }
             else if (secondPersonRoleDocumentСomboBox.SelectedIndex == 2)
-        {
+            {
                 secondForwarderDocument = SplitForwarderDocumentComboBox(secondPersonNameDocumentComboBox);
                 secondForwarderStamp = SplitForwarderDocumentComboBox(secondPersonNameDocumentComboBox).ForwarderStamp;
-
             }
             contractFilecheckedListBox.Enabled = true;
             refreshContactFilesButton.Enabled = true;
@@ -1918,7 +2085,6 @@ namespace AtlantSovt
         {
             ShowContractSearch();
         }
-
         private void contractShowSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -1926,7 +2092,6 @@ namespace AtlantSovt
                 ShowContractSearch();
             }
         }
-
         private void contractShowSearchTextBox_TextChanged(object sender, EventArgs e)
         {
             if (contractShowSearchTextBox.Text == "")
@@ -1934,12 +2099,10 @@ namespace AtlantSovt
                 ShowContract();
             }
         }
-
         private void contractShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowContractInfo();
         }
-
         private void contractShowDataGridView_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Delete)
@@ -1956,17 +2119,14 @@ namespace AtlantSovt
             ShowContractInfo();
         }
         }
-
         private void contractShowOpenDocButton_Click(object sender, EventArgs e)
         {
             OpenWordDoc();
         }
-
         private void contractStateRadioButton_Click(object sender, EventArgs e)
         {
             ContractChangeState(sender as RadioButton);
         }
-
         #endregion
 
         //Delete
@@ -1984,7 +2144,6 @@ namespace AtlantSovt
 
         //Tracking
         #region Tracking
-
         private void trackingShowDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowTrackingInfo();
@@ -1995,7 +2154,6 @@ namespace AtlantSovt
             exportTrackingToExcelButton.Enabled = true;
             trackingShowDeleteOrderButton.Enabled = true;
         }
-
         private void trackingShowSearchButton_Click(object sender, EventArgs e)
         {
             trackingShowTransporterContactsDataGridView.Update();
@@ -2007,7 +2165,6 @@ namespace AtlantSovt
             trackingShowAddNoteRichTextBox.Clear();
             ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
         }
-
         private void trackingShowSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -2022,17 +2179,15 @@ namespace AtlantSovt
                 ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
             }
         }
-
         private void trackingShowSearchTextBox_TextChanged(object sender, EventArgs e)
         {
             if (trackingShowSearchTextBox.Text == "")
             {
                 ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
+            }
         }
-        }
-
         private void showTrackingDateTimePicker_ValueChanged(object sender, EventArgs e)
-            {
+        {
             trackingShowTransporterContactsDataGridView.Update();
             trackingShowForwardersDataGridView.DataSource = null;
             trackingShowTransporterContactsDataGridView.DataSource = null;
@@ -2042,7 +2197,6 @@ namespace AtlantSovt
             trackingShowAddNoteRichTextBox.Clear();
             ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
         }
-
         private void showTrackingOnlyActive_CheckedChanged(object sender, EventArgs e)
         {
             trackingShowTransporterContactsDataGridView.Update();
@@ -2054,60 +2208,63 @@ namespace AtlantSovt
             trackingShowAddNoteRichTextBox.Clear();
             ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
         }
-
         private void trackingShowCloseOrder_Click(object sender, EventArgs e)
         {
             if(closeDateForm == null)
             {
-            CloseOrder();
-        }
+                CloseOrder();
+            }
             else
             {
                 closeDateForm.Focus();
             }
         }
-
         private void trackingShowAddCommentButton_Click(object sender, EventArgs e)
         {
-            AddTrackingCommentForm trackingShowAddComment = new AddTrackingCommentForm(this);
-            try
+            if (trackingShowAddComment == null || trackingShowAddComment.IsDisposed)
             {
-                trackingShowAddComment.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
-                trackingShowAddComment.Show();
+                trackingShowAddComment = new AddTrackingCommentForm(this);
+                try
+                {
+                    trackingShowAddComment.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+                    trackingShowAddComment.Show();
+                }
+                catch (Exception ex)
+                {
+                    Log.Write(ex);
+                    trackingShowAddComment.Dispose();
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодної_заявки);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                Log.Write(ex);
-                trackingShowAddComment.Dispose();
-                MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодної_заявки);
+                trackingShowAddComment.Focus();
             }
         }
-
         private void trackingShowCommentDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (ShowTrackingComment == null || ShowTrackingComment.IsDisposed == true)
+            if (ShowTrackingComment == null || ShowTrackingComment.IsDisposed)
             {
                 ShowTrackingComment = new ShowTrackingCommentForm(this);
-            try
-            {
-                trackingShowCommentDataGridView.ClearSelection();
-                ShowTrackingComment.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
-                ShowTrackingComment.Date = Convert.ToDateTime(trackingShowCommentDataGridView.CurrentRow.Cells[1].Value);
-                ShowTrackingComment.Show();
+                try
+                {
+                    trackingShowCommentDataGridView.ClearSelection();
+                    ShowTrackingComment.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+                    ShowTrackingComment.Date = Convert.ToDateTime(trackingShowCommentDataGridView.CurrentRow.Cells[1].Value);
+                    ShowTrackingComment.Show();
                     ShowTrackingComment.Focus();
-            }
+                }
                 catch (Exception ex)
-            {
-                Log.Write(ex);
-                MessageBox.Show(AtlantSovt.Properties.Resources.Натисніть_на_коментар);
+                {
+                    Log.Write(ex);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Натисніть_на_коментар);
+                }
             }
-        }
             else
             {
                 ShowTrackingComment.Focus();
             }
         }
-
         private void showTrackingCreateOrderDoc_Click(object sender, EventArgs e)
         {
             IsOrderFull();
@@ -2126,38 +2283,34 @@ namespace AtlantSovt
             trackingShowAddNoteRichTextBox.Clear();
             ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
         }
-
         private void trackingShowAddNoteRichTextBox_MouseClick(object sender, MouseEventArgs e)
         {
-            if (orderNoteForm == null || orderNoteForm.IsDisposed == true)
+            if (orderNoteForm == null || orderNoteForm.IsDisposed)
             {
                 orderNoteForm = new AddOrderNoteForm(this);
-            try
-            {
-                orderNoteForm.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
-                orderNoteForm.Show();
+                try
+                {
+                    orderNoteForm.Id = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
+                    orderNoteForm.Show();
                     orderNoteForm.Focus();
-            }
-            catch (Exception ex)
-            {
-                Log.Write(ex);
+                }
+                catch (Exception ex)
+                {
+                    Log.Write(ex);
                     orderNoteForm = null;
-                orderNoteForm.Dispose();
-                MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодної_заявки);
-            }
-        }    
+                    orderNoteForm.Dispose();
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодної_заявки);
+                }
+            }    
             else
             {
                 orderNoteForm.Focus();
-            }
-        
+            }        
         }
-
         private void exportTrackingToExcelButton_Click(object sender, EventArgs e)
         {
             ExportTrackingToExcel();
         }
-
         private void trackingShowDataGridView_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Delete)
@@ -2173,12 +2326,10 @@ namespace AtlantSovt
                 ShowTrackingInfo();
             }
         }
-
         private void trackingShowDeleteOrderButton_Click(object sender, EventArgs e)
         {
             ChangeOrderDeleteState();
         }
-
         #endregion
 
         //Order
@@ -2187,7 +2338,6 @@ namespace AtlantSovt
         {
             LoadOrderAddClientDiapasonCombobox();
         }
-
         private void OrderAddClientSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddClientSelectComboBox.Items.Clear();
@@ -2195,40 +2345,34 @@ namespace AtlantSovt
             OrderAddClientSelectComboBox.DroppedDown = true;
             OrderAddForwarder1SelectComboBox.Enabled = true;
         }
-
         private void OrderAddTransporterDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             LoadOrderAddTransporterDiapasonCombobox();
         }
-
         private void OrderAddTransporterSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddTransporterSelectComboBox.Items.Clear();
             LoadOrderAddTransporterSelectComboBox();
             OrderAddTransporterSelectComboBox.DroppedDown = true;
         }
-
         private void OrderAddForwarder1SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddForwarder1SelectComboBox.Items.Clear();
             LoadOrderAddForwarder1SelectComboBox();
             OrderAddForwarder1SelectComboBox.DroppedDown = true;
         }
-
         private void OrderAddForwarder2SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddForwarder2SelectComboBox.Items.Clear();
             LoadOrderAddForwarder2SelectComboBox();
             OrderAddForwarder2SelectComboBox.DroppedDown = true;
         }
-
         private void OrderAddForwarder3SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddForwarder3SelectComboBox.Items.Clear();
             LoadOrderAddForwarder3SelectComboBox();
             OrderAddForwarder3SelectComboBox.DroppedDown = true;
         }
-
         private void OrderAddClientSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitClientOrderAdd();
@@ -2273,66 +2417,150 @@ namespace AtlantSovt
         {
             SplitTransporterOrderAdd();
         }
-
         private void OrderAddCargoAddButton_Click(object sender, EventArgs e)
-        {
-            AddCargoForm addCargoForm = new AddCargoForm();
-            addCargoForm.Show();
+        {            
+            if (addCargoForm == null || addCargoForm.IsDisposed)
+            {
+                addCargoForm = new AddCargoForm();
+                addCargoForm.Show();
+            }
+            else
+            {
+                addCargoForm.Show();
+                addCargoForm.Focus();
+            }
         }
-
         private void OrderAddTirCmrAddButton_Click(object sender, EventArgs e)
         {
-            AddTirCmrForm addTirCmrForm = new AddTirCmrForm();
-            addTirCmrForm.Show();
+            if (addTirCmrForm == null || addTirCmrForm.IsDisposed)
+            {
+                addTirCmrForm = new AddTirCmrForm();
+                addTirCmrForm.Show();
+            }
+            else
+            {
+                addTirCmrForm.Show();
+                addTirCmrForm.Focus();
+            }
         }
-
         private void OrderAddRegularyDelayAddButton_Click(object sender, EventArgs e)
         {
-            AddRegularyDelayForm addRegularyDelayForm = new AddRegularyDelayForm();
-            addRegularyDelayForm.Show();
+            if (addRegularyDelayForm == null || addRegularyDelayForm.IsDisposed)
+            {
+                addRegularyDelayForm = new AddRegularyDelayForm();
+                addRegularyDelayForm.Show();
+            }
+            else
+            {
+                addRegularyDelayForm.Show();
+                addRegularyDelayForm.Focus();
+            }
         }
-
         private void OrderAddFineForDelayAddButton_Click(object sender, EventArgs e)
         {
-            AddFineForDelayForm addFineForDelayForm = new AddFineForDelayForm();
-            addFineForDelayForm.Show();
+            if (addFineForDelayForm == null || addFineForDelayForm.IsDisposed)
+            {
+                addFineForDelayForm = new AddFineForDelayForm();
+                addFineForDelayForm.Show();
+            }
+            else
+            {
+                addFineForDelayForm.Show();
+                addFineForDelayForm.Focus();
+            }
         }
-
         private void OrderAddCubeAddButton_Click(object sender, EventArgs e)
         {
-            AddCubeForm addCubeForm = new AddCubeForm();
-            addCubeForm.Show();
+            if (addCubeForm == null || addCubeForm.IsDisposed)
+            {
+                addCubeForm  = new AddCubeForm();
+                addCubeForm.Show();
+            }
+            else
+            {
+                addCubeForm.Show();
+                addCubeForm.Focus();
+            }
         }
-
         private void OrderAddSatffAddButton_Click(object sender, EventArgs e)
         {
-            AddStaffForm addStaffForm = new AddStaffForm();
-            addStaffForm.Show();
+            if (addStaffForm == null || addStaffForm.IsDisposed)
+            {
+                addStaffForm = new AddStaffForm();
+                addStaffForm.Show();
+            }
+            else
+            {
+                addStaffForm.Show();
+                addStaffForm.Focus();
+            }
         }
-
         private void OrderAddTrailerAddButton_Click(object sender, EventArgs e)
         {
-            AddTrailerForm addTrailerForm = new AddTrailerForm();
-            addTrailerForm.Show();
+            if (addTrailerForm == null || addTrailerForm.IsDisposed)
+            {
+                addTrailerForm = new AddTrailerForm();
+                addTrailerForm.Show();
+            }
+            else
+            {
+                addTrailerForm.Show();
+                addTrailerForm.Focus();
+            }
         }
-
         private void OrderAddPaymentTermsAddButton_Click(object sender, EventArgs e)
         {
-            AddPaymentTermsForm addPaymentTermsForm = new AddPaymentTermsForm();
-            addPaymentTermsForm.Show();
+            if (addPaymentTermsForm == null || addPaymentTermsForm.IsDisposed)
+            {
+                addPaymentTermsForm = new AddPaymentTermsForm();
+                addPaymentTermsForm.Show();
+            }
+            else
+            {
+                addPaymentTermsForm.Show();
+                addPaymentTermsForm.Focus();
+            }
         }
-
         private void OrderAddAdditionalTermsAddButton_Click(object sender, EventArgs e)
         {
-            AddAdditionalTermsForm addAdditionalTermsForm = new AddAdditionalTermsForm();
-            addAdditionalTermsForm.Show();
+            if (addAdditionalTermsForm == null || addAdditionalTermsForm.IsDisposed)
+            {
+                addAdditionalTermsForm = new AddAdditionalTermsForm();
+                addAdditionalTermsForm.Show();
+            }
+            else
+            {
+                addAdditionalTermsForm.Show();
+                addAdditionalTermsForm.Focus();
+            }
         }
-
         private void OrderAddOrderDenyAddButton_Click(object sender, EventArgs e)
         {
-            AddOrderDenyForm addOrderDenyForm = new AddOrderDenyForm();
-            addOrderDenyForm.Show();
+            if (addOrderDenyForm == null || addOrderDenyForm.IsDisposed)
+            {
+                addOrderDenyForm = new AddOrderDenyForm();
+                addOrderDenyForm.Show();
+            }
+            else
+            {
+                addOrderDenyForm.Show();
+                addOrderDenyForm.Focus();
+            }
         }
+        private void OrderAddLoadingForm1AddButton_Click(object sender, EventArgs e)
+        {
+            if (addLoadingFormForm == null || addLoadingFormForm.IsDisposed)
+            {
+                addLoadingFormForm = new AddLoadingFormForm();
+                addLoadingFormForm.Show();
+            }
+            else
+            {
+                addLoadingFormForm.Show();
+                addLoadingFormForm.Focus();
+            }
+        }
+
         //addresses
         private void OrderAddDownloadAddressAddButton_Click(object sender, EventArgs e)
         {
@@ -2342,16 +2570,15 @@ namespace AtlantSovt
         {
             UploadAddressForm();
         }
-
         private void OrderAddCustomsAddressAddButton_Click(object sender, EventArgs e)
         {
             CustomsAddressForm();
         }
-
         private void OrderAddUncustomsAddressAddButton_Click(object sender, EventArgs e)
         {
             UncustomsAddressForm();
         }
+
         //===============================
         private void OrderAddAdditionalTermsSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -2375,7 +2602,6 @@ namespace AtlantSovt
         {
             SplitCargoOrderAdd();
         }
-
         private void OrderAddCargoSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
 
@@ -2383,7 +2609,6 @@ namespace AtlantSovt
             LoadOrderAddCargoSelectComboBox();
             OrderAddCargoSelectComboBox.DroppedDown = true;
         }
-
         private void OrderAddFineForDelaySelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitFineForDelayOrderAdd();
@@ -2392,7 +2617,6 @@ namespace AtlantSovt
         {
             SplitFineForDelayOrderAdd();
         }
-
         private void OrderAddFineForDelaySelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
 
@@ -2400,7 +2624,6 @@ namespace AtlantSovt
             LoadOrderAddFineForDelaySelectComboBox();
             OrderAddFineForDelaySelectComboBox.DroppedDown = true;
         }
-
         private void OrderAddTirCmrSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitTirCmrAddOrderAdd();
@@ -2409,58 +2632,48 @@ namespace AtlantSovt
         {
             SplitTirCmrAddOrderAdd();
         }
-
         private void OrderAddTirCmrSelectComboBox_Click(object sender, EventArgs e)
         {
             OrderAddTirCmrSelectComboBox.Items.Clear();
             LoadOrderAddTirCmrSelectComboBox();
             OrderAddTirCmrSelectComboBox.DroppedDown = true;
         }
-
         private void OrderAddDenyFineSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitOrderDenyOrderAdd();
         }
-
         private void OrderAddDenyFineSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitOrderDenyOrderAdd();
         }
-
         private void OrderAddDenyFineSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddDenyFineSelectComboBox.Items.Clear();
             LoadOrderAddDenyFineSelectComboBox();
             OrderAddDenyFineSelectComboBox.DroppedDown = true;
         }
-
         private void OrderAddPaymentTermsSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitPaymentOrderAdd();
         }
-
         private void OrderAddPaymentTermsSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitPaymentOrderAdd();
         }
-
         private void OrderAddPaymentTermsSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddPaymentTermsSelectComboBox.Items.Clear();
             LoadOrderAddPaymentSelectComboBox();
             OrderAddPaymentTermsSelectComboBox.DroppedDown = true;
         }
-
         private void OrderAddRegularyDelaySelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitRegularyDelayOrderAdd();
         }
-
         private void OrderAddRegularyDelaySelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitRegularyDelayOrderAdd();
         }
-
         private void OrderAddRegularyDelaySelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
 
@@ -2468,7 +2681,6 @@ namespace AtlantSovt
             LoadOrderAddRegularyDelaySelectComboBox();
             OrderAddRegularyDelaySelectComboBox.DroppedDown = true;
         }
-
         private void OrderAddCubeSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitCubeOrderAdd();
@@ -2477,7 +2689,6 @@ namespace AtlantSovt
         {
             SplitStaffOrderAdd();
         }
-
         private void OrderAddCubeSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitCubeOrderAdd();
@@ -2486,7 +2697,6 @@ namespace AtlantSovt
         {
             SplitStaffOrderAdd();
         }
-
         private void OrderAddCubeSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddCubeSelectComboBox.Items.Clear();
@@ -2503,58 +2713,48 @@ namespace AtlantSovt
         {
             SplitTrailerOrderAdd();
         }
-
         private void OrderAddTrailerSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitTrailerOrderAdd();
         }
-
         private void OrderAddTrailerSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddTrailerSelectComboBox.Items.Clear();
             LoadOrderAddTrailerSelectComboBox();
             OrderAddTrailerSelectComboBox.DroppedDown = true;
         }
-
         private void OrderAddLoadingForm1SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitLoadingForm1OrderAdd();
         }
-
         private void OrderAddLoadingForm1SelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitLoadingForm1OrderAdd();
         }
-
         private void OrderAddLoadingForm1SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddLoadingForm1SelectComboBox.Items.Clear();
             LoadOrderAddLoadingForm1SelectComboBox();
             OrderAddLoadingForm1SelectComboBox.DroppedDown = true;
         }
-
         private void OrderAddLoadingForm2SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitLoadingForm2OrderAdd();
         }
-
         private void OrderAddLoadingForm2SelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitLoadingForm2OrderAdd();
         }
-
         private void OrderAddLoadingForm2SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddLoadingForm2SelectComboBox.Items.Clear();
             LoadOrderAddLoadingForm2SelectComboBox();
             OrderAddLoadingForm2SelectComboBox.DroppedDown = true;
         }
-
         private void OrderAddButton_Click(object sender, EventArgs e)
         {
             OrderAdd();
         }
-
         private void OrderAddWeightTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(46) && e.KeyChar != Convert.ToChar(8))
@@ -2562,20 +2762,10 @@ namespace AtlantSovt
                 e.Handled = true;
             }
         }
-
-        private void OrderAddLoadingForm1AddButton_Click(object sender, EventArgs e)
-        {
-            AddLoadingFormForm addLoadingFormForm = new AddLoadingFormForm();
-            addLoadingFormForm.Show();
-        }
-
         private void OrderAddADRSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddADRSelectComboBox.DroppedDown = true;
-        }
-
-
-
+        } 
         //ORDER UPDATE
 
         private void OrderUpdateShowNoActiveCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -2585,14 +2775,12 @@ namespace AtlantSovt
             LoadOrderUpdateOrderSelectComboBox();
             
         }
-
         private void OrderUpdateOrderSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateOrderSelectComboBox.Items.Clear();
             LoadOrderUpdateOrderSelectComboBox();
             OrderUpdateOrderSelectComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateOrderSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {   
             ClearAllBoxesOrderUpdate();
@@ -2600,7 +2788,6 @@ namespace AtlantSovt
             LoadAllFieldsOrderUpdate();
             SelectAllFieldsOrderUpdate();
         }
-
         private void OrderUpdateOrderSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitOrderOrderUpdate();
@@ -2611,12 +2798,10 @@ namespace AtlantSovt
             OrderUpdateOrderSelectComboBox.Items.Clear();
             LoadOrderUpdateOrderSelectComboBox();
         }
-
         private void OrderUpdateButton_Click(object sender, EventArgs e)
         {
             OrderUpdate();
-        }
-        
+        }        
         private void OrderUpdateClientDiapasoneComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             LoadOrderUpdateClientDiapasonCombobox();
@@ -2690,7 +2875,6 @@ namespace AtlantSovt
         {
             SplitForwarder3OrderUpdate();
         }
-
         private void OrderUpdateTransporterSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitTransporterOrderUpdate();
@@ -2699,68 +2883,149 @@ namespace AtlantSovt
         {
             SplitTransporterOrderUpdate();
         }
-
         private void OrderUpdateCargoAddButton_Click(object sender, EventArgs e)
-        {
-            AddCargoForm UpdateCargoForm = new AddCargoForm();
-            UpdateCargoForm.Show();
+        { 
+            if (addCargoForm == null || addCargoForm.IsDisposed)
+            {
+                addCargoForm = new AddCargoForm();
+                addCargoForm.Show();
+            }
+            else
+            {
+                addCargoForm.Show();
+                addCargoForm.Focus();
+            }
         }
-
         private void OrderUpdateTirCmrAddButton_Click(object sender, EventArgs e)
         {
-            AddTirCmrForm UpdateTirCmrForm = new AddTirCmrForm();
-            UpdateTirCmrForm.Show();
+            if (addTirCmrForm == null || addTirCmrForm.IsDisposed)
+            {
+                addTirCmrForm = new AddTirCmrForm();
+                addTirCmrForm.Show();
+            }
+            else
+            {
+                addTirCmrForm.Show();
+                addTirCmrForm.Focus();
+            }
         }
-
         private void OrderUpdateRegularyDelayAddButton_Click(object sender, EventArgs e)
         {
-            AddRegularyDelayForm UpdateRegularyDelayForm = new AddRegularyDelayForm();
-            UpdateRegularyDelayForm.Show();
+            if (addRegularyDelayForm == null || addRegularyDelayForm.IsDisposed)
+            {
+                addRegularyDelayForm = new AddRegularyDelayForm();
+                addRegularyDelayForm.Show();
+            }
+            else
+            {
+                addRegularyDelayForm.Show();
+                addRegularyDelayForm.Focus();
+            }
         }
-
         private void OrderUpdateFineForDelayAddButton_Click(object sender, EventArgs e)
         {
-            AddFineForDelayForm UpdateFineForDelayForm = new AddFineForDelayForm();
-            UpdateFineForDelayForm.Show();
+            if (addFineForDelayForm == null || addFineForDelayForm.IsDisposed)
+            {
+                addFineForDelayForm = new AddFineForDelayForm();
+                addFineForDelayForm.Show();
+            }
+            else
+            {
+                addFineForDelayForm.Show();
+                addFineForDelayForm.Focus();
+            }
         }
-
         private void OrderUpdateCubeAddButton_Click(object sender, EventArgs e)
         {
-            AddCubeForm UpdateCubeForm = new AddCubeForm();
-            UpdateCubeForm.Show();
+            if (addCubeForm == null || addCubeForm.IsDisposed)
+            {
+                addCubeForm = new AddCubeForm();
+                addCubeForm.Show();
+            }
+            else
+            {
+                addCubeForm.Show();
+                addCubeForm.Focus();
+            }
         }
-
         private void OrderUpdateStaffAddButton_Click(object sender, EventArgs e)
         {
-            AddStaffForm UpdateStaffForm = new AddStaffForm();
-            UpdateStaffForm.Show();
+            if (addStaffForm == null || addStaffForm.IsDisposed)
+            {
+                addStaffForm = new AddStaffForm();
+                addStaffForm.Show();
+            }
+            else
+            {
+                addStaffForm.Show();
+                addStaffForm.Focus();
+            }
         }
         private void OrderUpdateTrailerAddButton_Click(object sender, EventArgs e)
         {
-            AddTrailerForm UpdateTrailerForm = new AddTrailerForm();
-            UpdateTrailerForm.Show();
+            if (addTrailerForm == null || addTrailerForm.IsDisposed)
+            {
+                addTrailerForm = new AddTrailerForm();
+                addTrailerForm.Show();
+            }
+            else
+            {
+                addTrailerForm.Show();
+                addTrailerForm.Focus();
+            }
         }
-
         private void OrderUpdatePaymentTermsAddButton_Click(object sender, EventArgs e)
         {
-            AddPaymentTermsForm UpdatePaymentTermsForm = new AddPaymentTermsForm();
-            UpdatePaymentTermsForm.Show();
+            if (addPaymentTermsForm == null || addPaymentTermsForm.IsDisposed)
+            {
+                addPaymentTermsForm = new AddPaymentTermsForm();
+                addPaymentTermsForm.Show();
+            }
+            else
+            {
+                addPaymentTermsForm.Show();
+                addPaymentTermsForm.Focus();
+            }
         }
-
         private void OrderUpdateAdditionalTermsAddButton_Click(object sender, EventArgs e)
         {
-            AddAdditionalTermsForm UpdateAdditionalTermsForm = new AddAdditionalTermsForm();
-            UpdateAdditionalTermsForm.Show();
+            if (addAdditionalTermsForm == null || addAdditionalTermsForm.IsDisposed)
+            {
+                addAdditionalTermsForm = new AddAdditionalTermsForm();
+                addAdditionalTermsForm.Show();
+            }
+            else
+            {
+                addAdditionalTermsForm.Show();
+                addAdditionalTermsForm.Focus();
+            }
         }
-
         private void OrderUpdateOrderDenyAddButton_Click(object sender, EventArgs e)
         {
-            AddOrderDenyForm UpdateOrderDenyForm = new AddOrderDenyForm();
-            UpdateOrderDenyForm.Show();
+            if (addOrderDenyForm == null || addOrderDenyForm.IsDisposed)
+            {
+                addOrderDenyForm = new AddOrderDenyForm();
+                addOrderDenyForm.Show();
+            }
+            else
+            {
+                addOrderDenyForm.Show();
+                addOrderDenyForm.Focus();
+            }
         }
-
-
-
+        private void OrderUpdateLoadingForm1AddButton_Click(object sender, EventArgs e)
+        {
+            if (addLoadingFormForm == null || addLoadingFormForm.IsDisposed)
+            {
+                addLoadingFormForm = new AddLoadingFormForm();
+                addLoadingFormForm.Show();
+            }
+            else
+            {
+                addLoadingFormForm.Show();
+                addLoadingFormForm.Focus();
+            }
+        }
         //
         //
         //Adresses
@@ -2768,22 +3033,18 @@ namespace AtlantSovt
         {
             DownloadAddressUpdate();
         }
-
         private void OrderUpdateUploadAddressesButton_Click(object sender, EventArgs e)
         {
             UploadAddressUpdate();
         }
-
         private void OrderUpdateCustumsAddressesButton_Click(object sender, EventArgs e)
         {
             CustomsAddressUpdate();
         }
-
         private void OrderUpdateUncustumsAddressesButton_Click(object sender, EventArgs e)
         {
             UncustomsAddressUpdate();
         }
-
         //splits
         private void OrderUpdateAdditionalTermsSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -2807,7 +3068,6 @@ namespace AtlantSovt
         {
             SplitCargoOrderUpdate();
         }
-
         private void OrderUpdateCargoSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
 
@@ -2815,7 +3075,6 @@ namespace AtlantSovt
             LoadOrderUpdateCargoSelectComboBox();
             OrderUpdateCargoSelectComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateFineForDelaySelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitFineForDelayOrderUpdate();
@@ -2824,7 +3083,6 @@ namespace AtlantSovt
         {
             SplitFineForDelayOrderUpdate();
         }
-
         private void OrderUpdateFineForDelaySelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
 
@@ -2832,7 +3090,6 @@ namespace AtlantSovt
             LoadOrderUpdateFineForDelaySelectComboBox();
             OrderUpdateFineForDelaySelectComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateTirCmrSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitTirCmrUpdateOrderUpdate();
@@ -2841,14 +3098,12 @@ namespace AtlantSovt
         {
             SplitTirCmrUpdateOrderUpdate();
         }
-
         private void OrderUpdateTirCmrSelectComboBox_MouseClick(object sender, EventArgs e)
         {
             OrderUpdateTirCmrSelectComboBox.Items.Clear();
             LoadOrderUpdateTirCmrSelectComboBox();
             OrderUpdateTirCmrSelectComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateDenyFineSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitOrderDenyOrderUpdate();
@@ -2857,14 +3112,12 @@ namespace AtlantSovt
         {
             SplitOrderDenyOrderUpdate();
         }
-
         private void OrderUpdateDenyFineSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateDenyFineSelectComboBox.Items.Clear();
             LoadOrderUpdateDenyFineSelectComboBox();
             OrderUpdateDenyFineSelectComboBox.DroppedDown = true;
         }
-
         private void OrderUpdatePaymentTermsSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitPaymentOrderUpdate();
@@ -2873,14 +3126,12 @@ namespace AtlantSovt
         {
             SplitPaymentOrderUpdate();
         }
-
         private void OrderUpdatePaymentTermsSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdatePaymentTermsSelectComboBox.Items.Clear();
             LoadOrderUpdatePaymentSelectComboBox();
             OrderUpdatePaymentTermsSelectComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateRegularyDelaySelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitRegularyDelayOrderUpdate();
@@ -2900,39 +3151,30 @@ namespace AtlantSovt
         {
             SplitCubeOrderUpdate();
         }
-
-
         private void OrderUpdateCubeSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitCubeOrderUpdate();
         }
-
-
         private void OrderUpdateStaffSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitStaffOrderUpdate();
         }
-
-
         private void OrderUpdateStaffSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitStaffOrderUpdate();
         }
-
         private void OrderUpdateCubeSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateCubeSelectComboBox.Items.Clear();
             LoadOrderUpdateCubeSelectComboBox();
             OrderUpdateCubeSelectComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateStaffSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateStaffSelectComboBox.Items.Clear();
             LoadOrderUpdateStaffSelectComboBox();
             OrderUpdateStaffSelectComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateTrailerSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitTrailerOrderUpdate();
@@ -2941,14 +3183,12 @@ namespace AtlantSovt
         {
             SplitTrailerOrderUpdate();
         }
-
         private void OrderUpdateTrailerSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateTrailerSelectComboBox.Items.Clear();
             LoadOrderUpdateTrailerSelectComboBox();
             OrderUpdateTrailerSelectComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateLoadingForm1SelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitLoadingForm1OrderUpdate();
@@ -2971,14 +3211,12 @@ namespace AtlantSovt
         {
             SplitLoadingForm2OrderUpdate();
         }
-
         private void OrderUpdateLoadingForm2SelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateLoadingForm2SelectComboBox.Items.Clear();
             LoadOrderUpdateLoadingForm2SelectComboBox();
             OrderUpdateLoadingForm2SelectComboBox.DroppedDown = true;
         }
-
         private void OrderUpdateWeightTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(46) && e.KeyChar != Convert.ToChar(8))
@@ -2986,10 +3224,6 @@ namespace AtlantSovt
                 e.Handled = true;
             }
         }
-
-
-
-
         private void OrderAddDownloadDateFromTimePicker_ValueChanged(object sender, EventArgs e)
         {
             if (OrderAddDownloadDateToTimePicker.Checked)
@@ -3003,8 +3237,6 @@ namespace AtlantSovt
                 OrderAddDownloadDateToTimePicker.Checked = false;
             }
         }
-
-
         private void OrderAddUploadDateFromTimePicker_ValueChanged(object sender, EventArgs e)
         {
             if (OrderAddUploadDateToTimePicker.Checked)
@@ -3017,38 +3249,20 @@ namespace AtlantSovt
                 OrderAddUploadDateToTimePicker.Value = OrderAddUploadDateToTimePicker.MinDate;
                 OrderAddUploadDateToTimePicker.Checked = false;
             }
-        }
-
-
-        private void OrderUpdateLoadingForm1AddButton_Click(object sender, EventArgs e)
-        {
-            AddLoadingFormForm updateLoadingFormForm = new AddLoadingFormForm();
-            updateLoadingFormForm.Show();
-        }
-
-       
+        }       
         private void OrderUpdateADRSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateADRSelectComboBox.DroppedDown = true;
         }
-
-
-
         private void OrderAddLanduageSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderAddLanduageSelectComboBox.DroppedDown = true;
         }
-
-
-
         private void OrderUpdateLanguageSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             OrderUpdateLanguageSelectComboBox.DroppedDown = true;
         }
-
-
         #endregion
-
         //Arbeiten
         #region Arbeiten
         private void arbeitenShowMainDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -3216,6 +3430,9 @@ namespace AtlantSovt
                 LoadItems();
             }                
         }
+
+
+
         private void deleteTableSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             if (deleteTableSelectComboBox.SelectedIndex == -1 || deleteTableSelectComboBox.Text != deleteTableSelectComboBox.SelectedItem.ToString() || deleteTableSelectComboBox.Text == "")
@@ -3248,7 +3465,6 @@ namespace AtlantSovt
 
 
         #endregion
-
         //Translate
         #region Translate
         private void uaLangButton_Click(object sender, EventArgs e)
@@ -3266,7 +3482,6 @@ namespace AtlantSovt
                 this.Activate();
             }
         }
-
         private void ruLangButton_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(AtlantSovt.Properties.Resources.Змінити_мову, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) == DialogResult.OK)
@@ -3281,9 +3496,7 @@ namespace AtlantSovt
             {
                 this.Activate();
             }
-        }
- 
+        } 
         #endregion
-
     }
 }

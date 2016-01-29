@@ -50,14 +50,15 @@ namespace AtlantSovt
                     IsAdding = IsAddingnew;
                     if (IsAdding)
                     {
+                        this.Dispose();
                         return AtlantSovt.Properties.Resources.Контакт_успішно_доданий_клієнту + "[" + New_ClientContact.ClientId + @"]";
                     }
                     else
                     {
                         MessageBox.Show(AtlantSovt.Properties.Resources.Контакт_успішно_доданий_клієнту + New_ClientContact.ClientId);
+                        this.Dispose();
                         return string.Empty;
-                    }                    
-
+                    }
                 }
                 catch (Exception ex)
                 {

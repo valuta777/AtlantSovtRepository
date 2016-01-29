@@ -117,21 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="transporterAddCountryButton.Text" xml:space="preserve">
-    <value>Додати нові країни</value>
-  </data>
-  <data name="transporterAddVehicleButton.Text" xml:space="preserve">
-    <value>Додати нові типи транспорту</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Вибір країн і типів транспорту</value>
-  </data>
-  <data name="transporterUpdateFilterSelectButton.Text" xml:space="preserve">
-    <value>Додати</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="transporterUpdateFilterSelectCountryCheckedListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -210,6 +195,9 @@
   <data name="transporterUpdateFilterSelectButton.TabIndex" type="System.Int32, mscorlib">
     <value>105</value>
   </data>
+  <data name="transporterUpdateFilterSelectButton.Text" xml:space="preserve">
+    <value>Додати</value>
+  </data>
   <data name="&gt;&gt;transporterUpdateFilterSelectButton.Name" xml:space="preserve">
     <value>transporterUpdateFilterSelectButton</value>
   </data>
@@ -233,6 +221,9 @@
   </data>
   <data name="transporterAddVehicleButton.TabIndex" type="System.Int32, mscorlib">
     <value>109</value>
+  </data>
+  <data name="transporterAddVehicleButton.Text" xml:space="preserve">
+    <value>Додати нові типи транспорту</value>
   </data>
   <data name="&gt;&gt;transporterAddVehicleButton.Name" xml:space="preserve">
     <value>transporterAddVehicleButton</value>
@@ -258,6 +249,9 @@
   <data name="transporterAddCountryButton.TabIndex" type="System.Int32, mscorlib">
     <value>108</value>
   </data>
+  <data name="transporterAddCountryButton.Text" xml:space="preserve">
+    <value>Додати нові країни</value>
+  </data>
   <data name="&gt;&gt;transporterAddCountryButton.Name" xml:space="preserve">
     <value>transporterAddCountryButton</value>
   </data>
@@ -270,6 +264,9 @@
   <data name="&gt;&gt;transporterAddCountryButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -278,6 +275,9 @@
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Вибір країн і типів транспорту</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>TransporterCountryUpdateVehicleSelectForm</value>

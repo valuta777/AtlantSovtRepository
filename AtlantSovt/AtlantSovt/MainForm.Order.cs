@@ -86,7 +86,7 @@ namespace AtlantSovt
                     string massage = AtlantSovt.Properties.Resources.Заявку_успішно_створено;
 
                     massage += BridgeAddes(New_Order);
-
+                    ClearAllBoxesOrderAdd();
                     MessageBox.Show(massage);
                 }
                 catch (DbEntityValidationException ex)
@@ -229,11 +229,61 @@ namespace AtlantSovt
                 }
 
             }
+
             return returnMessage;
         }
-            
-    
-       
+
+        void ClearAllBoxesOrderAdd()
+        {
+            OrderAddAdditionalTermsSelectComboBox.SelectedIndex = -1;
+            OrderAddPaymentTermsSelectComboBox.SelectedIndex = -1;
+            OrderAddDenyFineSelectComboBox.SelectedIndex = -1;
+            OrderAddCargoSelectComboBox.SelectedIndex = -1;
+            OrderAddRegularyDelaySelectComboBox.SelectedIndex = -1;
+            OrderAddTrailerSelectComboBox.SelectedIndex = -1;
+            OrderAddCubeSelectComboBox.SelectedIndex = -1;
+            OrderAddStaffComboBox.SelectedIndex = -1;
+            OrderAddTirCmrSelectComboBox.SelectedIndex = -1;
+            OrderAddADRSelectComboBox.SelectedIndex = -1;
+            OrderAddClientSelectComboBox.SelectedIndex = -1;
+            OrderAddTransporterSelectComboBox.SelectedIndex = -1;
+            OrderAddTransporterDiapasoneComboBox.SelectedIndex = -1;
+            OrderAddForwarder3SelectComboBox.SelectedIndex = -1;
+            OrderAddForwarder2SelectComboBox.SelectedIndex = -1;
+            OrderAddForwarder1SelectComboBox.SelectedIndex = -1;
+            OrderAddFineForDelaySelectComboBox.SelectedIndex = -1;
+            OrderAddClientDiapasoneComboBox.SelectedIndex = -1;
+            OrderAddLoadingForm1SelectComboBox.SelectedIndex = -1;
+            OrderAddLoadingForm2SelectComboBox.SelectedIndex = -1;
+            OrderAddAdditionalTermsSelectComboBox.Items.Clear();
+            OrderAddPaymentTermsSelectComboBox.Items.Clear();
+            OrderAddDenyFineSelectComboBox.Items.Clear();
+            OrderAddCargoSelectComboBox.Items.Clear();
+            OrderAddRegularyDelaySelectComboBox.Items.Clear();
+            OrderAddTrailerSelectComboBox.Items.Clear();
+            OrderAddCubeSelectComboBox.Items.Clear();
+            OrderAddStaffComboBox.Items.Clear();
+            OrderAddTirCmrSelectComboBox.Items.Clear();
+            OrderAddClientSelectComboBox.Items.Clear();
+            OrderAddTransporterSelectComboBox.Items.Clear();
+            OrderAddTransporterDiapasoneComboBox.Items.Clear();
+            OrderAddForwarder3SelectComboBox.Items.Clear();
+            OrderAddForwarder2SelectComboBox.Items.Clear();
+            OrderAddForwarder1SelectComboBox.Items.Clear();
+            OrderAddClientDiapasoneComboBox.Items.Clear();
+            OrderAddFineForDelaySelectComboBox.Items.Clear();
+            OrderAddLoadingForm1SelectComboBox.Items.Clear();
+            OrderAddLoadingForm2SelectComboBox.Items.Clear();
+            OrderAddDateSelectDateTimePicker.Checked = false;
+            OrderAddDownloadDateFromTimePicker.Checked = false;
+            OrderAddUploadDateFromTimePicker.Checked = false;
+            OrderAddDownloadDateToTimePicker.Checked = false;
+            OrderAddUploadDateToTimePicker.Checked = false;
+            OrderAddWeightTextBox.Text = "";
+            OrderAddFreightTextBox.Text = "";
+        }
+
+
         //Client
         void LoadOrderAddClientDiapasonCombobox()
         {
@@ -1033,6 +1083,11 @@ namespace AtlantSovt
             OrderUpdateWeightTextBox.Text = "";
             OrderUpdateFreightTextBox.Text = "";
             IsModified = false;
+            selectUploadAddressesForm = null;
+            selectDownloadAddressesForm = null;
+            selectCustomsAddressesForm = null;
+            selectUncustomsAddressesForm = null;
+
         }
         void LoadOrderUpdateOrderSelectComboBox()
         {
@@ -2445,7 +2500,6 @@ namespace AtlantSovt
                             updateOrder.Freight = null;
                             IsModified = true;
                         }
-                        //TODO Is bug?
 
                         if (updateOrder.Date != OrderUpdateDateDateTimePicker.Value)
                         {
@@ -2692,7 +2746,7 @@ namespace AtlantSovt
                             {
                                 if (updateOrder.ForwarderOrders.Where(fo3 => fo3.IsFirst == 3).Count() != 0) // якшо вже є
                                 {
-                                    ForwarderOrder UpdateForwarder3Order = db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(fo3 => fo3.IsFirst == 3).FirstOrDefault();//TODO bool to int
+                                    ForwarderOrder UpdateForwarder3Order = db.Orders.Find(updateOrder.Id).ForwarderOrders.Where(fo3 => fo3.IsFirst == 3).FirstOrDefault();
 
                                     if (UpdateForwarder3Order.Forwarder.Id != forwarder3OrderUpdate.Id) //якшо не то саме
                                     {
