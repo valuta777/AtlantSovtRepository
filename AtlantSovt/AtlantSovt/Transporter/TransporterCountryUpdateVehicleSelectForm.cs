@@ -15,6 +15,8 @@ namespace AtlantSovt
     public partial class TransporterCountryUpdateVehicleSelectForm : Form
     {
         Transporter transporter;
+        AddCountryForm country;
+        AddTransporterVehicleForm vehicle;
 
         public TransporterCountryUpdateVehicleSelectForm()
         {
@@ -269,14 +271,30 @@ namespace AtlantSovt
 
         private void transporterAddCountryButton_Click(object sender, EventArgs e)
         {
-            AddCountryForm country = new AddCountryForm(this);
-            country.Show();
+            if (country == null || country.IsDisposed)
+            {
+                country = new AddCountryForm(this);
+                country.Show();
+            }
+            else
+            {
+                country.Show();
+                country.Focus();
+            }
         }
 
         private void transporterAddVehicleButton_Click(object sender, EventArgs e)
         {
-            AddTransporterVehicleForm vehicle = new AddTransporterVehicleForm(this);
-            vehicle.Show();
+            if ((vehicle == null || vehicle.IsDisposed))
+            {
+                vehicle = new AddTransporterVehicleForm(this);
+                vehicle.Show();
+            }
+            else
+            {
+                vehicle.Show();
+                vehicle.Focus();
+            }            
         }
     }
 }

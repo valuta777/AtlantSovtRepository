@@ -41,7 +41,6 @@ namespace AtlantSovt
                 {
                     ClientUpdateSelectDeleteContactComboBox.Items.Add(item.ContactPerson +" "+ item.TelephoneNumber +" "+item.FaxNumber +" "+ item.Email+" [" + item.Id + "]");
                 }
-
             }
         }
 
@@ -49,12 +48,19 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = ClientUpdateSelectDeleteContactComboBox.SelectedItem.ToString();
-                string[] selectedIdAndContactPerson = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedIdAndContactPerson[1];
+                if (ClientUpdateSelectDeleteContactComboBox.SelectedIndex != -1 && ClientUpdateSelectDeleteContactComboBox.Text == ClientUpdateSelectDeleteContactComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = ClientUpdateSelectDeleteContactComboBox.SelectedItem.ToString();
+                    string[] selectedIdAndContactPerson = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedIdAndContactPerson[1];
 
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                contact = db.ClientContacts.Find(id);
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    contact = db.ClientContacts.Find(id);
+                }
+                else
+                {
+                    contact = null;
+                }
             }
         }
 
@@ -62,22 +68,28 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-
-                if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_контакт + contact.ContactPerson + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (contact != null)
                 {
-                    try
+                    if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_контакт + contact.ContactPerson + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        db.ClientContacts.Attach(contact);
-                        db.ClientContacts.Remove(contact);
-                        db.SaveChanges();
-                        MessageBox.Show(AtlantSovt.Properties.Resources.Контакт_успішно_видалено);
-                        ClientUpdateSelectDeleteContactComboBox.Items.Remove(ClientUpdateSelectDeleteContactComboBox.SelectedItem);
+                        try
+                        {
+                            db.ClientContacts.Attach(contact);
+                            db.ClientContacts.Remove(contact);
+                            db.SaveChanges();
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Контакт_успішно_видалено);
+                            ClientUpdateSelectDeleteContactComboBox.Items.Remove(ClientUpdateSelectDeleteContactComboBox.SelectedItem);
+                        }
+                        catch (Exception ex)
+                        {
+                            Log.Write(ex);
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + Environment.NewLine + ex.Message);
+                        }
                     }
-                    catch (Exception ex)
-                    {
-                        Log.Write(ex);
-                        MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + Environment.NewLine + ex.Message);
-                    }
+                }
+                else
+                {
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_запис);
                 }
             }
         }
@@ -105,10 +117,15 @@ namespace AtlantSovt
 
         private void DeleteClientContactButton_Click(object sender, EventArgs e)
         {
+            DeleteClientContact();
             ClientUpdateSelectDeleteContactComboBox.Text = "";
             ClientUpdateSelectDeleteContactComboBox.Items.Clear();
-            DeleteClientContactButton.Enabled = false;
-            DeleteClientContact();
+            DeleteClientContactButton.Enabled = false;            
+        }
+
+        private void ClientUpdateSelectDeleteContactComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitDeleteClientContact();
         }
     }
 }

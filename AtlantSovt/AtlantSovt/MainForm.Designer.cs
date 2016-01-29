@@ -3232,6 +3232,7 @@
             this.updateClientSelectClientComboBox.Name = "updateClientSelectClientComboBox";
             this.updateClientSelectClientComboBox.Sorted = true;
             this.updateClientSelectClientComboBox.SelectedIndexChanged += new System.EventHandler(this.selectClientUpdateComboBox_SelectedIndexChanged);
+            this.updateClientSelectClientComboBox.TextChanged += new System.EventHandler(this.updateClientSelectClientComboBox_TextChanged);
             this.updateClientSelectClientComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.selectClientUpdateComboBox_MouseClick);
             // 
             // updateClientButton
@@ -3752,6 +3753,7 @@
             this.selectForwarderUpdateComboBox.Name = "selectForwarderUpdateComboBox";
             this.selectForwarderUpdateComboBox.Sorted = true;
             this.selectForwarderUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.selectForwarderUpdateComboBox_SelectedIndexChanged);
+            this.selectForwarderUpdateComboBox.TextChanged += new System.EventHandler(this.selectForwarderUpdateComboBox_TextChanged);
             this.selectForwarderUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.selectForwarderUpdateComboBox_MouseClick);
             // 
             // label59
@@ -3874,6 +3876,7 @@
             this.forwarderDeleteComboBox.Name = "forwarderDeleteComboBox";
             this.forwarderDeleteComboBox.Sorted = true;
             this.forwarderDeleteComboBox.SelectedIndexChanged += new System.EventHandler(this.forwarderDeleteComboBox_SelectedIndexChanged);
+            this.forwarderDeleteComboBox.TextChanged += new System.EventHandler(this.forwarderDeleteComboBox_TextChanged);
             this.forwarderDeleteComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.forwarderDeleteComboBox_MouseClick);
             // 
             // showTransporterPage
@@ -4479,6 +4482,7 @@
             this.selectTransporterUpdateComboBox.Name = "selectTransporterUpdateComboBox";
             this.selectTransporterUpdateComboBox.Sorted = true;
             this.selectTransporterUpdateComboBox.SelectedIndexChanged += new System.EventHandler(this.selectTransporterUpdateComboBox_SelectedIndexChanged);
+            this.selectTransporterUpdateComboBox.TextChanged += new System.EventHandler(this.selectTransporterUpdateComboBox_TextChanged);
             this.selectTransporterUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.selectTransporterUpdateComboBox_MouseClick);
             // 
             // shortNameTransporterUpdateTextBox

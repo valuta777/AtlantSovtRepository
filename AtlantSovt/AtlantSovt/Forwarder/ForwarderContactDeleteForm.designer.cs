@@ -47,6 +47,7 @@
             this.forwarderUpdateSelectDeleteContactComboBox.Name = "forwarderUpdateSelectDeleteContactComboBox";
             this.forwarderUpdateSelectDeleteContactComboBox.Sorted = true;
             this.forwarderUpdateSelectDeleteContactComboBox.SelectedIndexChanged += new System.EventHandler(this.ForwarderUpdateSelectDeleteContactComboBox_SelectedIndexChanged);
+            this.forwarderUpdateSelectDeleteContactComboBox.TextChanged += new System.EventHandler(this.forwarderUpdateSelectDeleteContactComboBox_TextChanged);
             this.forwarderUpdateSelectDeleteContactComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ForwarderUpdateSelectDeleteContactComboBox_MouseClick);
             // 
             // forwarderUpdateContactDeleteButton

@@ -50,11 +50,13 @@ namespace AtlantSovt
                     IsAdding = IsAddingnew;
                     if (IsAdding)
                     {
+                        this.Dispose();
                         return AtlantSovt.Properties.Resources.Контакт_успішно_доданий_перевізнику + "[" + New_TransporterContact.TransporterId + @"]";
                     }
                     else
                     {
                         MessageBox.Show(AtlantSovt.Properties.Resources.Контакт_успішно_доданий_перевізнику + New_TransporterContact.TransporterId);
+                        this.Dispose();
                         return string.Empty;
                     }
                 }

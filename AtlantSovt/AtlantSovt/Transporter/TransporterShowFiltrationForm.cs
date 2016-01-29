@@ -23,6 +23,7 @@ namespace AtlantSovt
 
         public void LoadCoutriesToTransporterShowChechedBoxList()
         {
+            transporterShowFiltersSelectCountryCheckedListBox.Items.Clear();
             using (var db = new AtlantSovtContext())
             {
                 var query = from country in db.Countries
@@ -37,6 +38,7 @@ namespace AtlantSovt
 
         public void LoadVehicleToTransporterShowChechedBoxList()
         {
+            transporterShowFiltersSelectVehicleCheckedListBox.Items.Clear();
             using (var db = new AtlantSovtContext())
             {
                 var query = from vehicle in db.Vehicles
