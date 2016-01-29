@@ -680,12 +680,71 @@ namespace AtlantSovt
                         createDate = orderDocument.Date.Value.ToShortDateString();
 
                         
-                        downloadDate = (!orderDocument.DownloadDateFrom.HasValue) ? "" : (!orderDocument.DownloadDateTo.HasValue) ? orderDocument.DownloadDateFrom.Value.ToShortDateString() : (orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month) ? orderDocument.DownloadDateFrom.Value.Day + "." + orderDocument.DownloadDateFrom.Value.Month + "-" + orderDocument.DownloadDateTo.Value : orderDocument.DownloadDateFrom.Value.Day + "-" + orderDocument.DownloadDateTo.Value;
-                        downloadDate += (!orderDocument.DownloadDateFrom.HasValue) ? "" : " на " + orderDocument.DownloadDateFrom.Value.ToShortTimeString();
+                        //downloadDate = (!orderDocument.DownloadDateFrom.HasValue) ? "" : (!orderDocument.DownloadDateTo.HasValue) ? orderDocument.DownloadDateFrom.Value.ToShortDateString() : (orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month) ? orderDocument.DownloadDateFrom.Value.Day + "." + orderDocument.DownloadDateFrom.Value.Month + "-" + orderDocument.DownloadDateTo.Value : orderDocument.DownloadDateFrom.Value.Day + "-" + orderDocument.DownloadDateTo.Value;
+                        //downloadDate += (!orderDocument.DownloadDateFrom.HasValue) ? "" : " на " + orderDocument.DownloadDateFrom.Value.ToShortTimeString();
                       
-                        // TODO DATE
-                        dateTerms = (!orderDocument.DownloadDateFrom.HasValue) ? "" : (!orderDocument.DownloadDateTo.HasValue) ? orderDocument.DownloadDateFrom.Value.ToShortDateString() : (orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month) ? orderDocument.DownloadDateFrom.Value.Day.ToString().PadLeft(2,'0') + "." + orderDocument.DownloadDateFrom.Value.Month.ToString().PadLeft(2, '0') + "-" + orderDocument.DownloadDateTo.Value.ToShortDateString() : orderDocument.DownloadDateFrom.Value.Day.ToString().PadLeft(2, '0') + "-" + orderDocument.DownloadDateTo.Value.ToShortDateString() + " — ";
-                        dateTerms +=(!orderDocument.UploadDateFrom.HasValue) ? "" : (!orderDocument.UploadDateTo.HasValue) ? orderDocument.UploadDateFrom.Value.ToShortDateString() : (orderDocument.UploadDateFrom.Value.Month != orderDocument.UploadDateTo.Value.Month) ? orderDocument.UploadDateFrom.Value.Day.ToString().PadLeft(2, '0') + "." + orderDocument.UploadDateFrom.Value.Month.ToString().PadLeft(2, '0') + "-" + orderDocument.UploadDateTo.Value.ToShortDateString() : orderDocument.UploadDateFrom.Value.Day.ToString().PadLeft(2, '0') + "-" + orderDocument.UploadDateTo.Value.ToShortDateString() + "до " + orderDocument.UploadDateTo.Value.ToShortTimeString();
+                       
+                        if (orderDocument.DownloadDateFrom.HasValue)
+                        {
+                            if (orderDocument.DownloadDateTo.HasValue)
+                            {
+                                if(orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month)
+                                {
+                                    dateTerms += orderDocument.DownloadDateFrom.Value.Day.ToString().PadLeft(2, '0') +
+                                        "." + orderDocument.DownloadDateFrom.Value.Month.ToString().PadLeft(2, '0') +
+                                        "-" + orderDocument.DownloadDateTo.Value.ToShortDateString();
+                                }
+                                else
+                                {
+                                    dateTerms += orderDocument.DownloadDateFrom.Value.Day.ToString().PadLeft(2, '0') +
+                                        "-" + orderDocument.DownloadDateTo.Value.ToShortDateString();
+                                }
+                                downloadDate = dateTerms;
+                                downloadDate += " на " + orderDocument.DownloadDateTo.Value.ToShortTimeString();
+                            }
+                            else
+                            {
+                                dateTerms += orderDocument.DownloadDateFrom.Value.ToShortDateString();
+                                downloadDate = dateTerms;
+                                downloadDate += " на " + orderDocument.DownloadDateFrom.Value.ToShortTimeString();
+                            }                            
+                            dateTerms += " — ";
+                        }
+                        else
+                        {
+                            dateTerms = "";
+                        }
+
+                        if (orderDocument.UploadDateFrom.HasValue)
+                        {
+                            if (orderDocument.UploadDateTo.HasValue)
+                            {
+                                if(orderDocument.UploadDateFrom.Value.Month != orderDocument.UploadDateTo.Value.Month)
+                                {
+                                    dateTerms += orderDocument.UploadDateFrom.Value.Day.ToString().PadLeft(2, '0') +
+                                        "." + orderDocument.UploadDateFrom.Value.Month.ToString().PadLeft(2, '0') +
+                                        "-" + orderDocument.UploadDateTo.Value.ToShortDateString();
+                                    dateTerms += " до " + orderDocument.UploadDateTo.Value.ToShortTimeString();
+                                }
+                                else
+                                {
+                                    dateTerms += orderDocument.UploadDateFrom.Value.Day.ToString().PadLeft(2, '0') +
+                                        "-" + orderDocument.UploadDateTo.Value.ToShortDateString();
+                                    dateTerms += " до " + orderDocument.UploadDateTo.Value.ToShortTimeString();
+                                }
+                            }
+                            else
+                            {
+                                dateTerms += orderDocument.UploadDateFrom.Value.ToShortDateString();
+                                dateTerms += " до " + orderDocument.UploadDateFrom.Value.ToShortTimeString();
+                            }
+                        }
+                        else
+                        {
+                            dateTerms = "";
+                        }
+
+
 
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).Count() == 1)
                         {

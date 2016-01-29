@@ -1379,7 +1379,6 @@ namespace AtlantSovt
             }
             transporterShowFiltrationForm.LoadCoutriesToTransporterShowChechedBoxList();
             transporterShowFiltrationForm.LoadVehicleToTransporterShowChechedBoxList();
-            //todo form focus
         }
         private void transporterShowSearchButton_Click(object sender, EventArgs e)
         {
