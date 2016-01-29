@@ -557,7 +557,7 @@ namespace AtlantSovt
                                 orderby or.Id
                                 where (or.State != false) && (or.Date.Value.Month == arbeitenAddOrderFilterDateTimePicker.Value.Month)
                                 && (or.Date.Value.Year == arbeitenAddOrderFilterDateTimePicker.Value.Year)
-                                && or.Arbeiten == null
+                                && or.Arbeiten == null && or.IsDeleted == false
                                 select or;
                     foreach (var item in query)
                     {
@@ -580,7 +580,7 @@ namespace AtlantSovt
                                 orderby or.Id
                                 where (or.Date.Value.Month == arbeitenAddOrderFilterDateTimePicker.Value.Month)
                                 && (or.Date.Value.Year == arbeitenAddOrderFilterDateTimePicker.Value.Year)
-                                && or.Arbeiten == null
+                                && or.Arbeiten == null && or.IsDeleted == false
                                 select or;
                     foreach (var item in query)
                     {
@@ -897,7 +897,7 @@ namespace AtlantSovt
                                 orderby or.Id
                                 where (or.State != false) && (or.Date.Value.Month == arbeitenUpdateOrderFilterDateTimePicker.Value.Month)
                                 && (or.Date.Value.Year == arbeitenUpdateOrderFilterDateTimePicker.Value.Year)
-                                && or.Arbeiten != null
+                                && or.Arbeiten != null && or.IsDeleted == false
                                 select or;
                     foreach (var item in query)
                     {
@@ -920,7 +920,7 @@ namespace AtlantSovt
                                 orderby or.Id
                                 where (or.Date.Value.Month == arbeitenUpdateOrderFilterDateTimePicker.Value.Month)
                                 && (or.Date.Value.Year == arbeitenUpdateOrderFilterDateTimePicker.Value.Year)
-                                && or.Arbeiten != null
+                                && or.Arbeiten != null && or.IsDeleted == false
                                 select or;
                     foreach (var item in query)
                     {
