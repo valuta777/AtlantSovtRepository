@@ -50,12 +50,20 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = clientUpdateContactSelectComboBox.SelectedItem.ToString();
-                string[] selectedIdAndContactPerson = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedIdAndContactPerson[1];
+                if (clientUpdateContactSelectComboBox.SelectedIndex != -1 && clientUpdateContactSelectComboBox.Text == clientUpdateContactSelectComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = clientUpdateContactSelectComboBox.SelectedItem.ToString();
+                    string[] selectedIdAndContactPerson = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedIdAndContactPerson[1];
 
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                contact = db.ClientContacts.Find(id);
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    contact = db.ClientContacts.Find(id);
+                }
+                else
+                {
+                    contact = null;
+                    ClearAllBoxesClientContactUpdate();
+                }
 
                 if (contact != null)
                 {
@@ -72,34 +80,41 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                //якщо хоча б один з флагів = true
-                if (contactPersonChanged || telephoneNumberChanged || faxNumberChanged || emailChanged)
+                if (contact != null)
                 {
-                    if (contactPersonChanged)
+                    //якщо хоча б один з флагів = true
+                    if (contactPersonChanged || telephoneNumberChanged || faxNumberChanged || emailChanged)
                     {
-                        contact.ContactPerson = contactPersonUpdateClientContactTextBox.Text;
+                        if (contactPersonChanged)
+                        {
+                            contact.ContactPerson = contactPersonUpdateClientContactTextBox.Text;
+                        }
+                        if (telephoneNumberChanged)
+                        {
+                            contact.TelephoneNumber = telephoneNumberUpdateClientContactTextBox.Text;
+                        }
+                        if (faxNumberChanged)
+                        {
+                            contact.FaxNumber = faxNumberUpdateClientContactTextBox.Text;
+                        }
+                        if (emailChanged)
+                        {
+                            contact.Email = emailUpdateClientContactTextBox.Text;
+                        }
+                        db.Entry(contact).State = EntityState.Modified;
+                        db.SaveChanges();
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_змінено);
                     }
-                    if (telephoneNumberChanged)
+                    else
                     {
-                        contact.TelephoneNumber = telephoneNumberUpdateClientContactTextBox.Text;
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Змін_не_знайдено);
                     }
-                    if (faxNumberChanged)
-                    {
-                        contact.FaxNumber = faxNumberUpdateClientContactTextBox.Text;
-                    }
-                    if (emailChanged)
-                    {
-                        contact.Email = emailUpdateClientContactTextBox.Text;
-                    }
-                    db.Entry(contact).State = EntityState.Modified;
-                    db.SaveChanges();
-                    MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_змінено);
                 }
                 else
                 {
-                    MessageBox.Show(AtlantSovt.Properties.Resources.Змін_не_знайдено);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_запис);
                 }
-            }
+            }            
         }
 
         private void contactPersonUpdateClientContactTextBox_TextChanged(object sender, EventArgs e)
@@ -125,6 +140,11 @@ namespace AtlantSovt
         private void updateContactButton_Click(object sender, EventArgs e)
         {
             UpdateClientContact();
+        }
+
+        private void clientUpdateContactSelectComboBox_TextChanged(object sender, EventArgs e)
+        {
+            SplitUpdateClientContact();
         }
 
         private void clientUpdateContactSelectComboBox_MouseClick(object sender, MouseEventArgs e)

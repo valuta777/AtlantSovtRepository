@@ -47,11 +47,13 @@ namespace AtlantSovt
                     IsAdding = IsAddingnew;
                     if (IsAdding)
                     {
+                        this.Dispose();
                         return AtlantSovt.Properties.Resources.Контакт_успішно_доданий_експедитору + "[" + New_ForwarderContact.Id + @"]";
                     }
                     else
                     {
                         MessageBox.Show(AtlantSovt.Properties.Resources.Контакт_успішно_доданий_експедитору);
+                        this.Dispose();
                         return string.Empty;
                     }
                    

@@ -49,12 +49,19 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = forwarderUpdateSelectDeleteContactComboBox.SelectedItem.ToString();
-                string[] selectedIdAndContactPerson = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedIdAndContactPerson[1];
+                if (forwarderUpdateSelectDeleteContactComboBox.SelectedIndex != -1 && forwarderUpdateSelectDeleteContactComboBox.Text == forwarderUpdateSelectDeleteContactComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = forwarderUpdateSelectDeleteContactComboBox.SelectedItem.ToString();
+                    string[] selectedIdAndContactPerson = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedIdAndContactPerson[1];
 
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                contact = db.ForwarderContacts.Find(id);
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    contact = db.ForwarderContacts.Find(id);
+                }
+                else
+                {
+                    contact = null;
+                }
             }
         }
 
@@ -62,22 +69,28 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-
-                if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_контакт + contact.ContactPerson + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (contact != null)
                 {
-                    try
+                    if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_контакт + contact.ContactPerson + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        db.ForwarderContacts.Attach(contact);
-                        db.ForwarderContacts.Remove(contact);
-                        db.SaveChanges();
-                        MessageBox.Show(AtlantSovt.Properties.Resources.Контакт_успішно_видалено);
-                        forwarderUpdateSelectDeleteContactComboBox.Items.Remove(forwarderUpdateSelectDeleteContactComboBox.SelectedItem);
+                        try
+                        {
+                            db.ForwarderContacts.Attach(contact);
+                            db.ForwarderContacts.Remove(contact);
+                            db.SaveChanges();
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Контакт_успішно_видалено);
+                            forwarderUpdateSelectDeleteContactComboBox.Items.Remove(forwarderUpdateSelectDeleteContactComboBox.SelectedItem);
+                        }
+                        catch (Exception ex)
+                        {
+                            Log.Write(ex);
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
+                        }
                     }
-                    catch (Exception ex)
-                    {
-                        Log.Write(ex);
-                        MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
-                    }
+                }
+                else
+                {
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_запис);
                 }
             }
         }
@@ -94,7 +107,6 @@ namespace AtlantSovt
             else
             {
                 forwarderUpdateContactDeleteButton.Enabled = true;
-
             }
         }
 
@@ -105,10 +117,16 @@ namespace AtlantSovt
 
         private void DeleteForwarderContactButton_Click(object sender, EventArgs e)
         {
+            DeleteForwarderContact();
             forwarderUpdateSelectDeleteContactComboBox.Text = "";
             forwarderUpdateSelectDeleteContactComboBox.Items.Clear();
             forwarderUpdateContactDeleteButton.Enabled = false;
-            DeleteForwarderContact();
+            
+        }
+
+        private void forwarderUpdateSelectDeleteContactComboBox_TextChanged(object sender, EventArgs e)
+        {
+            SplitDeleteForwarderContact();
         }
     }
 }

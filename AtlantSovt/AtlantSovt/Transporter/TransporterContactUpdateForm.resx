@@ -117,30 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Зміна контакту</value>
-  </data>
-  <data name="label1t.Text" xml:space="preserve">
-    <value>Номер телефону</value>
-  </data>
-  <data name="label2t.Text" xml:space="preserve">
-    <value>Номер факсу</value>
-  </data>
-  <data name="label3t.Text" xml:space="preserve">
-    <value>Email</value>
-  </data>
-  <data name="label4t.Text" xml:space="preserve">
-    <value>Виберіть контакт</value>
-  </data>
-  <data name="nameTransporterLabel.Text" xml:space="preserve">
-    <value>Контактна особа</value>
-  </data>
-  <data name="updateTransporterContactButton.Text" xml:space="preserve">
-    <value>Змінити контакт</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="nameTransporterLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -157,6 +133,9 @@
   </data>
   <data name="nameTransporterLabel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="nameTransporterLabel.Text" xml:space="preserve">
+    <value>Контактна особа</value>
   </data>
   <data name="&gt;&gt;nameTransporterLabel.Name" xml:space="preserve">
     <value>nameTransporterLabel</value>
@@ -185,6 +164,9 @@
   <data name="label1t.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="label1t.Text" xml:space="preserve">
+    <value>Номер телефону</value>
+  </data>
   <data name="&gt;&gt;label1t.Name" xml:space="preserve">
     <value>label1t</value>
   </data>
@@ -212,6 +194,9 @@
   <data name="label2t.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
+  <data name="label2t.Text" xml:space="preserve">
+    <value>Номер факсу</value>
+  </data>
   <data name="&gt;&gt;label2t.Name" xml:space="preserve">
     <value>label2t</value>
   </data>
@@ -238,6 +223,9 @@
   </data>
   <data name="label3t.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
+  </data>
+  <data name="label3t.Text" xml:space="preserve">
+    <value>Email</value>
   </data>
   <data name="&gt;&gt;label3t.Name" xml:space="preserve">
     <value>label3t</value>
@@ -359,6 +347,9 @@
   <data name="updateTransporterContactButton.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
+  <data name="updateTransporterContactButton.Text" xml:space="preserve">
+    <value>Змінити контакт</value>
+  </data>
   <data name="&gt;&gt;updateTransporterContactButton.Name" xml:space="preserve">
     <value>updateTransporterContactButton</value>
   </data>
@@ -409,10 +400,13 @@
     <value>12, 17</value>
   </data>
   <data name="label4t.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 21</value>
+    <value>133, 21</value>
   </data>
   <data name="label4t.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
+  </data>
+  <data name="label4t.Text" xml:space="preserve">
+    <value>Виберіть контакт</value>
   </data>
   <data name="&gt;&gt;label4t.Name" xml:space="preserve">
     <value>label4t</value>
@@ -426,6 +420,9 @@
   <data name="&gt;&gt;label4t.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -434,6 +431,9 @@
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Зміна контакту</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>TransporterContactUpdateForm</value>

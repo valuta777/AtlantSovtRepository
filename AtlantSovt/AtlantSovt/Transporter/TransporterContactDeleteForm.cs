@@ -48,12 +48,19 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = transporterUpdateSelectDeleteContactComboBox.SelectedItem.ToString();
-                string[] selectedIdAndContactPerson = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedIdAndContactPerson[1];
+                if (transporterUpdateSelectDeleteContactComboBox.SelectedIndex != -1 && transporterUpdateSelectDeleteContactComboBox.Text == transporterUpdateSelectDeleteContactComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = transporterUpdateSelectDeleteContactComboBox.SelectedItem.ToString();
+                    string[] selectedIdAndContactPerson = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedIdAndContactPerson[1];
 
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                contact = db.TransporterContacts.Find(id);
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    contact = db.TransporterContacts.Find(id);
+                }
+                else
+                {
+                    contact = null;
+                }
             }
         }
 
@@ -61,20 +68,22 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-
-                if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_контакт + contact.ContactPerson + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (contact != null)
                 {
-                    try
+                    if (MessageBox.Show(AtlantSovt.Properties.Resources.Видалити_контакт + contact.ContactPerson + "?", AtlantSovt.Properties.Resources.Підтвердіть_видалення, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        db.TransporterContacts.Attach(contact);
-                        db.TransporterContacts.Remove(contact);
-                        db.SaveChanges();
-                        MessageBox.Show(AtlantSovt.Properties.Resources.Контакт_успішно_видалено);
-                        transporterUpdateSelectDeleteContactComboBox.Items.Remove(transporterUpdateSelectDeleteContactComboBox.SelectedItem);
-                    }
-                    catch (Exception e)
-                    {
-                        MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + e.Message);
+                        try
+                        {
+                            db.TransporterContacts.Attach(contact);
+                            db.TransporterContacts.Remove(contact);
+                            db.SaveChanges();
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Контакт_успішно_видалено);
+                            transporterUpdateSelectDeleteContactComboBox.Items.Remove(transporterUpdateSelectDeleteContactComboBox.SelectedItem);
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + e.Message);
+                        }
                     }
                 }
             }
@@ -102,10 +111,16 @@ namespace AtlantSovt
 
         private void DeleteTransporterContactButton_Click(object sender, EventArgs e)
         {
+            DeleteTransporterContact();
             transporterUpdateSelectDeleteContactComboBox.Text = "";
             transporterUpdateSelectDeleteContactComboBox.Items.Clear();
             transporterUpdateContactDeleteButton.Enabled = false;
-            DeleteTransporterContact();
+            
+        }
+
+        private void transporterUpdateSelectDeleteContactComboBox_TextChanged(object sender, EventArgs e)
+        {
+            SplitDeleteTransporterContact();
         }
     }
 }

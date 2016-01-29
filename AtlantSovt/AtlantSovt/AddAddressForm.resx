@@ -117,39 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Додавання адреси</value>
-  </data>
-  <data name="addAddressButton.Text" xml:space="preserve">
-    <value>Додати адресу</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Код країни</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Місто</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Код міста</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Вулиця</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Будинок</value>
-  </data>
-  <data name="label50.Text" xml:space="preserve">
-    <value>Країна</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Назва фірми</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Контактна особа</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="addressAddCountryCodeTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
@@ -190,6 +157,9 @@
   </data>
   <data name="label50.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
+  </data>
+  <data name="label50.Text" xml:space="preserve">
+    <value>Країна</value>
   </data>
   <data name="&gt;&gt;label50.Name" xml:space="preserve">
     <value>label50</value>
@@ -270,6 +240,9 @@
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Код країни</value>
+  </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
   </data>
@@ -296,6 +269,9 @@
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Місто</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -348,6 +324,9 @@
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
   </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Код міста</value>
+  </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
   </data>
@@ -398,6 +377,9 @@
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Вулиця</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
@@ -450,6 +432,9 @@
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Будинок</value>
+  </data>
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
   </data>
@@ -500,6 +485,9 @@
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Назва фірми</value>
   </data>
   <data name="&gt;&gt;label6.Name" xml:space="preserve">
     <value>label6</value>
@@ -552,6 +540,9 @@
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
   </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Контактна особа</value>
+  </data>
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
   </data>
@@ -603,6 +594,9 @@
   <data name="addAddressButton.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
+  <data name="addAddressButton.Text" xml:space="preserve">
+    <value>Додати адресу</value>
+  </data>
   <data name="&gt;&gt;addAddressButton.Name" xml:space="preserve">
     <value>addAddressButton</value>
   </data>
@@ -615,6 +609,9 @@
   <data name="&gt;&gt;addAddressButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -623,6 +620,9 @@
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Додавання адреси</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AddAddressForm</value>

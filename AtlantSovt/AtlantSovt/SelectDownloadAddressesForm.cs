@@ -17,6 +17,7 @@ namespace AtlantSovt
         Client client;
         Order order;
         bool IsUpdate;
+        AddAddressForm addDownloadAddressForm;
         public SelectDownloadAddressesForm(Client new_client)
         {
             InitializeComponent();
@@ -198,8 +199,16 @@ namespace AtlantSovt
 
         private void addDownloadAddressButton_Click(object sender, EventArgs e)
         {
-            AddAddressForm addDownloadAddressForm = new AddAddressForm(client, 1, this);
-            addDownloadAddressForm.Show();
+            if (addDownloadAddressForm == null || addDownloadAddressForm.IsDisposed)
+            {
+                addDownloadAddressForm = new AddAddressForm(client, 1, this);
+                addDownloadAddressForm.Show();
+            }
+            else
+            {
+                addDownloadAddressForm.Show();
+                addDownloadAddressForm.Focus();
+            }
         }
 
         internal string DownloadAddressesSelect(Order new_order)

@@ -16,6 +16,7 @@ namespace AtlantSovt
     {
         Client client;
         Country country;
+        AddCountryForm addCountryForm;
         Byte currentCase;
         private SelectCustomsAddressesForm selectCustomsAddresses { get; set; }
         private SelectUncustomsAddressesForm selectUncustomsAddresses { get; set; }
@@ -62,13 +63,26 @@ namespace AtlantSovt
         string new_CompanyName;
         string new_ContactPerson;
        
+        private void ClearAllBoxesAddressAdd()
+        {
+            addressAddCountryCodeTextBox.Clear();
+            addressAddCityNameTextBox.Clear();
+            addressAddCityCodeTextBox.Clear();
+            addressAddStreetNameTextBox.Clear();
+            addressAddHouseNumberTextBox.Clear();
+            addressAddCompanyNameTextBox.Clear();
+            addressAddContactPersonTextBox.Clear();
+            addressAddCountryNameComboBox.SelectedIndex = -1;
+            addressAddCountryNameComboBox.Items.Clear();
+
+        }
         private long? AddUploadAddress()
         {
             using (var db = new AtlantSovtContext())
             {
                 var New_UploadAddress = new UploadAddress
                 {
-                    CountryId = country.Id,
+                    CountryId = country != null ? (long?)country.Id : null,
                     ClientId = client.Id,
                     CityCode = new_CityCode,
                     StreetName = new_StreetName,
@@ -99,7 +113,7 @@ namespace AtlantSovt
             {
                 var New_DownloadAddress = new DownloadAddress
                 {
-                    CountryId = country.Id,
+                    CountryId = country != null ? (long?)country.Id : null,
                     ClientId = client.Id,
                     CityCode = new_CityCode,
                     StreetName = new_StreetName,
@@ -131,7 +145,7 @@ namespace AtlantSovt
             {
                 var New_CustomsAddress = new CustomsAddress
                 {
-                    CountryId = country.Id,
+                    CountryId = country != null ? (long?)country.Id : null,
                     ClientId = client.Id,
                     CityCode = new_CityCode,
                     StreetName = new_StreetName,
@@ -163,7 +177,7 @@ namespace AtlantSovt
             {
                 var New_UnCustomsAddress = new UnCustomsAddress
                 {
-                    CountryId = country.Id,
+                    CountryId = country != null ? (long?)country.Id : null,
                     ClientId = client.Id,
                     CityCode = new_CityCode,
                     StreetName = new_StreetName,
@@ -198,35 +212,44 @@ namespace AtlantSovt
              new_HouseNumber = addressAddHouseNumberTextBox.Text;
              new_CompanyName = addressAddCompanyNameTextBox.Text;
              new_ContactPerson = addressAddContactPersonTextBox.Text;
-
-            switch(currentCase)
+            if (addressAddCountryCodeTextBox.Text != "" || addressAddCityNameTextBox.Text != "" || addressAddCityCodeTextBox.Text != "" ||
+                addressAddStreetNameTextBox.Text != "" || addressAddHouseNumberTextBox.Text != "" || addressAddCompanyNameTextBox.Text != "" ||
+                addressAddContactPersonTextBox.Text != "" || country != null)
             {
-                case 1 : //AddDownloadAddress();
-                     //selectDownloadAddresses.downloadAddresssListBox.Items.Clear();
-                     selectDownloadAddresses.LoadClientDownloadAddresses(AddDownloadAddress());                    
-                     break;
+                switch (currentCase)
+                {
+                    case 1: //AddDownloadAddress();
+                            //selectDownloadAddresses.downloadAddresssListBox.Items.Clear();
+                        selectDownloadAddresses.LoadClientDownloadAddresses(AddDownloadAddress());
+                        break;
 
-                case 2 : //AddUploadAddress(); 
-                //    selectUploadAddresses.uploadAddressListBox.Items.Clear();
-                     selectUploadAddresses.LoadClientUploadAddresses(AddUploadAddress());
+                    case 2: //AddUploadAddress(); 
+                            //    selectUploadAddresses.uploadAddressListBox.Items.Clear();
+                        selectUploadAddresses.LoadClientUploadAddresses(AddUploadAddress());
 
-                    break; 
-                    
-                case 3 : /*AddCustomsAddress();*/
-                //    selectCustomsAddresses.customsAddressesListBox.Items.Clear();
-                    selectCustomsAddresses.LoadClientCustomsAddresses(AddCustomsAddress());
+                        break;
 
-                    break;
-                    
-                case 4 : /*AddUnCustomsAddress();*/
-                    //selectUncustomsAddresses.uncustomsAddressesListBox.Items.Clear();
-                    selectUncustomsAddresses.LoadClientUncustomsAddresses(AddUnCustomsAddress());
+                    case 3: /*AddCustomsAddress();*/
+                            //    selectCustomsAddresses.customsAddressesListBox.Items.Clear();
+                        selectCustomsAddresses.LoadClientCustomsAddresses(AddCustomsAddress());
 
-                    break;
+                        break;
 
-                default: MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_1);break;
+                    case 4: /*AddUnCustomsAddress();*/
+                            //selectUncustomsAddresses.uncustomsAddressesListBox.Items.Clear();
+                        selectUncustomsAddresses.LoadClientUncustomsAddresses(AddUnCustomsAddress());
+
+                        break;
+
+                    default: MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_1); break;
+                }
+                ClearAllBoxesAddressAdd();
             }
-            
+            else
+            {
+                MessageBox.Show(AtlantSovt.Properties.Resources.Для_збереження_заповніть_хоча_б_одне_поле);
+            }
+
         }
         private void LoadCountryComboBoxInfo()
         {
@@ -248,12 +271,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = addressAddCountryNameComboBox.SelectedItem.ToString();
-                string[] selectedIdAndContactPerson = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedIdAndContactPerson[1];
-
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                country = db.Countries.Find(id);                
+                if (addressAddCountryNameComboBox.SelectedIndex != -1 && addressAddCountryNameComboBox.Text == addressAddCountryNameComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = addressAddCountryNameComboBox.SelectedItem.ToString();
+                    string[] selectedIdAndContactPerson = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedIdAndContactPerson[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    country = db.Countries.Find(id);
+                }
+                else
+                {
+                    country = null;
+                }              
             }
         }
         private void addressAddCountryNameComboBox_MouseClick(object sender, MouseEventArgs e)
@@ -273,8 +302,16 @@ namespace AtlantSovt
         }
         private void addressAddCountryAddButton_Click(object sender, EventArgs e)
         {
-            AddCountryForm addCountryForm = new AddCountryForm();
-            addCountryForm.Show();
+            if (addCountryForm == null || addCountryForm.IsDisposed)
+            {
+                addCountryForm = new AddCountryForm();
+                addCountryForm.Show();
+            }
+            else
+            {
+                addCountryForm.Show();
+                addCountryForm.Focus();
+            }
         }
 
         private void AddAddressForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -296,6 +333,11 @@ namespace AtlantSovt
                 this.selectUncustomsAddresses.Focus();
             }
 
+        }
+
+        private void addressAddCountryNameComboBox_TextUpdate(object sender, EventArgs e)
+        {
+            SplitUpdateCountry();
         }
     }    
 }

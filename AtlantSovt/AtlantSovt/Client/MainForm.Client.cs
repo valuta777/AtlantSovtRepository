@@ -386,11 +386,19 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = updateClientSelectClientComboBox.SelectedItem.ToString();                
-                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedNameAndDirector[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                client = db.Clients.Find(id);
+                if (updateClientSelectClientComboBox.SelectedIndex != -1 && updateClientSelectClientComboBox.Text == updateClientSelectClientComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = updateClientSelectClientComboBox.SelectedItem.ToString();
+                    string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedNameAndDirector[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    client = db.Clients.Find(id);
+                }
+                else
+                {
+                    client = null;
+                    ClearAllBoxesClientUpdate();
+                }
                 if (client != null)
                 {
                     updateClientNameTextBox.Text = Convert.ToString(client.Name);
@@ -517,7 +525,7 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                if (updateClientWorkDocumentComboBox.Text != "")
+                if (updateClientWorkDocumentComboBox.SelectedIndex != -1 && updateClientWorkDocumentComboBox.Text == updateClientWorkDocumentComboBox.SelectedItem.ToString())
                 {
                     string comboboxText = updateClientWorkDocumentComboBox.SelectedItem.ToString();
                     string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
@@ -536,7 +544,7 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                if (updateClientTaxPayerStatusComboBox.Text != "")
+                if (updateClientTaxPayerStatusComboBox.SelectedIndex != -1 && updateClientTaxPayerStatusComboBox.Text == updateClientTaxPayerStatusComboBox.SelectedItem.ToString())
                 {
                     string comboboxText = updateClientTaxPayerStatusComboBox.SelectedItem.ToString();
                     string[] selectedStatus = comboboxText.Split(new char[] { '[', ']' });
@@ -555,72 +563,79 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                //якщо хоча б один з флагів = true
-                if (clientNameChanged || clientDirectorChanged || clientPhysicalAddressChanged || clientGeographyAddressChanged || clientCommentChanged || clientWorkDocumentChanged || clientTaxPayerStatusChanged || clientWorkDocumentChanged || clientTaxPayerStatusChanged || clientOriginalChanged || clientFaxChanged)
+                if (client != null)
                 {
-                    if (clientNameChanged)
+                    //якщо хоча б один з флагів = true
+                    if (clientNameChanged || clientDirectorChanged || clientPhysicalAddressChanged || clientGeographyAddressChanged || clientCommentChanged || clientWorkDocumentChanged || clientTaxPayerStatusChanged || clientWorkDocumentChanged || clientTaxPayerStatusChanged || clientOriginalChanged || clientFaxChanged)
                     {
-                        client.Name = updateClientNameTextBox.Text;
-                    }
-                    if (clientDirectorChanged)
-                    {
-                        client.Director = updateClientDirectorTextBox.Text;
-                    }
-   
-                    if (clientPhysicalAddressChanged)
-                    {
-                        client.PhysicalAddress = updateClientPhysicalAddressTextBox.Text;
-                    }
-                    if (clientGeographyAddressChanged)
-                    {
-                        client.GeografphyAddress = updateClientGeorgaphyAddressTextBox.Text;
-                    }
-                    if (clientCommentChanged)
-                    {
-                        client.Comment = updateClientNoteTextBox.Text;
-                    }
-                    if (clientWorkDocumentChanged)
-                    {
-                        if (updateClientWorkDocumentComboBox.Text != "")
+                        if (clientNameChanged)
                         {
-                            client.WorkDocument = null;
-                            client.WorkDocumentId = clientWorkDocument.Id;
+                            client.Name = updateClientNameTextBox.Text;
+                        }
+                        if (clientDirectorChanged)
+                        {
+                            client.Director = updateClientDirectorTextBox.Text;
+                        }
+
+                        if (clientPhysicalAddressChanged)
+                        {
+                            client.PhysicalAddress = updateClientPhysicalAddressTextBox.Text;
+                        }
+                        if (clientGeographyAddressChanged)
+                        {
+                            client.GeografphyAddress = updateClientGeorgaphyAddressTextBox.Text;
+                        }
+                        if (clientCommentChanged)
+                        {
+                            client.Comment = updateClientNoteTextBox.Text;
+                        }
+                        if (clientWorkDocumentChanged)
+                        {
+                            if (clientWorkDocument != null)
+                            {
+                                client.WorkDocument = null;
+                                client.WorkDocumentId = clientWorkDocument.Id;
+                            }
+                            else
+                            {
+                                client.WorkDocumentId = null;
+                                client.WorkDocument = null;
+                            }
+                        }
+                        if (clientTaxPayerStatusChanged)
+                        {
+                            if (clientTaxPayerStatus != null)
+                            {
+                                client.TaxPayerStatu = null;
+                                client.TaxPayerStatusId = clientTaxPayerStatus.Id;
+                            }
+                            else
+                            {
+                                client.TaxPayerStatusId = null;
+                                client.TaxPayerStatu = null;
+                            }
+                        }
+                        if (clientOriginalChanged)
+                        {
+                            client.ContractType = true;
                         }
                         else
                         {
-                            client.WorkDocumentId = null;
-                            client.WorkDocument = null;
+                            client.ContractType = false;
                         }
-                    }
-                    if (clientTaxPayerStatusChanged)
-                    {
-                        if (updateClientTaxPayerStatusComboBox.Text != "")
-                        {
-                            client.TaxPayerStatu = null;
-                            client.TaxPayerStatusId = clientTaxPayerStatus.Id;
-                        }
-                        else 
-                        {
-                            client.TaxPayerStatusId = null;
-                            client.TaxPayerStatu = null;
-                        }
-                    }
-                    if (clientOriginalChanged)
-                    {
-                        client.ContractType = true;
-                    }
-                    else 
-                    {
-                        client.ContractType = false;
-                    }
 
-                    db.Entry(client).State = EntityState.Modified;
-                    db.SaveChanges();
-                    MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_змінено);
+                        db.Entry(client).State = EntityState.Modified;
+                        db.SaveChanges();
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Успішно_змінено);
+                    }
+                    else
+                    {
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Змін_не_знайдено);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show(AtlantSovt.Properties.Resources.Змін_не_знайдено);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Виберіть_спочатку_клієнта);
                 }
             }
         }
@@ -633,7 +648,6 @@ namespace AtlantSovt
             if (client != null)
             {
                 updateClientContactAddForm.AddClientContact2(client.Id);
-                updateClientContactAddForm = null;
             }
         }
         
@@ -757,11 +771,18 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                string comboboxText = deleteClientComboBox.SelectedItem.ToString();
-                string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
-                string comboBoxSelectedId = selectedNameAndDirector[1];
-                long id = Convert.ToInt64(comboBoxSelectedId);
-                deleteClient = db.Clients.Find(id);
+                if (deleteClientComboBox.SelectedIndex != -1 && deleteClientComboBox.Text == deleteClientComboBox.SelectedItem.ToString())
+                {
+                    string comboboxText = deleteClientComboBox.SelectedItem.ToString();
+                    string[] selectedNameAndDirector = comboboxText.Split(new char[] { '[', ']' });
+                    string comboBoxSelectedId = selectedNameAndDirector[1];
+                    long id = Convert.ToInt64(comboBoxSelectedId);
+                    deleteClient = db.Clients.Find(id);
+                }
+                else
+                {
+                    deleteClient = null;
+                }
             }
         }
 
