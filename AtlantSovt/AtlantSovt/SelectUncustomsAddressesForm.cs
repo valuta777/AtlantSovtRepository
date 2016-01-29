@@ -18,6 +18,7 @@ namespace AtlantSovt
         Client client;
         Order order;
         bool IsUpdate;
+        AddAddressForm addUncustomsAddressForm;
         public SelectUncustomsAddressesForm(Client new_client)
         {
             InitializeComponent();
@@ -199,8 +200,16 @@ namespace AtlantSovt
 
         private void addUncustomsAddressButton_Click(object sender, EventArgs e)
         {
-            AddAddressForm addUncustomsAddressForm = new AddAddressForm(client, 4, this);
-            addUncustomsAddressForm.Show();
+            if (addUncustomsAddressForm == null || addUncustomsAddressForm.IsDisposed)
+            {
+                addUncustomsAddressForm = new AddAddressForm(client, 4, this);
+                addUncustomsAddressForm.Show();
+            }
+            else
+            {
+                addUncustomsAddressForm.Show();
+                addUncustomsAddressForm.Focus();
+            }
         }
 
         internal string UncustomsAddressesSelect(Order new_order)

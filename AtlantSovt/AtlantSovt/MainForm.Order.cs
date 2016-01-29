@@ -1083,6 +1083,11 @@ namespace AtlantSovt
             OrderUpdateWeightTextBox.Text = "";
             OrderUpdateFreightTextBox.Text = "";
             IsModified = false;
+            selectUploadAddressesForm = null;
+            selectDownloadAddressesForm = null;
+            selectCustomsAddressesForm = null;
+            selectUncustomsAddressesForm = null;
+
         }
         void LoadOrderUpdateOrderSelectComboBox()
         {

@@ -17,6 +17,7 @@ namespace AtlantSovt
         Client client;
         Order order;
         bool IsUpdate;
+        AddAddressForm addCustomsAddressForm;
         public SelectCustomsAddressesForm(Client new_client)
         {
             InitializeComponent();
@@ -201,8 +202,16 @@ namespace AtlantSovt
 
         private void addCustomsAddressButton_Click(object sender, EventArgs e)
         {
-            AddAddressForm addCustomsAddressForm = new AddAddressForm(client, 3, this);
-            addCustomsAddressForm.Show();
+            if (addCustomsAddressForm == null || addCustomsAddressForm.IsDisposed)
+            {
+                addCustomsAddressForm = new AddAddressForm(client, 3, this);
+                addCustomsAddressForm.Show();
+            }
+            else
+            {
+                addCustomsAddressForm.Show();
+                addCustomsAddressForm.Focus();
+            }
         }        
 
         internal string CustomsAddressesSelect(Order new_order)

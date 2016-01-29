@@ -816,6 +816,7 @@ namespace AtlantSovt
                         {
                             if(address.DownloadAddress != null)
                             {
+                                //todo country != null
                                 downloadAddress += (address.DownloadAddress.Country.Name != "") ? address.DownloadAddress.Country.Name + ", " : "";
                                 downloadAddress += (address.DownloadAddress.CountryCode != "") ? address.DownloadAddress.CountryCode + ", " : "";
                                 downloadAddress += (address.DownloadAddress.CityCode != "") ? address.DownloadAddress.CityCode + ", " : "";
@@ -829,6 +830,7 @@ namespace AtlantSovt
                         {
                             if (address.UploadAddress != null)
                             {
+                                //todo country != null
                                 uploadAddress += (address.UploadAddress.Country.Name != "") ? address.UploadAddress.Country.Name + ", " : "";
                                 uploadAddress += (address.UploadAddress.CountryCode != "") ? address.UploadAddress.CountryCode + ", " : "";
                                 uploadAddress += (address.UploadAddress.CityCode != "") ? address.UploadAddress.CityCode + ", " : "";
@@ -842,6 +844,7 @@ namespace AtlantSovt
                         {
                             if (address.CustomsAddress != null)
                             {
+                                //todo country != null
                                 customAddress += (address.CustomsAddress.Country.Name != "") ? address.CustomsAddress.Country.Name + ", " : "";
                                 customAddress += (address.CustomsAddress.CountryCode != "") ? address.CustomsAddress.CountryCode + ", " : "";
                                 customAddress += (address.CustomsAddress.CityCode != "") ? address.CustomsAddress.CityCode + ", " : "";
@@ -855,6 +858,7 @@ namespace AtlantSovt
                         {
                             if (address.UnCustomsAddress != null)
                             {
+                                //todo country != null
                                 uncustomAddress += (address.UnCustomsAddress.Country.Name != "") ? address.UnCustomsAddress.Country.Name + ", " : "";
                                 uncustomAddress += (address.UnCustomsAddress.CountryCode != "") ? address.UnCustomsAddress.CountryCode + ", " : "";
                                 uncustomAddress += (address.UnCustomsAddress.CityCode != "") ? address.UnCustomsAddress.CityCode + ", " : "";

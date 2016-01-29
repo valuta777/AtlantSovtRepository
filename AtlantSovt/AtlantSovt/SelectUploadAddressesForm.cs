@@ -17,6 +17,7 @@ namespace AtlantSovt
         Client client;
         Order order;
         bool IsUpdate;
+        AddAddressForm addAddressForm;
         public SelectUploadAddressesForm(Client new_client)
         {
             InitializeComponent();
@@ -184,8 +185,16 @@ namespace AtlantSovt
 
         private void addUploadAddressButton_Click(object sender, EventArgs e)
         {
-            AddAddressForm addAddressForm = new AddAddressForm(client,2, this);
-            addAddressForm.Show();
+            if (addAddressForm == null || addAddressForm.IsDisposed)
+            {
+                addAddressForm = new AddAddressForm(client, 2, this);
+                addAddressForm.Show();
+            }
+            else
+            {
+                addAddressForm.Show();
+                addAddressForm.Focus();
+            }
         }
 
         private void addUploadAdressesToOrderButton_Click(object sender, EventArgs e)
