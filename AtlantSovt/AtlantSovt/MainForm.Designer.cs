@@ -982,7 +982,6 @@
             // 
             resources.ApplyResources(this.OrderAddWeightTextBox, "OrderAddWeightTextBox");
             this.OrderAddWeightTextBox.Name = "OrderAddWeightTextBox";
-            this.OrderAddWeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OrderAddWeightTextBox_KeyPress);
             // 
             // label91
             // 
@@ -1743,7 +1742,6 @@
             // 
             resources.ApplyResources(this.OrderUpdateWeightTextBox, "OrderUpdateWeightTextBox");
             this.OrderUpdateWeightTextBox.Name = "OrderUpdateWeightTextBox";
-            this.OrderUpdateWeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OrderUpdateWeightTextBox_KeyPress);
             // 
             // OrderUpdateCargoSelectComboBox
             // 
@@ -1987,6 +1985,7 @@
             this.OrderUpdateDownloadDateFromTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.OrderUpdateDownloadDateFromTimePicker.Name = "OrderUpdateDownloadDateFromTimePicker";
             this.OrderUpdateDownloadDateFromTimePicker.ShowCheckBox = true;
+            this.OrderUpdateDownloadDateFromTimePicker.ValueChanged += new System.EventHandler(this.OrderUpdateDownloadDateFromTimePicker_ValueChanged);
             // 
             // OrderUpdateDownloadDateToTimePicker
             // 
@@ -2044,6 +2043,7 @@
             this.OrderUpdateUploadDateFromTimePicker.Name = "OrderUpdateUploadDateFromTimePicker";
             this.OrderUpdateUploadDateFromTimePicker.ShowCheckBox = true;
             this.OrderUpdateUploadDateFromTimePicker.Value = new System.DateTime(2015, 5, 11, 10, 0, 0, 0);
+            this.OrderUpdateUploadDateFromTimePicker.ValueChanged += new System.EventHandler(this.OrderUpdateUploadDateFromTimePicker_ValueChanged);
             // 
             // label69
             // 

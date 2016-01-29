@@ -8,6 +8,7 @@ namespace AtlantSovt.AtlantSovtDb
 
     public partial class TaxPayerStatu
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TaxPayerStatu()
         {
             Clients = new HashSet<Client>();
@@ -20,10 +21,13 @@ namespace AtlantSovt.AtlantSovtDb
         [StringLength(100)]
         public string Status { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Client> Clients { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Forwarder> Forwarders { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Transporter> Transporters { get; set; }
     }
 }

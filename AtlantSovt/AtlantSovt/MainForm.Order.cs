@@ -53,7 +53,7 @@ namespace AtlantSovt
                     ADRNumber = (OrderAddADRSelectComboBox.Text != "") ? (int?)Convert.ToInt32(OrderAddADRSelectComboBox.Text) : null,
                     TirCmrId = (tirCmrOrderAdd != null) ? (long?)tirCmrOrderAdd.Id : null,
                     CargoId = (cargoOrderAdd != null) ? (long?)cargoOrderAdd.Id : null,
-                    CargoWeight = (OrderAddWeightTextBox.Text != "") ? (double?)Double.Parse(OrderAddWeightTextBox.Text, CultureInfo.InvariantCulture) : null,
+                    CargoWeight = (OrderAddWeightTextBox.Text != "") ? OrderAddWeightTextBox.Text : null,
                     ClientId = (clientOrderAdd != null) ? (long?)clientOrderAdd.Id : null,
                     CubeId = (cubeOrderAdd != null) ? (long?)cubeOrderAdd.Id : null,
                     StaffId = (staffOrderAdd != null) ? (long?)staffOrderAdd.Id : null,
@@ -1433,7 +1433,7 @@ namespace AtlantSovt
 
                     if (updateOrder.CargoWeight != null)
                     {
-                        OrderUpdateWeightTextBox.Text = Convert.ToString(updateOrder.CargoWeight);
+                        OrderUpdateWeightTextBox.Text = updateOrder.CargoWeight;
                     }
                     else
                     {
@@ -2475,9 +2475,9 @@ namespace AtlantSovt
 
                         if (OrderUpdateWeightTextBox.Text != "") 
                         {
-                            if (updateOrder.CargoWeight != Double.Parse(OrderUpdateWeightTextBox.Text, CultureInfo.InvariantCulture)) 
+                            if (updateOrder.CargoWeight != OrderUpdateWeightTextBox.Text) 
                             {
-                                updateOrder.CargoWeight = Double.Parse(OrderUpdateWeightTextBox.Text, CultureInfo.InvariantCulture);
+                                updateOrder.CargoWeight = OrderUpdateWeightTextBox.Text;
                                 IsModified = true;
                             }
                         }

@@ -188,7 +188,6 @@ namespace AtlantSovt
                 Int32.TryParse(orderNumber[1], out yearCreate);
             }
 
- 
             using (var db = new AtlantSovtContext())
             {
                 dataGridView.Columns.Clear();
@@ -584,7 +583,7 @@ namespace AtlantSovt
                         if (orderDocument.Payment == null || orderDocument.Payment.Type == "") isOrderFull = false;
                         if (orderDocument.Freight == null || orderDocument.Freight == "") isOrderFull = false;
                         if (orderDocument.FineForDelay == null || orderDocument.FineForDelay.Type == "") isOrderFull = false;
-                        if (Convert.ToString(orderDocument.CargoWeight) == null) isOrderFull = false;
+                        if (orderDocument.CargoWeight == null) isOrderFull = false;
                         if (orderDocument.OrderDeny == null || orderDocument.OrderDeny.Type == "") isOrderFull = false;
 
                         if (orderDocument.RegularyDelay == null || orderDocument.RegularyDelay.Type == "")
@@ -798,7 +797,7 @@ namespace AtlantSovt
                         string paymentTerms = (orderDocument.Payment == null || orderDocument.Payment.Type == "") ? "" : orderDocument.Payment.Type;
                         string freight = (orderDocument.Freight == null || orderDocument.Freight == "") ? "" : orderDocument.Freight;
                         string fineForDelay = (orderDocument.FineForDelay == null || orderDocument.FineForDelay.Type == "") ? "_____________________" : orderDocument.FineForDelay.Type;
-                        string weight = (Convert.ToString(orderDocument.CargoWeight) == null) ? "" : Convert.ToString(orderDocument.CargoWeight) + " т";
+                        string weight = (orderDocument.CargoWeight == null || orderDocument.CargoWeight == "") ? "" : orderDocument.CargoWeight;
                         string orderDeny = (orderDocument.OrderDeny == null || orderDocument.OrderDeny.Type == "") ? "____________________" : orderDocument.OrderDeny.Type;
                         string tirCmr = (orderDocument.TirCmr == null || orderDocument.TirCmr.Type == "") ? "" : orderDocument.TirCmr.Type;
 
@@ -839,7 +838,10 @@ namespace AtlantSovt
                         {
                             if(address.DownloadAddress != null)
                             {
-                                downloadAddress += (address.DownloadAddress.Country.Name != "" && address.DownloadAddress.Country.Name != null) ? address.DownloadAddress.Country.Name + ", " : "";
+                                if (address.DownloadAddress.Country != null)
+                                {
+                                    downloadAddress += (address.DownloadAddress.Country.Name != "" && address.DownloadAddress.Country.Name != null ) ? address.DownloadAddress.Country.Name + ", " : "";
+                                }
                                 downloadAddress += (address.DownloadAddress.CountryCode != "" && address.DownloadAddress.CountryCode != null) ? address.DownloadAddress.CountryCode + ", " : "";
                                 downloadAddress += (address.DownloadAddress.CityCode != "" && address.DownloadAddress.CityCode != null) ? address.DownloadAddress.CityCode + ", " : "";
                                 downloadAddress += (address.DownloadAddress.StreetName != "" && address.DownloadAddress.StreetName != null) ? address.DownloadAddress.StreetName + ", " : "";
@@ -852,14 +854,16 @@ namespace AtlantSovt
                         {
                             if (address.UploadAddress != null)
                             {
-                                uploadAddress += (address.UploadAddress.Country.Name != "" && address.UploadAddress.Country.Name != null) ? address.UploadAddress.Country.Name + ", " : "";
+                                if (address.UploadAddress.Country != null)
+                                {
+                                    uploadAddress += (address.UploadAddress.Country.Name != "" && address.UploadAddress.Country.Name != null) ? address.UploadAddress.Country.Name + ", " : "";
+                                }
                                 uploadAddress += (address.UploadAddress.CountryCode != "" && address.UploadAddress.CountryCode != null) ? address.UploadAddress.CountryCode + ", " : "";
                                 uploadAddress += (address.UploadAddress.CityCode != "" && address.UploadAddress.CityCode != null) ? address.UploadAddress.CityCode + ", " : "";
                                 uploadAddress += (address.UploadAddress.StreetName != "" && address.UploadAddress.StreetName != null) ? address.UploadAddress.StreetName + ", " : "";
                                 uploadAddress += (address.UploadAddress.HouseNumber != "" && address.UploadAddress.HouseNumber != null) ? address.UploadAddress.HouseNumber + ", " : "";
                                 uploadAddress += (address.UploadAddress.CompanyName != "" && address.UploadAddress.CompanyName != null) ? address.UploadAddress.CompanyName + "," : "";
                                 uploadAddress += " згідно CMR";
-
                             }
                         }
 
@@ -867,7 +871,10 @@ namespace AtlantSovt
                         {
                             if (address.CustomsAddress != null)
                             {
-                                customAddress += (address.CustomsAddress.Country.Name != "" && address.CustomsAddress.Country.Name != null) ? address.CustomsAddress.Country.Name + ", " : "";
+                                if (address.CustomsAddress.Country != null)
+                                {
+                                    customAddress += (address.CustomsAddress.Country.Name != "" && address.CustomsAddress.Country.Name != null) ? address.CustomsAddress.Country.Name + ", " : "";
+                                }
                                 customAddress += (address.CustomsAddress.CountryCode != "" && address.CustomsAddress.CountryCode != null) ? address.CustomsAddress.CountryCode + ", " : "";
                                 customAddress += (address.CustomsAddress.CityCode != "" && address.CustomsAddress.CityCode != null) ? address.CustomsAddress.CityCode + ", " : "";
                                 customAddress += (address.CustomsAddress.StreetName != "" && address.CustomsAddress.StreetName != null) ? address.CustomsAddress.StreetName + ", " : "";
@@ -880,7 +887,10 @@ namespace AtlantSovt
                         {
                             if (address.UnCustomsAddress != null)
                             {
-                                uncustomAddress += (address.UnCustomsAddress.Country.Name != "" && address.UnCustomsAddress.Country.Name != null) ? address.UnCustomsAddress.Country.Name + ", " : "";
+                                if (address.UnCustomsAddress.Country != null)
+                                {
+                                    uncustomAddress += (address.UnCustomsAddress.Country.Name != "" && address.UnCustomsAddress.Country.Name != null) ? address.UnCustomsAddress.Country.Name + ", " : "";
+                                }
                                 uncustomAddress += (address.UnCustomsAddress.CountryCode != "" && address.UnCustomsAddress.CountryCode != null) ? address.UnCustomsAddress.CountryCode + ", " : "";
                                 uncustomAddress += (address.UnCustomsAddress.CityCode != "" && address.UnCustomsAddress.CityCode != null) ? address.UnCustomsAddress.CityCode + ", " : "";
                                 uncustomAddress += (address.UnCustomsAddress.StreetName != "" && address.UnCustomsAddress.StreetName != null) ? address.UnCustomsAddress.StreetName + ", " : "";
@@ -962,7 +972,7 @@ namespace AtlantSovt
                     else
                     {
                         wordDocument.Close(Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges);
-                        MessageBox.Show("Виникла помилка, спробуйте ще раз");
+                        MessageBox.Show(AtlantSovt.Properties.Resources.Виникла_помилка_спробуйте_ще_раз);
                     }
                 }
             }
@@ -974,7 +984,7 @@ namespace AtlantSovt
                 showTrackingCreateOrderDoc.Enabled = false;
                 exportTrackingToExcelButton.Enabled = false;
                 trackingShowDeleteOrderButton.Enabled = false;
-                MessageBox.Show("Немає жодної заявки" + nullClickedId.Message);
+                MessageBox.Show(AtlantSovt.Properties.Resources.Немає_жодної_заявки);
             }
             catch (System.Runtime.InteropServices.COMException wordException)
             {
