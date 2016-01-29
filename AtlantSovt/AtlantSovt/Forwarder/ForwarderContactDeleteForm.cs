@@ -107,7 +107,6 @@ namespace AtlantSovt
             else
             {
                 forwarderUpdateContactDeleteButton.Enabled = true;
-
             }
         }
 
