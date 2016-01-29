@@ -797,7 +797,7 @@ namespace AtlantSovt
                         string paymentTerms = (orderDocument.Payment == null || orderDocument.Payment.Type == "") ? "" : orderDocument.Payment.Type;
                         string freight = (orderDocument.Freight == null || orderDocument.Freight == "") ? "" : orderDocument.Freight;
                         string fineForDelay = (orderDocument.FineForDelay == null || orderDocument.FineForDelay.Type == "") ? "_____________________" : orderDocument.FineForDelay.Type;
-                        string weight = (orderDocument.CargoWeight == null) ? "" : orderDocument.CargoWeight;
+                        string weight = (orderDocument.CargoWeight == null || orderDocument.CargoWeight == "") ? "" : orderDocument.CargoWeight;
                         string orderDeny = (orderDocument.OrderDeny == null || orderDocument.OrderDeny.Type == "") ? "____________________" : orderDocument.OrderDeny.Type;
                         string tirCmr = (orderDocument.TirCmr == null || orderDocument.TirCmr.Type == "") ? "" : orderDocument.TirCmr.Type;
 
