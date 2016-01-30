@@ -1098,7 +1098,7 @@ namespace AtlantSovt
                     var query = from or in db.Orders
                                 orderby or.Id
                                 where (or.State !=false)&&(or.Date.Value.Month == OrderUpdateDiapasoneDateTimePicker.Value.Month)
-                                &&    (or.Date.Value.Year == OrderUpdateDiapasoneDateTimePicker.Value.Year)
+                                &&    (or.Date.Value.Year == OrderUpdateDiapasoneDateTimePicker.Value.Year) && or.IsDeleted == false
                                 select or;
                     foreach (var item in query)
                     {
@@ -1120,7 +1120,7 @@ namespace AtlantSovt
                     var query = from or in db.Orders
                                 orderby or.Id
                                 where (or.Date.Value.Month == OrderUpdateDiapasoneDateTimePicker.Value.Month)
-                                && (or.Date.Value.Year == OrderUpdateDiapasoneDateTimePicker.Value.Year)
+                                && (or.Date.Value.Year == OrderUpdateDiapasoneDateTimePicker.Value.Year) && or.IsDeleted == false
                                 select or;
                     foreach (var item in query)
                     {
