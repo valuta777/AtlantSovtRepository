@@ -1222,17 +1222,25 @@ namespace AtlantSovt
         {
             contractFilecheckedListBox.Items.Clear();
             string[] searchPatterns = {"*.docx","*.doc","*.rtf"};
+            List<string> fileList = new List<string>();
             DirectoryInfo directory = new DirectoryInfo((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Contracts\").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""));
             List<FileInfo> files = new List<FileInfo>();
             foreach(string sp in searchPatterns)
             {
                 files.AddRange(directory.GetFiles(sp));
             }
-            var filteredFiles = files.Where(f => !f.Attributes.HasFlag(FileAttributes.Hidden));
+            var filteredFiles = files.Where(f => !f.Attributes.HasFlag(FileAttributes.Hidden) || !f.Attributes.HasFlag(FileAttributes.Archive));
             foreach (var file in filteredFiles)
             {
                 string fileName = file.Name;
-                contractFilecheckedListBox.Items.Add(fileName);
+                fileList.Add(fileName);
+            }
+
+            fileList = fileList.Distinct().ToList();
+
+            foreach (var file in fileList)
+            {
+                contractFilecheckedListBox.Items.Add(file);
             }
         }
 
