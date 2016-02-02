@@ -859,4 +859,7 @@
   <data name="Юридична_адреса" xml:space="preserve">
     <value>Юридична адреса</value>
   </data>
+  <data name="Місто" xml:space="preserve">
+    <value>Місто</value>
+  </data>
 </root>
