@@ -102,7 +102,7 @@ namespace AtlantSovt
                     arbeitenShowDownloadAddressDataGridView.DataSource = query3.ToList();
                     arbeitenShowDownloadAddressDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Країна;
                     arbeitenShowDownloadAddressDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Код_міста;
-                    arbeitenShowDownloadAddressDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Місто;
+                    arbeitenShowDownloadAddressDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Місто;
 
                     var query4 =
                         from add in db.OrderUploadAdresses
@@ -116,7 +116,7 @@ namespace AtlantSovt
                     arbeitenShowUploadAddressDataGridView.DataSource = query4.ToList();
                     arbeitenShowUploadAddressDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Країна;
                     arbeitenShowUploadAddressDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Код_міста;
-                    arbeitenShowUploadAddressDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Місто;
+                    arbeitenShowUploadAddressDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Місто;
 
                     var query5 =
                         from o in db.Orders

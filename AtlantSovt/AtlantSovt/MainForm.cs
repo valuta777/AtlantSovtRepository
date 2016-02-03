@@ -3513,5 +3513,10 @@ namespace AtlantSovt
             }
         } 
         #endregion
+
+        private void deleteDiaposoneSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoadDiapasone();
+        }
     }
 }

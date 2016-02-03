@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.addForwarderSplitContainer = new System.Windows.Forms.SplitContainer();
             this.addForwarderStampPictureBox = new System.Windows.Forms.PictureBox();
             this.forwarderAddStampButton = new System.Windows.Forms.Button();
@@ -759,20 +759,18 @@
             // 
             // addForwarderSplitContainer.Panel1
             // 
-            resources.ApplyResources(this.addForwarderSplitContainer.Panel1, "addForwarderSplitContainer.Panel1");
             this.addForwarderSplitContainer.Panel1.Controls.Add(this.addForwarderStampPictureBox);
             this.addForwarderSplitContainer.Panel1.Controls.Add(this.forwarderAddStampButton);
             // 
             // addForwarderSplitContainer.Panel2
             // 
-            resources.ApplyResources(this.addForwarderSplitContainer.Panel2, "addForwarderSplitContainer.Panel2");
             this.addForwarderSplitContainer.Panel2.Controls.Add(this.commentForwarderTextBox);
             this.addForwarderSplitContainer.Panel2.Controls.Add(this.label46);
             // 
             // addForwarderStampPictureBox
             // 
-            resources.ApplyResources(this.addForwarderStampPictureBox, "addForwarderStampPictureBox");
             this.addForwarderStampPictureBox.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.addForwarderStampPictureBox, "addForwarderStampPictureBox");
             this.addForwarderStampPictureBox.Name = "addForwarderStampPictureBox";
             this.addForwarderStampPictureBox.TabStop = false;
             // 
@@ -801,13 +799,11 @@
             // 
             // updateOrderSplitContainer.Panel1
             // 
-            resources.ApplyResources(this.updateOrderSplitContainer.Panel1, "updateOrderSplitContainer.Panel1");
             this.updateOrderSplitContainer.Panel1.Controls.Add(this.label36);
             this.updateOrderSplitContainer.Panel1.Controls.Add(this.updateForwarderStampPictureBox);
             // 
             // updateOrderSplitContainer.Panel2
             // 
-            resources.ApplyResources(this.updateOrderSplitContainer.Panel2, "updateOrderSplitContainer.Panel2");
             this.updateOrderSplitContainer.Panel2.Controls.Add(this.label61);
             this.updateOrderSplitContainer.Panel2.Controls.Add(this.commentForwarderUpdateTextBox);
             // 
@@ -844,7 +840,6 @@
             // 
             // splitContainer6.Panel1
             // 
-            resources.ApplyResources(this.splitContainer6.Panel1, "splitContainer6.Panel1");
             this.splitContainer6.Panel1.Controls.Add(this.OrderAddAdditionalTermsAddButton);
             this.splitContainer6.Panel1.Controls.Add(this.OrderAddPaymentTermsAddButton);
             this.splitContainer6.Panel1.Controls.Add(this.OrderAddAdditionalTermsSelectComboBox);
@@ -854,7 +849,6 @@
             // 
             // splitContainer6.Panel2
             // 
-            resources.ApplyResources(this.splitContainer6.Panel2, "splitContainer6.Panel2");
             this.splitContainer6.Panel2.Controls.Add(this.OrderAddOrderDenyAddButton);
             this.splitContainer6.Panel2.Controls.Add(this.OrderAddButton);
             this.splitContainer6.Panel2.Controls.Add(this.label108);
@@ -946,12 +940,10 @@
             // 
             // addOrderSplitContainer3.Panel1
             // 
-            resources.ApplyResources(this.addOrderSplitContainer3.Panel1, "addOrderSplitContainer3.Panel1");
             this.addOrderSplitContainer3.Panel1.Controls.Add(this.addOrderSplitContainer4);
             // 
             // addOrderSplitContainer3.Panel2
             // 
-            resources.ApplyResources(this.addOrderSplitContainer3.Panel2, "addOrderSplitContainer3.Panel2");
             this.addOrderSplitContainer3.Panel2.Controls.Add(this.splitContainer5);
             // 
             // addOrderSplitContainer4
@@ -961,7 +953,6 @@
             // 
             // addOrderSplitContainer4.Panel1
             // 
-            resources.ApplyResources(this.addOrderSplitContainer4.Panel1, "addOrderSplitContainer4.Panel1");
             this.addOrderSplitContainer4.Panel1.Controls.Add(this.OrderAddWeightTextBox);
             this.addOrderSplitContainer4.Panel1.Controls.Add(this.label91);
             this.addOrderSplitContainer4.Panel1.Controls.Add(this.OrderAddCargoSelectComboBox);
@@ -970,7 +961,6 @@
             // 
             // addOrderSplitContainer4.Panel2
             // 
-            resources.ApplyResources(this.addOrderSplitContainer4.Panel2, "addOrderSplitContainer4.Panel2");
             this.addOrderSplitContainer4.Panel2.Controls.Add(this.OrderAddLoadingForm2AddButton);
             this.addOrderSplitContainer4.Panel2.Controls.Add(this.OrderAddLoadingForm1AddButton);
             this.addOrderSplitContainer4.Panel2.Controls.Add(this.OrderAddLoadingForm2SelectComboBox);
@@ -1067,7 +1057,6 @@
             // 
             // splitContainer5.Panel1
             // 
-            resources.ApplyResources(this.splitContainer5.Panel1, "splitContainer5.Panel1");
             this.splitContainer5.Panel1.Controls.Add(this.OrderAddFineForDelayAddButton);
             this.splitContainer5.Panel1.Controls.Add(this.OrderAddFineForDelaySelectComboBox);
             this.splitContainer5.Panel1.Controls.Add(this.OrderAddRegularyDelayAddButton);
@@ -1077,7 +1066,6 @@
             // 
             // splitContainer5.Panel2
             // 
-            resources.ApplyResources(this.splitContainer5.Panel2, "splitContainer5.Panel2");
             this.splitContainer5.Panel2.Controls.Add(this.OrderAddTrailerSelectComboBox);
             this.splitContainer5.Panel2.Controls.Add(this.label104);
             this.splitContainer5.Panel2.Controls.Add(this.OrderAddTrailerAddButton);
@@ -1187,12 +1175,10 @@
             // 
             // addOrderSplitContainer2.Panel1
             // 
-            resources.ApplyResources(this.addOrderSplitContainer2.Panel1, "addOrderSplitContainer2.Panel1");
             this.addOrderSplitContainer2.Panel1.Controls.Add(this.splitContainer8);
             // 
             // addOrderSplitContainer2.Panel2
             // 
-            resources.ApplyResources(this.addOrderSplitContainer2.Panel2, "addOrderSplitContainer2.Panel2");
             this.addOrderSplitContainer2.Panel2.Controls.Add(this.splitContainer7);
             // 
             // splitContainer8
@@ -1202,7 +1188,6 @@
             // 
             // splitContainer8.Panel1
             // 
-            resources.ApplyResources(this.splitContainer8.Panel1, "splitContainer8.Panel1");
             this.splitContainer8.Panel1.Controls.Add(this.label51);
             this.splitContainer8.Panel1.Controls.Add(this.OrderAddDownloadDateToTimePicker);
             this.splitContainer8.Panel1.Controls.Add(this.OrderAddDownloadAddressAddButton);
@@ -1211,7 +1196,6 @@
             // 
             // splitContainer8.Panel2
             // 
-            resources.ApplyResources(this.splitContainer8.Panel2, "splitContainer8.Panel2");
             this.splitContainer8.Panel2.Controls.Add(this.label66);
             this.splitContainer8.Panel2.Controls.Add(this.OrderAddUploadDateToTimePicker);
             this.splitContainer8.Panel2.Controls.Add(this.OrderAddUploadAddressAddButton);
@@ -1295,7 +1279,6 @@
             // 
             // splitContainer7.Panel1
             // 
-            resources.ApplyResources(this.splitContainer7.Panel1, "splitContainer7.Panel1");
             this.splitContainer7.Panel1.Controls.Add(this.OrderAddTirCmrSelectComboBox);
             this.splitContainer7.Panel1.Controls.Add(this.OrderAddTirCmrAddButton);
             this.splitContainer7.Panel1.Controls.Add(this.OrderAddCustomsAddressAddButton);
@@ -1303,7 +1286,6 @@
             // 
             // splitContainer7.Panel2
             // 
-            resources.ApplyResources(this.splitContainer7.Panel2, "splitContainer7.Panel2");
             this.splitContainer7.Panel2.Controls.Add(this.OrderAddStaffButton);
             this.splitContainer7.Panel2.Controls.Add(this.OrderAddPersonalLabel);
             this.splitContainer7.Panel2.Controls.Add(this.OrderAddStaffComboBox);
@@ -1406,7 +1388,6 @@
             // 
             // addOrderSplitContainer1.Panel1
             // 
-            resources.ApplyResources(this.addOrderSplitContainer1.Panel1, "addOrderSplitContainer1.Panel1");
             this.addOrderSplitContainer1.Panel1.Controls.Add(this.label37);
             this.addOrderSplitContainer1.Panel1.Controls.Add(this.OrderAddClientSelectComboBox);
             this.addOrderSplitContainer1.Panel1.Controls.Add(this.OrderAddLanduageSelectComboBox);
@@ -1421,7 +1402,6 @@
             // 
             // addOrderSplitContainer1.Panel2
             // 
-            resources.ApplyResources(this.addOrderSplitContainer1.Panel2, "addOrderSplitContainer1.Panel2");
             this.addOrderSplitContainer1.Panel2.Controls.Add(this.label39);
             this.addOrderSplitContainer1.Panel2.Controls.Add(this.OrderAddForwarder3SelectComboBox);
             this.addOrderSplitContainer1.Panel2.Controls.Add(this.label54);
@@ -1447,9 +1427,9 @@
             // 
             // OrderAddLanduageSelectComboBox
             // 
-            resources.ApplyResources(this.OrderAddLanduageSelectComboBox, "OrderAddLanduageSelectComboBox");
             this.OrderAddLanduageSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.OrderAddLanduageSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.OrderAddLanduageSelectComboBox, "OrderAddLanduageSelectComboBox");
             this.OrderAddLanduageSelectComboBox.Items.AddRange(new object[] {
             resources.GetString("OrderAddLanduageSelectComboBox.Items"),
             resources.GetString("OrderAddLanduageSelectComboBox.Items1"),
@@ -1490,23 +1470,23 @@
             // 
             // OrderAddDateSelectDateTimePicker
             // 
-            resources.ApplyResources(this.OrderAddDateSelectDateTimePicker, "OrderAddDateSelectDateTimePicker");
             this.OrderAddDateSelectDateTimePicker.Checked = false;
+            resources.ApplyResources(this.OrderAddDateSelectDateTimePicker, "OrderAddDateSelectDateTimePicker");
             this.OrderAddDateSelectDateTimePicker.Name = "OrderAddDateSelectDateTimePicker";
             // 
             // OrderAddClientDiapasoneComboBox
             // 
-            resources.ApplyResources(this.OrderAddClientDiapasoneComboBox, "OrderAddClientDiapasoneComboBox");
             this.OrderAddClientDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.OrderAddClientDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.OrderAddClientDiapasoneComboBox, "OrderAddClientDiapasoneComboBox");
             this.OrderAddClientDiapasoneComboBox.Name = "OrderAddClientDiapasoneComboBox";
             this.OrderAddClientDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddClientDiapasoneComboBox_MouseClick);
             // 
             // OrderAddTransporterDiapasoneComboBox
             // 
-            resources.ApplyResources(this.OrderAddTransporterDiapasoneComboBox, "OrderAddTransporterDiapasoneComboBox");
             this.OrderAddTransporterDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.OrderAddTransporterDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.OrderAddTransporterDiapasoneComboBox, "OrderAddTransporterDiapasoneComboBox");
             this.OrderAddTransporterDiapasoneComboBox.Name = "OrderAddTransporterDiapasoneComboBox";
             this.OrderAddTransporterDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderAddTransporterDiapasoneComboBox_MouseClick);
             // 
@@ -1565,21 +1545,19 @@
             // 
             // showTrackingSplitContainer1.Panel1
             // 
-            resources.ApplyResources(this.showTrackingSplitContainer1.Panel1, "showTrackingSplitContainer1.Panel1");
             this.showTrackingSplitContainer1.Panel1.Controls.Add(this.trackingShowDownloadAddressDataGridView);
             // 
             // showTrackingSplitContainer1.Panel2
             // 
-            resources.ApplyResources(this.showTrackingSplitContainer1.Panel2, "showTrackingSplitContainer1.Panel2");
             this.showTrackingSplitContainer1.Panel2.Controls.Add(this.trackingShowUploadAddressDataGridView);
             // 
             // trackingShowDownloadAddressDataGridView
             // 
-            resources.ApplyResources(this.trackingShowDownloadAddressDataGridView, "trackingShowDownloadAddressDataGridView");
             this.trackingShowDownloadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.trackingShowDownloadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.trackingShowDownloadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.trackingShowDownloadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.trackingShowDownloadAddressDataGridView, "trackingShowDownloadAddressDataGridView");
             this.trackingShowDownloadAddressDataGridView.MultiSelect = false;
             this.trackingShowDownloadAddressDataGridView.Name = "trackingShowDownloadAddressDataGridView";
             this.trackingShowDownloadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -1587,11 +1565,11 @@
             // 
             // trackingShowUploadAddressDataGridView
             // 
-            resources.ApplyResources(this.trackingShowUploadAddressDataGridView, "trackingShowUploadAddressDataGridView");
             this.trackingShowUploadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.trackingShowUploadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.trackingShowUploadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.trackingShowUploadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.trackingShowUploadAddressDataGridView, "trackingShowUploadAddressDataGridView");
             this.trackingShowUploadAddressDataGridView.MultiSelect = false;
             this.trackingShowUploadAddressDataGridView.Name = "trackingShowUploadAddressDataGridView";
             this.trackingShowUploadAddressDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -1604,7 +1582,6 @@
             // 
             // OrderUpdateSplitContainer1.Panel1
             // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer1.Panel1, "OrderUpdateSplitContainer1.Panel1");
             this.OrderUpdateSplitContainer1.Panel1.Controls.Add(this.OrderUpdateAdditionalTermsAddButton);
             this.OrderUpdateSplitContainer1.Panel1.Controls.Add(this.OrderUpdatePaymentTermsAddButton);
             this.OrderUpdateSplitContainer1.Panel1.Controls.Add(this.OrderUpdateAdditionalTermsSelectComboBox);
@@ -1614,7 +1591,6 @@
             // 
             // OrderUpdateSplitContainer1.Panel2
             // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer1.Panel2, "OrderUpdateSplitContainer1.Panel2");
             this.OrderUpdateSplitContainer1.Panel2.Controls.Add(this.OrderUpdateButton);
             this.OrderUpdateSplitContainer1.Panel2.Controls.Add(this.OrderUpdateOrderDenyAddButton);
             this.OrderUpdateSplitContainer1.Panel2.Controls.Add(this.OrderUpdateLabel3);
@@ -1706,12 +1682,10 @@
             // 
             // OrderUpdateSplitContainer2.Panel1
             // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer2.Panel1, "OrderUpdateSplitContainer2.Panel1");
             this.OrderUpdateSplitContainer2.Panel1.Controls.Add(this.OrderUpdateSplitContainer3);
             // 
             // OrderUpdateSplitContainer2.Panel2
             // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer2.Panel2, "OrderUpdateSplitContainer2.Panel2");
             this.OrderUpdateSplitContainer2.Panel2.Controls.Add(this.OrderUpdateSplitContainer4);
             // 
             // OrderUpdateSplitContainer3
@@ -1721,7 +1695,6 @@
             // 
             // OrderUpdateSplitContainer3.Panel1
             // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer3.Panel1, "OrderUpdateSplitContainer3.Panel1");
             this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateWeightTextBox);
             this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateCargoSelectComboBox);
             this.OrderUpdateSplitContainer3.Panel1.Controls.Add(this.OrderUpdateLabel5);
@@ -1730,7 +1703,6 @@
             // 
             // OrderUpdateSplitContainer3.Panel2
             // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer3.Panel2, "OrderUpdateSplitContainer3.Panel2");
             this.OrderUpdateSplitContainer3.Panel2.Controls.Add(this.OrderUpdateLoadingForm2AddButton);
             this.OrderUpdateSplitContainer3.Panel2.Controls.Add(this.OrderUpdateLoadingForm1AddButton);
             this.OrderUpdateSplitContainer3.Panel2.Controls.Add(this.OrderUpdateLoadingForm2SelectComboBox);
@@ -1827,7 +1799,6 @@
             // 
             // OrderUpdateSplitContainer4.Panel1
             // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer4.Panel1, "OrderUpdateSplitContainer4.Panel1");
             this.OrderUpdateSplitContainer4.Panel1.Controls.Add(this.OrderUpdateFineForDelayAddButton);
             this.OrderUpdateSplitContainer4.Panel1.Controls.Add(this.OrderUpdateFineForDelaySelectComboBox);
             this.OrderUpdateSplitContainer4.Panel1.Controls.Add(this.OrderUpdateRegularyDelayAddButton);
@@ -1837,7 +1808,6 @@
             // 
             // OrderUpdateSplitContainer4.Panel2
             // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer4.Panel2, "OrderUpdateSplitContainer4.Panel2");
             this.OrderUpdateSplitContainer4.Panel2.Controls.Add(this.OrderUpdateTrailerSelectComboBox);
             this.OrderUpdateSplitContainer4.Panel2.Controls.Add(this.OrderUpdateLabel10);
             this.OrderUpdateSplitContainer4.Panel2.Controls.Add(this.OrderUpdateTrailerAddButton);
@@ -1947,12 +1917,10 @@
             // 
             // OrderUpdateSplitContainer5.Panel1
             // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer5.Panel1, "OrderUpdateSplitContainer5.Panel1");
             this.OrderUpdateSplitContainer5.Panel1.Controls.Add(this.OrderUpdateSplitContainer6);
             // 
             // OrderUpdateSplitContainer5.Panel2
             // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer5.Panel2, "OrderUpdateSplitContainer5.Panel2");
             this.OrderUpdateSplitContainer5.Panel2.Controls.Add(this.OrderUpdateSplitContainer7);
             // 
             // OrderUpdateSplitContainer6
@@ -1962,7 +1930,6 @@
             // 
             // OrderUpdateSplitContainer6.Panel1
             // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer6.Panel1, "OrderUpdateSplitContainer6.Panel1");
             this.OrderUpdateSplitContainer6.Panel1.Controls.Add(this.OrderUpdateDownloadDateFromTimePicker);
             this.OrderUpdateSplitContainer6.Panel1.Controls.Add(this.OrderUpdateDownloadDateToTimePicker);
             this.OrderUpdateSplitContainer6.Panel1.Controls.Add(this.label67);
@@ -1971,7 +1938,6 @@
             // 
             // OrderUpdateSplitContainer6.Panel2
             // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer6.Panel2, "OrderUpdateSplitContainer6.Panel2");
             this.OrderUpdateSplitContainer6.Panel2.Controls.Add(this.OrderUpdateUploadDateToTimePicker);
             this.OrderUpdateSplitContainer6.Panel2.Controls.Add(this.OrderUpdateLabel13);
             this.OrderUpdateSplitContainer6.Panel2.Controls.Add(this.OrderUpdateUploadAddressesButton);
@@ -2057,7 +2023,6 @@
             // 
             // OrderUpdateSplitContainer7.Panel1
             // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer7.Panel1, "OrderUpdateSplitContainer7.Panel1");
             this.OrderUpdateSplitContainer7.Panel1.Controls.Add(this.OrderUpdateTirCmrSelectComboBox);
             this.OrderUpdateSplitContainer7.Panel1.Controls.Add(this.OrderUpdateTirCmrAddButton);
             this.OrderUpdateSplitContainer7.Panel1.Controls.Add(this.OrderUpdateCustumsAddressesButton);
@@ -2065,7 +2030,6 @@
             // 
             // OrderUpdateSplitContainer7.Panel2
             // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer7.Panel2, "OrderUpdateSplitContainer7.Panel2");
             this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateStaffButton);
             this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateStaffSelectComboBox);
             this.OrderUpdateSplitContainer7.Panel2.Controls.Add(this.OrderUpdateUncustumsAddressesButton);
@@ -2168,7 +2132,6 @@
             // 
             // OrderUpdateSplitContainer8.Panel1
             // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer8.Panel1, "OrderUpdateSplitContainer8.Panel1");
             this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.label38);
             this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateClientSelectComboBox);
             this.OrderUpdateSplitContainer8.Panel1.Controls.Add(this.OrderUpdateLanguageSelectComboBox);
@@ -2183,7 +2146,6 @@
             // 
             // OrderUpdateSplitContainer8.Panel2
             // 
-            resources.ApplyResources(this.OrderUpdateSplitContainer8.Panel2, "OrderUpdateSplitContainer8.Panel2");
             this.OrderUpdateSplitContainer8.Panel2.Controls.Add(this.OrderUpdatelabel28);
             this.OrderUpdateSplitContainer8.Panel2.Controls.Add(this.OrderUpdateForwarder3SelectComboBox);
             this.OrderUpdateSplitContainer8.Panel2.Controls.Add(this.OrderUpdateLabel21);
@@ -2209,9 +2171,9 @@
             // 
             // OrderUpdateLanguageSelectComboBox
             // 
-            resources.ApplyResources(this.OrderUpdateLanguageSelectComboBox, "OrderUpdateLanguageSelectComboBox");
             this.OrderUpdateLanguageSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.OrderUpdateLanguageSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.OrderUpdateLanguageSelectComboBox, "OrderUpdateLanguageSelectComboBox");
             this.OrderUpdateLanguageSelectComboBox.Items.AddRange(new object[] {
             resources.GetString("OrderUpdateLanguageSelectComboBox.Items"),
             resources.GetString("OrderUpdateLanguageSelectComboBox.Items1"),
@@ -2252,24 +2214,24 @@
             // 
             // OrderUpdateClientDiapasoneComboBox
             // 
-            resources.ApplyResources(this.OrderUpdateClientDiapasoneComboBox, "OrderUpdateClientDiapasoneComboBox");
             this.OrderUpdateClientDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.OrderUpdateClientDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.OrderUpdateClientDiapasoneComboBox, "OrderUpdateClientDiapasoneComboBox");
             this.OrderUpdateClientDiapasoneComboBox.Name = "OrderUpdateClientDiapasoneComboBox";
             this.OrderUpdateClientDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateClientDiapasoneComboBox_MouseClick);
             // 
             // OrderUpdateDateDateTimePicker
             // 
-            resources.ApplyResources(this.OrderUpdateDateDateTimePicker, "OrderUpdateDateDateTimePicker");
             this.OrderUpdateDateDateTimePicker.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.OrderUpdateDateDateTimePicker.Checked = false;
+            resources.ApplyResources(this.OrderUpdateDateDateTimePicker, "OrderUpdateDateDateTimePicker");
             this.OrderUpdateDateDateTimePicker.Name = "OrderUpdateDateDateTimePicker";
             // 
             // OrderUpdateTransporterDiapasoneComboBox
             // 
-            resources.ApplyResources(this.OrderUpdateTransporterDiapasoneComboBox, "OrderUpdateTransporterDiapasoneComboBox");
             this.OrderUpdateTransporterDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.OrderUpdateTransporterDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.OrderUpdateTransporterDiapasoneComboBox, "OrderUpdateTransporterDiapasoneComboBox");
             this.OrderUpdateTransporterDiapasoneComboBox.Name = "OrderUpdateTransporterDiapasoneComboBox";
             this.OrderUpdateTransporterDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderUpdateTransporterDiapasoneComboBox_MouseClick);
             // 
@@ -2328,22 +2290,20 @@
             // 
             // splitContainer1.Panel1
             // 
-            resources.ApplyResources(this.splitContainer1.Panel1, "splitContainer1.Panel1");
             this.splitContainer1.Panel1.Controls.Add(this.arbeitenShowDownloadAddressDataGridView);
             // 
             // splitContainer1.Panel2
             // 
-            resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
             this.splitContainer1.Panel2.Controls.Add(this.arbeitenShowUploadAddressDataGridView);
             // 
             // arbeitenShowDownloadAddressDataGridView
             // 
-            resources.ApplyResources(this.arbeitenShowDownloadAddressDataGridView, "arbeitenShowDownloadAddressDataGridView");
             this.arbeitenShowDownloadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.arbeitenShowDownloadAddressDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.arbeitenShowDownloadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.arbeitenShowDownloadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.arbeitenShowDownloadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.arbeitenShowDownloadAddressDataGridView, "arbeitenShowDownloadAddressDataGridView");
             this.arbeitenShowDownloadAddressDataGridView.MultiSelect = false;
             this.arbeitenShowDownloadAddressDataGridView.Name = "arbeitenShowDownloadAddressDataGridView";
             this.arbeitenShowDownloadAddressDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -2352,12 +2312,12 @@
             // 
             // arbeitenShowUploadAddressDataGridView
             // 
-            resources.ApplyResources(this.arbeitenShowUploadAddressDataGridView, "arbeitenShowUploadAddressDataGridView");
             this.arbeitenShowUploadAddressDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.arbeitenShowUploadAddressDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.arbeitenShowUploadAddressDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.arbeitenShowUploadAddressDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.arbeitenShowUploadAddressDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.arbeitenShowUploadAddressDataGridView, "arbeitenShowUploadAddressDataGridView");
             this.arbeitenShowUploadAddressDataGridView.MultiSelect = false;
             this.arbeitenShowUploadAddressDataGridView.Name = "arbeitenShowUploadAddressDataGridView";
             this.arbeitenShowUploadAddressDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -2371,7 +2331,6 @@
             // 
             // arbeitenAddSplitContainer.Panel1
             // 
-            resources.ApplyResources(this.arbeitenAddSplitContainer.Panel1, "arbeitenAddSplitContainer.Panel1");
             this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientPaymentDateLabel);
             this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientPaymentTextBox);
             this.arbeitenAddSplitContainer.Panel1.Controls.Add(this.arbeitenAddClientPaymentLabel);
@@ -2383,7 +2342,6 @@
             // 
             // arbeitenAddSplitContainer.Panel2
             // 
-            resources.ApplyResources(this.arbeitenAddSplitContainer.Panel2, "arbeitenAddSplitContainer.Panel2");
             this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddDownloadDateLabel);
             this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddDownloadDateTimePicker);
             this.arbeitenAddSplitContainer.Panel2.Controls.Add(this.arbeitenAddTransporterPaymentTextBox);
@@ -2490,7 +2448,6 @@
             // 
             // arbeitenUpdateSplitContainer.Panel1
             // 
-            resources.ApplyResources(this.arbeitenUpdateSplitContainer.Panel1, "arbeitenUpdateSplitContainer.Panel1");
             this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientPaymentDateLabel);
             this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientPaymentTextBox);
             this.arbeitenUpdateSplitContainer.Panel1.Controls.Add(this.arbeitenUpdateClientPaymentLabel);
@@ -2502,7 +2459,6 @@
             // 
             // arbeitenUpdateSplitContainer.Panel2
             // 
-            resources.ApplyResources(this.arbeitenUpdateSplitContainer.Panel2, "arbeitenUpdateSplitContainer.Panel2");
             this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateDownloadDateLabel);
             this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateDownloadDateTimePicker);
             this.arbeitenUpdateSplitContainer.Panel2.Controls.Add(this.arbeitenUpdateTransporterPaymentTextBox);
@@ -2604,8 +2560,8 @@
             // 
             // menuStrip
             // 
-            resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(84)))), ((int)(((byte)(107)))));
+            resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientToolStripMenuItem,
             this.trasporterToolStripMenuItem,
@@ -2619,7 +2575,6 @@
             // 
             // clientToolStripMenuItem
             // 
-            resources.ApplyResources(this.clientToolStripMenuItem, "clientToolStripMenuItem");
             this.clientToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.clientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showClientsStrip,
@@ -2627,38 +2582,38 @@
             this.updateClientsStrip,
             this.deleteClientsStrip});
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
+            resources.ApplyResources(this.clientToolStripMenuItem, "clientToolStripMenuItem");
             // 
             // showClientsStrip
             // 
-            resources.ApplyResources(this.showClientsStrip, "showClientsStrip");
             this.showClientsStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.showClientsStrip.Name = "showClientsStrip";
+            resources.ApplyResources(this.showClientsStrip, "showClientsStrip");
             this.showClientsStrip.Click += new System.EventHandler(this.showClientsStrip_Click);
             // 
             // addClientsStrip
             // 
-            resources.ApplyResources(this.addClientsStrip, "addClientsStrip");
             this.addClientsStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.addClientsStrip.Name = "addClientsStrip";
+            resources.ApplyResources(this.addClientsStrip, "addClientsStrip");
             this.addClientsStrip.Click += new System.EventHandler(this.addClientsStrip_Click);
             // 
             // updateClientsStrip
             // 
-            resources.ApplyResources(this.updateClientsStrip, "updateClientsStrip");
             this.updateClientsStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.updateClientsStrip.Name = "updateClientsStrip";
+            resources.ApplyResources(this.updateClientsStrip, "updateClientsStrip");
             this.updateClientsStrip.Click += new System.EventHandler(this.updateClientsStrip_Click);
             // 
             // deleteClientsStrip
             // 
-            resources.ApplyResources(this.deleteClientsStrip, "deleteClientsStrip");
             this.deleteClientsStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteClientsStrip.Name = "deleteClientsStrip";
+            resources.ApplyResources(this.deleteClientsStrip, "deleteClientsStrip");
             this.deleteClientsStrip.Click += new System.EventHandler(this.deleteClientsStrip_Click);
             // 
             // trasporterToolStripMenuItem
             // 
-            resources.ApplyResources(this.trasporterToolStripMenuItem, "trasporterToolStripMenuItem");
             this.trasporterToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.trasporterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showTransporterStrip,
@@ -2666,38 +2621,38 @@
             this.updateTransporterStrip,
             this.deleteTransporterStrip});
             this.trasporterToolStripMenuItem.Name = "trasporterToolStripMenuItem";
+            resources.ApplyResources(this.trasporterToolStripMenuItem, "trasporterToolStripMenuItem");
             // 
             // showTransporterStrip
             // 
-            resources.ApplyResources(this.showTransporterStrip, "showTransporterStrip");
             this.showTransporterStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.showTransporterStrip.Name = "showTransporterStrip";
+            resources.ApplyResources(this.showTransporterStrip, "showTransporterStrip");
             this.showTransporterStrip.Click += new System.EventHandler(this.showTransporterStrip_Click);
             // 
             // addTransporterStrip
             // 
-            resources.ApplyResources(this.addTransporterStrip, "addTransporterStrip");
             this.addTransporterStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.addTransporterStrip.Name = "addTransporterStrip";
+            resources.ApplyResources(this.addTransporterStrip, "addTransporterStrip");
             this.addTransporterStrip.Click += new System.EventHandler(this.addTransporterStrip_Click);
             // 
             // updateTransporterStrip
             // 
-            resources.ApplyResources(this.updateTransporterStrip, "updateTransporterStrip");
             this.updateTransporterStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.updateTransporterStrip.Name = "updateTransporterStrip";
+            resources.ApplyResources(this.updateTransporterStrip, "updateTransporterStrip");
             this.updateTransporterStrip.Click += new System.EventHandler(this.updateTransporterStrip_Click);
             // 
             // deleteTransporterStrip
             // 
-            resources.ApplyResources(this.deleteTransporterStrip, "deleteTransporterStrip");
             this.deleteTransporterStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteTransporterStrip.Name = "deleteTransporterStrip";
+            resources.ApplyResources(this.deleteTransporterStrip, "deleteTransporterStrip");
             this.deleteTransporterStrip.Click += new System.EventHandler(this.deleteTransporterStrip_Click);
             // 
             // forwarderToolStripMenuItem
             // 
-            resources.ApplyResources(this.forwarderToolStripMenuItem, "forwarderToolStripMenuItem");
             this.forwarderToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.forwarderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showForwarderStrip,
@@ -2705,132 +2660,133 @@
             this.updateForwarderStrip,
             this.deleteForwarderStrip});
             this.forwarderToolStripMenuItem.Name = "forwarderToolStripMenuItem";
+            resources.ApplyResources(this.forwarderToolStripMenuItem, "forwarderToolStripMenuItem");
             // 
             // showForwarderStrip
             // 
-            resources.ApplyResources(this.showForwarderStrip, "showForwarderStrip");
             this.showForwarderStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.showForwarderStrip.Name = "showForwarderStrip";
+            resources.ApplyResources(this.showForwarderStrip, "showForwarderStrip");
             this.showForwarderStrip.Click += new System.EventHandler(this.showForwarderStrip_Click);
             // 
             // addForwarderStrip
             // 
-            resources.ApplyResources(this.addForwarderStrip, "addForwarderStrip");
             this.addForwarderStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.addForwarderStrip.Name = "addForwarderStrip";
+            resources.ApplyResources(this.addForwarderStrip, "addForwarderStrip");
             this.addForwarderStrip.Click += new System.EventHandler(this.addForwarderStrip_Click);
             // 
             // updateForwarderStrip
             // 
-            resources.ApplyResources(this.updateForwarderStrip, "updateForwarderStrip");
             this.updateForwarderStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.updateForwarderStrip.Name = "updateForwarderStrip";
+            resources.ApplyResources(this.updateForwarderStrip, "updateForwarderStrip");
             this.updateForwarderStrip.Click += new System.EventHandler(this.updateForwarderStrip_Click);
             // 
             // deleteForwarderStrip
             // 
-            resources.ApplyResources(this.deleteForwarderStrip, "deleteForwarderStrip");
             this.deleteForwarderStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteForwarderStrip.Name = "deleteForwarderStrip";
+            resources.ApplyResources(this.deleteForwarderStrip, "deleteForwarderStrip");
             this.deleteForwarderStrip.Click += new System.EventHandler(this.deleteForwarderStrip_Click);
             // 
             // documentationToolStripMenuItem
             // 
-            resources.ApplyResources(this.documentationToolStripMenuItem, "documentationToolStripMenuItem");
             this.documentationToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.documentationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showContractMenuItemStrip,
             this.addContractMenuItemStrip});
             this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
+            resources.ApplyResources(this.documentationToolStripMenuItem, "documentationToolStripMenuItem");
             // 
             // showContractMenuItemStrip
             // 
-            resources.ApplyResources(this.showContractMenuItemStrip, "showContractMenuItemStrip");
             this.showContractMenuItemStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.showContractMenuItemStrip.Name = "showContractMenuItemStrip";
+            resources.ApplyResources(this.showContractMenuItemStrip, "showContractMenuItemStrip");
             this.showContractMenuItemStrip.Click += new System.EventHandler(this.showContractMenuItem_Click);
             // 
             // addContractMenuItemStrip
             // 
-            resources.ApplyResources(this.addContractMenuItemStrip, "addContractMenuItemStrip");
             this.addContractMenuItemStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.addContractMenuItemStrip.Name = "addContractMenuItemStrip";
+            resources.ApplyResources(this.addContractMenuItemStrip, "addContractMenuItemStrip");
             this.addContractMenuItemStrip.Click += new System.EventHandler(this.createContractMenuItem_Click);
             // 
             // orderToolStripMenuItem
             // 
-            resources.ApplyResources(this.orderToolStripMenuItem, "orderToolStripMenuItem");
             this.orderToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.orderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showTrackingMenuItem,
             this.addOrderMenuItem,
             this.updateOrderMenuItem});
             this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
+            resources.ApplyResources(this.orderToolStripMenuItem, "orderToolStripMenuItem");
             // 
             // showTrackingMenuItem
             // 
-            resources.ApplyResources(this.showTrackingMenuItem, "showTrackingMenuItem");
             this.showTrackingMenuItem.BackColor = System.Drawing.Color.AliceBlue;
             this.showTrackingMenuItem.Name = "showTrackingMenuItem";
+            resources.ApplyResources(this.showTrackingMenuItem, "showTrackingMenuItem");
             this.showTrackingMenuItem.Click += new System.EventHandler(this.showTrackingMenuItem_Click);
             // 
             // addOrderMenuItem
             // 
-            resources.ApplyResources(this.addOrderMenuItem, "addOrderMenuItem");
             this.addOrderMenuItem.BackColor = System.Drawing.Color.AliceBlue;
             this.addOrderMenuItem.Name = "addOrderMenuItem";
+            resources.ApplyResources(this.addOrderMenuItem, "addOrderMenuItem");
             this.addOrderMenuItem.Click += new System.EventHandler(this.addOrderMenuItem_Click);
             // 
             // updateOrderMenuItem
             // 
-            resources.ApplyResources(this.updateOrderMenuItem, "updateOrderMenuItem");
             this.updateOrderMenuItem.BackColor = System.Drawing.Color.AliceBlue;
             this.updateOrderMenuItem.Name = "updateOrderMenuItem";
+            resources.ApplyResources(this.updateOrderMenuItem, "updateOrderMenuItem");
             this.updateOrderMenuItem.Click += new System.EventHandler(this.updateOrderMenuItem_DoubleClick);
             // 
             // arbeitenToolStripMenuItem
             // 
-            resources.ApplyResources(this.arbeitenToolStripMenuItem, "arbeitenToolStripMenuItem");
             this.arbeitenToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.arbeitenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showArbeitenToolStripMenuItem,
             this.addArbeitenToolStripMenuItem,
             this.updateArbeitenToolStripMenuItem});
             this.arbeitenToolStripMenuItem.Name = "arbeitenToolStripMenuItem";
+            resources.ApplyResources(this.arbeitenToolStripMenuItem, "arbeitenToolStripMenuItem");
             // 
             // showArbeitenToolStripMenuItem
             // 
-            resources.ApplyResources(this.showArbeitenToolStripMenuItem, "showArbeitenToolStripMenuItem");
             this.showArbeitenToolStripMenuItem.BackColor = System.Drawing.Color.AliceBlue;
             this.showArbeitenToolStripMenuItem.Name = "showArbeitenToolStripMenuItem";
+            resources.ApplyResources(this.showArbeitenToolStripMenuItem, "showArbeitenToolStripMenuItem");
             this.showArbeitenToolStripMenuItem.Click += new System.EventHandler(this.showArbeitenMenuItem_Click);
             // 
             // addArbeitenToolStripMenuItem
             // 
-            resources.ApplyResources(this.addArbeitenToolStripMenuItem, "addArbeitenToolStripMenuItem");
             this.addArbeitenToolStripMenuItem.BackColor = System.Drawing.Color.AliceBlue;
             this.addArbeitenToolStripMenuItem.Name = "addArbeitenToolStripMenuItem";
+            resources.ApplyResources(this.addArbeitenToolStripMenuItem, "addArbeitenToolStripMenuItem");
             this.addArbeitenToolStripMenuItem.Click += new System.EventHandler(this.addArbeitenMenuItem_Click);
             // 
             // updateArbeitenToolStripMenuItem
             // 
-            resources.ApplyResources(this.updateArbeitenToolStripMenuItem, "updateArbeitenToolStripMenuItem");
             this.updateArbeitenToolStripMenuItem.BackColor = System.Drawing.Color.AliceBlue;
             this.updateArbeitenToolStripMenuItem.Name = "updateArbeitenToolStripMenuItem";
+            resources.ApplyResources(this.updateArbeitenToolStripMenuItem, "updateArbeitenToolStripMenuItem");
             this.updateArbeitenToolStripMenuItem.Click += new System.EventHandler(this.updateArbeitenMenuItem_Click);
             // 
             // additionsToolStripMenuItem
             // 
-            resources.ApplyResources(this.additionsToolStripMenuItem, "additionsToolStripMenuItem");
             this.additionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deleteToolStripMenuItem});
             this.additionsToolStripMenuItem.Name = "additionsToolStripMenuItem";
+            resources.ApplyResources(this.additionsToolStripMenuItem, "additionsToolStripMenuItem");
             // 
             // deleteToolStripMenuItem
             // 
-            resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
             this.deleteToolStripMenuItem.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // dataControl
@@ -2866,13 +2822,13 @@
             // 
             // helloPage
             // 
-            resources.ApplyResources(this.helloPage, "helloPage");
             this.helloPage.BackColor = System.Drawing.Color.Wheat;
             this.helloPage.Controls.Add(this.CreatorsLabel);
             this.helloPage.Controls.Add(this.AtlantSovtlinkLabel);
             this.helloPage.Controls.Add(this.yearLabel);
             this.helloPage.Controls.Add(this.label68);
             this.helloPage.Controls.Add(this.helloPictureBox);
+            resources.ApplyResources(this.helloPage, "helloPage");
             this.helloPage.Name = "helloPage";
             this.helloPage.UseVisualStyleBackColor = true;
             // 
@@ -2906,14 +2862,13 @@
             // 
             // helloPictureBox
             // 
-            resources.ApplyResources(this.helloPictureBox, "helloPictureBox");
             this.helloPictureBox.BackColor = System.Drawing.Color.Wheat;
+            resources.ApplyResources(this.helloPictureBox, "helloPictureBox");
             this.helloPictureBox.Name = "helloPictureBox";
             this.helloPictureBox.TabStop = false;
             // 
             // showClientPage
             // 
-            resources.ApplyResources(this.showClientPage, "showClientPage");
             this.showClientPage.BackColor = System.Drawing.Color.AliceBlue;
             this.showClientPage.Controls.Add(this.showClientDeleteButton);
             this.showClientPage.Controls.Add(this.showClientSearchButton);
@@ -2926,6 +2881,7 @@
             this.showClientPage.Controls.Add(this.showClientContactsDataGridView);
             this.showClientPage.Controls.Add(this.showClientTitleLabel);
             this.showClientPage.Controls.Add(this.showClientDataGridView);
+            resources.ApplyResources(this.showClientPage, "showClientPage");
             this.showClientPage.Name = "showClientPage";
             // 
             // showClientDeleteButton
@@ -3020,7 +2976,6 @@
             // 
             // addClientPage
             // 
-            resources.ApplyResources(this.addClientPage, "addClientPage");
             this.addClientPage.BackColor = System.Drawing.Color.AliceBlue;
             this.addClientPage.Controls.Add(this.addClientIsNecessaryLabel);
             this.addClientPage.Controls.Add(this.label4);
@@ -3044,6 +2999,7 @@
             this.addClientPage.Controls.Add(this.addClientNameLabel);
             this.addClientPage.Controls.Add(this.addClientTaxPayerStatusButton);
             this.addClientPage.Controls.Add(this.addClientWorkDocumentButton);
+            resources.ApplyResources(this.addClientPage, "addClientPage");
             this.addClientPage.Name = "addClientPage";
             // 
             // addClientIsNecessaryLabel
@@ -3185,7 +3141,6 @@
             // 
             // updateClientPage
             // 
-            resources.ApplyResources(this.updateClientPage, "updateClientPage");
             this.updateClientPage.BackColor = System.Drawing.Color.AliceBlue;
             this.updateClientPage.Controls.Add(this.updateClientSelectDiapasonComboBox);
             this.updateClientPage.Controls.Add(this.updateClientSelectDiapasonLabel);
@@ -3214,13 +3169,14 @@
             this.updateClientPage.Controls.Add(this.updateClientNameLabel);
             this.updateClientPage.Controls.Add(this.updateClientTaxPayerStatusButton);
             this.updateClientPage.Controls.Add(this.updateClientWorkDocumentButton);
+            resources.ApplyResources(this.updateClientPage, "updateClientPage");
             this.updateClientPage.Name = "updateClientPage";
             // 
             // updateClientSelectDiapasonComboBox
             // 
-            resources.ApplyResources(this.updateClientSelectDiapasonComboBox, "updateClientSelectDiapasonComboBox");
             this.updateClientSelectDiapasonComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.updateClientSelectDiapasonComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.updateClientSelectDiapasonComboBox, "updateClientSelectDiapasonComboBox");
             this.updateClientSelectDiapasonComboBox.Name = "updateClientSelectDiapasonComboBox";
             this.updateClientSelectDiapasonComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.selectClientDiapasonUpdateComboBox_MouseClick);
             // 
@@ -3403,20 +3359,20 @@
             // 
             // deleteClientPage
             // 
-            resources.ApplyResources(this.deleteClientPage, "deleteClientPage");
             this.deleteClientPage.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteClientPage.Controls.Add(this.deleteClientSelectDiapasoneComboBox);
             this.deleteClientPage.Controls.Add(this.label8);
             this.deleteClientPage.Controls.Add(this.deleteClientButton);
             this.deleteClientPage.Controls.Add(this.label30);
             this.deleteClientPage.Controls.Add(this.deleteClientComboBox);
+            resources.ApplyResources(this.deleteClientPage, "deleteClientPage");
             this.deleteClientPage.Name = "deleteClientPage";
             // 
             // deleteClientSelectDiapasoneComboBox
             // 
-            resources.ApplyResources(this.deleteClientSelectDiapasoneComboBox, "deleteClientSelectDiapasoneComboBox");
             this.deleteClientSelectDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.deleteClientSelectDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.deleteClientSelectDiapasoneComboBox, "deleteClientSelectDiapasoneComboBox");
             this.deleteClientSelectDiapasoneComboBox.Name = "deleteClientSelectDiapasoneComboBox";
             this.deleteClientSelectDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.deleteClientSelectDiapasoneComboBox_MouseClick);
             // 
@@ -3448,7 +3404,6 @@
             // 
             // showForwarderPage
             // 
-            resources.ApplyResources(this.showForwarderPage, "showForwarderPage");
             this.showForwarderPage.BackColor = System.Drawing.Color.AliceBlue;
             this.showForwarderPage.Controls.Add(this.showForwarderDeleteButton);
             this.showForwarderPage.Controls.Add(this.label31);
@@ -3459,6 +3414,7 @@
             this.showForwarderPage.Controls.Add(this.label34);
             this.showForwarderPage.Controls.Add(this.forwarderDataGridView);
             this.showForwarderPage.Controls.Add(this.label32);
+            resources.ApplyResources(this.showForwarderPage, "showForwarderPage");
             this.showForwarderPage.Name = "showForwarderPage";
             // 
             // showForwarderDeleteButton
@@ -3526,13 +3482,13 @@
             this.forwarderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.forwarderDataGridView.MultiSelect = false;
             this.forwarderDataGridView.Name = "forwarderDataGridView";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.forwarderDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.forwarderDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.forwarderDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.forwarderDataGridView.TabStop = false;
             this.forwarderDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.forwarderDataGridView_CellMouseClick);
@@ -3545,7 +3501,6 @@
             // 
             // addForwarderPage
             // 
-            resources.ApplyResources(this.addForwarderPage, "addForwarderPage");
             this.addForwarderPage.BackColor = System.Drawing.Color.AliceBlue;
             this.addForwarderPage.Controls.Add(this.addForwarderSplitContainer);
             this.addForwarderPage.Controls.Add(this.label5);
@@ -3568,6 +3523,7 @@
             this.addForwarderPage.Controls.Add(this.label50);
             this.addForwarderPage.Controls.Add(this.addTaxPayerStatusForwarderButton);
             this.addForwarderPage.Controls.Add(this.addWorkDocumentForwarderButton);
+            resources.ApplyResources(this.addForwarderPage, "addForwarderPage");
             this.addForwarderPage.Name = "addForwarderPage";
             // 
             // label5
@@ -3699,7 +3655,6 @@
             // 
             // updateForwarderPage
             // 
-            resources.ApplyResources(this.updateForwarderPage, "updateForwarderPage");
             this.updateForwarderPage.BackColor = System.Drawing.Color.AliceBlue;
             this.updateForwarderPage.Controls.Add(this.updateOrderSplitContainer);
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateContactDeleteButton);
@@ -3725,6 +3680,7 @@
             this.updateForwarderPage.Controls.Add(this.label65);
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateTaxPayerStatusAddButton);
             this.updateForwarderPage.Controls.Add(this.forwarderUpdateWorkDocumentAddButton);
+            resources.ApplyResources(this.updateForwarderPage, "updateForwarderPage");
             this.updateForwarderPage.Name = "updateForwarderPage";
             // 
             // forwarderUpdateContactDeleteButton
@@ -3891,11 +3847,11 @@
             // 
             // deleteForwarderPage
             // 
-            resources.ApplyResources(this.deleteForwarderPage, "deleteForwarderPage");
             this.deleteForwarderPage.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteForwarderPage.Controls.Add(this.forwarderDeleteButton);
             this.deleteForwarderPage.Controls.Add(this.label42);
             this.deleteForwarderPage.Controls.Add(this.forwarderDeleteComboBox);
+            resources.ApplyResources(this.deleteForwarderPage, "deleteForwarderPage");
             this.deleteForwarderPage.Name = "deleteForwarderPage";
             // 
             // forwarderDeleteButton
@@ -3923,7 +3879,6 @@
             // 
             // showTransporterPage
             // 
-            resources.ApplyResources(this.showTransporterPage, "showTransporterPage");
             this.showTransporterPage.BackColor = System.Drawing.Color.AliceBlue;
             this.showTransporterPage.Controls.Add(this.showTransporterDeleteButton);
             this.showTransporterPage.Controls.Add(this.label15);
@@ -3939,6 +3894,7 @@
             this.showTransporterPage.Controls.Add(this.transporterShowCommentRichTextBox);
             this.showTransporterPage.Controls.Add(this.transporterShowContactsDataGridView);
             this.showTransporterPage.Controls.Add(this.transporterShowDataGridView);
+            resources.ApplyResources(this.showTransporterPage, "showTransporterPage");
             this.showTransporterPage.Name = "showTransporterPage";
             // 
             // showTransporterDeleteButton
@@ -4060,7 +4016,6 @@
             // 
             // addTransporterPage
             // 
-            resources.ApplyResources(this.addTransporterPage, "addTransporterPage");
             this.addTransporterPage.BackColor = System.Drawing.Color.AliceBlue;
             this.addTransporterPage.Controls.Add(this.transporterAddFilterPanel);
             this.addTransporterPage.Controls.Add(this.label6);
@@ -4088,6 +4043,7 @@
             this.addTransporterPage.Controls.Add(this.label78);
             this.addTransporterPage.Controls.Add(this.transporterAddTaxPayerStatusAddButton);
             this.addTransporterPage.Controls.Add(this.transporterAddWorkDocumentAddButton);
+            resources.ApplyResources(this.addTransporterPage, "addTransporterPage");
             this.addTransporterPage.Name = "addTransporterPage";
             // 
             // transporterAddFilterPanel
@@ -4316,7 +4272,6 @@
             // 
             // updateTransporterPage
             // 
-            resources.ApplyResources(this.updateTransporterPage, "updateTransporterPage");
             this.updateTransporterPage.BackColor = System.Drawing.Color.AliceBlue;
             this.updateTransporterPage.Controls.Add(this.transporterUpdateFilterPanel);
             this.updateTransporterPage.Controls.Add(this.selectTransporterDiapasoneUpdateComboBox);
@@ -4349,6 +4304,7 @@
             this.updateTransporterPage.Controls.Add(this.label98);
             this.updateTransporterPage.Controls.Add(this.transporterUpdateTaxPayerStatusAddButton);
             this.updateTransporterPage.Controls.Add(this.transporterUpdateWorkDocumentAddButton);
+            resources.ApplyResources(this.updateTransporterPage, "updateTransporterPage");
             this.updateTransporterPage.Name = "updateTransporterPage";
             // 
             // transporterUpdateFilterPanel
@@ -4426,9 +4382,9 @@
             // 
             // selectTransporterDiapasoneUpdateComboBox
             // 
-            resources.ApplyResources(this.selectTransporterDiapasoneUpdateComboBox, "selectTransporterDiapasoneUpdateComboBox");
             this.selectTransporterDiapasoneUpdateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.selectTransporterDiapasoneUpdateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.selectTransporterDiapasoneUpdateComboBox, "selectTransporterDiapasoneUpdateComboBox");
             this.selectTransporterDiapasoneUpdateComboBox.Name = "selectTransporterDiapasoneUpdateComboBox";
             this.selectTransporterDiapasoneUpdateComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.selectTransporterDiapasoneUpdateComboBox_MouseClick);
             // 
@@ -4631,20 +4587,20 @@
             // 
             // deleteTransporterPage
             // 
-            resources.ApplyResources(this.deleteTransporterPage, "deleteTransporterPage");
             this.deleteTransporterPage.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteTransporterPage.Controls.Add(this.deleteTransporterSelectDiapasoneComboBox);
             this.deleteTransporterPage.Controls.Add(this.label17);
             this.deleteTransporterPage.Controls.Add(this.transporterDeleteButton);
             this.deleteTransporterPage.Controls.Add(this.label11);
             this.deleteTransporterPage.Controls.Add(this.transporterDeleteComboBox);
+            resources.ApplyResources(this.deleteTransporterPage, "deleteTransporterPage");
             this.deleteTransporterPage.Name = "deleteTransporterPage";
             // 
             // deleteTransporterSelectDiapasoneComboBox
             // 
-            resources.ApplyResources(this.deleteTransporterSelectDiapasoneComboBox, "deleteTransporterSelectDiapasoneComboBox");
             this.deleteTransporterSelectDiapasoneComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.deleteTransporterSelectDiapasoneComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.deleteTransporterSelectDiapasoneComboBox, "deleteTransporterSelectDiapasoneComboBox");
             this.deleteTransporterSelectDiapasoneComboBox.Name = "deleteTransporterSelectDiapasoneComboBox";
             this.deleteTransporterSelectDiapasoneComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.deleteTransporterSelectDiapasoneComboBox_MouseClick);
             // 
@@ -4677,7 +4633,6 @@
             // 
             // addContractPage
             // 
-            resources.ApplyResources(this.addContractPage, "addContractPage");
             this.addContractPage.BackColor = System.Drawing.Color.AliceBlue;
             this.addContractPage.Controls.Add(this.secondPersonRoleDocumentСomboBox);
             this.addContractPage.Controls.Add(this.label18cont);
@@ -4699,13 +4654,14 @@
             this.addContractPage.Controls.Add(this.label37cont);
             this.addContractPage.Controls.Add(this.personNameLabel);
             this.addContractPage.Controls.Add(this.firstPersonNameDocumentComboBox);
+            resources.ApplyResources(this.addContractPage, "addContractPage");
             this.addContractPage.Name = "addContractPage";
             // 
             // secondPersonRoleDocumentСomboBox
             // 
-            resources.ApplyResources(this.secondPersonRoleDocumentСomboBox, "secondPersonRoleDocumentСomboBox");
             this.secondPersonRoleDocumentСomboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.secondPersonRoleDocumentСomboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.secondPersonRoleDocumentСomboBox, "secondPersonRoleDocumentСomboBox");
             this.secondPersonRoleDocumentСomboBox.Items.AddRange(new object[] {
             resources.GetString("secondPersonRoleDocumentСomboBox.Items"),
             resources.GetString("secondPersonRoleDocumentСomboBox.Items1"),
@@ -4721,9 +4677,9 @@
             // 
             // secondPersonDiapasonDocumentComboBox
             // 
-            resources.ApplyResources(this.secondPersonDiapasonDocumentComboBox, "secondPersonDiapasonDocumentComboBox");
             this.secondPersonDiapasonDocumentComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.secondPersonDiapasonDocumentComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.secondPersonDiapasonDocumentComboBox, "secondPersonDiapasonDocumentComboBox");
             this.secondPersonDiapasonDocumentComboBox.Name = "secondPersonDiapasonDocumentComboBox";
             this.secondPersonDiapasonDocumentComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.secondPersonDiapasonDocumentComboBox_MouseClick);
             // 
@@ -4754,9 +4710,9 @@
             // 
             // documentTypeComboBox
             // 
-            resources.ApplyResources(this.documentTypeComboBox, "documentTypeComboBox");
             this.documentTypeComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.documentTypeComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.documentTypeComboBox, "documentTypeComboBox");
             this.documentTypeComboBox.Items.AddRange(new object[] {
             resources.GetString("documentTypeComboBox.Items"),
             resources.GetString("documentTypeComboBox.Items1")});
@@ -4838,7 +4794,6 @@
             // 
             // addOrderPage
             // 
-            resources.ApplyResources(this.addOrderPage, "addOrderPage");
             this.addOrderPage.BackColor = System.Drawing.Color.AliceBlue;
             this.addOrderPage.Controls.Add(this.OrderAddFreightTextBox);
             this.addOrderPage.Controls.Add(this.label101);
@@ -4846,6 +4801,7 @@
             this.addOrderPage.Controls.Add(this.addOrderSplitContainer3);
             this.addOrderPage.Controls.Add(this.addOrderSplitContainer2);
             this.addOrderPage.Controls.Add(this.addOrderSplitContainer1);
+            resources.ApplyResources(this.addOrderPage, "addOrderPage");
             this.addOrderPage.Name = "addOrderPage";
             // 
             // OrderAddFreightTextBox
@@ -4861,7 +4817,6 @@
             // 
             // showTrackingPage
             // 
-            resources.ApplyResources(this.showTrackingPage, "showTrackingPage");
             this.showTrackingPage.BackColor = System.Drawing.Color.AliceBlue;
             this.showTrackingPage.Controls.Add(this.trackingShowDeleteOrderButton);
             this.showTrackingPage.Controls.Add(this.exportTrackingToExcelButton);
@@ -4883,6 +4838,7 @@
             this.showTrackingPage.Controls.Add(this.trackingShowSearchButton);
             this.showTrackingPage.Controls.Add(this.trackingShowSearchTextBox);
             this.showTrackingPage.Controls.Add(this.trackingShowDataGridView);
+            resources.ApplyResources(this.showTrackingPage, "showTrackingPage");
             this.showTrackingPage.Name = "showTrackingPage";
             // 
             // trackingShowDeleteOrderButton
@@ -5030,14 +4986,14 @@
             this.trackingShowDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.trackingShowDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.trackingShowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.trackingShowDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.trackingShowDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.trackingShowDataGridView.MultiSelect = false;
             this.trackingShowDataGridView.Name = "trackingShowDataGridView";
             this.trackingShowDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -5048,7 +5004,6 @@
             // 
             // updateOrderPage
             // 
-            resources.ApplyResources(this.updateOrderPage, "updateOrderPage");
             this.updateOrderPage.BackColor = System.Drawing.Color.AliceBlue;
             this.updateOrderPage.Controls.Add(this.OrderUpdateShowNoActiveCheckBox);
             this.updateOrderPage.Controls.Add(this.OrderUpdateDiapasoneDateTimePicker);
@@ -5061,6 +5016,7 @@
             this.updateOrderPage.Controls.Add(this.OrderUpdateSplitContainer2);
             this.updateOrderPage.Controls.Add(this.OrderUpdateSplitContainer5);
             this.updateOrderPage.Controls.Add(this.OrderUpdateSplitContainer8);
+            resources.ApplyResources(this.updateOrderPage, "updateOrderPage");
             this.updateOrderPage.Name = "updateOrderPage";
             // 
             // OrderUpdateShowNoActiveCheckBox
@@ -5111,7 +5067,6 @@
             // 
             // showContractsPage
             // 
-            resources.ApplyResources(this.showContractsPage, "showContractsPage");
             this.showContractsPage.BackColor = System.Drawing.Color.AliceBlue;
             this.showContractsPage.Controls.Add(this.originalContractStateRadioButton);
             this.showContractsPage.Controls.Add(this.faxContractStateRadioButton);
@@ -5125,6 +5080,7 @@
             this.showContractsPage.Controls.Add(this.contractShowSearchTextBox);
             this.showContractsPage.Controls.Add(this.label36ShowContract);
             this.showContractsPage.Controls.Add(this.contractShowDataGridView);
+            resources.ApplyResources(this.showContractsPage, "showContractsPage");
             this.showContractsPage.Name = "showContractsPage";
             this.showContractsPage.Tag = "3";
             // 
@@ -5226,7 +5182,6 @@
             // 
             // showArbeitenPage
             // 
-            resources.ApplyResources(this.showArbeitenPage, "showArbeitenPage");
             this.showArbeitenPage.BackColor = System.Drawing.Color.AliceBlue;
             this.showArbeitenPage.Controls.Add(this.splitContainer1);
             this.showArbeitenPage.Controls.Add(this.arbeitenShowForwardersDataGridView);
@@ -5239,6 +5194,7 @@
             this.showArbeitenPage.Controls.Add(this.arbeitenShowSearchButton);
             this.showArbeitenPage.Controls.Add(this.arbeitenShowSearchTextBox);
             this.showArbeitenPage.Controls.Add(this.arbeitenShowMainDataGridView);
+            resources.ApplyResources(this.showArbeitenPage, "showArbeitenPage");
             this.showArbeitenPage.Name = "showArbeitenPage";
             // 
             // arbeitenShowForwardersDataGridView
@@ -5328,7 +5284,6 @@
             // 
             // addArbeitenPage
             // 
-            resources.ApplyResources(this.addArbeitenPage, "addArbeitenPage");
             this.addArbeitenPage.BackColor = System.Drawing.Color.AliceBlue;
             this.addArbeitenPage.Controls.Add(this.arbeitenAddButton);
             this.addArbeitenPage.Controls.Add(this.arbeitenAddSplitContainer);
@@ -5339,6 +5294,7 @@
             this.addArbeitenPage.Controls.Add(this.arbeitenAddOrderFilterLabel);
             this.addArbeitenPage.Controls.Add(this.arbeitenAddNoteTextBox);
             this.addArbeitenPage.Controls.Add(this.arbeitenAddNoteLabel);
+            resources.ApplyResources(this.addArbeitenPage, "addArbeitenPage");
             this.addArbeitenPage.Name = "addArbeitenPage";
             // 
             // arbeitenAddButton
@@ -5396,7 +5352,6 @@
             // 
             // updateArbeitenPage
             // 
-            resources.ApplyResources(this.updateArbeitenPage, "updateArbeitenPage");
             this.updateArbeitenPage.BackColor = System.Drawing.Color.AliceBlue;
             this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateButton);
             this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateSplitContainer);
@@ -5407,6 +5362,7 @@
             this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateOrderFilterLabel);
             this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateNoteTextBox);
             this.updateArbeitenPage.Controls.Add(this.arbeitenUpdateNoteLabel);
+            resources.ApplyResources(this.updateArbeitenPage, "updateArbeitenPage");
             this.updateArbeitenPage.Name = "updateArbeitenPage";
             // 
             // arbeitenUpdateButton
@@ -5464,7 +5420,6 @@
             // 
             // deletePage
             // 
-            resources.ApplyResources(this.deletePage, "deletePage");
             this.deletePage.BackColor = System.Drawing.Color.AliceBlue;
             this.deletePage.Controls.Add(this.deteteAdditionsButton);
             this.deletePage.Controls.Add(this.deleteTableSelectLabel);
@@ -5473,6 +5428,7 @@
             this.deletePage.Controls.Add(this.deleteDiaposoneSelectComboBox);
             this.deletePage.Controls.Add(this.deleteItemSelectLabel);
             this.deletePage.Controls.Add(this.deleteTableSelectComboBox);
+            resources.ApplyResources(this.deletePage, "deletePage");
             this.deletePage.Name = "deletePage";
             // 
             // deteteAdditionsButton
@@ -5505,11 +5461,12 @@
             // 
             // deleteDiaposoneSelectComboBox
             // 
-            resources.ApplyResources(this.deleteDiaposoneSelectComboBox, "deleteDiaposoneSelectComboBox");
             this.deleteDiaposoneSelectComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.deleteDiaposoneSelectComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.deleteDiaposoneSelectComboBox, "deleteDiaposoneSelectComboBox");
             this.deleteDiaposoneSelectComboBox.Name = "deleteDiaposoneSelectComboBox";
             this.deleteDiaposoneSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.deleteDiaposoneSelectComboBox_SelectedIndexChanged);
+            this.deleteDiaposoneSelectComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.deleteDiaposoneSelectComboBox_MouseClick);
             // 
             // deleteItemSelectLabel
             // 
@@ -5551,49 +5508,45 @@
             resources.ApplyResources(this.labelshow69, "labelshow69");
             this.labelshow69.Name = "labelshow69";
             // 
-            // folderBrowserDialog
-            // 
-            resources.ApplyResources(this.folderBrowserDialog, "folderBrowserDialog");
-            // 
             // addOrderUkrStrip
             // 
-            resources.ApplyResources(this.addOrderUkrStrip, "addOrderUkrStrip");
             this.addOrderUkrStrip.Name = "addOrderUkrStrip";
+            resources.ApplyResources(this.addOrderUkrStrip, "addOrderUkrStrip");
             // 
             // updateOrderUkrStrip
             // 
-            resources.ApplyResources(this.updateOrderUkrStrip, "updateOrderUkrStrip");
             this.updateOrderUkrStrip.Name = "updateOrderUkrStrip";
+            resources.ApplyResources(this.updateOrderUkrStrip, "updateOrderUkrStrip");
             // 
             // deleteOrderUkrStrip
             // 
-            resources.ApplyResources(this.deleteOrderUkrStrip, "deleteOrderUkrStrip");
             this.deleteOrderUkrStrip.Name = "deleteOrderUkrStrip";
+            resources.ApplyResources(this.deleteOrderUkrStrip, "deleteOrderUkrStrip");
             // 
             // trackingOrderUkrStrip
             // 
-            resources.ApplyResources(this.trackingOrderUkrStrip, "trackingOrderUkrStrip");
             this.trackingOrderUkrStrip.Name = "trackingOrderUkrStrip";
+            resources.ApplyResources(this.trackingOrderUkrStrip, "trackingOrderUkrStrip");
             // 
             // addOrderIntStrip
             // 
-            resources.ApplyResources(this.addOrderIntStrip, "addOrderIntStrip");
             this.addOrderIntStrip.Name = "addOrderIntStrip";
+            resources.ApplyResources(this.addOrderIntStrip, "addOrderIntStrip");
             // 
             // updateOrderIntStrip
             // 
-            resources.ApplyResources(this.updateOrderIntStrip, "updateOrderIntStrip");
             this.updateOrderIntStrip.Name = "updateOrderIntStrip";
+            resources.ApplyResources(this.updateOrderIntStrip, "updateOrderIntStrip");
             // 
             // deleteOrderIntStrip
             // 
-            resources.ApplyResources(this.deleteOrderIntStrip, "deleteOrderIntStrip");
             this.deleteOrderIntStrip.Name = "deleteOrderIntStrip";
+            resources.ApplyResources(this.deleteOrderIntStrip, "deleteOrderIntStrip");
             // 
             // trackingOrderIntStrip
             // 
-            resources.ApplyResources(this.trackingOrderIntStrip, "trackingOrderIntStrip");
             this.trackingOrderIntStrip.Name = "trackingOrderIntStrip";
+            resources.ApplyResources(this.trackingOrderIntStrip, "trackingOrderIntStrip");
             // 
             // ruLangButton
             // 

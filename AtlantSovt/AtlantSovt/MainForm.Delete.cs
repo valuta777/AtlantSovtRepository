@@ -705,8 +705,8 @@ namespace AtlantSovt
         {
             using (var db = new AtlantSovtContext())
             {
-                deleteItemSelectComboBox.Items.Clear();
                 deleteItemSelectComboBox.SelectedIndex = -1;
+                deleteItemSelectComboBox.Items.Clear();
                 switch (deleteTableSelectComboBox.SelectedIndex)
                 {
                     case -1: deleteObjectId = null; break;
@@ -724,6 +724,8 @@ namespace AtlantSovt
                         break;// "Адреси розмитнення",
                 }
             }
+            
+            deleteDiaposoneSelectComboBox.DroppedDown = true;
         }
 
     }
