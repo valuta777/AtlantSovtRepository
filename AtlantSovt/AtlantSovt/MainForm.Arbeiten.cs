@@ -590,11 +590,11 @@ namespace AtlantSovt
                     {
                         if (item.Client != null)
                         {
-                            arbeitenAddOrderSelectComboBox.Items.Add(item.Client.Name + " ," + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
+                            arbeitenAddOrderSelectComboBox.Items.Add(item.Client.Name + ", " + ((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
                         }
                         else
                         {
-                            arbeitenAddOrderSelectComboBox.Items.Add(" ," + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
+                            arbeitenAddOrderSelectComboBox.Items.Add(((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
                         }
                     }
                 }
@@ -930,11 +930,11 @@ namespace AtlantSovt
                     {
                         if (item.Client != null)
                         {
-                            arbeitenUpdateOrderSelectComboBox.Items.Add(item.Client.Name + " ," + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
+                            arbeitenUpdateOrderSelectComboBox.Items.Add(item.Client.Name + ", " + ((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date.Value.ToShortDateString() +" "  +item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
                         }
                         else
                         {
-                            arbeitenUpdateOrderSelectComboBox.Items.Add(" ," + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
+                            arbeitenUpdateOrderSelectComboBox.Items.Add(((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
                         }
                     }
                 }
