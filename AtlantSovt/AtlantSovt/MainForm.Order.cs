@@ -283,7 +283,6 @@ namespace AtlantSovt
             OrderAddFreightTextBox.Text = "";
         }
 
-
         //Client
         void LoadOrderAddClientDiapasonCombobox()
         {
@@ -1104,11 +1103,11 @@ namespace AtlantSovt
                     {
                         if (item.Client != null)
                         {
-                            OrderUpdateOrderSelectComboBox.Items.Add(item.Client.Name + " ," + item.Date + " [" + item.Id + "]");
+                            OrderUpdateOrderSelectComboBox.Items.Add(item.Client.Name + ", " + ((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date + " [" + item.Id + "]");
                         }
                         else 
                         {
-                            OrderUpdateOrderSelectComboBox.Items.Add("" + " ," + item.Date + " [" + item.Id + "]");
+                            OrderUpdateOrderSelectComboBox.Items.Add(((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date + " [" + item.Id + "]");
                         }
                     }
                 }

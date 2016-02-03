@@ -3464,6 +3464,7 @@ namespace AtlantSovt
         {
             SplitItems();
         }
+
         private void deleteItemSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             LoadItems();
@@ -3476,6 +3477,11 @@ namespace AtlantSovt
             deleteItemSelectComboBox.SelectedIndex = -1;
             deleteItemSelectComboBox.Items.Clear();
             LoadItems();
+        }
+
+        private void deleteDiaposoneSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoadDiapasone();
         }
 
 
@@ -3514,9 +3520,5 @@ namespace AtlantSovt
         } 
         #endregion
 
-        private void deleteDiaposoneSelectComboBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            LoadDiapasone();
-        }
     }
 }
