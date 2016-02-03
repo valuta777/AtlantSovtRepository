@@ -560,8 +560,6 @@ namespace AtlantSovt
                             isOrderFull = false;
                         }
 
-                        //TODO 3 forwarder
-
                         if (orderDocument.OrderLoadingForms.Where(l => l.IsFirst == true).Count() == 1)
                         {
                             loadingForm1 = orderDocument.OrderLoadingForms.Where(l => l.IsFirst == true).FirstOrDefault().LoadingForm.Type;
@@ -848,8 +846,8 @@ namespace AtlantSovt
                                     downloadAddress += (address.DownloadAddress.Country.Name != "" && address.DownloadAddress.Country.Name != null ) ? address.DownloadAddress.Country.Name + ", " : "";
                                 }
                                 downloadAddress += (address.DownloadAddress.CountryCode != "" && address.DownloadAddress.CountryCode != null) ? address.DownloadAddress.CountryCode + " - " : "";
-                                downloadAddress += (address.DownloadAddress.CityName != "" && address.DownloadAddress.CityName != null) ? address.DownloadAddress.CityName + ", " : "";
                                 downloadAddress += (address.DownloadAddress.CityCode != "" && address.DownloadAddress.CityCode != null) ? address.DownloadAddress.CityCode + ", " : "";
+                                downloadAddress += (address.DownloadAddress.CityName != "" && address.DownloadAddress.CityName != null) ? address.DownloadAddress.CityName + ", " : "";
                                 downloadAddress += (address.DownloadAddress.StreetName != "" && address.DownloadAddress.StreetName != null) ? address.DownloadAddress.StreetName + ", " : "";
                                 downloadAddress += (address.DownloadAddress.HouseNumber != "" && address.DownloadAddress.HouseNumber != null) ? address.DownloadAddress.HouseNumber + ", " : "";
                                 downloadAddress += (address.DownloadAddress.CompanyName != "" && address.DownloadAddress.CompanyName != null) ? address.DownloadAddress.CompanyName + "\v" : "\v";
@@ -865,8 +863,8 @@ namespace AtlantSovt
                                     uploadAddress += (address.UploadAddress.Country.Name != "" && address.UploadAddress.Country.Name != null) ? address.UploadAddress.Country.Name + ", " : "";
                                 }
                                 uploadAddress += (address.UploadAddress.CountryCode != "" && address.UploadAddress.CountryCode != null) ? address.UploadAddress.CountryCode + " - " : "";
-                                uploadAddress += (address.UploadAddress.CityName != "" && address.UploadAddress.CityName != null) ? address.UploadAddress.CityName + ", " : "";
                                 uploadAddress += (address.UploadAddress.CityCode != "" && address.UploadAddress.CityCode != null) ? address.UploadAddress.CityCode + ", " : "";
+                                uploadAddress += (address.UploadAddress.CityName != "" && address.UploadAddress.CityName != null) ? address.UploadAddress.CityName + ", " : "";
                                 uploadAddress += (address.UploadAddress.StreetName != "" && address.UploadAddress.StreetName != null) ? address.UploadAddress.StreetName + ", " : "";
                                 uploadAddress += (address.UploadAddress.HouseNumber != "" && address.UploadAddress.HouseNumber != null) ? address.UploadAddress.HouseNumber + ", " : "";
                                 uploadAddress += (address.UploadAddress.CompanyName != "" && address.UploadAddress.CompanyName != null) ? address.UploadAddress.CompanyName + "," : "";
@@ -882,8 +880,8 @@ namespace AtlantSovt
                                     customAddress += (address.CustomsAddress.Country.Name != "" && address.CustomsAddress.Country.Name != null) ? address.CustomsAddress.Country.Name + ", " : "";
                                 }
                                 customAddress += (address.CustomsAddress.CountryCode != "" && address.CustomsAddress.CountryCode != null) ? address.CustomsAddress.CountryCode + " - " : "";
-                                customAddress += (address.CustomsAddress.CityName != "" && address.CustomsAddress.CityName != null) ? address.CustomsAddress.CityName + ", " : "";
                                 customAddress += (address.CustomsAddress.CityCode != "" && address.CustomsAddress.CityCode != null) ? address.CustomsAddress.CityCode + ", " : "";
+                                customAddress += (address.CustomsAddress.CityName != "" && address.CustomsAddress.CityName != null) ? address.CustomsAddress.CityName + ", " : "";
                                 customAddress += (address.CustomsAddress.StreetName != "" && address.CustomsAddress.StreetName != null) ? address.CustomsAddress.StreetName + ", " : "";
                                 customAddress += (address.CustomsAddress.HouseNumber != "" && address.CustomsAddress.HouseNumber != null) ? address.CustomsAddress.HouseNumber + ", " : "";
                                 customAddress += (address.CustomsAddress.CompanyName != "" && address.CustomsAddress.CompanyName != null) ? address.CustomsAddress.CompanyName : "";
@@ -899,8 +897,8 @@ namespace AtlantSovt
                                     uncustomAddress += (address.UnCustomsAddress.Country.Name != "" && address.UnCustomsAddress.Country.Name != null) ? address.UnCustomsAddress.Country.Name + ", " : "";
                                 }
                                 uncustomAddress += (address.UnCustomsAddress.CountryCode != "" && address.UnCustomsAddress.CountryCode != null) ? address.UnCustomsAddress.CountryCode + " - " : "";
-                                uncustomAddress += (address.UnCustomsAddress.CityName != "" && address.UnCustomsAddress.CityName != null) ? address.UnCustomsAddress.CityName + ", " : "";
                                 uncustomAddress += (address.UnCustomsAddress.CityCode != "" && address.UnCustomsAddress.CityCode != null) ? address.UnCustomsAddress.CityCode + ", " : "";
+                                uncustomAddress += (address.UnCustomsAddress.CityName != "" && address.UnCustomsAddress.CityName != null) ? address.UnCustomsAddress.CityName + ", " : "";
                                 uncustomAddress += (address.UnCustomsAddress.StreetName != "" && address.UnCustomsAddress.StreetName != null) ? address.UnCustomsAddress.StreetName + ", " : "";
                                 uncustomAddress += (address.UnCustomsAddress.HouseNumber != "" && address.UnCustomsAddress.HouseNumber != null) ? address.UnCustomsAddress.HouseNumber + ", " : "";
                                 uncustomAddress += (address.UnCustomsAddress.CompanyName != "" && address.UnCustomsAddress.CompanyName != null) ? address.UnCustomsAddress.CompanyName : "";

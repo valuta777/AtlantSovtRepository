@@ -124,7 +124,7 @@ namespace AtlantSovt
                                 select c;
                     foreach (var item in query)
                     {
-                        transporterComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
+                        transporterComboBox.Items.Add((item.ShortName == null || item.ShortName == "") ? item.FullName : item.ShortName + " , " + item.Director + " [" + item.Id + "]");
                     }
                 }
             }

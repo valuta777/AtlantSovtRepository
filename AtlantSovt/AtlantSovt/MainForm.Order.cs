@@ -417,7 +417,7 @@ namespace AtlantSovt
                                 select c;
                     foreach (var item in query)
                     {
-                        OrderAddTransporterSelectComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
+                        OrderAddTransporterSelectComboBox.Items.Add((item.ShortName == null || item.ShortName == "") ? item.FullName : item.ShortName + " , " + item.Director + " [" + item.Id + "]");
                     }
                 }
             }
@@ -1873,7 +1873,6 @@ namespace AtlantSovt
                 }
             }
         }
-
         
         //ADRESES
         void UploadAddressUpdate()
@@ -2122,7 +2121,7 @@ namespace AtlantSovt
                                 select c;
                     foreach (var item in query)
                     {
-                        OrderUpdateTransporterSelectComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
+                        OrderUpdateTransporterSelectComboBox.Items.Add((item.ShortName == null || item.ShortName == "") ? item.FullName : item.ShortName + " , " + item.Director + " [" + item.Id + "]");
                     }
                 }
             }
