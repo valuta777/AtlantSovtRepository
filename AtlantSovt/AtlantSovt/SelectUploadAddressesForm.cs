@@ -138,14 +138,30 @@ namespace AtlantSovt
                             select address;
                 foreach (var item in query)
                 {
+                    string countryName = "";
+                    string countryCode = "";
+                    string cityName = "";
+                    string cityCode = "";
+                    string streetName = "";
+                    string houseNumber = "";
+                    string companyName = "";
+                    long addressId;
+
                     if (item.Country != null)
                     {
-                        uploadAddressListBox.Items.Add(item.Country.Name + "," + item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                        countryName = (item.Country.Name != null && item.Country.Name != "") ? item.Country.Name + ", " : "";
                     }
-                    else
-                    {
-                        uploadAddressListBox.Items.Add(item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
-                    }
+
+                    countryCode = (item.CountryCode != null && item.CountryCode != "") ? item.CountryCode + ", " : "";
+                    cityName = (item.CityName != null && item.CityName != "") ? item.CityName + ", " : "";
+                    cityCode = (item.CityCode != null && item.CityCode != "") ? item.CityCode + ", " : "";
+                    streetName = (item.StreetName != null && item.StreetName != "") ? item.StreetName + ", " : "";
+                    houseNumber = (item.HouseNumber != null && item.HouseNumber != "") ? item.HouseNumber + ", " : "";
+                    companyName = (item.CompanyName != null && item.CompanyName != "") ? item.CompanyName + " " : " ";
+                    addressId = item.Id;
+
+                    uploadAddressListBox.Items.Add(countryName + countryCode + cityName + cityCode + streetName + houseNumber + companyName + "[" + addressId + "]");
+
                 }
             }
         }
@@ -160,14 +176,30 @@ namespace AtlantSovt
                                 select address;
                     foreach (var item in query)
                     {
+                        string countryName = "";
+                        string countryCode = "";
+                        string cityName = "";
+                        string cityCode = "";
+                        string streetName = "";
+                        string houseNumber = "";
+                        string companyName = "";
+                        long addressId;
+
                         if (item.Country != null)
                         {
-                            uploadAddressListBox.Items.Add(item.Country.Name + "," + item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
+                            countryName = (item.Country.Name != null && item.Country.Name != "") ? item.Country.Name + ", " : "";
                         }
-                        else
-                        {
-                            uploadAddressListBox.Items.Add(item.CountryCode + "," + item.CityName + "," + item.StreetName + "," + item.HouseNumber + "[" + item.Id + "]");
-                        }
+
+                        countryCode = (item.CountryCode != null && item.CountryCode != "") ? item.CountryCode + ", " : "";
+                        cityName = (item.CityName != null && item.CityName != "") ? item.CityName + ", " : "";
+                        cityCode = (item.CityCode != null && item.CityCode != "") ? item.CityCode + ", " : "";
+                        streetName = (item.StreetName != null && item.StreetName != "") ? item.StreetName + ", " : "";
+                        houseNumber = (item.HouseNumber != null && item.HouseNumber != "") ? item.HouseNumber + ", " : "";
+                        companyName = (item.CompanyName != null && item.CompanyName != "") ? item.CompanyName + " " : " ";
+                        addressId = item.Id;
+
+                        uploadAddressListBox.Items.Add(countryName + countryCode + cityName + cityCode + streetName + houseNumber + companyName + "[" + addressId + "]");
+
                     }
                 }
             }

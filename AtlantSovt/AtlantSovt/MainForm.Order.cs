@@ -283,7 +283,6 @@ namespace AtlantSovt
             OrderAddFreightTextBox.Text = "";
         }
 
-
         //Client
         void LoadOrderAddClientDiapasonCombobox()
         {
@@ -417,7 +416,7 @@ namespace AtlantSovt
                                 select c;
                     foreach (var item in query)
                     {
-                        OrderAddTransporterSelectComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
+                        OrderAddTransporterSelectComboBox.Items.Add((item.ShortName == null || item.ShortName == "") ? item.FullName : item.ShortName + " , " + item.Director + " [" + item.Id + "]");
                     }
                 }
             }
@@ -1104,11 +1103,11 @@ namespace AtlantSovt
                     {
                         if (item.Client != null)
                         {
-                            OrderUpdateOrderSelectComboBox.Items.Add(item.Client.Name + " ," + item.Date + " [" + item.Id + "]");
+                            OrderUpdateOrderSelectComboBox.Items.Add(item.Client.Name + ", " + ((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date + " [" + item.Id + "]");
                         }
                         else 
                         {
-                            OrderUpdateOrderSelectComboBox.Items.Add("" + " ," + item.Date + " [" + item.Id + "]");
+                            OrderUpdateOrderSelectComboBox.Items.Add(((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date + " [" + item.Id + "]");
                         }
                     }
                 }
@@ -1126,11 +1125,11 @@ namespace AtlantSovt
                     {
                         if (item.Client != null)
                         {
-                            OrderUpdateOrderSelectComboBox.Items.Add(item.Client.Name + " ," + item.Date + " [" + item.Id + "]");
+                            OrderUpdateOrderSelectComboBox.Items.Add(item.Client.Name + ", " + ((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date + " [" + item.Id + "]");
                         }
                         else
                         {
-                            OrderUpdateOrderSelectComboBox.Items.Add(" ," + item.Date + " [" + item.Id + "]");
+                            OrderUpdateOrderSelectComboBox.Items.Add(((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date + " [" + item.Id + "]");
                         }
                     }
                 }
@@ -1873,7 +1872,6 @@ namespace AtlantSovt
                 }
             }
         }
-
         
         //ADRESES
         void UploadAddressUpdate()
@@ -2122,7 +2120,7 @@ namespace AtlantSovt
                                 select c;
                     foreach (var item in query)
                     {
-                        OrderUpdateTransporterSelectComboBox.Items.Add(item.FullName + " , " + item.Director + " [" + item.Id + "]");
+                        OrderUpdateTransporterSelectComboBox.Items.Add((item.ShortName == null || item.ShortName == "") ? item.FullName : item.ShortName + " , " + item.Director + " [" + item.Id + "]");
                     }
                 }
             }

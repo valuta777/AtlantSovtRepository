@@ -223,7 +223,7 @@ namespace AtlantSovt
 
                             if(orderTracking.Transporter != null)
                             {
-                                if(orderTracking.Transporter.Contracts.ToList().Count !=0)
+                                if(orderTracking.Transporter.TransporterContacts.ToList().Count !=0)
                                 {
                                     resultCounter++;
                                     foreach(TransporterContact tc in orderTracking.Transporter.TransporterContacts.ToList())

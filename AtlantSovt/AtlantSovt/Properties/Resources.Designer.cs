@@ -1209,6 +1209,15 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Місто.
+        /// </summary>
+        internal static string Місто {
+            get {
+                return ResourceManager.GetString("Місто", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Мітка.
         /// </summary>
         internal static string Мітка {

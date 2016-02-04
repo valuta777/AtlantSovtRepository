@@ -96,11 +96,13 @@ namespace AtlantSovt
                         select new
                         {
                             country = add.DownloadAddress.Country.Name,
-                            cityCode = add.DownloadAddress.CityCode
+                            cityCode = add.DownloadAddress.CityCode,
+                            cityName = add.DownloadAddress.CityName
                         };
                     arbeitenShowDownloadAddressDataGridView.DataSource = query3.ToList();
                     arbeitenShowDownloadAddressDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Країна;
                     arbeitenShowDownloadAddressDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Код_міста;
+                    arbeitenShowDownloadAddressDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Місто;
 
                     var query4 =
                         from add in db.OrderUploadAdresses
@@ -108,11 +110,13 @@ namespace AtlantSovt
                         select new
                         {
                             country = add.UploadAddress.Country.Name,
-                            cityCode = add.UploadAddress.CityCode
+                            cityCode = add.UploadAddress.CityCode,
+                            cityName = add.UploadAddress.CityName
                         };
                     arbeitenShowUploadAddressDataGridView.DataSource = query4.ToList();
                     arbeitenShowUploadAddressDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Країна;
                     arbeitenShowUploadAddressDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Код_міста;
+                    arbeitenShowUploadAddressDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.Місто;
 
                     var query5 =
                         from o in db.Orders
@@ -563,11 +567,11 @@ namespace AtlantSovt
                     {
                         if (item.Client != null)
                         {
-                            arbeitenAddOrderSelectComboBox.Items.Add(item.Client.Name + " ," + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
+                            arbeitenAddOrderSelectComboBox.Items.Add(item.Client.Name + ", " + ((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
                         }
                         else
                         {
-                            arbeitenAddOrderSelectComboBox.Items.Add("" + " ," + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
+                            arbeitenAddOrderSelectComboBox.Items.Add(((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
                         }
                     }
                 }
@@ -586,11 +590,11 @@ namespace AtlantSovt
                     {
                         if (item.Client != null)
                         {
-                            arbeitenAddOrderSelectComboBox.Items.Add(item.Client.Name + " ," + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
+                            arbeitenAddOrderSelectComboBox.Items.Add(item.Client.Name + ", " + ((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
                         }
                         else
                         {
-                            arbeitenAddOrderSelectComboBox.Items.Add(" ," + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
+                            arbeitenAddOrderSelectComboBox.Items.Add(((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
                         }
                     }
                 }
@@ -903,11 +907,11 @@ namespace AtlantSovt
                     {
                         if (item.Client != null)
                         {
-                            arbeitenUpdateOrderSelectComboBox.Items.Add(item.Client.Name + " ," + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
+                            arbeitenUpdateOrderSelectComboBox.Items.Add(item.Client.Name + ", " + ((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
                         }
                         else
                         {
-                            arbeitenUpdateOrderSelectComboBox.Items.Add("" + " ," + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
+                            arbeitenUpdateOrderSelectComboBox.Items.Add(((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
                         }
                     }
                 }
@@ -926,11 +930,11 @@ namespace AtlantSovt
                     {
                         if (item.Client != null)
                         {
-                            arbeitenUpdateOrderSelectComboBox.Items.Add(item.Client.Name + " ," + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
+                            arbeitenUpdateOrderSelectComboBox.Items.Add(item.Client.Name + ", " + ((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date.Value.ToShortDateString() +" "  +item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
                         }
                         else
                         {
-                            arbeitenUpdateOrderSelectComboBox.Items.Add(" ," + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
+                            arbeitenUpdateOrderSelectComboBox.Items.Add(((item.IndexNumber == null) ? "" : item.IndexNumber.ToString() + "/" + item.Date.Value.Year + ", ") + item.Date.Value.ToShortDateString() + " " + item.Date.Value.ToShortTimeString() + " [" + item.Id + "]");
                         }
                     }
                 }

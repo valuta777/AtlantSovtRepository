@@ -3251,6 +3251,7 @@ namespace AtlantSovt
             OrderUpdateLanguageSelectComboBox.DroppedDown = true;
         }
         #endregion
+
         //Arbeiten
         #region Arbeiten
         private void arbeitenShowMainDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -3275,30 +3276,35 @@ namespace AtlantSovt
             LoadArbeitenAddOrderSelectComboBox();
             arbeitenAddOrderSelectComboBox.DroppedDown = true;
         }
+
         private void arbeitenAddOrderSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitOrderArbeitenAdd();
             LoadArbeitenAddTransporterTextBox();
             LoadArbeitenAddClientTextBox();
         }
+
         private void arbeitenAddOrderSelectComboBox_TextUpdate(object sender, EventArgs e)
         {
             SplitOrderArbeitenAdd();
             LoadArbeitenAddTransporterTextBox();
             LoadArbeitenAddClientTextBox();
         }
+        
         private void arbeitenAddOrderFilterDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             arbeitenAddOrderSelectComboBox.SelectedIndex = -1;
             arbeitenAddOrderSelectComboBox.Items.Clear();
             LoadArbeitenAddOrderSelectComboBox();
         }
+        
         private void arbeitenAddOrderFilterCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             arbeitenAddOrderSelectComboBox.SelectedIndex = -1;
             arbeitenAddOrderSelectComboBox.Items.Clear();
             LoadArbeitenAddOrderSelectComboBox();
         }
+        
         private void arbeitenShowSearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -3338,6 +3344,7 @@ namespace AtlantSovt
             LoadArbeitenUpdateOrderSelectComboBox();
             arbeitenUpdateOrderSelectComboBox.DroppedDown = true;
         }    
+
         private void arbeitenUpdateOrderSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SplitOrderArbeitenUpdate();
@@ -3352,12 +3359,14 @@ namespace AtlantSovt
             LoadArbeitenUpdateTransporterTextBox();
             LoadArbeitenUpdateClientTextBox();
         }
+
         private void arbeitenUpdateOrderFilterDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             arbeitenUpdateOrderSelectComboBox.SelectedIndex = -1;
             arbeitenUpdateOrderSelectComboBox.Items.Clear();
             LoadArbeitenUpdateOrderSelectComboBox();
         }
+
         private void arbeitenUpdateOrderFilterCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             arbeitenUpdateOrderSelectComboBox.SelectedIndex = -1;
@@ -3365,18 +3374,15 @@ namespace AtlantSovt
             LoadArbeitenUpdateOrderSelectComboBox();
         }
 
-        
-
         private void arbeitenUpdateButton_Click(object sender, EventArgs e)
         {
             UpdateArbeiten();
         }
 
-
         #endregion
 
         //Deletes
-        #region delete
+        #region Delete
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             helloPictureBox.Image = null;
@@ -3464,6 +3470,7 @@ namespace AtlantSovt
         {
             SplitItems();
         }
+
         private void deleteItemSelectComboBox_MouseClick(object sender, MouseEventArgs e)
         {
             LoadItems();
@@ -3478,8 +3485,14 @@ namespace AtlantSovt
             LoadItems();
         }
 
+        private void deleteDiaposoneSelectComboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoadDiapasone();
+        }
+
 
         #endregion
+
         //Translate
         #region Translate
         private void uaLangButton_Click(object sender, EventArgs e)
@@ -3513,5 +3526,6 @@ namespace AtlantSovt
             }
         } 
         #endregion
+
     }
 }

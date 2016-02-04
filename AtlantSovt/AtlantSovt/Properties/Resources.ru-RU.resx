@@ -829,4 +829,7 @@
   <data name="Штрафи_за_простої" xml:space="preserve">
     <value>Штрафы за простои</value>
   </data>
+  <data name="Місто" xml:space="preserve">
+    <value>Город</value>
+  </data>
 </root>
