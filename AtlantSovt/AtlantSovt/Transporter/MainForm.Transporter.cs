@@ -61,7 +61,6 @@ namespace AtlantSovt
                     Director = t.Director,
                     PhysicalAddress = t.PhysicalAddress,
                     GeographyAddress = t.GeographyAddress,
-                    ContractType = (t.ContractType == true) ? AtlantSovt.Properties.Resources.Оригінал : AtlantSovt.Properties.Resources.Факс,
                     TaxPayerStatusId = t.TaxPayerStatu.Status,
                     WorkDocumentId = t.WorkDocument.Status,
                 };
@@ -73,9 +72,8 @@ namespace AtlantSovt
                 transporterShowDataGridView.Columns[3].HeaderText = AtlantSovt.Properties.Resources.П_І_Б_Директора;
                 transporterShowDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Фізична_адреса;
                 transporterShowDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Юридична_адреса;
-                transporterShowDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Стан_договору;
-                transporterShowDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.Статус_платника_податку;
-                transporterShowDataGridView.Columns[8].HeaderText = AtlantSovt.Properties.Resources.На_основі;
+                transporterShowDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.Статус_платника_податку;
+                transporterShowDataGridView.Columns[7].HeaderText = AtlantSovt.Properties.Resources.На_основі;
 
 
             } transporterShowDataGridView.Update();
