@@ -189,9 +189,12 @@ namespace AtlantSovt
                             resultCounter++;
                             ObjWorkSheet.Cells[resultCounter, 1] = AtlantSovt.Properties.Resources.Країна;
                             ObjWorkSheet.Cells[resultCounter, 2] = AtlantSovt.Properties.Resources.Код_міста;
-                            ObjWorkSheet.Cells[resultCounter, 4] = AtlantSovt.Properties.Resources.Країна;
-                            ObjWorkSheet.Cells[resultCounter, 5] = AtlantSovt.Properties.Resources.Код_міста;
-                            ObjWorkSheet.Range[ObjWorkSheet.Cells[resultCounter, 1], ObjWorkSheet.Cells[resultCounter, 5]].Interior.Color = subcellsColor;
+                            ObjWorkSheet.Cells[resultCounter, 3] = AtlantSovt.Properties.Resources.Місто;
+                            ObjWorkSheet.Cells[resultCounter, 5] = AtlantSovt.Properties.Resources.Країна;
+                            ObjWorkSheet.Cells[resultCounter, 6] = AtlantSovt.Properties.Resources.Код_міста;
+                            ObjWorkSheet.Cells[resultCounter, 7] = AtlantSovt.Properties.Resources.Місто;
+
+                            ObjWorkSheet.Range[ObjWorkSheet.Cells[resultCounter, 1], ObjWorkSheet.Cells[resultCounter, 7]].Interior.Color = subcellsColor;
 
                             resultCounter++;
                             if(orderTracking.OrderDownloadAddresses.ToList().Count != 0)
@@ -200,6 +203,8 @@ namespace AtlantSovt
                                 {
                                     ObjWorkSheet.Cells[daCounter + resultCounter, 1] = (da.Country != null) ? da.Country.Name : "";
                                     ObjWorkSheet.Cells[daCounter + resultCounter, 2] = (da.CityCode != "") ? da.CityCode : "";
+                                    ObjWorkSheet.Cells[daCounter + resultCounter, 3] = (da.CityName != "") ? da.CityName : "";
+
                                     daCounter++;
                                 }
                             }
@@ -208,8 +213,10 @@ namespace AtlantSovt
                             { 
                                 foreach (UploadAddress ua in orderTracking.OrderUploadAdresses.Select(ua => ua.UploadAddress).ToList())
                                 {
-                                    ObjWorkSheet.Cells[uaCounter + resultCounter, 4] = (ua.Country != null) ? ua.Country.Name : "";
-                                    ObjWorkSheet.Cells[uaCounter + resultCounter, 5] = (ua.CityCode != "") ? ua.CityCode : "";
+                                    ObjWorkSheet.Cells[uaCounter + resultCounter, 5] = (ua.Country != null) ? ua.Country.Name : "";
+                                    ObjWorkSheet.Cells[uaCounter + resultCounter, 6] = (ua.CityCode != "") ? ua.CityCode : "";
+                                    ObjWorkSheet.Cells[uaCounter + resultCounter, 7] = (ua.CityName != "") ? ua.CityName : "";
+
                                     uaCounter++;
                                 }
                             }
