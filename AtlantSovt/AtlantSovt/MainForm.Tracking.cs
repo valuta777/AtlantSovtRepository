@@ -691,43 +691,45 @@ namespace AtlantSovt
                         orderNumber = orderDocument.IndexNumber + @"/" + orderDocument.Date.Value.Year;
                         createDate = orderDocument.Date.Value.ToShortDateString();
 
-                        //if (orderDocument.DownloadDateFrom.HasValue)
-                        //{
-                        //    if (orderDocument.DownloadDateTo.HasValue)
-                        //    {
-                        //        if (orderDocument.DownloadDateFrom.Value.Year != orderDocument.DownloadDateTo.Value.Year)
-                        //        {
-                        //            dateTerms += orderDocument.DownloadDateFrom.Value.Day.ToString().PadLeft(2, '0') +
-                        //                "." + orderDocument.DownloadDateFrom.Value.Month.ToString().PadLeft(2, '0') +
-                        //                "." + orderDocument.DownloadDateFrom.Value.Year.ToString() +
-                        //                " - " + orderDocument.DownloadDateTo.Value.ToShortDateString();
-                        //        }
-                        //        else if (orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month)
-                        //        {
-                        //            dateTerms += orderDocument.DownloadDateFrom.Value.Day.ToString().PadLeft(2, '0') +
-                        //                "." + orderDocument.DownloadDateFrom.Value.Month.ToString().PadLeft(2, '0') +
-                        //                " - " + orderDocument.DownloadDateTo.Value.ToShortDateString();
-                        //        }
-                        //        else
-                        //        {
-                        //            dateTerms += orderDocument.DownloadDateFrom.Value.Day.ToString().PadLeft(2, '0') +
-                        //                " - " + orderDocument.DownloadDateTo.Value.ToShortDateString();
-                        //        }
-                        //        downloadDate = dateTerms;
-                        //        downloadDate += " на " + orderDocument.DownloadDateTo.Value.ToShortTimeString();
-                        //    }
-                        //    else
-                        //    {
-                        //        dateTerms += orderDocument.DownloadDateFrom.Value.ToShortDateString();
-                        //        downloadDate = dateTerms;
-                        //        downloadDate += " на " + orderDocument.DownloadDateFrom.Value.ToShortTimeString();
-                        //    }                            
-                        //    dateTerms += " — ";
-                        //}
-                        //else
-                        //{
-                        //    dateTerms = "";
-                        //}
+                        if (orderDocument.DownloadDateFrom.HasValue)
+                        {
+                            if (orderDocument.DownloadDateTo.HasValue)
+                            {
+                                if (orderDocument.DownloadDateFrom.Value.Year != orderDocument.DownloadDateTo.Value.Year)
+                                {
+                                    dateTerms += orderDocument.DownloadDateFrom.Value.Day.ToString().PadLeft(2, '0') +
+                                        "." + orderDocument.DownloadDateFrom.Value.Month.ToString().PadLeft(2, '0') +
+                                        "." + orderDocument.DownloadDateFrom.Value.Year.ToString() +
+                                        " - " + orderDocument.DownloadDateTo.Value.ToShortDateString();
+                                }
+                                else if (orderDocument.DownloadDateFrom.Value.Month != orderDocument.DownloadDateTo.Value.Month)
+                                {
+                                    dateTerms += orderDocument.DownloadDateFrom.Value.Day.ToString().PadLeft(2, '0') +
+                                        "." + orderDocument.DownloadDateFrom.Value.Month.ToString().PadLeft(2, '0') +
+                                        " - " + orderDocument.DownloadDateTo.Value.ToShortDateString();
+                                }
+                                else
+                                {
+                                    dateTerms += orderDocument.DownloadDateFrom.Value.Day.ToString().PadLeft(2, '0') +
+                                        " - " + orderDocument.DownloadDateTo.Value.ToShortDateString();
+                                }
+                                downloadDate = dateTerms;
+                                downloadDate += " на " + orderDocument.DownloadDateTo.Value.ToShortTimeString();
+                            }
+                            else
+                            {
+                                dateTerms += orderDocument.DownloadDateFrom.Value.ToShortDateString();
+                                downloadDate = dateTerms;
+                                downloadDate += " на " + orderDocument.DownloadDateFrom.Value.ToShortTimeString();
+                            }
+                            dateTerms += " — ";
+                        }
+                        else
+                        {
+                            dateTerms = "";
+                        }
+
+                        dateTerms = "";
 
                         if (orderDocument.UploadDateFrom.HasValue)
                         {
