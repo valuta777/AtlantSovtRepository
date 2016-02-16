@@ -691,9 +691,6 @@ namespace AtlantSovt
                         orderNumber = orderDocument.IndexNumber + @"/" + orderDocument.Date.Value.Year;
                         createDate = orderDocument.Date.Value.ToShortDateString();
 
-                        
-                        
-                       
                         if (orderDocument.DownloadDateFrom.HasValue)
                         {
                             if (orderDocument.DownloadDateTo.HasValue)
@@ -724,13 +721,15 @@ namespace AtlantSovt
                                 dateTerms += orderDocument.DownloadDateFrom.Value.ToShortDateString();
                                 downloadDate = dateTerms;
                                 downloadDate += " на " + orderDocument.DownloadDateFrom.Value.ToShortTimeString();
-                            }                            
+                            }
                             dateTerms += " — ";
                         }
                         else
                         {
                             dateTerms = "";
                         }
+
+                        dateTerms = "";
 
                         if (orderDocument.UploadDateFrom.HasValue)
                         {
@@ -768,8 +767,6 @@ namespace AtlantSovt
                         {
                             dateTerms = "";
                         }
-
-                      
 
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).Count() == 1)
                         {

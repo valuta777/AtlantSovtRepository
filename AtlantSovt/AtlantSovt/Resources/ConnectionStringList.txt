@@ -2,7 +2,7 @@ data source=109.251.24.20;initial catalog=AtlantSovt;persist security info=True;
 
 
 
-data source=YURIYKURKO\SQLEXPRESS;initial catalog=AtlantSovt;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework; Connection Timeout = 30
+data source=YK-WORK\SQLEXPRESS;initial catalog=AtlantSovt;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework; Connection Timeout = 30
 
 
 
