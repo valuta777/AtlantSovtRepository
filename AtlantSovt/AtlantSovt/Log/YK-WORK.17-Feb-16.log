@@ -1,0 +1,29 @@
+
+[0:17.02.2016 02:11:22.483]	
+   at Microsoft.Office.Interop.Word.Find.Execute(Object& FindText, Object& MatchCase, Object& MatchWholeWord, Object& MatchWildcards, Object& MatchSoundsLike, Object& MatchAllWordForms, Object& Forward, Object& Wrap, Object& Format, Object& ReplaceWith, Object& Replace, Object& MatchKashida, Object& MatchDiacritics, Object& MatchAlefHamza, Object& MatchControl)
+   at AtlantSovt.MainForm.ReplaseWordStub(String stubToReplace, String text, Document wordDocument) in E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\MainForm.Documentation.cs:line 1219
+   at AtlantSovt.MainForm.CreateOrderDocument() in E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\MainForm.Tracking.cs:line 922	
+String parameter too long.
+
+[0:17.02.2016 02:31:17.768]	
+   at Microsoft.Office.Interop.Word.Find.Execute(Object& FindText, Object& MatchCase, Object& MatchWholeWord, Object& MatchWildcards, Object& MatchSoundsLike, Object& MatchAllWordForms, Object& Forward, Object& Wrap, Object& Format, Object& ReplaceWith, Object& Replace, Object& MatchKashida, Object& MatchDiacritics, Object& MatchAlefHamza, Object& MatchControl)
+   at AtlantSovt.MainForm.ReplaseWordStub(String stubToReplace, String text, Document wordDocument) in E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\MainForm.Documentation.cs:line 1219
+   at AtlantSovt.MainForm.CreateOrderDocument() in E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\MainForm.Tracking.cs:line 936	
+String parameter too long.
+
+[0:17.02.2016 02:33:03.876]	
+   at Microsoft.Office.Interop.Word.Find.Execute(Object& FindText, Object& MatchCase, Object& MatchWholeWord, Object& MatchWildcards, Object& MatchSoundsLike, Object& MatchAllWordForms, Object& Forward, Object& Wrap, Object& Format, Object& ReplaceWith, Object& Replace, Object& MatchKashida, Object& MatchDiacritics, Object& MatchAlefHamza, Object& MatchControl)
+   at AtlantSovt.MainForm.ReplaseWordStub(String stubToReplace, String text, Document wordDocument) in E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\MainForm.Documentation.cs:line 1218
+   at AtlantSovt.MainForm.CreateOrderDocument() in E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\MainForm.Tracking.cs:line 935	
+String parameter too long.
+
+[0:17.02.2016 02:34:25.449]	
+   at Microsoft.Office.Interop.Word.Find.Execute(Object& FindText, Object& MatchCase, Object& MatchWholeWord, Object& MatchWildcards, Object& MatchSoundsLike, Object& MatchAllWordForms, Object& Forward, Object& Wrap, Object& Format, Object& ReplaceWith, Object& Replace, Object& MatchKashida, Object& MatchDiacritics, Object& MatchAlefHamza, Object& MatchControl)
+   at AtlantSovt.MainForm.ReplaseWordStub(String stubToReplace, String text, Document wordDocument) in E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\MainForm.Documentation.cs:line 1218
+   at AtlantSovt.MainForm.CreateOrderDocument() in E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\MainForm.Tracking.cs:line 935	
+String parameter too long.
+
+[0:17.02.2016 03:07:49.495]	
+   at Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   at AtlantSovt.MainForm.CreateOrderDocument() in E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\MainForm.Tracking.cs:line 671	
+Command failed

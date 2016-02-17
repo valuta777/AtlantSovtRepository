@@ -23,26 +23,23 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long Id { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string Name { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string Director { get; set; }
 
         [StringLength(200)]
         public string PhysicalAddress { get; set; }
 
         [StringLength(200)]
-        public string GeografphyAddress { get; set; }
+        public string GeographyAddress { get; set; }
 
         public long? WorkDocumentId { get; set; }
 
         public long? TaxPayerStatusId { get; set; }
 
         public bool? ContractType { get; set; }
-
-        [StringLength(50)]
-        public string ContractNumber { get; set; }
 
         public string Comment { get; set; }
 

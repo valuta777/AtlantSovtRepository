@@ -43,7 +43,7 @@ namespace AtlantSovt
                     Name = c.Name,
                     Director = c.Director,
                     PhysicalAddress = c.PhysicalAddress,
-                    GeografphyAddress = c.GeografphyAddress,
+                    GeografphyAddress = c.GeographyAddress,
                     TaxPayerStatusId = c.TaxPayerStatu.Status,
                     WorkDocumentId = c.WorkDocument.Status,
                 };
@@ -152,7 +152,7 @@ namespace AtlantSovt
                     Name = c.Name,
                     Director = c.Director,
                     PhysicalAddress = c.PhysicalAddress,
-                    GeografphyAddress = c.GeografphyAddress,
+                    GeografphyAddress = c.GeographyAddress,
                     TaxPayerStatusId = c.TaxPayerStatu.Status,
                     WorkDocumentId = c.WorkDocument.Status,
                 };
@@ -220,7 +220,7 @@ namespace AtlantSovt
                             Name = new_Name,
                             Director = new_Director,
                             PhysicalAddress = new_PhysicalAddress,
-                            GeografphyAddress = new_GeografphyAddress,
+                            GeographyAddress = new_GeografphyAddress,
                             Comment = new_Comment,
                         };
                     }
@@ -232,7 +232,7 @@ namespace AtlantSovt
                             Name = new_Name,
                             Director = new_Director,
                             PhysicalAddress = new_PhysicalAddress,
-                            GeografphyAddress = new_GeografphyAddress,
+                            GeographyAddress = new_GeografphyAddress,
                             WorkDocumentId = new_WorkDocumentId,
                             TaxPayerStatusId = new_TaxPayerStatusId,
                             Comment = new_Comment,
@@ -246,7 +246,7 @@ namespace AtlantSovt
                             Name = new_Name,
                             Director = new_Director,
                             PhysicalAddress = new_PhysicalAddress,
-                            GeografphyAddress = new_GeografphyAddress,
+                            GeographyAddress = new_GeografphyAddress,
                             WorkDocumentId = new_WorkDocumentId,
                             Comment = new_Comment,
                         };
@@ -259,7 +259,7 @@ namespace AtlantSovt
                             Name = new_Name,
                             Director = new_Director,
                             PhysicalAddress = new_PhysicalAddress,
-                            GeografphyAddress = new_GeografphyAddress,
+                            GeographyAddress = new_GeografphyAddress,
                             TaxPayerStatusId = new_TaxPayerStatusId,
                             Comment = new_Comment,
                         };
@@ -400,7 +400,7 @@ namespace AtlantSovt
                     updateClientNameTextBox.Text = Convert.ToString(client.Name);
                     updateClientDirectorTextBox.Text = Convert.ToString(client.Director);
                     updateClientPhysicalAddressTextBox.Text = Convert.ToString(client.PhysicalAddress);
-                    updateClientGeorgaphyAddressTextBox.Text = Convert.ToString(client.GeografphyAddress);
+                    updateClientGeorgaphyAddressTextBox.Text = Convert.ToString(client.GeographyAddress);
                     updateClientNoteTextBox.Text = Convert.ToString(client.Comment);
 
                     if (client.WorkDocument != null)
@@ -579,7 +579,7 @@ namespace AtlantSovt
                         }
                         if (clientGeographyAddressChanged)
                         {
-                            client.GeografphyAddress = updateClientGeorgaphyAddressTextBox.Text;
+                            client.GeographyAddress = updateClientGeorgaphyAddressTextBox.Text;
                         }
                         if (clientCommentChanged)
                         {

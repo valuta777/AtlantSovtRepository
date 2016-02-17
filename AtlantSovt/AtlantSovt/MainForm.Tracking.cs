@@ -908,21 +908,26 @@ namespace AtlantSovt
                         ReplaseWordStub("{OrderNumber}", orderNumber, wordDocument);
                         ReplaseWordStub("{CreateDate}", createDate, wordDocument);
                         ReplaseWordStub("{DownloadDate}", downloadDate, wordDocument);
-                        ReplaseWordStub("{DownloadAddress}", downloadAddress, wordDocument);
+
+                        CheckStringLength("{DownloadAddress}", downloadAddress, wordDocument, 200);
+                        CheckStringLength("{UploadAddress}", uploadAddress, wordDocument, 200);
+                        CheckStringLength("{CustomAddress}", customAddress, wordDocument, 200);
+                        CheckStringLength("{UncustomAddress}", uncustomAddress, wordDocument, 200);
+
                         ReplaseWordStub("{DownloadAddressContactPerson}", downloadAddressContactPerson, wordDocument);
-                        ReplaseWordStub("{CustomAddress}", customAddress, wordDocument);
                         ReplaseWordStub("{CargoType}", cargoType, wordDocument);
                         ReplaseWordStub("{Weight}", weight, wordDocument);
                         ReplaseWordStub("{TIRCMR}", tirCmr, wordDocument);
                         ReplaseWordStub("{LoadingForm1}", loadingForm1, wordDocument);
                         ReplaseWordStub("{LoadingForm2}", loadingForm2, wordDocument);
                         ReplaseWordStub("{DateTerms}", dateTerms, wordDocument);
-                        ReplaseWordStub("{UncustomAddress}", uncustomAddress, wordDocument);
-                        ReplaseWordStub("{UploadAddress}", uploadAddress, wordDocument);
-                        ReplaseWordStub("{PaymentTerms}", paymentTerms, wordDocument);
+
+                        CheckStringLength("{PaymentTerms}", paymentTerms, wordDocument, 200);
+                        CheckStringLength("{AdditionalTerms}", additionalTerms, wordDocument, 200);
+
                         ReplaseWordStub("{Cube}", cube, wordDocument);
                         ReplaseWordStub("{Trailer}", trailer, wordDocument);
-                        ReplaseWordStub("{AdditionalTerms}", additionalTerms , wordDocument);
+
                         ReplaseWordStub("{RegularyDelay1}", regularyDelay[0], wordDocument);
                         ReplaseWordStub("{RegularyDelay2}", regularyDelay[1], wordDocument);
                         ReplaseWordStub("{RegularyDelay3}", regularyDelay[2], wordDocument);
@@ -1136,6 +1141,30 @@ namespace AtlantSovt
                 ShowTrackingSearch(trackingShowDataGridView, trackingShowSearchTextBox, showTrackingDateTimePicker, showTrackingOnlyActive);
             }
             trackingShowDataGridView.Update();
+        }
+
+        void CheckStringLength(string strToFind, string strToCheck, Microsoft.Office.Interop.Word.Document wordDocument, int chunkSize)
+        {
+            if (strToCheck.Length > chunkSize)
+            {
+
+                int offset = 0;
+                while (offset < strToCheck.Length)
+                {
+                    int size = Math.Min(chunkSize, strToCheck.Length - offset);
+                    string temp = strToCheck.Substring(offset, size);
+                    offset += size;
+                    if(offset < strToCheck.Length)
+                    {
+                        temp += strToFind;
+                    }
+                    ReplaseWordStub(strToFind, temp, wordDocument);
+                }
+            }
+            else
+            {
+                ReplaseWordStub(strToFind, strToCheck, wordDocument);
+            }
         }
     }
 }
