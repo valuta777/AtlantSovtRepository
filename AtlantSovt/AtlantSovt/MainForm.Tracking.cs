@@ -800,6 +800,7 @@ namespace AtlantSovt
                         string weight = (orderDocument.CargoWeight == null || orderDocument.CargoWeight == "") ? "" : orderDocument.CargoWeight;
                         string orderDeny = (orderDocument.OrderDeny == null || orderDocument.OrderDeny.Type == "") ? "____________________" : orderDocument.OrderDeny.Type;
                         string tirCmr = (orderDocument.TirCmr == null || orderDocument.TirCmr.Type == "") ? "" : orderDocument.TirCmr.Type;
+                        string adr = (orderDocument.ADRNumber == null || orderDocument.ADRNumber.ToString() == "") ? "" : orderDocument.ADRNumber.ToString();
 
                         if (orderDocument.RegularyDelay == null || orderDocument.RegularyDelay.Type == "" || orderDocument.RegularyDelay.Type.Split(new char[] { '-' }).Count() < 4 )
                         {
@@ -934,6 +935,7 @@ namespace AtlantSovt
                         ReplaseWordStub("{RegularyDelay4}", regularyDelay[3], wordDocument);
                         ReplaseWordStub("{OrderDeny}", orderDeny, wordDocument);
                         ReplaseWordStub("{Freight}", freight, wordDocument);
+                        ReplaseWordStub("{ADR}", adr, wordDocument);
                         ReplaseWordStub("{FineForDelay}", fineForDelay, wordDocument);
                         ReplaseWordStub("{TransporterName}", transporterName, wordDocument);
 
