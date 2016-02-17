@@ -345,7 +345,7 @@ namespace AtlantSovt
                     var clientName = clientDocument.Name;
                     var clientDirector = clientDocument.Director;
                     var clientPhysicalAddress = clientDocument.PhysicalAddress;
-                    var clientGeographycalAddress = clientDocument.GeografphyAddress;
+                    var clientGeographycalAddress = clientDocument.GeographyAddress;
 
                     string clientWorkDocument = "";
                     string clientTaxPayerStatus = "";
@@ -1014,7 +1014,7 @@ namespace AtlantSovt
                         var clientName = (clientDocument.Name == "" || clientDocument.Name == null) ? "_______________" : clientDocument.Name;
                         var clientDirector = (clientDocument.Director == "" || clientDocument.Director == null) ? "_______________" : clientDocument.Director;
                         var clientPhysicalAddress = (clientDocument.PhysicalAddress == "" || clientDocument.PhysicalAddress == null) ? "_______________" : clientDocument.PhysicalAddress;
-                        var clientGeographycalAddress = (clientDocument.GeografphyAddress == "" || clientDocument.GeografphyAddress == null) ? "_______________" : clientDocument.GeografphyAddress;
+                        var clientGeographycalAddress = (clientDocument.GeographyAddress == "" || clientDocument.GeographyAddress == null) ? "_______________" : clientDocument.GeographyAddress;
 
                         string clientWorkDocument = "_______________";
                         string clientTaxPayerStatus = "_______________";
