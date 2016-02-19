@@ -83,7 +83,7 @@ namespace AtlantSovt
                     db.Orders.Add(New_Order);
                     db.Entry(New_Order).State = EntityState.Added;
                     db.SaveChanges();
-                    string massage = AtlantSovt.Properties.Resources.Заявку_успішно_створено;
+                    string massage = AtlantSovt.Properties.Resources.Заявку_успішно_створено + Environment.NewLine;
 
                     massage += BridgeAddes(New_Order);
                     ClearAllBoxesOrderAdd();

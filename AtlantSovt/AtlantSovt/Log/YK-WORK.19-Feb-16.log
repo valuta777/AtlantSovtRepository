@@ -1,0 +1,14 @@
+
+[0:19.02.2016 04:15:47.993]	
+   at AtlantSovt.MainForm.CreateOrderDocument() in E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\MainForm.Tracking.cs:line 956	
+Object reference not set to an instance of an object.
+
+[0:19.02.2016 04:17:23.988]	
+   at Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   at AtlantSovt.MainForm.CreateOrderDocument() in E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\MainForm.Tracking.cs:line 673	
+Command failed
+
+[0:19.02.2016 04:24:27.734]	
+   at Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   at AtlantSovt.MainForm.CreateOrderDocument() in E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\MainForm.Tracking.cs:line 673	
+Command failed

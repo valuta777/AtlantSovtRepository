@@ -272,7 +272,7 @@ namespace AtlantSovt
                         }
 
                         db.SaveChanges();
-                        return AtlantSovt.Properties.Resources.Успішно_вибрано + customsAddressesListBox.CheckedItems.Count + AtlantSovt.Properties.Resources.Адрес_замитнення;
+                        return AtlantSovt.Properties.Resources.Успішно_вибрано + customsAddressesListBox.CheckedItems.Count + AtlantSovt.Properties.Resources.Адрес_замитнення + Environment.NewLine;
                     }
                 }
                 catch (Exception ex)
