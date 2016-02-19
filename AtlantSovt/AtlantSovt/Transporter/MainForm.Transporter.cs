@@ -7266,12 +7266,12 @@ namespace AtlantSovt
 ";
                         if (addTransporterBankDetailsAddForm != null)
                         {
-                            massage += addTransporterBankDetailsAddForm.AddTransporterBankDetail(New_Transporter.Id, true);
+                            massage += addTransporterBankDetailsAddForm.AddTransporterBankDetail(New_Transporter.Id, true) + Environment.NewLine;
                             addTransporterBankDetailsAddForm = null;
                         }
                         if (addTransporterContactAddForm != null)
                         {
-                            massage += addTransporterContactAddForm.AddTransporterContact(New_Transporter.Id , true);
+                            massage += addTransporterContactAddForm.AddTransporterContact(New_Transporter.Id , true) + Environment.NewLine;
                             addTransporterContactAddForm = null;
                         }
                         if (transporterCountryAndVehicleSelectForm != null)

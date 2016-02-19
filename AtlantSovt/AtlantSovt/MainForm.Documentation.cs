@@ -256,7 +256,7 @@ namespace AtlantSovt
                         forwarderWorkDocument != "" && forwarderTaxPayerStatus != "" &&
                         forwarderBankDetailsBankName != "" && forwarderBankDetailsAccountNumber != "" && forwarderBankDetailsCertificateNumber != "" && forwarderBankDetailsCertificateSerial != "" &&
                         forwarderBankDetailsEDRPOU != "" && forwarderBankDetailsIBAN != "" &&
-                        forwarderBankDetailsIPN != "" && forwarderBankDetailsMFO != "" && forwarderBankDetailsSWIFT != "" && forwader.ForwarderStamp.Stamp != null)
+                        forwarderBankDetailsIPN != "" && forwarderBankDetailsMFO != "" && forwarderBankDetailsSWIFT != "" && forwader.ForwarderStamp != null)
                     {
                         isForwarderFull = true;
                     }
@@ -944,7 +944,7 @@ namespace AtlantSovt
                         ReplaseWordStub("{FirstForwarderBankName}", firstForwarderBankDetailsBankName, wordDocument);
                         ReplaseWordStub("{FirstForwarderMFO}", firstForwarderBankDetailsMFO, wordDocument);
 
-                        if (firstForwarderStamp.Stamp != null)
+                        if (firstForwarderStamp != null)
                         {
                             AddStamp(wordDocument, UploadForwarderStapm(firstForwarderDocument), "{FirstForwarderStamp}");
                             AddStamp(wordDocument, UploadForwarderStapm(firstForwarderDocument), "{FirstForwarderStamp1}");
@@ -1122,7 +1122,7 @@ namespace AtlantSovt
                         ReplaseWordStub("{SecondForwarderBankName}", secondForwarderBankDetailsBankName, wordDocument);
                         ReplaseWordStub("{SecondForwarderMFO}", secondForwarderBankDetailsMFO, wordDocument);
 
-                        if (secondForwarderStamp.Stamp != null)
+                        if (secondForwarderStamp != null)
                         {
                             AddStamp(wordDocument, UploadForwarderStapm(secondForwarderDocument), "{SecondForwarderStamp}");
                             AddStamp(wordDocument, UploadForwarderStapm(secondForwarderDocument), "{SecondForwarderStamp1}");
