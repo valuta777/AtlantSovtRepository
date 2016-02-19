@@ -19,10 +19,10 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long Id { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string Name { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string Director { get; set; }
 
         [StringLength(200)]
