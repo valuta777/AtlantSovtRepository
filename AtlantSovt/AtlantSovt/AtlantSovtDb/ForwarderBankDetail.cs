@@ -11,31 +11,31 @@ namespace AtlantSovt.AtlantSovtDb
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Id { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string BankName { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string MFO { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string AccountNumber { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string EDRPOU { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string IPN { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string CertificateSerial { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string CertificateNamber { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string SWIFT { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string IBAN { get; set; }
 
         public virtual Forwarder Forwarder { get; set; }

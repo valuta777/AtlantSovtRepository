@@ -43,7 +43,7 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long? CargoId { get; set; }
 
-        [StringLength(100)]
+        [StringLength(200)]
         public string CargoWeight { get; set; }
 
         public int? ADRNumber { get; set; }

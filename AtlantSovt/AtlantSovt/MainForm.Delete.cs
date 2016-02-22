@@ -1,4 +1,5 @@
-﻿using AtlantSovt.AtlantSovtDb;
+﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -96,6 +97,7 @@ namespace AtlantSovt
                             }
                             catch (Exception ex)
                             {
+                                Log.Write(ex);
                                 MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                             }
                         }
@@ -108,6 +110,7 @@ namespace AtlantSovt
                 }
                 catch(Exception exx)
                 {
+                    Log.Write(exx);
                     MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + exx.Message);
                 }
             }
@@ -198,6 +201,7 @@ namespace AtlantSovt
                 }
                 catch (Exception ex)
                 {
+                    Log.Write(ex);
                     MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                 }
             }
@@ -294,6 +298,7 @@ namespace AtlantSovt
                 }
                 catch (Exception ex)
                 {
+                    Log.Write(ex);
                     MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                 }
             }
@@ -337,6 +342,7 @@ namespace AtlantSovt
                             }
                             catch (Exception ex)
                             {
+                                Log.Write(ex);
                                 MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + ex.Message);
                             }
                         }
@@ -349,6 +355,7 @@ namespace AtlantSovt
                 }
                 catch (Exception exx)
                 {
+                    Log.Write(exx);
                     MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + exx.Message);
                 }
             }
@@ -469,6 +476,7 @@ namespace AtlantSovt
 
                 catch (Exception exx)
                 {
+                    Log.Write(exx);
                     MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + exx.Message);
                 }
             }
@@ -521,6 +529,7 @@ namespace AtlantSovt
                 }
                 catch (Exception exx)
                 {
+                    Log.Write(exx);
                     MessageBox.Show(AtlantSovt.Properties.Resources.Помилка + exx.Message);
                 }
             }

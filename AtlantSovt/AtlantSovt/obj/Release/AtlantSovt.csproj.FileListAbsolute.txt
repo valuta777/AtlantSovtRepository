@@ -230,6 +230,7 @@ E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\EntityFrame
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\EntityFramework.xml
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\EntityFramework.SqlServer.xml
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\ru\EntityFramework.resources.dll
+E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.csprojResolveAssemblyReference.cache
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\Interop.VBIDE.dll
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.csproj.ResolveComReference.cache
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.AddStaffForm.resources

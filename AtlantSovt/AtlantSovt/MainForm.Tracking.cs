@@ -525,6 +525,7 @@ namespace AtlantSovt
                 var ClikedId = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
 
                 orderDocument = db.Orders.Find(ClikedId);
+                
 
                 if (orderDocument != null)
                 {
@@ -539,7 +540,7 @@ namespace AtlantSovt
 
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).Count() == 1)
                         {
-                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.ForwarderStamp.Stamp == null)
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.ForwarderStamp == null)
                             {
                                 isOrderFull = false;
                             }
@@ -550,7 +551,7 @@ namespace AtlantSovt
                         }
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).Count() == 1)
                         {
-                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder.ForwarderStamp.Stamp == null)
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder.ForwarderStamp == null)
                             {
                                 isOrderFull = false;
                             }
@@ -668,6 +669,7 @@ namespace AtlantSovt
                 {
                     wordApp.Visible = false;
                     orderDocument = db.Orders.Find(ClikedId);
+
                     wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((orderDocument.Language == 0) ? ((orderDocument.ForwarderOrders.Where(f => f.IsFirst == 3).Count() != 0) ? @"Resources\Orders\ukrOrderFor3.docx" : @"Resources\Orders\ukrOrderFor2.docx") : (orderDocument.Language == 1) ? @"Resources\Orders\polOrder.docx" : @"Resources\gerOrder.docx")).Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""));
 
                     if (orderDocument != null)
@@ -800,6 +802,7 @@ namespace AtlantSovt
                         string weight = (orderDocument.CargoWeight == null || orderDocument.CargoWeight == "") ? "" : orderDocument.CargoWeight;
                         string orderDeny = (orderDocument.OrderDeny == null || orderDocument.OrderDeny.Type == "") ? "____________________" : orderDocument.OrderDeny.Type;
                         string tirCmr = (orderDocument.TirCmr == null || orderDocument.TirCmr.Type == "") ? "" : orderDocument.TirCmr.Type;
+                        string adr = (orderDocument.ADRNumber == null || orderDocument.ADRNumber.ToString() == "") ? "" : orderDocument.ADRNumber.ToString();
 
                         if (orderDocument.RegularyDelay == null || orderDocument.RegularyDelay.Type == "" || orderDocument.RegularyDelay.Type.Split(new char[] { '-' }).Count() < 4 )
                         {
@@ -934,13 +937,14 @@ namespace AtlantSovt
                         ReplaseWordStub("{RegularyDelay4}", regularyDelay[3], wordDocument);
                         ReplaseWordStub("{OrderDeny}", orderDeny, wordDocument);
                         ReplaseWordStub("{Freight}", freight, wordDocument);
+                        ReplaseWordStub("{ADR}", adr, wordDocument);
                         ReplaseWordStub("{FineForDelay}", fineForDelay, wordDocument);
                         ReplaseWordStub("{TransporterName}", transporterName, wordDocument);
 
 
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).Count() == 1)
                         {
-                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.ForwarderStamp.Stamp != null)
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.ForwarderStamp != null)
                             {
                                 AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder), "{Stamp1}");
                                 Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""), true);
@@ -949,7 +953,7 @@ namespace AtlantSovt
                         }
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).Count() == 1)
                         {
-                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder.ForwarderStamp.Stamp != null && orderDocument.Language == 0)
+                            if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder.ForwarderStamp != null && orderDocument.Language == 0)
                             {
                                 AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder), "{Stamp2}");
                                 Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""), true);
@@ -958,7 +962,7 @@ namespace AtlantSovt
                         }
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 3).Count() == 1)
                         {
-                            if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 3).FirstOrDefault().Forwarder.ForwarderStamp.Stamp != null && orderDocument.Language == 0)
+                            if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 3).FirstOrDefault().Forwarder.ForwarderStamp != null && orderDocument.Language == 0)
                             {
                                 AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 3).FirstOrDefault().Forwarder), "{Stamp3}");
                                 Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""), true);

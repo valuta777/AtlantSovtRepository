@@ -13,16 +13,16 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long TransporterId { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string Email { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string TelephoneNumber { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string FaxNumber { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string ContactPerson { get; set; }
 
         public virtual Transporter Transporter { get; set; }

@@ -18,7 +18,7 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long Id { get; set; }
 
-        [StringLength(100)]
+        [StringLength(200)]
         public string Status { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

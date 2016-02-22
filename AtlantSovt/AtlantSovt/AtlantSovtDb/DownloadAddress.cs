@@ -19,30 +19,30 @@ namespace AtlantSovt.AtlantSovtDb
 
         public long? CountryId { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string CountryCode { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string CityCode { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string CityName { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string StreetName { get; set; }
 
-        [StringLength(10)]
+        [StringLength(200)]
         public string HouseNumber { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string CompanyName { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string ContactPerson { get; set; }
 
         public long? ClientId { get; set; }
 
-        [StringLength(100)]
+        [StringLength(200)]
         public string ShortRoute { get; set; }
 
         public virtual Client Client { get; set; }

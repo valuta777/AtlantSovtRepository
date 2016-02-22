@@ -338,7 +338,7 @@ namespace AtlantSovt
 
                         if (addForwarderBankDetailsAddForm != null)
                         {
-                            massage += addForwarderBankDetailsAddForm.AddForwarderBankDetail(New_Forwarder.Id, true);
+                            massage += addForwarderBankDetailsAddForm.AddForwarderBankDetail(New_Forwarder.Id, true) + Environment.NewLine;
                             addForwarderBankDetailsAddForm = null;
                         }
                         if (addForwarderContactAddForm != null)

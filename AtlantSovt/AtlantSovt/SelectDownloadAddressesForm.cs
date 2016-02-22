@@ -271,7 +271,7 @@ namespace AtlantSovt
                             db.Orders.Find(order.Id).OrderDownloadAddresses.Add(new_OrderDownloadAddress);
                         }
                         db.SaveChanges();
-                        return  AtlantSovt.Properties.Resources.Успішно_вибрано + downloadAddresssListBox.CheckedItems.Count + AtlantSovt.Properties.Resources.Адрес_завантаження;
+                        return  AtlantSovt.Properties.Resources.Успішно_вибрано + downloadAddresssListBox.CheckedItems.Count + AtlantSovt.Properties.Resources.Адрес_завантаження + Environment.NewLine;
                     }
                 }
                 catch (Exception ex)

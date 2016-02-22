@@ -130,11 +130,6 @@ namespace AtlantSovt.AtlantSovtDb
                 .WithRequired(e => e.Forwarder)
                 .WillCascadeOnDelete();
 
-            modelBuilder.Entity<LoadingForm>()
-                .HasMany(e => e.OrderLoadingForms)
-                .WithRequired(e => e.LoadingForm)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<Order>()
                 .HasOptional(e => e.Arbeiten)
                 .WithRequired(e => e.Order)

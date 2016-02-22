@@ -268,7 +268,7 @@ namespace AtlantSovt
                     {
                         db.Clients.Add(New_Client);
                         db.SaveChanges();
-                        string borodakyrka = AtlantSovt.Properties.Resources.Клієнт_успішно_доданий + " [" + New_Client.Id + @"]";                      
+                        string borodakyrka = AtlantSovt.Properties.Resources.Клієнт_успішно_доданий + " [" + New_Client.Id + @"]" + Environment.NewLine;                      
 
                         if (addClientBankDetailsAddForm != null)
                         {

@@ -26,10 +26,10 @@ namespace AtlantSovt
                 if (addRegularyDelayTextBox.Text != "")
                 {
                     string new_Type ="";
-                    new_Type = addRegularyDelayTextBox.Text != "" ? new_Type + addRegularyDelayTextBox.Text : "__";
-                    new_Type = addRegularyDelayTextBox2.Text != "" ? new_Type +" - "+ addRegularyDelayTextBox2.Text : "__";
-                    new_Type = addRegularyDelayTextBox3.Text != "" ? new_Type +" - " + addRegularyDelayTextBox3.Text : "__";
-                    new_Type = addRegularyDelayTextBox4.Text != "" ? new_Type +" - " + addRegularyDelayTextBox4.Text : "__";
+                    new_Type = addRegularyDelayTextBox.Text != "" ? new_Type + addRegularyDelayTextBox.Text : new_Type + "__";
+                    new_Type = addRegularyDelayTextBox2.Text != "" ? new_Type +" - "+ addRegularyDelayTextBox2.Text : new_Type + " - " + "__";
+                    new_Type = addRegularyDelayTextBox3.Text != "" ? new_Type +" - " + addRegularyDelayTextBox3.Text : new_Type + " - " + "__";
+                    new_Type = addRegularyDelayTextBox4.Text != "" ? new_Type +" - " + addRegularyDelayTextBox4.Text : new_Type + " - " + "__";
                     var New_RegularyDelay = new RegularyDelay
                     {
                         Type = new_Type,
