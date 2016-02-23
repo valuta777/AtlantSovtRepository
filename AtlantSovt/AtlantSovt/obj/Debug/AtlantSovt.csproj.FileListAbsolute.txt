@@ -548,6 +548,7 @@ E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\ru-RU\AtlantSovt.resourc
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\uk-UA\AtlantSovt.resources.dll
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.exe
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.pdb
+E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\ru-RU\AtlantSovt.resources.dll
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Debug\AtlantSovt.exe.config
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\Interop.VBIDE.dll
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csproj.ResolveComReference.cache
@@ -704,7 +705,6 @@ E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.Tr
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.TransporterShowFiltrationForm.ru-RU.resources
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.TransporterShowFiltrationForm.uk-UA.resources
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csproj.GenerateResource.Cache
-E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\ru-RU\AtlantSovt.resources.dll
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\uk-UA\AtlantSovt.resources.dll
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.exe
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.pdb

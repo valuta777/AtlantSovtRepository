@@ -948,8 +948,6 @@ namespace AtlantSovt
                         {
                             AddStamp(wordDocument, UploadForwarderStapm(firstForwarderDocument), "{FirstForwarderStamp}");
                             AddStamp(wordDocument, UploadForwarderStapm(firstForwarderDocument), "{FirstForwarderStamp1}");
-                            Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""), true);
-                            Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""));
                         }
                     }
                     if (transporterDocument != null)
@@ -1126,8 +1124,6 @@ namespace AtlantSovt
                         {
                             AddStamp(wordDocument, UploadForwarderStapm(secondForwarderDocument), "{SecondForwarderStamp}");
                             AddStamp(wordDocument, UploadForwarderStapm(secondForwarderDocument), "{SecondForwarderStamp1}");
-                            Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""), true);
-                            Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""));
                         }
                     }
 
@@ -1184,13 +1180,19 @@ namespace AtlantSovt
         
         string UploadForwarderStapm(Forwarder forwarder)
         {
-            string path = "";
-            MemoryStream mStream = new MemoryStream(forwarder.ForwarderStamp.Stamp);
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\AtlantSovt\\Stamp\\Temp\\";
+
+            MemoryStream Stream = new MemoryStream(forwarder.ForwarderStamp.Stamp);
             
-            Image stamp = Image.FromStream(mStream);
-            path = (System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\" + forwarder.Id + ".png").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", "");
+            Image stamp = Image.FromStream(Stream);
+            if(!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
+            path += forwarder.Id + ".png";
             stamp.Save(path);
-            
+                        
             return path;
         }
 
@@ -1223,7 +1225,7 @@ namespace AtlantSovt
             contractFilecheckedListBox.Items.Clear();
             string[] searchPatterns = {"*.docx","*.doc","*.rtf"};
             List<string> fileList = new List<string>();
-            DirectoryInfo directory = new DirectoryInfo((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Contracts\").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""));
+            DirectoryInfo directory = new DirectoryInfo((System.AppDomain.CurrentDomain.BaseDirectory + "Resources\\Contracts\\").Replace("\\Release", "").Replace("\\Debug", "").Replace("\\bin", ""));
             List<FileInfo> files = new List<FileInfo>();
             foreach(string sp in searchPatterns)
             {
@@ -1243,13 +1245,12 @@ namespace AtlantSovt
                 contractFilecheckedListBox.Items.Add(file);
             }
         }
-
         string GetDocumentPath()
         {
             string filePath = "";
             try
             {
-                filePath = (System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Contracts\" + contract.TemplateName.ToString()).Replace("\\bin\\Release", "").Replace("\\bin\\Debug", "");
+                filePath = (System.AppDomain.CurrentDomain.BaseDirectory + "Resources\\Contracts\\" + contract.TemplateName.ToString()).Replace("\\Release", "").Replace("\\Debug", "").Replace("\\bin", "");
             }
             catch (Exception ex)
             {

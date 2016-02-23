@@ -29,35 +29,41 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConnectionForm));
-            this.connectionAnimation = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.connectionAnimation)).BeginInit();
+            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // connectionAnimation
+            // domainUpDown1
             // 
-            this.connectionAnimation.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.connectionAnimation, "connectionAnimation");
-            this.connectionAnimation.Image = global::AtlantSovt.Properties.Resources.con_anim;
-            this.connectionAnimation.Name = "connectionAnimation";
-            this.connectionAnimation.TabStop = false;
+            resources.ApplyResources(this.domainUpDown1, "domainUpDown1");
+            this.domainUpDown1.Name = "domainUpDown1";
+            // 
+            // pictureBox
+            // 
+            resources.ApplyResources(this.pictureBox, "pictureBox");
+            this.pictureBox.Image = global::AtlantSovt.Properties.Resources.con_anim;
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.TabStop = false;
             // 
             // ConnectionForm
             // 
             resources.ApplyResources(this, "$this");
-            this.Controls.Add(this.connectionAnimation);
+            this.Controls.Add(this.pictureBox);
+            this.Controls.Add(this.domainUpDown1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConnectionForm";
             this.ShowInTaskbar = false;
             this.TopMost = true;
             this.TransparencyKey = this.BackColor;
-            ((System.ComponentModel.ISupportInitialize)(this.connectionAnimation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox connectionAnimation;
+        private System.Windows.Forms.DomainUpDown domainUpDown1;
+        private System.Windows.Forms.PictureBox pictureBox;
     }
 }

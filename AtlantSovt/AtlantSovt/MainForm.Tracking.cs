@@ -660,7 +660,6 @@ namespace AtlantSovt
         {
             var wordApp = new Microsoft.Office.Interop.Word.Application();
             Document wordDocument = null;
-
             try
             {
                 var ClikedId = Convert.ToInt32(trackingShowDataGridView.CurrentRow.Cells[0].Value);
@@ -670,7 +669,7 @@ namespace AtlantSovt
                     wordApp.Visible = false;
                     orderDocument = db.Orders.Find(ClikedId);
 
-                    wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((orderDocument.Language == 0) ? ((orderDocument.ForwarderOrders.Where(f => f.IsFirst == 3).Count() != 0) ? @"Resources\Orders\ukrOrderFor3.docx" : @"Resources\Orders\ukrOrderFor2.docx") : (orderDocument.Language == 1) ? @"Resources\Orders\polOrder.docx" : @"Resources\gerOrder.docx")).Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""));
+                    wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((orderDocument.Language == 0) ? ((orderDocument.ForwarderOrders.Where(f => f.IsFirst == 3).Count() != 0) ? @"Resources\Orders\ukrOrderFor3.docx" : @"Resources\Orders\ukrOrderFor2.docx") : (orderDocument.Language == 1) ? @"Resources\Orders\polOrder.docx" : @"Resources\gerOrder.docx")).Replace("\\Release", "").Replace("\\Debug", "").Replace("\\bin", ""));
 
                     if (orderDocument != null)
                     {
@@ -947,8 +946,6 @@ namespace AtlantSovt
                             if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder.ForwarderStamp != null)
                             {
                                 AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder), "{Stamp1}");
-                                Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""), true);
-                                Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""));
                             }
                         }
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).Count() == 1)
@@ -956,8 +953,6 @@ namespace AtlantSovt
                             if(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder.ForwarderStamp != null && orderDocument.Language == 0)
                             {
                                 AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 2).FirstOrDefault().Forwarder), "{Stamp2}");
-                                Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""), true);
-                                Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""));
                             }
                         }
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 3).Count() == 1)
@@ -965,8 +960,6 @@ namespace AtlantSovt
                             if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 3).FirstOrDefault().Forwarder.ForwarderStamp != null && orderDocument.Language == 0)
                             {
                                 AddStamp(wordDocument, UploadForwarderStapm(orderDocument.ForwarderOrders.Where(f => f.IsFirst == 3).FirstOrDefault().Forwarder), "{Stamp3}");
-                                Directory.Delete((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp\").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""), true);
-                                Directory.CreateDirectory((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Temp").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", ""));
                             }
                         }
 

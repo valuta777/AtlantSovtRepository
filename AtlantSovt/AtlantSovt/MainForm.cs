@@ -36,46 +36,46 @@ namespace AtlantSovt
 
         //Client Forms
         Image forwarderAddStamp = null;
-            //Contact
+        //Contact
         ClientContactAddForm addClientContactAddForm, updateClientContactAddForm;
         ClientContactUpdateForm updateClientContactUpdateForm;
         ClientContactDeleteForm deleteClientContactDeleteForm;
-            //Bank Details
+        //Bank Details
         ClientBankDetailsAddForm addClientBankDetailsAddForm, updateClientBankDetailsAddForm;
         ClientBankDetailsUpdateForm updateClientBankDetailsUpdateForm;
         
-            //Forwarder Forms
+        //Forwarder Forms
 
             //Contact
         ForwarderContactAddForm addForwarderContactAddForm, updateForwarderContactAddForm;
         ForwarderContactUpdateForm updateForwarderContactUpdateForm;
         ForwarderContactDeleteForm deleteForwarderContactDeleteForm;       
-            //Bank Details
+        //Bank Details
         ForwarderBankDetailsAddForm addForwarderBankDetailsAddForm, updateForwarderBankDetailsAddForm;
         ForwarderBankDetailsUpdateForm updateForwarderBankDetailsUpdateForm;
 
-            //Transporter Forms
+        //Transporter Forms
 
             //Show 
         TransporterShowAdditionalDetailsForm transporterShowAdditionalDetailsForm;
         TransporterShowFiltrationForm transporterShowFiltrationForm;
-            //Countries and Vehicles
+        //Countries and Vehicles
         TransporterCountryAndVehicleSelectForm transporterCountryAndVehicleSelectForm;
         TransporterCountryUpdateVehicleSelectForm transporterCountryUpdateVehicleSelectForm;
-            //Contact
+        //Contact
         TransporterContactAddForm addTransporterContactAddForm, updateTransporterContactAddForm;
         TransporterContactUpdateForm updateTransporterContactUpdateForm;
         TransporterContactDeleteForm deleteTransporterContactDeleteForm;
-            //Bank Details
+        //Bank Details
         TransporterBankDetailsAddForm addTransporterBankDetailsAddForm, updateTransporterBankDetailsAddForm;
         TransporterBankDetailsUpdateForm updateTransporterBankDetailsUpdateForm;
 
-            //Tracking
+        //Tracking
         AddOrderNoteForm orderNoteForm;
         ShowTrackingCommentForm ShowTrackingComment;
         AddTrackingCommentForm trackingShowAddComment;
 
-            //Order 
+        //Order 
             
         AddCargoForm addCargoForm;
         AddLoadingFormForm addLoadingFormForm;
@@ -93,76 +93,17 @@ namespace AtlantSovt
         //Load / Animaton / Test connection
         #region Load
 
-        bool Connecting()
+        private async void MainForm_Load(object sender, EventArgs e)
         {
-            Thread animationThread = new Thread(new ThreadStart(PlayAnimation));
-            animationThread.Start();
-            using (var db = new AtlantSovtContext())
-            {                
-                try
-                {
-                    db.Database.Connection.Open();  // check the database connection
-                    var query =
-                        from testConnection in db.WorkDocuments
-                        select testConnection;
-                    db.SaveChanges();
-                    try
-                    {
-                        if (animationThread.IsAlive)
-                        {
-                            Thread.Sleep(200);
-                            animationThread.Abort();
-                        }
-                    }
-                    catch(Exception ex)
-                    {
-                        Log.Write(ex);
-                    }
-                    return true;
-                }
-                catch(Exception ex)
-                {
-                    Log.Write(ex);
-                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_з_єднання_з_сервером, AtlantSovt.Properties.Resources.Немає_з_єднання, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
-                    try
-                    {
-                        if (animationThread.IsAlive)
-                        {
-                            Thread.Sleep(200);
-                            animationThread.Abort();
-                        }
-                    }
-                    catch(Exception ex1)
-                    {
-                        Log.Write(ex1);
-                    }
-                    return false;
-                }
-            }
-        }
+            ConnectionForm connection = new ConnectionForm();
+            
+            connection.Show();
 
-        void PlayAnimation()
-        {
-            ConnectionForm connectionForm = new ConnectionForm();
-            try
+            if (await connection.CheckConnection())
             {
-                connectionForm.ShowDialog();
-            }
-            catch(ThreadAbortException ex)
-            {
-                return;
-            }
-            catch (Exception ex)
-            {
-                return;
-        }
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            if (Connecting())
-            {
+                connection.Dispose();
                 this.WindowState = FormWindowState.Maximized;
+                this.ShowInTaskbar = true;
                 this.Activate();
             }
             else
@@ -171,6 +112,7 @@ namespace AtlantSovt
                 Application.Exit();
             }
         }
+
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if(!languageChanged)
