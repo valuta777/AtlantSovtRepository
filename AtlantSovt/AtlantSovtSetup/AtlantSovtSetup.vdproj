@@ -87,12 +87,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_87B59A47DCD4439089D744AD0CF24354"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_885D75A72AB141C7A9E5551B74E8BC65"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -388,7 +382,7 @@
             "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\EntityFramework.SqlServer.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_6FEDE23BC34D4CA6BB415DC35BBF18BA"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -419,7 +413,7 @@
             "SourcePath" = "8:EntityFramework.DLL"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_6FEDE23BC34D4CA6BB415DC35BBF18BA"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -470,7 +464,7 @@
             "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\ru-RU\\AtlantSovt.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_EB338D3A3FE84C7BBE8CCA474AA4F90A"
+            "Folder" = "8:_E46133EEF965495BA9AF37872BBCBA6C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -490,7 +484,7 @@
             "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\AtlantSovt.pdb"
             "TargetName" = "8:AtlantSovt.pdb"
             "Tag" = "8:"
-            "Folder" = "8:_6FEDE23BC34D4CA6BB415DC35BBF18BA"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -561,7 +555,7 @@
             "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\AtlantSovt.vshost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_6FEDE23BC34D4CA6BB415DC35BBF18BA"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -632,27 +626,7 @@
             "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\uk-UA\\AtlantSovt.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_7ED3CD6298FA43D4905E0268B0E2D05A"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_87B59A47DCD4439089D744AD0CF24354"
-            {
-            "SourcePath" = "8:..\\AtlantSovt\\Resources\\Temp\\temp.txt"
-            "TargetName" = "8:temp.txt"
-            "Tag" = "8:"
-            "Folder" = "8:_81791FCA700E40B690228D9FC5968FDD"
+            "Folder" = "8:_0DF85DF6869B4EC783AA4D681BBC9EC7"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -723,7 +697,7 @@
             "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\AtlantSovt.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_6FEDE23BC34D4CA6BB415DC35BBF18BA"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -754,7 +728,7 @@
             "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\EntityFramework.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_6FEDE23BC34D4CA6BB415DC35BBF18BA"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -825,7 +799,7 @@
             "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\ru\\EntityFramework.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_F0EFCF92336B4F4BBDB75254A43DC820"
+            "Folder" = "8:_20210F043F28406D982AFCFF03CB928A"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -845,7 +819,7 @@
             "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\AtlantSovt.vshost.exe.config"
             "TargetName" = "8:AtlantSovt.vshost.exe.config"
             "Tag" = "8:"
-            "Folder" = "8:_6FEDE23BC34D4CA6BB415DC35BBF18BA"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -916,7 +890,7 @@
             "SourcePath" = "8:Microsoft.VisualStudio.HostingProcess.Utilities.Sync.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_6FEDE23BC34D4CA6BB415DC35BBF18BA"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1016,7 +990,7 @@
             "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\EntityFramework.xml"
             "TargetName" = "8:EntityFramework.xml"
             "Tag" = "8:"
-            "Folder" = "8:_6FEDE23BC34D4CA6BB415DC35BBF18BA"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1036,7 +1010,7 @@
             "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\EntityFramework.SqlServer.xml"
             "TargetName" = "8:EntityFramework.SqlServer.xml"
             "Tag" = "8:"
-            "Folder" = "8:_6FEDE23BC34D4CA6BB415DC35BBF18BA"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1116,7 +1090,7 @@
             "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\AtlantSovt.exe.config"
             "TargetName" = "8:AtlantSovt.exe.config"
             "Tag" = "8:"
-            "Folder" = "8:_6FEDE23BC34D4CA6BB415DC35BBF18BA"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1216,48 +1190,37 @@
                             "Property" = "8:_7C51A5C7A3D54DBE8D54C8A99392538F"
                                 "Folders"
                                 {
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_6FEDE23BC34D4CA6BB415DC35BBF18BA"
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_0DF85DF6869B4EC783AA4D681BBC9EC7"
                                     {
-                                    "Name" = "8:Release"
+                                    "Name" = "8:uk-UA"
                                     "AlwaysCreate" = "11:FALSE"
                                     "Condition" = "8:"
                                     "Transitive" = "11:FALSE"
-                                    "Property" = "8:_CE07E9246ADA4795B932E64FD85C33BF"
+                                    "Property" = "8:_71988A00EFFC4A51B972F9255B6EFB93"
                                         "Folders"
                                         {
-                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_7ED3CD6298FA43D4905E0268B0E2D05A"
-                                            {
-                                            "Name" = "8:uk-UA"
-                                            "AlwaysCreate" = "11:FALSE"
-                                            "Condition" = "8:"
-                                            "Transitive" = "11:FALSE"
-                                            "Property" = "8:_71988A00EFFC4A51B972F9255B6EFB93"
-                                                "Folders"
-                                                {
-                                                }
-                                            }
-                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_EB338D3A3FE84C7BBE8CCA474AA4F90A"
-                                            {
-                                            "Name" = "8:ru-RU"
-                                            "AlwaysCreate" = "11:FALSE"
-                                            "Condition" = "8:"
-                                            "Transitive" = "11:FALSE"
-                                            "Property" = "8:_C62B3AD7E5614BB793217A0D92B15550"
-                                                "Folders"
-                                                {
-                                                }
-                                            }
-                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_F0EFCF92336B4F4BBDB75254A43DC820"
-                                            {
-                                            "Name" = "8:ru"
-                                            "AlwaysCreate" = "11:FALSE"
-                                            "Condition" = "8:"
-                                            "Transitive" = "11:FALSE"
-                                            "Property" = "8:_B29BBAC5FDF043D8BB57D6A6C2A605F9"
-                                                "Folders"
-                                                {
-                                                }
-                                            }
+                                        }
+                                    }
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_20210F043F28406D982AFCFF03CB928A"
+                                    {
+                                    "Name" = "8:ru"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_B29BBAC5FDF043D8BB57D6A6C2A605F9"
+                                        "Folders"
+                                        {
+                                        }
+                                    }
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_E46133EEF965495BA9AF37872BBCBA6C"
+                                    {
+                                    "Name" = "8:ru-RU"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_C62B3AD7E5614BB793217A0D92B15550"
+                                        "Folders"
+                                        {
                                         }
                                     }
                                 }
@@ -1304,17 +1267,6 @@
                                         {
                                         }
                                     }
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_81791FCA700E40B690228D9FC5968FDD"
-                                    {
-                                    "Name" = "8:Temp"
-                                    "AlwaysCreate" = "11:FALSE"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "Property" = "8:_45733B4041AF4D2585248B0A2FF13BF3"
-                                        "Folders"
-                                        {
-                                        }
-                                    }
                                 }
                             }
                         }
@@ -1346,6 +1298,13 @@
         }
         "LaunchCondition"
         {
+            "{836E08B8-0285-4809-BA42-01DB6754A45D}:_C307FED8B3F6402C8ED223AD32A2A01F"
+            {
+            "Name" = "8:AdminUser"
+            "Condition" = "8:AdminUser"
+            "Message" = "8:<Error Message>"
+            "InstallUrl" = "8:"
+            }
         }
         "Locator"
         {
@@ -1360,7 +1319,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AtlantSovt"
         "ProductCode" = "8:{4C4855F2-0A5A-488A-9E84-2359D7EB36F6}"
-        "PackageCode" = "8:{F41EDCB1-7DB4-4975-803C-35EF34D45F36}"
+        "PackageCode" = "8:{B38A57AD-E926-434F-B6DF-AE7632C7705B}"
         "UpgradeCode" = "8:{86A12E6D-0F7E-4CBD-8BF1-D1A404C4DC61}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1369,12 +1328,12 @@
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
         "Manufacturer" = "8:DevArt"
-        "ARPHELPTELEPHONE" = "8:"
+        "ARPHELPTELEPHONE" = "8:+380988061885"
         "ARPHELPLINK" = "8:"
         "Title" = "8:AtlantSovtSetup"
         "Subject" = "8:"
         "ARPCONTACT" = "8:DevArt"
-        "Keywords" = "8:"
+        "Keywords" = "8:AtlantSovt"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:"
@@ -1490,7 +1449,7 @@
             "Transitive" = "11:FALSE"
             "Target" = "8:_961E0217AF5A49D68D46733A920716CA"
             "Folder" = "8:_6E6414ABAB494F49BD3DBA3E03C88D6C"
-            "WorkingFolder" = "8:_6FEDE23BC34D4CA6BB415DC35BBF18BA"
+            "WorkingFolder" = "8:"
             "Icon" = "8:_A4CE2D247A574482BFEAB3D964888B24"
             "Feature" = "8:"
             }
@@ -1504,7 +1463,7 @@
             "Transitive" = "11:FALSE"
             "Target" = "8:_961E0217AF5A49D68D46733A920716CA"
             "Folder" = "8:_15B32FB1B86A4FC091C8779BC41CD0AB"
-            "WorkingFolder" = "8:_6FEDE23BC34D4CA6BB415DC35BBF18BA"
+            "WorkingFolder" = "8:"
             "Icon" = "8:_A4CE2D247A574482BFEAB3D964888B24"
             "Feature" = "8:"
             }

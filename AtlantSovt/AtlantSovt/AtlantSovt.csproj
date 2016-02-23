@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SupportedCultures>qps-ploc;ru-RU;uk-UA</SupportedCultures>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <SupportedCultures>qps-ploc;ru-RU;uk-UA</SupportedCultures>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,6 +52,7 @@
   <PropertyGroup>
     <ApplicationIcon>Resources\Logo.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup />
   <PropertyGroup />
   <PropertyGroup>
@@ -80,6 +81,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Additions\AuthorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Additions\AuthorizationForm.Designer.cs">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Additions\ChangeLanguage.cs" />
     <Compile Include="Additions\Log.cs" />
     <Compile Include="Additions\Mail.cs" />
@@ -474,6 +481,9 @@
     <EmbeddedResource Include="AddFineForDelayForm.uk-UA.resx">
       <DependentUpon>AddFineForDelayForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Additions\AuthorizationForm.resx">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddLoadingFormForm.ru-RU.resx">
       <DependentUpon>AddLoadingFormForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -677,9 +687,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.ru-RU.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.uk-UA.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.ru-RU.resx">
       <SubType>Designer</SubType>

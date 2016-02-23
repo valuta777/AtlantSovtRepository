@@ -1,4 +1,5 @@
 ﻿using AtlantSovt.Additions;
+using AtlantSovt.AtlantSovtDb;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +25,8 @@ namespace AtlantSovt
             string str = "";
             try
             {
-                StreamReader streamReader = new StreamReader((System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\ConnectionString").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", "").Replace("\\0Debug", "").Replace("\\Release", ""));
+                string path = (System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\ConnectionString").Replace("\\Release", "").Replace("\\Debug", "").Replace("\\bin", "");
+                StreamReader streamReader = new StreamReader(path);
 
                 while (!streamReader.EndOfStream)
                 {
@@ -47,6 +49,34 @@ namespace AtlantSovt
             {
                 return str;
             }
+        }
+
+        public Task<bool> CheckConnection()
+        {
+            var task = new Task<bool>(()=>{
+            using (var db = new AtlantSovtContext())
+            {
+                try
+                {
+                    db.Database.Connection.Open();  // check the database connection
+                    var query =
+                        from testConnection in db.WorkDocuments
+                        select testConnection;
+                    db.SaveChanges();
+
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    Log.Write(ex);
+                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_з_єднання_з_сервером, AtlantSovt.Properties.Resources.Немає_з_єднання, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
+
+                    return false;
+                }
+            }
+        });
+            task.Start();
+            return task;
         }
     }
 }
