@@ -862,4 +862,7 @@
   <data name="Місто" xml:space="preserve">
     <value>Місто</value>
   </data>
+  <data name="Введіть_логін_пароль" xml:space="preserve">
+    <value>Введіть логін та пароль</value>
+  </data>
 </root>

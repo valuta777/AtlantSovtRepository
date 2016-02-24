@@ -4,11 +4,11 @@ namespace AtlantSovt.AtlantSovtDb
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
-
+    using Additions;
     public partial class AtlantSovtContext : DbContext
     {
         public AtlantSovtContext()
-            : base(ConnectionForm.GetConnectionString())
+            : base(AuthorizationForm.LoadAuthorizationSettings(1))
         {
         }
 

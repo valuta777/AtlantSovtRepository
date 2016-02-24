@@ -89,14 +89,23 @@ namespace AtlantSovt
         AddTirCmrForm addTirCmrForm;
         AddFineForDelayForm addFineForDelayForm;
 
-        bool languageChanged;
+        bool isLanguageChanged;
+        public bool isServerConnected;
+        public string login;
+        public string password;
         //Load / Animaton / Test connection
         #region Load
 
         private async void MainForm_Load(object sender, EventArgs e)
         {
+            if (!isLanguageChanged)
+            {
+                AuthorizationForm enterForm = new AuthorizationForm(this);
+                enterForm.ShowDialog();
+            }
+
             ConnectionForm connection = new ConnectionForm();
-            
+
             connection.Show();
 
             if (await connection.CheckConnection())
@@ -115,7 +124,7 @@ namespace AtlantSovt
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(!languageChanged)
+            if(!isLanguageChanged && isServerConnected)
             {
                 if (MessageBox.Show(AtlantSovt.Properties.Resources.Завершити_роботу, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) != DialogResult.OK)
                 {
@@ -124,7 +133,8 @@ namespace AtlantSovt
             }
             else
             {
-                languageChanged = false;
+                isLanguageChanged = false;
+                isServerConnected = false;
 
             }
 
@@ -3444,7 +3454,7 @@ namespace AtlantSovt
                 Additions.ChangeLanguage changeLanguage = new Additions.ChangeLanguage(CultureInfo.CreateSpecificCulture("uk-UA"));
                 changeLanguage.SaveSettings();
                 changeLanguage = null;
-                languageChanged = true;
+                isLanguageChanged = true;
                 Application.Restart();
             }
             else
@@ -3459,7 +3469,7 @@ namespace AtlantSovt
                 Additions.ChangeLanguage changeLanguage = new Additions.ChangeLanguage(CultureInfo.CreateSpecificCulture("ru-RU"));
                 changeLanguage.SaveSettings();
                 changeLanguage = null;
-                languageChanged = true;
+                isLanguageChanged = true;
                 Application.Restart();
             }
             else

@@ -561,7 +561,6 @@ E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Debug\EntityFramewo
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Debug\EntityFramework.xml
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Debug\EntityFramework.SqlServer.xml
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Debug\ru\EntityFramework.resources.dll
-E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csprojResolveAssemblyReference.cache
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddStaffForm.resources
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddTrackingCloseDateForm.resources
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.AddTransporterVehicleForm.resources
@@ -671,7 +670,6 @@ E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.Fo
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.ForwarderContactUpdateForm.ru-RU.resources
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.ForwarderContactUpdateForm.uk-UA.resources
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.MainForm.ru-RU.resources
-E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.MainForm.uk-UA.resources
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.Properties.Resources.ru-RU.resources
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.Properties.Resources.uk-UA.resources
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.SelectCustomsAddressesForm.ru-RU.resources
@@ -708,3 +706,6 @@ E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.cs
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\uk-UA\AtlantSovt.resources.dll
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.exe
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.pdb
+E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.Additions.AuthorizationForm.resources
+E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.Additions.AuthorizationForm.ru-RU.resources
+E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csprojResolveAssemblyReference.cache
