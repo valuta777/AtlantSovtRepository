@@ -19,7 +19,7 @@ namespace AtlantSovt.Additions
                 mail.From = new MailAddress("atlantsovt.logs@gmail.com");
                 mail.To.Add(new MailAddress("atlantsovt.logs@gmail.com"));
                 mail.Subject = DateTime.Now.ToString();
-                string filePath = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "Log\\" + Environment.MachineName + "." + DateTime.Now.ToShortDateString() + ".log").Replace("\\bin\\Release", "");
+                string filePath = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "Log\\" + Environment.MachineName + "." + DateTime.Now.ToShortDateString() + ".log").Replace("\\bin", "").Replace("\\Debug", "").Replace("\\Release", "");
                 if (!Directory.Exists(filePath))
                 {
                     mail.Attachments.Add(new Attachment(filePath));

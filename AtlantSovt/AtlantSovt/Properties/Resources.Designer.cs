@@ -1710,6 +1710,15 @@ namespace AtlantSovt.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Помилка входу користувача: неправильний логін або пароль.
+        /// </summary>
+        internal static string Помилка_входу_користувача {
+            get {
+                return ResourceManager.GetString("Помилка_входу_користувача", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Помилка з&apos;єднання з сервером!.
         /// </summary>
         internal static string Помилка_з_єднання_з_сервером {
