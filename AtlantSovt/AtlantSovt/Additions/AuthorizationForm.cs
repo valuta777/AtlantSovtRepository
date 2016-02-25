@@ -99,8 +99,8 @@ namespace AtlantSovt.Additions
             IsolatedStorageFile isoStorage = IsolatedStorageFile.GetUserStoreForDomain();
             string returnedString = "";
             string connectionString = "";
-            string password =  "";
             string login = "";
+            string password =  "";
             string isPasswordRemembered = "";
             // Check whether the file exists
             if (isoStorage.GetFileNames("AuthorizationSettings.xml").Length > 0) 
@@ -133,7 +133,6 @@ namespace AtlantSovt.Additions
                             break;
                     }
                 }
-
                 // Close the reader
                 xmlReader.Close();
                 stmReader.Close();

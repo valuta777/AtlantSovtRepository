@@ -14,10 +14,22 @@ namespace AtlantSovt.Additions
 {
     class ChangeLanguage
     {
+        public ChangeLanguage(CultureInfo language, MainForm mainForm)
+        {
+            StartupMode = enumStartupMode.UseSavedCulture;
+            SelectedCulture = language;
+            this.mainForm = mainForm;
+        }
+
         public ChangeLanguage(CultureInfo language)
         {
             StartupMode = enumStartupMode.UseSavedCulture;
             SelectedCulture = language;
+        }
+
+        public ChangeLanguage(MainForm mainForm)
+        {
+            this.mainForm = mainForm;
         }
 
         public ChangeLanguage()
@@ -25,12 +37,16 @@ namespace AtlantSovt.Additions
 
         }
 
+        MainForm mainForm {get; set;}
+
         public enum enumStartupMode
         {
             UseDefaultCulture = 0,
             UseSavedCulture = 1,
             ShowDialog = 2
         }
+
+        public string isLanguageChanged;
 
         private enumStartupMode StartupMode;
 
@@ -70,6 +86,9 @@ namespace AtlantSovt.Additions
                             CultureInfo CultInfo = new CultureInfo(CultName);
                             SelectedCulture = CultInfo;
                             break;
+                        case "IsLanguageChanged":
+                            isLanguageChanged = xmlReader.ReadString();
+                            break;
                     }
                 }
 
@@ -104,7 +123,17 @@ namespace AtlantSovt.Additions
             writer.WriteString(((int)StartupMode).ToString());
             writer.WriteEndElement();
             writer.WriteStartElement("Culture");                             //MLHIDE
-            writer.WriteString(SelectedCulture.Name);
+            writer.WriteString(SelectedCulture?.Name);
+            writer.WriteEndElement();
+            writer.WriteStartElement("IsLanguageChanged");
+            if (mainForm != null && mainForm.isLanguageChanged)
+            {
+                writer.WriteString("true");
+            }
+            else
+            {
+                writer.WriteString("false");
+            }
             writer.WriteEndElement();
             writer.WriteEndElement();
             writer.Flush();

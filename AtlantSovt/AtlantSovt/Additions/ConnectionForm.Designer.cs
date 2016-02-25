@@ -29,15 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConnectionForm));
-            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // domainUpDown1
-            // 
-            resources.ApplyResources(this.domainUpDown1, "domainUpDown1");
-            this.domainUpDown1.Name = "domainUpDown1";
             // 
             // pictureBox
             // 
@@ -50,7 +44,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.pictureBox);
-            this.Controls.Add(this.domainUpDown1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConnectionForm";
             this.ShowInTaskbar = false;
@@ -62,8 +56,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DomainUpDown domainUpDown1;
         private System.Windows.Forms.PictureBox pictureBox;
     }
 }

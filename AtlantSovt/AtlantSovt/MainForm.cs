@@ -89,7 +89,7 @@ namespace AtlantSovt
         AddTirCmrForm addTirCmrForm;
         AddFineForDelayForm addFineForDelayForm;
 
-        bool isLanguageChanged;
+        public bool isLanguageChanged;
         public bool isServerConnected;
         public string login;
         public string password;
@@ -98,11 +98,15 @@ namespace AtlantSovt
 
         private async void MainForm_Load(object sender, EventArgs e)
         {
-            if (!isLanguageChanged)
+            ChangeLanguage changeLanguage = new ChangeLanguage(this);
+            changeLanguage.LoadSettings();
+            if(changeLanguage.isLanguageChanged == "false")
             {
                 AuthorizationForm enterForm = new AuthorizationForm(this);
                 enterForm.ShowDialog();
             }
+            isLanguageChanged = false;
+            changeLanguage.SaveSettings();
 
             ConnectionForm connection = new ConnectionForm();
 
@@ -111,6 +115,7 @@ namespace AtlantSovt
             if (await connection.CheckConnection())
             {
                 connection.Dispose();
+                isServerConnected = true;
                 this.WindowState = FormWindowState.Maximized;
                 this.ShowInTaskbar = true;
                 this.Activate();
@@ -3451,10 +3456,10 @@ namespace AtlantSovt
         {
             if (MessageBox.Show(AtlantSovt.Properties.Resources.Змінити_мову, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                Additions.ChangeLanguage changeLanguage = new Additions.ChangeLanguage(CultureInfo.CreateSpecificCulture("uk-UA"));
+                ChangeLanguage changeLanguage = new ChangeLanguage(CultureInfo.CreateSpecificCulture("uk-UA"), this);
+                isLanguageChanged = true;
                 changeLanguage.SaveSettings();
                 changeLanguage = null;
-                isLanguageChanged = true;
                 Application.Restart();
             }
             else
@@ -3466,10 +3471,10 @@ namespace AtlantSovt
         {
             if (MessageBox.Show(AtlantSovt.Properties.Resources.Змінити_мову, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                Additions.ChangeLanguage changeLanguage = new Additions.ChangeLanguage(CultureInfo.CreateSpecificCulture("ru-RU"));
+                ChangeLanguage changeLanguage = new ChangeLanguage(CultureInfo.CreateSpecificCulture("ru-RU"), this);
+                isLanguageChanged = true;
                 changeLanguage.SaveSettings();
                 changeLanguage = null;
-                isLanguageChanged = true;
                 Application.Restart();
             }
             else
