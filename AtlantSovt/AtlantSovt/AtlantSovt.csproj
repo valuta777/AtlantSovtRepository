@@ -484,6 +484,9 @@
     <EmbeddedResource Include="Additions\AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Additions\AuthorizationForm.ru-RU.resx">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddLoadingFormForm.ru-RU.resx">
       <DependentUpon>AddLoadingFormForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -891,7 +894,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\ConnectionString" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -908,8 +910,8 @@
     <Content Include="AtlantSovt_ml.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Resources\ConnectionStringList.txt" />
     <None Include="Resources\con_anim.gif" />
+    <None Include="Resources\logo.gif" />
     <Content Include="Resources\Logo.ico" />
     <Content Include="Resources\Logo.png" />
   </ItemGroup>

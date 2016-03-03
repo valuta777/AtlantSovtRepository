@@ -16,7 +16,7 @@ namespace AtlantSovt.Additions
             try
             {
                 // Path .\\Log
-                string pathToLog = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "Log").Replace("\\bin\\Release", "").Replace("\\bin\\Debug", "");
+                string pathToLog = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "Log").Replace("\\bin", "").Replace("\\Debug", "").Replace("\\Release", "");
                 if (!Directory.Exists(pathToLog))
                     Directory.CreateDirectory(pathToLog); // Create folder, if it need to
                 string filename = Path.Combine(pathToLog, Environment.MachineName + "." + DateTime.Now.ToShortDateString() + ".log");

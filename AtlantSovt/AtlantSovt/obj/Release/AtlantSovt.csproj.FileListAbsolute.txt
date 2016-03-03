@@ -380,3 +380,4 @@ E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\ru-RU\Atlan
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\uk-UA\AtlantSovt.resources.dll
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.exe
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.pdb
+E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.Additions.AuthorizationForm.ru-RU.resources

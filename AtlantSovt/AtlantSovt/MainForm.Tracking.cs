@@ -94,6 +94,7 @@ namespace AtlantSovt
                     var query1 =
                         from com in db.TrackingComments
                         where com.OrderId == TrackingClikedId
+                        orderby com.CreateDate.Day
                         select new
                     {
                         comment = com.Comment,
@@ -926,20 +927,18 @@ namespace AtlantSovt
 
                         CheckStringLength("{PaymentTerms}", paymentTerms, wordDocument, 200);
                         CheckStringLength("{AdditionalTerms}", additionalTerms, wordDocument, 200);
+                        CheckStringLength("{OrderDeny}", orderDeny, wordDocument, 200);
+                        CheckStringLength("{FineForDelay}", fineForDelay, wordDocument, 200);
+                        CheckStringLength("{Freight}", freight, wordDocument, 200);
 
                         ReplaseWordStub("{Cube}", cube, wordDocument);
                         ReplaseWordStub("{Trailer}", trailer, wordDocument);
-
                         ReplaseWordStub("{RegularyDelay1}", regularyDelay[0], wordDocument);
                         ReplaseWordStub("{RegularyDelay2}", regularyDelay[1], wordDocument);
                         ReplaseWordStub("{RegularyDelay3}", regularyDelay[2], wordDocument);
                         ReplaseWordStub("{RegularyDelay4}", regularyDelay[3], wordDocument);
-                        ReplaseWordStub("{OrderDeny}", orderDeny, wordDocument);
-                        ReplaseWordStub("{Freight}", freight, wordDocument);
                         ReplaseWordStub("{ADR}", adr, wordDocument);
-                        ReplaseWordStub("{FineForDelay}", fineForDelay, wordDocument);
                         ReplaseWordStub("{TransporterName}", transporterName, wordDocument);
-
 
                         if (orderDocument.ForwarderOrders.Where(f => f.IsFirst == 1).Count() == 1)
                         {

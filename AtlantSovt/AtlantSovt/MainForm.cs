@@ -30,6 +30,32 @@ namespace AtlantSovt
             yearLabel.Text = DateTime.Now.ToShortDateString();
         }
 
+        static DataTable ConvertToDataTable<T>(IEnumerable<T> values)//(List<string[]> list)
+        {
+            DataTable table = new DataTable();
+
+            foreach (T value in values)
+            {
+                if (table.Columns.Count == 0)
+                {
+                    foreach (var p in value.GetType().GetProperties())
+                    {
+                        table.Columns.Add(p.Name);
+                    }
+                }
+
+                DataRow dr = table.NewRow();
+                foreach (var p in value.GetType().GetProperties())
+                {
+                    dr[p.Name] = p.GetValue(value, null) + "";
+
+                }
+                table.Rows.Add(dr);
+            }
+
+            return table;
+        }
+
         //common Forms
         AddWorkDocumentForm addWorkDocument;
         AddTaxPayerStatusForm addTaxPayerStatus;
@@ -89,19 +115,33 @@ namespace AtlantSovt
         AddTirCmrForm addTirCmrForm;
         AddFineForDelayForm addFineForDelayForm;
 
-        bool languageChanged;
+        public bool isLanguageChanged;
+        public bool isServerConnected;
+        public string login;
+        public string password;
         //Load / Animaton / Test connection
         #region Load
 
         private async void MainForm_Load(object sender, EventArgs e)
         {
+            ChangeLanguage changeLanguage = new ChangeLanguage(this);
+            changeLanguage.LoadSettings();
+            if(changeLanguage.isLanguageChanged == "false")
+            {
+                AuthorizationForm enterForm = new AuthorizationForm(this);
+                enterForm.ShowDialog();
+            }
+            isLanguageChanged = false;
+            changeLanguage.SaveSettings();
+
             ConnectionForm connection = new ConnectionForm();
-            
+
             connection.Show();
 
             if (await connection.CheckConnection())
             {
                 connection.Dispose();
+                isServerConnected = true;
                 this.WindowState = FormWindowState.Maximized;
                 this.ShowInTaskbar = true;
                 this.Activate();
@@ -115,7 +155,7 @@ namespace AtlantSovt
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(!languageChanged)
+            if(!isLanguageChanged && isServerConnected)
             {
                 if (MessageBox.Show(AtlantSovt.Properties.Resources.Завершити_роботу, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) != DialogResult.OK)
                 {
@@ -124,7 +164,8 @@ namespace AtlantSovt
             }
             else
             {
-                languageChanged = false;
+                isLanguageChanged = false;
+                isServerConnected = false;
 
             }
 
@@ -3432,7 +3473,6 @@ namespace AtlantSovt
             LoadDiapasone();
         }
 
-
         #endregion
 
         //Translate
@@ -3441,10 +3481,10 @@ namespace AtlantSovt
         {
             if (MessageBox.Show(AtlantSovt.Properties.Resources.Змінити_мову, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                Additions.ChangeLanguage changeLanguage = new Additions.ChangeLanguage(CultureInfo.CreateSpecificCulture("uk-UA"));
+                ChangeLanguage changeLanguage = new ChangeLanguage(CultureInfo.CreateSpecificCulture("uk-UA"), this);
+                isLanguageChanged = true;
                 changeLanguage.SaveSettings();
                 changeLanguage = null;
-                languageChanged = true;
                 Application.Restart();
             }
             else
@@ -3456,10 +3496,10 @@ namespace AtlantSovt
         {
             if (MessageBox.Show(AtlantSovt.Properties.Resources.Змінити_мову, AtlantSovt.Properties.Resources.Підтвердження_закриття, MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                Additions.ChangeLanguage changeLanguage = new Additions.ChangeLanguage(CultureInfo.CreateSpecificCulture("ru-RU"));
+                ChangeLanguage changeLanguage = new ChangeLanguage(CultureInfo.CreateSpecificCulture("ru-RU"), this);
+                isLanguageChanged = true;
                 changeLanguage.SaveSettings();
                 changeLanguage = null;
-                languageChanged = true;
                 Application.Restart();
             }
             else

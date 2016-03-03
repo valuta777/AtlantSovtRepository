@@ -862,4 +862,10 @@
   <data name="Місто" xml:space="preserve">
     <value>Місто</value>
   </data>
+  <data name="Введіть_логін_пароль" xml:space="preserve">
+    <value>Введіть логін та пароль</value>
+  </data>
+  <data name="Помилка_входу_користувача" xml:space="preserve">
+    <value>Помилка входу користувача: неправильний логін або пароль</value>
+  </data>
 </root>

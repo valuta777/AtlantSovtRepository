@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -53,28 +54,37 @@ namespace AtlantSovt
 
         public Task<bool> CheckConnection()
         {
-            var task = new Task<bool>(()=>{
-            using (var db = new AtlantSovtContext())
+            var task = new Task<bool>(()=>
             {
-                try
+                using (var db = new AtlantSovtContext())
                 {
-                    db.Database.Connection.Open();  // check the database connection
-                    var query =
-                        from testConnection in db.WorkDocuments
-                        select testConnection;
-                    db.SaveChanges();
+                    try
+                    {
+                        db.Database.Connection.Open();  // check the database connection
+                        var query =
+                            from testConnection in db.WorkDocuments
+                            select testConnection;
+                        db.SaveChanges();
 
-                    return true;
-                }
-                catch (Exception ex)
-                {
-                    Log.Write(ex);
-                    MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_з_єднання_з_сервером, AtlantSovt.Properties.Resources.Немає_з_єднання, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
+                        return true;
+                    }
+                    catch (SqlException ex)
+                    {
+                        Log.Write(ex);
 
-                    return false;
+                        if(ex.Number == -2)
+                        {
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_з_єднання_з_сервером, AtlantSovt.Properties.Resources.Немає_з_єднання, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
+                        }
+                        if(ex.Number == 18456)
+                        {
+                            MessageBox.Show(AtlantSovt.Properties.Resources.Помилка_входу_користувача, AtlantSovt.Properties.Resources.Немає_з_єднання, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
+                        }
+
+                        return false;
+                    }
                 }
-            }
-        });
+            });
             task.Start();
             return task;
         }

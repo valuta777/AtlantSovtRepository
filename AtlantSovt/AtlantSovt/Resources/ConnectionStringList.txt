@@ -1,9 +1,0 @@
-data source=109.251.24.20;initial catalog=AtlantSovt;persist security info=True;user id=kurko;password=qwerty;MultipleActiveResultSets=True;App=EntityFramework; Connection Timeout = 30
-
-
-
-data source=YK-WORK\SQLEXPRESS;initial catalog=AtlantSovt;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework; Connection Timeout = 30
-
-
-
-data source=185.46.221.133,1903;initial catalog=AtlantSovt;persist security info=True;user id=AtlantSovt;password=atlantsovt2015;MultipleActiveResultSets=True;App=EntityFramework; Connection Timeout = 30
