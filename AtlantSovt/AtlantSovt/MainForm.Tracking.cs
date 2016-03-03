@@ -94,6 +94,7 @@ namespace AtlantSovt
                     var query1 =
                         from com in db.TrackingComments
                         where com.OrderId == TrackingClikedId
+                        orderby com.CreateDate.Day
                         select new
                     {
                         comment = com.Comment,

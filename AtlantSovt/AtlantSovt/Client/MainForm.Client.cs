@@ -39,7 +39,7 @@ namespace AtlantSovt
                 select
                 new
                 {
-                    Id = c.Id,
+                    Id = (int)c.Id,
                     Name = c.Name,
                     Director = c.Director,
                     PhysicalAddress = c.PhysicalAddress,
@@ -48,7 +48,7 @@ namespace AtlantSovt
                     WorkDocumentId = c.WorkDocument.Status,
                 };
 
-                showClientDataGridView.DataSource = query.ToList();
+                showClientDataGridView.DataSource = ConvertToDataTable(query.ToList());
                 showClientDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
                 showClientDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Назва;
                 showClientDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.П_І_Б_Директора;
@@ -56,7 +56,6 @@ namespace AtlantSovt
                 showClientDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Юридична_адреса;
                 showClientDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Статус_платника_податку;
                 showClientDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.На_основі;
-
 
             } showClientDataGridView.Update();
 
@@ -158,7 +157,7 @@ namespace AtlantSovt
                 };
 
 
-                showClientDataGridView.DataSource = query.ToList();
+                showClientDataGridView.DataSource = ConvertToDataTable(query.ToList());
                 showClientDataGridView.Columns[0].HeaderText = AtlantSovt.Properties.Resources.Порядковий_номер;
                 showClientDataGridView.Columns[1].HeaderText = AtlantSovt.Properties.Resources.Назва;
                 showClientDataGridView.Columns[2].HeaderText = AtlantSovt.Properties.Resources.П_І_Б_Директора;
@@ -166,7 +165,6 @@ namespace AtlantSovt
                 showClientDataGridView.Columns[4].HeaderText = AtlantSovt.Properties.Resources.Юридична_адреса;
                 showClientDataGridView.Columns[5].HeaderText = AtlantSovt.Properties.Resources.Статус_платника_податку;
                 showClientDataGridView.Columns[6].HeaderText = AtlantSovt.Properties.Resources.На_основі;
-
 
             } showClientDataGridView.Update();
 

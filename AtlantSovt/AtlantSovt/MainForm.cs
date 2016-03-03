@@ -30,6 +30,32 @@ namespace AtlantSovt
             yearLabel.Text = DateTime.Now.ToShortDateString();
         }
 
+        static DataTable ConvertToDataTable<T>(IEnumerable<T> values)//(List<string[]> list)
+        {
+            DataTable table = new DataTable();
+
+            foreach (T value in values)
+            {
+                if (table.Columns.Count == 0)
+                {
+                    foreach (var p in value.GetType().GetProperties())
+                    {
+                        table.Columns.Add(p.Name);
+                    }
+                }
+
+                DataRow dr = table.NewRow();
+                foreach (var p in value.GetType().GetProperties())
+                {
+                    dr[p.Name] = p.GetValue(value, null) + "";
+
+                }
+                table.Rows.Add(dr);
+            }
+
+            return table;
+        }
+
         //common Forms
         AddWorkDocumentForm addWorkDocument;
         AddTaxPayerStatusForm addTaxPayerStatus;
@@ -3446,7 +3472,6 @@ namespace AtlantSovt
         {
             LoadDiapasone();
         }
-
 
         #endregion
 
