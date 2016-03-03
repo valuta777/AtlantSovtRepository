@@ -15,38 +15,44 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_0C3ACA0EDCC74D59A8CBD18A37C32AD5"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_1CB3908B7973E699E4396443C6215326"
-        "OwnerKey" = "8:_0C3ACA0EDCC74D59A8CBD18A37C32AD5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_1CB3908B7973E699E4396443C6215326"
-        "OwnerKey" = "8:_961E0217AF5A49D68D46733A920716CA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_1CBF287FE1CE4B70B13CEE4F17360E63"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_2B3082AF3B7540EA8836E2D9ECB07631"
+        "MsmKey" = "8:_299C0AB5F34D46ED8A4447ABB2660471"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_4B81B16627274160A58F0BDA5073568A"
+        "MsmKey" = "8:_2FABB700B6434E8BBF4E27B3836C5295"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_36647EA9587F4EE8810DD68F37434110"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_379296ADCC654450B516DE1A24193E6C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4B9FA2405BFD417787C3D9A263BC7978"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_55D1EDF5B56067A5B85FA64BF453AF24"
+        "OwnerKey" = "8:_D28BF89FC84B439ABF27A80BDC50FC33"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -57,13 +63,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5B258EDA792D425690A27D8512B8898B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_61869BDCA89449AFA374EC803C58ED1D"
+        "MsmKey" = "8:_618BAB84DBF94ED4AC2B01E421431D75"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -81,7 +81,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_7901906CB39B4192A6379D15648167F2"
+        "MsmKey" = "8:_64B51C88023E47D0BA588C6336334F9A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -99,37 +99,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_961E0217AF5A49D68D46733A920716CA"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_9F180001034B41FF80639FABB882D67C"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A4CE2D247A574482BFEAB3D964888B24"
+        "MsmKey" = "8:_9875AB441C3D4C34BA63B3F07EE55634"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_A7A1B699C56D4C3BA4B83219E4AABECA"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_AB6AF571241C489485F44A19087690C3"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_ADF93E8E488B4F8A902B62FB881F22A8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -147,8 +123,38 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_BEE52C91065625CDB475CC287F8C28C7"
-        "OwnerKey" = "8:_61869BDCA89449AFA374EC803C58ED1D"
+        "MsmKey" = "8:_B58CC23DADDB5ECB666E3337A21DB834"
+        "OwnerKey" = "8:_C31C5F32AC9D407595D41917C989CA3E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B58CC23DADDB5ECB666E3337A21DB834"
+        "OwnerKey" = "8:_618BAB84DBF94ED4AC2B01E421431D75"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B5FFF5FACE094B61B2333979570FE763"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B7CCDCAA9FAB414993D5EA5C9EF4E989"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C31C5F32AC9D407595D41917C989CA3E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C6251DA023D444AEBCA6F0DE55C48229"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -171,19 +177,13 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_D28BF89FC84B439ABF27A80BDC50FC33"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D401D16DC5D34457B7977CCFBC3730ED"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DF527F7FB1554ED58A80E19E5E959178"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E533374E79304DF3AC4F58895865E78C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -207,12 +207,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_F2CEA6DB31A841CABFFC05A78D94C7E8"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_F6C37D6CC21B4960BAFD3A323001AA49"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -226,49 +220,49 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2B3082AF3B7540EA8836E2D9ECB07631"
+        "OwnerKey" = "8:_C6251DA023D444AEBCA6F0DE55C48229"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BEE52C91065625CDB475CC287F8C28C7"
+        "OwnerKey" = "8:_618BAB84DBF94ED4AC2B01E421431D75"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9F180001034B41FF80639FABB882D67C"
+        "OwnerKey" = "8:_379296ADCC654450B516DE1A24193E6C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_961E0217AF5A49D68D46733A920716CA"
+        "OwnerKey" = "8:_D28BF89FC84B439ABF27A80BDC50FC33"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7901906CB39B4192A6379D15648167F2"
+        "OwnerKey" = "8:_55D1EDF5B56067A5B85FA64BF453AF24"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_61869BDCA89449AFA374EC803C58ED1D"
+        "OwnerKey" = "8:_C31C5F32AC9D407595D41917C989CA3E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0C3ACA0EDCC74D59A8CBD18A37C32AD5"
+        "OwnerKey" = "8:_B58CC23DADDB5ECB666E3337A21DB834"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1CB3908B7973E699E4396443C6215326"
+        "OwnerKey" = "8:_64B51C88023E47D0BA588C6336334F9A"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -366,68 +360,6 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0C3ACA0EDCC74D59A8CBD18A37C32AD5"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_0C3ACA0EDCC74D59A8CBD18A37C32AD5"
-                    {
-                    "Name" = "8:EntityFramework.SqlServer.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\EntityFramework.SqlServer.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1CB3908B7973E699E4396443C6215326"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_1CB3908B7973E699E4396443C6215326"
-                    {
-                    "Name" = "8:EntityFramework.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:EntityFramework.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1CBF287FE1CE4B70B13CEE4F17360E63"
             {
             "SourcePath" = "8:..\\AtlantSovt\\Resources\\Contracts\\Експедитор(AVETAR) - Перевізник(Східна Європа).docx"
@@ -448,38 +380,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2B3082AF3B7540EA8836E2D9ECB07631"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:AtlantSovt.resources, Version=1.0.0.0, Culture=ru-RU, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_2B3082AF3B7540EA8836E2D9ECB07631"
-                    {
-                    "Name" = "8:AtlantSovt.resources.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\ru-RU\\AtlantSovt.resources.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_E46133EEF965495BA9AF37872BBCBA6C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4B81B16627274160A58F0BDA5073568A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_299C0AB5F34D46ED8A4447ABB2660471"
             {
             "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\AtlantSovt.pdb"
             "TargetName" = "8:AtlantSovt.pdb"
@@ -497,6 +398,139 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2FABB700B6434E8BBF4E27B3836C5295"
+            {
+            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\AtlantSovt.vshost.exe.config"
+            "TargetName" = "8:AtlantSovt.vshost.exe.config"
+            "Tag" = "8:"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_36647EA9587F4EE8810DD68F37434110"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:EntityFramework.resources, Version=6.0.0.0, Culture=ru, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_36647EA9587F4EE8810DD68F37434110"
+                    {
+                    "Name" = "8:EntityFramework.resources.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\ru\\EntityFramework.resources.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_20210F043F28406D982AFCFF03CB928A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_379296ADCC654450B516DE1A24193E6C"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_379296ADCC654450B516DE1A24193E6C"
+                    {
+                    "Name" = "8:EntityFramework.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\EntityFramework.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4B9FA2405BFD417787C3D9A263BC7978"
+            {
+            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\EntityFramework.SqlServer.xml"
+            "TargetName" = "8:EntityFramework.SqlServer.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_55D1EDF5B56067A5B85FA64BF453AF24"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:TRUE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.VisualStudio.HostingProcess.Utilities.Sync, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_55D1EDF5B56067A5B85FA64BF453AF24"
+                    {
+                    "Name" = "8:Microsoft.VisualStudio.HostingProcess.Utilities.Sync.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.VisualStudio.HostingProcess.Utilities.Sync.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5A981FE23A8B439EA7DF461BDF3460FF"
@@ -519,40 +553,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5B258EDA792D425690A27D8512B8898B"
-            {
-            "SourcePath" = "8:..\\AtlantSovt\\Resources\\ConnectionString"
-            "TargetName" = "8:ConnectionString"
-            "Tag" = "8:"
-            "Folder" = "8:_F04FA167177542189E8CE90F1765C440"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_61869BDCA89449AFA374EC803C58ED1D"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_618BAB84DBF94ED4AC2B01E421431D75"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:vshost, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_61869BDCA89449AFA374EC803C58ED1D"
+                    "_618BAB84DBF94ED4AC2B01E421431D75"
                     {
-                    "Name" = "8:AtlantSovt.vshost.exe"
+                    "Name" = "8:EntityFramework.SqlServer.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\AtlantSovt.vshost.exe"
+            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\EntityFramework.SqlServer.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
@@ -610,14 +624,14 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7901906CB39B4192A6379D15648167F2"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_64B51C88023E47D0BA588C6336334F9A"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:AtlantSovt.resources, Version=1.0.0.0, Culture=uk-UA, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_7901906CB39B4192A6379D15648167F2"
+                    "_64B51C88023E47D0BA588C6336334F9A"
                     {
                     "Name" = "8:AtlantSovt.resources.dll"
                     "Attributes" = "3:512"
@@ -681,74 +695,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_961E0217AF5A49D68D46733A920716CA"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9875AB441C3D4C34BA63B3F07EE55634"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:AtlantSovt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_961E0217AF5A49D68D46733A920716CA"
-                    {
-                    "Name" = "8:AtlantSovt.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\AtlantSovt.exe"
-            "TargetName" = "8:"
+            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\EntityFramework.xml"
+            "TargetName" = "8:EntityFramework.xml"
             "Tag" = "8:"
             "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9F180001034B41FF80639FABB882D67C"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_9F180001034B41FF80639FABB882D67C"
-                    {
-                    "Name" = "8:EntityFramework.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\EntityFramework.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A4CE2D247A574482BFEAB3D964888B24"
-            {
-            "SourcePath" = "8:..\\AtlantSovt\\Resources\\Logo.ico"
-            "TargetName" = "8:Logo.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_F04FA167177542189E8CE90F1765C440"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -769,57 +721,6 @@
             "TargetName" = "8:Бєлова.png"
             "Tag" = "8:"
             "Folder" = "8:_259277BEA3274B37AF2EB6F59F61ABDD"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AB6AF571241C489485F44A19087690C3"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:EntityFramework.resources, Version=6.0.0.0, Culture=ru, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_AB6AF571241C489485F44A19087690C3"
-                    {
-                    "Name" = "8:EntityFramework.resources.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\ru\\EntityFramework.resources.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_20210F043F28406D982AFCFF03CB928A"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ADF93E8E488B4F8A902B62FB881F22A8"
-            {
-            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\AtlantSovt.vshost.exe.config"
-            "TargetName" = "8:AtlantSovt.vshost.exe.config"
-            "Tag" = "8:"
-            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -874,20 +775,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BEE52C91065625CDB475CC287F8C28C7"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B58CC23DADDB5ECB666E3337A21DB834"
             {
             "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:TRUE"
-            "AssemblyAsmDisplayName" = "8:Microsoft.VisualStudio.HostingProcess.Utilities.Sync, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_BEE52C91065625CDB475CC287F8C28C7"
+                    "_B58CC23DADDB5ECB666E3337A21DB834"
                     {
-                    "Name" = "8:Microsoft.VisualStudio.HostingProcess.Utilities.Sync.dll"
+                    "Name" = "8:EntityFramework.DLL"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Microsoft.VisualStudio.HostingProcess.Utilities.Sync.dll"
+            "SourcePath" = "8:EntityFramework.DLL"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
@@ -903,6 +804,108 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B5FFF5FACE094B61B2333979570FE763"
+            {
+            "SourcePath" = "8:..\\AtlantSovt\\Resources\\Logo.ico"
+            "TargetName" = "8:Logo.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_F04FA167177542189E8CE90F1765C440"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B7CCDCAA9FAB414993D5EA5C9EF4E989"
+            {
+            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\AtlantSovt.exe.config"
+            "TargetName" = "8:AtlantSovt.exe.config"
+            "Tag" = "8:"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C31C5F32AC9D407595D41917C989CA3E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:AtlantSovt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_C31C5F32AC9D407595D41917C989CA3E"
+                    {
+                    "Name" = "8:AtlantSovt.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\AtlantSovt.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C6251DA023D444AEBCA6F0DE55C48229"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:AtlantSovt.resources, Version=1.0.0.0, Culture=ru-RU, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_C6251DA023D444AEBCA6F0DE55C48229"
+                    {
+                    "Name" = "8:AtlantSovt.resources.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\ru-RU\\AtlantSovt.resources.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_E46133EEF965495BA9AF37872BBCBA6C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C6BDC4C52C2D4878A7438367F6E25D59"
@@ -965,52 +968,43 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D28BF89FC84B439ABF27A80BDC50FC33"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:vshost, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_D28BF89FC84B439ABF27A80BDC50FC33"
+                    {
+                    "Name" = "8:AtlantSovt.vshost.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\AtlantSovt.vshost.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D401D16DC5D34457B7977CCFBC3730ED"
             {
             "SourcePath" = "8:..\\AtlantSovt\\Resources\\Contracts\\Експедитор №1 - Експедитор №2.docx"
             "TargetName" = "8:Експедитор №1 - Експедитор №2.docx"
             "Tag" = "8:"
             "Folder" = "8:_20120011E16047DB8C094BE85F0635FE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DF527F7FB1554ED58A80E19E5E959178"
-            {
-            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\EntityFramework.xml"
-            "TargetName" = "8:EntityFramework.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E533374E79304DF3AC4F58895865E78C"
-            {
-            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\EntityFramework.SqlServer.xml"
-            "TargetName" = "8:EntityFramework.SqlServer.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1071,26 +1065,6 @@
             "TargetName" = "8:Експедитор - Перевізник.docx"
             "Tag" = "8:"
             "Folder" = "8:_20120011E16047DB8C094BE85F0635FE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F2CEA6DB31A841CABFFC05A78D94C7E8"
-            {
-            "SourcePath" = "8:..\\AtlantSovt\\bin\\Release\\AtlantSovt.exe.config"
-            "TargetName" = "8:AtlantSovt.exe.config"
-            "Tag" = "8:"
-            "Folder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1319,7 +1293,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AtlantSovt"
         "ProductCode" = "8:{4C4855F2-0A5A-488A-9E84-2359D7EB36F6}"
-        "PackageCode" = "8:{B38A57AD-E926-434F-B6DF-AE7632C7705B}"
+        "PackageCode" = "8:{58A3ECB8-2B85-423A-B862-14248F3DC72B}"
         "UpgradeCode" = "8:{86A12E6D-0F7E-4CBD-8BF1-D1A404C4DC61}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1439,18 +1413,18 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_3D92D23D447C4784A39A663C1D181FE7"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_1910CDAF9EA2409AA869E926A3960C72"
             {
-            "Name" = "8:AtlantSovt"
+            "Name" = "8:AtlantSovt.exe"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_961E0217AF5A49D68D46733A920716CA"
+            "Target" = "8:_C31C5F32AC9D407595D41917C989CA3E"
             "Folder" = "8:_6E6414ABAB494F49BD3DBA3E03C88D6C"
-            "WorkingFolder" = "8:"
-            "Icon" = "8:_A4CE2D247A574482BFEAB3D964888B24"
+            "WorkingFolder" = "8:_082193B54B554C8EAB0D9A3E3E941FDA"
+            "Icon" = "8:_B5FFF5FACE094B61B2333979570FE763"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_428072A4596F4E8296B763A9BCD44F98"
@@ -1461,10 +1435,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_961E0217AF5A49D68D46733A920716CA"
+            "Target" = "8:_C31C5F32AC9D407595D41917C989CA3E"
             "Folder" = "8:_15B32FB1B86A4FC091C8779BC41CD0AB"
             "WorkingFolder" = "8:"
-            "Icon" = "8:_A4CE2D247A574482BFEAB3D964888B24"
+            "Icon" = "8:_B5FFF5FACE094B61B2333979570FE763"
             "Feature" = "8:"
             }
         }
