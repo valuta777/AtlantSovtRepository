@@ -1,0 +1,5 @@
+
+[0:19.05.2016 13:14:49.483]	
+   at Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   at AtlantSovt.MainForm.CreateOrderDocument() in E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\MainForm.Tracking.cs:line 675	
+Sorry, we couldn’t find your file. Is it possible it was moved, renamed or deleted? (E:\Workspaces\...\gerOrder.docx)
