@@ -2447,7 +2447,7 @@ namespace AtlantSovt
                                     IsModified = true;
                                 }
                             }
-                            else if (updateOrder.Language != 1)
+                            if (updateOrder.Language != 1)
                             {
                                 if (OrderUpdateLanguageSelectComboBox.SelectedIndex == 1)
                                 {
@@ -2455,7 +2455,7 @@ namespace AtlantSovt
                                     IsModified = true;
                                 }
                             }
-                            else if (updateOrder.Language !=2)
+                            if (updateOrder.Language !=2)
                             {
                                 if (OrderUpdateLanguageSelectComboBox.SelectedIndex == 2)
                                 {
