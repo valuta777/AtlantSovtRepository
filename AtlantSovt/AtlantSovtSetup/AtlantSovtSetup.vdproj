@@ -226,31 +226,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D28BF89FC84B439ABF27A80BDC50FC33"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C31C5F32AC9D407595D41917C989CA3E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_64B51C88023E47D0BA588C6336334F9A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_618BAB84DBF94ED4AC2B01E421431D75"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B58CC23DADDB5ECB666E3337A21DB834"
+        "OwnerKey" = "8:_379296ADCC654450B516DE1A24193E6C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -262,7 +238,31 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_379296ADCC654450B516DE1A24193E6C"
+        "OwnerKey" = "8:_B58CC23DADDB5ECB666E3337A21DB834"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_618BAB84DBF94ED4AC2B01E421431D75"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_64B51C88023E47D0BA588C6336334F9A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C31C5F32AC9D407595D41917C989CA3E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D28BF89FC84B439ABF27A80BDC50FC33"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -782,11 +782,6 @@
             "AssemblyAsmDisplayName" = "8:EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_B58CC23DADDB5ECB666E3337A21DB834"
-                    {
-                    "Name" = "8:EntityFramework.DLL"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:EntityFramework.DLL"
             "TargetName" = "8:"
@@ -1292,15 +1287,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AtlantSovt"
-        "ProductCode" = "8:{07A3C050-8139-4AC1-801B-8E9706FFBA4B}"
-        "PackageCode" = "8:{6E05D01D-DA14-44D4-98DB-998755A42DBC}"
+        "ProductCode" = "8:{DA4598B6-C7C7-4061-B5D1-76D37B9C620D}"
+        "PackageCode" = "8:{B0F2AAFB-BCEB-4F28-8D15-F8B49B91C2BB}"
         "UpgradeCode" = "8:{86A12E6D-0F7E-4CBD-8BF1-D1A404C4DC61}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.1.0"
+        "ProductVersion" = "8:1.2.0"
         "Manufacturer" = "8:DevArt"
         "ARPHELPTELEPHONE" = "8:+380988061885"
         "ARPHELPLINK" = "8:"
