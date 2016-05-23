@@ -151,11 +151,6 @@ namespace AtlantSovt.AtlantSovtDb
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Order>()
-                .HasMany(e => e.OrderLoadingForms)
-                .WithRequired(e => e.Order)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Order>()
                 .HasMany(e => e.OrderUnCustomsAddresses)
                 .WithRequired(e => e.Order)
                 .WillCascadeOnDelete(false);

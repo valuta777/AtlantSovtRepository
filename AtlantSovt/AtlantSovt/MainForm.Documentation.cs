@@ -738,7 +738,7 @@ namespace AtlantSovt
                     {
                         ForwarderContract forwarder = new ForwarderContract()
                         {
-                            ForwarderId = firstForwarderDocument.Id,
+                            ForwarderId = secondForwarderDocument.Id,
                             IsFirst = 1,
                         };
                         contract.ClientId = null;
@@ -830,6 +830,10 @@ namespace AtlantSovt
                         if (firstForwarderDocument != null)
                         {
                             firstForwarderStamp = db.Forwarders.Find(firstForwarderDocument.Id).ForwarderStamp;
+                            if(firstForwarderStamp?.Stamp == null)
+                            {
+                                firstForwarderStamp = null;
+                            }
                         }
 
                     }
@@ -842,7 +846,11 @@ namespace AtlantSovt
                         secondForwarderDocument = contract.ForwarderContracts.Where(f => f.IsFirst == 1).FirstOrDefault().Forwarder;
                         if (secondForwarderDocument != null)
                         {
-                            secondForwarderStamp = db.Forwarders.Find(secondForwarderDocument.Id).ForwarderStamp;
+                            secondForwarderStamp = db.Forwarders.Find(secondForwarderDocument.Id)?.ForwarderStamp;
+                            if (secondForwarderStamp?.Stamp == null)
+                            {
+                                secondForwarderStamp = null;
+                            }
                         }
                     }
                     else
@@ -1182,7 +1190,7 @@ namespace AtlantSovt
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\AtlantSovt\\Stamp\\Temp\\";
 
-            MemoryStream Stream = new MemoryStream(forwarder.ForwarderStamp.Stamp);
+            MemoryStream Stream = new MemoryStream(forwarder.ForwarderStamp?.Stamp);
             
             Image stamp = Image.FromStream(Stream);
             if(!Directory.Exists(path))

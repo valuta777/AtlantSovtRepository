@@ -228,6 +228,12 @@
   <data name="arbeitenShowOnlyActive.Text" xml:space="preserve">
     <value>Только активные:</value>
   </data>
+  <data name="arbeitenShowSearchDatePicker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 29</value>
+  </data>
+  <data name="arbeitenShowOnlyActive.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 25</value>
+  </data>
   <data name="arbeitenShowSearchButton.Text" xml:space="preserve">
     <value>Найти</value>
   </data>
@@ -774,6 +780,9 @@
   </data>
   <data name="originalContractStateRadioButton.Text" xml:space="preserve">
     <value>Оригинал</value>
+  </data>
+  <data name="originalContractStateRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>848, 87</value>
   </data>
   <data name="refreshContactFilesButton.Text" xml:space="preserve">
     <value>Обновить список шаблонов</value>

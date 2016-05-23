@@ -221,7 +221,6 @@ R:\Робота\29.11.15\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\
 R:\Робота\29.11.15\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.TransporterShowFiltrationForm.resources
 R:\Робота\29.11.15\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.csproj.GenerateResource.Cache
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\AtlantSovt.exe.config
-E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\Interop.VBIDE.dll
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Release\AtlantSovt.csproj.ResolveComReference.cache
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\AtlantSovt.exe
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Release\AtlantSovt.pdb

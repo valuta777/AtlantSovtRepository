@@ -549,7 +549,6 @@ E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\uk-UA\AtlantSovt.resourc
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.exe
 E:\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.pdb
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Debug\AtlantSovt.exe.config
-E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\Interop.VBIDE.dll
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\obj\Debug\AtlantSovt.csproj.ResolveComReference.cache
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Debug\AtlantSovt.exe
 E:\Workspaces\AtlantSovtRepository\AtlantSovt\AtlantSovt\bin\Debug\AtlantSovt.pdb

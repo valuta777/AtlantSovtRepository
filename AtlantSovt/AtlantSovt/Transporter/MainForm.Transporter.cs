@@ -7532,7 +7532,7 @@ namespace AtlantSovt
                                 select c;
                     foreach (var item in query)
                     {
-                        selectTransporterUpdateComboBox.Items.Add((item.ShortName == null || item.ShortName =="") ? item.FullName : item.ShortName + " , " + item.Director + " [" + item.Id + "]");
+                        selectTransporterUpdateComboBox.Items.Add((item.ShortName == null || item.ShortName == "") ? item.FullName + " , " + item.Director + " [" + item.Id + "]": item.ShortName + " , " + item.Director + " [" + item.Id + "]");
                     }
                 }
             }

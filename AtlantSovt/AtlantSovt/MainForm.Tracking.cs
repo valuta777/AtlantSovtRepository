@@ -94,7 +94,7 @@ namespace AtlantSovt
                     var query1 =
                         from com in db.TrackingComments
                         where com.OrderId == TrackingClikedId
-                        orderby com.CreateDate.Day
+                        orderby com.CreateDate descending
                         select new
                     {
                         comment = com.Comment,
@@ -670,7 +670,9 @@ namespace AtlantSovt
                     wordApp.Visible = false;
                     orderDocument = db.Orders.Find(ClikedId);
 
-                    wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((orderDocument.Language == 0) ? ((orderDocument.ForwarderOrders.Where(f => f.IsFirst == 3).Count() != 0) ? @"Resources\Orders\ukrOrderFor3.docx" : @"Resources\Orders\ukrOrderFor2.docx") : (orderDocument.Language == 1) ? @"Resources\Orders\polOrder.docx" : @"Resources\gerOrder.docx")).Replace("\\Release", "").Replace("\\Debug", "").Replace("\\bin", ""));
+                    string a = (System.AppDomain.CurrentDomain.BaseDirectory + ((orderDocument.Language == 0) ? ((orderDocument.ForwarderOrders.Where(f => f.IsFirst == 3).Count() != 0) ? @"Resources\Orders\ukrOrderFor3.docx" : @"Resources\Orders\ukrOrderFor2.docx") : (orderDocument.Language == 1) ? @"Resources\Orders\polOrder.docx" : @"Resources\gerOrder.docx")).Replace("\\Release", "").Replace("\\Debug", "").Replace("\\bin", "");
+
+                    wordDocument = wordApp.Documents.Open((System.AppDomain.CurrentDomain.BaseDirectory + ((orderDocument.Language == 0) ? ((orderDocument.ForwarderOrders.Where(f => f.IsFirst == 3).Count() != 0) ? @"Resources\Orders\ukrOrderFor3.docx" : @"Resources\Orders\ukrOrderFor2.docx") : (orderDocument.Language == 1) ? @"Resources\Orders\polOrder.docx" : @"Resources\Orders\gerOrder.docx")).Replace("\\Release", "").Replace("\\Debug", "").Replace("\\bin", ""));
 
                     if (orderDocument != null)
                     {
