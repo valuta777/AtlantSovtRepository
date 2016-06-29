@@ -416,7 +416,7 @@ namespace AtlantSovt
                                 select c;
                     foreach (var item in query)
                     {
-                        OrderAddTransporterSelectComboBox.Items.Add((item.ShortName == null || item.ShortName == "") ? item.FullName : item.ShortName + " , " + item.Director + " [" + item.Id + "]");
+                        OrderAddTransporterSelectComboBox.Items.Add((item.ShortName == null || item.ShortName == "") ? item.FullName + " , " + item.Director + " [" + item.Id + "]" : item.ShortName + " , " + item.Director + " [" + item.Id + "]");
                     }
                 }
             }
@@ -2120,7 +2120,7 @@ namespace AtlantSovt
                                 select c;
                     foreach (var item in query)
                     {
-                        OrderUpdateTransporterSelectComboBox.Items.Add((item.ShortName == null || item.ShortName == "") ? item.FullName : item.ShortName + " , " + item.Director + " [" + item.Id + "]");
+                        OrderUpdateTransporterSelectComboBox.Items.Add((item.ShortName == null || item.ShortName == "") ? item.FullName + " , " + item.Director + " [" + item.Id + "]" : item.ShortName + " , " + item.Director + " [" + item.Id + "]");
                     }
                 }
             }
@@ -2220,7 +2220,6 @@ namespace AtlantSovt
                 }
             }
         }
-
         void SplitForwarder3OrderUpdate()
         {
             using (var db = new AtlantSovtContext())
